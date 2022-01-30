@@ -29,6 +29,7 @@ public class DynamicType
         if (AddUsing)
         {
             result += "using System;\n";
+            result += "using System.Runtime;\n";
             result += "using k8s;\n";
             result += "using k8s.Models;\n";
             result += "using System.ComponentModel;\n";

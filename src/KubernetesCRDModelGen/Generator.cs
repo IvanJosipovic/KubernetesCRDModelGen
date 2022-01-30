@@ -1,12 +1,17 @@
 ﻿using k8s.Models;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.Emit;
+using Microsoft.CodeAnalysis.Text;
 using System.ComponentModel;
+using System.Reflection;
 
 namespace KubernetesCRDModelGen
 {
     public class Generator
     {
         [Description("")]
-        public object Generate(V1CustomResourceDefinition crd)
+        public Assembly Generate(V1CustomResourceDefinition crd)
         {
             var model = new DynamicType();
             model.AddUsing = true;
@@ -40,21 +45,62 @@ namespace KubernetesCRDModelGen
 
             var spec = version.Schema.OpenAPIV3Schema.Properties["spec"];
 
-            var specTypes = GenerateTypes(spec, model.Name + "Spec");
+            var specTypes = GenerateTypes(spec, specModelName);
             types.AddRange(specTypes);
 
-            model.Fields.Add(new DynamicProperty("Spec", model.Name + "Spec"));
+            model.Fields.Add(new DynamicProperty("Spec", specModelName));
 
             var status = version.Schema.OpenAPIV3Schema.Properties["status"];
 
-            var statusTypes = GenerateTypes(status, model.Name + "Status");
+            var statusTypes = GenerateTypes(status, statusModelName);
             types.AddRange(statusTypes);
 
-            model.Fields.Add(new DynamicProperty("Status", model.Name + "Status"));
+            model.Fields.Add(new DynamicProperty("Status", statusModelName));
 
             var str = model.ToString() + "\n" + types.Select(x => x.ToString()).Aggregate((a, b) => a + "\n" + b);
 
-            return new object();
+            var syntaxTree = SyntaxFactory.ParseSyntaxTree(SourceText.From(str));
+            var dotNetCoreDir = Path.GetDirectoryName(typeof(object).GetTypeInfo().Assembly.Location);
+
+            string assemblyName = Path.GetRandomFileName();
+            MetadataReference[] references = new MetadataReference[]
+            {
+                MetadataReference.CreateFromFile(typeof(object).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(V1Pod).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(DescriptionAttribute).Assembly.Location),
+                MetadataReference.CreateFromFile(Path.Combine(dotNetCoreDir, "System.Runtime.dll"))
+            };
+
+            var compilation = CSharpCompilation.Create(
+                assemblyName,
+                syntaxTrees: new[] { syntaxTree },
+                references: references,
+                options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+
+            using (var ms = new MemoryStream())
+            {
+                EmitResult result = compilation.Emit(ms);
+
+                if (!result.Success)
+                {
+                    IEnumerable<Diagnostic> failures = result.Diagnostics.Where(diagnostic =>
+                        diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error);
+
+                    foreach (Diagnostic diagnostic in failures)
+                    {
+                        Console.Error.WriteLine("{0}: {1}", diagnostic.Id, diagnostic.GetMessage());
+                    }
+                }
+                else
+                {
+                    ms.Seek(0, SeekOrigin.Begin);
+                    var assembly = Assembly.Load(ms.ToArray());
+                    return assembly;
+                }
+            }
+
+            return null;
         }
 
         private List<DynamicType> GenerateTypes(V1JSONSchemaProps type, string Name)
@@ -78,13 +124,13 @@ namespace KubernetesCRDModelGen
                         types.AddRange(GenerateTypes(property.Value, Name + fieldName));
                         break;
                     case "boolean":
-                        model.Fields.Add(new DynamicProperty(property.Key, typeof(bool).FullName, false, property.Value.Description));
+                        model.Fields.Add(new DynamicProperty(property.Key, "bool", false, property.Value.Description));
                         break;
                     case "integer":
-                        model.Fields.Add(new DynamicProperty(property.Key, typeof(int).FullName, false, property.Value.Description));
+                        model.Fields.Add(new DynamicProperty(property.Key, "int", false, property.Value.Description));
                         break;
                     case "string":
-                        model.Fields.Add(new DynamicProperty(property.Key, typeof(string).FullName, false, property.Value.Description));
+                        model.Fields.Add(new DynamicProperty(property.Key, "string", false, property.Value.Description));
                         break;
                     default:
                         break;
