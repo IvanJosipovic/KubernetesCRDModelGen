@@ -10,8 +10,7 @@ namespace KubernetesCRDModelGen
 {
     public class Generator
     {
-        [Description("")]
-        public Assembly Generate(V1CustomResourceDefinition crd)
+        public string GenerateCode(V1CustomResourceDefinition crd)
         {
             var model = new DynamicType();
             model.AddUsing = true;
@@ -59,10 +58,16 @@ namespace KubernetesCRDModelGen
 
             var str = model.ToString() + "\n" + types.Select(x => x.ToString()).Aggregate((a, b) => a + "\n" + b);
 
-            var syntaxTree = SyntaxFactory.ParseSyntaxTree(SourceText.From(str));
+            return ArrangeUsingRoslyn(str);
+        }
+
+        public Assembly GenerateAssembly(string code)
+        {
+            var syntaxTree = SyntaxFactory.ParseSyntaxTree(SourceText.From(code));
             var dotNetCoreDir = Path.GetDirectoryName(typeof(object).GetTypeInfo().Assembly.Location);
 
             string assemblyName = Path.GetRandomFileName();
+
             MetadataReference[] references = new MetadataReference[]
             {
                 MetadataReference.CreateFromFile(typeof(object).Assembly.Location),
@@ -71,7 +76,6 @@ namespace KubernetesCRDModelGen
                 MetadataReference.CreateFromFile(typeof(DescriptionAttribute).Assembly.Location),
                 MetadataReference.CreateFromFile(Path.Combine(dotNetCoreDir, "System.Runtime.dll"))
             };
-
             var compilation = CSharpCompilation.Create(
                 assemblyName,
                 syntaxTrees: new[] { syntaxTree },
@@ -101,6 +105,14 @@ namespace KubernetesCRDModelGen
             }
 
             return null;
+        }
+
+        private string ArrangeUsingRoslyn(string csCode)
+        {
+            var tree = CSharpSyntaxTree.ParseText(csCode);
+            var root = tree.GetRoot().NormalizeWhitespace();
+            var ret = root.ToFullString();
+            return ret;
         }
 
         private List<DynamicType> GenerateTypes(V1JSONSchemaProps type, string Name)

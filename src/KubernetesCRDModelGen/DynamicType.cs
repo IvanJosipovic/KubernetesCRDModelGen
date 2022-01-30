@@ -19,10 +19,6 @@ public class DynamicType
 
     public List<string> Attributes { get; set; } = new List<string>();
 
-    /// <summary>
-    /// Build the class source code so it can be compiled dynamically later
-    /// </summary>
-    /// <returns>C# Source code of the class</returns>
     public override string ToString()
     {
         string result = "";
@@ -40,7 +36,16 @@ public class DynamicType
 
         if (Description != null)
         {
-            result += $"[Description(@\"{Description}\")]\n";
+            result += "/// <summary>\n";
+
+            var rows = Description.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+
+            foreach (var row in rows)
+            {
+                result += $"/// {row}\n";
+            }
+
+            result += "/// </summary>\n";
         }
 
         result += "public class " + Name + (Implements != null ? ": " + Implements : "");
@@ -60,7 +65,7 @@ public class DynamicType
 
 public class DynamicProperty
 {
-    public DynamicProperty(string name, string fType, bool nullable = false, string description = null)
+    public DynamicProperty(string name, string fType, bool nullable = false, string? description = null)
     {
         Name = name;
         FType = fType;
@@ -74,10 +79,26 @@ public class DynamicProperty
 
     public bool Nullable { get; set; }
 
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     public override string ToString()
     {
-        return $"{(Description != null ? $"[Description(@\"{Description}\")]\n" :"")}public " + FType + (Nullable ? "?" : "") + " " + Name + " {get; set;}\n";
+        string output = "";
+
+        if (Description != null)
+        {
+            output += "/// <summary>\n";
+
+            var rows = Description.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+
+            foreach (var row in rows)
+            {
+                output += $"/// {row}\n";
+            }
+
+            output += "/// </summary>\n";
+        }
+
+        return output + "public " + FType + (Nullable ? "?" : "") + " " + Name + " {get; set;}\n";
     }
 }

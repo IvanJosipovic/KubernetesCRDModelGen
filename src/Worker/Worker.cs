@@ -21,13 +21,9 @@ namespace Worker
 
             var gen = new Generator();
 
-            gen.Generate(crd);
+            var code = gen.GenerateCode(crd);
 
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                await Task.Delay(1000, stoppingToken);
-            }
+            var ass = gen.GenerateAssembly(code);
         }
     }
 }
