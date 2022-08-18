@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace KubernetesCRDModelGen;
+﻿namespace KubernetesCRDModelGen;
 
 public class DynamicType
 {
-    public string Name { get; set; }
+    public string? Name { get; set; }
+
+    public string? Namespace { get; set; }
 
     public string? Implements { get; set; }
 
@@ -21,7 +20,8 @@ public class DynamicType
 
     public override string ToString()
     {
-        string result = "";
+        var result = "";
+
         if (AddUsing)
         {
             result += "using System;\n";
@@ -29,6 +29,15 @@ public class DynamicType
             result += "using k8s;\n";
             result += "using k8s.Models;\n";
             result += "using System.ComponentModel;\n";
+            result += "using System.Collections.Generic;\n";
+            result += "using System.Text.Json;\n";
+            result += "using System.Text.Json.Nodes;\n";
+            result += "using System.Text.Json.Serialization;\n";
+        }
+
+        if (!string.IsNullOrEmpty(Namespace))
+        {
+            result += $"namespace {Namespace};\n";
         }
 
         foreach (var attribute in Attributes)
@@ -38,9 +47,7 @@ public class DynamicType
         {
             result += "/// <summary>\n";
 
-            var rows = Description.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
-
-            foreach (var row in rows)
+            foreach (var row in Description.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None))
             {
                 result += $"/// {row}\n";
             }
@@ -48,7 +55,7 @@ public class DynamicType
             result += "/// </summary>\n";
         }
 
-        result += "public class " + Name + (Implements != null ? ": " + Implements : "");
+        result += "public class " + Name + (Implements != null ? ": " + Implements.Trim(',') : "");
         result += "\n{\n";
 
         foreach (var constant in Constant)
@@ -60,45 +67,5 @@ public class DynamicType
         result += "}";
 
         return result;
-    }
-}
-
-public class DynamicProperty
-{
-    public DynamicProperty(string name, string fType, bool nullable = false, string? description = null)
-    {
-        Name = name;
-        FType = fType;
-        Nullable = nullable;
-        Description = description;
-    }
-
-    public string Name { get; set; }
-
-    public string FType { get; set; }
-
-    public bool Nullable { get; set; }
-
-    public string? Description { get; set; }
-
-    public override string ToString()
-    {
-        string output = "";
-
-        if (Description != null)
-        {
-            output += "/// <summary>\n";
-
-            var rows = Description.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
-
-            foreach (var row in rows)
-            {
-                output += $"/// {row}\n";
-            }
-
-            output += "/// </summary>\n";
-        }
-
-        return output + "public " + FType + (Nullable ? "?" : "") + " " + Name + " {get; set;}\n";
     }
 }

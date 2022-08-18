@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "src\Worker\Worker.csproj", "{ECBA3700-5700-4DC8-9091-201755AEE9E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubernetesCRDModelGen", "src\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj", "{A49FD3D4-4148-4D30-B06C-7B217EC3C056}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubernetesCRDModelGen.Tests", "src\KubernetesCRDModelGen.Tests\KubernetesCRDModelGen.Tests.csproj", "{4D2E27AC-BAFE-4FCD-970D-1EC4869DFC89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubernetesCRDModelGen.SourceGenerator", "src\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj", "{A83C1998-4BC4-4FE9-BE4A-9D732B77BF77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{56831114-049C-4E0C-851D-BBA2505428A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubernetesCRDModelGen.Models.fluxcd.io", "src\Models\KubernetesCRDModelGen.Models.fluxcd.io\KubernetesCRDModelGen.Models.fluxcd.io.csproj", "{0DC9E4AD-F82E-4870-A822-38F7B205221F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F59F824-C642-468A-9A47-F73B8F2A417F}"
+	ProjectSection(SolutionItems) = preProject
+		.releaserc.json = .releaserc.json
+		.github\workflows\cicd.yml = .github\workflows\cicd.yml
+		src\Models\Directory.Build.props = src\Models\Directory.Build.props
+		global.json = global.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECBA3700-5700-4DC8-9091-201755AEE9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECBA3700-5700-4DC8-9091-201755AEE9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECBA3700-5700-4DC8-9091-201755AEE9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECBA3700-5700-4DC8-9091-201755AEE9E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A49FD3D4-4148-4D30-B06C-7B217EC3C056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A49FD3D4-4148-4D30-B06C-7B217EC3C056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A49FD3D4-4148-4D30-B06C-7B217EC3C056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A49FD3D4-4148-4D30-B06C-7B217EC3C056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D2E27AC-BAFE-4FCD-970D-1EC4869DFC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D2E27AC-BAFE-4FCD-970D-1EC4869DFC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D2E27AC-BAFE-4FCD-970D-1EC4869DFC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D2E27AC-BAFE-4FCD-970D-1EC4869DFC89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A83C1998-4BC4-4FE9-BE4A-9D732B77BF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83C1998-4BC4-4FE9-BE4A-9D732B77BF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83C1998-4BC4-4FE9-BE4A-9D732B77BF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83C1998-4BC4-4FE9-BE4A-9D732B77BF77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC9E4AD-F82E-4870-A822-38F7B205221F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC9E4AD-F82E-4870-A822-38F7B205221F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC9E4AD-F82E-4870-A822-38F7B205221F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC9E4AD-F82E-4870-A822-38F7B205221F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0DC9E4AD-F82E-4870-A822-38F7B205221F} = {56831114-049C-4E0C-851D-BBA2505428A1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85C5FEF7-AB6B-473B-8EC8-C2B35531DA80}
+	EndGlobalSection
+EndGlobal

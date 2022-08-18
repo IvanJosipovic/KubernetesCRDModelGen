@@ -15,15 +15,15 @@ namespace Worker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            var objects = await Yaml.LoadAllFromFileAsync("CRD.yaml");
+            var objects = await KubernetesYaml.LoadAllFromFileAsync("CRD.yaml");
 
             var crd = objects.First() as V1CustomResourceDefinition;
 
-            var gen = new Generator();
+            var gen = new CRDGenerator();
 
             var code = gen.GenerateCode(crd);
 
-            var ass = gen.GenerateAssembly(code);
+            var ass = gen.GenerateAssembly(crd);
         }
     }
 }

@@ -1,0 +1,69 @@
+name: CICD
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+      - 'alpha'
+      - 'beta'
+      - 'dev'
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+env:
+  semantic_version: 19
+
+jobs:
+  semantic-release:
+    name: Bump Version
+    runs-on: ubuntu-latest
+    outputs:
+      new_release_published: ${{ steps.semantic.outputs.new_release_published }}
+      new_release_version: ${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1' }}
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Semantic Release
+      uses: cycjimmy/semantic-release-action@v2
+      id: semantic
+      with:
+        semantic_version: ${{ env.semantic_version }}
+        dry_run: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  tests:
+    name: Tests
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
+      with:
+        global-json-file: global.json
+
+    - name: .NET Build
+      run: dotnet build -c Release
+
+    - name: .NET Test
+      run: dotnet test -c Release /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+
+    - name: Coverage
+      uses: codecov/codecov-action@v3
+      with:
+        file: coverage.cobertura.xml
+
+    - name: .NET Pack
+      run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1' }}
+
+    - name: .NET NuGet Push
+      if: steps.semantic.outputs.new_release_published == 'true'
+      run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: NuGet Package
+        path: src/**/*.nupkg
