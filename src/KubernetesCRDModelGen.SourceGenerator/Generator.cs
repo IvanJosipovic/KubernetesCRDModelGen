@@ -48,7 +48,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
                     parser.Consume<StreamStart>();
 
-                    while (parser.TryConsume(out DocumentStart start))
+                    while (parser.Accept<DocumentStart>(out var start))
                     {
                         var doc = deserializer.Deserialize(parser);
                         var json = serializer.Serialize(doc);
