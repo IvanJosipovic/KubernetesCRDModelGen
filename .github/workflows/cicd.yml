@@ -29,8 +29,11 @@ jobs:
       id: semantic
       with:
         semantic_version: ${{ env.semantic_version }}
+        dry_run: true
         extra_plugins: |
           @semantic-release/changelog
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v2
@@ -54,6 +57,16 @@ jobs:
     - name: .NET NuGet Push
       if: steps.semantic.outputs.new_release_published == 'true'
       run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+
+    - name: Semantic Release
+      if: steps.semantic.outputs.new_release_published == 'true'
+      uses: cycjimmy/semantic-release-action@v2
+      with:
+        semantic_version: ${{ env.semantic_version }}
+        extra_plugins: |
+          @semantic-release/changelog
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - uses: actions/upload-artifact@v3
       with:
