@@ -24,6 +24,8 @@ namespace KubernetesCRDModelGen.SourceGenerator
             //}
 #endif
 
+            var name = context.Compilation.AssemblyName;
+
             CRDGenerator.FixSerializer();
 
             var serializer = new SerializerBuilder()
@@ -59,7 +61,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
                             try
                             {
                                 var crd = KubernetesJson.Deserialize<V1CustomResourceDefinition>(json);
-                                var code = crdGen.GenerateCode(crd);
+                                var code = crdGen.GenerateCode(crd, name);
 
                                 context.AddSource($"{crd.Metadata.Name.Replace(".", "-")}.g.cs", code);
                             }
