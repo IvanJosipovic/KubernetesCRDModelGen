@@ -15,8 +15,8 @@ env:
   semantic_version: 19
 
 jobs:
-  semantic-release:
-    name: Bump Version
+  create-release:
+    name: Create Release
     runs-on: ubuntu-latest
     outputs:
       new_release_published: ${{ steps.semantic.outputs.new_release_published }}
@@ -29,16 +29,8 @@ jobs:
       id: semantic
       with:
         semantic_version: ${{ env.semantic_version }}
-        dry_run: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  tests:
-    name: Tests
-    runs-on: windows-latest
-    timeout-minutes: 10
-    steps:
-    - uses: actions/checkout@v3
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v2
