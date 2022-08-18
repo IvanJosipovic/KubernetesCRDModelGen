@@ -56,7 +56,7 @@ jobs:
 
     - name: .NET NuGet Push
       if: steps.semantic.outputs.new_release_published == 'true'
-      run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate
 
     - name: Semantic Release
       if: steps.semantic.outputs.new_release_published == 'true'
