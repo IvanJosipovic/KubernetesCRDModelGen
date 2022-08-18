@@ -2,7 +2,9 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
 		<Authors>Ivan Josipovic</Authors>
-        <ImplicitUsings>enable</ImplicitUsings>
+		<Description>Kubernetes Custom Resource Definition Models</Description>
+		<PackageTags>Kubernetes Custom Resource Definition Models</PackageTags>
+		<ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>

@@ -3,6 +3,8 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<Authors>Ivan Josipovic</Authors>
+		<Description>Converts Custom Resource Definition Yaml files to Models</Description>
+		<PackageTags>Kubernetes Yaml CRD Converts Custom Resource Model</PackageTags>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
