@@ -29,8 +29,8 @@ jobs:
       id: semantic
       with:
         semantic_version: ${{ env.semantic_version }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        extra_plugins: |
+          @semantic-release/changelog
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v2
