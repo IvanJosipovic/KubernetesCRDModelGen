@@ -44,16 +44,14 @@ public class CRDGenerator : ICRDGenerator
     public async Task<(Assembly?, XmlDocument?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
     {
         var code = GenerateCode(crd, @namespace);
-        return await GenerateAssembly(code);
+        return await GenerateAssembly(crd.Metadata.Name.Replace(".", "-"), code);
     }
 
-    private async Task<(Assembly?, XmlDocument?)> GenerateAssembly(string code)
+    private async Task<(Assembly?, XmlDocument?)> GenerateAssembly(string name, string code)
     {
         try
         {
             var syntaxTree = SyntaxFactory.ParseSyntaxTree(SourceText.From(code));
-
-            var assemblyName = Path.GetRandomFileName();
 
             if (MetadataReferences == null)
             {
@@ -61,7 +59,7 @@ public class CRDGenerator : ICRDGenerator
             }
 
             var compilation = CSharpCompilation.Create(
-                assemblyName,
+                name,
                 syntaxTrees: new[] { syntaxTree },
                 references: MetadataReferences,
                 options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));

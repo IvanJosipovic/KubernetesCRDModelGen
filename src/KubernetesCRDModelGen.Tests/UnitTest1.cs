@@ -169,4 +169,12 @@ public class UnitTest1
 
         type.Should().NotBeNull();
     }
+
+    [Fact]
+    public async Task TestAssemblyName()
+    {
+        var type = await GetType("CRDs/1.yaml", "Alert");
+
+        type.Assembly.ManifestModule.ScopeName.Should().Be("alerts-my-group-com.dll");
+    }
 }
