@@ -19,7 +19,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+        <PackageReference Include="CsCodeGenerator" Version="2.0.0" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
         <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.2.4" />
         <PackageReference Include="KubernetesClient.Models" Version="8.0.12" />
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.2.0" />
@@ -30,11 +31,11 @@
         <ItemGroup>
             <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient.Models' Or '%(ReferencePath.Filename)' == 'System.Text.Json')" />
 
-            <XmlFilesToEmbed Include="@(FilesToEmbed->'%(RelativeDir)%(FileName).xml'-> Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient.Models')"/>
+			<XmlFilesToEmbed Include="@(FilesToEmbed->'%(RelativeDir)%(FileName).xml'-> Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient.Models')"/>
 
-            <!-- add these assemblies to the list of embedded resources -->
-            <EmbeddedResource Include="@(FilesToEmbed->'%(RelativeDir)%(FileName).dll'-> Exists())">
-                <LogicalName>runtime.%(FilesToEmbed.Filename)%(FilesToEmbed.Extension)</LogicalName>
+			<!-- add these assemblies to the list of embedded resources -->
+			<EmbeddedResource Include="@(FilesToEmbed->'%(RelativeDir)%(FileName).dll'-> Exists())">
+				<LogicalName>runtime.%(FilesToEmbed.Filename)%(FilesToEmbed.Extension)</LogicalName>
             </EmbeddedResource>
 
             <!-- add xml documentation for list of assemblies -->

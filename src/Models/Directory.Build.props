@@ -16,7 +16,8 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <IsPackable>true</IsPackable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    </PropertyGroup>
+		<EmitCompilerGeneratedFiles Condition="'$(Configuration)' == 'Debug'">true</EmitCompilerGeneratedFiles>
+	</PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="KubernetesClient.Models" Version="8.0.12" />

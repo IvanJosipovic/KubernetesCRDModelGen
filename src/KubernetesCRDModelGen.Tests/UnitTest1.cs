@@ -22,7 +22,6 @@ public class UnitTest1
         services.AddSingleton<ILoggerFactory, LoggerFactory>();
         services.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
         services.AddSingleton<ICRDGenerator, CRDGenerator>();
-        //services.AddHttpClient();
 
         return services.BuildServiceProvider();
     }
