@@ -17,6 +17,7 @@
         <IsPackable>true</IsPackable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<EmitCompilerGeneratedFiles Condition="'$(Configuration)' == 'Debug'">true</EmitCompilerGeneratedFiles>
+		<CompilerGeneratedFilesOutputPath Condition="'$(Configuration)' == 'Debug'">Generated</CompilerGeneratedFilesOutputPath>
 	</PropertyGroup>
 
     <ItemGroup>
