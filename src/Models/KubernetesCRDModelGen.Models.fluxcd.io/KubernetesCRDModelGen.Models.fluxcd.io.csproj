@@ -1,2 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Update="KubernetesClient.Models" Version="8.0.68" />
+  </ItemGroup>
 </Project>

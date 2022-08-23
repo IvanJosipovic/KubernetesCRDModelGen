@@ -27,7 +27,7 @@
 
     <ItemGroup>
         <!-- Generator dependencies -->
-        <PackageReference Include="KubernetesClient.Models" Version="8.0.12" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="KubernetesClient.Models" Version="8.0.68" GeneratePathProperty="true" PrivateAssets="all" />
         <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="6.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <PackageReference Include="System.Text.Encodings.Web" Version="6.0.0" GeneratePathProperty="true" PrivateAssets="all" />
