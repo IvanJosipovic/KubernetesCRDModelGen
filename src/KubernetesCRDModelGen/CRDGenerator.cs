@@ -428,24 +428,30 @@ public class CRDGenerator : ICRDGenerator
 
                     if (kv.ContainsKey("required"))
                     {
-                        required = (string[])kv["required"];
+                        if (kv["required"] is string[])
+                        {
+                            required = (string[])kv["required"];
+                        }
                     }
 
                     if (kv.ContainsKey("properties"))
                     {
-                        var properties = (IDictionary<object, object>)kv["properties"];
-
-                        foreach (KeyValuePair<object, object> property in properties)
+                        if (kv["properties"] is (IDictionary<object, object>))
                         {
-                            //model.Properties.Add(new Property()
-                            //{
+                            var properties = (IDictionary<object, object>)kv["properties"];
 
-                            //});
+                            foreach (KeyValuePair<object, object> property in properties)
+                            {
+                                //model.Properties.Add(new Property()
+                                //{
+
+                                //});
+                            }
                         }
                     }
                 }
             }
-            else if(schema.Items is JsonElement ele)
+            else if (schema.Items is JsonElement ele)
             {
                 switch (ele.ValueKind)
                 {
