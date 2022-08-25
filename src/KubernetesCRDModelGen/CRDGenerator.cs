@@ -10,6 +10,8 @@ using System.Text.Json;
 using System.Xml;
 using CsCodeGenerator;
 using CsCodeGenerator.Enums;
+using System;
+using System.Xml.Linq;
 
 namespace KubernetesCRDModelGen;
 
@@ -17,7 +19,7 @@ public class CRDGenerator : ICRDGenerator
 {
     public const string ModelNamespace = "KubernetesCRDModelGen.Models";
 
-    private ILogger<CRDGenerator> Logger { get; set; }
+    private ILogger<CRDGenerator>? Logger { get; set; }
 
     private MetadataReference[] MetadataReferences { get; set; }
 
@@ -367,7 +369,7 @@ public class CRDGenerator : ICRDGenerator
                         {
                             Attributes = attribute,
                             Comment = CleanDescription(property.Value.Description)
-                        }); 
+                        });
                         break;
 
                     case "":
@@ -411,9 +413,66 @@ public class CRDGenerator : ICRDGenerator
         }
         else if (schema.Type == "array")
         {
+            if (schema.Items is (Dictionary<object, object>))
+            {
+                var kv = (Dictionary<object, object>)schema.Items;
 
-            //model.Fields.Add(new DynamicProperty(fieldName, $"IList<{Name + fieldName}>", IsNullable(property), property.Value.Description, new() { attribute }));
-            //types.AddRange(GenerateTypes(property.Value, Name + fieldName));
+                if (kv.ContainsKey("type") && kv["type"].ToString() == "object")
+                {
+                    if (kv.ContainsKey("description"))
+                    {
+                        model.Comment = CleanDescription(kv["description"].ToString());
+                    }
+
+                    string[] required = null;
+
+                    if (kv.ContainsKey("required"))
+                    {
+                        required = (string[])kv["required"];
+                    }
+
+                    if (kv.ContainsKey("properties"))
+                    {
+                        var properties = (IDictionary<object, object>)kv["properties"];
+
+                        foreach (KeyValuePair<object, object> property in properties)
+                        {
+                            //model.Properties.Add(new Property()
+                            //{
+
+                            //});
+                        }
+                    }
+                }
+            }
+            else if(schema.Items is JsonElement ele)
+            {
+                switch (ele.ValueKind)
+                {
+                    case JsonValueKind.Undefined:
+                        break;
+                    case JsonValueKind.Object:
+                        break;
+                    case JsonValueKind.Array:
+                        break;
+                    case JsonValueKind.String:
+                        break;
+                    case JsonValueKind.Number:
+                        break;
+                    case JsonValueKind.True:
+                        break;
+                    case JsonValueKind.False:
+                        break;
+                    case JsonValueKind.Null:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+
+            }
         }
         else if (schema.Type == "object")
         {
@@ -444,179 +503,6 @@ public class CRDGenerator : ICRDGenerator
 
         return description.Replace("\n", "").Replace("\r","");
     }
-
-    //private List<DynamicType> GenerateTypes(V1JSONSchemaProps schema, string name, string @namespace = ModelNamespace, string? version = null, string? kind = null, string? group = null, string? plural = null)
-    //{
-    //    bool isRoot = version != null && kind != null && group != null && plural != null;
-
-    //    var types = new List<DynamicType>();
-    //    var model = new DynamicType();
-    //    types.Add(model);
-
-    //    model.Name = CapitalizeFirstLetter(name);
-    //    model.Description = schema.Description;
-
-    //    if (isRoot)
-    //    {
-    //        // Root Model
-    //        model.Namespace = @namespace;
-    //        model.AddUsing = true;
-
-    //        model.Constant.Add($"public const string KubeApiVersion = \"{version}\";");
-    //        model.Constant.Add($"public const string KubeKind = \"{kind}\";");
-    //        model.Constant.Add($"public const string KubeGroup = \"{group}\";");
-    //        model.Constant.Add($"public const string KubePluralName = \"{plural}\";");
-
-    //        model.Attributes.Add($"[KubernetesEntity(ApiVersion = \"{version}\", Group = \"{group}\", Kind = \"{kind}\", PluralName = \"{plural}\")]");
-
-    //        model.Fields.Add(new DynamicProperty("ApiVersion", "string", false, "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources", new() { "[JsonPropertyName(\"apiVersion\")]" }));
-    //        model.Fields.Add(new DynamicProperty("Kind", "string", false, "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds", new() { "[JsonPropertyName(\"kind\")]" }));
-
-    //        model.Implements = $"IKubernetesObject<V1ObjectMeta?>";
-    //        model.Fields.Add(new DynamicProperty("Metadata", "V1ObjectMeta", false, "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.", new() { $"[JsonPropertyName(\"metadata\")]" }));
-    //    }
-
-    //    if (schema.XKubernetesPreserveUnknownFields == true)
-    //    {
-    //        model.Fields.Add(new DynamicProperty("ExtensionData", $"Dictionary<string, object>", false, null, new List<string>() { "[JsonExtensionData]" }));
-    //    }
-
-    //    if (schema.Properties != null)
-    //    {
-    //        foreach (var property in schema.Properties)
-    //        {
-    //            var attribute = $"[JsonPropertyName(\"{property.Key}\")]";
-    //            string fieldName = property.Key;
-
-    //            if (fieldName == "continue" || fieldName == "ref" || fieldName == "namespace" || fieldName == "static")
-    //            {
-    //                fieldName = "@" + fieldName;
-    //            }
-
-    //            if (fieldName.Contains("$"))
-    //            {
-    //                fieldName = fieldName.Replace("$", "");
-    //            }
-
-    //            fieldName = CapitalizeFirstLetter(fieldName);
-
-    //            var combinedFieldName = name + CapitalizeFirstLetter(property.Key.Replace("$", "").Replace("@", ""));
-
-    //            if (isRoot)
-    //            {
-    //                // Root Model
-
-    //                if (property.Key == "apiVersion" || property.Key == "kind" || property.Key == "metadata")
-    //                {
-    //                    continue;
-    //                }
-    //            }
-
-    //            switch (property.Value.Type)
-    //            {
-    //                case "object":
-    //                    model.Fields.Add(new DynamicProperty(fieldName, combinedFieldName, IsNullable(property), property.Value.Description, new() { attribute }));
-    //                    types.AddRange(GenerateTypes(property.Value, combinedFieldName));
-
-    //                    if (isRoot)
-    //                    {
-    //                        // Root Model
-
-    //                        if (property.Key.Equals("status"))
-    //                        {
-    //                            model.Implements += $", IStatus<{combinedFieldName + (IsNullable(property) ? "?" : "")}>";
-    //                        }
-    //                        else if (property.Key.Equals("spec"))
-    //                        {
-    //                            model.Implements += $", ISpec<{combinedFieldName + (IsNullable(property) ? "?" : "")}>";
-    //                        }
-    //                    }
-    //                    break;
-
-    //                case "array":
-    //                    model.Fields.Add(new DynamicProperty(fieldName, $"IList<{combinedFieldName}>", IsNullable(property), property.Value.Description, new() { attribute }));
-    //                    types.AddRange(GenerateTypes(property.Value, combinedFieldName));
-    //                    break;
-
-    //                case "boolean":
-    //                    model.Fields.Add(new DynamicProperty(fieldName, "bool", IsNullable(property), property.Value.Description, new() { attribute }));
-    //                    break;
-
-    //                case "integer":
-    //                    if (property.Value.Format == "int64")
-    //                    {
-    //                        model.Fields.Add(new DynamicProperty(fieldName, "long", IsNullable(property), property.Value.Description, new() { attribute }));
-    //                    }
-    //                    else
-    //                    {
-    //                        model.Fields.Add(new DynamicProperty(fieldName, "int", IsNullable(property), property.Value.Description, new() { attribute }));
-    //                    }
-    //                    break;
-
-    //                case "string":
-    //                    model.Fields.Add(new DynamicProperty(fieldName, "string", IsNullable(property), property.Value.Description, new() { attribute }));
-    //                    break;
-
-    //                case "":
-    //                case null:
-    //                    if (property.Value.XKubernetesPreserveUnknownFields == true)
-    //                    {
-    //                        model.Fields.Add(new DynamicProperty(fieldName, $"JsonNode", IsNullable(property), property.Value.Description, new() { attribute }));
-
-    //                        if (isRoot)
-    //                        {
-    //                            // Root Model
-
-    //                            if (property.Key.Equals("status"))
-    //                            {
-    //                                model.Implements += $", IStatus<JsonNode{(IsNullable(property) ? "?" : "")}>";
-    //                            }
-    //                            else if (property.Key.Equals("spec"))
-    //                            {
-    //                                model.Implements += $", ISpec<JsonNode{(IsNullable(property) ? "?" : "")}>";
-    //                            }
-    //                        }
-    //                    }
-    //                    break;
-
-    //                default:
-    //                    if (Logger == null)
-    //                    {
-    //                        Console.WriteLine("Unhandled Property Type {type}", property.Value.Type);
-    //                    }
-    //                    else
-    //                    {
-    //                        Logger.LogWarning("Unhandled Property Type {type}", property.Value.Type);
-    //                    }
-    //                    break;
-    //            }
-    //        }
-    //    }
-    //    else if (schema.Type == "array")
-    //    {
-
-    //        //model.Fields.Add(new DynamicProperty(fieldName, $"IList<{Name + fieldName}>", IsNullable(property), property.Value.Description, new() { attribute }));
-    //        //types.AddRange(GenerateTypes(property.Value, Name + fieldName));
-    //    }
-    //    else if (schema.Type == "object")
-    //    {
-    //        //model.Fields.Add(new DynamicProperty(fieldName, $"IList<{Name + fieldName}>", IsNullable(property), property.Value.Description, new() { attribute }));
-    //        //types.AddRange(GenerateTypes(property.Value, Name + fieldName));
-    //    }
-    //    else
-    //    {
-    //        if (Logger == null)
-    //        {
-    //            Console.WriteLine("Unhandled Type {type}", schema.Type);
-    //        }
-    //        else
-    //        {
-    //            Logger.LogWarning("Unhandled Type {type}", schema.Type);
-    //        }
-    //    }
-
-    //    return types;
-    //}
 
     private static bool IsNullable(KeyValuePair<string, V1JSONSchemaProps> item)
     {

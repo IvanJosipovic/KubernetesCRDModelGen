@@ -27,7 +27,9 @@
 
     <ItemGroup>
         <!-- Generator dependencies -->
-        <PackageReference Include="KubernetesClient.Models" Version="8.0.68" GeneratePathProperty="true" PrivateAssets="all" />
+		<PackageReference Include="CsCodeGenerator" Version="2.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Fractions" Version="7.1.0" GeneratePathProperty="true" PrivateAssets="all" />
+		<PackageReference Include="KubernetesClient.Models" Version="8.0.68" GeneratePathProperty="true" PrivateAssets="all" />
         <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="6.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <PackageReference Include="System.Text.Encodings.Web" Version="6.0.0" GeneratePathProperty="true" PrivateAssets="all" />
@@ -40,7 +42,9 @@
     </PropertyGroup>
 
     <Target Name="GetDependencyTargetPaths">
-        <ItemGroup>
+		<ItemGroup>
+			<TargetPathWithTargetPlatformMoniker Include="$(PKGCsCodeGenerator)\lib\netstandard2.0\CsCodeGenerator.dll" IncludeRuntimeDependency="false" />
+			<TargetPathWithTargetPlatformMoniker Include="$(PKGFractions)\lib\netstandard2.0\Fractions.dll" IncludeRuntimeDependency="false" />
             <TargetPathWithTargetPlatformMoniker Include="$(PKGKubernetesClient_Models)\lib\netstandard2.0\KubernetesClient.Models.dll" IncludeRuntimeDependency="false" />
             <TargetPathWithTargetPlatformMoniker Include="$(PKGMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll" IncludeRuntimeDependency="false" />
             <TargetPathWithTargetPlatformMoniker Include="$(PKGMicrosoft_Extensions_Logging_Abstractions)\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll" IncludeRuntimeDependency="false" />
