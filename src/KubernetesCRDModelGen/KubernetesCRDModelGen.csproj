@@ -31,10 +31,10 @@
         <ItemGroup>
             <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient.Models' Or '%(ReferencePath.Filename)' == 'System.Text.Json')" />
 
-			<XmlFilesToEmbed Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).xml'-&gt; Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient.Models')" />
+			<XmlFilesToEmbed Include="@(FilesToEmbed->'%(RelativeDir)%(FileName).xml'-> Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient.Models')" />
 
 			<!-- add these assemblies to the list of embedded resources -->
-			<EmbeddedResource Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).dll'-&gt; Exists())">
+			<EmbeddedResource Include="@(FilesToEmbed->'%(RelativeDir)%(FileName).dll'-> Exists())">
 				<LogicalName>runtime.%(FilesToEmbed.Filename)%(FilesToEmbed.Extension)</LogicalName>
             </EmbeddedResource>
 
