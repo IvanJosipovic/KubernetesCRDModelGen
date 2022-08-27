@@ -507,7 +507,7 @@ public class CRDGenerator : ICRDGenerator
             return string.Empty;
         }
 
-        return description.Replace("\n", "").Replace("\r","");
+        return "<summary>" + description.Replace("\n", "").Replace("\r", "") + "</summary>";
     }
 
     private static bool IsNullable(KeyValuePair<string, V1JSONSchemaProps> item)
