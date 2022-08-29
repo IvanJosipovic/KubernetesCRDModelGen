@@ -1,11 +1,8 @@
 ﻿using k8s;
 using k8s.Models;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Text;
 using System;
-using System.Diagnostics;
 using System.IO;
-using System.Text;
 using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
 using YamlDotNet.Serialization;
@@ -68,20 +65,30 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
                                 context.AddSource($"{crd.Metadata.Name.Replace(".", "-")}.g.cs", code);
                             }
-                            catch (Exception ex)
+                            catch (Exception e)
                             {
-                                Console.WriteLine("Error converting from Json to {type} {json} {ex}", key, json, ex);
+                                context.ReportDiagnostic(Diagnostic.Create(
+                                    new DiagnosticDescriptor(
+                                    "KG2",
+                                    $"Error converting {file.Path} {key}",
+                                    "{0}\n{1}",
+                                    "KubernetesCRDModelGen",
+                                    DiagnosticSeverity.Error,
+                                    true), Location.None, e.Message, e.StackTrace));
                             }
-                        }
-                        else
-                        {
-                            Console.WriteLine("Wrong Type: {type}", key);
                         }
                     }
                 }
-                catch (Exception ex)
+                catch (Exception e)
                 {
-                    Console.WriteLine("Error Generating Code: {error}", ex);
+                    context.ReportDiagnostic(Diagnostic.Create(
+                        new DiagnosticDescriptor(
+                        "KG1",
+                        $"Error parsing {file.Path}",
+                        "{0}\n{1}",
+                        "KubernetesCRDModelGen",
+                        DiagnosticSeverity.Error,
+                        true), Location.None, e.Message, e.StackTrace));
                 }
             }
         }
