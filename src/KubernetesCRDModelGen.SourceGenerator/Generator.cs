@@ -24,7 +24,6 @@ namespace KubernetesCRDModelGen.SourceGenerator
             var name = context.Compilation.AssemblyName;
 
             var serializer = new SerializerBuilder()
-                .JsonCompatible()
                 .Build();
 
             var deserializer = new DeserializerBuilder().Build();
@@ -46,16 +45,16 @@ namespace KubernetesCRDModelGen.SourceGenerator
                     while (parser.Accept<DocumentStart>(out var start))
                     {
                         var doc = deserializer.Deserialize(parser);
-                        var json = serializer.Serialize(doc);
+                        var yaml = serializer.Serialize(doc);
 
-                        var meta = KubernetesJson.Deserialize<KubernetesObject>(json);
+                        var meta = KubernetesYaml.Deserialize<KubernetesObject>(yaml);
                         var key = $"{meta.ApiVersion}/{meta.Kind}";
 
                         if (key == $"{V1CustomResourceDefinition.KubeGroup}/{V1CustomResourceDefinition.KubeApiVersion}/{V1CustomResourceDefinition.KubeKind}")
                         {
                             try
                             {
-                                var crd = KubernetesJson.Deserialize<V1CustomResourceDefinition>(json);
+                                var crd = KubernetesYaml.Deserialize<V1CustomResourceDefinition>(yaml);
                                 var code = crdGen.GenerateCode(crd, name);
 
                                 // fix for summary https://github.com/borisdj/CsCodeGenerator/issues/6
