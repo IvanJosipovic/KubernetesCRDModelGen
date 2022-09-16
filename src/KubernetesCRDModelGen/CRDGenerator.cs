@@ -1,17 +1,13 @@
-﻿using k8s;
-using k8s.Models;
+﻿using k8s.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Text;
 using Microsoft.Extensions.Logging;
 using System.Reflection;
-using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Xml;
 using CsCodeGenerator;
 using CsCodeGenerator.Enums;
-using System;
-using System.Xml.Linq;
 
 namespace KubernetesCRDModelGen;
 
@@ -276,21 +272,9 @@ public class CRDGenerator : ICRDGenerator
                     }
                 };
 
-                string fieldName = property.Key;
+                string propertyName = GetCleanPropertyName(property.Key);
 
-                if (fieldName == "continue" || fieldName == "ref" || fieldName == "namespace" || fieldName == "static")
-                {
-                    fieldName = "@" + fieldName;
-                }
-
-                if (fieldName.Contains("$"))
-                {
-                    fieldName = fieldName.Replace("$", "");
-                }
-
-                fieldName = CapitalizeFirstLetter(fieldName);
-
-                var combinedFieldName = name + CapitalizeFirstLetter(property.Key.Replace("$", "").Replace("@", ""));
+                var combinedPropertyName = GetCombinedName(name, property.Key);
 
                 if (isRoot)
                 {
@@ -305,9 +289,9 @@ public class CRDGenerator : ICRDGenerator
                 switch (property.Value.Type)
                 {
                     case "object":
-                        types.AddRange(GenerateClasses(property.Value, combinedFieldName));
+                        types.AddRange(GenerateClasses(property.Value, combinedPropertyName));
 
-                        model.Properties.Add(new Property(combinedFieldName + (IsNullable(property) ? "?" : ""), fieldName)
+                        model.Properties.Add(new Property(combinedPropertyName + (IsNullable(property) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,
                             Comment = CleanDescription(property.Value.Description)
@@ -319,18 +303,18 @@ public class CRDGenerator : ICRDGenerator
 
                             if (property.Key.Equals("status"))
                             {
-                                model.Interfaces.Add($"IStatus<{combinedFieldName + (IsNullable(property) ? "?" : "")}>");
+                                model.Interfaces.Add($"IStatus<{combinedPropertyName + (IsNullable(property) ? "?" : "")}>");
                             }
                             else if (property.Key.Equals("spec"))
                             {
-                                model.Interfaces.Add($"ISpec<{combinedFieldName + (IsNullable(property) ? "?" : "")}>");
+                                model.Interfaces.Add($"ISpec<{combinedPropertyName + (IsNullable(property) ? "?" : "")}>");
                             }
                         }
                         break;
 
                     case "array":
-                        types.AddRange(GenerateClasses(property.Value, combinedFieldName));
-                        model.Properties.Add(new Property($"IList<{combinedFieldName}>" + (IsNullable(property) ? "?" : ""), fieldName)
+                        types.AddRange(GenerateClasses(property.Value, combinedPropertyName));
+                        model.Properties.Add(new Property($"IList<{combinedPropertyName}>" + (IsNullable(property) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,
                             Comment = CleanDescription(property.Value.Description)
@@ -338,7 +322,7 @@ public class CRDGenerator : ICRDGenerator
                         break;
 
                     case "boolean":
-                        model.Properties.Add(new Property("bool" + (IsNullable(property) ? "?" : ""), fieldName)
+                        model.Properties.Add(new Property("bool" + (IsNullable(property) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,
                             Comment = CleanDescription(property.Value.Description)
@@ -348,7 +332,7 @@ public class CRDGenerator : ICRDGenerator
                     case "integer":
                         if (property.Value.Format == "int64")
                         {
-                            model.Properties.Add(new Property("long" + (IsNullable(property) ? "?" : ""), fieldName)
+                            model.Properties.Add(new Property("long" + (IsNullable(property) ? "?" : ""), propertyName)
                             {
                                 Attributes = attribute,
                                 Comment = CleanDescription(property.Value.Description)
@@ -356,7 +340,7 @@ public class CRDGenerator : ICRDGenerator
                         }
                         else
                         {
-                            model.Properties.Add(new Property("int" + (IsNullable(property) ? "?" : ""), fieldName)
+                            model.Properties.Add(new Property("int" + (IsNullable(property) ? "?" : ""), propertyName)
                             {
                                 Attributes = attribute,
                                 Comment = CleanDescription(property.Value.Description)
@@ -365,7 +349,7 @@ public class CRDGenerator : ICRDGenerator
                         break;
 
                     case "string":
-                        model.Properties.Add(new Property("string" + (IsNullable(property) ? "?" : ""), fieldName)
+                        model.Properties.Add(new Property("string" + (IsNullable(property) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,
                             Comment = CleanDescription(property.Value.Description)
@@ -376,7 +360,7 @@ public class CRDGenerator : ICRDGenerator
                     case null:
                         if (property.Value.XKubernetesPreserveUnknownFields == true)
                         {
-                            model.Properties.Add(new Property("JsonNode" + (IsNullable(property) ? "?" : ""), fieldName)
+                            model.Properties.Add(new Property("JsonNode" + (IsNullable(property) ? "?" : ""), propertyName)
                             {
                                 Attributes = attribute,
                                 Comment = CleanDescription(property.Value.Description)
@@ -424,13 +408,13 @@ public class CRDGenerator : ICRDGenerator
                         model.Comment = CleanDescription(kv["description"].ToString());
                     }
 
-                    string[] required = null;
+                    List<object> required = null;
 
                     if (kv.ContainsKey("required"))
                     {
-                        if (kv["required"] is string[])
+                        if (kv["required"] is List<object>)
                         {
-                            required = (string[])kv["required"];
+                            required = (List<object>)kv["required"];
                         }
                     }
 
@@ -440,12 +424,49 @@ public class CRDGenerator : ICRDGenerator
                         {
                             var properties = (IDictionary<object, object>)kv["properties"];
 
-                            foreach (KeyValuePair<object, object> property in properties)
+                            if (properties != null)
                             {
-                                //model.Properties.Add(new Property()
-                                //{
+                                foreach (KeyValuePair<object, object> property in properties)
+                                {
+                                    var dict = ((IDictionary<object, object>)property.Value);
 
-                                //});
+                                    var attribute = new List<AttributeModel>()
+                                    {
+                                        new AttributeModel()
+                                        {
+                                            Name = "JsonPropertyName",
+                                            SingleParameter = new Parameter("\"" + property.Key + "\"")
+                                        }
+                                    };
+
+                                    string type = dict["type"].ToString();
+
+                                    switch (type)
+                                    {
+                                        case "string":
+                                            break;
+                                        case "integer":
+                                            type = dict["format"].ToString() == "int64" ? "long" : "int";
+                                            break;
+                                        case "object":
+                                            break;
+                                        case "array":
+                                            type = "object";
+                                            break;
+                                        case "boolean":
+                                            type = "bool";
+                                            break;
+                                        default:
+                                            throw new Exception($"Unkown Type {type}");
+                                    }
+
+                                    model.Properties.Add(new Property()
+                                    {
+                                        Name = GetCleanPropertyName(property.Key.ToString()),
+                                        CustomDataType = type,
+                                        Attributes = attribute
+                                    });
+                                }
                             }
                         }
                     }
@@ -498,6 +519,28 @@ public class CRDGenerator : ICRDGenerator
         }
 
         return types;
+    }
+
+    private string GetCleanPropertyName(string name)
+    {
+        if (name == "continue" || name == "ref" || name == "name" || name == "static")
+        {
+            name = "@" + name;
+        }
+
+        if (name.Contains("$"))
+        {
+            name = name.Replace("$", "");
+        }
+
+        name = CapitalizeFirstLetter(name);
+
+        return name;
+    }
+
+    private string GetCombinedName(string name, string newName)
+    {
+        return name + CapitalizeFirstLetter(newName.Replace("$", "").Replace("@", ""));
     }
 
     private string CleanDescription(string? description)
