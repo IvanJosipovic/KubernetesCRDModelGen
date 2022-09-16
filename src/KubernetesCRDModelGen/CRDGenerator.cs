@@ -183,22 +183,22 @@ public class CRDGenerator : ICRDGenerator
                     new Parameter()
                     {
                         Name = "ApiVersion",
-                        Value = "\"" + version + "\""
+                        Value = $"\"{version}\""
                     },
                     new Parameter()
                     {
                         Name = "Group",
-                        Value = "\"" + group + "\""
+                        Value = $"\"{group}\""
                     },
                     new Parameter()
                     {
                         Name = "Kind",
-                        Value = "\"" + kind + "\""
+                        Value = $"\"{kind}\""
                     },
                     new Parameter()
                     {
                         Name = "PluralName",
-                        Value = "\"" + plural + "\""
+                        Value = $"\"{plural}\""
                     }
                 }
             });
@@ -268,7 +268,7 @@ public class CRDGenerator : ICRDGenerator
                     new AttributeModel()
                     {
                         Name = "JsonPropertyName",
-                        SingleParameter = new Parameter("\"" + property.Key + "\"")
+                        SingleParameter = new Parameter($"\"{property.Key}\"")
                     }
                 };
 
@@ -399,76 +399,16 @@ public class CRDGenerator : ICRDGenerator
         {
             if (schema.Items is (Dictionary<object, object>))
             {
-                var kv = (Dictionary<object, object>)schema.Items;
-
-                if (kv.ContainsKey("type") && kv["type"].ToString() == "object")
+                var obj = JsonSerializer.Deserialize<V1JSONSchemaProps>(JsonSerializer.Serialize(schema.Items), new JsonSerializerOptions()
                 {
-                    if (kv.ContainsKey("description"))
+                    NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString
+                });
+
+                foreach (var @class in GenerateClasses(obj, name))
+                {
+                    if (!types.Any(x => x.Name == @class.Name))
                     {
-                        model.Comment = CleanDescription(kv["description"].ToString());
-                    }
-
-                    List<object> required = null;
-
-                    if (kv.ContainsKey("required"))
-                    {
-                        if (kv["required"] is List<object>)
-                        {
-                            required = (List<object>)kv["required"];
-                        }
-                    }
-
-                    if (kv.ContainsKey("properties"))
-                    {
-                        if (kv["properties"] is (IDictionary<object, object>))
-                        {
-                            var properties = (IDictionary<object, object>)kv["properties"];
-
-                            if (properties != null)
-                            {
-                                foreach (KeyValuePair<object, object> property in properties)
-                                {
-                                    var dict = ((IDictionary<object, object>)property.Value);
-
-                                    var attribute = new List<AttributeModel>()
-                                    {
-                                        new AttributeModel()
-                                        {
-                                            Name = "JsonPropertyName",
-                                            SingleParameter = new Parameter("\"" + property.Key + "\"")
-                                        }
-                                    };
-
-                                    string type = dict["type"].ToString();
-
-                                    switch (type)
-                                    {
-                                        case "string":
-                                            break;
-                                        case "integer":
-                                            type = dict["format"].ToString() == "int64" ? "long" : "int";
-                                            break;
-                                        case "object":
-                                            break;
-                                        case "array":
-                                            type = "object";
-                                            break;
-                                        case "boolean":
-                                            type = "bool";
-                                            break;
-                                        default:
-                                            throw new Exception($"Unknown Type {type}");
-                                    }
-
-                                    model.Properties.Add(new Property()
-                                    {
-                                        Name = GetCleanPropertyName(property.Key.ToString()),
-                                        CustomDataType = type + (required != null && required.Contains(property.Key) ? "" : "?"),
-                                        Attributes = attribute
-                                    });
-                                }
-                            }
-                        }
+                        types.Add(@class);
                     }
                 }
             }
