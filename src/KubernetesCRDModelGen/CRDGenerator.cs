@@ -8,6 +8,7 @@ using System.Text.Json;
 using System.Xml;
 using CsCodeGenerator;
 using CsCodeGenerator.Enums;
+using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen;
 
@@ -399,10 +400,14 @@ public class CRDGenerator : ICRDGenerator
         {
             if (schema.Items is (Dictionary<object, object>))
             {
-                var obj = JsonSerializer.Deserialize<V1JSONSchemaProps>(JsonSerializer.Serialize(schema.Items), new JsonSerializerOptions()
+                var options = new JsonSerializerOptions()
                 {
-                    NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString
-                });
+                    NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString,
+
+                };
+                options.Converters.Add(new BoolConverter());
+
+                var obj = JsonSerializer.Deserialize<V1JSONSchemaProps>(JsonSerializer.Serialize(schema.Items), options);
 
                 foreach (var @class in GenerateClasses(obj, name))
                 {
@@ -542,5 +547,21 @@ public class CRDGenerator : ICRDGenerator
         references.Add(Basic.Reference.Assemblies.NetStandard20.netstandard);
 
         MetadataReferences = references.ToArray();
+    }
+
+    public class BoolConverter : JsonConverter<bool>
+    {
+        public override void Write(Utf8JsonWriter writer, bool value, JsonSerializerOptions options) =>
+            writer.WriteBooleanValue(value);
+
+        public override bool Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+            reader.TokenType switch
+            {
+                JsonTokenType.True => true,
+                JsonTokenType.False => false,
+                JsonTokenType.String => bool.TryParse(reader.GetString(), out var b) ? b : throw new JsonException(),
+                JsonTokenType.Number => reader.TryGetInt64(out long l) ? Convert.ToBoolean(l) : reader.TryGetDouble(out double d) ? Convert.ToBoolean(d) : false,
+                _ => throw new JsonException(),
+            };
     }
 }
