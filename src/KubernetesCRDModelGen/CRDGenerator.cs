@@ -141,7 +141,7 @@ public class CRDGenerator : ICRDGenerator
         bool isRoot = version != null && kind != null && group != null && plural != null;
 
         var types = new List<ClassModel>();
-        var model = new ClassModel(CapitalizeFirstLetter(name));
+        var model = new ClassModel(GetCleanClassName(name));
         types.Add(model);
 
         model.Comment = CleanDescription(schema.Description);
@@ -457,13 +457,13 @@ public class CRDGenerator : ICRDGenerator
                                             type = "bool";
                                             break;
                                         default:
-                                            throw new Exception($"Unkown Type {type}");
+                                            throw new Exception($"Unknown Type {type}");
                                     }
 
                                     model.Properties.Add(new Property()
                                     {
                                         Name = GetCleanPropertyName(property.Key.ToString()),
-                                        CustomDataType = type,
+                                        CustomDataType = type + (required != null && required.Contains(property.Key) ? "" : "?"),
                                         Attributes = attribute
                                     });
                                 }
@@ -521,9 +521,14 @@ public class CRDGenerator : ICRDGenerator
         return types;
     }
 
+    public string GetCleanClassName(string nane)
+    {
+        return CapitalizeFirstLetter(nane);
+    }
+
     private string GetCleanPropertyName(string name)
     {
-        if (name == "continue" || name == "ref" || name == "name" || name == "static")
+        if (name == "continue" || name == "ref" || name == "static")
         {
             name = "@" + name;
         }
