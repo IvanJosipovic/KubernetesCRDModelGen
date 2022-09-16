@@ -23,8 +23,6 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
             var name = context.Compilation.AssemblyName;
 
-            CRDGenerator.FixSerializer();
-
             var serializer = new SerializerBuilder()
                 .JsonCompatible()
                 .Build();

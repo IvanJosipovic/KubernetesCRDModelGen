@@ -555,40 +555,4 @@ public class CRDGenerator : ICRDGenerator
 
         MetadataReferences = references.ToArray();
     }
-
-    public static void FixSerializer()
-    {
-        try
-        {
-            var property = typeof(KubernetesJson).GetField("JsonSerializerOptions", BindingFlags.Static | BindingFlags.NonPublic);
-
-            var options = (JsonSerializerOptions)property.GetValue(null);
-
-            options.NumberHandling = JsonNumberHandling.AllowReadingFromString;
-            options.Converters.Add(new BoolConverter());
-            options.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-        }
-        catch (InvalidOperationException)
-        { }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Error setting JsonSerializerOptions: {error}", ex);
-        }
-    }
-
-    private class BoolConverter : JsonConverter<bool>
-    {
-        public override void Write(Utf8JsonWriter writer, bool value, JsonSerializerOptions options) =>
-            writer.WriteBooleanValue(value);
-
-        public override bool Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
-            reader.TokenType switch
-            {
-                JsonTokenType.True => true,
-                JsonTokenType.False => false,
-                JsonTokenType.String => bool.TryParse(reader.GetString(), out var b) ? b : throw new JsonException(),
-                JsonTokenType.Number => reader.TryGetInt64(out long l) ? Convert.ToBoolean(l) : reader.TryGetDouble(out double d) ? Convert.ToBoolean(d) : false,
-                _ => throw new JsonException(),
-            };
-    }
 }
