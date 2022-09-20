@@ -386,7 +386,7 @@ public class CRDGenerator : ICRDGenerator
                     default:
                         if (Logger == null)
                         {
-                            Console.WriteLine("Unhandled Property Type {type}", property.Value.Type);
+                            Console.WriteLine("Unhandled Property Type {0}", property.Value.Type);
                         }
                         else
                         {
@@ -455,7 +455,7 @@ public class CRDGenerator : ICRDGenerator
         {
             if (Logger == null)
             {
-                Console.WriteLine("Unhandled Type {type}", schema.Type);
+                Console.WriteLine("Unhandled Type {0}", schema.Type);
             }
             else
             {
