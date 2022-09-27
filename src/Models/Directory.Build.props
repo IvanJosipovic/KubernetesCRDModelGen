@@ -21,7 +21,7 @@
 	</PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="KubernetesClient.Models" Version="8.0.68" />
+        <PackageReference Include="KubernetesClient.Models" Version="9.0.28" />
         <ProjectReference Include="..\..\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <ProjectReference Include="..\..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <AdditionalFiles Include="*.yaml" />
