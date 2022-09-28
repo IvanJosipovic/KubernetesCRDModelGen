@@ -183,99 +183,99 @@ public class UnitTest1
         type.Assembly.ManifestModule.ScopeName.Should().Be("alerts-my-group-com.dll");
     }
 
-    [Fact]
-    public async Task Test1()
-    {
-        var crd = new V1CustomResourceDefinition()
-        {
-            ApiVersion = V1CustomResourceDefinition.KubeApiVersion,
-            Kind = V1CustomResourceDefinition.KubeKind,
+    //[Fact]
+    //public async Task Test1()
+    //{
+    //    var crd = new V1CustomResourceDefinition()
+    //    {
+    //        ApiVersion = V1CustomResourceDefinition.KubeApiVersion,
+    //        Kind = V1CustomResourceDefinition.KubeKind,
 
-            Metadata = new()
-            {
-                Name = "my-crd"
-            },
+    //        Metadata = new()
+    //        {
+    //            Name = "my-crd"
+    //        },
 
-            Spec = new()
-            {
-                Group = "kubeui.com",
-                Names = new()
-                {
-                    Plural = "alerts",
-                    Singular = "alert",
-                    Kind = "Alert",
-                    ListKind = "AlertList"
-                },
-                Scope = "Namespaced",
-                Versions = new List<V1CustomResourceDefinitionVersion>()
-                {
-                    new()
-                    {
-                        Name = "v1bet1",
-                        Served = true,
-                        Storage = true,
-                        Schema = new()
-                        {
-                            OpenAPIV3Schema = new()
-                            {
-                                Description = "my description",
-                                Type = "object",
-                                Properties = new Dictionary<string, V1JSONSchemaProps>
-                                {
-                                    {
-                                        "apiVersion", new V1JSONSchemaProps()
-                                                        {
-                                                            Description = "apiVersion description",
-                                                            Type = "string",
-                                                        }
-                                    },
-                                    {
-                                        "kind", new V1JSONSchemaProps()
-                                                        {
-                                                            Description = "kind description",
-                                                            Type = "string",
-                                                        }
-                                    },
-                                    {
-                                        "metadata", new V1JSONSchemaProps()
-                                                        {
-                                                            Type = "string",
-                                                        }
-                                    },
-                                    {
-                                        "spec", new V1JSONSchemaProps()
-                                                        {
-                                                            Description = "spec description",
-                                                            Type = "string",
-                                                            Properties = new Dictionary<string, V1JSONSchemaProps>
-                                                            {
-                                                                {
-                                                                    "myArray", new V1JSONSchemaProps()
-                                                                    {
-                                                                        Items = new V1JSONSchemaProps()
-                                                                        {
-                                                                            Properties = new Dictionary<string, V1JSONSchemaProps>()
-                                                                            {
-                                                                                { "testStr", new V1JSONSchemaProps() { Type = "string" } },
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        };
+    //        Spec = new()
+    //        {
+    //            Group = "kubeui.com",
+    //            Names = new()
+    //            {
+    //                Plural = "alerts",
+    //                Singular = "alert",
+    //                Kind = "Alert",
+    //                ListKind = "AlertList"
+    //            },
+    //            Scope = "Namespaced",
+    //            Versions = new List<V1CustomResourceDefinitionVersion>()
+    //            {
+    //                new()
+    //                {
+    //                    Name = "v1bet1",
+    //                    Served = true,
+    //                    Storage = true,
+    //                    Schema = new()
+    //                    {
+    //                        OpenAPIV3Schema = new()
+    //                        {
+    //                            Description = "my description",
+    //                            Type = "object",
+    //                            Properties = new Dictionary<string, V1JSONSchemaProps>
+    //                            {
+    //                                {
+    //                                    "apiVersion", new V1JSONSchemaProps()
+    //                                                    {
+    //                                                        Description = "apiVersion description",
+    //                                                        Type = "string",
+    //                                                    }
+    //                                },
+    //                                {
+    //                                    "kind", new V1JSONSchemaProps()
+    //                                                    {
+    //                                                        Description = "kind description",
+    //                                                        Type = "string",
+    //                                                    }
+    //                                },
+    //                                {
+    //                                    "metadata", new V1JSONSchemaProps()
+    //                                                    {
+    //                                                        Type = "string",
+    //                                                    }
+    //                                },
+    //                                {
+    //                                    "spec", new V1JSONSchemaProps()
+    //                                                    {
+    //                                                        Description = "spec description",
+    //                                                        Type = "string",
+    //                                                        Properties = new Dictionary<string, V1JSONSchemaProps>
+    //                                                        {
+    //                                                            {
+    //                                                                "myArray", new V1JSONSchemaProps()
+    //                                                                {
+    //                                                                    Items = new V1JSONSchemaProps()
+    //                                                                    {
+    //                                                                        Properties = new Dictionary<string, V1JSONSchemaProps>()
+    //                                                                        {
+    //                                                                            { "testStr", new V1JSONSchemaProps() { Type = "string" } },
+    //                                                                    }
+    //                                                                }
+    //                                                            }
+    //                                                        }
+    //                                                    }
+    //                                }
+    //                            }
+    //                        }
+    //                    }
+    //                }
+    //            }
+    //        }
+    //    }
+    //    };
 
-        var type = await GetType(crd, "Alert");
+    //    var type = await GetType(crd, "Alert");
 
-        type.Assembly.ManifestModule.ScopeName.Should().Be("alerts-my-group-com.dll");
-    }
+    //    type.Assembly.ManifestModule.ScopeName.Should().Be("alerts-my-group-com.dll");
+    //}
 
     [Fact]
     public async Task Array()
