@@ -402,7 +402,7 @@ public class CRDGenerator : ICRDGenerator
             {
                 var options = new JsonSerializerOptions()
                 {
-                    NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString,
+                    NumberHandling = JsonNumberHandling.AllowReadingFromString,
 
                 };
                 options.Converters.Add(new BoolConverter());
@@ -411,10 +411,13 @@ public class CRDGenerator : ICRDGenerator
 
                 foreach (var @class in GenerateClasses(obj, name))
                 {
-                    if (!types.Any(x => x.Name == @class.Name))
+                    // temp hack, as we add a class with the same name at the top of the Method
+                    if (types.Any(x => x.Name == @class.Name))
                     {
-                        types.Add(@class);
+                        types.RemoveAt(types.FindIndex(x => x.Name == @class.Name));
                     }
+
+                    types.Add(@class);
                 }
             }
             else if (schema.Items is JsonElement ele)

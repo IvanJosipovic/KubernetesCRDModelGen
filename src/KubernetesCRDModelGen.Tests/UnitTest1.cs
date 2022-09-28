@@ -4,6 +4,7 @@ using k8s.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
@@ -35,7 +36,12 @@ public class UnitTest1
     {
         var crd = await KubernetesYaml.LoadAllFromFileAsync(filename);
 
-        var assembly = await GetCRDGenerator().GenerateAssembly((V1CustomResourceDefinition)crd[0], "KubernetesCRDModelGen.Tests.Models");
+        return await GetType((V1CustomResourceDefinition)crd[0], kind);
+    }
+
+    private static async Task<Type?> GetType(V1CustomResourceDefinition crd, string kind)
+    {
+        var assembly = await GetCRDGenerator().GenerateAssembly(crd, "KubernetesCRDModelGen.Tests.Models");
 
         var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
 
@@ -175,5 +181,115 @@ public class UnitTest1
         var type = await GetType("CRDs/1.yaml", "Alert");
 
         type.Assembly.ManifestModule.ScopeName.Should().Be("alerts-my-group-com.dll");
+    }
+
+    [Fact]
+    public async Task Test1()
+    {
+        var crd = new V1CustomResourceDefinition()
+        {
+            ApiVersion = V1CustomResourceDefinition.KubeApiVersion,
+            Kind = V1CustomResourceDefinition.KubeKind,
+
+            Metadata = new()
+            {
+                Name = "my-crd"
+            },
+
+            Spec = new()
+            {
+                Group = "kubeui.com",
+                Names = new()
+                {
+                    Plural = "alerts",
+                    Singular = "alert",
+                    Kind = "Alert",
+                    ListKind = "AlertList"
+                },
+                Scope = "Namespaced",
+                Versions = new List<V1CustomResourceDefinitionVersion>()
+                {
+                    new()
+                    {
+                        Name = "v1bet1",
+                        Served = true,
+                        Storage = true,
+                        Schema = new()
+                        {
+                            OpenAPIV3Schema = new()
+                            {
+                                Description = "my description",
+                                Type = "object",
+                                Properties = new Dictionary<string, V1JSONSchemaProps>
+                                {
+                                    {
+                                        "apiVersion", new V1JSONSchemaProps()
+                                                        {
+                                                            Description = "apiVersion description",
+                                                            Type = "string",
+                                                        }
+                                    },
+                                    {
+                                        "kind", new V1JSONSchemaProps()
+                                                        {
+                                                            Description = "kind description",
+                                                            Type = "string",
+                                                        }
+                                    },
+                                    {
+                                        "metadata", new V1JSONSchemaProps()
+                                                        {
+                                                            Type = "string",
+                                                        }
+                                    },
+                                    {
+                                        "spec", new V1JSONSchemaProps()
+                                                        {
+                                                            Description = "spec description",
+                                                            Type = "string",
+                                                            Properties = new Dictionary<string, V1JSONSchemaProps>
+                                                            {
+                                                                {
+                                                                    "myArray", new V1JSONSchemaProps()
+                                                                    {
+                                                                        Items = new V1JSONSchemaProps()
+                                                                        {
+                                                                            Properties = new Dictionary<string, V1JSONSchemaProps>()
+                                                                            {
+                                                                                { "testStr", new V1JSONSchemaProps() { Type = "string" } },
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        };
+
+        var type = await GetType(crd, "Alert");
+
+        type.Assembly.ManifestModule.ScopeName.Should().Be("alerts-my-group-com.dll");
+    }
+
+    [Fact]
+    public async Task Array()
+    {
+        var type = await GetType("CRDs/array.yaml", "HelmRelease");
+
+        var specType = type.GetProperty("Status").PropertyType;
+
+        var prop = specType.GetProperty("Conditions").PropertyType;
+
+        prop.GenericTypeArguments[0].Name.Should().Be("HelmReleaseStatusConditions");
+
+        prop.Name.Should().Be("IList`1");
+
+        prop.GenericTypeArguments[0].GetProperty("LastTransitionTime").PropertyType.Should().Be<string>();
     }
 }
