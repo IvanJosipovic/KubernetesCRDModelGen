@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: sqldatabasecontainertriggers.documentdb.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -87,7 +87,7 @@ spec:
                   id:
                     type: string
                   triggerOperation:
-                    description: Deprecated version of SqlTriggerResourceTriggerOperation. Use v1beta20210515.SqlTriggerResourceTriggerOperation instead
+                    description: Deprecated version of SqlTriggerResource_TriggerOperation. Use v1beta20210515.SqlTriggerResource_TriggerOperation instead
                     enum:
                     - All
                     - Create
@@ -96,7 +96,7 @@ spec:
                     - Update
                     type: string
                   triggerType:
-                    description: Deprecated version of SqlTriggerResourceTriggerType. Use v1beta20210515.SqlTriggerResourceTriggerType instead
+                    description: Deprecated version of SqlTriggerResource_TriggerType. Use v1beta20210515.SqlTriggerResource_TriggerType instead
                     enum:
                     - Post
                     - Pre
@@ -113,7 +113,7 @@ spec:
             - resource
             type: object
           status:
-            description: Deprecated version of SqlTriggerGetResults_Status. Use v1beta20210515.SqlTriggerGetResults_Status instead
+            description: Deprecated version of SqlTriggerGetResults_STATUS. Use v1beta20210515.SqlTriggerGetResults_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -157,7 +157,7 @@ spec:
               name:
                 type: string
               resource:
-                description: Deprecated version of SqlTriggerGetProperties_Status_Resource. Use v1beta20210515.SqlTriggerGetProperties_Status_Resource instead
+                description: Deprecated version of SqlTriggerGetProperties_Resource_STATUS. Use v1beta20210515.SqlTriggerGetProperties_Resource_STATUS instead
                 properties:
                   _etag:
                     type: string
@@ -170,10 +170,10 @@ spec:
                   id:
                     type: string
                   triggerOperation:
-                    description: Deprecated version of SqlTriggerGetPropertiesStatusResourceTriggerOperation. Use v1beta20210515.SqlTriggerGetPropertiesStatusResourceTriggerOperation instead
+                    description: Deprecated version of SqlTriggerGetProperties_Resource_TriggerOperation_STATUS. Use v1beta20210515.SqlTriggerGetProperties_Resource_TriggerOperation_STATUS instead
                     type: string
                   triggerType:
-                    description: Deprecated version of SqlTriggerGetPropertiesStatusResourceTriggerType. Use v1beta20210515.SqlTriggerGetPropertiesStatusResourceTriggerType instead
+                    description: Deprecated version of SqlTriggerGetProperties_Resource_TriggerType_STATUS. Use v1beta20210515.SqlTriggerGetProperties_Resource_TriggerType_STATUS instead
                     type: string
                 type: object
               tags:
@@ -215,7 +215,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210515.DatabaseAccountsSqlDatabasesContainersTriggers_Spec
+            description: Storage version of v1alpha1api20210515.DatabaseAccounts_SqlDatabases_Containers_Trigger_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -285,7 +285,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210515.SqlTriggerGetResults_Status Deprecated version of SqlTriggerGetResults_Status. Use v1beta20210515.SqlTriggerGetResults_Status instead
+            description: Storage version of v1alpha1api20210515.SqlTriggerGetResults_STATUS Deprecated version of SqlTriggerGetResults_STATUS. Use v1beta20210515.SqlTriggerGetResults_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -333,7 +333,7 @@ spec:
               name:
                 type: string
               resource:
-                description: Storage version of v1alpha1api20210515.SqlTriggerGetProperties_Status_Resource Deprecated version of SqlTriggerGetProperties_Status_Resource. Use v1beta20210515.SqlTriggerGetProperties_Status_Resource instead
+                description: Storage version of v1alpha1api20210515.SqlTriggerGetProperties_Resource_STATUS Deprecated version of SqlTriggerGetProperties_Resource_STATUS. Use v1beta20210515.SqlTriggerGetProperties_Resource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -570,7 +570,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210515.DatabaseAccountsSqlDatabasesContainersTriggers_Spec
+            description: Storage version of v1beta20210515.DatabaseAccounts_SqlDatabases_Containers_Trigger_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -640,7 +640,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210515.SqlTriggerGetResults_Status
+            description: Storage version of v1beta20210515.SqlTriggerGetResults_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -688,7 +688,7 @@ spec:
               name:
                 type: string
               resource:
-                description: Storage version of v1beta20210515.SqlTriggerGetProperties_Status_Resource
+                description: Storage version of v1beta20210515.SqlTriggerGetProperties_Resource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

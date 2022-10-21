@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: registries.containerregistry.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -75,7 +75,7 @@ spec:
                         type: string
                     type: object
                   status:
-                    description: Deprecated version of EncryptionPropertyStatus. Use v1beta20210901.EncryptionPropertyStatus instead
+                    description: Deprecated version of EncryptionProperty_Status. Use v1beta20210901.EncryptionProperty_Status instead
                     enum:
                     - disabled
                     - enabled
@@ -89,7 +89,7 @@ spec:
                   tenantId:
                     type: string
                   type:
-                    description: Deprecated version of IdentityPropertiesType. Use v1beta20210901.IdentityPropertiesType instead
+                    description: Deprecated version of IdentityProperties_Type. Use v1beta20210901.IdentityProperties_Type instead
                     enum:
                     - None
                     - SystemAssigned
@@ -110,7 +110,7 @@ spec:
               location:
                 type: string
               networkRuleBypassOptions:
-                description: Deprecated version of RegistryPropertiesNetworkRuleBypassOptions. Use v1beta20210901.RegistryPropertiesNetworkRuleBypassOptions instead
+                description: Deprecated version of RegistryProperties_NetworkRuleBypassOptions. Use v1beta20210901.RegistryProperties_NetworkRuleBypassOptions instead
                 enum:
                 - AzureServices
                 - None
@@ -119,7 +119,7 @@ spec:
                 description: Deprecated version of NetworkRuleSet. Use v1beta20210901.NetworkRuleSet instead
                 properties:
                   defaultAction:
-                    description: Deprecated version of NetworkRuleSetDefaultAction. Use v1beta20210901.NetworkRuleSetDefaultAction instead
+                    description: Deprecated version of NetworkRuleSet_DefaultAction. Use v1beta20210901.NetworkRuleSet_DefaultAction instead
                     enum:
                     - Allow
                     - Deny
@@ -129,7 +129,7 @@ spec:
                       description: Deprecated version of IPRule. Use v1beta20210901.IPRule instead
                       properties:
                         action:
-                          description: Deprecated version of IPRuleAction. Use v1beta20210901.IPRuleAction instead
+                          description: Deprecated version of IPRule_Action. Use v1beta20210901.IPRule_Action instead
                           enum:
                           - Allow
                           type: string
@@ -158,7 +158,7 @@ spec:
                     description: Deprecated version of ExportPolicy. Use v1beta20210901.ExportPolicy instead
                     properties:
                       status:
-                        description: Deprecated version of ExportPolicyStatus. Use v1beta20210901.ExportPolicyStatus instead
+                        description: Deprecated version of ExportPolicy_Status. Use v1beta20210901.ExportPolicy_Status instead
                         enum:
                         - disabled
                         - enabled
@@ -168,7 +168,7 @@ spec:
                     description: Deprecated version of QuarantinePolicy. Use v1beta20210901.QuarantinePolicy instead
                     properties:
                       status:
-                        description: Deprecated version of QuarantinePolicyStatus. Use v1beta20210901.QuarantinePolicyStatus instead
+                        description: Deprecated version of QuarantinePolicy_Status. Use v1beta20210901.QuarantinePolicy_Status instead
                         enum:
                         - disabled
                         - enabled
@@ -180,7 +180,7 @@ spec:
                       days:
                         type: integer
                       status:
-                        description: Deprecated version of RetentionPolicyStatus. Use v1beta20210901.RetentionPolicyStatus instead
+                        description: Deprecated version of RetentionPolicy_Status. Use v1beta20210901.RetentionPolicy_Status instead
                         enum:
                         - disabled
                         - enabled
@@ -190,20 +190,20 @@ spec:
                     description: Deprecated version of TrustPolicy. Use v1beta20210901.TrustPolicy instead
                     properties:
                       status:
-                        description: Deprecated version of TrustPolicyStatus. Use v1beta20210901.TrustPolicyStatus instead
+                        description: Deprecated version of TrustPolicy_Status. Use v1beta20210901.TrustPolicy_Status instead
                         enum:
                         - disabled
                         - enabled
                         type: string
                       type:
-                        description: Deprecated version of TrustPolicyType. Use v1beta20210901.TrustPolicyType instead
+                        description: Deprecated version of TrustPolicy_Type. Use v1beta20210901.TrustPolicy_Type instead
                         enum:
                         - Notary
                         type: string
                     type: object
                 type: object
               publicNetworkAccess:
-                description: Deprecated version of RegistryPropertiesPublicNetworkAccess. Use v1beta20210901.RegistryPropertiesPublicNetworkAccess instead
+                description: Deprecated version of RegistryProperties_PublicNetworkAccess. Use v1beta20210901.RegistryProperties_PublicNetworkAccess instead
                 enum:
                 - Disabled
                 - Enabled
@@ -212,7 +212,7 @@ spec:
                 description: Deprecated version of Sku. Use v1beta20210901.Sku instead
                 properties:
                   name:
-                    description: Deprecated version of SkuName. Use v1beta20210901.SkuName instead
+                    description: Deprecated version of Sku_Name. Use v1beta20210901.Sku_Name instead
                     enum:
                     - Basic
                     - Classic
@@ -227,7 +227,7 @@ spec:
                   type: string
                 type: object
               zoneRedundancy:
-                description: Deprecated version of RegistryPropertiesZoneRedundancy. Use v1beta20210901.RegistryPropertiesZoneRedundancy instead
+                description: Deprecated version of RegistryProperties_ZoneRedundancy. Use v1beta20210901.RegistryProperties_ZoneRedundancy instead
                 enum:
                 - Disabled
                 - Enabled
@@ -237,7 +237,7 @@ spec:
             - sku
             type: object
           status:
-            description: Deprecated version of Registry_Status. Use v1beta20210901.Registry_Status instead
+            description: Deprecated version of Registry_STATUS. Use v1beta20210901.Registry_STATUS instead
             properties:
               adminUserEnabled:
                 type: boolean
@@ -285,10 +285,10 @@ spec:
                   type: string
                 type: array
               encryption:
-                description: Deprecated version of EncryptionProperty_Status. Use v1beta20210901.EncryptionProperty_Status instead
+                description: Deprecated version of EncryptionProperty_STATUS. Use v1beta20210901.EncryptionProperty_STATUS instead
                 properties:
                   keyVaultProperties:
-                    description: Deprecated version of KeyVaultProperties_Status. Use v1beta20210901.KeyVaultProperties_Status instead
+                    description: Deprecated version of KeyVaultProperties_STATUS. Use v1beta20210901.KeyVaultProperties_STATUS instead
                     properties:
                       identity:
                         type: string
@@ -302,24 +302,24 @@ spec:
                         type: string
                     type: object
                   status:
-                    description: Deprecated version of EncryptionPropertyStatusStatus. Use v1beta20210901.EncryptionPropertyStatusStatus instead
+                    description: Deprecated version of EncryptionProperty_Status_STATUS. Use v1beta20210901.EncryptionProperty_Status_STATUS instead
                     type: string
                 type: object
               id:
                 type: string
               identity:
-                description: Deprecated version of IdentityProperties_Status. Use v1beta20210901.IdentityProperties_Status instead
+                description: Deprecated version of IdentityProperties_STATUS. Use v1beta20210901.IdentityProperties_STATUS instead
                 properties:
                   principalId:
                     type: string
                   tenantId:
                     type: string
                   type:
-                    description: Deprecated version of IdentityPropertiesStatusType. Use v1beta20210901.IdentityPropertiesStatusType instead
+                    description: Deprecated version of IdentityProperties_Type_STATUS. Use v1beta20210901.IdentityProperties_Type_STATUS instead
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Deprecated version of UserIdentityProperties_Status. Use v1beta20210901.UserIdentityProperties_Status instead
+                      description: Deprecated version of UserIdentityProperties_STATUS. Use v1beta20210901.UserIdentityProperties_STATUS instead
                       properties:
                         clientId:
                           type: string
@@ -335,20 +335,20 @@ spec:
               name:
                 type: string
               networkRuleBypassOptions:
-                description: Deprecated version of RegistryPropertiesStatusNetworkRuleBypassOptions. Use v1beta20210901.RegistryPropertiesStatusNetworkRuleBypassOptions instead
+                description: Deprecated version of RegistryProperties_NetworkRuleBypassOptions_STATUS. Use v1beta20210901.RegistryProperties_NetworkRuleBypassOptions_STATUS instead
                 type: string
               networkRuleSet:
-                description: Deprecated version of NetworkRuleSet_Status. Use v1beta20210901.NetworkRuleSet_Status instead
+                description: Deprecated version of NetworkRuleSet_STATUS. Use v1beta20210901.NetworkRuleSet_STATUS instead
                 properties:
                   defaultAction:
-                    description: Deprecated version of NetworkRuleSetStatusDefaultAction. Use v1beta20210901.NetworkRuleSetStatusDefaultAction instead
+                    description: Deprecated version of NetworkRuleSet_DefaultAction_STATUS. Use v1beta20210901.NetworkRuleSet_DefaultAction_STATUS instead
                     type: string
                   ipRules:
                     items:
-                      description: Deprecated version of IPRule_Status. Use v1beta20210901.IPRule_Status instead
+                      description: Deprecated version of IPRule_STATUS. Use v1beta20210901.IPRule_STATUS instead
                       properties:
                         action:
-                          description: Deprecated version of IPRuleStatusAction. Use v1beta20210901.IPRuleStatusAction instead
+                          description: Deprecated version of IPRule_Action_STATUS. Use v1beta20210901.IPRule_Action_STATUS instead
                           type: string
                         value:
                           type: string
@@ -356,88 +356,88 @@ spec:
                     type: array
                 type: object
               policies:
-                description: Deprecated version of Policies_Status. Use v1beta20210901.Policies_Status instead
+                description: Deprecated version of Policies_STATUS. Use v1beta20210901.Policies_STATUS instead
                 properties:
                   exportPolicy:
-                    description: Deprecated version of ExportPolicy_Status. Use v1beta20210901.ExportPolicy_Status instead
+                    description: Deprecated version of ExportPolicy_STATUS. Use v1beta20210901.ExportPolicy_STATUS instead
                     properties:
                       status:
-                        description: Deprecated version of ExportPolicyStatusStatus. Use v1beta20210901.ExportPolicyStatusStatus instead
+                        description: Deprecated version of ExportPolicy_Status_STATUS. Use v1beta20210901.ExportPolicy_Status_STATUS instead
                         type: string
                     type: object
                   quarantinePolicy:
-                    description: Deprecated version of QuarantinePolicy_Status. Use v1beta20210901.QuarantinePolicy_Status instead
+                    description: Deprecated version of QuarantinePolicy_STATUS. Use v1beta20210901.QuarantinePolicy_STATUS instead
                     properties:
                       status:
-                        description: Deprecated version of QuarantinePolicyStatusStatus. Use v1beta20210901.QuarantinePolicyStatusStatus instead
+                        description: Deprecated version of QuarantinePolicy_Status_STATUS. Use v1beta20210901.QuarantinePolicy_Status_STATUS instead
                         type: string
                     type: object
                   retentionPolicy:
-                    description: Deprecated version of RetentionPolicy_Status. Use v1beta20210901.RetentionPolicy_Status instead
+                    description: Deprecated version of RetentionPolicy_STATUS. Use v1beta20210901.RetentionPolicy_STATUS instead
                     properties:
                       days:
                         type: integer
                       lastUpdatedTime:
                         type: string
                       status:
-                        description: Deprecated version of RetentionPolicyStatusStatus. Use v1beta20210901.RetentionPolicyStatusStatus instead
+                        description: Deprecated version of RetentionPolicy_Status_STATUS. Use v1beta20210901.RetentionPolicy_Status_STATUS instead
                         type: string
                     type: object
                   trustPolicy:
-                    description: Deprecated version of TrustPolicy_Status. Use v1beta20210901.TrustPolicy_Status instead
+                    description: Deprecated version of TrustPolicy_STATUS. Use v1beta20210901.TrustPolicy_STATUS instead
                     properties:
                       status:
-                        description: Deprecated version of TrustPolicyStatusStatus. Use v1beta20210901.TrustPolicyStatusStatus instead
+                        description: Deprecated version of TrustPolicy_Status_STATUS. Use v1beta20210901.TrustPolicy_Status_STATUS instead
                         type: string
                       type:
-                        description: Deprecated version of TrustPolicyStatusType. Use v1beta20210901.TrustPolicyStatusType instead
+                        description: Deprecated version of TrustPolicy_Type_STATUS. Use v1beta20210901.TrustPolicy_Type_STATUS instead
                         type: string
                     type: object
                 type: object
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_Status_SubResourceEmbedded. Use v1beta20210901.PrivateEndpointConnection_Status_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210901.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
                   properties:
                     id:
                       type: string
                     systemData:
-                      description: Deprecated version of SystemData_Status. Use v1beta20210901.SystemData_Status instead
+                      description: Deprecated version of SystemData_STATUS. Use v1beta20210901.SystemData_STATUS instead
                       properties:
                         createdAt:
                           type: string
                         createdBy:
                           type: string
                         createdByType:
-                          description: Deprecated version of SystemDataStatusCreatedByType. Use v1beta20210901.SystemDataStatusCreatedByType instead
+                          description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1beta20210901.SystemData_CreatedByType_STATUS instead
                           type: string
                         lastModifiedAt:
                           type: string
                         lastModifiedBy:
                           type: string
                         lastModifiedByType:
-                          description: Deprecated version of SystemDataStatusLastModifiedByType. Use v1beta20210901.SystemDataStatusLastModifiedByType instead
+                          description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1beta20210901.SystemData_LastModifiedByType_STATUS instead
                           type: string
                       type: object
                   type: object
                 type: array
               provisioningState:
-                description: Deprecated version of RegistryPropertiesStatusProvisioningState. Use v1beta20210901.RegistryPropertiesStatusProvisioningState instead
+                description: Deprecated version of RegistryProperties_ProvisioningState_STATUS. Use v1beta20210901.RegistryProperties_ProvisioningState_STATUS instead
                 type: string
               publicNetworkAccess:
-                description: Deprecated version of RegistryPropertiesStatusPublicNetworkAccess. Use v1beta20210901.RegistryPropertiesStatusPublicNetworkAccess instead
+                description: Deprecated version of RegistryProperties_PublicNetworkAccess_STATUS. Use v1beta20210901.RegistryProperties_PublicNetworkAccess_STATUS instead
                 type: string
               sku:
-                description: Deprecated version of Sku_Status. Use v1beta20210901.Sku_Status instead
+                description: Deprecated version of Sku_STATUS. Use v1beta20210901.Sku_STATUS instead
                 properties:
                   name:
-                    description: Deprecated version of SkuStatusName. Use v1beta20210901.SkuStatusName instead
+                    description: Deprecated version of Sku_Name_STATUS. Use v1beta20210901.Sku_Name_STATUS instead
                     type: string
                   tier:
-                    description: Deprecated version of SkuStatusTier. Use v1beta20210901.SkuStatusTier instead
+                    description: Deprecated version of Sku_Tier_STATUS. Use v1beta20210901.Sku_Tier_STATUS instead
                     type: string
                 type: object
               status:
-                description: Deprecated version of Status_Status. Use v1beta20210901.Status_Status instead
+                description: Deprecated version of Status_STATUS. Use v1beta20210901.Status_STATUS instead
                 properties:
                   displayStatus:
                     type: string
@@ -447,21 +447,21 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Deprecated version of SystemData_Status. Use v1beta20210901.SystemData_Status instead
+                description: Deprecated version of SystemData_STATUS. Use v1beta20210901.SystemData_STATUS instead
                 properties:
                   createdAt:
                     type: string
                   createdBy:
                     type: string
                   createdByType:
-                    description: Deprecated version of SystemDataStatusCreatedByType. Use v1beta20210901.SystemDataStatusCreatedByType instead
+                    description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1beta20210901.SystemData_CreatedByType_STATUS instead
                     type: string
                   lastModifiedAt:
                     type: string
                   lastModifiedBy:
                     type: string
                   lastModifiedByType:
-                    description: Deprecated version of SystemDataStatusLastModifiedByType. Use v1beta20210901.SystemDataStatusLastModifiedByType instead
+                    description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1beta20210901.SystemData_LastModifiedByType_STATUS instead
                     type: string
                 type: object
               tags:
@@ -471,7 +471,7 @@ spec:
               type:
                 type: string
               zoneRedundancy:
-                description: Deprecated version of RegistryPropertiesStatusZoneRedundancy. Use v1beta20210901.RegistryPropertiesStatusZoneRedundancy instead
+                description: Deprecated version of RegistryProperties_ZoneRedundancy_STATUS. Use v1beta20210901.RegistryProperties_ZoneRedundancy_STATUS instead
                 type: string
             type: object
         type: object
@@ -506,7 +506,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210901.Registries_Spec
+            description: Storage version of v1alpha1api20210901.Registry_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -698,7 +698,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210901.Registry_Status Deprecated version of Registry_Status. Use v1beta20210901.Registry_Status instead
+            description: Storage version of v1alpha1api20210901.Registry_STATUS Deprecated version of Registry_STATUS. Use v1beta20210901.Registry_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -750,7 +750,7 @@ spec:
                   type: string
                 type: array
               encryption:
-                description: Storage version of v1alpha1api20210901.EncryptionProperty_Status Deprecated version of EncryptionProperty_Status. Use v1beta20210901.EncryptionProperty_Status instead
+                description: Storage version of v1alpha1api20210901.EncryptionProperty_STATUS Deprecated version of EncryptionProperty_STATUS. Use v1beta20210901.EncryptionProperty_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -758,7 +758,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   keyVaultProperties:
-                    description: Storage version of v1alpha1api20210901.KeyVaultProperties_Status Deprecated version of KeyVaultProperties_Status. Use v1beta20210901.KeyVaultProperties_Status instead
+                    description: Storage version of v1alpha1api20210901.KeyVaultProperties_STATUS Deprecated version of KeyVaultProperties_STATUS. Use v1beta20210901.KeyVaultProperties_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -782,7 +782,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1alpha1api20210901.IdentityProperties_Status Deprecated version of IdentityProperties_Status. Use v1beta20210901.IdentityProperties_Status instead
+                description: Storage version of v1alpha1api20210901.IdentityProperties_STATUS Deprecated version of IdentityProperties_STATUS. Use v1beta20210901.IdentityProperties_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -797,7 +797,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1alpha1api20210901.UserIdentityProperties_Status Deprecated version of UserIdentityProperties_Status. Use v1beta20210901.UserIdentityProperties_Status instead
+                      description: Storage version of v1alpha1api20210901.UserIdentityProperties_STATUS Deprecated version of UserIdentityProperties_STATUS. Use v1beta20210901.UserIdentityProperties_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -820,7 +820,7 @@ spec:
               networkRuleBypassOptions:
                 type: string
               networkRuleSet:
-                description: Storage version of v1alpha1api20210901.NetworkRuleSet_Status Deprecated version of NetworkRuleSet_Status. Use v1beta20210901.NetworkRuleSet_Status instead
+                description: Storage version of v1alpha1api20210901.NetworkRuleSet_STATUS Deprecated version of NetworkRuleSet_STATUS. Use v1beta20210901.NetworkRuleSet_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -831,7 +831,7 @@ spec:
                     type: string
                   ipRules:
                     items:
-                      description: Storage version of v1alpha1api20210901.IPRule_Status Deprecated version of IPRule_Status. Use v1beta20210901.IPRule_Status instead
+                      description: Storage version of v1alpha1api20210901.IPRule_STATUS Deprecated version of IPRule_STATUS. Use v1beta20210901.IPRule_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -846,7 +846,7 @@ spec:
                     type: array
                 type: object
               policies:
-                description: Storage version of v1alpha1api20210901.Policies_Status Deprecated version of Policies_Status. Use v1beta20210901.Policies_Status instead
+                description: Storage version of v1alpha1api20210901.Policies_STATUS Deprecated version of Policies_STATUS. Use v1beta20210901.Policies_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -854,7 +854,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   exportPolicy:
-                    description: Storage version of v1alpha1api20210901.ExportPolicy_Status Deprecated version of ExportPolicy_Status. Use v1beta20210901.ExportPolicy_Status instead
+                    description: Storage version of v1alpha1api20210901.ExportPolicy_STATUS Deprecated version of ExportPolicy_STATUS. Use v1beta20210901.ExportPolicy_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -865,7 +865,7 @@ spec:
                         type: string
                     type: object
                   quarantinePolicy:
-                    description: Storage version of v1alpha1api20210901.QuarantinePolicy_Status Deprecated version of QuarantinePolicy_Status. Use v1beta20210901.QuarantinePolicy_Status instead
+                    description: Storage version of v1alpha1api20210901.QuarantinePolicy_STATUS Deprecated version of QuarantinePolicy_STATUS. Use v1beta20210901.QuarantinePolicy_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -876,7 +876,7 @@ spec:
                         type: string
                     type: object
                   retentionPolicy:
-                    description: Storage version of v1alpha1api20210901.RetentionPolicy_Status Deprecated version of RetentionPolicy_Status. Use v1beta20210901.RetentionPolicy_Status instead
+                    description: Storage version of v1alpha1api20210901.RetentionPolicy_STATUS Deprecated version of RetentionPolicy_STATUS. Use v1beta20210901.RetentionPolicy_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -891,7 +891,7 @@ spec:
                         type: string
                     type: object
                   trustPolicy:
-                    description: Storage version of v1alpha1api20210901.TrustPolicy_Status Deprecated version of TrustPolicy_Status. Use v1beta20210901.TrustPolicy_Status instead
+                    description: Storage version of v1alpha1api20210901.TrustPolicy_STATUS Deprecated version of TrustPolicy_STATUS. Use v1beta20210901.TrustPolicy_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -906,7 +906,7 @@ spec:
                 type: object
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20210901.PrivateEndpointConnection_Status_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_Status_SubResourceEmbedded. Use v1beta20210901.PrivateEndpointConnection_Status_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20210901.PrivateEndpointConnection_STATUS_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210901.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -916,7 +916,7 @@ spec:
                     id:
                       type: string
                     systemData:
-                      description: Storage version of v1alpha1api20210901.SystemData_Status Deprecated version of SystemData_Status. Use v1beta20210901.SystemData_Status instead
+                      description: Storage version of v1alpha1api20210901.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1beta20210901.SystemData_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -943,7 +943,7 @@ spec:
               publicNetworkAccess:
                 type: string
               sku:
-                description: Storage version of v1alpha1api20210901.Sku_Status Deprecated version of Sku_Status. Use v1beta20210901.Sku_Status instead
+                description: Storage version of v1alpha1api20210901.Sku_STATUS Deprecated version of Sku_STATUS. Use v1beta20210901.Sku_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -956,7 +956,7 @@ spec:
                     type: string
                 type: object
               status:
-                description: Storage version of v1alpha1api20210901.Status_Status Deprecated version of Status_Status. Use v1beta20210901.Status_Status instead
+                description: Storage version of v1alpha1api20210901.Status_STATUS Deprecated version of Status_STATUS. Use v1beta20210901.Status_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -971,7 +971,7 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1alpha1api20210901.SystemData_Status Deprecated version of SystemData_Status. Use v1beta20210901.SystemData_Status instead
+                description: Storage version of v1alpha1api20210901.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1beta20210901.SystemData_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1533,7 +1533,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210901.Registries_Spec
+            description: Storage version of v1beta20210901.Registry_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1725,7 +1725,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210901.Registry_Status
+            description: Storage version of v1beta20210901.Registry_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1777,7 +1777,7 @@ spec:
                   type: string
                 type: array
               encryption:
-                description: Storage version of v1beta20210901.EncryptionProperty_Status
+                description: Storage version of v1beta20210901.EncryptionProperty_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1785,7 +1785,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   keyVaultProperties:
-                    description: Storage version of v1beta20210901.KeyVaultProperties_Status
+                    description: Storage version of v1beta20210901.KeyVaultProperties_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1809,7 +1809,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210901.IdentityProperties_Status
+                description: Storage version of v1beta20210901.IdentityProperties_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1824,7 +1824,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20210901.UserIdentityProperties_Status
+                      description: Storage version of v1beta20210901.UserIdentityProperties_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1847,7 +1847,7 @@ spec:
               networkRuleBypassOptions:
                 type: string
               networkRuleSet:
-                description: Storage version of v1beta20210901.NetworkRuleSet_Status
+                description: Storage version of v1beta20210901.NetworkRuleSet_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1858,7 +1858,7 @@ spec:
                     type: string
                   ipRules:
                     items:
-                      description: Storage version of v1beta20210901.IPRule_Status
+                      description: Storage version of v1beta20210901.IPRule_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1873,7 +1873,7 @@ spec:
                     type: array
                 type: object
               policies:
-                description: Storage version of v1beta20210901.Policies_Status
+                description: Storage version of v1beta20210901.Policies_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1881,7 +1881,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   exportPolicy:
-                    description: Storage version of v1beta20210901.ExportPolicy_Status
+                    description: Storage version of v1beta20210901.ExportPolicy_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1892,7 +1892,7 @@ spec:
                         type: string
                     type: object
                   quarantinePolicy:
-                    description: Storage version of v1beta20210901.QuarantinePolicy_Status
+                    description: Storage version of v1beta20210901.QuarantinePolicy_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1903,7 +1903,7 @@ spec:
                         type: string
                     type: object
                   retentionPolicy:
-                    description: Storage version of v1beta20210901.RetentionPolicy_Status
+                    description: Storage version of v1beta20210901.RetentionPolicy_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1918,7 +1918,7 @@ spec:
                         type: string
                     type: object
                   trustPolicy:
-                    description: Storage version of v1beta20210901.TrustPolicy_Status
+                    description: Storage version of v1beta20210901.TrustPolicy_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1933,7 +1933,7 @@ spec:
                 type: object
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210901.PrivateEndpointConnection_Status_SubResourceEmbedded
+                  description: Storage version of v1beta20210901.PrivateEndpointConnection_STATUS_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1943,7 +1943,7 @@ spec:
                     id:
                       type: string
                     systemData:
-                      description: Storage version of v1beta20210901.SystemData_Status
+                      description: Storage version of v1beta20210901.SystemData_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1970,7 +1970,7 @@ spec:
               publicNetworkAccess:
                 type: string
               sku:
-                description: Storage version of v1beta20210901.Sku_Status
+                description: Storage version of v1beta20210901.Sku_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1983,7 +1983,7 @@ spec:
                     type: string
                 type: object
               status:
-                description: Storage version of v1beta20210901.Status_Status
+                description: Storage version of v1beta20210901.Status_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1998,7 +1998,7 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1beta20210901.SystemData_Status
+                description: Storage version of v1beta20210901.SystemData_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

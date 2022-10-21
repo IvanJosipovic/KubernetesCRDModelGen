@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: networkinterfaces.network.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -76,7 +76,7 @@ spec:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocationType. Use v1beta20201101.ExtendedLocationType instead
+                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20201101.ExtendedLocation_Type instead
                     enum:
                     - EdgeZone
                     type: string
@@ -86,7 +86,7 @@ spec:
                 type: object
               ipConfigurations:
                 items:
-                  description: Deprecated version of NetworkInterfaces_Spec_Properties_IpConfigurations. Use v1beta20201101.NetworkInterfaces_Spec_Properties_IpConfigurations instead
+                  description: Deprecated version of NetworkInterface_Properties_IpConfigurations_Spec. Use v1beta20201101.NetworkInterface_Properties_IpConfigurations_Spec instead
                   properties:
                     applicationGatewayBackendAddressPools:
                       items:
@@ -195,13 +195,13 @@ spec:
                     privateIPAddress:
                       type: string
                     privateIPAddressVersion:
-                      description: Deprecated version of NetworkInterfaceIPConfigurationPropertiesFormatPrivateIPAddressVersion. Use v1beta20201101.NetworkInterfaceIPConfigurationPropertiesFormatPrivateIPAddressVersion instead
+                      description: Deprecated version of NetworkInterfaceIPConfigurationPropertiesFormat_PrivateIPAddressVersion. Use v1beta20201101.NetworkInterfaceIPConfigurationPropertiesFormat_PrivateIPAddressVersion instead
                       enum:
                       - IPv4
                       - IPv6
                       type: string
                     privateIPAllocationMethod:
-                      description: Deprecated version of NetworkInterfaceIPConfigurationPropertiesFormatPrivateIPAllocationMethod. Use v1beta20201101.NetworkInterfaceIPConfigurationPropertiesFormatPrivateIPAllocationMethod instead
+                      description: Deprecated version of NetworkInterfaceIPConfigurationPropertiesFormat_PrivateIPAllocationMethod. Use v1beta20201101.NetworkInterfaceIPConfigurationPropertiesFormat_PrivateIPAllocationMethod instead
                       enum:
                       - Dynamic
                       - Static
@@ -324,7 +324,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of NetworkInterface_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterface_Status_NetworkInterface_SubResourceEmbedded instead
+            description: Deprecated version of NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -362,7 +362,7 @@ spec:
                   type: object
                 type: array
               dnsSettings:
-                description: Deprecated version of NetworkInterfaceDnsSettings_Status. Use v1beta20201101.NetworkInterfaceDnsSettings_Status instead
+                description: Deprecated version of NetworkInterfaceDnsSettings_STATUS. Use v1beta20201101.NetworkInterfaceDnsSettings_STATUS instead
                 properties:
                   appliedDnsServers:
                     items:
@@ -380,7 +380,7 @@ spec:
                     type: string
                 type: object
               dscpConfiguration:
-                description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   id:
                     type: string
@@ -392,12 +392,12 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                 properties:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocationType_Status. Use v1beta20201101.ExtendedLocationType_Status instead
+                    description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
                     type: string
                 type: object
               hostedWorkloads:
@@ -408,15 +408,15 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Deprecated version of NetworkInterfaceIPConfiguration_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceIPConfiguration_Status_NetworkInterface_SubResourceEmbedded instead
+                  description: Deprecated version of NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded instead
                   properties:
                     applicationGatewayBackendAddressPools:
                       items:
-                        description: Deprecated version of ApplicationGatewayBackendAddressPool_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.ApplicationGatewayBackendAddressPool_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Deprecated version of ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           backendAddresses:
                             items:
-                              description: Deprecated version of ApplicationGatewayBackendAddress_Status. Use v1beta20201101.ApplicationGatewayBackendAddress_Status instead
+                              description: Deprecated version of ApplicationGatewayBackendAddress_STATUS. Use v1beta20201101.ApplicationGatewayBackendAddress_STATUS instead
                               properties:
                                 fqdn:
                                   type: string
@@ -431,7 +431,7 @@ spec:
                           name:
                             type: string
                           provisioningState:
-                            description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                            description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                             type: string
                           type:
                             type: string
@@ -439,7 +439,7 @@ spec:
                       type: array
                     applicationSecurityGroups:
                       items:
-                        description: Deprecated version of ApplicationSecurityGroup_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.ApplicationSecurityGroup_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Deprecated version of ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           id:
                             type: string
@@ -451,7 +451,7 @@ spec:
                       type: string
                     loadBalancerBackendAddressPools:
                       items:
-                        description: Deprecated version of BackendAddressPool_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.BackendAddressPool_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Deprecated version of BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           id:
                             type: string
@@ -459,7 +459,7 @@ spec:
                       type: array
                     loadBalancerInboundNatRules:
                       items:
-                        description: Deprecated version of InboundNatRule_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.InboundNatRule_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Deprecated version of InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           id:
                             type: string
@@ -472,13 +472,13 @@ spec:
                     privateIPAddress:
                       type: string
                     privateIPAddressVersion:
-                      description: Deprecated version of IPVersion_Status. Use v1beta20201101.IPVersion_Status instead
+                      description: Deprecated version of IPVersion_STATUS. Use v1beta20201101.IPVersion_STATUS instead
                       type: string
                     privateIPAllocationMethod:
-                      description: Deprecated version of IPAllocationMethod_Status. Use v1beta20201101.IPAllocationMethod_Status instead
+                      description: Deprecated version of IPAllocationMethod_STATUS. Use v1beta20201101.IPAllocationMethod_STATUS instead
                       type: string
                     privateLinkConnectionProperties:
-                      description: Deprecated version of NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_Status. Use v1beta20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_Status instead
+                      description: Deprecated version of NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS. Use v1beta20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS instead
                       properties:
                         fqdns:
                           items:
@@ -490,30 +490,30 @@ spec:
                           type: string
                       type: object
                     provisioningState:
-                      description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                       type: string
                     publicIPAddress:
-                      description: Deprecated version of PublicIPAddress_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_Status_NetworkInterface_SubResourceEmbedded instead
+                      description: Deprecated version of PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded instead
                       properties:
                         extendedLocation:
-                          description: Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                          description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                           properties:
                             name:
                               type: string
                             type:
-                              description: Deprecated version of ExtendedLocationType_Status. Use v1beta20201101.ExtendedLocationType_Status instead
+                              description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
                               type: string
                           type: object
                         id:
                           type: string
                         sku:
-                          description: Deprecated version of PublicIPAddressSku_Status. Use v1beta20201101.PublicIPAddressSku_Status instead
+                          description: Deprecated version of PublicIPAddressSku_STATUS. Use v1beta20201101.PublicIPAddressSku_STATUS instead
                           properties:
                             name:
-                              description: Deprecated version of PublicIPAddressSkuStatusName. Use v1beta20201101.PublicIPAddressSkuStatusName instead
+                              description: Deprecated version of PublicIPAddressSku_Name_STATUS. Use v1beta20201101.PublicIPAddressSku_Name_STATUS instead
                               type: string
                             tier:
-                              description: Deprecated version of PublicIPAddressSkuStatusTier. Use v1beta20201101.PublicIPAddressSkuStatusTier instead
+                              description: Deprecated version of PublicIPAddressSku_Tier_STATUS. Use v1beta20201101.PublicIPAddressSku_Tier_STATUS instead
                               type: string
                           type: object
                         zones:
@@ -522,7 +522,7 @@ spec:
                           type: array
                       type: object
                     subnet:
-                      description: Deprecated version of Subnet_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.Subnet_Status_NetworkInterface_SubResourceEmbedded instead
+                      description: Deprecated version of Subnet_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.Subnet_STATUS_NetworkInterface_SubResourceEmbedded instead
                       properties:
                         id:
                           type: string
@@ -531,7 +531,7 @@ spec:
                       type: string
                     virtualNetworkTaps:
                       items:
-                        description: Deprecated version of VirtualNetworkTap_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.VirtualNetworkTap_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Deprecated version of VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           id:
                             type: string
@@ -544,53 +544,53 @@ spec:
               macAddress:
                 type: string
               migrationPhase:
-                description: Deprecated version of NetworkInterfacePropertiesFormatStatusMigrationPhase. Use v1beta20201101.NetworkInterfacePropertiesFormatStatusMigrationPhase instead
+                description: Deprecated version of NetworkInterfacePropertiesFormat_MigrationPhase_STATUS. Use v1beta20201101.NetworkInterfacePropertiesFormat_MigrationPhase_STATUS instead
                 type: string
               name:
                 type: string
               networkSecurityGroup:
-                description: Deprecated version of NetworkSecurityGroup_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkSecurityGroup_Status_NetworkInterface_SubResourceEmbedded instead
+                description: Deprecated version of NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded instead
                 properties:
                   id:
                     type: string
                 type: object
               nicType:
-                description: Deprecated version of NetworkInterfacePropertiesFormatStatusNicType. Use v1beta20201101.NetworkInterfacePropertiesFormatStatusNicType instead
+                description: Deprecated version of NetworkInterfacePropertiesFormat_NicType_STATUS. Use v1beta20201101.NetworkInterfacePropertiesFormat_NicType_STATUS instead
                 type: string
               primary:
                 type: boolean
               privateEndpoint:
-                description: Deprecated version of PrivateEndpoint_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PrivateEndpoint_Status_NetworkInterface_SubResourceEmbedded instead
+                description: Deprecated version of PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded instead
                 properties:
                   extendedLocation:
-                    description: Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                    description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                     properties:
                       name:
                         type: string
                       type:
-                        description: Deprecated version of ExtendedLocationType_Status. Use v1beta20201101.ExtendedLocationType_Status instead
+                        description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
                         type: string
                     type: object
                   id:
                     type: string
                 type: object
               privateLinkService:
-                description: Deprecated version of PrivateLinkService_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PrivateLinkService_Status_NetworkInterface_SubResourceEmbedded instead
+                description: Deprecated version of PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded instead
                 properties:
                   extendedLocation:
-                    description: Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                    description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                     properties:
                       name:
                         type: string
                       type:
-                        description: Deprecated version of ExtendedLocationType_Status. Use v1beta20201101.ExtendedLocationType_Status instead
+                        description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
                         type: string
                     type: object
                   id:
                     type: string
                 type: object
               provisioningState:
-                description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                 type: string
               resourceGuid:
                 type: string
@@ -600,7 +600,7 @@ spec:
                 type: object
               tapConfigurations:
                 items:
-                  description: Deprecated version of NetworkInterfaceTapConfiguration_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceTapConfiguration_Status_NetworkInterface_SubResourceEmbedded instead
+                  description: Deprecated version of NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded instead
                   properties:
                     id:
                       type: string
@@ -609,7 +609,7 @@ spec:
               type:
                 type: string
               virtualMachine:
-                description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   id:
                     type: string
@@ -647,7 +647,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20201101.NetworkInterfaces_Spec
+            description: Storage version of v1alpha1api20201101.NetworkInterface_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -691,7 +691,7 @@ spec:
                 type: object
               ipConfigurations:
                 items:
-                  description: Storage version of v1alpha1api20201101.NetworkInterfaces_Spec_Properties_IpConfigurations Deprecated version of NetworkInterfaces_Spec_Properties_IpConfigurations. Use v1beta20201101.NetworkInterfaces_Spec_Properties_IpConfigurations instead
+                  description: Storage version of v1alpha1api20201101.NetworkInterface_Properties_IpConfigurations_Spec Deprecated version of NetworkInterface_Properties_IpConfigurations_Spec. Use v1beta20201101.NetworkInterface_Properties_IpConfigurations_Spec instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -965,7 +965,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201101.NetworkInterface_Status_NetworkInterface_SubResourceEmbedded Deprecated version of NetworkInterface_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterface_Status_NetworkInterface_SubResourceEmbedded instead
+            description: Storage version of v1alpha1api20201101.NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1007,7 +1007,7 @@ spec:
                   type: object
                 type: array
               dnsSettings:
-                description: Storage version of v1alpha1api20201101.NetworkInterfaceDnsSettings_Status Deprecated version of NetworkInterfaceDnsSettings_Status. Use v1beta20201101.NetworkInterfaceDnsSettings_Status instead
+                description: Storage version of v1alpha1api20201101.NetworkInterfaceDnsSettings_STATUS Deprecated version of NetworkInterfaceDnsSettings_STATUS. Use v1beta20201101.NetworkInterfaceDnsSettings_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1030,7 +1030,7 @@ spec:
                     type: string
                 type: object
               dscpConfiguration:
-                description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1047,7 +1047,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1alpha1api20201101.ExtendedLocation_Status Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1067,7 +1067,7 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1alpha1api20201101.NetworkInterfaceIPConfiguration_Status_NetworkInterface_SubResourceEmbedded Deprecated version of NetworkInterfaceIPConfiguration_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceIPConfiguration_Status_NetworkInterface_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20201101.NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1076,7 +1076,7 @@ spec:
                       type: object
                     applicationGatewayBackendAddressPools:
                       items:
-                        description: Storage version of v1alpha1api20201101.ApplicationGatewayBackendAddressPool_Status_NetworkInterface_SubResourceEmbedded Deprecated version of ApplicationGatewayBackendAddressPool_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.ApplicationGatewayBackendAddressPool_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Storage version of v1alpha1api20201101.ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1085,7 +1085,7 @@ spec:
                             type: object
                           backendAddresses:
                             items:
-                              description: Storage version of v1alpha1api20201101.ApplicationGatewayBackendAddress_Status Deprecated version of ApplicationGatewayBackendAddress_Status. Use v1beta20201101.ApplicationGatewayBackendAddress_Status instead
+                              description: Storage version of v1alpha1api20201101.ApplicationGatewayBackendAddress_STATUS Deprecated version of ApplicationGatewayBackendAddress_STATUS. Use v1beta20201101.ApplicationGatewayBackendAddress_STATUS instead
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1112,7 +1112,7 @@ spec:
                       type: array
                     applicationSecurityGroups:
                       items:
-                        description: Storage version of v1alpha1api20201101.ApplicationSecurityGroup_Status_NetworkInterface_SubResourceEmbedded Deprecated version of ApplicationSecurityGroup_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.ApplicationSecurityGroup_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Storage version of v1alpha1api20201101.ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1129,7 +1129,7 @@ spec:
                       type: string
                     loadBalancerBackendAddressPools:
                       items:
-                        description: Storage version of v1alpha1api20201101.BackendAddressPool_Status_NetworkInterface_SubResourceEmbedded Deprecated version of BackendAddressPool_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.BackendAddressPool_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Storage version of v1alpha1api20201101.BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1142,7 +1142,7 @@ spec:
                       type: array
                     loadBalancerInboundNatRules:
                       items:
-                        description: Storage version of v1alpha1api20201101.InboundNatRule_Status_NetworkInterface_SubResourceEmbedded Deprecated version of InboundNatRule_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.InboundNatRule_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Storage version of v1alpha1api20201101.InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1164,7 +1164,7 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     privateLinkConnectionProperties:
-                      description: Storage version of v1alpha1api20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_Status Deprecated version of NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_Status. Use v1beta20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_Status instead
+                      description: Storage version of v1alpha1api20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS Deprecated version of NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS. Use v1beta20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1183,7 +1183,7 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1alpha1api20201101.PublicIPAddress_Status_NetworkInterface_SubResourceEmbedded Deprecated version of PublicIPAddress_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_Status_NetworkInterface_SubResourceEmbedded instead
+                      description: Storage version of v1alpha1api20201101.PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1191,7 +1191,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         extendedLocation:
-                          description: Storage version of v1alpha1api20201101.ExtendedLocation_Status Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                          description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1206,7 +1206,7 @@ spec:
                         id:
                           type: string
                         sku:
-                          description: Storage version of v1alpha1api20201101.PublicIPAddressSku_Status Deprecated version of PublicIPAddressSku_Status. Use v1beta20201101.PublicIPAddressSku_Status instead
+                          description: Storage version of v1alpha1api20201101.PublicIPAddressSku_STATUS Deprecated version of PublicIPAddressSku_STATUS. Use v1beta20201101.PublicIPAddressSku_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1224,7 +1224,7 @@ spec:
                           type: array
                       type: object
                     subnet:
-                      description: Storage version of v1alpha1api20201101.Subnet_Status_NetworkInterface_SubResourceEmbedded Deprecated version of Subnet_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.Subnet_Status_NetworkInterface_SubResourceEmbedded instead
+                      description: Storage version of v1alpha1api20201101.Subnet_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of Subnet_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.Subnet_STATUS_NetworkInterface_SubResourceEmbedded instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1238,7 +1238,7 @@ spec:
                       type: string
                     virtualNetworkTaps:
                       items:
-                        description: Storage version of v1alpha1api20201101.VirtualNetworkTap_Status_NetworkInterface_SubResourceEmbedded Deprecated version of VirtualNetworkTap_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.VirtualNetworkTap_Status_NetworkInterface_SubResourceEmbedded instead
+                        description: Storage version of v1alpha1api20201101.VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded instead
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1260,7 +1260,7 @@ spec:
               name:
                 type: string
               networkSecurityGroup:
-                description: Storage version of v1alpha1api20201101.NetworkSecurityGroup_Status_NetworkInterface_SubResourceEmbedded Deprecated version of NetworkSecurityGroup_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkSecurityGroup_Status_NetworkInterface_SubResourceEmbedded instead
+                description: Storage version of v1alpha1api20201101.NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1275,7 +1275,7 @@ spec:
               primary:
                 type: boolean
               privateEndpoint:
-                description: Storage version of v1alpha1api20201101.PrivateEndpoint_Status_NetworkInterface_SubResourceEmbedded Deprecated version of PrivateEndpoint_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PrivateEndpoint_Status_NetworkInterface_SubResourceEmbedded instead
+                description: Storage version of v1alpha1api20201101.PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1283,7 +1283,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   extendedLocation:
-                    description: Storage version of v1alpha1api20201101.ExtendedLocation_Status Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                    description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1299,7 +1299,7 @@ spec:
                     type: string
                 type: object
               privateLinkService:
-                description: Storage version of v1alpha1api20201101.PrivateLinkService_Status_NetworkInterface_SubResourceEmbedded Deprecated version of PrivateLinkService_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PrivateLinkService_Status_NetworkInterface_SubResourceEmbedded instead
+                description: Storage version of v1alpha1api20201101.PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1307,7 +1307,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   extendedLocation:
-                    description: Storage version of v1alpha1api20201101.ExtendedLocation_Status Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                    description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1332,7 +1332,7 @@ spec:
                 type: object
               tapConfigurations:
                 items:
-                  description: Storage version of v1alpha1api20201101.NetworkInterfaceTapConfiguration_Status_NetworkInterface_SubResourceEmbedded Deprecated version of NetworkInterfaceTapConfiguration_Status_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceTapConfiguration_Status_NetworkInterface_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20201101.NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded Deprecated version of NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1346,7 +1346,7 @@ spec:
               type:
                 type: string
               virtualMachine:
-                description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2047,7 +2047,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20201101.NetworkInterfaces_Spec
+            description: Storage version of v1beta20201101.NetworkInterface_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2091,7 +2091,7 @@ spec:
                 type: object
               ipConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.NetworkInterfaces_Spec_Properties_IpConfigurations
+                  description: Storage version of v1beta20201101.NetworkInterface_Properties_IpConfigurations_Spec
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2365,7 +2365,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.NetworkInterface_Status_NetworkInterface_SubResourceEmbedded
+            description: Storage version of v1beta20201101.NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2407,7 +2407,7 @@ spec:
                   type: object
                 type: array
               dnsSettings:
-                description: Storage version of v1beta20201101.NetworkInterfaceDnsSettings_Status
+                description: Storage version of v1beta20201101.NetworkInterfaceDnsSettings_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2430,7 +2430,7 @@ spec:
                     type: string
                 type: object
               dscpConfiguration:
-                description: Storage version of v1beta20201101.SubResource_Status
+                description: Storage version of v1beta20201101.SubResource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2447,7 +2447,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1beta20201101.ExtendedLocation_Status
+                description: Storage version of v1beta20201101.ExtendedLocation_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2467,7 +2467,7 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.NetworkInterfaceIPConfiguration_Status_NetworkInterface_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2476,7 +2476,7 @@ spec:
                       type: object
                     applicationGatewayBackendAddressPools:
                       items:
-                        description: Storage version of v1beta20201101.ApplicationGatewayBackendAddressPool_Status_NetworkInterface_SubResourceEmbedded
+                        description: Storage version of v1beta20201101.ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2485,7 +2485,7 @@ spec:
                             type: object
                           backendAddresses:
                             items:
-                              description: Storage version of v1beta20201101.ApplicationGatewayBackendAddress_Status
+                              description: Storage version of v1beta20201101.ApplicationGatewayBackendAddress_STATUS
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2512,7 +2512,7 @@ spec:
                       type: array
                     applicationSecurityGroups:
                       items:
-                        description: Storage version of v1beta20201101.ApplicationSecurityGroup_Status_NetworkInterface_SubResourceEmbedded
+                        description: Storage version of v1beta20201101.ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2529,7 +2529,7 @@ spec:
                       type: string
                     loadBalancerBackendAddressPools:
                       items:
-                        description: Storage version of v1beta20201101.BackendAddressPool_Status_NetworkInterface_SubResourceEmbedded
+                        description: Storage version of v1beta20201101.BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2542,7 +2542,7 @@ spec:
                       type: array
                     loadBalancerInboundNatRules:
                       items:
-                        description: Storage version of v1beta20201101.InboundNatRule_Status_NetworkInterface_SubResourceEmbedded
+                        description: Storage version of v1beta20201101.InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2564,7 +2564,7 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     privateLinkConnectionProperties:
-                      description: Storage version of v1beta20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_Status
+                      description: Storage version of v1beta20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2583,7 +2583,7 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1beta20201101.PublicIPAddress_Status_NetworkInterface_SubResourceEmbedded
+                      description: Storage version of v1beta20201101.PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2591,7 +2591,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         extendedLocation:
-                          description: Storage version of v1beta20201101.ExtendedLocation_Status
+                          description: Storage version of v1beta20201101.ExtendedLocation_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2606,7 +2606,7 @@ spec:
                         id:
                           type: string
                         sku:
-                          description: Storage version of v1beta20201101.PublicIPAddressSku_Status
+                          description: Storage version of v1beta20201101.PublicIPAddressSku_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2624,7 +2624,7 @@ spec:
                           type: array
                       type: object
                     subnet:
-                      description: Storage version of v1beta20201101.Subnet_Status_NetworkInterface_SubResourceEmbedded
+                      description: Storage version of v1beta20201101.Subnet_STATUS_NetworkInterface_SubResourceEmbedded
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2638,7 +2638,7 @@ spec:
                       type: string
                     virtualNetworkTaps:
                       items:
-                        description: Storage version of v1beta20201101.VirtualNetworkTap_Status_NetworkInterface_SubResourceEmbedded
+                        description: Storage version of v1beta20201101.VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2660,7 +2660,7 @@ spec:
               name:
                 type: string
               networkSecurityGroup:
-                description: Storage version of v1beta20201101.NetworkSecurityGroup_Status_NetworkInterface_SubResourceEmbedded
+                description: Storage version of v1beta20201101.NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2675,7 +2675,7 @@ spec:
               primary:
                 type: boolean
               privateEndpoint:
-                description: Storage version of v1beta20201101.PrivateEndpoint_Status_NetworkInterface_SubResourceEmbedded
+                description: Storage version of v1beta20201101.PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2683,7 +2683,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   extendedLocation:
-                    description: Storage version of v1beta20201101.ExtendedLocation_Status
+                    description: Storage version of v1beta20201101.ExtendedLocation_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2699,7 +2699,7 @@ spec:
                     type: string
                 type: object
               privateLinkService:
-                description: Storage version of v1beta20201101.PrivateLinkService_Status_NetworkInterface_SubResourceEmbedded
+                description: Storage version of v1beta20201101.PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2707,7 +2707,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   extendedLocation:
-                    description: Storage version of v1beta20201101.ExtendedLocation_Status
+                    description: Storage version of v1beta20201101.ExtendedLocation_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2732,7 +2732,7 @@ spec:
                 type: object
               tapConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.NetworkInterfaceTapConfiguration_Status_NetworkInterface_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2746,7 +2746,7 @@ spec:
               type:
                 type: string
               virtualMachine:
-                description: Storage version of v1beta20201101.SubResource_Status
+                description: Storage version of v1beta20201101.SubResource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

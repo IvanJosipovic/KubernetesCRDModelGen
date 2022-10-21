@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: components.insights.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -54,7 +54,7 @@ spec:
           spec:
             properties:
               Application_Type:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesApplicationType. Use v1beta20200202.ApplicationInsightsComponentPropertiesApplicationType instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_Application_Type. Use v1beta20200202.ApplicationInsightsComponentProperties_Application_Type instead
                 enum:
                 - other
                 - web
@@ -64,7 +64,7 @@ spec:
               DisableLocalAuth:
                 type: boolean
               Flow_Type:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesFlowType. Use v1beta20200202.ApplicationInsightsComponentPropertiesFlowType instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_Flow_Type. Use v1beta20200202.ApplicationInsightsComponentProperties_Flow_Type instead
                 enum:
                 - Bluefield
                 type: string
@@ -75,14 +75,14 @@ spec:
               ImmediatePurgeDataOn30Days:
                 type: boolean
               IngestionMode:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesIngestionMode. Use v1beta20200202.ApplicationInsightsComponentPropertiesIngestionMode instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_IngestionMode. Use v1beta20200202.ApplicationInsightsComponentProperties_IngestionMode instead
                 enum:
                 - ApplicationInsights
                 - ApplicationInsightsWithDiagnosticSettings
                 - LogAnalytics
                 type: string
               Request_Source:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesRequestSource. Use v1beta20200202.ApplicationInsightsComponentPropertiesRequestSource instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_Request_Source. Use v1beta20200202.ApplicationInsightsComponentProperties_Request_Source instead
                 enum:
                 - rest
                 type: string
@@ -109,13 +109,13 @@ spec:
                 - name
                 type: object
               publicNetworkAccessForIngestion:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesPublicNetworkAccessForIngestion. Use v1beta20200202.ApplicationInsightsComponentPropertiesPublicNetworkAccessForIngestion instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_PublicNetworkAccessForIngestion. Use v1beta20200202.ApplicationInsightsComponentProperties_PublicNetworkAccessForIngestion instead
                 enum:
                 - Disabled
                 - Enabled
                 type: string
               publicNetworkAccessForQuery:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesPublicNetworkAccessForQuery. Use v1beta20200202.ApplicationInsightsComponentPropertiesPublicNetworkAccessForQuery instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_PublicNetworkAccessForQuery. Use v1beta20200202.ApplicationInsightsComponentProperties_PublicNetworkAccessForQuery instead
                 enum:
                 - Disabled
                 - Enabled
@@ -147,12 +147,12 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of ApplicationInsightsComponent_Status. Use v1beta20200202.ApplicationInsightsComponent_Status instead
+            description: Deprecated version of ApplicationInsightsComponent_STATUS. Use v1beta20200202.ApplicationInsightsComponent_STATUS instead
             properties:
               AppId:
                 type: string
               Application_Type:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesStatusApplicationType. Use v1beta20200202.ApplicationInsightsComponentPropertiesStatusApplicationType instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_Application_Type_STATUS. Use v1beta20200202.ApplicationInsightsComponentProperties_Application_Type_STATUS instead
                 type: string
               ApplicationId:
                 type: string
@@ -165,7 +165,7 @@ spec:
               DisableLocalAuth:
                 type: boolean
               Flow_Type:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesStatusFlowType. Use v1beta20200202.ApplicationInsightsComponentPropertiesStatusFlowType instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_Flow_Type_STATUS. Use v1beta20200202.ApplicationInsightsComponentProperties_Flow_Type_STATUS instead
                 type: string
               ForceCustomerStorageForProfiler:
                 type: boolean
@@ -176,7 +176,7 @@ spec:
               ImmediatePurgeDataOn30Days:
                 type: boolean
               IngestionMode:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesStatusIngestionMode. Use v1beta20200202.ApplicationInsightsComponentPropertiesStatusIngestionMode instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_IngestionMode_STATUS. Use v1beta20200202.ApplicationInsightsComponentProperties_IngestionMode_STATUS instead
                 type: string
               InstrumentationKey:
                 type: string
@@ -184,7 +184,7 @@ spec:
                 type: string
               PrivateLinkScopedResources:
                 items:
-                  description: Deprecated version of PrivateLinkScopedResource_Status. Use v1beta20200202.PrivateLinkScopedResource_Status instead
+                  description: Deprecated version of PrivateLinkScopedResource_STATUS. Use v1beta20200202.PrivateLinkScopedResource_STATUS instead
                   properties:
                     ResourceId:
                       type: string
@@ -193,7 +193,7 @@ spec:
                   type: object
                 type: array
               Request_Source:
-                description: Deprecated version of ApplicationInsightsComponentPropertiesStatusRequestSource. Use v1beta20200202.ApplicationInsightsComponentPropertiesStatusRequestSource instead
+                description: Deprecated version of ApplicationInsightsComponentProperties_Request_Source_STATUS. Use v1beta20200202.ApplicationInsightsComponentProperties_Request_Source_STATUS instead
                 type: string
               RetentionInDays:
                 type: integer
@@ -253,10 +253,10 @@ spec:
               provisioningState:
                 type: string
               publicNetworkAccessForIngestion:
-                description: Deprecated version of PublicNetworkAccessType_Status. Use v1beta20200202.PublicNetworkAccessType_Status instead
+                description: Deprecated version of PublicNetworkAccessType_STATUS. Use v1beta20200202.PublicNetworkAccessType_STATUS instead
                 type: string
               publicNetworkAccessForQuery:
-                description: Deprecated version of PublicNetworkAccessType_Status. Use v1beta20200202.PublicNetworkAccessType_Status instead
+                description: Deprecated version of PublicNetworkAccessType_STATUS. Use v1beta20200202.PublicNetworkAccessType_STATUS instead
                 type: string
               tags:
                 x-kubernetes-preserve-unknown-fields: true
@@ -295,7 +295,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20200202.Components_Spec
+            description: Storage version of v1alpha1api20200202.Component_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -373,7 +373,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20200202.ApplicationInsightsComponent_Status Deprecated version of ApplicationInsightsComponent_Status. Use v1beta20200202.ApplicationInsightsComponent_Status instead
+            description: Storage version of v1alpha1api20200202.ApplicationInsightsComponent_STATUS Deprecated version of ApplicationInsightsComponent_STATUS. Use v1beta20200202.ApplicationInsightsComponent_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -412,7 +412,7 @@ spec:
                 type: string
               PrivateLinkScopedResources:
                 items:
-                  description: Storage version of v1alpha1api20200202.PrivateLinkScopedResource_Status Deprecated version of PrivateLinkScopedResource_Status. Use v1beta20200202.PrivateLinkScopedResource_Status instead
+                  description: Storage version of v1alpha1api20200202.PrivateLinkScopedResource_STATUS Deprecated version of PrivateLinkScopedResource_STATUS. Use v1beta20200202.PrivateLinkScopedResource_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -526,7 +526,7 @@ spec:
           spec:
             properties:
               Application_Type:
-                description: 'ApplicationType: Type of application being monitored.'
+                description: 'Application_Type: Type of application being monitored.'
                 enum:
                 - other
                 - web
@@ -538,7 +538,7 @@ spec:
                 description: 'DisableLocalAuth: Disable Non-AAD based Auth.'
                 type: boolean
               Flow_Type:
-                description: "FlowType: Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API."
+                description: "Flow_Type: Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API."
                 enum:
                 - Bluefield
                 type: string
@@ -559,7 +559,7 @@ spec:
                 - LogAnalytics
                 type: string
               Request_Source:
-                description: "RequestSource: Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'."
+                description: "Request_Source: Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'."
                 enum:
                 - rest
                 type: string
@@ -635,7 +635,7 @@ spec:
                 description: 'AppId: Application Insights Unique ID for your Application.'
                 type: string
               Application_Type:
-                description: 'ApplicationType: Type of application being monitored.'
+                description: 'Application_Type: Type of application being monitored.'
                 type: string
               ApplicationId:
                 description: "ApplicationId: The unique ID of your application. This field mirrors the 'Name' field and cannot be changed."
@@ -653,7 +653,7 @@ spec:
                 description: 'DisableLocalAuth: Disable Non-AAD based Auth.'
                 type: boolean
               Flow_Type:
-                description: "FlowType: Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API."
+                description: "Flow_Type: Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API."
                 type: string
               ForceCustomerStorageForProfiler:
                 description: 'ForceCustomerStorageForProfiler: Force users to create their own storage account for profiler and debugger.'
@@ -689,7 +689,7 @@ spec:
                   type: object
                 type: array
               Request_Source:
-                description: "RequestSource: Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'."
+                description: "Request_Source: Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'."
                 type: string
               RetentionInDays:
                 description: 'RetentionInDays: Retention period in days.'
@@ -804,7 +804,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20200202.Components_Spec
+            description: Storage version of v1beta20200202.Component_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -882,7 +882,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20200202.ApplicationInsightsComponent_Status
+            description: Storage version of v1beta20200202.ApplicationInsightsComponent_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -921,7 +921,7 @@ spec:
                 type: string
               PrivateLinkScopedResources:
                 items:
-                  description: Storage version of v1beta20200202.PrivateLinkScopedResource_Status
+                  description: Storage version of v1beta20200202.PrivateLinkScopedResource_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:

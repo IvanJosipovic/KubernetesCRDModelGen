@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: namespaceseventhubsauthorizationrules.eventhub.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -70,7 +70,7 @@ spec:
                 type: object
               rights:
                 items:
-                  description: Deprecated version of AuthorizationRulePropertiesRights. Use v1beta20211101.AuthorizationRulePropertiesRights instead
+                  description: Deprecated version of AuthorizationRuleProperties_Rights. Use v1beta20211101.AuthorizationRuleProperties_Rights instead
                   enum:
                   - Listen
                   - Manage
@@ -86,7 +86,7 @@ spec:
             - rights
             type: object
           status:
-            description: Deprecated version of AuthorizationRule_Status. Use v1beta20211101.AuthorizationRule_Status instead
+            description: Deprecated version of AuthorizationRule_STATUS. Use v1beta20211101.AuthorizationRule_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -131,25 +131,25 @@ spec:
                 type: string
               rights:
                 items:
-                  description: Deprecated version of AuthorizationRuleStatusPropertiesRights. Use v1beta20211101.AuthorizationRuleStatusPropertiesRights instead
+                  description: Deprecated version of AuthorizationRule_Properties_Rights_STATUS. Use v1beta20211101.AuthorizationRule_Properties_Rights_STATUS instead
                   type: string
                 type: array
               systemData:
-                description: Deprecated version of SystemData_Status. Use v1beta20211101.SystemData_Status instead
+                description: Deprecated version of SystemData_STATUS. Use v1beta20211101.SystemData_STATUS instead
                 properties:
                   createdAt:
                     type: string
                   createdBy:
                     type: string
                   createdByType:
-                    description: Deprecated version of SystemDataStatusCreatedByType. Use v1beta20211101.SystemDataStatusCreatedByType instead
+                    description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1beta20211101.SystemData_CreatedByType_STATUS instead
                     type: string
                   lastModifiedAt:
                     type: string
                   lastModifiedBy:
                     type: string
                   lastModifiedByType:
-                    description: Deprecated version of SystemDataStatusLastModifiedByType. Use v1beta20211101.SystemDataStatusLastModifiedByType instead
+                    description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1beta20211101.SystemData_LastModifiedByType_STATUS instead
                     type: string
                 type: object
               type:
@@ -187,7 +187,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20211101.NamespacesEventhubsAuthorizationRules_Spec
+            description: Storage version of v1alpha1api20211101.Namespaces_Eventhubs_AuthorizationRule_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -223,7 +223,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20211101.AuthorizationRule_Status Deprecated version of AuthorizationRule_Status. Use v1beta20211101.AuthorizationRule_Status instead
+            description: Storage version of v1alpha1api20211101.AuthorizationRule_STATUS Deprecated version of AuthorizationRule_STATUS. Use v1beta20211101.AuthorizationRule_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -275,7 +275,7 @@ spec:
                   type: string
                 type: array
               systemData:
-                description: Storage version of v1alpha1api20211101.SystemData_Status Deprecated version of SystemData_Status. Use v1beta20211101.SystemData_Status instead
+                description: Storage version of v1alpha1api20211101.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1beta20211101.SystemData_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -474,7 +474,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20211101.NamespacesEventhubsAuthorizationRules_Spec
+            description: Storage version of v1beta20211101.Namespaces_Eventhubs_AuthorizationRule_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -510,7 +510,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20211101.AuthorizationRule_Status
+            description: Storage version of v1beta20211101.AuthorizationRule_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -562,7 +562,7 @@ spec:
                   type: string
                 type: array
               systemData:
-                description: Storage version of v1beta20211101.SystemData_Status
+                description: Storage version of v1beta20211101.SystemData_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

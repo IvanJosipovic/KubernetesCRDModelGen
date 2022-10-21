@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: redisenterprisedatabases.cache.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -57,19 +57,19 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               clientProtocol:
-                description: Deprecated version of DatabasePropertiesClientProtocol. Use v1beta20210301.DatabasePropertiesClientProtocol instead
+                description: Deprecated version of DatabaseProperties_ClientProtocol. Use v1beta20210301.DatabaseProperties_ClientProtocol instead
                 enum:
                 - Encrypted
                 - Plaintext
                 type: string
               clusteringPolicy:
-                description: Deprecated version of DatabasePropertiesClusteringPolicy. Use v1beta20210301.DatabasePropertiesClusteringPolicy instead
+                description: Deprecated version of DatabaseProperties_ClusteringPolicy. Use v1beta20210301.DatabaseProperties_ClusteringPolicy instead
                 enum:
                 - EnterpriseCluster
                 - OSSCluster
                 type: string
               evictionPolicy:
-                description: Deprecated version of DatabasePropertiesEvictionPolicy. Use v1beta20210301.DatabasePropertiesEvictionPolicy instead
+                description: Deprecated version of DatabaseProperties_EvictionPolicy. Use v1beta20210301.DatabaseProperties_EvictionPolicy instead
                 enum:
                 - AllKeysLFU
                 - AllKeysLRU
@@ -109,7 +109,7 @@ spec:
                   aofEnabled:
                     type: boolean
                   aofFrequency:
-                    description: Deprecated version of PersistenceAofFrequency. Use v1beta20210301.PersistenceAofFrequency instead
+                    description: Deprecated version of Persistence_AofFrequency. Use v1beta20210301.Persistence_AofFrequency instead
                     enum:
                     - 1s
                     - always
@@ -117,7 +117,7 @@ spec:
                   rdbEnabled:
                     type: boolean
                   rdbFrequency:
-                    description: Deprecated version of PersistenceRdbFrequency. Use v1beta20210301.PersistenceRdbFrequency instead
+                    description: Deprecated version of Persistence_RdbFrequency. Use v1beta20210301.Persistence_RdbFrequency instead
                     enum:
                     - 12h
                     - 1h
@@ -134,13 +134,13 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of Database_Status. Use v1beta20210301.Database_Status instead
+            description: Deprecated version of Database_STATUS. Use v1beta20210301.Database_STATUS instead
             properties:
               clientProtocol:
-                description: Deprecated version of DatabasePropertiesStatusClientProtocol. Use v1beta20210301.DatabasePropertiesStatusClientProtocol instead
+                description: Deprecated version of DatabaseProperties_ClientProtocol_STATUS. Use v1beta20210301.DatabaseProperties_ClientProtocol_STATUS instead
                 type: string
               clusteringPolicy:
-                description: Deprecated version of DatabasePropertiesStatusClusteringPolicy. Use v1beta20210301.DatabasePropertiesStatusClusteringPolicy instead
+                description: Deprecated version of DatabaseProperties_ClusteringPolicy_STATUS. Use v1beta20210301.DatabaseProperties_ClusteringPolicy_STATUS instead
                 type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -178,13 +178,13 @@ spec:
                   type: object
                 type: array
               evictionPolicy:
-                description: Deprecated version of DatabasePropertiesStatusEvictionPolicy. Use v1beta20210301.DatabasePropertiesStatusEvictionPolicy instead
+                description: Deprecated version of DatabaseProperties_EvictionPolicy_STATUS. Use v1beta20210301.DatabaseProperties_EvictionPolicy_STATUS instead
                 type: string
               id:
                 type: string
               modules:
                 items:
-                  description: Deprecated version of Module_Status. Use v1beta20210301.Module_Status instead
+                  description: Deprecated version of Module_STATUS. Use v1beta20210301.Module_STATUS instead
                   properties:
                     args:
                       type: string
@@ -197,26 +197,26 @@ spec:
               name:
                 type: string
               persistence:
-                description: Deprecated version of Persistence_Status. Use v1beta20210301.Persistence_Status instead
+                description: Deprecated version of Persistence_STATUS. Use v1beta20210301.Persistence_STATUS instead
                 properties:
                   aofEnabled:
                     type: boolean
                   aofFrequency:
-                    description: Deprecated version of PersistenceStatusAofFrequency. Use v1beta20210301.PersistenceStatusAofFrequency instead
+                    description: Deprecated version of Persistence_AofFrequency_STATUS. Use v1beta20210301.Persistence_AofFrequency_STATUS instead
                     type: string
                   rdbEnabled:
                     type: boolean
                   rdbFrequency:
-                    description: Deprecated version of PersistenceStatusRdbFrequency. Use v1beta20210301.PersistenceStatusRdbFrequency instead
+                    description: Deprecated version of Persistence_RdbFrequency_STATUS. Use v1beta20210301.Persistence_RdbFrequency_STATUS instead
                     type: string
                 type: object
               port:
                 type: integer
               provisioningState:
-                description: Deprecated version of ProvisioningState_Status. Use v1beta20210301.ProvisioningState_Status instead
+                description: Deprecated version of ProvisioningState_STATUS. Use v1beta20210301.ProvisioningState_STATUS instead
                 type: string
               resourceState:
-                description: Deprecated version of ResourceState_Status. Use v1beta20210301.ResourceState_Status instead
+                description: Deprecated version of ResourceState_STATUS. Use v1beta20210301.ResourceState_STATUS instead
                 type: string
               type:
                 type: string
@@ -253,7 +253,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210301.RedisEnterpriseDatabases_Spec
+            description: Storage version of v1alpha1api20210301.RedisEnterprise_Database_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -324,7 +324,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210301.Database_Status Deprecated version of Database_Status. Use v1beta20210301.Database_Status instead
+            description: Storage version of v1alpha1api20210301.Database_STATUS Deprecated version of Database_STATUS. Use v1beta20210301.Database_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -375,7 +375,7 @@ spec:
                 type: string
               modules:
                 items:
-                  description: Storage version of v1alpha1api20210301.Module_Status Deprecated version of Module_Status. Use v1beta20210301.Module_Status instead
+                  description: Storage version of v1alpha1api20210301.Module_STATUS Deprecated version of Module_STATUS. Use v1beta20210301.Module_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -393,7 +393,7 @@ spec:
               name:
                 type: string
               persistence:
-                description: Storage version of v1alpha1api20210301.Persistence_Status Deprecated version of Persistence_Status. Use v1beta20210301.Persistence_Status instead
+                description: Storage version of v1alpha1api20210301.Persistence_STATUS Deprecated version of Persistence_STATUS. Use v1beta20210301.Persistence_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -667,7 +667,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210301.RedisEnterpriseDatabases_Spec
+            description: Storage version of v1beta20210301.RedisEnterprise_Database_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -738,7 +738,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210301.Database_Status
+            description: Storage version of v1beta20210301.Database_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -789,7 +789,7 @@ spec:
                 type: string
               modules:
                 items:
-                  description: Storage version of v1beta20210301.Module_Status
+                  description: Storage version of v1beta20210301.Module_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -807,7 +807,7 @@ spec:
               name:
                 type: string
               persistence:
-                description: Storage version of v1beta20210301.Persistence_Status
+                description: Storage version of v1beta20210301.Persistence_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

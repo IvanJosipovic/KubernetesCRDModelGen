@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: virtualnetworks.network.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -117,7 +117,7 @@ spec:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocationType. Use v1beta20201101.ExtendedLocationType instead
+                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20201101.ExtendedLocation_Type instead
                     enum:
                     - EdgeZone
                     type: string
@@ -170,10 +170,10 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of VirtualNetwork_Status. Use v1beta20201101.VirtualNetwork_Status instead
+            description: Deprecated version of VirtualNetwork_STATUS. Use v1beta20201101.VirtualNetwork_STATUS instead
             properties:
               addressSpace:
-                description: Deprecated version of AddressSpace_Status. Use v1beta20201101.AddressSpace_Status instead
+                description: Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
                 properties:
                   addressPrefixes:
                     items:
@@ -181,7 +181,7 @@ spec:
                     type: array
                 type: object
               bgpCommunities:
-                description: Deprecated version of VirtualNetworkBgpCommunities_Status. Use v1beta20201101.VirtualNetworkBgpCommunities_Status instead
+                description: Deprecated version of VirtualNetworkBgpCommunities_STATUS. Use v1beta20201101.VirtualNetworkBgpCommunities_STATUS instead
                 properties:
                   regionalCommunity:
                     type: string
@@ -224,13 +224,13 @@ spec:
                   type: object
                 type: array
               ddosProtectionPlan:
-                description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   id:
                     type: string
                 type: object
               dhcpOptions:
-                description: Deprecated version of DhcpOptions_Status. Use v1beta20201101.DhcpOptions_Status instead
+                description: Deprecated version of DhcpOptions_STATUS. Use v1beta20201101.DhcpOptions_STATUS instead
                 properties:
                   dnsServers:
                     items:
@@ -244,19 +244,19 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                 properties:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocationType_Status. Use v1beta20201101.ExtendedLocationType_Status instead
+                    description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
                     type: string
                 type: object
               id:
                 type: string
               ipAllocations:
                 items:
-                  description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                  description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                   properties:
                     id:
                       type: string
@@ -267,7 +267,7 @@ spec:
               name:
                 type: string
               provisioningState:
-                description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                 type: string
               resourceGuid:
                 type: string
@@ -310,7 +310,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20201101.VirtualNetworks_Spec
+            description: Storage version of v1alpha1api20201101.VirtualNetwork_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -453,7 +453,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201101.VirtualNetwork_Status Deprecated version of VirtualNetwork_Status. Use v1beta20201101.VirtualNetwork_Status instead
+            description: Storage version of v1alpha1api20201101.VirtualNetwork_STATUS Deprecated version of VirtualNetwork_STATUS. Use v1beta20201101.VirtualNetwork_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -461,7 +461,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               addressSpace:
-                description: Storage version of v1alpha1api20201101.AddressSpace_Status Deprecated version of AddressSpace_Status. Use v1beta20201101.AddressSpace_Status instead
+                description: Storage version of v1alpha1api20201101.AddressSpace_STATUS Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -474,7 +474,7 @@ spec:
                     type: array
                 type: object
               bgpCommunities:
-                description: Storage version of v1alpha1api20201101.VirtualNetworkBgpCommunities_Status Deprecated version of VirtualNetworkBgpCommunities_Status. Use v1beta20201101.VirtualNetworkBgpCommunities_Status instead
+                description: Storage version of v1alpha1api20201101.VirtualNetworkBgpCommunities_STATUS Deprecated version of VirtualNetworkBgpCommunities_STATUS. Use v1beta20201101.VirtualNetworkBgpCommunities_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -521,7 +521,7 @@ spec:
                   type: object
                 type: array
               ddosProtectionPlan:
-                description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -532,7 +532,7 @@ spec:
                     type: string
                 type: object
               dhcpOptions:
-                description: Storage version of v1alpha1api20201101.DhcpOptions_Status Deprecated version of DhcpOptions_Status. Use v1beta20201101.DhcpOptions_Status instead
+                description: Storage version of v1alpha1api20201101.DhcpOptions_STATUS Deprecated version of DhcpOptions_STATUS. Use v1beta20201101.DhcpOptions_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -551,7 +551,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1alpha1api20201101.ExtendedLocation_Status Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -567,7 +567,7 @@ spec:
                 type: string
               ipAllocations:
                 items:
-                  description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                  description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -907,7 +907,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20201101.VirtualNetworks_Spec
+            description: Storage version of v1beta20201101.VirtualNetwork_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1050,7 +1050,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.VirtualNetwork_Status
+            description: Storage version of v1beta20201101.VirtualNetwork_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1058,7 +1058,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               addressSpace:
-                description: Storage version of v1beta20201101.AddressSpace_Status
+                description: Storage version of v1beta20201101.AddressSpace_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1071,7 +1071,7 @@ spec:
                     type: array
                 type: object
               bgpCommunities:
-                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_Status
+                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1118,7 +1118,7 @@ spec:
                   type: object
                 type: array
               ddosProtectionPlan:
-                description: Storage version of v1beta20201101.SubResource_Status
+                description: Storage version of v1beta20201101.SubResource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1129,7 +1129,7 @@ spec:
                     type: string
                 type: object
               dhcpOptions:
-                description: Storage version of v1beta20201101.DhcpOptions_Status
+                description: Storage version of v1beta20201101.DhcpOptions_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1148,7 +1148,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1beta20201101.ExtendedLocation_Status
+                description: Storage version of v1beta20201101.ExtendedLocation_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1164,7 +1164,7 @@ spec:
                 type: string
               ipAllocations:
                 items:
-                  description: Storage version of v1beta20201101.SubResource_Status
+                  description: Storage version of v1beta20201101.SubResource_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:

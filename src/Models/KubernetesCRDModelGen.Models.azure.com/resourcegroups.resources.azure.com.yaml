@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: resourcegroups.resources.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -51,6 +51,9 @@ spec:
             properties:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                maxLength: 90
+                minLength: 1
+                pattern: ^[a-zA-Z0-9-_\.()]+$
                 type: string
               location:
                 description: Location is the Azure location for the group (eg westus2, southcentralus, etc...)
@@ -151,6 +154,9 @@ spec:
             properties:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                maxLength: 90
+                minLength: 1
+                pattern: ^[a-zA-Z0-9-_\.()]+$
                 type: string
               location:
                 description: Location is the Azure location for the group (eg westus2, southcentralus, etc...)

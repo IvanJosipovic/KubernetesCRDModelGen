@@ -4,7 +4,7 @@ metadata:
   annotations:
     cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
-  name: databases.dbformariadb.azure.com
+  name: sqlroleassignments.documentdb.azure.com
 spec:
   conversion:
     strategy: Webhook
@@ -16,12 +16,12 @@ spec:
           path: /convert
       conversionReviewVersions:
       - v1beta1
-  group: dbformariadb.azure.com
+  group: documentdb.azure.com
   names:
-    kind: Database
-    listKind: DatabaseList
-    plural: databases
-    singular: database
+    kind: SqlRoleAssignment
+    listKind: SqlRoleAssignmentList
+    plural: sqlroleassignments
+    singular: sqlroleassignment
   preserveUnknownFields: false
   scope: Namespaced
   versions:
@@ -38,10 +38,10 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1beta20180601
+    name: v1beta20210515
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/resourceDefinitions/servers_databases'
+        description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/resourceDefinitions/databaseAccounts_sqlRoleAssignments'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -56,17 +56,8 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              charset:
-                description: 'Charset: The charset of the database.'
-                type: string
-              collation:
-                description: 'Collation: The collation of the database.'
-                type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbformariadb.azure.com/Server resource'
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/DatabaseAccount resource'
                 properties:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
@@ -74,22 +65,33 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+              principalId:
+                description: 'PrincipalId: The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.'
+                type: string
+              principalIdFromConfig:
+                description: 'PrincipalIdFromConfig: The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.'
+                properties:
+                  key:
+                    description: Key is the key in the Kubernetes configmap being referenced
+                    type: string
+                  name:
+                    description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                    type: string
+                required:
+                - key
+                - name
                 type: object
+              roleDefinitionId:
+                description: 'RoleDefinitionId: The unique identifier for the associated Role Definition.'
+                type: string
+              scope:
+                description: 'Scope: The data plane resource path for which access is being granted through this Role Assignment.'
+                type: string
             required:
             - owner
             type: object
           status:
             properties:
-              charset:
-                description: 'Charset: The charset of the database.'
-                type: string
-              collation:
-                description: 'Collation: The collation of the database.'
-                type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
@@ -126,13 +128,22 @@ spec:
                   type: object
                 type: array
               id:
-                description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                description: 'Id: The unique resource identifier of the database account.'
                 type: string
               name:
-                description: 'Name: The name of the resource'
+                description: 'Name: The name of the database account.'
+                type: string
+              principalId:
+                description: 'PrincipalId: The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.'
+                type: string
+              roleDefinitionId:
+                description: 'RoleDefinitionId: The unique identifier for the associated Role Definition.'
+                type: string
+              scope:
+                description: 'Scope: The data plane resource path for which access is being granted through this Role Assignment.'
                 type: string
               type:
-                description: 'Type: The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"'
+                description: 'Type: The type of Azure resource.'
                 type: string
             type: object
         type: object
@@ -153,10 +164,10 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1beta20180601storage
+    name: v1beta20210515storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20180601.Database Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/resourceDefinitions/servers_databases'
+        description: 'Storage version of v1beta20210515.SqlRoleAssignment Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/resourceDefinitions/databaseAccounts_sqlRoleAssignments'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -167,7 +178,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20180601.Servers_Database_Spec
+            description: Storage version of v1beta20210515.DatabaseAccounts_SqlRoleAssignment_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -177,16 +188,10 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              charset:
-                type: string
-              collation:
-                type: string
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbformariadb.azure.com/Server resource'
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a documentdb.azure.com/DatabaseAccount resource'
                 properties:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
@@ -194,25 +199,36 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
+              principalId:
+                type: string
+              principalIdFromConfig:
+                description: ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.
+                properties:
+                  key:
+                    description: Key is the key in the Kubernetes configmap being referenced
+                    type: string
+                  name:
+                    description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                    type: string
+                required:
+                - key
+                - name
                 type: object
+              roleDefinitionId:
+                type: string
+              scope:
+                type: string
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20180601.Database_STATUS
+            description: Storage version of v1beta20210515.SqlRoleAssignmentGetResults_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
-              charset:
-                type: string
-              collation:
-                type: string
               conditions:
                 items:
                   description: Condition defines an extension to status (an observation) of a resource
@@ -250,6 +266,12 @@ spec:
               id:
                 type: string
               name:
+                type: string
+              principalId:
+                type: string
+              roleDefinitionId:
+                type: string
+              scope:
                 type: string
               type:
                 type: string

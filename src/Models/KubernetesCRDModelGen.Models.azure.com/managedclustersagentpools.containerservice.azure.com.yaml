@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: managedclustersagentpools.containerservice.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -73,7 +73,7 @@ spec:
               enableUltraSSD:
                 type: boolean
               gpuInstanceProfile:
-                description: Deprecated version of ManagedClusterAgentPoolProfilePropertiesGpuInstanceProfile. Use v1beta20210501.ManagedClusterAgentPoolProfilePropertiesGpuInstanceProfile instead
+                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_GpuInstanceProfile. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_GpuInstanceProfile instead
                 enum:
                 - MIG1g
                 - MIG2g
@@ -111,7 +111,7 @@ spec:
                     type: string
                 type: object
               kubeletDiskType:
-                description: Deprecated version of ManagedClusterAgentPoolProfilePropertiesKubeletDiskType. Use v1beta20210501.ManagedClusterAgentPoolProfilePropertiesKubeletDiskType instead
+                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_KubeletDiskType. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_KubeletDiskType instead
                 enum:
                 - OS
                 - Temporary
@@ -195,7 +195,7 @@ spec:
               minCount:
                 type: integer
               mode:
-                description: Deprecated version of ManagedClusterAgentPoolProfilePropertiesMode. Use v1beta20210501.ManagedClusterAgentPoolProfilePropertiesMode instead
+                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_Mode. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_Mode instead
                 enum:
                 - System
                 - User
@@ -232,19 +232,19 @@ spec:
                 minimum: 0
                 type: integer
               osDiskType:
-                description: Deprecated version of ManagedClusterAgentPoolProfilePropertiesOsDiskType. Use v1beta20210501.ManagedClusterAgentPoolProfilePropertiesOsDiskType instead
+                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_OsDiskType. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_OsDiskType instead
                 enum:
                 - Ephemeral
                 - Managed
                 type: string
               osSKU:
-                description: Deprecated version of ManagedClusterAgentPoolProfilePropertiesOsSKU. Use v1beta20210501.ManagedClusterAgentPoolProfilePropertiesOsSKU instead
+                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_OsSKU. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_OsSKU instead
                 enum:
                 - CBLMariner
                 - Ubuntu
                 type: string
               osType:
-                description: Deprecated version of ManagedClusterAgentPoolProfilePropertiesOsType. Use v1beta20210501.ManagedClusterAgentPoolProfilePropertiesOsType instead
+                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_OsType. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_OsType instead
                 enum:
                 - Linux
                 - Windows
@@ -278,13 +278,13 @@ spec:
               proximityPlacementGroupID:
                 type: string
               scaleSetEvictionPolicy:
-                description: Deprecated version of ManagedClusterAgentPoolProfilePropertiesScaleSetEvictionPolicy. Use v1beta20210501.ManagedClusterAgentPoolProfilePropertiesScaleSetEvictionPolicy instead
+                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_ScaleSetEvictionPolicy. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_ScaleSetEvictionPolicy instead
                 enum:
                 - Deallocate
                 - Delete
                 type: string
               scaleSetPriority:
-                description: Deprecated version of ManagedClusterAgentPoolProfilePropertiesScaleSetPriority. Use v1beta20210501.ManagedClusterAgentPoolProfilePropertiesScaleSetPriority instead
+                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_ScaleSetPriority. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_ScaleSetPriority instead
                 enum:
                 - Regular
                 - Spot
@@ -296,7 +296,7 @@ spec:
                   type: string
                 type: object
               type:
-                description: Deprecated version of ManagedClusterAgentPoolProfilePropertiesType. Use v1beta20210501.ManagedClusterAgentPoolProfilePropertiesType instead
+                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_Type. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_Type instead
                 enum:
                 - AvailabilitySet
                 - VirtualMachineScaleSets
@@ -330,7 +330,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of AgentPool_Status. Use v1beta20210501.AgentPool_Status instead
+            description: Deprecated version of AgentPool_STATUS. Use v1beta20210501.AgentPool_STATUS instead
             properties:
               availabilityZones:
                 items:
@@ -384,12 +384,12 @@ spec:
               enableUltraSSD:
                 type: boolean
               gpuInstanceProfile:
-                description: Deprecated version of GPUInstanceProfile_Status. Use v1beta20210501.GPUInstanceProfile_Status instead
+                description: Deprecated version of GPUInstanceProfile_STATUS. Use v1beta20210501.GPUInstanceProfile_STATUS instead
                 type: string
               id:
                 type: string
               kubeletConfig:
-                description: Deprecated version of KubeletConfig_Status. Use v1beta20210501.KubeletConfig_Status instead
+                description: Deprecated version of KubeletConfig_STATUS. Use v1beta20210501.KubeletConfig_STATUS instead
                 properties:
                   allowedUnsafeSysctls:
                     items:
@@ -417,15 +417,15 @@ spec:
                     type: string
                 type: object
               kubeletDiskType:
-                description: Deprecated version of KubeletDiskType_Status. Use v1beta20210501.KubeletDiskType_Status instead
+                description: Deprecated version of KubeletDiskType_STATUS. Use v1beta20210501.KubeletDiskType_STATUS instead
                 type: string
               linuxOSConfig:
-                description: Deprecated version of LinuxOSConfig_Status. Use v1beta20210501.LinuxOSConfig_Status instead
+                description: Deprecated version of LinuxOSConfig_STATUS. Use v1beta20210501.LinuxOSConfig_STATUS instead
                 properties:
                   swapFileSizeMB:
                     type: integer
                   sysctls:
-                    description: Deprecated version of SysctlConfig_Status. Use v1beta20210501.SysctlConfig_Status instead
+                    description: Deprecated version of SysctlConfig_STATUS. Use v1beta20210501.SysctlConfig_STATUS instead
                     properties:
                       fsAioMaxNr:
                         type: integer
@@ -496,7 +496,7 @@ spec:
               minCount:
                 type: integer
               mode:
-                description: Deprecated version of AgentPoolMode_Status. Use v1beta20210501.AgentPoolMode_Status instead
+                description: Deprecated version of AgentPoolMode_STATUS. Use v1beta20210501.AgentPoolMode_STATUS instead
                 type: string
               name:
                 type: string
@@ -517,35 +517,35 @@ spec:
               osDiskSizeGB:
                 type: integer
               osDiskType:
-                description: Deprecated version of OSDiskType_Status. Use v1beta20210501.OSDiskType_Status instead
+                description: Deprecated version of OSDiskType_STATUS. Use v1beta20210501.OSDiskType_STATUS instead
                 type: string
               osSKU:
-                description: Deprecated version of OSSKU_Status. Use v1beta20210501.OSSKU_Status instead
+                description: Deprecated version of OSSKU_STATUS. Use v1beta20210501.OSSKU_STATUS instead
                 type: string
               osType:
-                description: Deprecated version of OSType_Status. Use v1beta20210501.OSType_Status instead
+                description: Deprecated version of OSType_STATUS. Use v1beta20210501.OSType_STATUS instead
                 type: string
               podSubnetID:
                 type: string
               powerState:
-                description: Deprecated version of PowerState_Status. Use v1beta20210501.PowerState_Status instead
+                description: Deprecated version of PowerState_STATUS. Use v1beta20210501.PowerState_STATUS instead
                 properties:
                   code:
-                    description: Deprecated version of PowerStateStatusCode. Use v1beta20210501.PowerStateStatusCode instead
+                    description: Deprecated version of PowerState_Code_STATUS. Use v1beta20210501.PowerState_Code_STATUS instead
                     type: string
                 type: object
               properties_type:
-                description: Deprecated version of AgentPoolType_Status. Use v1beta20210501.AgentPoolType_Status instead
+                description: Deprecated version of AgentPoolType_STATUS. Use v1beta20210501.AgentPoolType_STATUS instead
                 type: string
               provisioningState:
                 type: string
               proximityPlacementGroupID:
                 type: string
               scaleSetEvictionPolicy:
-                description: Deprecated version of ScaleSetEvictionPolicy_Status. Use v1beta20210501.ScaleSetEvictionPolicy_Status instead
+                description: Deprecated version of ScaleSetEvictionPolicy_STATUS. Use v1beta20210501.ScaleSetEvictionPolicy_STATUS instead
                 type: string
               scaleSetPriority:
-                description: Deprecated version of ScaleSetPriority_Status. Use v1beta20210501.ScaleSetPriority_Status instead
+                description: Deprecated version of ScaleSetPriority_STATUS. Use v1beta20210501.ScaleSetPriority_STATUS instead
                 type: string
               spotMaxPrice:
                 type: number
@@ -556,7 +556,7 @@ spec:
               type:
                 type: string
               upgradeSettings:
-                description: Deprecated version of AgentPoolUpgradeSettings_Status. Use v1beta20210501.AgentPoolUpgradeSettings_Status instead
+                description: Deprecated version of AgentPoolUpgradeSettings_STATUS. Use v1beta20210501.AgentPoolUpgradeSettings_STATUS instead
                 properties:
                   maxSurge:
                     type: string
@@ -598,7 +598,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210501.ManagedClustersAgentPools_Spec
+            description: Storage version of v1alpha1api20210501.ManagedClusters_AgentPool_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -862,7 +862,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210501.AgentPool_Status Deprecated version of AgentPool_Status. Use v1beta20210501.AgentPool_Status instead
+            description: Storage version of v1alpha1api20210501.AgentPool_STATUS Deprecated version of AgentPool_STATUS. Use v1beta20210501.AgentPool_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -924,7 +924,7 @@ spec:
               id:
                 type: string
               kubeletConfig:
-                description: Storage version of v1alpha1api20210501.KubeletConfig_Status Deprecated version of KubeletConfig_Status. Use v1beta20210501.KubeletConfig_Status instead
+                description: Storage version of v1alpha1api20210501.KubeletConfig_STATUS Deprecated version of KubeletConfig_STATUS. Use v1beta20210501.KubeletConfig_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -959,7 +959,7 @@ spec:
               kubeletDiskType:
                 type: string
               linuxOSConfig:
-                description: Storage version of v1alpha1api20210501.LinuxOSConfig_Status Deprecated version of LinuxOSConfig_Status. Use v1beta20210501.LinuxOSConfig_Status instead
+                description: Storage version of v1alpha1api20210501.LinuxOSConfig_STATUS Deprecated version of LinuxOSConfig_STATUS. Use v1beta20210501.LinuxOSConfig_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -969,7 +969,7 @@ spec:
                   swapFileSizeMB:
                     type: integer
                   sysctls:
-                    description: Storage version of v1alpha1api20210501.SysctlConfig_Status Deprecated version of SysctlConfig_Status. Use v1beta20210501.SysctlConfig_Status instead
+                    description: Storage version of v1alpha1api20210501.SysctlConfig_STATUS Deprecated version of SysctlConfig_STATUS. Use v1beta20210501.SysctlConfig_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1073,7 +1073,7 @@ spec:
               podSubnetID:
                 type: string
               powerState:
-                description: Storage version of v1alpha1api20210501.PowerState_Status Deprecated version of PowerState_Status. Use v1beta20210501.PowerState_Status instead
+                description: Storage version of v1alpha1api20210501.PowerState_STATUS Deprecated version of PowerState_STATUS. Use v1beta20210501.PowerState_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1102,7 +1102,7 @@ spec:
               type:
                 type: string
               upgradeSettings:
-                description: Storage version of v1alpha1api20210501.AgentPoolUpgradeSettings_Status Deprecated version of AgentPoolUpgradeSettings_Status. Use v1beta20210501.AgentPoolUpgradeSettings_Status instead
+                description: Storage version of v1alpha1api20210501.AgentPoolUpgradeSettings_STATUS Deprecated version of AgentPoolUpgradeSettings_STATUS. Use v1beta20210501.AgentPoolUpgradeSettings_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1812,7 +1812,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210501.ManagedClustersAgentPools_Spec
+            description: Storage version of v1beta20210501.ManagedClusters_AgentPool_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2076,7 +2076,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210501.AgentPool_Status
+            description: Storage version of v1beta20210501.AgentPool_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2138,7 +2138,7 @@ spec:
               id:
                 type: string
               kubeletConfig:
-                description: Storage version of v1beta20210501.KubeletConfig_Status
+                description: Storage version of v1beta20210501.KubeletConfig_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2173,7 +2173,7 @@ spec:
               kubeletDiskType:
                 type: string
               linuxOSConfig:
-                description: Storage version of v1beta20210501.LinuxOSConfig_Status
+                description: Storage version of v1beta20210501.LinuxOSConfig_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2183,7 +2183,7 @@ spec:
                   swapFileSizeMB:
                     type: integer
                   sysctls:
-                    description: Storage version of v1beta20210501.SysctlConfig_Status
+                    description: Storage version of v1beta20210501.SysctlConfig_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2287,7 +2287,7 @@ spec:
               podSubnetID:
                 type: string
               powerState:
-                description: Storage version of v1beta20210501.PowerState_Status
+                description: Storage version of v1beta20210501.PowerState_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2316,7 +2316,7 @@ spec:
               type:
                 type: string
               upgradeSettings:
-                description: Storage version of v1beta20210501.AgentPoolUpgradeSettings_Status
+                description: Storage version of v1beta20210501.AgentPoolUpgradeSettings_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

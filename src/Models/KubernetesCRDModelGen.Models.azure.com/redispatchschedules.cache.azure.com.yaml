@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: redispatchschedules.cache.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -69,7 +69,7 @@ spec:
                   description: Deprecated version of ScheduleEntry. Use v1beta20201201.ScheduleEntry instead
                   properties:
                     dayOfWeek:
-                      description: Deprecated version of ScheduleEntryDayOfWeek. Use v1beta20201201.ScheduleEntryDayOfWeek instead
+                      description: Deprecated version of ScheduleEntry_DayOfWeek. Use v1beta20201201.ScheduleEntry_DayOfWeek instead
                       enum:
                       - Everyday
                       - Friday
@@ -99,7 +99,7 @@ spec:
             - scheduleEntries
             type: object
           status:
-            description: Deprecated version of RedisPatchSchedule_Status. Use v1beta20201201.RedisPatchSchedule_Status instead
+            description: Deprecated version of RedisPatchSchedule_STATUS. Use v1beta20201201.RedisPatchSchedule_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -144,10 +144,10 @@ spec:
                 type: string
               scheduleEntries:
                 items:
-                  description: Deprecated version of ScheduleEntry_Status. Use v1beta20201201.ScheduleEntry_Status instead
+                  description: Deprecated version of ScheduleEntry_STATUS. Use v1beta20201201.ScheduleEntry_STATUS instead
                   properties:
                     dayOfWeek:
-                      description: Deprecated version of ScheduleEntryStatusDayOfWeek. Use v1beta20201201.ScheduleEntryStatusDayOfWeek instead
+                      description: Deprecated version of ScheduleEntry_DayOfWeek_STATUS. Use v1beta20201201.ScheduleEntry_DayOfWeek_STATUS instead
                       type: string
                     maintenanceWindow:
                       type: string
@@ -190,7 +190,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20201201.RedisPatchSchedules_Spec
+            description: Storage version of v1alpha1api20201201.Redis_PatchSchedule_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -235,7 +235,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201201.RedisPatchSchedule_Status Deprecated version of RedisPatchSchedule_Status. Use v1beta20201201.RedisPatchSchedule_Status instead
+            description: Storage version of v1alpha1api20201201.RedisPatchSchedule_STATUS Deprecated version of RedisPatchSchedule_STATUS. Use v1beta20201201.RedisPatchSchedule_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -284,7 +284,7 @@ spec:
                 type: string
               scheduleEntries:
                 items:
-                  description: Storage version of v1alpha1api20201201.ScheduleEntry_Status Deprecated version of ScheduleEntry_Status. Use v1beta20201201.ScheduleEntry_Status instead
+                  description: Storage version of v1alpha1api20201201.ScheduleEntry_STATUS Deprecated version of ScheduleEntry_STATUS. Use v1beta20201201.ScheduleEntry_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -482,7 +482,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20201201.RedisPatchSchedules_Spec
+            description: Storage version of v1beta20201201.Redis_PatchSchedule_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -527,7 +527,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201201.RedisPatchSchedule_Status
+            description: Storage version of v1beta20201201.RedisPatchSchedule_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -576,7 +576,7 @@ spec:
                 type: string
               scheduleEntries:
                 items:
-                  description: Storage version of v1beta20201201.ScheduleEntry_Status
+                  description: Storage version of v1beta20201201.ScheduleEntry_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:

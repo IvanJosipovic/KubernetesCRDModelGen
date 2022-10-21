@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: redisenterprises.cache.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -59,7 +59,7 @@ spec:
               location:
                 type: string
               minimumTlsVersion:
-                description: Deprecated version of ClusterPropertiesMinimumTlsVersion. Use v1beta20210301.ClusterPropertiesMinimumTlsVersion instead
+                description: Deprecated version of ClusterProperties_MinimumTlsVersion. Use v1beta20210301.ClusterProperties_MinimumTlsVersion instead
                 enum:
                 - 1.0
                 - 1.1
@@ -80,15 +80,15 @@ spec:
                   capacity:
                     type: integer
                   name:
-                    description: Deprecated version of SkuName. Use v1beta20210301.SkuName instead
+                    description: Deprecated version of Sku_Name. Use v1beta20210301.Sku_Name instead
                     enum:
+                    - EnterpriseFlash_F1500
+                    - EnterpriseFlash_F300
+                    - EnterpriseFlash_F700
                     - Enterprise_E10
                     - Enterprise_E100
                     - Enterprise_E20
                     - Enterprise_E50
-                    - EnterpriseFlash_F1500
-                    - EnterpriseFlash_F300
-                    - EnterpriseFlash_F700
                     type: string
                 required:
                 - name
@@ -106,7 +106,7 @@ spec:
             - sku
             type: object
           status:
-            description: Deprecated version of Cluster_Status. Use v1beta20210301.Cluster_Status instead
+            description: Deprecated version of Cluster_STATUS. Use v1beta20210301.Cluster_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -150,33 +150,33 @@ spec:
               location:
                 type: string
               minimumTlsVersion:
-                description: Deprecated version of ClusterPropertiesStatusMinimumTlsVersion. Use v1beta20210301.ClusterPropertiesStatusMinimumTlsVersion instead
+                description: Deprecated version of ClusterProperties_MinimumTlsVersion_STATUS. Use v1beta20210301.ClusterProperties_MinimumTlsVersion_STATUS instead
                 type: string
               name:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_Status_SubResourceEmbedded. Use v1beta20210301.PrivateEndpointConnection_Status_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210301.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
                   properties:
                     id:
                       type: string
                   type: object
                 type: array
               provisioningState:
-                description: Deprecated version of ProvisioningState_Status. Use v1beta20210301.ProvisioningState_Status instead
+                description: Deprecated version of ProvisioningState_STATUS. Use v1beta20210301.ProvisioningState_STATUS instead
                 type: string
               redisVersion:
                 type: string
               resourceState:
-                description: Deprecated version of ResourceState_Status. Use v1beta20210301.ResourceState_Status instead
+                description: Deprecated version of ResourceState_STATUS. Use v1beta20210301.ResourceState_STATUS instead
                 type: string
               sku:
-                description: Deprecated version of Sku_Status. Use v1beta20210301.Sku_Status instead
+                description: Deprecated version of Sku_STATUS. Use v1beta20210301.Sku_STATUS instead
                 properties:
                   capacity:
                     type: integer
                   name:
-                    description: Deprecated version of SkuStatusName. Use v1beta20210301.SkuStatusName instead
+                    description: Deprecated version of Sku_Name_STATUS. Use v1beta20210301.Sku_Name_STATUS instead
                     type: string
                 type: object
               tags:
@@ -272,7 +272,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210301.Cluster_Status Deprecated version of Cluster_Status. Use v1beta20210301.Cluster_Status instead
+            description: Storage version of v1alpha1api20210301.Cluster_STATUS Deprecated version of Cluster_STATUS. Use v1beta20210301.Cluster_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -325,7 +325,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20210301.PrivateEndpointConnection_Status_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_Status_SubResourceEmbedded. Use v1beta20210301.PrivateEndpointConnection_Status_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20210301.PrivateEndpointConnection_STATUS_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210301.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -343,7 +343,7 @@ spec:
               resourceState:
                 type: string
               sku:
-                description: Storage version of v1alpha1api20210301.Sku_Status Deprecated version of Sku_Status. Use v1beta20210301.Sku_Status instead
+                description: Storage version of v1alpha1api20210301.Sku_STATUS Deprecated version of Sku_STATUS. Use v1beta20210301.Sku_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -430,13 +430,13 @@ spec:
                   name:
                     description: 'Name: The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.).'
                     enum:
+                    - EnterpriseFlash_F1500
+                    - EnterpriseFlash_F300
+                    - EnterpriseFlash_F700
                     - Enterprise_E10
                     - Enterprise_E100
                     - Enterprise_E20
                     - Enterprise_E50
-                    - EnterpriseFlash_F1500
-                    - EnterpriseFlash_F300
-                    - EnterpriseFlash_F700
                     type: string
                 required:
                 - name
@@ -631,7 +631,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210301.Cluster_Status
+            description: Storage version of v1beta20210301.Cluster_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -684,7 +684,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210301.PrivateEndpointConnection_Status_SubResourceEmbedded
+                  description: Storage version of v1beta20210301.PrivateEndpointConnection_STATUS_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -702,7 +702,7 @@ spec:
               resourceState:
                 type: string
               sku:
-                description: Storage version of v1beta20210301.Sku_Status
+                description: Storage version of v1beta20210301.Sku_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

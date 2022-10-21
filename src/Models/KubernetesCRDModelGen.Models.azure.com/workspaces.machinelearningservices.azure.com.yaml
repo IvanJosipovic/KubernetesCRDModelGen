@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: workspaces.machinelearningservices.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -194,7 +194,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -207,7 +207,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -220,7 +220,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -233,7 +233,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -246,7 +246,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -259,7 +259,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -272,7 +272,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -780,7 +780,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210701.Workspaces_Spec
+            description: Storage version of v1beta20210701.Workspace_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -924,91 +924,91 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       appInsightsInstrumentationKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       containerRegistryPassword:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       containerRegistryPassword2:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       containerRegistryUserName:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryNotebookAccessKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryNotebookAccessKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       userStorageKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1068,7 +1068,7 @@ spec:
                 type: object
               sharedPrivateLinkResources:
                 items:
-                  description: Storage version of v1beta20210701.Workspaces_Spec_Properties_SharedPrivateLinkResources
+                  description: Storage version of v1beta20210701.Workspace_Properties_SharedPrivateLinkResources_Spec
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1161,7 +1161,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210701.Workspace_Status
+            description: Storage version of v1beta20210701.Workspace_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1213,7 +1213,7 @@ spec:
               discoveryUrl:
                 type: string
               encryption:
-                description: Storage version of v1beta20210701.EncryptionProperty_Status
+                description: Storage version of v1beta20210701.EncryptionProperty_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1221,7 +1221,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   identity:
-                    description: Storage version of v1beta20210701.IdentityForCmk_Status
+                    description: Storage version of v1beta20210701.IdentityForCmk_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1232,7 +1232,7 @@ spec:
                         type: string
                     type: object
                   keyVaultProperties:
-                    description: Storage version of v1beta20210701.KeyVaultProperties_Status
+                    description: Storage version of v1beta20210701.KeyVaultProperties_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1256,7 +1256,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210701.Identity_Status
+                description: Storage version of v1beta20210701.Identity_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1271,7 +1271,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20210701.UserAssignedIdentity_Status
+                      description: Storage version of v1beta20210701.UserAssignedIdentity_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1298,7 +1298,7 @@ spec:
               name:
                 type: string
               notebookInfo:
-                description: Storage version of v1beta20210701.NotebookResourceInfo_Status
+                description: Storage version of v1beta20210701.NotebookResourceInfo_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1308,7 +1308,7 @@ spec:
                   fqdn:
                     type: string
                   notebookPreparationError:
-                    description: Storage version of v1beta20210701.NotebookPreparationError_Status
+                    description: Storage version of v1beta20210701.NotebookPreparationError_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1327,7 +1327,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210701.PrivateEndpointConnection_Status_SubResourceEmbedded
+                  description: Storage version of v1beta20210701.PrivateEndpointConnection_STATUS_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1337,7 +1337,7 @@ spec:
                     id:
                       type: string
                     identity:
-                      description: Storage version of v1beta20210701.Identity_Status
+                      description: Storage version of v1beta20210701.Identity_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1352,7 +1352,7 @@ spec:
                           type: string
                         userAssignedIdentities:
                           additionalProperties:
-                            description: Storage version of v1beta20210701.UserAssignedIdentity_Status
+                            description: Storage version of v1beta20210701.UserAssignedIdentity_STATUS
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -1369,7 +1369,7 @@ spec:
                           type: object
                       type: object
                     sku:
-                      description: Storage version of v1beta20210701.Sku_Status
+                      description: Storage version of v1beta20210701.Sku_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1382,7 +1382,7 @@ spec:
                           type: string
                       type: object
                     systemData:
-                      description: Storage version of v1beta20210701.SystemData_Status
+                      description: Storage version of v1beta20210701.SystemData_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1411,7 +1411,7 @@ spec:
               publicNetworkAccess:
                 type: string
               serviceManagedResourcesSettings:
-                description: Storage version of v1beta20210701.ServiceManagedResourcesSettings_Status
+                description: Storage version of v1beta20210701.ServiceManagedResourcesSettings_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1419,7 +1419,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   cosmosDb:
-                    description: Storage version of v1beta20210701.CosmosDbSettings_Status
+                    description: Storage version of v1beta20210701.CosmosDbSettings_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1434,7 +1434,7 @@ spec:
                 type: string
               sharedPrivateLinkResources:
                 items:
-                  description: Storage version of v1beta20210701.SharedPrivateLinkResource_Status
+                  description: Storage version of v1beta20210701.SharedPrivateLinkResource_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1454,7 +1454,7 @@ spec:
                   type: object
                 type: array
               sku:
-                description: Storage version of v1beta20210701.Sku_Status
+                description: Storage version of v1beta20210701.Sku_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1471,7 +1471,7 @@ spec:
               storageHnsEnabled:
                 type: boolean
               systemData:
-                description: Storage version of v1beta20210701.SystemData_Status
+                description: Storage version of v1beta20210701.SystemData_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
