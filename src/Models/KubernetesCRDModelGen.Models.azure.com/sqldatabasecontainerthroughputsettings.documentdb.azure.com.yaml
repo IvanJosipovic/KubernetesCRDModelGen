@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: sqldatabasecontainerthroughputsettings.documentdb.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -99,7 +99,7 @@ spec:
             - resource
             type: object
           status:
-            description: Deprecated version of ThroughputSettingsGetResults_Status. Use v1beta20210515.ThroughputSettingsGetResults_Status instead
+            description: Deprecated version of ThroughputSettingsGetResults_STATUS. Use v1beta20210515.ThroughputSettingsGetResults_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -143,7 +143,7 @@ spec:
               name:
                 type: string
               resource:
-                description: Deprecated version of ThroughputSettingsGetProperties_Status_Resource. Use v1beta20210515.ThroughputSettingsGetProperties_Status_Resource instead
+                description: Deprecated version of ThroughputSettingsGetProperties_Resource_STATUS. Use v1beta20210515.ThroughputSettingsGetProperties_Resource_STATUS instead
                 properties:
                   _etag:
                     type: string
@@ -152,13 +152,13 @@ spec:
                   _ts:
                     type: number
                   autoscaleSettings:
-                    description: Deprecated version of AutoscaleSettingsResource_Status. Use v1beta20210515.AutoscaleSettingsResource_Status instead
+                    description: Deprecated version of AutoscaleSettingsResource_STATUS. Use v1beta20210515.AutoscaleSettingsResource_STATUS instead
                     properties:
                       autoUpgradePolicy:
-                        description: Deprecated version of AutoUpgradePolicyResource_Status. Use v1beta20210515.AutoUpgradePolicyResource_Status instead
+                        description: Deprecated version of AutoUpgradePolicyResource_STATUS. Use v1beta20210515.AutoUpgradePolicyResource_STATUS instead
                         properties:
                           throughputPolicy:
-                            description: Deprecated version of ThroughputPolicyResource_Status. Use v1beta20210515.ThroughputPolicyResource_Status instead
+                            description: Deprecated version of ThroughputPolicyResource_STATUS. Use v1beta20210515.ThroughputPolicyResource_STATUS instead
                             properties:
                               incrementPercent:
                                 type: integer
@@ -217,7 +217,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210515.DatabaseAccountsSqlDatabasesContainersThroughputSettings_Spec
+            description: Storage version of v1alpha1api20210515.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -289,7 +289,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210515.ThroughputSettingsGetResults_Status Deprecated version of ThroughputSettingsGetResults_Status. Use v1beta20210515.ThroughputSettingsGetResults_Status instead
+            description: Storage version of v1alpha1api20210515.ThroughputSettingsGetResults_STATUS Deprecated version of ThroughputSettingsGetResults_STATUS. Use v1beta20210515.ThroughputSettingsGetResults_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -337,7 +337,7 @@ spec:
               name:
                 type: string
               resource:
-                description: Storage version of v1alpha1api20210515.ThroughputSettingsGetProperties_Status_Resource Deprecated version of ThroughputSettingsGetProperties_Status_Resource. Use v1beta20210515.ThroughputSettingsGetProperties_Status_Resource instead
+                description: Storage version of v1alpha1api20210515.ThroughputSettingsGetProperties_Resource_STATUS Deprecated version of ThroughputSettingsGetProperties_Resource_STATUS. Use v1beta20210515.ThroughputSettingsGetProperties_Resource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -351,7 +351,7 @@ spec:
                   _ts:
                     type: number
                   autoscaleSettings:
-                    description: Storage version of v1alpha1api20210515.AutoscaleSettingsResource_Status Deprecated version of AutoscaleSettingsResource_Status. Use v1beta20210515.AutoscaleSettingsResource_Status instead
+                    description: Storage version of v1alpha1api20210515.AutoscaleSettingsResource_STATUS Deprecated version of AutoscaleSettingsResource_STATUS. Use v1beta20210515.AutoscaleSettingsResource_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -359,7 +359,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       autoUpgradePolicy:
-                        description: Storage version of v1alpha1api20210515.AutoUpgradePolicyResource_Status Deprecated version of AutoUpgradePolicyResource_Status. Use v1beta20210515.AutoUpgradePolicyResource_Status instead
+                        description: Storage version of v1alpha1api20210515.AutoUpgradePolicyResource_STATUS Deprecated version of AutoUpgradePolicyResource_STATUS. Use v1beta20210515.AutoUpgradePolicyResource_STATUS instead
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -367,7 +367,7 @@ spec:
                             description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                             type: object
                           throughputPolicy:
-                            description: Storage version of v1alpha1api20210515.ThroughputPolicyResource_Status Deprecated version of ThroughputPolicyResource_Status. Use v1beta20210515.ThroughputPolicyResource_Status instead
+                            description: Storage version of v1alpha1api20210515.ThroughputPolicyResource_STATUS Deprecated version of ThroughputPolicyResource_STATUS. Use v1beta20210515.ThroughputPolicyResource_STATUS instead
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -614,7 +614,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210515.DatabaseAccountsSqlDatabasesContainersThroughputSettings_Spec
+            description: Storage version of v1beta20210515.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -686,7 +686,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210515.ThroughputSettingsGetResults_Status
+            description: Storage version of v1beta20210515.ThroughputSettingsGetResults_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -734,7 +734,7 @@ spec:
               name:
                 type: string
               resource:
-                description: Storage version of v1beta20210515.ThroughputSettingsGetProperties_Status_Resource
+                description: Storage version of v1beta20210515.ThroughputSettingsGetProperties_Resource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -748,7 +748,7 @@ spec:
                   _ts:
                     type: number
                   autoscaleSettings:
-                    description: Storage version of v1beta20210515.AutoscaleSettingsResource_Status
+                    description: Storage version of v1beta20210515.AutoscaleSettingsResource_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -756,7 +756,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       autoUpgradePolicy:
-                        description: Storage version of v1beta20210515.AutoUpgradePolicyResource_Status
+                        description: Storage version of v1beta20210515.AutoUpgradePolicyResource_STATUS
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -764,7 +764,7 @@ spec:
                             description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                             type: object
                           throughputPolicy:
-                            description: Storage version of v1beta20210515.ThroughputPolicyResource_Status
+                            description: Storage version of v1beta20210515.ThroughputPolicyResource_STATUS
                             properties:
                               $propertyBag:
                                 additionalProperties:

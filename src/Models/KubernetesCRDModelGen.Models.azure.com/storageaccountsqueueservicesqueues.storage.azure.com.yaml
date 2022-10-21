@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: storageaccountsqueueservicesqueues.storage.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -81,7 +81,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of StorageQueue_Status. Use v1beta20210401.StorageQueue_Status instead
+            description: Deprecated version of StorageQueue_STATUS. Use v1beta20210401.StorageQueue_STATUS instead
             properties:
               approximateMessageCount:
                 type: integer
@@ -163,7 +163,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210401.StorageAccountsQueueServicesQueues_Spec
+            description: Storage version of v1alpha1api20210401.StorageAccounts_QueueServices_Queue_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -200,7 +200,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210401.StorageQueue_Status Deprecated version of StorageQueue_Status. Use v1beta20210401.StorageQueue_Status instead
+            description: Storage version of v1alpha1api20210401.StorageQueue_STATUS Deprecated version of StorageQueue_STATUS. Use v1beta20210401.StorageQueue_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -404,7 +404,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210401.StorageAccountsQueueServicesQueues_Spec
+            description: Storage version of v1beta20210401.StorageAccounts_QueueServices_Queue_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -441,7 +441,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401.StorageQueue_Status
+            description: Storage version of v1beta20210401.StorageQueue_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: disks.compute.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -62,7 +62,7 @@ spec:
                 description: Deprecated version of CreationData. Use v1beta20200930.CreationData instead
                 properties:
                   createOption:
-                    description: Deprecated version of CreationDataCreateOption. Use v1beta20200930.CreationDataCreateOption instead
+                    description: Deprecated version of CreationData_CreateOption. Use v1beta20200930.CreationData_CreateOption instead
                     enum:
                     - Attach
                     - Copy
@@ -198,7 +198,7 @@ spec:
                         type: string
                     type: object
                   type:
-                    description: Deprecated version of EncryptionType. Use v1beta20200930.EncryptionType instead
+                    description: Deprecated version of Encryption_Type. Use v1beta20200930.Encryption_Type instead
                     enum:
                     - EncryptionAtRestWithCustomerKey
                     - EncryptionAtRestWithPlatformAndCustomerKeys
@@ -287,13 +287,13 @@ spec:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocationType. Use v1beta20200930.ExtendedLocationType instead
+                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20200930.ExtendedLocation_Type instead
                     enum:
                     - EdgeZone
                     type: string
                 type: object
               hyperVGeneration:
-                description: Deprecated version of DiskPropertiesHyperVGeneration. Use v1beta20200930.DiskPropertiesHyperVGeneration instead
+                description: Deprecated version of DiskProperties_HyperVGeneration. Use v1beta20200930.DiskProperties_HyperVGeneration instead
                 enum:
                 - V1
                 - V2
@@ -303,14 +303,14 @@ spec:
               maxShares:
                 type: integer
               networkAccessPolicy:
-                description: Deprecated version of DiskPropertiesNetworkAccessPolicy. Use v1beta20200930.DiskPropertiesNetworkAccessPolicy instead
+                description: Deprecated version of DiskProperties_NetworkAccessPolicy. Use v1beta20200930.DiskProperties_NetworkAccessPolicy instead
                 enum:
                 - AllowAll
                 - AllowPrivate
                 - DenyAll
                 type: string
               osType:
-                description: Deprecated version of DiskPropertiesOsType. Use v1beta20200930.DiskPropertiesOsType instead
+                description: Deprecated version of DiskProperties_OsType. Use v1beta20200930.DiskProperties_OsType instead
                 enum:
                 - Linux
                 - Windows
@@ -344,11 +344,11 @@ spec:
                 description: Deprecated version of DiskSku. Use v1beta20200930.DiskSku instead
                 properties:
                   name:
-                    description: Deprecated version of DiskSkuName. Use v1beta20200930.DiskSkuName instead
+                    description: Deprecated version of DiskSku_Name. Use v1beta20200930.DiskSku_Name instead
                     enum:
                     - Premium_LRS
-                    - Standard_LRS
                     - StandardSSD_LRS
+                    - Standard_LRS
                     - UltraSSD_LRS
                     type: string
                 type: object
@@ -367,7 +367,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of Disk_Status. Use v1beta20200930.Disk_Status instead
+            description: Deprecated version of Disk_STATUS. Use v1beta20200930.Disk_STATUS instead
             properties:
               burstingEnabled:
                 type: boolean
@@ -407,13 +407,13 @@ spec:
                   type: object
                 type: array
               creationData:
-                description: Deprecated version of CreationData_Status. Use v1beta20200930.CreationData_Status instead
+                description: Deprecated version of CreationData_STATUS. Use v1beta20200930.CreationData_STATUS instead
                 properties:
                   createOption:
-                    description: Deprecated version of CreationDataStatusCreateOption. Use v1beta20200930.CreationDataStatusCreateOption instead
+                    description: Deprecated version of CreationData_CreateOption_STATUS. Use v1beta20200930.CreationData_CreateOption_STATUS instead
                     type: string
                   galleryImageReference:
-                    description: Deprecated version of ImageDiskReference_Status. Use v1beta20200930.ImageDiskReference_Status instead
+                    description: Deprecated version of ImageDiskReference_STATUS. Use v1beta20200930.ImageDiskReference_STATUS instead
                     properties:
                       id:
                         type: string
@@ -421,7 +421,7 @@ spec:
                         type: integer
                     type: object
                   imageReference:
-                    description: Deprecated version of ImageDiskReference_Status. Use v1beta20200930.ImageDiskReference_Status instead
+                    description: Deprecated version of ImageDiskReference_STATUS. Use v1beta20200930.ImageDiskReference_STATUS instead
                     properties:
                       id:
                         type: string
@@ -456,45 +456,45 @@ spec:
               diskSizeGB:
                 type: integer
               diskState:
-                description: Deprecated version of DiskState_Status. Use v1beta20200930.DiskState_Status instead
+                description: Deprecated version of DiskState_STATUS. Use v1beta20200930.DiskState_STATUS instead
                 type: string
               encryption:
-                description: Deprecated version of Encryption_Status. Use v1beta20200930.Encryption_Status instead
+                description: Deprecated version of Encryption_STATUS. Use v1beta20200930.Encryption_STATUS instead
                 properties:
                   diskEncryptionSetId:
                     type: string
                   type:
-                    description: Deprecated version of EncryptionType_Status. Use v1beta20200930.EncryptionType_Status instead
+                    description: Deprecated version of EncryptionType_STATUS. Use v1beta20200930.EncryptionType_STATUS instead
                     type: string
                 type: object
               encryptionSettingsCollection:
-                description: Deprecated version of EncryptionSettingsCollection_Status. Use v1beta20200930.EncryptionSettingsCollection_Status instead
+                description: Deprecated version of EncryptionSettingsCollection_STATUS. Use v1beta20200930.EncryptionSettingsCollection_STATUS instead
                 properties:
                   enabled:
                     type: boolean
                   encryptionSettings:
                     items:
-                      description: Deprecated version of EncryptionSettingsElement_Status. Use v1beta20200930.EncryptionSettingsElement_Status instead
+                      description: Deprecated version of EncryptionSettingsElement_STATUS. Use v1beta20200930.EncryptionSettingsElement_STATUS instead
                       properties:
                         diskEncryptionKey:
-                          description: Deprecated version of KeyVaultAndSecretReference_Status. Use v1beta20200930.KeyVaultAndSecretReference_Status instead
+                          description: Deprecated version of KeyVaultAndSecretReference_STATUS. Use v1beta20200930.KeyVaultAndSecretReference_STATUS instead
                           properties:
                             secretUrl:
                               type: string
                             sourceVault:
-                              description: Deprecated version of SourceVault_Status. Use v1beta20200930.SourceVault_Status instead
+                              description: Deprecated version of SourceVault_STATUS. Use v1beta20200930.SourceVault_STATUS instead
                               properties:
                                 id:
                                   type: string
                               type: object
                           type: object
                         keyEncryptionKey:
-                          description: Deprecated version of KeyVaultAndKeyReference_Status. Use v1beta20200930.KeyVaultAndKeyReference_Status instead
+                          description: Deprecated version of KeyVaultAndKeyReference_STATUS. Use v1beta20200930.KeyVaultAndKeyReference_STATUS instead
                           properties:
                             keyUrl:
                               type: string
                             sourceVault:
-                              description: Deprecated version of SourceVault_Status. Use v1beta20200930.SourceVault_Status instead
+                              description: Deprecated version of SourceVault_STATUS. Use v1beta20200930.SourceVault_STATUS instead
                               properties:
                                 id:
                                   type: string
@@ -506,16 +506,16 @@ spec:
                     type: string
                 type: object
               extendedLocation:
-                description: Deprecated version of ExtendedLocation_Status. Use v1beta20200930.ExtendedLocation_Status instead
+                description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20200930.ExtendedLocation_STATUS instead
                 properties:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocationType_Status. Use v1beta20200930.ExtendedLocationType_Status instead
+                    description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20200930.ExtendedLocationType_STATUS instead
                     type: string
                 type: object
               hyperVGeneration:
-                description: Deprecated version of DiskPropertiesStatusHyperVGeneration. Use v1beta20200930.DiskPropertiesStatusHyperVGeneration instead
+                description: Deprecated version of DiskProperties_HyperVGeneration_STATUS. Use v1beta20200930.DiskProperties_HyperVGeneration_STATUS instead
                 type: string
               id:
                 type: string
@@ -532,15 +532,15 @@ spec:
               name:
                 type: string
               networkAccessPolicy:
-                description: Deprecated version of NetworkAccessPolicy_Status. Use v1beta20200930.NetworkAccessPolicy_Status instead
+                description: Deprecated version of NetworkAccessPolicy_STATUS. Use v1beta20200930.NetworkAccessPolicy_STATUS instead
                 type: string
               osType:
-                description: Deprecated version of DiskPropertiesStatusOsType. Use v1beta20200930.DiskPropertiesStatusOsType instead
+                description: Deprecated version of DiskProperties_OsType_STATUS. Use v1beta20200930.DiskProperties_OsType_STATUS instead
                 type: string
               provisioningState:
                 type: string
               purchasePlan:
-                description: Deprecated version of PurchasePlan_Status. Use v1beta20200930.PurchasePlan_Status instead
+                description: Deprecated version of PurchasePlan_STATUS. Use v1beta20200930.PurchasePlan_STATUS instead
                 properties:
                   name:
                     type: string
@@ -553,17 +553,17 @@ spec:
                 type: object
               shareInfo:
                 items:
-                  description: Deprecated version of ShareInfoElement_Status. Use v1beta20200930.ShareInfoElement_Status instead
+                  description: Deprecated version of ShareInfoElement_STATUS. Use v1beta20200930.ShareInfoElement_STATUS instead
                   properties:
                     vmUri:
                       type: string
                   type: object
                 type: array
               sku:
-                description: Deprecated version of DiskSku_Status. Use v1beta20200930.DiskSku_Status instead
+                description: Deprecated version of DiskSku_STATUS. Use v1beta20200930.DiskSku_STATUS instead
                 properties:
                   name:
-                    description: Deprecated version of DiskSkuStatusName. Use v1beta20200930.DiskSkuStatusName instead
+                    description: Deprecated version of DiskSku_Name_STATUS. Use v1beta20200930.DiskSku_Name_STATUS instead
                     type: string
                   tier:
                     type: string
@@ -617,7 +617,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20200930.Disks_Spec
+            description: Storage version of v1alpha1api20200930.Disk_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -954,7 +954,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20200930.Disk_Status Deprecated version of Disk_Status. Use v1beta20200930.Disk_Status instead
+            description: Storage version of v1alpha1api20200930.Disk_STATUS Deprecated version of Disk_STATUS. Use v1beta20200930.Disk_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -998,7 +998,7 @@ spec:
                   type: object
                 type: array
               creationData:
-                description: Storage version of v1alpha1api20200930.CreationData_Status Deprecated version of CreationData_Status. Use v1beta20200930.CreationData_Status instead
+                description: Storage version of v1alpha1api20200930.CreationData_STATUS Deprecated version of CreationData_STATUS. Use v1beta20200930.CreationData_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1008,7 +1008,7 @@ spec:
                   createOption:
                     type: string
                   galleryImageReference:
-                    description: Storage version of v1alpha1api20200930.ImageDiskReference_Status Deprecated version of ImageDiskReference_Status. Use v1beta20200930.ImageDiskReference_Status instead
+                    description: Storage version of v1alpha1api20200930.ImageDiskReference_STATUS Deprecated version of ImageDiskReference_STATUS. Use v1beta20200930.ImageDiskReference_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1021,7 +1021,7 @@ spec:
                         type: integer
                     type: object
                   imageReference:
-                    description: Storage version of v1alpha1api20200930.ImageDiskReference_Status Deprecated version of ImageDiskReference_Status. Use v1beta20200930.ImageDiskReference_Status instead
+                    description: Storage version of v1alpha1api20200930.ImageDiskReference_STATUS Deprecated version of ImageDiskReference_STATUS. Use v1beta20200930.ImageDiskReference_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1063,7 +1063,7 @@ spec:
               diskState:
                 type: string
               encryption:
-                description: Storage version of v1alpha1api20200930.Encryption_Status Deprecated version of Encryption_Status. Use v1beta20200930.Encryption_Status instead
+                description: Storage version of v1alpha1api20200930.Encryption_STATUS Deprecated version of Encryption_STATUS. Use v1beta20200930.Encryption_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1076,7 +1076,7 @@ spec:
                     type: string
                 type: object
               encryptionSettingsCollection:
-                description: Storage version of v1alpha1api20200930.EncryptionSettingsCollection_Status Deprecated version of EncryptionSettingsCollection_Status. Use v1beta20200930.EncryptionSettingsCollection_Status instead
+                description: Storage version of v1alpha1api20200930.EncryptionSettingsCollection_STATUS Deprecated version of EncryptionSettingsCollection_STATUS. Use v1beta20200930.EncryptionSettingsCollection_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1087,7 +1087,7 @@ spec:
                     type: boolean
                   encryptionSettings:
                     items:
-                      description: Storage version of v1alpha1api20200930.EncryptionSettingsElement_Status Deprecated version of EncryptionSettingsElement_Status. Use v1beta20200930.EncryptionSettingsElement_Status instead
+                      description: Storage version of v1alpha1api20200930.EncryptionSettingsElement_STATUS Deprecated version of EncryptionSettingsElement_STATUS. Use v1beta20200930.EncryptionSettingsElement_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1095,7 +1095,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         diskEncryptionKey:
-                          description: Storage version of v1alpha1api20200930.KeyVaultAndSecretReference_Status Deprecated version of KeyVaultAndSecretReference_Status. Use v1beta20200930.KeyVaultAndSecretReference_Status instead
+                          description: Storage version of v1alpha1api20200930.KeyVaultAndSecretReference_STATUS Deprecated version of KeyVaultAndSecretReference_STATUS. Use v1beta20200930.KeyVaultAndSecretReference_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1105,7 +1105,7 @@ spec:
                             secretUrl:
                               type: string
                             sourceVault:
-                              description: Storage version of v1alpha1api20200930.SourceVault_Status Deprecated version of SourceVault_Status. Use v1beta20200930.SourceVault_Status instead
+                              description: Storage version of v1alpha1api20200930.SourceVault_STATUS Deprecated version of SourceVault_STATUS. Use v1beta20200930.SourceVault_STATUS instead
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1117,7 +1117,7 @@ spec:
                               type: object
                           type: object
                         keyEncryptionKey:
-                          description: Storage version of v1alpha1api20200930.KeyVaultAndKeyReference_Status Deprecated version of KeyVaultAndKeyReference_Status. Use v1beta20200930.KeyVaultAndKeyReference_Status instead
+                          description: Storage version of v1alpha1api20200930.KeyVaultAndKeyReference_STATUS Deprecated version of KeyVaultAndKeyReference_STATUS. Use v1beta20200930.KeyVaultAndKeyReference_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1127,7 +1127,7 @@ spec:
                             keyUrl:
                               type: string
                             sourceVault:
-                              description: Storage version of v1alpha1api20200930.SourceVault_Status Deprecated version of SourceVault_Status. Use v1beta20200930.SourceVault_Status instead
+                              description: Storage version of v1alpha1api20200930.SourceVault_STATUS Deprecated version of SourceVault_STATUS. Use v1beta20200930.SourceVault_STATUS instead
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1144,7 +1144,7 @@ spec:
                     type: string
                 type: object
               extendedLocation:
-                description: Storage version of v1alpha1api20200930.ExtendedLocation_Status Deprecated version of ExtendedLocation_Status. Use v1beta20200930.ExtendedLocation_Status instead
+                description: Storage version of v1alpha1api20200930.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20200930.ExtendedLocation_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1179,7 +1179,7 @@ spec:
               provisioningState:
                 type: string
               purchasePlan:
-                description: Storage version of v1alpha1api20200930.PurchasePlan_Status Deprecated version of PurchasePlan_Status. Use v1beta20200930.PurchasePlan_Status instead
+                description: Storage version of v1alpha1api20200930.PurchasePlan_STATUS Deprecated version of PurchasePlan_STATUS. Use v1beta20200930.PurchasePlan_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1197,7 +1197,7 @@ spec:
                 type: object
               shareInfo:
                 items:
-                  description: Storage version of v1alpha1api20200930.ShareInfoElement_Status Deprecated version of ShareInfoElement_Status. Use v1beta20200930.ShareInfoElement_Status instead
+                  description: Storage version of v1alpha1api20200930.ShareInfoElement_STATUS Deprecated version of ShareInfoElement_STATUS. Use v1beta20200930.ShareInfoElement_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1209,7 +1209,7 @@ spec:
                   type: object
                 type: array
               sku:
-                description: Storage version of v1alpha1api20200930.DiskSku_Status Deprecated version of DiskSku_Status. Use v1beta20200930.DiskSku_Status instead
+                description: Storage version of v1alpha1api20200930.DiskSku_STATUS Deprecated version of DiskSku_STATUS. Use v1beta20200930.DiskSku_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1587,8 +1587,8 @@ spec:
                     description: 'Name: The sku name.'
                     enum:
                     - Premium_LRS
-                    - Standard_LRS
                     - StandardSSD_LRS
+                    - Standard_LRS
                     - UltraSSD_LRS
                     type: string
                 type: object
@@ -1901,7 +1901,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20200930.Disks_Spec
+            description: Storage version of v1beta20200930.Disk_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2238,7 +2238,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20200930.Disk_Status
+            description: Storage version of v1beta20200930.Disk_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2282,7 +2282,7 @@ spec:
                   type: object
                 type: array
               creationData:
-                description: Storage version of v1beta20200930.CreationData_Status
+                description: Storage version of v1beta20200930.CreationData_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2292,7 +2292,7 @@ spec:
                   createOption:
                     type: string
                   galleryImageReference:
-                    description: Storage version of v1beta20200930.ImageDiskReference_Status
+                    description: Storage version of v1beta20200930.ImageDiskReference_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2305,7 +2305,7 @@ spec:
                         type: integer
                     type: object
                   imageReference:
-                    description: Storage version of v1beta20200930.ImageDiskReference_Status
+                    description: Storage version of v1beta20200930.ImageDiskReference_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2347,7 +2347,7 @@ spec:
               diskState:
                 type: string
               encryption:
-                description: Storage version of v1beta20200930.Encryption_Status
+                description: Storage version of v1beta20200930.Encryption_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2360,7 +2360,7 @@ spec:
                     type: string
                 type: object
               encryptionSettingsCollection:
-                description: Storage version of v1beta20200930.EncryptionSettingsCollection_Status
+                description: Storage version of v1beta20200930.EncryptionSettingsCollection_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2371,7 +2371,7 @@ spec:
                     type: boolean
                   encryptionSettings:
                     items:
-                      description: Storage version of v1beta20200930.EncryptionSettingsElement_Status
+                      description: Storage version of v1beta20200930.EncryptionSettingsElement_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2379,7 +2379,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         diskEncryptionKey:
-                          description: Storage version of v1beta20200930.KeyVaultAndSecretReference_Status
+                          description: Storage version of v1beta20200930.KeyVaultAndSecretReference_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2389,7 +2389,7 @@ spec:
                             secretUrl:
                               type: string
                             sourceVault:
-                              description: Storage version of v1beta20200930.SourceVault_Status
+                              description: Storage version of v1beta20200930.SourceVault_STATUS
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2401,7 +2401,7 @@ spec:
                               type: object
                           type: object
                         keyEncryptionKey:
-                          description: Storage version of v1beta20200930.KeyVaultAndKeyReference_Status
+                          description: Storage version of v1beta20200930.KeyVaultAndKeyReference_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2411,7 +2411,7 @@ spec:
                             keyUrl:
                               type: string
                             sourceVault:
-                              description: Storage version of v1beta20200930.SourceVault_Status
+                              description: Storage version of v1beta20200930.SourceVault_STATUS
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2428,7 +2428,7 @@ spec:
                     type: string
                 type: object
               extendedLocation:
-                description: Storage version of v1beta20200930.ExtendedLocation_Status
+                description: Storage version of v1beta20200930.ExtendedLocation_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2463,7 +2463,7 @@ spec:
               provisioningState:
                 type: string
               purchasePlan:
-                description: Storage version of v1beta20200930.PurchasePlan_Status
+                description: Storage version of v1beta20200930.PurchasePlan_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2481,7 +2481,7 @@ spec:
                 type: object
               shareInfo:
                 items:
-                  description: Storage version of v1beta20200930.ShareInfoElement_Status
+                  description: Storage version of v1beta20200930.ShareInfoElement_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2493,7 +2493,7 @@ spec:
                   type: object
                 type: array
               sku:
-                description: Storage version of v1beta20200930.DiskSku_Status
+                description: Storage version of v1beta20200930.DiskSku_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

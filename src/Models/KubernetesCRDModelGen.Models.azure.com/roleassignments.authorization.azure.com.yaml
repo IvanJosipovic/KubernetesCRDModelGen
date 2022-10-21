@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: roleassignments.authorization.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -85,8 +85,21 @@ spec:
                 type: object
               principalId:
                 type: string
+              principalIdFromConfig:
+                description: ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.
+                properties:
+                  key:
+                    description: Key is the key in the Kubernetes configmap being referenced
+                    type: string
+                  name:
+                    description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                    type: string
+                required:
+                - key
+                - name
+                type: object
               principalType:
-                description: Deprecated version of RoleAssignmentPropertiesPrincipalType. Use v1beta20200801preview.RoleAssignmentPropertiesPrincipalType instead
+                description: Deprecated version of RoleAssignmentProperties_PrincipalType. Use v1beta20200801preview.RoleAssignmentProperties_PrincipalType instead
                 enum:
                 - ForeignGroup
                 - Group
@@ -116,11 +129,10 @@ spec:
                 type: object
             required:
             - owner
-            - principalId
             - roleDefinitionReference
             type: object
           status:
-            description: Deprecated version of RoleAssignment_Status. Use v1beta20200801preview.RoleAssignment_Status instead
+            description: Deprecated version of RoleAssignment_STATUS. Use v1beta20200801preview.RoleAssignment_STATUS instead
             properties:
               condition:
                 type: string
@@ -176,7 +188,7 @@ spec:
               principalId:
                 type: string
               principalType:
-                description: Deprecated version of RoleAssignmentPropertiesStatusPrincipalType. Use v1beta20200801preview.RoleAssignmentPropertiesStatusPrincipalType instead
+                description: Deprecated version of RoleAssignmentProperties_PrincipalType_STATUS. Use v1beta20200801preview.RoleAssignmentProperties_PrincipalType_STATUS instead
                 type: string
               roleDefinitionId:
                 type: string
@@ -221,7 +233,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20200801preview.RoleAssignments_Spec
+            description: Storage version of v1alpha1api20200801preview.RoleAssignment_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -262,6 +274,19 @@ spec:
                 type: object
               principalId:
                 type: string
+              principalIdFromConfig:
+                description: ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.
+                properties:
+                  key:
+                    description: Key is the key in the Kubernetes configmap being referenced
+                    type: string
+                  name:
+                    description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                    type: string
+                required:
+                - key
+                - name
+                type: object
               principalType:
                 type: string
               roleDefinitionReference:
@@ -290,7 +315,7 @@ spec:
             - roleDefinitionReference
             type: object
           status:
-            description: Storage version of v1alpha1api20200801preview.RoleAssignment_Status Deprecated version of RoleAssignment_Status. Use v1beta20200801preview.RoleAssignment_Status instead
+            description: Storage version of v1alpha1api20200801preview.RoleAssignment_STATUS Deprecated version of RoleAssignment_STATUS. Use v1beta20200801preview.RoleAssignment_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -433,6 +458,19 @@ spec:
               principalId:
                 description: 'PrincipalId: The principal ID.'
                 type: string
+              principalIdFromConfig:
+                description: 'PrincipalIdFromConfig: The principal ID.'
+                properties:
+                  key:
+                    description: Key is the key in the Kubernetes configmap being referenced
+                    type: string
+                  name:
+                    description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                    type: string
+                required:
+                - key
+                - name
+                type: object
               principalType:
                 description: 'PrincipalType: The principal type of the assigned principal ID.'
                 enum:
@@ -465,7 +503,6 @@ spec:
                 type: object
             required:
             - owner
-            - principalId
             - roleDefinitionReference
             type: object
           status:
@@ -583,7 +620,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20200801preview.RoleAssignments_Spec
+            description: Storage version of v1beta20200801preview.RoleAssignment_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -624,6 +661,19 @@ spec:
                 type: object
               principalId:
                 type: string
+              principalIdFromConfig:
+                description: ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.
+                properties:
+                  key:
+                    description: Key is the key in the Kubernetes configmap being referenced
+                    type: string
+                  name:
+                    description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                    type: string
+                required:
+                - key
+                - name
+                type: object
               principalType:
                 type: string
               roleDefinitionReference:
@@ -652,7 +702,7 @@ spec:
             - roleDefinitionReference
             type: object
           status:
-            description: Storage version of v1beta20200801preview.RoleAssignment_Status
+            description: Storage version of v1beta20200801preview.RoleAssignment_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

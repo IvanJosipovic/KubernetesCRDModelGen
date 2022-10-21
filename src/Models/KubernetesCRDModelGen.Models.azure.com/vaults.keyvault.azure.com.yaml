@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: vaults.keyvault.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -569,7 +569,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210401preview.Vaults_Spec
+            description: Storage version of v1beta20210401preview.Vault_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -745,7 +745,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401preview.Vault_Status
+            description: Storage version of v1beta20210401preview.Vault_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -793,7 +793,7 @@ spec:
               name:
                 type: string
               properties:
-                description: Storage version of v1beta20210401preview.VaultProperties_Status
+                description: Storage version of v1beta20210401preview.VaultProperties_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -802,7 +802,7 @@ spec:
                     type: object
                   accessPolicies:
                     items:
-                      description: Storage version of v1beta20210401preview.AccessPolicyEntry_Status
+                      description: Storage version of v1beta20210401preview.AccessPolicyEntry_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -814,7 +814,7 @@ spec:
                         objectId:
                           type: string
                         permissions:
-                          description: Storage version of v1beta20210401preview.Permissions_Status
+                          description: Storage version of v1beta20210401preview.Permissions_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -859,7 +859,7 @@ spec:
                   hsmPoolResourceId:
                     type: string
                   networkAcls:
-                    description: Storage version of v1beta20210401preview.NetworkRuleSet_Status
+                    description: Storage version of v1beta20210401preview.NetworkRuleSet_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -872,7 +872,7 @@ spec:
                         type: string
                       ipRules:
                         items:
-                          description: Storage version of v1beta20210401preview.IPRule_Status
+                          description: Storage version of v1beta20210401preview.IPRule_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -885,7 +885,7 @@ spec:
                         type: array
                       virtualNetworkRules:
                         items:
-                          description: Storage version of v1beta20210401preview.VirtualNetworkRule_Status
+                          description: Storage version of v1beta20210401preview.VirtualNetworkRule_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -901,7 +901,7 @@ spec:
                     type: object
                   privateEndpointConnections:
                     items:
-                      description: Storage version of v1beta20210401preview.PrivateEndpointConnectionItem_Status
+                      description: Storage version of v1beta20210401preview.PrivateEndpointConnectionItem_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -913,7 +913,7 @@ spec:
                         id:
                           type: string
                         privateEndpoint:
-                          description: Storage version of v1beta20210401preview.PrivateEndpoint_Status
+                          description: Storage version of v1beta20210401preview.PrivateEndpoint_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -924,7 +924,7 @@ spec:
                               type: string
                           type: object
                         privateLinkServiceConnectionState:
-                          description: Storage version of v1beta20210401preview.PrivateLinkServiceConnectionState_Status
+                          description: Storage version of v1beta20210401preview.PrivateLinkServiceConnectionState_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -945,7 +945,7 @@ spec:
                   provisioningState:
                     type: string
                   sku:
-                    description: Storage version of v1beta20210401preview.Sku_Status
+                    description: Storage version of v1beta20210401preview.Sku_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -965,7 +965,7 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1beta20210401preview.SystemData_Status
+                description: Storage version of v1beta20210401preview.SystemData_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

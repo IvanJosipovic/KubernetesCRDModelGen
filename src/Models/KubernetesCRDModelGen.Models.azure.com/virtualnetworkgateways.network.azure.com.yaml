@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: virtualnetworkgateways.network.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -121,7 +121,7 @@ spec:
                 - reference
                 type: object
               gatewayType:
-                description: Deprecated version of VirtualNetworkGatewaysSpecPropertiesGatewayType. Use v1beta20201101.VirtualNetworkGatewaysSpecPropertiesGatewayType instead
+                description: Deprecated version of VirtualNetworkGateway_Properties_GatewayType_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_GatewayType_Spec instead
                 enum:
                 - ExpressRoute
                 - HyperNet
@@ -130,12 +130,12 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Deprecated version of VirtualNetworkGateways_Spec_Properties_IpConfigurations. Use v1beta20201101.VirtualNetworkGateways_Spec_Properties_IpConfigurations instead
+                  description: Deprecated version of VirtualNetworkGateway_Properties_IpConfigurations_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_IpConfigurations_Spec instead
                   properties:
                     name:
                       type: string
                     privateIPAllocationMethod:
-                      description: Deprecated version of VirtualNetworkGatewayIPConfigurationPropertiesFormatPrivateIPAllocationMethod. Use v1beta20201101.VirtualNetworkGatewayIPConfigurationPropertiesFormatPrivateIPAllocationMethod instead
+                      description: Deprecated version of VirtualNetworkGatewayIPConfigurationPropertiesFormat_PrivateIPAllocationMethod. Use v1beta20201101.VirtualNetworkGatewayIPConfigurationPropertiesFormat_PrivateIPAllocationMethod instead
                       enum:
                       - Dynamic
                       - Static
@@ -203,7 +203,7 @@ spec:
                 description: Deprecated version of VirtualNetworkGatewaySku. Use v1beta20201101.VirtualNetworkGatewaySku instead
                 properties:
                   name:
-                    description: Deprecated version of VirtualNetworkGatewaySkuName. Use v1beta20201101.VirtualNetworkGatewaySkuName instead
+                    description: Deprecated version of VirtualNetworkGatewaySku_Name. Use v1beta20201101.VirtualNetworkGatewaySku_Name instead
                     enum:
                     - Basic
                     - ErGw1AZ
@@ -224,7 +224,7 @@ spec:
                     - VpnGw5AZ
                     type: string
                   tier:
-                    description: Deprecated version of VirtualNetworkGatewaySkuTier. Use v1beta20201101.VirtualNetworkGatewaySkuTier instead
+                    description: Deprecated version of VirtualNetworkGatewaySku_Tier. Use v1beta20201101.VirtualNetworkGatewaySku_Tier instead
                     enum:
                     - Basic
                     - ErGw1AZ
@@ -272,7 +272,7 @@ spec:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocationType. Use v1beta20201101.ExtendedLocationType instead
+                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20201101.ExtendedLocation_Type instead
                     enum:
                     - EdgeZone
                     type: string
@@ -281,7 +281,7 @@ spec:
                 - type
                 type: object
               vpnClientConfiguration:
-                description: Deprecated version of VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration. Use v1beta20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration instead
+                description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec instead
                 properties:
                   aadAudience:
                     type: string
@@ -309,7 +309,7 @@ spec:
                     type: array
                   vpnAuthenticationTypes:
                     items:
-                      description: Deprecated version of VirtualNetworkGatewaysSpecPropertiesVpnClientConfigurationVpnAuthenticationTypes. Use v1beta20201101.VirtualNetworkGatewaysSpecPropertiesVpnClientConfigurationVpnAuthenticationTypes instead
+                      description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnAuthenticationTypes_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnAuthenticationTypes_Spec instead
                       enum:
                       - AAD
                       - Certificate
@@ -331,7 +331,7 @@ spec:
                       description: Deprecated version of IpsecPolicy. Use v1beta20201101.IpsecPolicy instead
                       properties:
                         dhGroup:
-                          description: Deprecated version of IpsecPolicyDhGroup. Use v1beta20201101.IpsecPolicyDhGroup instead
+                          description: Deprecated version of IpsecPolicy_DhGroup. Use v1beta20201101.IpsecPolicy_DhGroup instead
                           enum:
                           - DHGroup1
                           - DHGroup14
@@ -343,7 +343,7 @@ spec:
                           - None
                           type: string
                         ikeEncryption:
-                          description: Deprecated version of IpsecPolicyIkeEncryption. Use v1beta20201101.IpsecPolicyIkeEncryption instead
+                          description: Deprecated version of IpsecPolicy_IkeEncryption. Use v1beta20201101.IpsecPolicy_IkeEncryption instead
                           enum:
                           - AES128
                           - AES192
@@ -354,7 +354,7 @@ spec:
                           - GCMAES256
                           type: string
                         ikeIntegrity:
-                          description: Deprecated version of IpsecPolicyIkeIntegrity. Use v1beta20201101.IpsecPolicyIkeIntegrity instead
+                          description: Deprecated version of IpsecPolicy_IkeIntegrity. Use v1beta20201101.IpsecPolicy_IkeIntegrity instead
                           enum:
                           - GCMAES128
                           - GCMAES256
@@ -364,7 +364,7 @@ spec:
                           - SHA384
                           type: string
                         ipsecEncryption:
-                          description: Deprecated version of IpsecPolicyIpsecEncryption. Use v1beta20201101.IpsecPolicyIpsecEncryption instead
+                          description: Deprecated version of IpsecPolicy_IpsecEncryption. Use v1beta20201101.IpsecPolicy_IpsecEncryption instead
                           enum:
                           - AES128
                           - AES192
@@ -377,7 +377,7 @@ spec:
                           - None
                           type: string
                         ipsecIntegrity:
-                          description: Deprecated version of IpsecPolicyIpsecIntegrity. Use v1beta20201101.IpsecPolicyIpsecIntegrity instead
+                          description: Deprecated version of IpsecPolicy_IpsecIntegrity. Use v1beta20201101.IpsecPolicy_IpsecIntegrity instead
                           enum:
                           - GCMAES128
                           - GCMAES192
@@ -387,7 +387,7 @@ spec:
                           - SHA256
                           type: string
                         pfsGroup:
-                          description: Deprecated version of IpsecPolicyPfsGroup. Use v1beta20201101.IpsecPolicyPfsGroup instead
+                          description: Deprecated version of IpsecPolicy_PfsGroup. Use v1beta20201101.IpsecPolicy_PfsGroup instead
                           enum:
                           - ECP256
                           - ECP384
@@ -416,7 +416,7 @@ spec:
                     type: array
                   vpnClientProtocols:
                     items:
-                      description: Deprecated version of VirtualNetworkGatewaysSpecPropertiesVpnClientConfigurationVpnClientProtocols. Use v1beta20201101.VirtualNetworkGatewaysSpecPropertiesVpnClientConfigurationVpnClientProtocols instead
+                      description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientProtocols_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientProtocols_Spec instead
                       enum:
                       - IkeV2
                       - OpenVPN
@@ -425,7 +425,7 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Deprecated version of VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRevokedCertificates. Use v1beta20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRevokedCertificates instead
+                      description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec instead
                       properties:
                         name:
                           type: string
@@ -435,7 +435,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Deprecated version of VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRootCertificates. Use v1beta20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRootCertificates instead
+                      description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec instead
                       properties:
                         name:
                           type: string
@@ -447,14 +447,14 @@ spec:
                     type: array
                 type: object
               vpnGatewayGeneration:
-                description: Deprecated version of VirtualNetworkGatewaysSpecPropertiesVpnGatewayGeneration. Use v1beta20201101.VirtualNetworkGatewaysSpecPropertiesVpnGatewayGeneration instead
+                description: Deprecated version of VirtualNetworkGateway_Properties_VpnGatewayGeneration_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnGatewayGeneration_Spec instead
                 enum:
                 - Generation1
                 - Generation2
                 - None
                 type: string
               vpnType:
-                description: Deprecated version of VirtualNetworkGatewaysSpecPropertiesVpnType. Use v1beta20201101.VirtualNetworkGatewaysSpecPropertiesVpnType instead
+                description: Deprecated version of VirtualNetworkGateway_Properties_VpnType_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnType_Spec instead
                 enum:
                 - PolicyBased
                 - RouteBased
@@ -463,12 +463,12 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of VirtualNetworkGateway_Status. Use v1beta20201101.VirtualNetworkGateway_Status instead
+            description: Deprecated version of VirtualNetworkGateway_STATUS. Use v1beta20201101.VirtualNetworkGateway_STATUS instead
             properties:
               activeActive:
                 type: boolean
               bgpSettings:
-                description: Deprecated version of BgpSettings_Status. Use v1beta20201101.BgpSettings_Status instead
+                description: Deprecated version of BgpSettings_STATUS. Use v1beta20201101.BgpSettings_STATUS instead
                 properties:
                   asn:
                     format: int32
@@ -477,7 +477,7 @@ spec:
                     type: string
                   bgpPeeringAddresses:
                     items:
-                      description: Deprecated version of IPConfigurationBgpPeeringAddress_Status. Use v1beta20201101.IPConfigurationBgpPeeringAddress_Status instead
+                      description: Deprecated version of IPConfigurationBgpPeeringAddress_STATUS. Use v1beta20201101.IPConfigurationBgpPeeringAddress_STATUS instead
                       properties:
                         customBgpIpAddresses:
                           items:
@@ -534,7 +534,7 @@ spec:
                   type: object
                 type: array
               customRoutes:
-                description: Deprecated version of AddressSpace_Status. Use v1beta20201101.AddressSpace_Status instead
+                description: Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
                 properties:
                   addressPrefixes:
                     items:
@@ -550,22 +550,22 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                 properties:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocationType_Status. Use v1beta20201101.ExtendedLocationType_Status instead
+                    description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
                     type: string
                 type: object
               gatewayDefaultSite:
-                description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   id:
                     type: string
                 type: object
               gatewayType:
-                description: Deprecated version of VirtualNetworkGatewayPropertiesFormatStatusGatewayType. Use v1beta20201101.VirtualNetworkGatewayPropertiesFormatStatusGatewayType instead
+                description: Deprecated version of VirtualNetworkGatewayPropertiesFormat_GatewayType_STATUS. Use v1beta20201101.VirtualNetworkGatewayPropertiesFormat_GatewayType_STATUS instead
                 type: string
               id:
                 type: string
@@ -573,7 +573,7 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Deprecated version of VirtualNetworkGatewayIPConfiguration_Status. Use v1beta20201101.VirtualNetworkGatewayIPConfiguration_Status instead
+                  description: Deprecated version of VirtualNetworkGatewayIPConfiguration_STATUS. Use v1beta20201101.VirtualNetworkGatewayIPConfiguration_STATUS instead
                   properties:
                     etag:
                       type: string
@@ -584,19 +584,19 @@ spec:
                     privateIPAddress:
                       type: string
                     privateIPAllocationMethod:
-                      description: Deprecated version of IPAllocationMethod_Status. Use v1beta20201101.IPAllocationMethod_Status instead
+                      description: Deprecated version of IPAllocationMethod_STATUS. Use v1beta20201101.IPAllocationMethod_STATUS instead
                       type: string
                     provisioningState:
-                      description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                       type: string
                     publicIPAddress:
-                      description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                      description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                       properties:
                         id:
                           type: string
                       type: object
                     subnet:
-                      description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                      description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                       properties:
                         id:
                           type: string
@@ -608,20 +608,20 @@ spec:
               name:
                 type: string
               provisioningState:
-                description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                 type: string
               resourceGuid:
                 type: string
               sku:
-                description: Deprecated version of VirtualNetworkGatewaySku_Status. Use v1beta20201101.VirtualNetworkGatewaySku_Status instead
+                description: Deprecated version of VirtualNetworkGatewaySku_STATUS. Use v1beta20201101.VirtualNetworkGatewaySku_STATUS instead
                 properties:
                   capacity:
                     type: integer
                   name:
-                    description: Deprecated version of VirtualNetworkGatewaySkuStatusName. Use v1beta20201101.VirtualNetworkGatewaySkuStatusName instead
+                    description: Deprecated version of VirtualNetworkGatewaySku_Name_STATUS. Use v1beta20201101.VirtualNetworkGatewaySku_Name_STATUS instead
                     type: string
                   tier:
-                    description: Deprecated version of VirtualNetworkGatewaySkuStatusTier. Use v1beta20201101.VirtualNetworkGatewaySkuStatusTier instead
+                    description: Deprecated version of VirtualNetworkGatewaySku_Tier_STATUS. Use v1beta20201101.VirtualNetworkGatewaySku_Tier_STATUS instead
                     type: string
                 type: object
               tags:
@@ -633,7 +633,7 @@ spec:
               vNetExtendedLocationResourceId:
                 type: string
               vpnClientConfiguration:
-                description: Deprecated version of VpnClientConfiguration_Status. Use v1beta20201101.VpnClientConfiguration_Status instead
+                description: Deprecated version of VpnClientConfiguration_STATUS. Use v1beta20201101.VpnClientConfiguration_STATUS instead
                 properties:
                   aadAudience:
                     type: string
@@ -647,7 +647,7 @@ spec:
                     type: string
                   radiusServers:
                     items:
-                      description: Deprecated version of RadiusServer_Status. Use v1beta20201101.RadiusServer_Status instead
+                      description: Deprecated version of RadiusServer_STATUS. Use v1beta20201101.RadiusServer_STATUS instead
                       properties:
                         radiusServerAddress:
                           type: string
@@ -659,11 +659,11 @@ spec:
                     type: array
                   vpnAuthenticationTypes:
                     items:
-                      description: Deprecated version of VpnClientConfigurationStatusVpnAuthenticationTypes. Use v1beta20201101.VpnClientConfigurationStatusVpnAuthenticationTypes instead
+                      description: Deprecated version of VpnClientConfiguration_VpnAuthenticationTypes_STATUS. Use v1beta20201101.VpnClientConfiguration_VpnAuthenticationTypes_STATUS instead
                       type: string
                     type: array
                   vpnClientAddressPool:
-                    description: Deprecated version of AddressSpace_Status. Use v1beta20201101.AddressSpace_Status instead
+                    description: Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
                     properties:
                       addressPrefixes:
                         items:
@@ -672,25 +672,25 @@ spec:
                     type: object
                   vpnClientIpsecPolicies:
                     items:
-                      description: Deprecated version of IpsecPolicy_Status. Use v1beta20201101.IpsecPolicy_Status instead
+                      description: Deprecated version of IpsecPolicy_STATUS. Use v1beta20201101.IpsecPolicy_STATUS instead
                       properties:
                         dhGroup:
-                          description: Deprecated version of DhGroup_Status. Use v1beta20201101.DhGroup_Status instead
+                          description: Deprecated version of DhGroup_STATUS. Use v1beta20201101.DhGroup_STATUS instead
                           type: string
                         ikeEncryption:
-                          description: Deprecated version of IkeEncryption_Status. Use v1beta20201101.IkeEncryption_Status instead
+                          description: Deprecated version of IkeEncryption_STATUS. Use v1beta20201101.IkeEncryption_STATUS instead
                           type: string
                         ikeIntegrity:
-                          description: Deprecated version of IkeIntegrity_Status. Use v1beta20201101.IkeIntegrity_Status instead
+                          description: Deprecated version of IkeIntegrity_STATUS. Use v1beta20201101.IkeIntegrity_STATUS instead
                           type: string
                         ipsecEncryption:
-                          description: Deprecated version of IpsecEncryption_Status. Use v1beta20201101.IpsecEncryption_Status instead
+                          description: Deprecated version of IpsecEncryption_STATUS. Use v1beta20201101.IpsecEncryption_STATUS instead
                           type: string
                         ipsecIntegrity:
-                          description: Deprecated version of IpsecIntegrity_Status. Use v1beta20201101.IpsecIntegrity_Status instead
+                          description: Deprecated version of IpsecIntegrity_STATUS. Use v1beta20201101.IpsecIntegrity_STATUS instead
                           type: string
                         pfsGroup:
-                          description: Deprecated version of PfsGroup_Status. Use v1beta20201101.PfsGroup_Status instead
+                          description: Deprecated version of PfsGroup_STATUS. Use v1beta20201101.PfsGroup_STATUS instead
                           type: string
                         saDataSizeKilobytes:
                           type: integer
@@ -700,12 +700,12 @@ spec:
                     type: array
                   vpnClientProtocols:
                     items:
-                      description: Deprecated version of VpnClientConfigurationStatusVpnClientProtocols. Use v1beta20201101.VpnClientConfigurationStatusVpnClientProtocols instead
+                      description: Deprecated version of VpnClientConfiguration_VpnClientProtocols_STATUS. Use v1beta20201101.VpnClientConfiguration_VpnClientProtocols_STATUS instead
                       type: string
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Deprecated version of VpnClientRevokedCertificate_Status. Use v1beta20201101.VpnClientRevokedCertificate_Status instead
+                      description: Deprecated version of VpnClientRevokedCertificate_STATUS. Use v1beta20201101.VpnClientRevokedCertificate_STATUS instead
                       properties:
                         etag:
                           type: string
@@ -714,7 +714,7 @@ spec:
                         name:
                           type: string
                         provisioningState:
-                          description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                          description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                           type: string
                         thumbprint:
                           type: string
@@ -722,7 +722,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Deprecated version of VpnClientRootCertificate_Status. Use v1beta20201101.VpnClientRootCertificate_Status instead
+                      description: Deprecated version of VpnClientRootCertificate_STATUS. Use v1beta20201101.VpnClientRootCertificate_STATUS instead
                       properties:
                         etag:
                           type: string
@@ -731,7 +731,7 @@ spec:
                         name:
                           type: string
                         provisioningState:
-                          description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                          description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                           type: string
                         publicCertData:
                           type: string
@@ -739,10 +739,10 @@ spec:
                     type: array
                 type: object
               vpnGatewayGeneration:
-                description: Deprecated version of VirtualNetworkGatewayPropertiesFormatStatusVpnGatewayGeneration. Use v1beta20201101.VirtualNetworkGatewayPropertiesFormatStatusVpnGatewayGeneration instead
+                description: Deprecated version of VirtualNetworkGatewayPropertiesFormat_VpnGatewayGeneration_STATUS. Use v1beta20201101.VirtualNetworkGatewayPropertiesFormat_VpnGatewayGeneration_STATUS instead
                 type: string
               vpnType:
-                description: Deprecated version of VirtualNetworkGatewayPropertiesFormatStatusVpnType. Use v1beta20201101.VirtualNetworkGatewayPropertiesFormatStatusVpnType instead
+                description: Deprecated version of VirtualNetworkGatewayPropertiesFormat_VpnType_STATUS. Use v1beta20201101.VirtualNetworkGatewayPropertiesFormat_VpnType_STATUS instead
                 type: string
             type: object
         type: object
@@ -777,7 +777,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20201101.VirtualNetworkGateways_Spec
+            description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -873,7 +873,7 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1alpha1api20201101.VirtualNetworkGateways_Spec_Properties_IpConfigurations Deprecated version of VirtualNetworkGateways_Spec_Properties_IpConfigurations. Use v1beta20201101.VirtualNetworkGateways_Spec_Properties_IpConfigurations instead
+                  description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Properties_IpConfigurations_Spec Deprecated version of VirtualNetworkGateway_Properties_IpConfigurations_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_IpConfigurations_Spec instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1003,7 +1003,7 @@ spec:
                     type: string
                 type: object
               vpnClientConfiguration:
-                description: Storage version of v1alpha1api20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration Deprecated version of VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration. Use v1beta20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration instead
+                description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1087,7 +1087,7 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Storage version of v1alpha1api20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRevokedCertificates Deprecated version of VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRevokedCertificates. Use v1beta20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRevokedCertificates instead
+                      description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1102,7 +1102,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Storage version of v1alpha1api20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRootCertificates Deprecated version of VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRootCertificates. Use v1beta20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRootCertificates instead
+                      description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1124,7 +1124,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Status Deprecated version of VirtualNetworkGateway_Status. Use v1beta20201101.VirtualNetworkGateway_Status instead
+            description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_STATUS Deprecated version of VirtualNetworkGateway_STATUS. Use v1beta20201101.VirtualNetworkGateway_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1134,7 +1134,7 @@ spec:
               activeActive:
                 type: boolean
               bgpSettings:
-                description: Storage version of v1alpha1api20201101.BgpSettings_Status Deprecated version of BgpSettings_Status. Use v1beta20201101.BgpSettings_Status instead
+                description: Storage version of v1alpha1api20201101.BgpSettings_STATUS Deprecated version of BgpSettings_STATUS. Use v1beta20201101.BgpSettings_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1148,7 +1148,7 @@ spec:
                     type: string
                   bgpPeeringAddresses:
                     items:
-                      description: Storage version of v1alpha1api20201101.IPConfigurationBgpPeeringAddress_Status Deprecated version of IPConfigurationBgpPeeringAddress_Status. Use v1beta20201101.IPConfigurationBgpPeeringAddress_Status instead
+                      description: Storage version of v1alpha1api20201101.IPConfigurationBgpPeeringAddress_STATUS Deprecated version of IPConfigurationBgpPeeringAddress_STATUS. Use v1beta20201101.IPConfigurationBgpPeeringAddress_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1209,7 +1209,7 @@ spec:
                   type: object
                 type: array
               customRoutes:
-                description: Storage version of v1alpha1api20201101.AddressSpace_Status Deprecated version of AddressSpace_Status. Use v1beta20201101.AddressSpace_Status instead
+                description: Storage version of v1alpha1api20201101.AddressSpace_STATUS Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1230,7 +1230,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1alpha1api20201101.ExtendedLocation_Status Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1243,7 +1243,7 @@ spec:
                     type: string
                 type: object
               gatewayDefaultSite:
-                description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1261,7 +1261,7 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1alpha1api20201101.VirtualNetworkGatewayIPConfiguration_Status Deprecated version of VirtualNetworkGatewayIPConfiguration_Status. Use v1beta20201101.VirtualNetworkGatewayIPConfiguration_Status instead
+                  description: Storage version of v1alpha1api20201101.VirtualNetworkGatewayIPConfiguration_STATUS Deprecated version of VirtualNetworkGatewayIPConfiguration_STATUS. Use v1beta20201101.VirtualNetworkGatewayIPConfiguration_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1281,7 +1281,7 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                      description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1292,7 +1292,7 @@ spec:
                           type: string
                       type: object
                     subnet:
-                      description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                      description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1313,7 +1313,7 @@ spec:
               resourceGuid:
                 type: string
               sku:
-                description: Storage version of v1alpha1api20201101.VirtualNetworkGatewaySku_Status Deprecated version of VirtualNetworkGatewaySku_Status. Use v1beta20201101.VirtualNetworkGatewaySku_Status instead
+                description: Storage version of v1alpha1api20201101.VirtualNetworkGatewaySku_STATUS Deprecated version of VirtualNetworkGatewaySku_STATUS. Use v1beta20201101.VirtualNetworkGatewaySku_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1336,7 +1336,7 @@ spec:
               vNetExtendedLocationResourceId:
                 type: string
               vpnClientConfiguration:
-                description: Storage version of v1alpha1api20201101.VpnClientConfiguration_Status Deprecated version of VpnClientConfiguration_Status. Use v1beta20201101.VpnClientConfiguration_Status instead
+                description: Storage version of v1alpha1api20201101.VpnClientConfiguration_STATUS Deprecated version of VpnClientConfiguration_STATUS. Use v1beta20201101.VpnClientConfiguration_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1355,7 +1355,7 @@ spec:
                     type: string
                   radiusServers:
                     items:
-                      description: Storage version of v1alpha1api20201101.RadiusServer_Status Deprecated version of RadiusServer_Status. Use v1beta20201101.RadiusServer_Status instead
+                      description: Storage version of v1alpha1api20201101.RadiusServer_STATUS Deprecated version of RadiusServer_STATUS. Use v1beta20201101.RadiusServer_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1375,7 +1375,7 @@ spec:
                       type: string
                     type: array
                   vpnClientAddressPool:
-                    description: Storage version of v1alpha1api20201101.AddressSpace_Status Deprecated version of AddressSpace_Status. Use v1beta20201101.AddressSpace_Status instead
+                    description: Storage version of v1alpha1api20201101.AddressSpace_STATUS Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1389,7 +1389,7 @@ spec:
                     type: object
                   vpnClientIpsecPolicies:
                     items:
-                      description: Storage version of v1alpha1api20201101.IpsecPolicy_Status Deprecated version of IpsecPolicy_Status. Use v1beta20201101.IpsecPolicy_Status instead
+                      description: Storage version of v1alpha1api20201101.IpsecPolicy_STATUS Deprecated version of IpsecPolicy_STATUS. Use v1beta20201101.IpsecPolicy_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1420,7 +1420,7 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Storage version of v1alpha1api20201101.VpnClientRevokedCertificate_Status Deprecated version of VpnClientRevokedCertificate_Status. Use v1beta20201101.VpnClientRevokedCertificate_Status instead
+                      description: Storage version of v1alpha1api20201101.VpnClientRevokedCertificate_STATUS Deprecated version of VpnClientRevokedCertificate_STATUS. Use v1beta20201101.VpnClientRevokedCertificate_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1441,7 +1441,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Storage version of v1alpha1api20201101.VpnClientRootCertificate_Status Deprecated version of VpnClientRootCertificate_Status. Use v1beta20201101.VpnClientRootCertificate_Status instead
+                      description: Storage version of v1alpha1api20201101.VpnClientRootCertificate_STATUS Deprecated version of VpnClientRootCertificate_STATUS. Use v1beta20201101.VpnClientRootCertificate_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2303,7 +2303,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20201101.VirtualNetworkGateways_Spec
+            description: Storage version of v1beta20201101.VirtualNetworkGateway_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2399,7 +2399,7 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.VirtualNetworkGateways_Spec_Properties_IpConfigurations
+                  description: Storage version of v1beta20201101.VirtualNetworkGateway_Properties_IpConfigurations_Spec
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2529,7 +2529,7 @@ spec:
                     type: string
                 type: object
               vpnClientConfiguration:
-                description: Storage version of v1beta20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration
+                description: Storage version of v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2613,7 +2613,7 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Storage version of v1beta20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRevokedCertificates
+                      description: Storage version of v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2628,7 +2628,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Storage version of v1beta20201101.VirtualNetworkGateways_Spec_Properties_VpnClientConfiguration_VpnClientRootCertificates
+                      description: Storage version of v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2650,7 +2650,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.VirtualNetworkGateway_Status
+            description: Storage version of v1beta20201101.VirtualNetworkGateway_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2660,7 +2660,7 @@ spec:
               activeActive:
                 type: boolean
               bgpSettings:
-                description: Storage version of v1beta20201101.BgpSettings_Status
+                description: Storage version of v1beta20201101.BgpSettings_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2674,7 +2674,7 @@ spec:
                     type: string
                   bgpPeeringAddresses:
                     items:
-                      description: Storage version of v1beta20201101.IPConfigurationBgpPeeringAddress_Status
+                      description: Storage version of v1beta20201101.IPConfigurationBgpPeeringAddress_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2735,7 +2735,7 @@ spec:
                   type: object
                 type: array
               customRoutes:
-                description: Storage version of v1beta20201101.AddressSpace_Status
+                description: Storage version of v1beta20201101.AddressSpace_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2756,7 +2756,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1beta20201101.ExtendedLocation_Status
+                description: Storage version of v1beta20201101.ExtendedLocation_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2769,7 +2769,7 @@ spec:
                     type: string
                 type: object
               gatewayDefaultSite:
-                description: Storage version of v1beta20201101.SubResource_Status
+                description: Storage version of v1beta20201101.SubResource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2787,7 +2787,7 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.VirtualNetworkGatewayIPConfiguration_Status
+                  description: Storage version of v1beta20201101.VirtualNetworkGatewayIPConfiguration_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2807,7 +2807,7 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1beta20201101.SubResource_Status
+                      description: Storage version of v1beta20201101.SubResource_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2818,7 +2818,7 @@ spec:
                           type: string
                       type: object
                     subnet:
-                      description: Storage version of v1beta20201101.SubResource_Status
+                      description: Storage version of v1beta20201101.SubResource_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2839,7 +2839,7 @@ spec:
               resourceGuid:
                 type: string
               sku:
-                description: Storage version of v1beta20201101.VirtualNetworkGatewaySku_Status
+                description: Storage version of v1beta20201101.VirtualNetworkGatewaySku_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2862,7 +2862,7 @@ spec:
               vNetExtendedLocationResourceId:
                 type: string
               vpnClientConfiguration:
-                description: Storage version of v1beta20201101.VpnClientConfiguration_Status
+                description: Storage version of v1beta20201101.VpnClientConfiguration_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2881,7 +2881,7 @@ spec:
                     type: string
                   radiusServers:
                     items:
-                      description: Storage version of v1beta20201101.RadiusServer_Status
+                      description: Storage version of v1beta20201101.RadiusServer_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2901,7 +2901,7 @@ spec:
                       type: string
                     type: array
                   vpnClientAddressPool:
-                    description: Storage version of v1beta20201101.AddressSpace_Status
+                    description: Storage version of v1beta20201101.AddressSpace_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2915,7 +2915,7 @@ spec:
                     type: object
                   vpnClientIpsecPolicies:
                     items:
-                      description: Storage version of v1beta20201101.IpsecPolicy_Status
+                      description: Storage version of v1beta20201101.IpsecPolicy_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2946,7 +2946,7 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Storage version of v1beta20201101.VpnClientRevokedCertificate_Status
+                      description: Storage version of v1beta20201101.VpnClientRevokedCertificate_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2967,7 +2967,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Storage version of v1beta20201101.VpnClientRootCertificate_Status
+                      description: Storage version of v1beta20201101.VpnClientRootCertificate_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:

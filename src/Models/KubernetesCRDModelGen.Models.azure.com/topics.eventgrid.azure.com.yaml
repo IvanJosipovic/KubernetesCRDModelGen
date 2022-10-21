@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: topics.eventgrid.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -75,7 +75,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of Topic_Status. Use v1beta20200601.Topic_Status instead
+            description: Deprecated version of Topic_STATUS. Use v1beta20200601.Topic_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -118,23 +118,23 @@ spec:
                 type: string
               inboundIpRules:
                 items:
-                  description: Deprecated version of InboundIpRule_Status. Use v1beta20200601.InboundIpRule_Status instead
+                  description: Deprecated version of InboundIpRule_STATUS. Use v1beta20200601.InboundIpRule_STATUS instead
                   properties:
                     action:
-                      description: Deprecated version of InboundIpRuleStatusAction. Use v1beta20200601.InboundIpRuleStatusAction instead
+                      description: Deprecated version of InboundIpRule_Action_STATUS. Use v1beta20200601.InboundIpRule_Action_STATUS instead
                       type: string
                     ipMask:
                       type: string
                   type: object
                 type: array
               inputSchema:
-                description: Deprecated version of TopicPropertiesStatusInputSchema. Use v1beta20200601.TopicPropertiesStatusInputSchema instead
+                description: Deprecated version of TopicProperties_InputSchema_STATUS. Use v1beta20200601.TopicProperties_InputSchema_STATUS instead
                 type: string
               inputSchemaMapping:
-                description: Deprecated version of InputSchemaMapping_Status. Use v1beta20200601.InputSchemaMapping_Status instead
+                description: Deprecated version of InputSchemaMapping_STATUS. Use v1beta20200601.InputSchemaMapping_STATUS instead
                 properties:
                   inputSchemaMappingType:
-                    description: Deprecated version of InputSchemaMappingStatusInputSchemaMappingType. Use v1beta20200601.InputSchemaMappingStatusInputSchemaMappingType instead
+                    description: Deprecated version of InputSchemaMapping_InputSchemaMappingType_STATUS. Use v1beta20200601.InputSchemaMapping_InputSchemaMappingType_STATUS instead
                     type: string
                 type: object
               location:
@@ -145,34 +145,34 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_Status_Topic_SubResourceEmbedded. Use v1beta20200601.PrivateEndpointConnection_Status_Topic_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS_Topic_SubResourceEmbedded. Use v1beta20200601.PrivateEndpointConnection_STATUS_Topic_SubResourceEmbedded instead
                   properties:
                     id:
                       type: string
                   type: object
                 type: array
               provisioningState:
-                description: Deprecated version of TopicPropertiesStatusProvisioningState. Use v1beta20200601.TopicPropertiesStatusProvisioningState instead
+                description: Deprecated version of TopicProperties_ProvisioningState_STATUS. Use v1beta20200601.TopicProperties_ProvisioningState_STATUS instead
                 type: string
               publicNetworkAccess:
-                description: Deprecated version of TopicPropertiesStatusPublicNetworkAccess. Use v1beta20200601.TopicPropertiesStatusPublicNetworkAccess instead
+                description: Deprecated version of TopicProperties_PublicNetworkAccess_STATUS. Use v1beta20200601.TopicProperties_PublicNetworkAccess_STATUS instead
                 type: string
               systemData:
-                description: Deprecated version of SystemData_Status. Use v1beta20200601.SystemData_Status instead
+                description: Deprecated version of SystemData_STATUS. Use v1beta20200601.SystemData_STATUS instead
                 properties:
                   createdAt:
                     type: string
                   createdBy:
                     type: string
                   createdByType:
-                    description: Deprecated version of SystemDataStatusCreatedByType. Use v1beta20200601.SystemDataStatusCreatedByType instead
+                    description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1beta20200601.SystemData_CreatedByType_STATUS instead
                     type: string
                   lastModifiedAt:
                     type: string
                   lastModifiedBy:
                     type: string
                   lastModifiedByType:
-                    description: Deprecated version of SystemDataStatusLastModifiedByType. Use v1beta20200601.SystemDataStatusLastModifiedByType instead
+                    description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1beta20200601.SystemData_LastModifiedByType_STATUS instead
                     type: string
                 type: object
               tags:
@@ -214,7 +214,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20200601.Topics_Spec
+            description: Storage version of v1alpha1api20200601.Topic_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -245,7 +245,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20200601.Topic_Status Deprecated version of Topic_Status. Use v1beta20200601.Topic_Status instead
+            description: Storage version of v1alpha1api20200601.Topic_STATUS Deprecated version of Topic_STATUS. Use v1beta20200601.Topic_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -292,7 +292,7 @@ spec:
                 type: string
               inboundIpRules:
                 items:
-                  description: Storage version of v1alpha1api20200601.InboundIpRule_Status Deprecated version of InboundIpRule_Status. Use v1beta20200601.InboundIpRule_Status instead
+                  description: Storage version of v1alpha1api20200601.InboundIpRule_STATUS Deprecated version of InboundIpRule_STATUS. Use v1beta20200601.InboundIpRule_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -308,7 +308,7 @@ spec:
               inputSchema:
                 type: string
               inputSchemaMapping:
-                description: Storage version of v1alpha1api20200601.InputSchemaMapping_Status Deprecated version of InputSchemaMapping_Status. Use v1beta20200601.InputSchemaMapping_Status instead
+                description: Storage version of v1alpha1api20200601.InputSchemaMapping_STATUS Deprecated version of InputSchemaMapping_STATUS. Use v1beta20200601.InputSchemaMapping_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -326,7 +326,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20200601.PrivateEndpointConnection_Status_Topic_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_Status_Topic_SubResourceEmbedded. Use v1beta20200601.PrivateEndpointConnection_Status_Topic_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20200601.PrivateEndpointConnection_STATUS_Topic_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_Topic_SubResourceEmbedded. Use v1beta20200601.PrivateEndpointConnection_STATUS_Topic_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -342,7 +342,7 @@ spec:
               publicNetworkAccess:
                 type: string
               systemData:
-                description: Storage version of v1alpha1api20200601.SystemData_Status Deprecated version of SystemData_Status. Use v1beta20200601.SystemData_Status instead
+                description: Storage version of v1alpha1api20200601.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1beta20200601.SystemData_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -576,7 +576,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20200601.Topics_Spec
+            description: Storage version of v1beta20200601.Topic_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -607,7 +607,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20200601.Topic_Status
+            description: Storage version of v1beta20200601.Topic_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -654,7 +654,7 @@ spec:
                 type: string
               inboundIpRules:
                 items:
-                  description: Storage version of v1beta20200601.InboundIpRule_Status
+                  description: Storage version of v1beta20200601.InboundIpRule_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -670,7 +670,7 @@ spec:
               inputSchema:
                 type: string
               inputSchemaMapping:
-                description: Storage version of v1beta20200601.InputSchemaMapping_Status
+                description: Storage version of v1beta20200601.InputSchemaMapping_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -688,7 +688,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20200601.PrivateEndpointConnection_Status_Topic_SubResourceEmbedded
+                  description: Storage version of v1beta20200601.PrivateEndpointConnection_STATUS_Topic_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -704,7 +704,7 @@ spec:
               publicNetworkAccess:
                 type: string
               systemData:
-                description: Storage version of v1beta20200601.SystemData_Status
+                description: Storage version of v1beta20200601.SystemData_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

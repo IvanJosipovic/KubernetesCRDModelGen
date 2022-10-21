@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: virtualnetworksvirtualnetworkpeerings.network.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -74,7 +74,7 @@ spec:
                 - name
                 type: object
               peeringState:
-                description: Deprecated version of VirtualNetworkPeeringPropertiesFormatPeeringState. Use v1beta20201101.VirtualNetworkPeeringPropertiesFormatPeeringState instead
+                description: Deprecated version of VirtualNetworkPeeringPropertiesFormat_PeeringState. Use v1beta20201101.VirtualNetworkPeeringPropertiesFormat_PeeringState instead
                 enum:
                 - Connected
                 - Disconnected
@@ -132,7 +132,7 @@ spec:
             - remoteVirtualNetwork
             type: object
           status:
-            description: Deprecated version of VirtualNetworkPeering_Status. Use v1beta20201101.VirtualNetworkPeering_Status instead
+            description: Deprecated version of VirtualNetworkPeering_STATUS. Use v1beta20201101.VirtualNetworkPeering_STATUS instead
             properties:
               allowForwardedTraffic:
                 type: boolean
@@ -184,13 +184,13 @@ spec:
               name:
                 type: string
               peeringState:
-                description: Deprecated version of VirtualNetworkPeeringPropertiesFormatStatusPeeringState. Use v1beta20201101.VirtualNetworkPeeringPropertiesFormatStatusPeeringState instead
+                description: Deprecated version of VirtualNetworkPeeringPropertiesFormat_PeeringState_STATUS. Use v1beta20201101.VirtualNetworkPeeringPropertiesFormat_PeeringState_STATUS instead
                 type: string
               provisioningState:
-                description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                 type: string
               remoteAddressSpace:
-                description: Deprecated version of AddressSpace_Status. Use v1beta20201101.AddressSpace_Status instead
+                description: Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
                 properties:
                   addressPrefixes:
                     items:
@@ -198,7 +198,7 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: Deprecated version of VirtualNetworkBgpCommunities_Status. Use v1beta20201101.VirtualNetworkBgpCommunities_Status instead
+                description: Deprecated version of VirtualNetworkBgpCommunities_STATUS. Use v1beta20201101.VirtualNetworkBgpCommunities_STATUS instead
                 properties:
                   regionalCommunity:
                     type: string
@@ -206,7 +206,7 @@ spec:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   id:
                     type: string
@@ -250,7 +250,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20201101.VirtualNetworksVirtualNetworkPeerings_Spec
+            description: Storage version of v1alpha1api20201101.VirtualNetworks_VirtualNetworkPeering_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -343,7 +343,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201101.VirtualNetworkPeering_Status Deprecated version of VirtualNetworkPeering_Status. Use v1beta20201101.VirtualNetworkPeering_Status instead
+            description: Storage version of v1alpha1api20201101.VirtualNetworkPeering_STATUS Deprecated version of VirtualNetworkPeering_STATUS. Use v1beta20201101.VirtualNetworkPeering_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -403,7 +403,7 @@ spec:
               provisioningState:
                 type: string
               remoteAddressSpace:
-                description: Storage version of v1alpha1api20201101.AddressSpace_Status Deprecated version of AddressSpace_Status. Use v1beta20201101.AddressSpace_Status instead
+                description: Storage version of v1alpha1api20201101.AddressSpace_STATUS Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -416,7 +416,7 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: Storage version of v1alpha1api20201101.VirtualNetworkBgpCommunities_Status Deprecated version of VirtualNetworkBgpCommunities_Status. Use v1beta20201101.VirtualNetworkBgpCommunities_Status instead
+                description: Storage version of v1alpha1api20201101.VirtualNetworkBgpCommunities_STATUS Deprecated version of VirtualNetworkBgpCommunities_STATUS. Use v1beta20201101.VirtualNetworkBgpCommunities_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -429,7 +429,7 @@ spec:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -697,7 +697,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20201101.VirtualNetworksVirtualNetworkPeerings_Spec
+            description: Storage version of v1beta20201101.VirtualNetworks_VirtualNetworkPeering_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -790,7 +790,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.VirtualNetworkPeering_Status
+            description: Storage version of v1beta20201101.VirtualNetworkPeering_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -850,7 +850,7 @@ spec:
               provisioningState:
                 type: string
               remoteAddressSpace:
-                description: Storage version of v1beta20201101.AddressSpace_Status
+                description: Storage version of v1beta20201101.AddressSpace_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -863,7 +863,7 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_Status
+                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -876,7 +876,7 @@ spec:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: Storage version of v1beta20201101.SubResource_Status
+                description: Storage version of v1beta20201101.SubResource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

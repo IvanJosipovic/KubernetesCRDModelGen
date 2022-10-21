@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: virtualnetworkssubnets.network.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -64,7 +64,7 @@ spec:
                 type: string
               delegations:
                 items:
-                  description: Deprecated version of VirtualNetworksSubnets_Spec_Properties_Delegations. Use v1beta20201101.VirtualNetworksSubnets_Spec_Properties_Delegations instead
+                  description: Deprecated version of VirtualNetworks_Subnet_Properties_Delegations_Spec. Use v1beta20201101.VirtualNetworks_Subnet_Properties_Delegations_Spec instead
                   properties:
                     name:
                       type: string
@@ -223,7 +223,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of Subnet_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.Subnet_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+            description: Deprecated version of Subnet_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.Subnet_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
             properties:
               addressPrefix:
                 type: string
@@ -233,7 +233,7 @@ spec:
                 type: array
               applicationGatewayIpConfigurations:
                 items:
-                  description: Deprecated version of ApplicationGatewayIPConfiguration_Status. Use v1beta20201101.ApplicationGatewayIPConfiguration_Status instead
+                  description: Deprecated version of ApplicationGatewayIPConfiguration_STATUS. Use v1beta20201101.ApplicationGatewayIPConfiguration_STATUS instead
                   properties:
                     etag:
                       type: string
@@ -242,10 +242,10 @@ spec:
                     name:
                       type: string
                     provisioningState:
-                      description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                       type: string
                     subnet:
-                      description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                      description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                       properties:
                         id:
                           type: string
@@ -291,7 +291,7 @@ spec:
                 type: array
               delegations:
                 items:
-                  description: Deprecated version of Delegation_Status. Use v1beta20201101.Delegation_Status instead
+                  description: Deprecated version of Delegation_STATUS. Use v1beta20201101.Delegation_STATUS instead
                   properties:
                     actions:
                       items:
@@ -304,7 +304,7 @@ spec:
                     name:
                       type: string
                     provisioningState:
-                      description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                       type: string
                     serviceName:
                       type: string
@@ -318,7 +318,7 @@ spec:
                 type: string
               ipAllocations:
                 items:
-                  description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                  description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                   properties:
                     id:
                       type: string
@@ -326,7 +326,7 @@ spec:
                 type: array
               ipConfigurationProfiles:
                 items:
-                  description: Deprecated version of IPConfigurationProfile_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.IPConfigurationProfile_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                  description: Deprecated version of IPConfigurationProfile_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.IPConfigurationProfile_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                   properties:
                     etag:
                       type: string
@@ -335,7 +335,7 @@ spec:
                     name:
                       type: string
                     provisioningState:
-                      description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                       type: string
                     type:
                       type: string
@@ -343,7 +343,7 @@ spec:
                 type: array
               ipConfigurations:
                 items:
-                  description: Deprecated version of IPConfiguration_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.IPConfiguration_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                  description: Deprecated version of IPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.IPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                   properties:
                     etag:
                       type: string
@@ -354,33 +354,33 @@ spec:
                     privateIPAddress:
                       type: string
                     privateIPAllocationMethod:
-                      description: Deprecated version of IPAllocationMethod_Status. Use v1beta20201101.IPAllocationMethod_Status instead
+                      description: Deprecated version of IPAllocationMethod_STATUS. Use v1beta20201101.IPAllocationMethod_STATUS instead
                       type: string
                     provisioningState:
-                      description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                       type: string
                     publicIPAddress:
-                      description: Deprecated version of PublicIPAddress_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                      description: Deprecated version of PublicIPAddress_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                       properties:
                         extendedLocation:
-                          description: Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                          description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                           properties:
                             name:
                               type: string
                             type:
-                              description: Deprecated version of ExtendedLocationType_Status. Use v1beta20201101.ExtendedLocationType_Status instead
+                              description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
                               type: string
                           type: object
                         id:
                           type: string
                         sku:
-                          description: Deprecated version of PublicIPAddressSku_Status. Use v1beta20201101.PublicIPAddressSku_Status instead
+                          description: Deprecated version of PublicIPAddressSku_STATUS. Use v1beta20201101.PublicIPAddressSku_STATUS instead
                           properties:
                             name:
-                              description: Deprecated version of PublicIPAddressSkuStatusName. Use v1beta20201101.PublicIPAddressSkuStatusName instead
+                              description: Deprecated version of PublicIPAddressSku_Name_STATUS. Use v1beta20201101.PublicIPAddressSku_Name_STATUS instead
                               type: string
                             tier:
-                              description: Deprecated version of PublicIPAddressSkuStatusTier. Use v1beta20201101.PublicIPAddressSkuStatusTier instead
+                              description: Deprecated version of PublicIPAddressSku_Tier_STATUS. Use v1beta20201101.PublicIPAddressSku_Tier_STATUS instead
                               type: string
                           type: object
                         zones:
@@ -393,31 +393,31 @@ spec:
               name:
                 type: string
               natGateway:
-                description: Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   id:
                     type: string
                 type: object
               networkSecurityGroup:
-                description: Deprecated version of NetworkSecurityGroup_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.NetworkSecurityGroup_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                description: Deprecated version of NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                 properties:
                   id:
                     type: string
                 type: object
               privateEndpointNetworkPolicies:
-                description: Deprecated version of SubnetPropertiesFormatStatusPrivateEndpointNetworkPolicies. Use v1beta20201101.SubnetPropertiesFormatStatusPrivateEndpointNetworkPolicies instead
+                description: Deprecated version of SubnetPropertiesFormat_PrivateEndpointNetworkPolicies_STATUS. Use v1beta20201101.SubnetPropertiesFormat_PrivateEndpointNetworkPolicies_STATUS instead
                 type: string
               privateEndpoints:
                 items:
-                  description: Deprecated version of PrivateEndpoint_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.PrivateEndpoint_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpoint_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.PrivateEndpoint_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                   properties:
                     extendedLocation:
-                      description: Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                      description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                       properties:
                         name:
                           type: string
                         type:
-                          description: Deprecated version of ExtendedLocationType_Status. Use v1beta20201101.ExtendedLocationType_Status instead
+                          description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
                           type: string
                       type: object
                     id:
@@ -425,16 +425,16 @@ spec:
                   type: object
                 type: array
               privateLinkServiceNetworkPolicies:
-                description: Deprecated version of SubnetPropertiesFormatStatusPrivateLinkServiceNetworkPolicies. Use v1beta20201101.SubnetPropertiesFormatStatusPrivateLinkServiceNetworkPolicies instead
+                description: Deprecated version of SubnetPropertiesFormat_PrivateLinkServiceNetworkPolicies_STATUS. Use v1beta20201101.SubnetPropertiesFormat_PrivateLinkServiceNetworkPolicies_STATUS instead
                 type: string
               provisioningState:
-                description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                 type: string
               purpose:
                 type: string
               resourceNavigationLinks:
                 items:
-                  description: Deprecated version of ResourceNavigationLink_Status. Use v1beta20201101.ResourceNavigationLink_Status instead
+                  description: Deprecated version of ResourceNavigationLink_STATUS. Use v1beta20201101.ResourceNavigationLink_STATUS instead
                   properties:
                     etag:
                       type: string
@@ -447,21 +447,21 @@ spec:
                     name:
                       type: string
                     provisioningState:
-                      description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                       type: string
                     type:
                       type: string
                   type: object
                 type: array
               routeTable:
-                description: Deprecated version of RouteTable_Status_SubResourceEmbedded. Use v1beta20201101.RouteTable_Status_SubResourceEmbedded instead
+                description: Deprecated version of RouteTable_STATUS_SubResourceEmbedded. Use v1beta20201101.RouteTable_STATUS_SubResourceEmbedded instead
                 properties:
                   id:
                     type: string
                 type: object
               serviceAssociationLinks:
                 items:
-                  description: Deprecated version of ServiceAssociationLink_Status. Use v1beta20201101.ServiceAssociationLink_Status instead
+                  description: Deprecated version of ServiceAssociationLink_STATUS. Use v1beta20201101.ServiceAssociationLink_STATUS instead
                   properties:
                     allowDelete:
                       type: boolean
@@ -480,7 +480,7 @@ spec:
                     name:
                       type: string
                     provisioningState:
-                      description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                       type: string
                     type:
                       type: string
@@ -488,7 +488,7 @@ spec:
                 type: array
               serviceEndpointPolicies:
                 items:
-                  description: Deprecated version of ServiceEndpointPolicy_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.ServiceEndpointPolicy_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                  description: Deprecated version of ServiceEndpointPolicy_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.ServiceEndpointPolicy_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                   properties:
                     id:
                       type: string
@@ -498,14 +498,14 @@ spec:
                 type: array
               serviceEndpoints:
                 items:
-                  description: Deprecated version of ServiceEndpointPropertiesFormat_Status. Use v1beta20201101.ServiceEndpointPropertiesFormat_Status instead
+                  description: Deprecated version of ServiceEndpointPropertiesFormat_STATUS. Use v1beta20201101.ServiceEndpointPropertiesFormat_STATUS instead
                   properties:
                     locations:
                       items:
                         type: string
                       type: array
                     provisioningState:
-                      description: Deprecated version of ProvisioningState_Status. Use v1beta20201101.ProvisioningState_Status instead
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
                       type: string
                     service:
                       type: string
@@ -546,7 +546,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20201101.VirtualNetworksSubnets_Spec
+            description: Storage version of v1alpha1api20201101.VirtualNetworks_Subnet_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -564,7 +564,7 @@ spec:
                 type: string
               delegations:
                 items:
-                  description: Storage version of v1alpha1api20201101.VirtualNetworksSubnets_Spec_Properties_Delegations Deprecated version of VirtualNetworksSubnets_Spec_Properties_Delegations. Use v1beta20201101.VirtualNetworksSubnets_Spec_Properties_Delegations instead
+                  description: Storage version of v1alpha1api20201101.VirtualNetworks_Subnet_Properties_Delegations_Spec Deprecated version of VirtualNetworks_Subnet_Properties_Delegations_Spec. Use v1beta20201101.VirtualNetworks_Subnet_Properties_Delegations_Spec instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -757,7 +757,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201101.Subnet_Status_VirtualNetworksSubnet_SubResourceEmbedded Deprecated version of Subnet_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.Subnet_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+            description: Storage version of v1alpha1api20201101.Subnet_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Deprecated version of Subnet_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.Subnet_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -772,7 +772,7 @@ spec:
                 type: array
               applicationGatewayIpConfigurations:
                 items:
-                  description: Storage version of v1alpha1api20201101.ApplicationGatewayIPConfiguration_Status Deprecated version of ApplicationGatewayIPConfiguration_Status. Use v1beta20201101.ApplicationGatewayIPConfiguration_Status instead
+                  description: Storage version of v1alpha1api20201101.ApplicationGatewayIPConfiguration_STATUS Deprecated version of ApplicationGatewayIPConfiguration_STATUS. Use v1beta20201101.ApplicationGatewayIPConfiguration_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -788,7 +788,7 @@ spec:
                     provisioningState:
                       type: string
                     subnet:
-                      description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                      description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -838,7 +838,7 @@ spec:
                 type: array
               delegations:
                 items:
-                  description: Storage version of v1alpha1api20201101.Delegation_Status Deprecated version of Delegation_Status. Use v1beta20201101.Delegation_Status instead
+                  description: Storage version of v1alpha1api20201101.Delegation_STATUS Deprecated version of Delegation_STATUS. Use v1beta20201101.Delegation_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -869,7 +869,7 @@ spec:
                 type: string
               ipAllocations:
                 items:
-                  description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                  description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -882,7 +882,7 @@ spec:
                 type: array
               ipConfigurationProfiles:
                 items:
-                  description: Storage version of v1alpha1api20201101.IPConfigurationProfile_Status_VirtualNetworksSubnet_SubResourceEmbedded Deprecated version of IPConfigurationProfile_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.IPConfigurationProfile_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20201101.IPConfigurationProfile_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Deprecated version of IPConfigurationProfile_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.IPConfigurationProfile_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -903,7 +903,7 @@ spec:
                 type: array
               ipConfigurations:
                 items:
-                  description: Storage version of v1alpha1api20201101.IPConfiguration_Status_VirtualNetworksSubnet_SubResourceEmbedded Deprecated version of IPConfiguration_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.IPConfiguration_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20201101.IPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Deprecated version of IPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.IPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -923,7 +923,7 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1alpha1api20201101.PublicIPAddress_Status_VirtualNetworksSubnet_SubResourceEmbedded Deprecated version of PublicIPAddress_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                      description: Storage version of v1alpha1api20201101.PublicIPAddress_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Deprecated version of PublicIPAddress_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -931,7 +931,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         extendedLocation:
-                          description: Storage version of v1alpha1api20201101.ExtendedLocation_Status Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                          description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -946,7 +946,7 @@ spec:
                         id:
                           type: string
                         sku:
-                          description: Storage version of v1alpha1api20201101.PublicIPAddressSku_Status Deprecated version of PublicIPAddressSku_Status. Use v1beta20201101.PublicIPAddressSku_Status instead
+                          description: Storage version of v1alpha1api20201101.PublicIPAddressSku_STATUS Deprecated version of PublicIPAddressSku_STATUS. Use v1beta20201101.PublicIPAddressSku_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -968,7 +968,7 @@ spec:
               name:
                 type: string
               natGateway:
-                description: Storage version of v1alpha1api20201101.SubResource_Status Deprecated version of SubResource_Status. Use v1beta20201101.SubResource_Status instead
+                description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -979,7 +979,7 @@ spec:
                     type: string
                 type: object
               networkSecurityGroup:
-                description: Storage version of v1alpha1api20201101.NetworkSecurityGroup_Status_VirtualNetworksSubnet_SubResourceEmbedded Deprecated version of NetworkSecurityGroup_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.NetworkSecurityGroup_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                description: Storage version of v1alpha1api20201101.NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Deprecated version of NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -993,7 +993,7 @@ spec:
                 type: string
               privateEndpoints:
                 items:
-                  description: Storage version of v1alpha1api20201101.PrivateEndpoint_Status_VirtualNetworksSubnet_SubResourceEmbedded Deprecated version of PrivateEndpoint_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.PrivateEndpoint_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20201101.PrivateEndpoint_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Deprecated version of PrivateEndpoint_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.PrivateEndpoint_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1001,7 +1001,7 @@ spec:
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
                     extendedLocation:
-                      description: Storage version of v1alpha1api20201101.ExtendedLocation_Status Deprecated version of ExtendedLocation_Status. Use v1beta20201101.ExtendedLocation_Status instead
+                      description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1025,7 +1025,7 @@ spec:
                 type: string
               resourceNavigationLinks:
                 items:
-                  description: Storage version of v1alpha1api20201101.ResourceNavigationLink_Status Deprecated version of ResourceNavigationLink_Status. Use v1beta20201101.ResourceNavigationLink_Status instead
+                  description: Storage version of v1alpha1api20201101.ResourceNavigationLink_STATUS Deprecated version of ResourceNavigationLink_STATUS. Use v1beta20201101.ResourceNavigationLink_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1049,7 +1049,7 @@ spec:
                   type: object
                 type: array
               routeTable:
-                description: Storage version of v1alpha1api20201101.RouteTable_Status_SubResourceEmbedded Deprecated version of RouteTable_Status_SubResourceEmbedded. Use v1beta20201101.RouteTable_Status_SubResourceEmbedded instead
+                description: Storage version of v1alpha1api20201101.RouteTable_STATUS_SubResourceEmbedded Deprecated version of RouteTable_STATUS_SubResourceEmbedded. Use v1beta20201101.RouteTable_STATUS_SubResourceEmbedded instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1061,7 +1061,7 @@ spec:
                 type: object
               serviceAssociationLinks:
                 items:
-                  description: Storage version of v1alpha1api20201101.ServiceAssociationLink_Status Deprecated version of ServiceAssociationLink_Status. Use v1beta20201101.ServiceAssociationLink_Status instead
+                  description: Storage version of v1alpha1api20201101.ServiceAssociationLink_STATUS Deprecated version of ServiceAssociationLink_STATUS. Use v1beta20201101.ServiceAssociationLink_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1092,7 +1092,7 @@ spec:
                 type: array
               serviceEndpointPolicies:
                 items:
-                  description: Storage version of v1alpha1api20201101.ServiceEndpointPolicy_Status_VirtualNetworksSubnet_SubResourceEmbedded Deprecated version of ServiceEndpointPolicy_Status_VirtualNetworksSubnet_SubResourceEmbedded. Use v1beta20201101.ServiceEndpointPolicy_Status_VirtualNetworksSubnet_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20201101.ServiceEndpointPolicy_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded Deprecated version of ServiceEndpointPolicy_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded. Use v1beta20201101.ServiceEndpointPolicy_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1107,7 +1107,7 @@ spec:
                 type: array
               serviceEndpoints:
                 items:
-                  description: Storage version of v1alpha1api20201101.ServiceEndpointPropertiesFormat_Status Deprecated version of ServiceEndpointPropertiesFormat_Status. Use v1beta20201101.ServiceEndpointPropertiesFormat_Status instead
+                  description: Storage version of v1alpha1api20201101.ServiceEndpointPropertiesFormat_STATUS Deprecated version of ServiceEndpointPropertiesFormat_STATUS. Use v1beta20201101.ServiceEndpointPropertiesFormat_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1716,7 +1716,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20201101.VirtualNetworksSubnets_Spec
+            description: Storage version of v1beta20201101.VirtualNetworks_Subnet_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1734,7 +1734,7 @@ spec:
                 type: string
               delegations:
                 items:
-                  description: Storage version of v1beta20201101.VirtualNetworksSubnets_Spec_Properties_Delegations
+                  description: Storage version of v1beta20201101.VirtualNetworks_Subnet_Properties_Delegations_Spec
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1927,7 +1927,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.Subnet_Status_VirtualNetworksSubnet_SubResourceEmbedded
+            description: Storage version of v1beta20201101.Subnet_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1942,7 +1942,7 @@ spec:
                 type: array
               applicationGatewayIpConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.ApplicationGatewayIPConfiguration_Status
+                  description: Storage version of v1beta20201101.ApplicationGatewayIPConfiguration_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1958,7 +1958,7 @@ spec:
                     provisioningState:
                       type: string
                     subnet:
-                      description: Storage version of v1beta20201101.SubResource_Status
+                      description: Storage version of v1beta20201101.SubResource_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2008,7 +2008,7 @@ spec:
                 type: array
               delegations:
                 items:
-                  description: Storage version of v1beta20201101.Delegation_Status
+                  description: Storage version of v1beta20201101.Delegation_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2039,7 +2039,7 @@ spec:
                 type: string
               ipAllocations:
                 items:
-                  description: Storage version of v1beta20201101.SubResource_Status
+                  description: Storage version of v1beta20201101.SubResource_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2052,7 +2052,7 @@ spec:
                 type: array
               ipConfigurationProfiles:
                 items:
-                  description: Storage version of v1beta20201101.IPConfigurationProfile_Status_VirtualNetworksSubnet_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.IPConfigurationProfile_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2073,7 +2073,7 @@ spec:
                 type: array
               ipConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.IPConfiguration_Status_VirtualNetworksSubnet_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.IPConfiguration_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2093,7 +2093,7 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1beta20201101.PublicIPAddress_Status_VirtualNetworksSubnet_SubResourceEmbedded
+                      description: Storage version of v1beta20201101.PublicIPAddress_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2101,7 +2101,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         extendedLocation:
-                          description: Storage version of v1beta20201101.ExtendedLocation_Status
+                          description: Storage version of v1beta20201101.ExtendedLocation_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2116,7 +2116,7 @@ spec:
                         id:
                           type: string
                         sku:
-                          description: Storage version of v1beta20201101.PublicIPAddressSku_Status
+                          description: Storage version of v1beta20201101.PublicIPAddressSku_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2138,7 +2138,7 @@ spec:
               name:
                 type: string
               natGateway:
-                description: Storage version of v1beta20201101.SubResource_Status
+                description: Storage version of v1beta20201101.SubResource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2149,7 +2149,7 @@ spec:
                     type: string
                 type: object
               networkSecurityGroup:
-                description: Storage version of v1beta20201101.NetworkSecurityGroup_Status_VirtualNetworksSubnet_SubResourceEmbedded
+                description: Storage version of v1beta20201101.NetworkSecurityGroup_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2163,7 +2163,7 @@ spec:
                 type: string
               privateEndpoints:
                 items:
-                  description: Storage version of v1beta20201101.PrivateEndpoint_Status_VirtualNetworksSubnet_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.PrivateEndpoint_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2171,7 +2171,7 @@ spec:
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
                     extendedLocation:
-                      description: Storage version of v1beta20201101.ExtendedLocation_Status
+                      description: Storage version of v1beta20201101.ExtendedLocation_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2195,7 +2195,7 @@ spec:
                 type: string
               resourceNavigationLinks:
                 items:
-                  description: Storage version of v1beta20201101.ResourceNavigationLink_Status
+                  description: Storage version of v1beta20201101.ResourceNavigationLink_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2219,7 +2219,7 @@ spec:
                   type: object
                 type: array
               routeTable:
-                description: Storage version of v1beta20201101.RouteTable_Status_SubResourceEmbedded
+                description: Storage version of v1beta20201101.RouteTable_STATUS_SubResourceEmbedded
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2231,7 +2231,7 @@ spec:
                 type: object
               serviceAssociationLinks:
                 items:
-                  description: Storage version of v1beta20201101.ServiceAssociationLink_Status
+                  description: Storage version of v1beta20201101.ServiceAssociationLink_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2262,7 +2262,7 @@ spec:
                 type: array
               serviceEndpointPolicies:
                 items:
-                  description: Storage version of v1beta20201101.ServiceEndpointPolicy_Status_VirtualNetworksSubnet_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.ServiceEndpointPolicy_STATUS_VirtualNetworks_Subnet_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2277,7 +2277,7 @@ spec:
                 type: array
               serviceEndpoints:
                 items:
-                  description: Storage version of v1beta20201101.ServiceEndpointPropertiesFormat_Status
+                  description: Storage version of v1beta20201101.ServiceEndpointPropertiesFormat_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:

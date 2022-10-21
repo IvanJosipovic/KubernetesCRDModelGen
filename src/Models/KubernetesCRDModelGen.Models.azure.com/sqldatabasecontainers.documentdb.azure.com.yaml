@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: sqldatabasecontainers.documentdb.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -92,7 +92,7 @@ spec:
                       conflictResolutionProcedure:
                         type: string
                       mode:
-                        description: Deprecated version of ConflictResolutionPolicyMode. Use v1beta20210515.ConflictResolutionPolicyMode instead
+                        description: Deprecated version of ConflictResolutionPolicy_Mode. Use v1beta20210515.ConflictResolutionPolicy_Mode instead
                         enum:
                         - Custom
                         - LastWriterWins
@@ -113,7 +113,7 @@ spec:
                             description: Deprecated version of CompositePath. Use v1beta20210515.CompositePath instead
                             properties:
                               order:
-                                description: Deprecated version of CompositePathOrder. Use v1beta20210515.CompositePathOrder instead
+                                description: Deprecated version of CompositePath_Order. Use v1beta20210515.CompositePath_Order instead
                                 enum:
                                 - ascending
                                 - descending
@@ -140,7 +140,7 @@ spec:
                                 description: Deprecated version of Indexes. Use v1beta20210515.Indexes instead
                                 properties:
                                   dataType:
-                                    description: Deprecated version of IndexesDataType. Use v1beta20210515.IndexesDataType instead
+                                    description: Deprecated version of Indexes_DataType. Use v1beta20210515.Indexes_DataType instead
                                     enum:
                                     - LineString
                                     - MultiPolygon
@@ -150,7 +150,7 @@ spec:
                                     - String
                                     type: string
                                   kind:
-                                    description: Deprecated version of IndexesKind. Use v1beta20210515.IndexesKind instead
+                                    description: Deprecated version of Indexes_Kind. Use v1beta20210515.Indexes_Kind instead
                                     enum:
                                     - Hash
                                     - Range
@@ -165,7 +165,7 @@ spec:
                           type: object
                         type: array
                       indexingMode:
-                        description: Deprecated version of IndexingPolicyIndexingMode. Use v1beta20210515.IndexingPolicyIndexingMode instead
+                        description: Deprecated version of IndexingPolicy_IndexingMode. Use v1beta20210515.IndexingPolicy_IndexingMode instead
                         enum:
                         - consistent
                         - lazy
@@ -179,7 +179,7 @@ spec:
                               type: string
                             types:
                               items:
-                                description: Deprecated version of SpatialSpecTypes. Use v1beta20210515.SpatialSpecTypes instead
+                                description: Deprecated version of SpatialSpec_Types. Use v1beta20210515.SpatialSpec_Types instead
                                 enum:
                                 - LineString
                                 - MultiPolygon
@@ -194,7 +194,7 @@ spec:
                     description: Deprecated version of ContainerPartitionKey. Use v1beta20210515.ContainerPartitionKey instead
                     properties:
                       kind:
-                        description: Deprecated version of ContainerPartitionKeyKind. Use v1beta20210515.ContainerPartitionKeyKind instead
+                        description: Deprecated version of ContainerPartitionKey_Kind. Use v1beta20210515.ContainerPartitionKey_Kind instead
                         enum:
                         - Hash
                         - MultiHash
@@ -235,7 +235,7 @@ spec:
             - resource
             type: object
           status:
-            description: Deprecated version of SqlContainerGetResults_Status. Use v1beta20210515.SqlContainerGetResults_Status instead
+            description: Deprecated version of SqlContainerGetResults_STATUS. Use v1beta20210515.SqlContainerGetResults_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -279,10 +279,10 @@ spec:
               name:
                 type: string
               options:
-                description: Deprecated version of OptionsResource_Status. Use v1beta20210515.OptionsResource_Status instead
+                description: Deprecated version of OptionsResource_STATUS. Use v1beta20210515.OptionsResource_STATUS instead
                 properties:
                   autoscaleSettings:
-                    description: Deprecated version of AutoscaleSettings_Status. Use v1beta20210515.AutoscaleSettings_Status instead
+                    description: Deprecated version of AutoscaleSettings_STATUS. Use v1beta20210515.AutoscaleSettings_STATUS instead
                     properties:
                       maxThroughput:
                         type: integer
@@ -291,7 +291,7 @@ spec:
                     type: integer
                 type: object
               resource:
-                description: Deprecated version of SqlContainerGetProperties_Status_Resource. Use v1beta20210515.SqlContainerGetProperties_Status_Resource instead
+                description: Deprecated version of SqlContainerGetProperties_Resource_STATUS. Use v1beta20210515.SqlContainerGetProperties_Resource_STATUS instead
                 properties:
                   _etag:
                     type: string
@@ -302,14 +302,14 @@ spec:
                   analyticalStorageTtl:
                     type: integer
                   conflictResolutionPolicy:
-                    description: Deprecated version of ConflictResolutionPolicy_Status. Use v1beta20210515.ConflictResolutionPolicy_Status instead
+                    description: Deprecated version of ConflictResolutionPolicy_STATUS. Use v1beta20210515.ConflictResolutionPolicy_STATUS instead
                     properties:
                       conflictResolutionPath:
                         type: string
                       conflictResolutionProcedure:
                         type: string
                       mode:
-                        description: Deprecated version of ConflictResolutionPolicyStatusMode. Use v1beta20210515.ConflictResolutionPolicyStatusMode instead
+                        description: Deprecated version of ConflictResolutionPolicy_Mode_STATUS. Use v1beta20210515.ConflictResolutionPolicy_Mode_STATUS instead
                         type: string
                     type: object
                   defaultTtl:
@@ -317,17 +317,17 @@ spec:
                   id:
                     type: string
                   indexingPolicy:
-                    description: Deprecated version of IndexingPolicy_Status. Use v1beta20210515.IndexingPolicy_Status instead
+                    description: Deprecated version of IndexingPolicy_STATUS. Use v1beta20210515.IndexingPolicy_STATUS instead
                     properties:
                       automatic:
                         type: boolean
                       compositeIndexes:
                         items:
                           items:
-                            description: Deprecated version of CompositePath_Status. Use v1beta20210515.CompositePath_Status instead
+                            description: Deprecated version of CompositePath_STATUS. Use v1beta20210515.CompositePath_STATUS instead
                             properties:
                               order:
-                                description: Deprecated version of CompositePathStatusOrder. Use v1beta20210515.CompositePathStatusOrder instead
+                                description: Deprecated version of CompositePath_Order_STATUS. Use v1beta20210515.CompositePath_Order_STATUS instead
                                 type: string
                               path:
                                 type: string
@@ -336,7 +336,7 @@ spec:
                         type: array
                       excludedPaths:
                         items:
-                          description: Deprecated version of ExcludedPath_Status. Use v1beta20210515.ExcludedPath_Status instead
+                          description: Deprecated version of ExcludedPath_STATUS. Use v1beta20210515.ExcludedPath_STATUS instead
                           properties:
                             path:
                               type: string
@@ -344,17 +344,17 @@ spec:
                         type: array
                       includedPaths:
                         items:
-                          description: Deprecated version of IncludedPath_Status. Use v1beta20210515.IncludedPath_Status instead
+                          description: Deprecated version of IncludedPath_STATUS. Use v1beta20210515.IncludedPath_STATUS instead
                           properties:
                             indexes:
                               items:
-                                description: Deprecated version of Indexes_Status. Use v1beta20210515.Indexes_Status instead
+                                description: Deprecated version of Indexes_STATUS. Use v1beta20210515.Indexes_STATUS instead
                                 properties:
                                   dataType:
-                                    description: Deprecated version of IndexesStatusDataType. Use v1beta20210515.IndexesStatusDataType instead
+                                    description: Deprecated version of Indexes_DataType_STATUS. Use v1beta20210515.Indexes_DataType_STATUS instead
                                     type: string
                                   kind:
-                                    description: Deprecated version of IndexesStatusKind. Use v1beta20210515.IndexesStatusKind instead
+                                    description: Deprecated version of Indexes_Kind_STATUS. Use v1beta20210515.Indexes_Kind_STATUS instead
                                     type: string
                                   precision:
                                     type: integer
@@ -365,27 +365,27 @@ spec:
                           type: object
                         type: array
                       indexingMode:
-                        description: Deprecated version of IndexingPolicyStatusIndexingMode. Use v1beta20210515.IndexingPolicyStatusIndexingMode instead
+                        description: Deprecated version of IndexingPolicy_IndexingMode_STATUS. Use v1beta20210515.IndexingPolicy_IndexingMode_STATUS instead
                         type: string
                       spatialIndexes:
                         items:
-                          description: Deprecated version of SpatialSpec_Status. Use v1beta20210515.SpatialSpec_Status instead
+                          description: Deprecated version of SpatialSpec_STATUS. Use v1beta20210515.SpatialSpec_STATUS instead
                           properties:
                             path:
                               type: string
                             types:
                               items:
-                                description: Deprecated version of SpatialType_Status. Use v1beta20210515.SpatialType_Status instead
+                                description: Deprecated version of SpatialType_STATUS. Use v1beta20210515.SpatialType_STATUS instead
                                 type: string
                               type: array
                           type: object
                         type: array
                     type: object
                   partitionKey:
-                    description: Deprecated version of ContainerPartitionKey_Status. Use v1beta20210515.ContainerPartitionKey_Status instead
+                    description: Deprecated version of ContainerPartitionKey_STATUS. Use v1beta20210515.ContainerPartitionKey_STATUS instead
                     properties:
                       kind:
-                        description: Deprecated version of ContainerPartitionKeyStatusKind. Use v1beta20210515.ContainerPartitionKeyStatusKind instead
+                        description: Deprecated version of ContainerPartitionKey_Kind_STATUS. Use v1beta20210515.ContainerPartitionKey_Kind_STATUS instead
                         type: string
                       paths:
                         items:
@@ -397,11 +397,11 @@ spec:
                         type: integer
                     type: object
                   uniqueKeyPolicy:
-                    description: Deprecated version of UniqueKeyPolicy_Status. Use v1beta20210515.UniqueKeyPolicy_Status instead
+                    description: Deprecated version of UniqueKeyPolicy_STATUS. Use v1beta20210515.UniqueKeyPolicy_STATUS instead
                     properties:
                       uniqueKeys:
                         items:
-                          description: Deprecated version of UniqueKey_Status. Use v1beta20210515.UniqueKey_Status instead
+                          description: Deprecated version of UniqueKey_STATUS. Use v1beta20210515.UniqueKey_STATUS instead
                           properties:
                             paths:
                               items:
@@ -450,7 +450,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210515.DatabaseAccountsSqlDatabasesContainers_Spec
+            description: Storage version of v1alpha1api20210515.DatabaseAccounts_SqlDatabases_Container_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -664,7 +664,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210515.SqlContainerGetResults_Status Deprecated version of SqlContainerGetResults_Status. Use v1beta20210515.SqlContainerGetResults_Status instead
+            description: Storage version of v1alpha1api20210515.SqlContainerGetResults_STATUS Deprecated version of SqlContainerGetResults_STATUS. Use v1beta20210515.SqlContainerGetResults_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -712,7 +712,7 @@ spec:
               name:
                 type: string
               options:
-                description: Storage version of v1alpha1api20210515.OptionsResource_Status Deprecated version of OptionsResource_Status. Use v1beta20210515.OptionsResource_Status instead
+                description: Storage version of v1alpha1api20210515.OptionsResource_STATUS Deprecated version of OptionsResource_STATUS. Use v1beta20210515.OptionsResource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -720,7 +720,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
-                    description: Storage version of v1alpha1api20210515.AutoscaleSettings_Status Deprecated version of AutoscaleSettings_Status. Use v1beta20210515.AutoscaleSettings_Status instead
+                    description: Storage version of v1alpha1api20210515.AutoscaleSettings_STATUS Deprecated version of AutoscaleSettings_STATUS. Use v1beta20210515.AutoscaleSettings_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -734,7 +734,7 @@ spec:
                     type: integer
                 type: object
               resource:
-                description: Storage version of v1alpha1api20210515.SqlContainerGetProperties_Status_Resource Deprecated version of SqlContainerGetProperties_Status_Resource. Use v1beta20210515.SqlContainerGetProperties_Status_Resource instead
+                description: Storage version of v1alpha1api20210515.SqlContainerGetProperties_Resource_STATUS Deprecated version of SqlContainerGetProperties_Resource_STATUS. Use v1beta20210515.SqlContainerGetProperties_Resource_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -750,7 +750,7 @@ spec:
                   analyticalStorageTtl:
                     type: integer
                   conflictResolutionPolicy:
-                    description: Storage version of v1alpha1api20210515.ConflictResolutionPolicy_Status Deprecated version of ConflictResolutionPolicy_Status. Use v1beta20210515.ConflictResolutionPolicy_Status instead
+                    description: Storage version of v1alpha1api20210515.ConflictResolutionPolicy_STATUS Deprecated version of ConflictResolutionPolicy_STATUS. Use v1beta20210515.ConflictResolutionPolicy_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -769,7 +769,7 @@ spec:
                   id:
                     type: string
                   indexingPolicy:
-                    description: Storage version of v1alpha1api20210515.IndexingPolicy_Status Deprecated version of IndexingPolicy_Status. Use v1beta20210515.IndexingPolicy_Status instead
+                    description: Storage version of v1alpha1api20210515.IndexingPolicy_STATUS Deprecated version of IndexingPolicy_STATUS. Use v1beta20210515.IndexingPolicy_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -781,7 +781,7 @@ spec:
                       compositeIndexes:
                         items:
                           items:
-                            description: Storage version of v1alpha1api20210515.CompositePath_Status Deprecated version of CompositePath_Status. Use v1beta20210515.CompositePath_Status instead
+                            description: Storage version of v1alpha1api20210515.CompositePath_STATUS Deprecated version of CompositePath_STATUS. Use v1beta20210515.CompositePath_STATUS instead
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -797,7 +797,7 @@ spec:
                         type: array
                       excludedPaths:
                         items:
-                          description: Storage version of v1alpha1api20210515.ExcludedPath_Status Deprecated version of ExcludedPath_Status. Use v1beta20210515.ExcludedPath_Status instead
+                          description: Storage version of v1alpha1api20210515.ExcludedPath_STATUS Deprecated version of ExcludedPath_STATUS. Use v1beta20210515.ExcludedPath_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -810,7 +810,7 @@ spec:
                         type: array
                       includedPaths:
                         items:
-                          description: Storage version of v1alpha1api20210515.IncludedPath_Status Deprecated version of IncludedPath_Status. Use v1beta20210515.IncludedPath_Status instead
+                          description: Storage version of v1alpha1api20210515.IncludedPath_STATUS Deprecated version of IncludedPath_STATUS. Use v1beta20210515.IncludedPath_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -819,7 +819,7 @@ spec:
                               type: object
                             indexes:
                               items:
-                                description: Storage version of v1alpha1api20210515.Indexes_Status Deprecated version of Indexes_Status. Use v1beta20210515.Indexes_Status instead
+                                description: Storage version of v1alpha1api20210515.Indexes_STATUS Deprecated version of Indexes_STATUS. Use v1beta20210515.Indexes_STATUS instead
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
@@ -842,7 +842,7 @@ spec:
                         type: string
                       spatialIndexes:
                         items:
-                          description: Storage version of v1alpha1api20210515.SpatialSpec_Status Deprecated version of SpatialSpec_Status. Use v1beta20210515.SpatialSpec_Status instead
+                          description: Storage version of v1alpha1api20210515.SpatialSpec_STATUS Deprecated version of SpatialSpec_STATUS. Use v1beta20210515.SpatialSpec_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -859,7 +859,7 @@ spec:
                         type: array
                     type: object
                   partitionKey:
-                    description: Storage version of v1alpha1api20210515.ContainerPartitionKey_Status Deprecated version of ContainerPartitionKey_Status. Use v1beta20210515.ContainerPartitionKey_Status instead
+                    description: Storage version of v1alpha1api20210515.ContainerPartitionKey_STATUS Deprecated version of ContainerPartitionKey_STATUS. Use v1beta20210515.ContainerPartitionKey_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -878,7 +878,7 @@ spec:
                         type: integer
                     type: object
                   uniqueKeyPolicy:
-                    description: Storage version of v1alpha1api20210515.UniqueKeyPolicy_Status Deprecated version of UniqueKeyPolicy_Status. Use v1beta20210515.UniqueKeyPolicy_Status instead
+                    description: Storage version of v1alpha1api20210515.UniqueKeyPolicy_STATUS Deprecated version of UniqueKeyPolicy_STATUS. Use v1beta20210515.UniqueKeyPolicy_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -887,7 +887,7 @@ spec:
                         type: object
                       uniqueKeys:
                         items:
-                          description: Storage version of v1alpha1api20210515.UniqueKey_Status Deprecated version of UniqueKey_Status. Use v1beta20210515.UniqueKey_Status instead
+                          description: Storage version of v1alpha1api20210515.UniqueKey_STATUS Deprecated version of UniqueKey_STATUS. Use v1beta20210515.UniqueKey_STATUS instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1384,7 +1384,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210515.DatabaseAccountsSqlDatabasesContainers_Spec
+            description: Storage version of v1beta20210515.DatabaseAccounts_SqlDatabases_Container_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1598,7 +1598,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210515.SqlContainerGetResults_Status
+            description: Storage version of v1beta20210515.SqlContainerGetResults_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1646,7 +1646,7 @@ spec:
               name:
                 type: string
               options:
-                description: Storage version of v1beta20210515.OptionsResource_Status
+                description: Storage version of v1beta20210515.OptionsResource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1654,7 +1654,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
-                    description: Storage version of v1beta20210515.AutoscaleSettings_Status
+                    description: Storage version of v1beta20210515.AutoscaleSettings_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1668,7 +1668,7 @@ spec:
                     type: integer
                 type: object
               resource:
-                description: Storage version of v1beta20210515.SqlContainerGetProperties_Status_Resource
+                description: Storage version of v1beta20210515.SqlContainerGetProperties_Resource_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1684,7 +1684,7 @@ spec:
                   analyticalStorageTtl:
                     type: integer
                   conflictResolutionPolicy:
-                    description: Storage version of v1beta20210515.ConflictResolutionPolicy_Status
+                    description: Storage version of v1beta20210515.ConflictResolutionPolicy_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1703,7 +1703,7 @@ spec:
                   id:
                     type: string
                   indexingPolicy:
-                    description: Storage version of v1beta20210515.IndexingPolicy_Status
+                    description: Storage version of v1beta20210515.IndexingPolicy_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1715,7 +1715,7 @@ spec:
                       compositeIndexes:
                         items:
                           items:
-                            description: Storage version of v1beta20210515.CompositePath_Status
+                            description: Storage version of v1beta20210515.CompositePath_STATUS
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -1731,7 +1731,7 @@ spec:
                         type: array
                       excludedPaths:
                         items:
-                          description: Storage version of v1beta20210515.ExcludedPath_Status
+                          description: Storage version of v1beta20210515.ExcludedPath_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1744,7 +1744,7 @@ spec:
                         type: array
                       includedPaths:
                         items:
-                          description: Storage version of v1beta20210515.IncludedPath_Status
+                          description: Storage version of v1beta20210515.IncludedPath_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1753,7 +1753,7 @@ spec:
                               type: object
                             indexes:
                               items:
-                                description: Storage version of v1beta20210515.Indexes_Status
+                                description: Storage version of v1beta20210515.Indexes_STATUS
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
@@ -1776,7 +1776,7 @@ spec:
                         type: string
                       spatialIndexes:
                         items:
-                          description: Storage version of v1beta20210515.SpatialSpec_Status
+                          description: Storage version of v1beta20210515.SpatialSpec_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1793,7 +1793,7 @@ spec:
                         type: array
                     type: object
                   partitionKey:
-                    description: Storage version of v1beta20210515.ContainerPartitionKey_Status
+                    description: Storage version of v1beta20210515.ContainerPartitionKey_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1812,7 +1812,7 @@ spec:
                         type: integer
                     type: object
                   uniqueKeyPolicy:
-                    description: Storage version of v1beta20210515.UniqueKeyPolicy_Status
+                    description: Storage version of v1beta20210515.UniqueKeyPolicy_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1821,7 +1821,7 @@ spec:
                         type: object
                       uniqueKeys:
                         items:
-                          description: Storage version of v1beta20210515.UniqueKey_Status
+                          description: Storage version of v1beta20210515.UniqueKey_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:

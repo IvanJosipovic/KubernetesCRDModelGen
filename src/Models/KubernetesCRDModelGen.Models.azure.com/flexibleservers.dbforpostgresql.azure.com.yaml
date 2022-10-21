@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: flexibleservers.dbforpostgresql.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -62,7 +62,7 @@ spec:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -79,14 +79,14 @@ spec:
                   backupRetentionDays:
                     type: integer
                   geoRedundantBackup:
-                    description: Deprecated version of BackupGeoRedundantBackup. Use v1beta20210601.BackupGeoRedundantBackup instead
+                    description: Deprecated version of Backup_GeoRedundantBackup. Use v1beta20210601.Backup_GeoRedundantBackup instead
                     enum:
                     - Disabled
                     - Enabled
                     type: string
                 type: object
               createMode:
-                description: Deprecated version of ServerPropertiesCreateMode. Use v1beta20210601.ServerPropertiesCreateMode instead
+                description: Deprecated version of ServerProperties_CreateMode. Use v1beta20210601.ServerProperties_CreateMode instead
                 enum:
                 - Create
                 - Default
@@ -97,7 +97,7 @@ spec:
                 description: Deprecated version of HighAvailability. Use v1beta20210601.HighAvailability instead
                 properties:
                   mode:
-                    description: Deprecated version of HighAvailabilityMode. Use v1beta20210601.HighAvailabilityMode instead
+                    description: Deprecated version of HighAvailability_Mode. Use v1beta20210601.HighAvailability_Mode instead
                     enum:
                     - Disabled
                     - ZoneRedundant
@@ -170,7 +170,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -195,7 +195,7 @@ spec:
                   name:
                     type: string
                   tier:
-                    description: Deprecated version of SkuTier. Use v1beta20210601.SkuTier instead
+                    description: Deprecated version of Sku_Tier. Use v1beta20210601.Sku_Tier instead
                     enum:
                     - Burstable
                     - GeneralPurpose
@@ -233,31 +233,32 @@ spec:
                   type: string
                 type: object
               version:
-                description: Deprecated version of ServerPropertiesVersion. Use v1beta20210601.ServerPropertiesVersion instead
+                description: Deprecated version of ServerProperties_Version. Use v1beta20210601.ServerProperties_Version instead
                 enum:
                 - 11
                 - 12
                 - 13
+                - 14
                 type: string
             required:
             - owner
             type: object
           status:
-            description: Deprecated version of Server_Status. Use v1beta20210601.Server_Status instead
+            description: Deprecated version of Server_STATUS. Use v1beta20210601.Server_STATUS instead
             properties:
               administratorLogin:
                 type: string
               availabilityZone:
                 type: string
               backup:
-                description: Deprecated version of Backup_Status. Use v1beta20210601.Backup_Status instead
+                description: Deprecated version of Backup_STATUS. Use v1beta20210601.Backup_STATUS instead
                 properties:
                   backupRetentionDays:
                     type: integer
                   earliestRestoreDate:
                     type: string
                   geoRedundantBackup:
-                    description: Deprecated version of BackupStatusGeoRedundantBackup. Use v1beta20210601.BackupStatusGeoRedundantBackup instead
+                    description: Deprecated version of Backup_GeoRedundantBackup_STATUS. Use v1beta20210601.Backup_GeoRedundantBackup_STATUS instead
                     type: string
                 type: object
               conditions:
@@ -296,20 +297,20 @@ spec:
                   type: object
                 type: array
               createMode:
-                description: Deprecated version of ServerPropertiesStatusCreateMode. Use v1beta20210601.ServerPropertiesStatusCreateMode instead
+                description: Deprecated version of ServerProperties_CreateMode_STATUS. Use v1beta20210601.ServerProperties_CreateMode_STATUS instead
                 type: string
               fullyQualifiedDomainName:
                 type: string
               highAvailability:
-                description: Deprecated version of HighAvailability_Status. Use v1beta20210601.HighAvailability_Status instead
+                description: Deprecated version of HighAvailability_STATUS. Use v1beta20210601.HighAvailability_STATUS instead
                 properties:
                   mode:
-                    description: Deprecated version of HighAvailabilityStatusMode. Use v1beta20210601.HighAvailabilityStatusMode instead
+                    description: Deprecated version of HighAvailability_Mode_STATUS. Use v1beta20210601.HighAvailability_Mode_STATUS instead
                     type: string
                   standbyAvailabilityZone:
                     type: string
                   state:
-                    description: Deprecated version of HighAvailabilityStatusState. Use v1beta20210601.HighAvailabilityStatusState instead
+                    description: Deprecated version of HighAvailability_State_STATUS. Use v1beta20210601.HighAvailability_State_STATUS instead
                     type: string
                 type: object
               id:
@@ -317,7 +318,7 @@ spec:
               location:
                 type: string
               maintenanceWindow:
-                description: Deprecated version of MaintenanceWindow_Status. Use v1beta20210601.MaintenanceWindow_Status instead
+                description: Deprecated version of MaintenanceWindow_STATUS. Use v1beta20210601.MaintenanceWindow_STATUS instead
                 properties:
                   customWindow:
                     type: string
@@ -333,54 +334,54 @@ spec:
               name:
                 type: string
               network:
-                description: Deprecated version of Network_Status. Use v1beta20210601.Network_Status instead
+                description: Deprecated version of Network_STATUS. Use v1beta20210601.Network_STATUS instead
                 properties:
                   delegatedSubnetResourceId:
                     type: string
                   privateDnsZoneArmResourceId:
                     type: string
                   publicNetworkAccess:
-                    description: Deprecated version of NetworkStatusPublicNetworkAccess. Use v1beta20210601.NetworkStatusPublicNetworkAccess instead
+                    description: Deprecated version of Network_PublicNetworkAccess_STATUS. Use v1beta20210601.Network_PublicNetworkAccess_STATUS instead
                     type: string
                 type: object
               pointInTimeUTC:
                 type: string
               sku:
-                description: Deprecated version of Sku_Status. Use v1beta20210601.Sku_Status instead
+                description: Deprecated version of Sku_STATUS. Use v1beta20210601.Sku_STATUS instead
                 properties:
                   name:
                     type: string
                   tier:
-                    description: Deprecated version of SkuStatusTier. Use v1beta20210601.SkuStatusTier instead
+                    description: Deprecated version of Sku_Tier_STATUS. Use v1beta20210601.Sku_Tier_STATUS instead
                     type: string
                 type: object
               sourceServerResourceId:
                 type: string
               state:
-                description: Deprecated version of ServerPropertiesStatusState. Use v1beta20210601.ServerPropertiesStatusState instead
+                description: Deprecated version of ServerProperties_State_STATUS. Use v1beta20210601.ServerProperties_State_STATUS instead
                 type: string
               storage:
-                description: Deprecated version of Storage_Status. Use v1beta20210601.Storage_Status instead
+                description: Deprecated version of Storage_STATUS. Use v1beta20210601.Storage_STATUS instead
                 properties:
                   storageSizeGB:
                     type: integer
                 type: object
               systemData:
-                description: Deprecated version of SystemData_Status. Use v1beta20210601.SystemData_Status instead
+                description: Deprecated version of SystemData_STATUS. Use v1beta20210601.SystemData_STATUS instead
                 properties:
                   createdAt:
                     type: string
                   createdBy:
                     type: string
                   createdByType:
-                    description: Deprecated version of SystemDataStatusCreatedByType. Use v1beta20210601.SystemDataStatusCreatedByType instead
+                    description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1beta20210601.SystemData_CreatedByType_STATUS instead
                     type: string
                   lastModifiedAt:
                     type: string
                   lastModifiedBy:
                     type: string
                   lastModifiedByType:
-                    description: Deprecated version of SystemDataStatusLastModifiedByType. Use v1beta20210601.SystemDataStatusLastModifiedByType instead
+                    description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1beta20210601.SystemData_LastModifiedByType_STATUS instead
                     type: string
                 type: object
               tags:
@@ -390,7 +391,7 @@ spec:
               type:
                 type: string
               version:
-                description: Deprecated version of ServerVersion_Status. Use v1beta20210601.ServerVersion_Status instead
+                description: Deprecated version of ServerVersion_STATUS. Use v1beta20210601.ServerVersion_STATUS instead
                 type: string
             type: object
         type: object
@@ -425,7 +426,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210601.FlexibleServers_Spec
+            description: Storage version of v1alpha1api20210601.FlexibleServer_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -441,7 +442,7 @@ spec:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -559,13 +560,13 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       fullyQualifiedDomainName:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -637,7 +638,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210601.Server_Status Deprecated version of Server_Status. Use v1beta20210601.Server_Status instead
+            description: Storage version of v1alpha1api20210601.Server_STATUS Deprecated version of Server_STATUS. Use v1beta20210601.Server_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -649,7 +650,7 @@ spec:
               availabilityZone:
                 type: string
               backup:
-                description: Storage version of v1alpha1api20210601.Backup_Status Deprecated version of Backup_Status. Use v1beta20210601.Backup_Status instead
+                description: Storage version of v1alpha1api20210601.Backup_STATUS Deprecated version of Backup_STATUS. Use v1beta20210601.Backup_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -702,7 +703,7 @@ spec:
               fullyQualifiedDomainName:
                 type: string
               highAvailability:
-                description: Storage version of v1alpha1api20210601.HighAvailability_Status Deprecated version of HighAvailability_Status. Use v1beta20210601.HighAvailability_Status instead
+                description: Storage version of v1alpha1api20210601.HighAvailability_STATUS Deprecated version of HighAvailability_STATUS. Use v1beta20210601.HighAvailability_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -721,7 +722,7 @@ spec:
               location:
                 type: string
               maintenanceWindow:
-                description: Storage version of v1alpha1api20210601.MaintenanceWindow_Status Deprecated version of MaintenanceWindow_Status. Use v1beta20210601.MaintenanceWindow_Status instead
+                description: Storage version of v1alpha1api20210601.MaintenanceWindow_STATUS Deprecated version of MaintenanceWindow_STATUS. Use v1beta20210601.MaintenanceWindow_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -742,7 +743,7 @@ spec:
               name:
                 type: string
               network:
-                description: Storage version of v1alpha1api20210601.Network_Status Deprecated version of Network_Status. Use v1beta20210601.Network_Status instead
+                description: Storage version of v1alpha1api20210601.Network_STATUS Deprecated version of Network_STATUS. Use v1beta20210601.Network_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -759,7 +760,7 @@ spec:
               pointInTimeUTC:
                 type: string
               sku:
-                description: Storage version of v1alpha1api20210601.Sku_Status Deprecated version of Sku_Status. Use v1beta20210601.Sku_Status instead
+                description: Storage version of v1alpha1api20210601.Sku_STATUS Deprecated version of Sku_STATUS. Use v1beta20210601.Sku_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -776,7 +777,7 @@ spec:
               state:
                 type: string
               storage:
-                description: Storage version of v1alpha1api20210601.Storage_Status Deprecated version of Storage_Status. Use v1beta20210601.Storage_Status instead
+                description: Storage version of v1alpha1api20210601.Storage_STATUS Deprecated version of Storage_STATUS. Use v1beta20210601.Storage_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -787,7 +788,7 @@ spec:
                     type: integer
                 type: object
               systemData:
-                description: Storage version of v1alpha1api20210601.SystemData_Status Deprecated version of SystemData_Status. Use v1beta20210601.SystemData_Status instead
+                description: Storage version of v1alpha1api20210601.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1beta20210601.SystemData_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -859,7 +860,7 @@ spec:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -975,7 +976,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1047,6 +1048,7 @@ spec:
                 - 11
                 - 12
                 - 13
+                - 14
                 type: string
             required:
             - owner
@@ -1259,7 +1261,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210601.FlexibleServers_Spec
+            description: Storage version of v1beta20210601.FlexibleServer_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1275,7 +1277,7 @@ spec:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -1393,13 +1395,13 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       fullyQualifiedDomainName:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1471,7 +1473,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210601.Server_Status
+            description: Storage version of v1beta20210601.Server_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1483,7 +1485,7 @@ spec:
               availabilityZone:
                 type: string
               backup:
-                description: Storage version of v1beta20210601.Backup_Status
+                description: Storage version of v1beta20210601.Backup_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1536,7 +1538,7 @@ spec:
               fullyQualifiedDomainName:
                 type: string
               highAvailability:
-                description: Storage version of v1beta20210601.HighAvailability_Status
+                description: Storage version of v1beta20210601.HighAvailability_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1555,7 +1557,7 @@ spec:
               location:
                 type: string
               maintenanceWindow:
-                description: Storage version of v1beta20210601.MaintenanceWindow_Status
+                description: Storage version of v1beta20210601.MaintenanceWindow_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1576,7 +1578,7 @@ spec:
               name:
                 type: string
               network:
-                description: Storage version of v1beta20210601.Network_Status
+                description: Storage version of v1beta20210601.Network_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1593,7 +1595,7 @@ spec:
               pointInTimeUTC:
                 type: string
               sku:
-                description: Storage version of v1beta20210601.Sku_Status
+                description: Storage version of v1beta20210601.Sku_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1610,7 +1612,7 @@ spec:
               state:
                 type: string
               storage:
-                description: Storage version of v1beta20210601.Storage_Status
+                description: Storage version of v1beta20210601.Storage_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1621,7 +1623,7 @@ spec:
                     type: integer
                 type: object
               systemData:
-                description: Storage version of v1beta20210601.SystemData_Status
+                description: Storage version of v1beta20210601.SystemData_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

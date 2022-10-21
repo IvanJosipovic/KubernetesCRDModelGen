@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: batchaccounts.batch.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -86,7 +86,7 @@ spec:
                 description: Deprecated version of EncryptionProperties. Use v1beta20210101.EncryptionProperties instead
                 properties:
                   keySource:
-                    description: Deprecated version of EncryptionPropertiesKeySource. Use v1beta20210101.EncryptionPropertiesKeySource instead
+                    description: Deprecated version of EncryptionProperties_KeySource. Use v1beta20210101.EncryptionProperties_KeySource instead
                     enum:
                     - Microsoft.Batch
                     - Microsoft.KeyVault
@@ -102,7 +102,7 @@ spec:
                 description: Deprecated version of BatchAccountIdentity. Use v1beta20210101.BatchAccountIdentity instead
                 properties:
                   type:
-                    description: Deprecated version of BatchAccountIdentityType. Use v1beta20210101.BatchAccountIdentityType instead
+                    description: Deprecated version of BatchAccountIdentity_Type. Use v1beta20210101.BatchAccountIdentity_Type instead
                     enum:
                     - None
                     - SystemAssigned
@@ -149,13 +149,13 @@ spec:
                 - name
                 type: object
               poolAllocationMode:
-                description: Deprecated version of BatchAccountCreatePropertiesPoolAllocationMode. Use v1beta20210101.BatchAccountCreatePropertiesPoolAllocationMode instead
+                description: Deprecated version of BatchAccountCreateProperties_PoolAllocationMode. Use v1beta20210101.BatchAccountCreateProperties_PoolAllocationMode instead
                 enum:
                 - BatchService
                 - UserSubscription
                 type: string
               publicNetworkAccess:
-                description: Deprecated version of BatchAccountCreatePropertiesPublicNetworkAccess. Use v1beta20210101.BatchAccountCreatePropertiesPublicNetworkAccess instead
+                description: Deprecated version of BatchAccountCreateProperties_PublicNetworkAccess. Use v1beta20210101.BatchAccountCreateProperties_PublicNetworkAccess instead
                 enum:
                 - Disabled
                 - Enabled
@@ -168,14 +168,14 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of BatchAccount_Status. Use v1beta20210101.BatchAccount_Status instead
+            description: Deprecated version of BatchAccount_STATUS. Use v1beta20210101.BatchAccount_STATUS instead
             properties:
               accountEndpoint:
                 type: string
               activeJobAndJobScheduleQuota:
                 type: integer
               autoStorage:
-                description: Deprecated version of AutoStorageProperties_Status. Use v1beta20210101.AutoStorageProperties_Status instead
+                description: Deprecated version of AutoStorageProperties_STATUS. Use v1beta20210101.AutoStorageProperties_STATUS instead
                 properties:
                   lastKeySync:
                     type: string
@@ -221,7 +221,7 @@ spec:
                 type: integer
               dedicatedCoreQuotaPerVMFamily:
                 items:
-                  description: Deprecated version of VirtualMachineFamilyCoreQuota_Status. Use v1beta20210101.VirtualMachineFamilyCoreQuota_Status instead
+                  description: Deprecated version of VirtualMachineFamilyCoreQuota_STATUS. Use v1beta20210101.VirtualMachineFamilyCoreQuota_STATUS instead
                   properties:
                     coreQuota:
                       type: integer
@@ -232,13 +232,13 @@ spec:
               dedicatedCoreQuotaPerVMFamilyEnforced:
                 type: boolean
               encryption:
-                description: Deprecated version of EncryptionProperties_Status. Use v1beta20210101.EncryptionProperties_Status instead
+                description: Deprecated version of EncryptionProperties_STATUS. Use v1beta20210101.EncryptionProperties_STATUS instead
                 properties:
                   keySource:
-                    description: Deprecated version of EncryptionPropertiesStatusKeySource. Use v1beta20210101.EncryptionPropertiesStatusKeySource instead
+                    description: Deprecated version of EncryptionProperties_KeySource_STATUS. Use v1beta20210101.EncryptionProperties_KeySource_STATUS instead
                     type: string
                   keyVaultProperties:
-                    description: Deprecated version of KeyVaultProperties_Status. Use v1beta20210101.KeyVaultProperties_Status instead
+                    description: Deprecated version of KeyVaultProperties_STATUS. Use v1beta20210101.KeyVaultProperties_STATUS instead
                     properties:
                       keyIdentifier:
                         type: string
@@ -247,18 +247,18 @@ spec:
               id:
                 type: string
               identity:
-                description: Deprecated version of BatchAccountIdentity_Status. Use v1beta20210101.BatchAccountIdentity_Status instead
+                description: Deprecated version of BatchAccountIdentity_STATUS. Use v1beta20210101.BatchAccountIdentity_STATUS instead
                 properties:
                   principalId:
                     type: string
                   tenantId:
                     type: string
                   type:
-                    description: Deprecated version of BatchAccountIdentityStatusType. Use v1beta20210101.BatchAccountIdentityStatusType instead
+                    description: Deprecated version of BatchAccountIdentity_Type_STATUS. Use v1beta20210101.BatchAccountIdentity_Type_STATUS instead
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Deprecated version of BatchAccountIdentity_Status_UserAssignedIdentities. Use v1beta20210101.BatchAccountIdentity_Status_UserAssignedIdentities instead
+                      description: Deprecated version of BatchAccountIdentity_UserAssignedIdentities_STATUS. Use v1beta20210101.BatchAccountIdentity_UserAssignedIdentities_STATUS instead
                       properties:
                         clientId:
                           type: string
@@ -268,7 +268,7 @@ spec:
                     type: object
                 type: object
               keyVaultReference:
-                description: Deprecated version of KeyVaultReference_Status. Use v1beta20210101.KeyVaultReference_Status instead
+                description: Deprecated version of KeyVaultReference_STATUS. Use v1beta20210101.KeyVaultReference_STATUS instead
                 properties:
                   id:
                     type: string
@@ -282,13 +282,13 @@ spec:
               name:
                 type: string
               poolAllocationMode:
-                description: Deprecated version of PoolAllocationMode_Status. Use v1beta20210101.PoolAllocationMode_Status instead
+                description: Deprecated version of PoolAllocationMode_STATUS. Use v1beta20210101.PoolAllocationMode_STATUS instead
                 type: string
               poolQuota:
                 type: integer
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_Status. Use v1beta20210101.PrivateEndpointConnection_Status instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210101.PrivateEndpointConnection_STATUS instead
                   properties:
                     etag:
                       type: string
@@ -297,34 +297,34 @@ spec:
                     name:
                       type: string
                     privateEndpoint:
-                      description: Deprecated version of PrivateEndpoint_Status. Use v1beta20210101.PrivateEndpoint_Status instead
+                      description: Deprecated version of PrivateEndpoint_STATUS. Use v1beta20210101.PrivateEndpoint_STATUS instead
                       properties:
                         id:
                           type: string
                       type: object
                     privateLinkServiceConnectionState:
-                      description: Deprecated version of PrivateLinkServiceConnectionState_Status. Use v1beta20210101.PrivateLinkServiceConnectionState_Status instead
+                      description: Deprecated version of PrivateLinkServiceConnectionState_STATUS. Use v1beta20210101.PrivateLinkServiceConnectionState_STATUS instead
                       properties:
                         actionRequired:
                           type: string
                         description:
                           type: string
                         status:
-                          description: Deprecated version of PrivateLinkServiceConnectionStatus_Status. Use v1beta20210101.PrivateLinkServiceConnectionStatus_Status instead
+                          description: Deprecated version of PrivateLinkServiceConnectionStatus_STATUS. Use v1beta20210101.PrivateLinkServiceConnectionStatus_STATUS instead
                           type: string
                       type: object
                     provisioningState:
-                      description: Deprecated version of PrivateEndpointConnectionPropertiesStatusProvisioningState. Use v1beta20210101.PrivateEndpointConnectionPropertiesStatusProvisioningState instead
+                      description: Deprecated version of PrivateEndpointConnectionProperties_ProvisioningState_STATUS. Use v1beta20210101.PrivateEndpointConnectionProperties_ProvisioningState_STATUS instead
                       type: string
                     type:
                       type: string
                   type: object
                 type: array
               provisioningState:
-                description: Deprecated version of BatchAccountPropertiesStatusProvisioningState. Use v1beta20210101.BatchAccountPropertiesStatusProvisioningState instead
+                description: Deprecated version of BatchAccountProperties_ProvisioningState_STATUS. Use v1beta20210101.BatchAccountProperties_ProvisioningState_STATUS instead
                 type: string
               publicNetworkAccess:
-                description: Deprecated version of PublicNetworkAccessType_Status. Use v1beta20210101.PublicNetworkAccessType_Status instead
+                description: Deprecated version of PublicNetworkAccessType_STATUS. Use v1beta20210101.PublicNetworkAccessType_STATUS instead
                 type: string
               tags:
                 additionalProperties:
@@ -365,7 +365,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210101.BatchAccounts_Spec
+            description: Storage version of v1alpha1api20210101.BatchAccount_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -494,7 +494,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210101.BatchAccount_Status Deprecated version of BatchAccount_Status. Use v1beta20210101.BatchAccount_Status instead
+            description: Storage version of v1alpha1api20210101.BatchAccount_STATUS Deprecated version of BatchAccount_STATUS. Use v1beta20210101.BatchAccount_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -506,7 +506,7 @@ spec:
               activeJobAndJobScheduleQuota:
                 type: integer
               autoStorage:
-                description: Storage version of v1alpha1api20210101.AutoStorageProperties_Status Deprecated version of AutoStorageProperties_Status. Use v1beta20210101.AutoStorageProperties_Status instead
+                description: Storage version of v1alpha1api20210101.AutoStorageProperties_STATUS Deprecated version of AutoStorageProperties_STATUS. Use v1beta20210101.AutoStorageProperties_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -556,7 +556,7 @@ spec:
                 type: integer
               dedicatedCoreQuotaPerVMFamily:
                 items:
-                  description: Storage version of v1alpha1api20210101.VirtualMachineFamilyCoreQuota_Status Deprecated version of VirtualMachineFamilyCoreQuota_Status. Use v1beta20210101.VirtualMachineFamilyCoreQuota_Status instead
+                  description: Storage version of v1alpha1api20210101.VirtualMachineFamilyCoreQuota_STATUS Deprecated version of VirtualMachineFamilyCoreQuota_STATUS. Use v1beta20210101.VirtualMachineFamilyCoreQuota_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -572,7 +572,7 @@ spec:
               dedicatedCoreQuotaPerVMFamilyEnforced:
                 type: boolean
               encryption:
-                description: Storage version of v1alpha1api20210101.EncryptionProperties_Status Deprecated version of EncryptionProperties_Status. Use v1beta20210101.EncryptionProperties_Status instead
+                description: Storage version of v1alpha1api20210101.EncryptionProperties_STATUS Deprecated version of EncryptionProperties_STATUS. Use v1beta20210101.EncryptionProperties_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -582,7 +582,7 @@ spec:
                   keySource:
                     type: string
                   keyVaultProperties:
-                    description: Storage version of v1alpha1api20210101.KeyVaultProperties_Status Deprecated version of KeyVaultProperties_Status. Use v1beta20210101.KeyVaultProperties_Status instead
+                    description: Storage version of v1alpha1api20210101.KeyVaultProperties_STATUS Deprecated version of KeyVaultProperties_STATUS. Use v1beta20210101.KeyVaultProperties_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -596,7 +596,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1alpha1api20210101.BatchAccountIdentity_Status Deprecated version of BatchAccountIdentity_Status. Use v1beta20210101.BatchAccountIdentity_Status instead
+                description: Storage version of v1alpha1api20210101.BatchAccountIdentity_STATUS Deprecated version of BatchAccountIdentity_STATUS. Use v1beta20210101.BatchAccountIdentity_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -611,7 +611,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1alpha1api20210101.BatchAccountIdentity_Status_UserAssignedIdentities Deprecated version of BatchAccountIdentity_Status_UserAssignedIdentities. Use v1beta20210101.BatchAccountIdentity_Status_UserAssignedIdentities instead
+                      description: Storage version of v1alpha1api20210101.BatchAccountIdentity_UserAssignedIdentities_STATUS Deprecated version of BatchAccountIdentity_UserAssignedIdentities_STATUS. Use v1beta20210101.BatchAccountIdentity_UserAssignedIdentities_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -626,7 +626,7 @@ spec:
                     type: object
                 type: object
               keyVaultReference:
-                description: Storage version of v1alpha1api20210101.KeyVaultReference_Status Deprecated version of KeyVaultReference_Status. Use v1beta20210101.KeyVaultReference_Status instead
+                description: Storage version of v1alpha1api20210101.KeyVaultReference_STATUS Deprecated version of KeyVaultReference_STATUS. Use v1beta20210101.KeyVaultReference_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -650,7 +650,7 @@ spec:
                 type: integer
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20210101.PrivateEndpointConnection_Status Deprecated version of PrivateEndpointConnection_Status. Use v1beta20210101.PrivateEndpointConnection_Status instead
+                  description: Storage version of v1alpha1api20210101.PrivateEndpointConnection_STATUS Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210101.PrivateEndpointConnection_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -664,7 +664,7 @@ spec:
                     name:
                       type: string
                     privateEndpoint:
-                      description: Storage version of v1alpha1api20210101.PrivateEndpoint_Status Deprecated version of PrivateEndpoint_Status. Use v1beta20210101.PrivateEndpoint_Status instead
+                      description: Storage version of v1alpha1api20210101.PrivateEndpoint_STATUS Deprecated version of PrivateEndpoint_STATUS. Use v1beta20210101.PrivateEndpoint_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -675,7 +675,7 @@ spec:
                           type: string
                       type: object
                     privateLinkServiceConnectionState:
-                      description: Storage version of v1alpha1api20210101.PrivateLinkServiceConnectionState_Status Deprecated version of PrivateLinkServiceConnectionState_Status. Use v1beta20210101.PrivateLinkServiceConnectionState_Status instead
+                      description: Storage version of v1alpha1api20210101.PrivateLinkServiceConnectionState_STATUS Deprecated version of PrivateLinkServiceConnectionState_STATUS. Use v1beta20210101.PrivateLinkServiceConnectionState_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1071,7 +1071,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210101.BatchAccounts_Spec
+            description: Storage version of v1beta20210101.BatchAccount_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1200,7 +1200,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210101.BatchAccount_Status
+            description: Storage version of v1beta20210101.BatchAccount_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1212,7 +1212,7 @@ spec:
               activeJobAndJobScheduleQuota:
                 type: integer
               autoStorage:
-                description: Storage version of v1beta20210101.AutoStorageProperties_Status
+                description: Storage version of v1beta20210101.AutoStorageProperties_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1262,7 +1262,7 @@ spec:
                 type: integer
               dedicatedCoreQuotaPerVMFamily:
                 items:
-                  description: Storage version of v1beta20210101.VirtualMachineFamilyCoreQuota_Status
+                  description: Storage version of v1beta20210101.VirtualMachineFamilyCoreQuota_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1278,7 +1278,7 @@ spec:
               dedicatedCoreQuotaPerVMFamilyEnforced:
                 type: boolean
               encryption:
-                description: Storage version of v1beta20210101.EncryptionProperties_Status
+                description: Storage version of v1beta20210101.EncryptionProperties_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1288,7 +1288,7 @@ spec:
                   keySource:
                     type: string
                   keyVaultProperties:
-                    description: Storage version of v1beta20210101.KeyVaultProperties_Status
+                    description: Storage version of v1beta20210101.KeyVaultProperties_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1302,7 +1302,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210101.BatchAccountIdentity_Status
+                description: Storage version of v1beta20210101.BatchAccountIdentity_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1317,7 +1317,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20210101.BatchAccountIdentity_Status_UserAssignedIdentities
+                      description: Storage version of v1beta20210101.BatchAccountIdentity_UserAssignedIdentities_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1332,7 +1332,7 @@ spec:
                     type: object
                 type: object
               keyVaultReference:
-                description: Storage version of v1beta20210101.KeyVaultReference_Status
+                description: Storage version of v1beta20210101.KeyVaultReference_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1356,7 +1356,7 @@ spec:
                 type: integer
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210101.PrivateEndpointConnection_Status
+                  description: Storage version of v1beta20210101.PrivateEndpointConnection_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1370,7 +1370,7 @@ spec:
                     name:
                       type: string
                     privateEndpoint:
-                      description: Storage version of v1beta20210101.PrivateEndpoint_Status
+                      description: Storage version of v1beta20210101.PrivateEndpoint_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1381,7 +1381,7 @@ spec:
                           type: string
                       type: object
                     privateLinkServiceConnectionState:
-                      description: Storage version of v1beta20210101.PrivateLinkServiceConnectionState_Status
+                      description: Storage version of v1beta20210101.PrivateLinkServiceConnectionState_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:

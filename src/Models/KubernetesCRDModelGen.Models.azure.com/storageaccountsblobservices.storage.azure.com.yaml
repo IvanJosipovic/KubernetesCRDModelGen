@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: storageaccountsblobservices.storage.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -88,7 +88,7 @@ spec:
                           type: array
                         allowedMethods:
                           items:
-                            description: Deprecated version of CorsRuleAllowedMethods. Use v1beta20210401.CorsRuleAllowedMethods instead
+                            description: Deprecated version of CorsRule_AllowedMethods. Use v1beta20210401.CorsRule_AllowedMethods instead
                             enum:
                             - DELETE
                             - GET
@@ -142,7 +142,7 @@ spec:
                   enable:
                     type: boolean
                   name:
-                    description: Deprecated version of LastAccessTimeTrackingPolicyName. Use v1beta20210401.LastAccessTimeTrackingPolicyName instead
+                    description: Deprecated version of LastAccessTimeTrackingPolicy_Name. Use v1beta20210401.LastAccessTimeTrackingPolicy_Name instead
                     enum:
                     - AccessTimeTracking
                     type: string
@@ -182,12 +182,12 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of BlobServiceProperties_Status. Use v1beta20210401.BlobServiceProperties_Status instead
+            description: Deprecated version of BlobServiceProperties_STATUS. Use v1beta20210401.BlobServiceProperties_STATUS instead
             properties:
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: Deprecated version of ChangeFeed_Status. Use v1beta20210401.ChangeFeed_Status instead
+                description: Deprecated version of ChangeFeed_STATUS. Use v1beta20210401.ChangeFeed_STATUS instead
                 properties:
                   enabled:
                     type: boolean
@@ -230,7 +230,7 @@ spec:
                   type: object
                 type: array
               containerDeleteRetentionPolicy:
-                description: Deprecated version of DeleteRetentionPolicy_Status. Use v1beta20210401.DeleteRetentionPolicy_Status instead
+                description: Deprecated version of DeleteRetentionPolicy_STATUS. Use v1beta20210401.DeleteRetentionPolicy_STATUS instead
                 properties:
                   days:
                     type: integer
@@ -238,11 +238,11 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: Deprecated version of CorsRules_Status. Use v1beta20210401.CorsRules_Status instead
+                description: Deprecated version of CorsRules_STATUS. Use v1beta20210401.CorsRules_STATUS instead
                 properties:
                   corsRules:
                     items:
-                      description: Deprecated version of CorsRule_Status. Use v1beta20210401.CorsRule_Status instead
+                      description: Deprecated version of CorsRule_STATUS. Use v1beta20210401.CorsRule_STATUS instead
                       properties:
                         allowedHeaders:
                           items:
@@ -250,7 +250,7 @@ spec:
                           type: array
                         allowedMethods:
                           items:
-                            description: Deprecated version of CorsRuleStatusAllowedMethods. Use v1beta20210401.CorsRuleStatusAllowedMethods instead
+                            description: Deprecated version of CorsRule_AllowedMethods_STATUS. Use v1beta20210401.CorsRule_AllowedMethods_STATUS instead
                             type: string
                           type: array
                         allowedOrigins:
@@ -269,7 +269,7 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: Deprecated version of DeleteRetentionPolicy_Status. Use v1beta20210401.DeleteRetentionPolicy_Status instead
+                description: Deprecated version of DeleteRetentionPolicy_STATUS. Use v1beta20210401.DeleteRetentionPolicy_STATUS instead
                 properties:
                   days:
                     type: integer
@@ -281,7 +281,7 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: Deprecated version of LastAccessTimeTrackingPolicy_Status. Use v1beta20210401.LastAccessTimeTrackingPolicy_Status instead
+                description: Deprecated version of LastAccessTimeTrackingPolicy_STATUS. Use v1beta20210401.LastAccessTimeTrackingPolicy_STATUS instead
                 properties:
                   blobType:
                     items:
@@ -290,7 +290,7 @@ spec:
                   enable:
                     type: boolean
                   name:
-                    description: Deprecated version of LastAccessTimeTrackingPolicyStatusName. Use v1beta20210401.LastAccessTimeTrackingPolicyStatusName instead
+                    description: Deprecated version of LastAccessTimeTrackingPolicy_Name_STATUS. Use v1beta20210401.LastAccessTimeTrackingPolicy_Name_STATUS instead
                     type: string
                   trackingGranularityInDays:
                     type: integer
@@ -298,7 +298,7 @@ spec:
               name:
                 type: string
               restorePolicy:
-                description: Deprecated version of RestorePolicyProperties_Status. Use v1beta20210401.RestorePolicyProperties_Status instead
+                description: Deprecated version of RestorePolicyProperties_STATUS. Use v1beta20210401.RestorePolicyProperties_STATUS instead
                 properties:
                   days:
                     type: integer
@@ -310,13 +310,13 @@ spec:
                     type: string
                 type: object
               sku:
-                description: Deprecated version of Sku_Status. Use v1beta20210401.Sku_Status instead
+                description: Deprecated version of Sku_STATUS. Use v1beta20210401.Sku_STATUS instead
                 properties:
                   name:
-                    description: Deprecated version of SkuName_Status. Use v1beta20210401.SkuName_Status instead
+                    description: Deprecated version of SkuName_STATUS. Use v1beta20210401.SkuName_STATUS instead
                     type: string
                   tier:
-                    description: Deprecated version of Tier_Status. Use v1beta20210401.Tier_Status instead
+                    description: Deprecated version of Tier_STATUS. Use v1beta20210401.Tier_STATUS instead
                     type: string
                 type: object
               type:
@@ -354,7 +354,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210401.StorageAccountsBlobServices_Spec
+            description: Storage version of v1alpha1api20210401.StorageAccounts_BlobService_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -497,7 +497,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210401.BlobServiceProperties_Status Deprecated version of BlobServiceProperties_Status. Use v1beta20210401.BlobServiceProperties_Status instead
+            description: Storage version of v1alpha1api20210401.BlobServiceProperties_STATUS Deprecated version of BlobServiceProperties_STATUS. Use v1beta20210401.BlobServiceProperties_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -507,7 +507,7 @@ spec:
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: Storage version of v1alpha1api20210401.ChangeFeed_Status Deprecated version of ChangeFeed_Status. Use v1beta20210401.ChangeFeed_Status instead
+                description: Storage version of v1alpha1api20210401.ChangeFeed_STATUS Deprecated version of ChangeFeed_STATUS. Use v1beta20210401.ChangeFeed_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -554,7 +554,7 @@ spec:
                   type: object
                 type: array
               containerDeleteRetentionPolicy:
-                description: Storage version of v1alpha1api20210401.DeleteRetentionPolicy_Status Deprecated version of DeleteRetentionPolicy_Status. Use v1beta20210401.DeleteRetentionPolicy_Status instead
+                description: Storage version of v1alpha1api20210401.DeleteRetentionPolicy_STATUS Deprecated version of DeleteRetentionPolicy_STATUS. Use v1beta20210401.DeleteRetentionPolicy_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -567,7 +567,7 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: Storage version of v1alpha1api20210401.CorsRules_Status Deprecated version of CorsRules_Status. Use v1beta20210401.CorsRules_Status instead
+                description: Storage version of v1alpha1api20210401.CorsRules_STATUS Deprecated version of CorsRules_STATUS. Use v1beta20210401.CorsRules_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -576,7 +576,7 @@ spec:
                     type: object
                   corsRules:
                     items:
-                      description: Storage version of v1alpha1api20210401.CorsRule_Status Deprecated version of CorsRule_Status. Use v1beta20210401.CorsRule_Status instead
+                      description: Storage version of v1alpha1api20210401.CorsRule_STATUS Deprecated version of CorsRule_STATUS. Use v1beta20210401.CorsRule_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -607,7 +607,7 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: Storage version of v1alpha1api20210401.DeleteRetentionPolicy_Status Deprecated version of DeleteRetentionPolicy_Status. Use v1beta20210401.DeleteRetentionPolicy_Status instead
+                description: Storage version of v1alpha1api20210401.DeleteRetentionPolicy_STATUS Deprecated version of DeleteRetentionPolicy_STATUS. Use v1beta20210401.DeleteRetentionPolicy_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -624,7 +624,7 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: Storage version of v1alpha1api20210401.LastAccessTimeTrackingPolicy_Status Deprecated version of LastAccessTimeTrackingPolicy_Status. Use v1beta20210401.LastAccessTimeTrackingPolicy_Status instead
+                description: Storage version of v1alpha1api20210401.LastAccessTimeTrackingPolicy_STATUS Deprecated version of LastAccessTimeTrackingPolicy_STATUS. Use v1beta20210401.LastAccessTimeTrackingPolicy_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -645,7 +645,7 @@ spec:
               name:
                 type: string
               restorePolicy:
-                description: Storage version of v1alpha1api20210401.RestorePolicyProperties_Status Deprecated version of RestorePolicyProperties_Status. Use v1beta20210401.RestorePolicyProperties_Status instead
+                description: Storage version of v1alpha1api20210401.RestorePolicyProperties_STATUS Deprecated version of RestorePolicyProperties_STATUS. Use v1beta20210401.RestorePolicyProperties_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -662,7 +662,7 @@ spec:
                     type: string
                 type: object
               sku:
-                description: Storage version of v1alpha1api20210401.Sku_Status Deprecated version of Sku_Status. Use v1beta20210401.Sku_Status instead
+                description: Storage version of v1alpha1api20210401.Sku_STATUS Deprecated version of Sku_STATUS. Use v1beta20210401.Sku_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1052,7 +1052,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210401.StorageAccountsBlobServices_Spec
+            description: Storage version of v1beta20210401.StorageAccounts_BlobService_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1195,7 +1195,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401.BlobServiceProperties_Status
+            description: Storage version of v1beta20210401.BlobServiceProperties_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1205,7 +1205,7 @@ spec:
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: Storage version of v1beta20210401.ChangeFeed_Status
+                description: Storage version of v1beta20210401.ChangeFeed_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1252,7 +1252,7 @@ spec:
                   type: object
                 type: array
               containerDeleteRetentionPolicy:
-                description: Storage version of v1beta20210401.DeleteRetentionPolicy_Status
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1265,7 +1265,7 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: Storage version of v1beta20210401.CorsRules_Status
+                description: Storage version of v1beta20210401.CorsRules_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1274,7 +1274,7 @@ spec:
                     type: object
                   corsRules:
                     items:
-                      description: Storage version of v1beta20210401.CorsRule_Status
+                      description: Storage version of v1beta20210401.CorsRule_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1305,7 +1305,7 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: Storage version of v1beta20210401.DeleteRetentionPolicy_Status
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1322,7 +1322,7 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: Storage version of v1beta20210401.LastAccessTimeTrackingPolicy_Status
+                description: Storage version of v1beta20210401.LastAccessTimeTrackingPolicy_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1343,7 +1343,7 @@ spec:
               name:
                 type: string
               restorePolicy:
-                description: Storage version of v1beta20210401.RestorePolicyProperties_Status
+                description: Storage version of v1beta20210401.RestorePolicyProperties_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1360,7 +1360,7 @@ spec:
                     type: string
                 type: object
               sku:
-                description: Storage version of v1beta20210401.Sku_Status
+                description: Storage version of v1beta20210401.Sku_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

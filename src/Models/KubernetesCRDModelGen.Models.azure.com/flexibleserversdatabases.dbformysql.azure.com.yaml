@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: flexibleserversdatabases.dbformysql.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -79,7 +79,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of Database_Status. Use v1beta20210501.Database_Status instead
+            description: Deprecated version of Database_STATUS. Use v1beta20210501.Database_STATUS instead
             properties:
               charset:
                 type: string
@@ -125,21 +125,21 @@ spec:
               name:
                 type: string
               systemData:
-                description: Deprecated version of SystemData_Status. Use v1beta20210501.SystemData_Status instead
+                description: Deprecated version of SystemData_STATUS. Use v1beta20210501.SystemData_STATUS instead
                 properties:
                   createdAt:
                     type: string
                   createdBy:
                     type: string
                   createdByType:
-                    description: Deprecated version of SystemDataStatusCreatedByType. Use v1beta20210501.SystemDataStatusCreatedByType instead
+                    description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1beta20210501.SystemData_CreatedByType_STATUS instead
                     type: string
                   lastModifiedAt:
                     type: string
                   lastModifiedBy:
                     type: string
                   lastModifiedByType:
-                    description: Deprecated version of SystemDataStatusLastModifiedByType. Use v1beta20210501.SystemDataStatusLastModifiedByType instead
+                    description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1beta20210501.SystemData_LastModifiedByType_STATUS instead
                     type: string
                 type: object
               type:
@@ -177,7 +177,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210501.FlexibleServersDatabases_Spec
+            description: Storage version of v1alpha1api20210501.FlexibleServers_Database_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -212,7 +212,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210501.Database_Status Deprecated version of Database_Status. Use v1beta20210501.Database_Status instead
+            description: Storage version of v1alpha1api20210501.Database_STATUS Deprecated version of Database_STATUS. Use v1beta20210501.Database_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -262,7 +262,7 @@ spec:
               name:
                 type: string
               systemData:
-                description: Storage version of v1alpha1api20210501.SystemData_Status Deprecated version of SystemData_Status. Use v1beta20210501.SystemData_Status instead
+                description: Storage version of v1alpha1api20210501.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1beta20210501.SystemData_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -454,7 +454,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210501.FlexibleServersDatabases_Spec
+            description: Storage version of v1beta20210501.FlexibleServers_Database_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -489,7 +489,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210501.Database_Status
+            description: Storage version of v1beta20210501.Database_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -539,7 +539,7 @@ spec:
               name:
                 type: string
               systemData:
-                description: Storage version of v1beta20210501.SystemData_Status
+                description: Storage version of v1beta20210501.SystemData_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:

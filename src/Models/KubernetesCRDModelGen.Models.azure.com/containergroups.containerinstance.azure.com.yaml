@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: containergroups.containerinstance.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -68,14 +68,23 @@ spec:
                     environmentVariables:
                       description: 'EnvironmentVariables: The environment variables to set in the container instance.'
                       items:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/EnvironmentVariable'
                         properties:
                           name:
                             description: 'Name: The name of the environment variable.'
                             type: string
                           secureValue:
                             description: 'SecureValue: The value of the secure environment variable.'
-                            type: string
+                            properties:
+                              key:
+                                description: Key is the key in the Kubernetes secret being referenced
+                                type: string
+                              name:
+                                description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                type: string
+                            required:
+                            - key
+                            - name
+                            type: object
                           value:
                             description: 'Value: The value of the environment variable.'
                             type: string
@@ -335,7 +344,17 @@ spec:
                         type: string
                       workspaceKey:
                         description: 'WorkspaceKey: The workspace key for log analytics'
-                        type: string
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
                       workspaceResourceReference:
                         description: 'WorkspaceResourceReference: The workspace resource id for log analytics'
                         properties:
@@ -421,7 +440,7 @@ spec:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                          description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                           type: string
                       required:
                       - key
@@ -449,14 +468,23 @@ spec:
                     environmentVariables:
                       description: 'EnvironmentVariables: The environment variables to set in the init container.'
                       items:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/EnvironmentVariable'
                         properties:
                           name:
                             description: 'Name: The name of the environment variable.'
                             type: string
                           secureValue:
                             description: 'SecureValue: The value of the secure environment variable.'
-                            type: string
+                            properties:
+                              key:
+                                description: Key is the key in the Kubernetes secret being referenced
+                                type: string
+                              name:
+                                description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                type: string
+                            required:
+                            - key
+                            - name
+                            type: object
                           value:
                             description: 'Value: The value of the environment variable.'
                             type: string
@@ -496,17 +524,17 @@ spec:
               ipAddress:
                 description: 'IpAddress: IP address for the container group.'
                 properties:
-                  dnsNameLabel:
-                    description: 'DnsNameLabel: The Dns name label for the IP.'
-                    type: string
-                  dnsNameLabelReusePolicy:
-                    description: 'DnsNameLabelReusePolicy: The value representing the security enum.'
+                  autoGeneratedDomainNameLabelScope:
+                    description: "AutoGeneratedDomainNameLabelScope: The value representing the security enum. The 'Unsecure' value is the default value if not selected and means the object's domain name label is not secured against subdomain takeover. The 'TenantReuse' value is the default value if selected and means the object's domain name label can be reused within the same tenant. The 'SubscriptionReuse' value means the object's domain name label can be reused within the same subscription. The 'ResourceGroupReuse' value means the object's domain name label can be reused within the same resource group. The 'NoReuse' value means the object's domain name label cannot be reused within the same resource group, subscription, or tenant."
                     enum:
                     - Noreuse
                     - ResourceGroupReuse
                     - SubscriptionReuse
                     - TenantReuse
                     - Unsecure
+                    type: string
+                  dnsNameLabel:
+                    description: 'DnsNameLabel: The Dns name label for the IP.'
                     type: string
                   ip:
                     description: 'Ip: The IP exposed to the public internet.'
@@ -722,9 +750,6 @@ spec:
                         properties:
                           name:
                             description: 'Name: The name of the environment variable.'
-                            type: string
-                          secureValue:
-                            description: 'SecureValue: The value of the secure environment variable.'
                             type: string
                           value:
                             description: 'Value: The value of the environment variable.'
@@ -1002,12 +1027,6 @@ spec:
                       workspaceId:
                         description: 'WorkspaceId: The workspace id for log analytics'
                         type: string
-                      workspaceKey:
-                        description: 'WorkspaceKey: The workspace key for log analytics'
-                        type: string
-                      workspaceResourceId:
-                        description: 'WorkspaceResourceId: The workspace resource id for log analytics'
-                        type: string
                     type: object
                 type: object
               dnsConfig:
@@ -1063,7 +1082,7 @@ spec:
                           description: 'PrincipalId: The principal id of user assigned identity.'
                           type: string
                       type: object
-                    description: "UserAssignedIdentities: The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+                    description: 'UserAssignedIdentities: The list of user identities associated with the container group.'
                     type: object
                 type: object
               imageRegistryCredentials:
@@ -1099,9 +1118,6 @@ spec:
                         properties:
                           name:
                             description: 'Name: The name of the environment variable.'
-                            type: string
-                          secureValue:
-                            description: 'SecureValue: The value of the secure environment variable.'
                             type: string
                           value:
                             description: 'Value: The value of the environment variable.'
@@ -1234,11 +1250,11 @@ spec:
               ipAddress:
                 description: 'IpAddress: The IP address type of the container group.'
                 properties:
+                  autoGeneratedDomainNameLabelScope:
+                    description: "AutoGeneratedDomainNameLabelScope: The value representing the security enum. The 'Unsecure' value is the default value if not selected and means the object's domain name label is not secured against subdomain takeover. The 'TenantReuse' value is the default value if selected and means the object's domain name label can be reused within the same tenant. The 'SubscriptionReuse' value means the object's domain name label can be reused within the same subscription. The 'ResourceGroupReuse' value means the object's domain name label can be reused within the same resource group. The 'NoReuse' value means the object's domain name label cannot be reused within the same resource group, subscription, or tenant."
+                    type: string
                   dnsNameLabel:
                     description: 'DnsNameLabel: The Dns name label for the IP.'
-                    type: string
-                  dnsNameLabelReusePolicy:
-                    description: 'DnsNameLabelReusePolicy: The value representing the security enum.'
                     type: string
                   fqdn:
                     description: 'Fqdn: The FQDN for the IP.'
@@ -1386,7 +1402,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20211001.ContainerGroups_Spec
+            description: Storage version of v1beta20211001.ContainerGroup_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1398,7 +1414,7 @@ spec:
                 type: string
               containers:
                 items:
-                  description: Storage version of v1beta20211001.ContainerGroups_Spec_Properties_Containers
+                  description: Storage version of v1beta20211001.ContainerGroup_Properties_Containers_Spec
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1411,7 +1427,7 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: 'Storage version of v1beta20211001.EnvironmentVariable Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/EnvironmentVariable'
+                        description: Storage version of v1beta20211001.ContainerGroup_Properties_Containers_Properties_EnvironmentVariables_Spec
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1421,7 +1437,18 @@ spec:
                           name:
                             type: string
                           secureValue:
-                            type: string
+                            description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                            properties:
+                              key:
+                                description: Key is the key in the Kubernetes secret being referenced
+                                type: string
+                              name:
+                                description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                type: string
+                            required:
+                            - key
+                            - name
+                            type: object
                           value:
                             type: string
                         type: object
@@ -1650,7 +1677,7 @@ spec:
                   type: object
                 type: array
               diagnostics:
-                description: 'Storage version of v1beta20211001.ContainerGroupDiagnostics Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerGroupDiagnostics'
+                description: Storage version of v1beta20211001.ContainerGroup_Properties_Diagnostics_Spec
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1658,7 +1685,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   logAnalytics:
-                    description: 'Storage version of v1beta20211001.LogAnalytics Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/LogAnalytics'
+                    description: Storage version of v1beta20211001.ContainerGroup_Properties_Diagnostics_LogAnalytics_Spec
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1674,7 +1701,18 @@ spec:
                       workspaceId:
                         type: string
                       workspaceKey:
-                        type: string
+                        description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
                       workspaceResourceReference:
                         description: 'WorkspaceResourceReference: The workspace resource id for log analytics'
                         properties:
@@ -1739,7 +1777,7 @@ spec:
                 type: object
               imageRegistryCredentials:
                 items:
-                  description: Storage version of v1beta20211001.ContainerGroups_Spec_Properties_ImageRegistryCredentials
+                  description: Storage version of v1beta20211001.ContainerGroup_Properties_ImageRegistryCredentials_Spec
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1757,7 +1795,7 @@ spec:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                          description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                           type: string
                       required:
                       - key
@@ -1771,7 +1809,7 @@ spec:
                 type: array
               initContainers:
                 items:
-                  description: Storage version of v1beta20211001.ContainerGroups_Spec_Properties_InitContainers
+                  description: Storage version of v1beta20211001.ContainerGroup_Properties_InitContainers_Spec
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1784,7 +1822,7 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: 'Storage version of v1beta20211001.EnvironmentVariable Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/EnvironmentVariable'
+                        description: Storage version of v1beta20211001.ContainerGroup_Properties_InitContainers_Properties_EnvironmentVariables_Spec
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1794,7 +1832,18 @@ spec:
                           name:
                             type: string
                           secureValue:
-                            type: string
+                            description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                            properties:
+                              key:
+                                description: Key is the key in the Kubernetes secret being referenced
+                                type: string
+                              name:
+                                description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                type: string
+                            required:
+                            - key
+                            - name
+                            type: object
                           value:
                             type: string
                         type: object
@@ -1830,9 +1879,9 @@ spec:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  dnsNameLabel:
+                  autoGeneratedDomainNameLabelScope:
                     type: string
-                  dnsNameLabelReusePolicy:
+                  dnsNameLabel:
                     type: string
                   ip:
                     type: string
@@ -1970,7 +2019,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20211001.ContainerGroup_Status
+            description: Storage version of v1beta20211001.ContainerGroup_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2013,7 +2062,7 @@ spec:
                 type: array
               containers:
                 items:
-                  description: Storage version of v1beta20211001.Container_Status
+                  description: Storage version of v1beta20211001.Container_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2026,7 +2075,7 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1beta20211001.EnvironmentVariable_Status
+                        description: Storage version of v1beta20211001.EnvironmentVariable_STATUS
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2035,8 +2084,6 @@ spec:
                             type: object
                           name:
                             type: string
-                          secureValue:
-                            type: string
                           value:
                             type: string
                         type: object
@@ -2044,7 +2091,7 @@ spec:
                     image:
                       type: string
                     instanceView:
-                      description: Storage version of v1beta20211001.ContainerProperties_Status_InstanceView
+                      description: Storage version of v1beta20211001.ContainerProperties_InstanceView_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2052,7 +2099,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         currentState:
-                          description: Storage version of v1beta20211001.ContainerState_Status
+                          description: Storage version of v1beta20211001.ContainerState_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2072,7 +2119,7 @@ spec:
                           type: object
                         events:
                           items:
-                            description: Storage version of v1beta20211001.Event_Status
+                            description: Storage version of v1beta20211001.Event_STATUS
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -2094,7 +2141,7 @@ spec:
                             type: object
                           type: array
                         previousState:
-                          description: Storage version of v1beta20211001.ContainerState_Status
+                          description: Storage version of v1beta20211001.ContainerState_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2116,7 +2163,7 @@ spec:
                           type: integer
                       type: object
                     livenessProbe:
-                      description: Storage version of v1beta20211001.ContainerProbe_Status
+                      description: Storage version of v1beta20211001.ContainerProbe_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2124,7 +2171,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: Storage version of v1beta20211001.ContainerExec_Status
+                          description: Storage version of v1beta20211001.ContainerExec_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2139,7 +2186,7 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: Storage version of v1beta20211001.ContainerHttpGet_Status
+                          description: Storage version of v1beta20211001.ContainerHttpGet_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2148,7 +2195,7 @@ spec:
                               type: object
                             httpHeaders:
                               items:
-                                description: Storage version of v1beta20211001.HttpHeader_Status
+                                description: Storage version of v1beta20211001.HttpHeader_STATUS
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
@@ -2181,7 +2228,7 @@ spec:
                       type: string
                     ports:
                       items:
-                        description: Storage version of v1beta20211001.ContainerPort_Status
+                        description: Storage version of v1beta20211001.ContainerPort_STATUS
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2195,7 +2242,7 @@ spec:
                         type: object
                       type: array
                     readinessProbe:
-                      description: Storage version of v1beta20211001.ContainerProbe_Status
+                      description: Storage version of v1beta20211001.ContainerProbe_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2203,7 +2250,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: Storage version of v1beta20211001.ContainerExec_Status
+                          description: Storage version of v1beta20211001.ContainerExec_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2218,7 +2265,7 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: Storage version of v1beta20211001.ContainerHttpGet_Status
+                          description: Storage version of v1beta20211001.ContainerHttpGet_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2227,7 +2274,7 @@ spec:
                               type: object
                             httpHeaders:
                               items:
-                                description: Storage version of v1beta20211001.HttpHeader_Status
+                                description: Storage version of v1beta20211001.HttpHeader_STATUS
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
@@ -2257,7 +2304,7 @@ spec:
                           type: integer
                       type: object
                     resources:
-                      description: Storage version of v1beta20211001.ResourceRequirements_Status
+                      description: Storage version of v1beta20211001.ResourceRequirements_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2265,7 +2312,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         limits:
-                          description: Storage version of v1beta20211001.ResourceLimits_Status
+                          description: Storage version of v1beta20211001.ResourceLimits_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2275,7 +2322,7 @@ spec:
                             cpu:
                               type: number
                             gpu:
-                              description: Storage version of v1beta20211001.GpuResource_Status
+                              description: Storage version of v1beta20211001.GpuResource_STATUS
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2291,7 +2338,7 @@ spec:
                               type: number
                           type: object
                         requests:
-                          description: Storage version of v1beta20211001.ResourceRequests_Status
+                          description: Storage version of v1beta20211001.ResourceRequests_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2301,7 +2348,7 @@ spec:
                             cpu:
                               type: number
                             gpu:
-                              description: Storage version of v1beta20211001.GpuResource_Status
+                              description: Storage version of v1beta20211001.GpuResource_STATUS
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2319,7 +2366,7 @@ spec:
                       type: object
                     volumeMounts:
                       items:
-                        description: Storage version of v1beta20211001.VolumeMount_Status
+                        description: Storage version of v1beta20211001.VolumeMount_STATUS
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2337,7 +2384,7 @@ spec:
                   type: object
                 type: array
               diagnostics:
-                description: Storage version of v1beta20211001.ContainerGroupDiagnostics_Status
+                description: Storage version of v1beta20211001.ContainerGroupDiagnostics_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2345,7 +2392,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   logAnalytics:
-                    description: Storage version of v1beta20211001.LogAnalytics_Status
+                    description: Storage version of v1beta20211001.LogAnalytics_STATUS
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2360,14 +2407,10 @@ spec:
                         type: object
                       workspaceId:
                         type: string
-                      workspaceKey:
-                        type: string
-                      workspaceResourceId:
-                        type: string
                     type: object
                 type: object
               dnsConfig:
-                description: Storage version of v1beta20211001.DnsConfiguration_Status
+                description: Storage version of v1beta20211001.DnsConfiguration_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2384,7 +2427,7 @@ spec:
                     type: string
                 type: object
               encryptionProperties:
-                description: Storage version of v1beta20211001.EncryptionProperties_Status
+                description: Storage version of v1beta20211001.EncryptionProperties_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2401,7 +2444,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20211001.ContainerGroupIdentity_Status
+                description: Storage version of v1beta20211001.ContainerGroupIdentity_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2416,7 +2459,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20211001.ContainerGroupIdentity_Status_UserAssignedIdentities
+                      description: Storage version of v1beta20211001.UserAssignedIdentities_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2432,7 +2475,7 @@ spec:
                 type: object
               imageRegistryCredentials:
                 items:
-                  description: Storage version of v1beta20211001.ImageRegistryCredential_Status
+                  description: Storage version of v1beta20211001.ImageRegistryCredential_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2451,7 +2494,7 @@ spec:
                 type: array
               initContainers:
                 items:
-                  description: Storage version of v1beta20211001.InitContainerDefinition_Status
+                  description: Storage version of v1beta20211001.InitContainerDefinition_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2464,7 +2507,7 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1beta20211001.EnvironmentVariable_Status
+                        description: Storage version of v1beta20211001.EnvironmentVariable_STATUS
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2473,8 +2516,6 @@ spec:
                             type: object
                           name:
                             type: string
-                          secureValue:
-                            type: string
                           value:
                             type: string
                         type: object
@@ -2482,7 +2523,7 @@ spec:
                     image:
                       type: string
                     instanceView:
-                      description: Storage version of v1beta20211001.InitContainerPropertiesDefinition_Status_InstanceView
+                      description: Storage version of v1beta20211001.InitContainerPropertiesDefinition_InstanceView_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2490,7 +2531,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         currentState:
-                          description: Storage version of v1beta20211001.ContainerState_Status
+                          description: Storage version of v1beta20211001.ContainerState_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2510,7 +2551,7 @@ spec:
                           type: object
                         events:
                           items:
-                            description: Storage version of v1beta20211001.Event_Status
+                            description: Storage version of v1beta20211001.Event_STATUS
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -2532,7 +2573,7 @@ spec:
                             type: object
                           type: array
                         previousState:
-                          description: Storage version of v1beta20211001.ContainerState_Status
+                          description: Storage version of v1beta20211001.ContainerState_STATUS
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2557,7 +2598,7 @@ spec:
                       type: string
                     volumeMounts:
                       items:
-                        description: Storage version of v1beta20211001.VolumeMount_Status
+                        description: Storage version of v1beta20211001.VolumeMount_STATUS
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2575,7 +2616,7 @@ spec:
                   type: object
                 type: array
               instanceView:
-                description: Storage version of v1beta20211001.ContainerGroup_Status_Properties_InstanceView
+                description: Storage version of v1beta20211001.ContainerGroup_Properties_InstanceView_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2584,7 +2625,7 @@ spec:
                     type: object
                   events:
                     items:
-                      description: Storage version of v1beta20211001.Event_Status
+                      description: Storage version of v1beta20211001.Event_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2609,16 +2650,16 @@ spec:
                     type: string
                 type: object
               ipAddress:
-                description: Storage version of v1beta20211001.IpAddress_Status
+                description: Storage version of v1beta20211001.IpAddress_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  dnsNameLabel:
+                  autoGeneratedDomainNameLabelScope:
                     type: string
-                  dnsNameLabelReusePolicy:
+                  dnsNameLabel:
                     type: string
                   fqdn:
                     type: string
@@ -2626,7 +2667,7 @@ spec:
                     type: string
                   ports:
                     items:
-                      description: Storage version of v1beta20211001.Port_Status
+                      description: Storage version of v1beta20211001.Port_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2656,7 +2697,7 @@ spec:
                 type: string
               subnetIds:
                 items:
-                  description: Storage version of v1beta20211001.ContainerGroupSubnetId_Status
+                  description: Storage version of v1beta20211001.ContainerGroupSubnetId_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2677,7 +2718,7 @@ spec:
                 type: string
               volumes:
                 items:
-                  description: Storage version of v1beta20211001.Volume_Status
+                  description: Storage version of v1beta20211001.Volume_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2685,7 +2726,7 @@ spec:
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
                     azureFile:
-                      description: Storage version of v1beta20211001.AzureFileVolume_Status
+                      description: Storage version of v1beta20211001.AzureFileVolume_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2706,7 +2747,7 @@ spec:
                         x-kubernetes-preserve-unknown-fields: true
                       type: object
                     gitRepo:
-                      description: Storage version of v1beta20211001.GitRepoVolume_Status
+                      description: Storage version of v1beta20211001.GitRepoVolume_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:

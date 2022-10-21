@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
   name: databaseaccounts.documentdb.azure.com
 spec:
@@ -12,7 +12,7 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: azureserviceoperator-system
+          namespace: default
           path: /convert
       conversionReviewVersions:
       - v1beta1
@@ -57,7 +57,7 @@ spec:
                 description: Deprecated version of AnalyticalStorageConfiguration. Use v1beta20210515.AnalyticalStorageConfiguration instead
                 properties:
                   schemaType:
-                    description: Deprecated version of AnalyticalStorageConfigurationSchemaType. Use v1beta20210515.AnalyticalStorageConfigurationSchemaType instead
+                    description: Deprecated version of AnalyticalStorageConfiguration_SchemaType. Use v1beta20210515.AnalyticalStorageConfiguration_SchemaType instead
                     enum:
                     - FullFidelity
                     - WellDefined
@@ -67,7 +67,7 @@ spec:
                 description: Deprecated version of ApiProperties. Use v1beta20210515.ApiProperties instead
                 properties:
                   serverVersion:
-                    description: Deprecated version of ApiPropertiesServerVersion. Use v1beta20210515.ApiPropertiesServerVersion instead
+                    description: Deprecated version of ApiProperties_ServerVersion. Use v1beta20210515.ApiProperties_ServerVersion instead
                     enum:
                     - 3.2
                     - 3.6
@@ -87,7 +87,7 @@ spec:
                     description: Deprecated version of ContinuousModeBackupPolicy. Use v1beta20210515.ContinuousModeBackupPolicy instead
                     properties:
                       type:
-                        description: Deprecated version of ContinuousModeBackupPolicyType. Use v1beta20210515.ContinuousModeBackupPolicyType instead
+                        description: Deprecated version of ContinuousModeBackupPolicy_Type. Use v1beta20210515.ContinuousModeBackupPolicy_Type instead
                         enum:
                         - Continuous
                         type: string
@@ -108,7 +108,7 @@ spec:
                             type: integer
                         type: object
                       type:
-                        description: Deprecated version of PeriodicModeBackupPolicyType. Use v1beta20210515.PeriodicModeBackupPolicyType instead
+                        description: Deprecated version of PeriodicModeBackupPolicy_Type. Use v1beta20210515.PeriodicModeBackupPolicy_Type instead
                         enum:
                         - Periodic
                         type: string
@@ -125,7 +125,7 @@ spec:
                   type: object
                 type: array
               connectorOffer:
-                description: Deprecated version of DatabaseAccountCreateUpdatePropertiesConnectorOffer. Use v1beta20210515.DatabaseAccountCreateUpdatePropertiesConnectorOffer instead
+                description: Deprecated version of DatabaseAccountCreateUpdateProperties_ConnectorOffer. Use v1beta20210515.DatabaseAccountCreateUpdateProperties_ConnectorOffer instead
                 enum:
                 - Small
                 type: string
@@ -133,7 +133,7 @@ spec:
                 description: Deprecated version of ConsistencyPolicy. Use v1beta20210515.ConsistencyPolicy instead
                 properties:
                   defaultConsistencyLevel:
-                    description: Deprecated version of ConsistencyPolicyDefaultConsistencyLevel. Use v1beta20210515.ConsistencyPolicyDefaultConsistencyLevel instead
+                    description: Deprecated version of ConsistencyPolicy_DefaultConsistencyLevel. Use v1beta20210515.ConsistencyPolicy_DefaultConsistencyLevel instead
                     enum:
                     - BoundedStaleness
                     - ConsistentPrefix
@@ -173,7 +173,7 @@ spec:
                   type: object
                 type: array
               databaseAccountOfferType:
-                description: Deprecated version of DatabaseAccountCreateUpdatePropertiesDatabaseAccountOfferType. Use v1beta20210515.DatabaseAccountCreateUpdatePropertiesDatabaseAccountOfferType instead
+                description: Deprecated version of DatabaseAccountCreateUpdateProperties_DatabaseAccountOfferType. Use v1beta20210515.DatabaseAccountCreateUpdateProperties_DatabaseAccountOfferType instead
                 enum:
                 - Standard
                 type: string
@@ -195,7 +195,7 @@ spec:
                 description: Deprecated version of ManagedServiceIdentity. Use v1beta20210515.ManagedServiceIdentity instead
                 properties:
                   type:
-                    description: Deprecated version of ManagedServiceIdentityType. Use v1beta20210515.ManagedServiceIdentityType instead
+                    description: Deprecated version of ManagedServiceIdentity_Type. Use v1beta20210515.ManagedServiceIdentity_Type instead
                     enum:
                     - None
                     - SystemAssigned
@@ -216,7 +216,7 @@ spec:
               keyVaultKeyUri:
                 type: string
               kind:
-                description: Deprecated version of DatabaseAccountsSpecKind. Use v1beta20210515.DatabaseAccountsSpecKind instead
+                description: Deprecated version of DatabaseAccount_Kind_Spec. Use v1beta20210515.DatabaseAccount_Kind_Spec instead
                 enum:
                 - GlobalDocumentDB
                 - MongoDB
@@ -238,7 +238,7 @@ spec:
                   type: object
                 type: array
               networkAclBypass:
-                description: Deprecated version of DatabaseAccountCreateUpdatePropertiesNetworkAclBypass. Use v1beta20210515.DatabaseAccountCreateUpdatePropertiesNetworkAclBypass instead
+                description: Deprecated version of DatabaseAccountCreateUpdateProperties_NetworkAclBypass. Use v1beta20210515.DatabaseAccountCreateUpdateProperties_NetworkAclBypass instead
                 enum:
                 - AzureServices
                 - None
@@ -260,7 +260,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -273,7 +273,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -286,7 +286,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -299,7 +299,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -312,7 +312,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -330,7 +330,7 @@ spec:
                 - name
                 type: object
               publicNetworkAccess:
-                description: Deprecated version of DatabaseAccountCreateUpdatePropertiesPublicNetworkAccess. Use v1beta20210515.DatabaseAccountCreateUpdatePropertiesPublicNetworkAccess instead
+                description: Deprecated version of DatabaseAccountCreateUpdateProperties_PublicNetworkAccess. Use v1beta20210515.DatabaseAccountCreateUpdateProperties_PublicNetworkAccess instead
                 enum:
                 - Disabled
                 - Enabled
@@ -370,32 +370,32 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of DatabaseAccountGetResults_Status. Use v1beta20210515.DatabaseAccountGetResults_Status instead
+            description: Deprecated version of DatabaseAccountGetResults_STATUS. Use v1beta20210515.DatabaseAccountGetResults_STATUS instead
             properties:
               analyticalStorageConfiguration:
-                description: Deprecated version of AnalyticalStorageConfiguration_Status. Use v1beta20210515.AnalyticalStorageConfiguration_Status instead
+                description: Deprecated version of AnalyticalStorageConfiguration_STATUS. Use v1beta20210515.AnalyticalStorageConfiguration_STATUS instead
                 properties:
                   schemaType:
-                    description: Deprecated version of AnalyticalStorageSchemaType_Status. Use v1beta20210515.AnalyticalStorageSchemaType_Status instead
+                    description: Deprecated version of AnalyticalStorageSchemaType_STATUS. Use v1beta20210515.AnalyticalStorageSchemaType_STATUS instead
                     type: string
                 type: object
               apiProperties:
-                description: Deprecated version of ApiProperties_Status. Use v1beta20210515.ApiProperties_Status instead
+                description: Deprecated version of ApiProperties_STATUS. Use v1beta20210515.ApiProperties_STATUS instead
                 properties:
                   serverVersion:
-                    description: Deprecated version of ApiPropertiesStatusServerVersion. Use v1beta20210515.ApiPropertiesStatusServerVersion instead
+                    description: Deprecated version of ApiProperties_ServerVersion_STATUS. Use v1beta20210515.ApiProperties_ServerVersion_STATUS instead
                     type: string
                 type: object
               backupPolicy:
-                description: Deprecated version of BackupPolicy_Status. Use v1beta20210515.BackupPolicy_Status instead
+                description: Deprecated version of BackupPolicy_STATUS. Use v1beta20210515.BackupPolicy_STATUS instead
                 properties:
                   type:
-                    description: Deprecated version of BackupPolicyType_Status. Use v1beta20210515.BackupPolicyType_Status instead
+                    description: Deprecated version of BackupPolicyType_STATUS. Use v1beta20210515.BackupPolicyType_STATUS instead
                     type: string
                 type: object
               capabilities:
                 items:
-                  description: Deprecated version of Capability_Status. Use v1beta20210515.Capability_Status instead
+                  description: Deprecated version of Capability_STATUS. Use v1beta20210515.Capability_STATUS instead
                   properties:
                     name:
                       type: string
@@ -437,13 +437,13 @@ spec:
                   type: object
                 type: array
               connectorOffer:
-                description: Deprecated version of ConnectorOffer_Status. Use v1beta20210515.ConnectorOffer_Status instead
+                description: Deprecated version of ConnectorOffer_STATUS. Use v1beta20210515.ConnectorOffer_STATUS instead
                 type: string
               consistencyPolicy:
-                description: Deprecated version of ConsistencyPolicy_Status. Use v1beta20210515.ConsistencyPolicy_Status instead
+                description: Deprecated version of ConsistencyPolicy_STATUS. Use v1beta20210515.ConsistencyPolicy_STATUS instead
                 properties:
                   defaultConsistencyLevel:
-                    description: Deprecated version of ConsistencyPolicyStatusDefaultConsistencyLevel. Use v1beta20210515.ConsistencyPolicyStatusDefaultConsistencyLevel instead
+                    description: Deprecated version of ConsistencyPolicy_DefaultConsistencyLevel_STATUS. Use v1beta20210515.ConsistencyPolicy_DefaultConsistencyLevel_STATUS instead
                     type: string
                   maxIntervalInSeconds:
                     type: integer
@@ -452,7 +452,7 @@ spec:
                 type: object
               cors:
                 items:
-                  description: Deprecated version of CorsPolicy_Status. Use v1beta20210515.CorsPolicy_Status instead
+                  description: Deprecated version of CorsPolicy_STATUS. Use v1beta20210515.CorsPolicy_STATUS instead
                   properties:
                     allowedHeaders:
                       type: string
@@ -467,7 +467,7 @@ spec:
                   type: object
                 type: array
               databaseAccountOfferType:
-                description: Deprecated version of DatabaseAccountOfferType_Status. Use v1beta20210515.DatabaseAccountOfferType_Status instead
+                description: Deprecated version of DatabaseAccountOfferType_STATUS. Use v1beta20210515.DatabaseAccountOfferType_STATUS instead
                 type: string
               defaultIdentity:
                 type: string
@@ -487,7 +487,7 @@ spec:
                 type: boolean
               failoverPolicies:
                 items:
-                  description: Deprecated version of FailoverPolicy_Status. Use v1beta20210515.FailoverPolicy_Status instead
+                  description: Deprecated version of FailoverPolicy_STATUS. Use v1beta20210515.FailoverPolicy_STATUS instead
                   properties:
                     failoverPriority:
                       type: integer
@@ -500,18 +500,18 @@ spec:
               id:
                 type: string
               identity:
-                description: Deprecated version of ManagedServiceIdentity_Status. Use v1beta20210515.ManagedServiceIdentity_Status instead
+                description: Deprecated version of ManagedServiceIdentity_STATUS. Use v1beta20210515.ManagedServiceIdentity_STATUS instead
                 properties:
                   principalId:
                     type: string
                   tenantId:
                     type: string
                   type:
-                    description: Deprecated version of ManagedServiceIdentityStatusType. Use v1beta20210515.ManagedServiceIdentityStatusType instead
+                    description: Deprecated version of ManagedServiceIdentity_Type_STATUS. Use v1beta20210515.ManagedServiceIdentity_Type_STATUS instead
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Deprecated version of ManagedServiceIdentity_Status_UserAssignedIdentities. Use v1beta20210515.ManagedServiceIdentity_Status_UserAssignedIdentities instead
+                      description: Deprecated version of ManagedServiceIdentity_UserAssignedIdentities_STATUS. Use v1beta20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS instead
                       properties:
                         clientId:
                           type: string
@@ -522,7 +522,7 @@ spec:
                 type: object
               ipRules:
                 items:
-                  description: Deprecated version of IpAddressOrRange_Status. Use v1beta20210515.IpAddressOrRange_Status instead
+                  description: Deprecated version of IpAddressOrRange_STATUS. Use v1beta20210515.IpAddressOrRange_STATUS instead
                   properties:
                     ipAddressOrRange:
                       type: string
@@ -533,13 +533,13 @@ spec:
               keyVaultKeyUri:
                 type: string
               kind:
-                description: Deprecated version of DatabaseAccountGetResultsStatusKind. Use v1beta20210515.DatabaseAccountGetResultsStatusKind instead
+                description: Deprecated version of DatabaseAccountGetResults_Kind_STATUS. Use v1beta20210515.DatabaseAccountGetResults_Kind_STATUS instead
                 type: string
               location:
                 type: string
               locations:
                 items:
-                  description: Deprecated version of Location_Status. Use v1beta20210515.Location_Status instead
+                  description: Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
                   properties:
                     documentEndpoint:
                       type: string
@@ -558,7 +558,7 @@ spec:
               name:
                 type: string
               networkAclBypass:
-                description: Deprecated version of NetworkAclBypass_Status. Use v1beta20210515.NetworkAclBypass_Status instead
+                description: Deprecated version of NetworkAclBypass_STATUS. Use v1beta20210515.NetworkAclBypass_STATUS instead
                 type: string
               networkAclBypassResourceIds:
                 items:
@@ -566,7 +566,7 @@ spec:
                 type: array
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_Status_SubResourceEmbedded. Use v1beta20210515.PrivateEndpointConnection_Status_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210515.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
                   properties:
                     id:
                       type: string
@@ -575,11 +575,11 @@ spec:
               provisioningState:
                 type: string
               publicNetworkAccess:
-                description: Deprecated version of PublicNetworkAccess_Status. Use v1beta20210515.PublicNetworkAccess_Status instead
+                description: Deprecated version of PublicNetworkAccess_STATUS. Use v1beta20210515.PublicNetworkAccess_STATUS instead
                 type: string
               readLocations:
                 items:
-                  description: Deprecated version of Location_Status. Use v1beta20210515.Location_Status instead
+                  description: Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
                   properties:
                     documentEndpoint:
                       type: string
@@ -603,7 +603,7 @@ spec:
                 type: string
               virtualNetworkRules:
                 items:
-                  description: Deprecated version of VirtualNetworkRule_Status. Use v1beta20210515.VirtualNetworkRule_Status instead
+                  description: Deprecated version of VirtualNetworkRule_STATUS. Use v1beta20210515.VirtualNetworkRule_STATUS instead
                   properties:
                     id:
                       type: string
@@ -613,7 +613,7 @@ spec:
                 type: array
               writeLocations:
                 items:
-                  description: Deprecated version of Location_Status. Use v1beta20210515.Location_Status instead
+                  description: Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
                   properties:
                     documentEndpoint:
                       type: string
@@ -662,7 +662,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20210515.DatabaseAccounts_Spec
+            description: Storage version of v1alpha1api20210515.DatabaseAccount_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -880,65 +880,65 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       documentEndpoint:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryMasterKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryReadonlyMasterKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryMasterKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryReadonlyMasterKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -997,7 +997,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210515.DatabaseAccountGetResults_Status Deprecated version of DatabaseAccountGetResults_Status. Use v1beta20210515.DatabaseAccountGetResults_Status instead
+            description: Storage version of v1alpha1api20210515.DatabaseAccountGetResults_STATUS Deprecated version of DatabaseAccountGetResults_STATUS. Use v1beta20210515.DatabaseAccountGetResults_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1005,7 +1005,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               analyticalStorageConfiguration:
-                description: Storage version of v1alpha1api20210515.AnalyticalStorageConfiguration_Status Deprecated version of AnalyticalStorageConfiguration_Status. Use v1beta20210515.AnalyticalStorageConfiguration_Status instead
+                description: Storage version of v1alpha1api20210515.AnalyticalStorageConfiguration_STATUS Deprecated version of AnalyticalStorageConfiguration_STATUS. Use v1beta20210515.AnalyticalStorageConfiguration_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1016,7 +1016,7 @@ spec:
                     type: string
                 type: object
               apiProperties:
-                description: Storage version of v1alpha1api20210515.ApiProperties_Status Deprecated version of ApiProperties_Status. Use v1beta20210515.ApiProperties_Status instead
+                description: Storage version of v1alpha1api20210515.ApiProperties_STATUS Deprecated version of ApiProperties_STATUS. Use v1beta20210515.ApiProperties_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1027,7 +1027,7 @@ spec:
                     type: string
                 type: object
               backupPolicy:
-                description: Storage version of v1alpha1api20210515.BackupPolicy_Status Deprecated version of BackupPolicy_Status. Use v1beta20210515.BackupPolicy_Status instead
+                description: Storage version of v1alpha1api20210515.BackupPolicy_STATUS Deprecated version of BackupPolicy_STATUS. Use v1beta20210515.BackupPolicy_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1039,7 +1039,7 @@ spec:
                 type: object
               capabilities:
                 items:
-                  description: Storage version of v1alpha1api20210515.Capability_Status Deprecated version of Capability_Status. Use v1beta20210515.Capability_Status instead
+                  description: Storage version of v1alpha1api20210515.Capability_STATUS Deprecated version of Capability_STATUS. Use v1beta20210515.Capability_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1087,7 +1087,7 @@ spec:
               connectorOffer:
                 type: string
               consistencyPolicy:
-                description: Storage version of v1alpha1api20210515.ConsistencyPolicy_Status Deprecated version of ConsistencyPolicy_Status. Use v1beta20210515.ConsistencyPolicy_Status instead
+                description: Storage version of v1alpha1api20210515.ConsistencyPolicy_STATUS Deprecated version of ConsistencyPolicy_STATUS. Use v1beta20210515.ConsistencyPolicy_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1103,7 +1103,7 @@ spec:
                 type: object
               cors:
                 items:
-                  description: Storage version of v1alpha1api20210515.CorsPolicy_Status Deprecated version of CorsPolicy_Status. Use v1beta20210515.CorsPolicy_Status instead
+                  description: Storage version of v1alpha1api20210515.CorsPolicy_STATUS Deprecated version of CorsPolicy_STATUS. Use v1beta20210515.CorsPolicy_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1142,7 +1142,7 @@ spec:
                 type: boolean
               failoverPolicies:
                 items:
-                  description: Storage version of v1alpha1api20210515.FailoverPolicy_Status Deprecated version of FailoverPolicy_Status. Use v1beta20210515.FailoverPolicy_Status instead
+                  description: Storage version of v1alpha1api20210515.FailoverPolicy_STATUS Deprecated version of FailoverPolicy_STATUS. Use v1beta20210515.FailoverPolicy_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1160,7 +1160,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1alpha1api20210515.ManagedServiceIdentity_Status Deprecated version of ManagedServiceIdentity_Status. Use v1beta20210515.ManagedServiceIdentity_Status instead
+                description: Storage version of v1alpha1api20210515.ManagedServiceIdentity_STATUS Deprecated version of ManagedServiceIdentity_STATUS. Use v1beta20210515.ManagedServiceIdentity_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1175,7 +1175,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1alpha1api20210515.ManagedServiceIdentity_Status_UserAssignedIdentities Deprecated version of ManagedServiceIdentity_Status_UserAssignedIdentities. Use v1beta20210515.ManagedServiceIdentity_Status_UserAssignedIdentities instead
+                      description: Storage version of v1alpha1api20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS Deprecated version of ManagedServiceIdentity_UserAssignedIdentities_STATUS. Use v1beta20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1191,7 +1191,7 @@ spec:
                 type: object
               ipRules:
                 items:
-                  description: Storage version of v1alpha1api20210515.IpAddressOrRange_Status Deprecated version of IpAddressOrRange_Status. Use v1beta20210515.IpAddressOrRange_Status instead
+                  description: Storage version of v1alpha1api20210515.IpAddressOrRange_STATUS Deprecated version of IpAddressOrRange_STATUS. Use v1beta20210515.IpAddressOrRange_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1212,7 +1212,7 @@ spec:
                 type: string
               locations:
                 items:
-                  description: Storage version of v1alpha1api20210515.Location_Status Deprecated version of Location_Status. Use v1beta20210515.Location_Status instead
+                  description: Storage version of v1alpha1api20210515.Location_STATUS Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1243,7 +1243,7 @@ spec:
                 type: array
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20210515.PrivateEndpointConnection_Status_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_Status_SubResourceEmbedded. Use v1beta20210515.PrivateEndpointConnection_Status_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20210515.PrivateEndpointConnection_STATUS_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210515.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1260,7 +1260,7 @@ spec:
                 type: string
               readLocations:
                 items:
-                  description: Storage version of v1alpha1api20210515.Location_Status Deprecated version of Location_Status. Use v1beta20210515.Location_Status instead
+                  description: Storage version of v1alpha1api20210515.Location_STATUS Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1289,7 +1289,7 @@ spec:
                 type: string
               virtualNetworkRules:
                 items:
-                  description: Storage version of v1alpha1api20210515.VirtualNetworkRule_Status Deprecated version of VirtualNetworkRule_Status. Use v1beta20210515.VirtualNetworkRule_Status instead
+                  description: Storage version of v1alpha1api20210515.VirtualNetworkRule_STATUS Deprecated version of VirtualNetworkRule_STATUS. Use v1beta20210515.VirtualNetworkRule_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1304,7 +1304,7 @@ spec:
                 type: array
               writeLocations:
                 items:
-                  description: Storage version of v1alpha1api20210515.Location_Status Deprecated version of Location_Status. Use v1beta20210515.Location_Status instead
+                  description: Storage version of v1alpha1api20210515.Location_STATUS Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1592,7 +1592,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1605,7 +1605,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1618,7 +1618,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1631,7 +1631,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1644,7 +1644,7 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -2042,7 +2042,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210515.DatabaseAccounts_Spec
+            description: Storage version of v1beta20210515.DatabaseAccount_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2260,65 +2260,65 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       documentEndpoint:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryMasterKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryReadonlyMasterKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryMasterKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryReadonlyMasterKey:
-                        description: SecretDestination describes the location to store a single secret value
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: SecretName is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -2377,7 +2377,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210515.DatabaseAccountGetResults_Status
+            description: Storage version of v1beta20210515.DatabaseAccountGetResults_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2385,7 +2385,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               analyticalStorageConfiguration:
-                description: Storage version of v1beta20210515.AnalyticalStorageConfiguration_Status
+                description: Storage version of v1beta20210515.AnalyticalStorageConfiguration_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2396,7 +2396,7 @@ spec:
                     type: string
                 type: object
               apiProperties:
-                description: Storage version of v1beta20210515.ApiProperties_Status
+                description: Storage version of v1beta20210515.ApiProperties_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2407,7 +2407,7 @@ spec:
                     type: string
                 type: object
               backupPolicy:
-                description: Storage version of v1beta20210515.BackupPolicy_Status
+                description: Storage version of v1beta20210515.BackupPolicy_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2419,7 +2419,7 @@ spec:
                 type: object
               capabilities:
                 items:
-                  description: Storage version of v1beta20210515.Capability_Status
+                  description: Storage version of v1beta20210515.Capability_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2467,7 +2467,7 @@ spec:
               connectorOffer:
                 type: string
               consistencyPolicy:
-                description: Storage version of v1beta20210515.ConsistencyPolicy_Status
+                description: Storage version of v1beta20210515.ConsistencyPolicy_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2483,7 +2483,7 @@ spec:
                 type: object
               cors:
                 items:
-                  description: Storage version of v1beta20210515.CorsPolicy_Status
+                  description: Storage version of v1beta20210515.CorsPolicy_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2522,7 +2522,7 @@ spec:
                 type: boolean
               failoverPolicies:
                 items:
-                  description: Storage version of v1beta20210515.FailoverPolicy_Status
+                  description: Storage version of v1beta20210515.FailoverPolicy_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2540,7 +2540,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210515.ManagedServiceIdentity_Status
+                description: Storage version of v1beta20210515.ManagedServiceIdentity_STATUS
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2555,7 +2555,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20210515.ManagedServiceIdentity_Status_UserAssignedIdentities
+                      description: Storage version of v1beta20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2571,7 +2571,7 @@ spec:
                 type: object
               ipRules:
                 items:
-                  description: Storage version of v1beta20210515.IpAddressOrRange_Status
+                  description: Storage version of v1beta20210515.IpAddressOrRange_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2592,7 +2592,7 @@ spec:
                 type: string
               locations:
                 items:
-                  description: Storage version of v1beta20210515.Location_Status
+                  description: Storage version of v1beta20210515.Location_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2623,7 +2623,7 @@ spec:
                 type: array
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210515.PrivateEndpointConnection_Status_SubResourceEmbedded
+                  description: Storage version of v1beta20210515.PrivateEndpointConnection_STATUS_SubResourceEmbedded
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2640,7 +2640,7 @@ spec:
                 type: string
               readLocations:
                 items:
-                  description: Storage version of v1beta20210515.Location_Status
+                  description: Storage version of v1beta20210515.Location_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2669,7 +2669,7 @@ spec:
                 type: string
               virtualNetworkRules:
                 items:
-                  description: Storage version of v1beta20210515.VirtualNetworkRule_Status
+                  description: Storage version of v1beta20210515.VirtualNetworkRule_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2684,7 +2684,7 @@ spec:
                 type: array
               writeLocations:
                 items:
-                  description: Storage version of v1beta20210515.Location_Status
+                  description: Storage version of v1beta20210515.Location_STATUS
                   properties:
                     $propertyBag:
                       additionalProperties:
