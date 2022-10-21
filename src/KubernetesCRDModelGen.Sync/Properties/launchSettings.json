@@ -1,0 +1,11 @@
+﻿{
+  "profiles": {
+    "KubernetesCRDModelGen.Sync": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

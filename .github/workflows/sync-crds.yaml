@@ -1,0 +1,35 @@
+name: sync-charts
+
+on:
+  push:
+    branches:
+      - alpha
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          global-json-file: global.json
+
+      - name: Sync Charts
+        run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ./src/Models
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
+        with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            branch: sync-charts
+            commit-message: "chore: Update CRDs"
+            title: "chore: Update CRDS"
+            bodty: "Automated CRD Sync"
