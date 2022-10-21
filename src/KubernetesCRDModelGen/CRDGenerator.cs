@@ -486,6 +486,11 @@ public class CRDGenerator : ICRDGenerator
             name = name.Replace("$", "");
         }
 
+        if (name.Contains("-"))
+        {
+            name = name.Replace("-", "");
+        }
+
         name = CapitalizeFirstLetter(name);
 
         return name;
