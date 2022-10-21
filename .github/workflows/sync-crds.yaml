@@ -31,6 +31,6 @@ jobs:
         with:
             token: ${{ secrets.GITHUB_TOKEN }}
             branch: sync-charts
-            commit-message: "chore: Update CRDs"
-            title: "chore: Update CRDs"
+            commit-message: "feat: Update CRDs"
+            title: "feat: Update CRDs"
             bodty: "Automated CRD Sync"
