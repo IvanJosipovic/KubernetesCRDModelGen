@@ -1,4 +1,4 @@
-name: sync-charts
+name: sync-crds
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         with:
           global-json-file: global.json
 
-      - name: Sync Charts
+      - name: Sync CRDs
         run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ../Models
 
       - name: Create Pull Request
@@ -32,5 +32,5 @@ jobs:
             token: ${{ secrets.GITHUB_TOKEN }}
             branch: sync-charts
             commit-message: "chore: Update CRDs"
-            title: "chore: Update CRDS"
+            title: "chore: Update CRDs"
             bodty: "Automated CRD Sync"
