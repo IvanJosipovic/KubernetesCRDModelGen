@@ -21,13 +21,16 @@ jobs:
         with:
           global-json-file: global.json
 
+      - name: Remove Models from Solution
+        run: dotnet sln remove ./src/Models/**/*.csproj
+
       - name: Clean Models
         run: rm -rf ./src/Models/KubernetesCRDModelGen*
 
       - name: Sync CRDs
         run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ../Models
 
-      - name: Add to Solution
+      - name: Add Models to Solution
         run: dotnet sln add ./src/Models/**/*.csproj
 
       - name: Create Pull Request
