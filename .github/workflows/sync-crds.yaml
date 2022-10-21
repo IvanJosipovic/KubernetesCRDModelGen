@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - alpha
+      - dev
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *"
