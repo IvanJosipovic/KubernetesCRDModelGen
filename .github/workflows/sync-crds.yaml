@@ -22,7 +22,7 @@ jobs:
           global-json-file: global.json
 
       - name: Clean Models
-        run: rm -r ./src/Models/*
+        run: rm -r ./src/Models/KubernetesCRDModelGen*
 
       - name: Sync CRDs
         run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ../Models
