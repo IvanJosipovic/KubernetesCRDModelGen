@@ -23,7 +23,7 @@ jobs:
           global-json-file: global.json
 
       - name: Sync Charts
-        run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ./src/Models
+        run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ../Models
 
       - name: Create Pull Request
         id: cpr
