@@ -33,4 +33,4 @@ jobs:
             branch: sync-charts
             commit-message: "feat: Update CRDs"
             title: "feat: Update CRDs"
-            bodty: "Automated CRD Sync"
+            body: "Automated CRD Sync"
