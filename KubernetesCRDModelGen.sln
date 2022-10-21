@@ -26,6 +26,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubernetesCRDModelGen.Sync", "src\KubernetesCRDModelGen.Sync\KubernetesCRDModelGen.Sync.csproj", "{C5612CD0-4CCB-4A68-8592-8C984548B5BD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{771624D8-9175-4DB1-98E4-9A92E994473B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{420519A6-D67F-45B6-8C26-009EFECB043D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Models.azure.com", "src\Models\KubernetesCRDModelGen.Models.azure.com\KubernetesCRDModelGen.Models.azure.com.csproj", "{E80F89B8-C21B-49AC-8911-81696FA09573}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Models.fluxcd.io", "src\Models\KubernetesCRDModelGen.Models.fluxcd.io\KubernetesCRDModelGen.Models.fluxcd.io.csproj", "{D43482C9-C631-4F11-9E73-5A343F3DF91E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Models.istio.io", "src\Models\KubernetesCRDModelGen.Models.istio.io\KubernetesCRDModelGen.Models.istio.io.csproj", "{0E54167B-7BC4-49F8-8764-05ABD1653797}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Models.projectcalico.org", "src\Models\KubernetesCRDModelGen.Models.projectcalico.org\KubernetesCRDModelGen.Models.projectcalico.org.csproj", "{A2844D28-A96D-4240-B623-E7CB14FBA437}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,11 +64,34 @@ Global
 		{C5612CD0-4CCB-4A68-8592-8C984548B5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5612CD0-4CCB-4A68-8592-8C984548B5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5612CD0-4CCB-4A68-8592-8C984548B5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E80F89B8-C21B-49AC-8911-81696FA09573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E80F89B8-C21B-49AC-8911-81696FA09573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E80F89B8-C21B-49AC-8911-81696FA09573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E80F89B8-C21B-49AC-8911-81696FA09573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D43482C9-C631-4F11-9E73-5A343F3DF91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D43482C9-C631-4F11-9E73-5A343F3DF91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D43482C9-C631-4F11-9E73-5A343F3DF91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D43482C9-C631-4F11-9E73-5A343F3DF91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E54167B-7BC4-49F8-8764-05ABD1653797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E54167B-7BC4-49F8-8764-05ABD1653797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E54167B-7BC4-49F8-8764-05ABD1653797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E54167B-7BC4-49F8-8764-05ABD1653797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2844D28-A96D-4240-B623-E7CB14FBA437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2844D28-A96D-4240-B623-E7CB14FBA437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2844D28-A96D-4240-B623-E7CB14FBA437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2844D28-A96D-4240-B623-E7CB14FBA437}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85C5FEF7-AB6B-473B-8EC8-C2B35531DA80}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{420519A6-D67F-45B6-8C26-009EFECB043D} = {771624D8-9175-4DB1-98E4-9A92E994473B}
+		{E80F89B8-C21B-49AC-8911-81696FA09573} = {420519A6-D67F-45B6-8C26-009EFECB043D}
+		{D43482C9-C631-4F11-9E73-5A343F3DF91E} = {420519A6-D67F-45B6-8C26-009EFECB043D}
+		{0E54167B-7BC4-49F8-8764-05ABD1653797} = {420519A6-D67F-45B6-8C26-009EFECB043D}
+		{A2844D28-A96D-4240-B623-E7CB14FBA437} = {420519A6-D67F-45B6-8C26-009EFECB043D}
 	EndGlobalSection
 EndGlobal
