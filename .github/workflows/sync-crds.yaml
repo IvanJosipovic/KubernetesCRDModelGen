@@ -27,6 +27,9 @@ jobs:
       - name: Sync CRDs
         run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ../Models
 
+      - name: Add to Solution
+        run: dotnet sln add ./src/Models/**/*.csproj
+
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v3
