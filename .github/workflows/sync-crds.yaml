@@ -4,13 +4,12 @@ on:
   push:
     branches:
       - alpha
-      - dev
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *"
 
 jobs:
-  sync:
+  sync-crds:
     runs-on: ubuntu-latest
     steps:
 
