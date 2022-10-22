@@ -37,11 +37,11 @@ namespace KubernetesCRDModelGen.Sync
             process.WaitForExit();
         }
 
-        public static string Template(string repo, string name, bool devel)
+        public static string Template(string repo, string name, bool devel, string appendCMD)
         {
             var process = new Process();
             process.StartInfo.FileName = "helm";
-            process.StartInfo.Arguments = $"template {repo}/{name} --include-crds{(devel ? " --devel" : "")}";
+            process.StartInfo.Arguments = $"template {repo}/{name} --include-crds{(devel ? " --devel" : "")} {appendCMD}";
             process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.UseShellExecute = false;
