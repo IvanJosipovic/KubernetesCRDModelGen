@@ -17,5 +17,7 @@ namespace KubernetesCRDModelGen.Sync
         public string HelmChart { get; set; }
 
         public bool PreRelease { get; set; }
+
+        public string HelmCMD {get;set;}
     }
 }

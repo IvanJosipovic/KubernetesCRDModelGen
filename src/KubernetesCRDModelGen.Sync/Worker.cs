@@ -93,7 +93,7 @@ namespace KubernetesCRDModelGen.Sync
             HelmClient.RepoAdd("temp", config.HelmRepo);
             HelmClient.RepoUpdate();
 
-            var yaml = HelmClient.Template("temp", config.HelmChart, config.PreRelease);
+            var yaml = HelmClient.Template("temp", config.HelmChart, config.PreRelease, config.HelmCMD);
 
             byte[] byteArray = Encoding.UTF8.GetBytes(yaml);
             MemoryStream stream = new MemoryStream(byteArray);
