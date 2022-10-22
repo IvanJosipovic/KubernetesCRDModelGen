@@ -55,7 +55,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
                             try
                             {
                                 var crd = KubernetesYaml.Deserialize<V1CustomResourceDefinition>(yaml);
-                                var code = crdGen.GenerateCode(crd, "KubernetesCRDModelGen.Models." + crd.Spec.Group);
+                                var code = crdGen.GenerateCode(crd, "KubernetesCRDModelGen.Models." + CRDGenerator.GetCleanNamespace(crd.Spec.Group.ToLower()));
 
                                 // fix for summary https://github.com/borisdj/CsCodeGenerator/issues/6
                                 code = code.Replace("    // <summary>", "    /// <summary>");

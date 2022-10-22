@@ -20,6 +20,93 @@ public class CRDGenerator : ICRDGenerator
 
     private MetadataReference[] MetadataReferences { get; set; }
 
+    private static List<string> keywords = new List<string>()
+    {
+        "abstract",
+        "as",
+        "base",
+        "bool",
+        "break",
+        "byte",
+        "case",
+        "catch",
+        "char",
+        "checked",
+        "class",
+        "const",
+        "continue",
+        "decimal",
+        "default",
+        "delegate",
+        "do",
+        "double",
+        "else",
+        "enum",
+        "event",
+        "explicit",
+        "extern",
+        "false",
+        "finally",
+        "fixed",
+        "float",
+        "for",
+        "foreach",
+        "goto",
+        "if",
+        "implicit",
+        "in",
+        "int",
+        "interface",
+        "internal",
+        "is",
+        "lock",
+        "long",
+        "namespace",
+        "new",
+        "null",
+        "object",
+        "operator",
+        "out",
+        "override",
+        "params",
+        "private",
+        "protected",
+        "public",
+        "readonly",
+        "ref",
+        "return",
+        "sbyte",
+        "sealed",
+        "short",
+        "sizeof",
+        "stackalloc",
+        "static",
+        "string",
+        "struct",
+        "switch",
+        "this",
+        "throw",
+        "true",
+        "try",
+        "typeof",
+        "uint",
+        "ulong",
+        "unchecked",
+        "unsafe",
+        "ushort",
+        "using",
+        "virtual",
+        "void",
+        "volatile",
+        "while"
+    };
+
+    private static List<char> characters = new List<char>
+    {
+        '-',
+        '$'
+    };
+
     public CRDGenerator(ILogger<CRDGenerator> logger)
     {
         Logger = logger;
@@ -469,32 +556,51 @@ public class CRDGenerator : ICRDGenerator
         return types;
     }
 
-    public string GetCleanClassName(string nane)
+    public static string GetCleanClassName(string nane)
     {
         return CapitalizeFirstLetter(nane);
     }
 
-    private string GetCleanPropertyName(string name)
+    public static string GetCleanPropertyName(string name)
     {
-        if (name == "continue" || name == "ref" || name == "static")
+        if (keywords.Contains(name))
         {
             name = "@" + name;
         }
 
-        if (name.Contains("$"))
+        foreach (var badcbar in characters)
         {
-            name = name.Replace("$", "");
-        }
-
-        if (name.Contains("-"))
-        {
-            name = name.Replace("-", "");
+            if (name.Contains(badcbar))
+            {
+                name = name.Replace(badcbar.ToString(), "");
+            }
         }
 
         name = CapitalizeFirstLetter(name);
 
         return name;
     }
+
+    public static string GetCleanNamespace(string name)
+    {
+        if (keywords.Contains(name))
+        {
+            name = "@" + name;
+        }
+
+        foreach (var badcbar in characters)
+        {
+            if (name.Contains(badcbar))
+            {
+                name = name.Replace(badcbar.ToString(), "");
+            }
+        }
+
+        name = CapitalizeFirstLetter(name);
+
+        return name;
+    }
+
 
     private string GetCombinedName(string name, string newName)
     {
