@@ -655,7 +655,7 @@ public class CRDGenerator : ICRDGenerator
             references.Add(ass);
         }
 
-        references.Add(Basic.Reference.Assemblies.NetStandard20.netstandard);
+        references.AddRange(Basic.Reference.Assemblies.NetStandard20.References.All);
 
         MetadataReferences = references.ToArray();
     }
