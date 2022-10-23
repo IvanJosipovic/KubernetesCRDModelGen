@@ -596,8 +596,6 @@ public class CRDGenerator : ICRDGenerator
             }
         }
 
-        name = CapitalizeFirstLetter(name);
-
         return name;
     }
 
