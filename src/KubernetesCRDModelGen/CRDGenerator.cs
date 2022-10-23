@@ -563,6 +563,8 @@ public class CRDGenerator : ICRDGenerator
 
     public static string GetCleanPropertyName(string name)
     {
+        name = CapitalizeFirstLetter(name);
+
         if (keywords.Contains(name))
         {
             name = "@" + name;
@@ -575,8 +577,6 @@ public class CRDGenerator : ICRDGenerator
                 name = name.Replace(badcbar.ToString(), "");
             }
         }
-
-        name = CapitalizeFirstLetter(name);
 
         return name;
     }
@@ -598,7 +598,6 @@ public class CRDGenerator : ICRDGenerator
 
         return name;
     }
-
 
     private string GetCombinedName(string name, string newName)
     {
