@@ -281,7 +281,7 @@ spec:
                         description: Path is a directory path within the Git repository, and is only valid for applications sourced from Git.
                         type: string
                       plugin:
-                        description: ConfigManagementPlugin holds config management plugin specific options
+                        description: Plugin holds config management plugin specific options
                         properties:
                           env:
                             description: Env is a list of environment variable entries
@@ -557,7 +557,7 @@ spec:
                     description: Path is a directory path within the Git repository, and is only valid for applications sourced from Git.
                     type: string
                   plugin:
-                    description: ConfigManagementPlugin holds config management plugin specific options
+                    description: Plugin holds config management plugin specific options
                     properties:
                       env:
                         description: Env is a list of environment variable entries
@@ -844,7 +844,7 @@ spec:
                           description: Path is a directory path within the Git repository, and is only valid for applications sourced from Git.
                           type: string
                         plugin:
-                          description: ConfigManagementPlugin holds config management plugin specific options
+                          description: Plugin holds config management plugin specific options
                           properties:
                             env:
                               description: Env is a list of environment variable entries
@@ -1132,7 +1132,7 @@ spec:
                                 description: Path is a directory path within the Git repository, and is only valid for applications sourced from Git.
                                 type: string
                               plugin:
-                                description: ConfigManagementPlugin holds config management plugin specific options
+                                description: Plugin holds config management plugin specific options
                                 properties:
                                   env:
                                     description: Env is a list of environment variable entries
@@ -1402,7 +1402,7 @@ spec:
                             description: Path is a directory path within the Git repository, and is only valid for applications sourced from Git.
                             type: string
                           plugin:
-                            description: ConfigManagementPlugin holds config management plugin specific options
+                            description: Plugin holds config management plugin specific options
                             properties:
                               env:
                                 description: Env is a list of environment variable entries
@@ -1444,6 +1444,9 @@ spec:
                 description: ReconciledAt indicates when the application state was reconciled using the latest git version
                 format: date-time
                 type: string
+              resourceHealthSource:
+                description: 'ResourceHealthSource indicates where the resource health status is stored: inline if not set or appTree'
+                type: string
               resources:
                 description: Resources is a list of Kubernetes resources managed by this application
                 items:
@@ -1474,6 +1477,9 @@ spec:
                     status:
                       description: SyncStatusCode is a type which represents possible comparison results
                       type: string
+                    syncWave:
+                      format: int64
+                      type: integer
                     version:
                       type: string
                   type: object
@@ -1669,7 +1675,7 @@ spec:
                             description: Path is a directory path within the Git repository, and is only valid for applications sourced from Git.
                             type: string
                           plugin:
-                            description: ConfigManagementPlugin holds config management plugin specific options
+                            description: Plugin holds config management plugin specific options
                             properties:
                               env:
                                 description: Env is a list of environment variable entries
