@@ -86,6 +86,7 @@ spec:
                 - msteams
                 - rocket
                 - generic
+                - generic-hmac
                 - github
                 - gitlab
                 - bitbucket
