@@ -71,7 +71,7 @@ namespace KubernetesCRDModelGen.Sync
                 }
                 else if (url.EndsWith(".zip"))
                 {
-                    var zipStream = new ICSharpCode.SharpZipLib.Zip.ZipFile(stream);
+                    using var zipStream = new ZipFile(stream);
                     foreach (ZipEntry entry in zipStream)
                     {
                         if (entry.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
