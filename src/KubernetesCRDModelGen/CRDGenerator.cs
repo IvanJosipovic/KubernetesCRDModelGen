@@ -393,13 +393,39 @@ public class CRDGenerator : ICRDGenerator
                 switch (property.Value.Type)
                 {
                     case "object":
-                        types.AddRange(GenerateClasses(property.Value, combinedPropertyName));
-
-                        model.Properties.Add(new Property(combinedPropertyName + (IsNullable(property) ? "?" : ""), propertyName)
+                        if (property.Value.XKubernetesPreserveUnknownFields == true)
                         {
-                            Attributes = attribute,
-                            Comment = CleanDescription(property.Value.Description)
-                        });
+                            combinedPropertyName = "JsonNode";
+
+                            model.Properties.Add(new Property("JsonNode" + (IsNullable(property) ? "?" : ""), propertyName)
+                            {
+                                Attributes = attribute,
+                                Comment = CleanDescription(property.Value.Description)
+                            });
+                        }
+                        else
+                        {
+                            if (property.Value.AdditionalProperties != null)
+                            {
+                                var addProp = ReSerialize(property.Value.AdditionalProperties);
+
+                                model.Properties.Add(new Property($"IDictionary<string, object>" + (IsNullable(property) ? "?" : ""), propertyName)
+                                {
+                                    Attributes = attribute,
+                                    Comment = CleanDescription(property.Value.Description)
+                                });
+                            }
+                            else
+                            {
+                                types.AddRange(GenerateClasses(property.Value, combinedPropertyName));
+
+                                model.Properties.Add(new Property(combinedPropertyName + (IsNullable(property) ? "?" : ""), propertyName)
+                                {
+                                    Attributes = attribute,
+                                    Comment = CleanDescription(property.Value.Description)
+                                });
+                            }
+                        }
 
                         if (isRoot)
                         {
@@ -417,7 +443,49 @@ public class CRDGenerator : ICRDGenerator
                         break;
 
                     case "array":
-                        types.AddRange(GenerateClasses(property.Value, combinedPropertyName));
+
+                        var type = "";
+
+                        var prop = ReSerialize(property.Value.Items);
+
+                        if (prop.XKubernetesPreserveUnknownFields == true)
+                        {
+                            type = "JsonNode";
+                        }
+                        else if (prop.XKubernetesIntOrString == true)
+                        {
+                            type = "string";
+                        }
+                        else if (!string.IsNullOrEmpty(prop.Type))
+                        {
+                            type = prop.Type;
+                        }
+                        else
+                        {
+                            throw new Exception($"Unknown Type: {prop}");
+                        }
+
+                        switch (type)
+                        {
+                            case "object":
+                                types.AddRange(GenerateClasses(property.Value, combinedPropertyName));
+                                break;
+                            case "string":
+                                combinedPropertyName = "string";
+                                break;
+                            case "integer":
+                            case "number":
+                                combinedPropertyName = "int";
+                                break;
+                            case "JsonNode":
+                            case "array":
+                                combinedPropertyName = "JsonNode";
+                                break;
+                            default:
+                                throw new Exception($"Unknown Type2: {type}");
+                                break;
+                        }
+
                         model.Properties.Add(new Property($"IList<{combinedPropertyName}>" + (IsNullable(property) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,
@@ -433,8 +501,9 @@ public class CRDGenerator : ICRDGenerator
                         });
                         break;
 
+                    case "number":
                     case "integer":
-                        if (property.Value.Format == "int64")
+                        if (property.Value.Format != null && property.Value.Format == "int64")
                         {
                             model.Properties.Add(new Property("long" + (IsNullable(property) ? "?" : ""), propertyName)
                             {
@@ -501,55 +570,17 @@ public class CRDGenerator : ICRDGenerator
         }
         else if (schema.Type == "array")
         {
-            if (schema.Items is (Dictionary<object, object>))
+            var obj = ReSerialize(schema.Items);
+
+            foreach (var @class in GenerateClasses(obj, name))
             {
-                var options = new JsonSerializerOptions()
+                // temp hack, as we add a class with the same name at the top of the Method
+                if (types.Any(x => x.Name == @class.Name))
                 {
-                    NumberHandling = JsonNumberHandling.AllowReadingFromString,
-
-                };
-                options.Converters.Add(new BoolConverter());
-
-                var obj = JsonSerializer.Deserialize<V1JSONSchemaProps>(JsonSerializer.Serialize(schema.Items), options);
-
-                foreach (var @class in GenerateClasses(obj, name))
-                {
-                    // temp hack, as we add a class with the same name at the top of the Method
-                    if (types.Any(x => x.Name == @class.Name))
-                    {
-                        types.RemoveAt(types.FindIndex(x => x.Name == @class.Name));
-                    }
-
-                    types.Add(@class);
+                    types.RemoveAt(types.FindIndex(x => x.Name == @class.Name));
                 }
-            }
-            else if (schema.Items is JsonElement ele)
-            {
-                switch (ele.ValueKind)
-                {
-                    case JsonValueKind.Undefined:
-                        break;
-                    case JsonValueKind.Object:
-                        break;
-                    case JsonValueKind.Array:
-                        break;
-                    case JsonValueKind.String:
-                        break;
-                    case JsonValueKind.Number:
-                        break;
-                    case JsonValueKind.True:
-                        break;
-                    case JsonValueKind.False:
-                        break;
-                    case JsonValueKind.Null:
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else
-            {
 
+                types.Add(@class);
             }
         }
         else if (schema.Type == "object")
@@ -690,5 +721,17 @@ public class CRDGenerator : ICRDGenerator
                 JsonTokenType.Number => reader.TryGetInt64(out long l) ? Convert.ToBoolean(l) : reader.TryGetDouble(out double d) ? Convert.ToBoolean(d) : false,
                 _ => throw new JsonException(),
             };
+    }
+
+    private V1JSONSchemaProps ReSerialize(object schema)
+    {
+        var options = new JsonSerializerOptions()
+        {
+            NumberHandling = JsonNumberHandling.AllowReadingFromString,
+        };
+
+        options.Converters.Add(new BoolConverter());
+
+        return JsonSerializer.Deserialize<V1JSONSchemaProps>(JsonSerializer.Serialize(schema), options);
     }
 }

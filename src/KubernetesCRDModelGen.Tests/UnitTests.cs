@@ -72,14 +72,11 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: Description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
@@ -111,14 +108,11 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: Description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
@@ -163,14 +157,11 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: Description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
@@ -205,23 +196,18 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: CRD description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
             spec:
-              description: Spec description
               type: object
               properties:
                 someString:
-                  description: SomeString description
                   type: string
 ";
         var type = await GetTypeYaml(yaml, "Test");
@@ -253,23 +239,18 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: CRD description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
             spec:
-              description: Spec description
               type: object
               properties:
                 someBool:
-                  description: SomeBool description
                   type: boolean
 ";
         var type = await GetTypeYaml(yaml, "Test");
@@ -301,23 +282,18 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: CRD description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
             spec:
-              description: Spec description
               type: object
               properties:
                 intProp:
-                  description: int description
                   type: integer
 ";
         var type = await GetTypeYaml(yaml, "Test");
@@ -349,23 +325,18 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: CRD description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
             spec:
-              description: Spec description
               type: object
               properties:
                 int64Prop:
-                  description: int64 description
                   type: integer
                   format: int64
 ";
@@ -374,6 +345,49 @@ spec:
         var specType = type.GetProperty("Spec").PropertyType;
 
         specType.GetProperty("Int64Prop").PropertyType.Should().Be<long?>();
+    }
+
+    [Fact]
+    public async Task TestNumber()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                numberProp:
+                  type: number
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("NumberProp").PropertyType.Should().Be<int?>();
     }
 
     [Fact]
@@ -398,14 +412,11 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: CRD description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
@@ -417,13 +428,7 @@ spec:
 ";
         var type = await GetTypeYaml(yaml, "Test");
 
-        var specType = type.GetProperty("Spec").PropertyType;
-
-        var specProp = specType.GetProperty("ExtensionData", typeof(Dictionary<string, object>));
-
-        specProp.Should().NotBeNull();
-
-        specProp.CustomAttributes.Any(y => y.AttributeType == typeof(JsonExtensionDataAttribute)).Should().BeTrue();
+        type.GetProperty("Spec").PropertyType.Should().Be<JsonNode>();
 
         type.GetProperty("Status").PropertyType.Should().Be<JsonNode>();
     }
@@ -450,23 +455,18 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: CRD description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
             spec:
-              description: Spec description
               type: object
               properties:
                 values:
-                  description: Unknown Values
                   x-kubernetes-preserve-unknown-fields: true
 ";
         var type = await GetTypeYaml(yaml, "Test");
@@ -498,14 +498,11 @@ spec:
       storage: true
       schema:
         openAPIV3Schema:
-          description: Description
           type: object
           properties:
             apiVersion:
-              description: APIVersion description
               type: string
             kind:
-              description: Kind description
               type: string
             metadata:
               type: object
@@ -513,74 +510,6 @@ spec:
         var type = await GetTypeYaml(yaml, "Test");
 
         type.Assembly.ManifestModule.ScopeName.Should().Be("tests-kubeui-com.dll");
-    }
-
-    [Fact]
-    public async Task TestArray()
-    {
-        var yaml = @"
-apiVersion: apiextensions.k8s.io/v1
-kind: CustomResourceDefinition
-metadata:
-  name: tests.kubeui.com
-spec:
-  group: kubeui.com
-  names:
-    plural: tests
-    singular: test
-    kind: Test
-    listKind: TestList
-  scope: Namespaced
-  versions:
-    - name: v1beta1
-      served: true
-      storage: true
-      schema:
-        openAPIV3Schema:
-          description: CRD description
-          type: object
-          properties:
-            apiVersion:
-              description: APIVersion description
-              type: string
-            kind:
-              description: Kind description
-              type: string
-            metadata:
-              type: object
-            spec:
-              description: Spec description
-              type: object
-              properties:
-                conditions:
-                  description: Conditions holds the conditions for the HelmRelease.
-                  items:
-                    description: condition item description
-                    properties:
-                      lastTransitionTime:
-                        description: LastTransitionTime description
-                        type: string
-                      message:
-                        description: Message description
-                        type: string
-                    required:
-                    - lastTransitionTime
-                    type: object
-                  type: array
-";
-        var type = await GetTypeYaml(yaml, "Test");
-
-        var specType = type.GetProperty("Spec").PropertyType;
-
-        var prop = specType.GetProperty("Conditions").PropertyType;
-
-        prop.Name.Should().Be("IList`1");
-
-        var listType = prop.GenericTypeArguments[0];
-
-        listType.Name.Should().Be("TestSpecConditions");
-        listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<string>();
-        listType.GetProperty("Message").PropertyType.Should().Be<string?>();
     }
 
     [Fact]
@@ -624,5 +553,200 @@ spec:
         var specType = type.GetProperty("Spec").PropertyType;
 
         specType.GetProperty("SomeString").PropertyType.Should().Be<string>();
+    }
+
+    [Fact]
+    public async Task TestArray()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                conditions:
+                  items:
+                    properties:
+                      lastTransitionTime:
+                        type: string
+                      message:
+                        type: string
+                    required:
+                    - lastTransitionTime
+                    type: object
+                  type: array
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var prop = specType.GetProperty("Conditions").PropertyType;
+
+        typeof(IList<>).IsAssignableFrom(prop.GetGenericTypeDefinition()).Should().BeTrue();
+
+        var listType = prop.GenericTypeArguments[0];
+
+        listType.Name.Should().Be("TestSpecConditions");
+        listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<string>();
+        listType.GetProperty("Message").PropertyType.Should().Be<string?>();
+    }
+
+    [Fact]
+    public async Task TestArray2()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                array:
+                  items:
+                    type: string
+                  type: array
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("Array").PropertyType.Should().Be<IList<string>>();
+    }
+
+    [Fact]
+    public async Task TestArray3()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                array:
+                  items:
+                    x-kubernetes-preserve-unknown-fields: ""True""
+                  type: array
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("Array").PropertyType.Should().Be<IList<JsonNode>>();
+    }
+
+    [Fact]
+    public async Task TestDict()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                customSelector:
+                  additionalProperties:
+                    type: string
+                  type: object
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("CustomSelector").PropertyType.Should().Be<IDictionary<string, object>>();
     }
 }
