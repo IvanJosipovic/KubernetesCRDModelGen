@@ -94,7 +94,7 @@ namespace KubernetesCRDModelGen.Sync
                     {
                         if (entry2.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry2.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
                         {
-                            if (!string.IsNullOrEmpty(config.FilesFilter) && !entry.Name.StartsWith(config.FilesFilter))
+                            if (!string.IsNullOrEmpty(config.FilesFilter) && !entry2.Name.StartsWith(config.FilesFilter))
                             {
                                 continue;
                             }
