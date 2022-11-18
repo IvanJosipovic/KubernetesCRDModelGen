@@ -582,4 +582,51 @@ spec:
         listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<string>();
         listType.GetProperty("Message").PropertyType.Should().Be<string?>();
     }
+
+    [Fact]
+    public async Task TestSpecialChars()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                $String:
+                  type: string
+                some-String:
+                  type: string
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("String").PropertyType.Should().Be<string>();
+
+        specType.GetProperty("SomeString").PropertyType.Should().Be<string>();
+    }
 }
