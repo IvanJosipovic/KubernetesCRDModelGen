@@ -104,7 +104,23 @@ public class CRDGenerator : ICRDGenerator
     private static List<char> characters = new List<char>
     {
         '-',
-        '$'
+        '$',
+        '`',
+        '!',
+        '@',
+        '#',
+        '$',
+        '%',
+        '^',
+        '&',
+        '*',
+        '(',
+        ')',
+        '-',
+        '+',
+        '~',
+        '_',
+        '='
     };
 
     public CRDGenerator(ILogger<CRDGenerator> logger)

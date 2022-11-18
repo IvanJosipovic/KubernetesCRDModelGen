@@ -616,16 +616,12 @@ spec:
             spec:
               type: object
               properties:
-                $String:
-                  type: string
-                some-String:
+                some~!@#$%^&*()-=_+String:
                   type: string
 ";
         var type = await GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
-
-        specType.GetProperty("String").PropertyType.Should().Be<string>();
 
         specType.GetProperty("SomeString").PropertyType.Should().Be<string>();
     }
