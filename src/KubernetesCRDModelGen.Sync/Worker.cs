@@ -1,5 +1,6 @@
 using ICSharpCode.SharpZipLib.GZip;
 using ICSharpCode.SharpZipLib.Tar;
+using ICSharpCode.SharpZipLib.Zip;
 using k8s;
 using k8s.Models;
 using System.Text;
@@ -68,15 +69,35 @@ namespace KubernetesCRDModelGen.Sync
                 {
                     await ProcessYamlStream(config, stream);
                 }
+                else if (url.EndsWith(".zip"))
+                {
+                    var zipStream = new ICSharpCode.SharpZipLib.Zip.ZipFile(stream);
+                    foreach (ZipEntry entry in zipStream)
+                    {
+                        if (entry.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
+                        {
+                            if (!string.IsNullOrEmpty(config.FilesFilter) && !entry.Name.StartsWith(config.FilesFilter))
+                            {
+                                continue;
+                            }
+                            using var fileContents = zipStream.GetInputStream(entry);
+                            await ProcessYamlStream(config, fileContents);
+                        }
+                    }
+                }
                 else if (url.EndsWith(".tar.gz"))
                 {
                     using var gzipStream = new GZipInputStream(stream);
                     using var tarInputStream = new TarInputStream(gzipStream, Encoding.UTF8);
-                    TarEntry entry;
-                    while ((entry = tarInputStream.GetNextEntry()) != null)
+                    TarEntry entry2;
+                    while ((entry2 = tarInputStream.GetNextEntry()) != null)
                     {
-                        if (entry.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
+                        if (entry2.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry2.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
                         {
+                            if (!string.IsNullOrEmpty(config.FilesFilter) && !entry.Name.StartsWith(config.FilesFilter))
+                            {
+                                continue;
+                            }
                             using var fileContents = new MemoryStream();
                             await tarInputStream.CopyEntryContentsAsync(fileContents, CancellationToken.None);
                             fileContents.Position = 0;

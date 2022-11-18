@@ -10,14 +10,16 @@ namespace KubernetesCRDModelGen.Sync
     {
         public string Group { get; set; }
 
-        public List<string> Urls { get; set; }
+        public List<string>? Urls { get; set; }
 
-        public string HelmRepo { get; set; }
+        public string? HelmRepo { get; set; }
 
-        public string HelmChart { get; set; }
+        public string? HelmChart { get; set; }
 
         public bool PreRelease { get; set; }
 
-        public string HelmCMD {get;set;}
+        public string? HelmCMD {get;set;}
+
+        public string? FilesFilter { get; set; }
     }
 }
