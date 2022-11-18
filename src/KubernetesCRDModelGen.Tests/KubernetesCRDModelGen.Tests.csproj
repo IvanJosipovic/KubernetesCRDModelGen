@@ -27,10 +27,4 @@
         <ProjectReference Include="..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-        <None Update="CRDs\*.yaml">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
-    </ItemGroup>
-
 </Project>
