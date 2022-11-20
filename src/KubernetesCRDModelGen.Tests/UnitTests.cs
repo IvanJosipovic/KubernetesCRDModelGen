@@ -592,11 +592,9 @@ spec:
                   items:
                     properties:
                       lastTransitionTime:
-                        type: string
+                        type: number
                       message:
                         type: string
-                    required:
-                    - lastTransitionTime
                     type: object
                   type: array
 ";
@@ -611,7 +609,7 @@ spec:
         var listType = prop.GenericTypeArguments[0];
 
         listType.Name.Should().Be("TestSpecConditions");
-        listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<string>();
+        listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<int?>();
         listType.GetProperty("Message").PropertyType.Should().Be<string?>();
     }
 
@@ -748,5 +746,164 @@ spec:
         var specType = type.GetProperty("Spec").PropertyType;
 
         specType.GetProperty("CustomSelector").PropertyType.Should().Be<IDictionary<string, object>>();
+    }
+
+    [Fact]
+    public async Task TestRequired()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                numberProp:
+                  type: number
+                numberProp2:
+                  type: number
+              required:
+              - numberProp
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("NumberProp").PropertyType.Should().Be<int>();
+
+        specType.GetProperty("NumberProp2").PropertyType.Should().Be<int?>();
+    }
+
+    [Fact]
+    public async Task TestRequiredNested()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                root:
+                  type: object
+                  properties:
+                    numberProp:
+                      type: number
+                    numberProp2:
+                      type: number
+                  required:
+                  - numberProp
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var rootType = specType.GetProperty("Root").PropertyType;
+
+        rootType.GetProperty("NumberProp").PropertyType.Should().Be<int>();
+
+        rootType.GetProperty("NumberProp2").PropertyType.Should().Be<int?>();
+    }
+
+    [Fact]
+    public async Task TestRequiredArray()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                array:
+                  items:
+                    type: object
+                    properties:
+                      numberProp:
+                        type: number
+                      numberProp2:
+                        type: number
+                    required:
+                    - numberProp
+                  type: array
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var itemType = specType.GetProperty("Array").PropertyType.GenericTypeArguments[0];
+
+        itemType.GetProperty("NumberProp").PropertyType.Should().Be<int>();
+
+        itemType.GetProperty("NumberProp2").PropertyType.Should().Be<int?>();
     }
 }

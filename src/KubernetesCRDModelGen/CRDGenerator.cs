@@ -378,7 +378,7 @@ public class CRDGenerator : ICRDGenerator
 
                 string propertyName = GetCleanPropertyName(property.Key);
 
-                var combinedPropertyName = GetCombinedName(name, property.Key);
+                var combinedPropertyName = name + propertyName;
 
                 if (isRoot)
                 {
@@ -397,7 +397,7 @@ public class CRDGenerator : ICRDGenerator
                         {
                             combinedPropertyName = "JsonNode";
 
-                            model.Properties.Add(new Property("JsonNode" + (IsNullable(property) ? "?" : ""), propertyName)
+                            model.Properties.Add(new Property("JsonNode" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                             {
                                 Attributes = attribute,
                                 Comment = CleanDescription(property.Value.Description)
@@ -409,7 +409,7 @@ public class CRDGenerator : ICRDGenerator
                             {
                                 var addProp = ReSerialize(property.Value.AdditionalProperties);
 
-                                model.Properties.Add(new Property($"IDictionary<string, object>" + (IsNullable(property) ? "?" : ""), propertyName)
+                                model.Properties.Add(new Property($"IDictionary<string, object>" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                                 {
                                     Attributes = attribute,
                                     Comment = CleanDescription(property.Value.Description)
@@ -419,7 +419,7 @@ public class CRDGenerator : ICRDGenerator
                             {
                                 types.AddRange(GenerateClasses(property.Value, combinedPropertyName));
 
-                                model.Properties.Add(new Property(combinedPropertyName + (IsNullable(property) ? "?" : ""), propertyName)
+                                model.Properties.Add(new Property(combinedPropertyName + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                                 {
                                     Attributes = attribute,
                                     Comment = CleanDescription(property.Value.Description)
@@ -433,11 +433,11 @@ public class CRDGenerator : ICRDGenerator
 
                             if (property.Key.Equals("status"))
                             {
-                                model.Interfaces.Add($"IStatus<{combinedPropertyName + (IsNullable(property) ? "?" : "")}>");
+                                model.Interfaces.Add($"IStatus<{combinedPropertyName + (IsNullable(schema.Required, property.Key) ? "?" : "")}>");
                             }
                             else if (property.Key.Equals("spec"))
                             {
-                                model.Interfaces.Add($"ISpec<{combinedPropertyName + (IsNullable(property) ? "?" : "")}>");
+                                model.Interfaces.Add($"ISpec<{combinedPropertyName + (IsNullable(schema.Required, property.Key) ? "?" : "")}>");
                             }
                         }
                         break;
@@ -486,7 +486,7 @@ public class CRDGenerator : ICRDGenerator
                                 break;
                         }
 
-                        model.Properties.Add(new Property($"IList<{combinedPropertyName}>" + (IsNullable(property) ? "?" : ""), propertyName)
+                        model.Properties.Add(new Property($"IList<{combinedPropertyName}>" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,
                             Comment = CleanDescription(property.Value.Description)
@@ -494,7 +494,7 @@ public class CRDGenerator : ICRDGenerator
                         break;
 
                     case "boolean":
-                        model.Properties.Add(new Property("bool" + (IsNullable(property) ? "?" : ""), propertyName)
+                        model.Properties.Add(new Property("bool" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,
                             Comment = CleanDescription(property.Value.Description)
@@ -505,7 +505,7 @@ public class CRDGenerator : ICRDGenerator
                     case "integer":
                         if (property.Value.Format != null && property.Value.Format == "int64")
                         {
-                            model.Properties.Add(new Property("long" + (IsNullable(property) ? "?" : ""), propertyName)
+                            model.Properties.Add(new Property("long" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                             {
                                 Attributes = attribute,
                                 Comment = CleanDescription(property.Value.Description)
@@ -513,7 +513,7 @@ public class CRDGenerator : ICRDGenerator
                         }
                         else
                         {
-                            model.Properties.Add(new Property("int" + (IsNullable(property) ? "?" : ""), propertyName)
+                            model.Properties.Add(new Property("int" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                             {
                                 Attributes = attribute,
                                 Comment = CleanDescription(property.Value.Description)
@@ -522,7 +522,7 @@ public class CRDGenerator : ICRDGenerator
                         break;
 
                     case "string":
-                        model.Properties.Add(new Property("string" + (IsNullable(property) ? "?" : ""), propertyName)
+                        model.Properties.Add(new Property("string" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,
                             Comment = CleanDescription(property.Value.Description)
@@ -533,7 +533,7 @@ public class CRDGenerator : ICRDGenerator
                     case null:
                         if (property.Value.XKubernetesPreserveUnknownFields == true)
                         {
-                            model.Properties.Add(new Property("JsonNode" + (IsNullable(property) ? "?" : ""), propertyName)
+                            model.Properties.Add(new Property("JsonNode" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                             {
                                 Attributes = attribute,
                                 Comment = CleanDescription(property.Value.Description)
@@ -545,11 +545,11 @@ public class CRDGenerator : ICRDGenerator
 
                                 if (property.Key.Equals("status"))
                                 {
-                                    model.Interfaces.Add($"IStatus<JsonNode{(IsNullable(property) ? "?" : "")}>");
+                                    model.Interfaces.Add($"IStatus<JsonNode{(IsNullable(schema.Required, property.Key) ? "?" : "")}>");
                                 }
                                 else if (property.Key.Equals("spec"))
                                 {
-                                    model.Interfaces.Add($"ISpec<JsonNode{(IsNullable(property) ? "?" : "")}>");
+                                    model.Interfaces.Add($"ISpec<JsonNode{(IsNullable(schema.Required, property.Key) ? "?" : "")}>");
                                 }
                             }
                         }
@@ -610,65 +610,58 @@ public class CRDGenerator : ICRDGenerator
 
     public static string GetCleanPropertyName(string name)
     {
-        name = CapitalizeFirstLetter(name);
-
-        if (keywords.Contains(name))
+        foreach (var badChar in characters)
         {
-            name = "@" + name;
-        }
-
-        foreach (var badcbar in characters)
-        {
-            if (name.Contains(badcbar))
+            if (name.Contains(badChar))
             {
-                name = name.Replace(badcbar.ToString(), "");
+                name = name.Replace(badChar.ToString(), "");
             }
         }
+
+        name = CapitalizeFirstLetter(name);
 
         return name;
     }
 
     public static string GetCleanNamespace(string name)
     {
-        if (keywords.Contains(name))
+        foreach (var badChar in characters)
         {
-            name = "@" + name;
-        }
-
-        foreach (var badcbar in characters)
-        {
-            if (name.Contains(badcbar))
+            if (name.Contains(badChar))
             {
-                name = name.Replace(badcbar.ToString(), "");
+                name = name.Replace(badChar.ToString(), "");
             }
         }
 
-        return name;
+        foreach (var keyword in keywords)
+        {
+            if (name.Contains("." + keyword + ".") || name.StartsWith(keyword + ".") || name.EndsWith("." + keyword))
+            {
+                name = name.Replace(keyword, "@" + keyword);
+            }
+        }
+
+        return name.ToLower();
     }
 
-    private string GetCombinedName(string name, string newName)
-    {
-        return name + CapitalizeFirstLetter(newName.Replace("$", "").Replace("@", ""));
-    }
-
-    private string CleanDescription(string? description)
+    private string? CleanDescription(string? description)
     {
         if (string.IsNullOrEmpty(description))
         {
-            return string.Empty;
+            return null;
         }
 
-        return "<summary>" + description.Replace("\n", "").Replace("\r", "") + "</summary>";
+        return $"<summary>{System.Security.SecurityElement.Escape(description.Replace("\n", "").Replace("\r", ""))}</summary>";
     }
 
-    private static bool IsNullable(KeyValuePair<string, V1JSONSchemaProps> item)
+    private static bool IsNullable(IList<string> required, string key)
     {
-        if (item.Value.Required == null)
+        if (required == null)
         {
             return true;
         }
 
-        return !item.Value.Required.Contains(item.Key);
+        return !required.Contains(key);
     }
 
     private static string CapitalizeFirstLetter(string str)
