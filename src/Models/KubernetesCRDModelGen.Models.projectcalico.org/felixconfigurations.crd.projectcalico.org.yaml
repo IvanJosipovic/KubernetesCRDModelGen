@@ -222,7 +222,7 @@ spec:
                 description: "IpsetsRefreshInterval is the period at which Felix re-checks all iptables state to ensure that no other process has accidentally broken Calico's rules. Set to 0 to disable iptables refresh. [Default: 90s]"
                 type: string
               iptablesBackend:
-                description: IptablesBackend specifies which backend of iptables will be used. The default is legacy.
+                description: IptablesBackend specifies which backend of iptables will be used. The default is Auto.
                 type: string
               iptablesFilterAllowAction:
                 type: string
