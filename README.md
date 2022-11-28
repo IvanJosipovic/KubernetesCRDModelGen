@@ -16,13 +16,13 @@ We publish the following premade packages
 
 | Group | NuGet |
 |---|---|
-| argoproj.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.argoproj.io/1.0.0-alpha.33) |
-| azure.com | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.com/1.0.0-alpha.33)  |
-| azure.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.upbound.io/1.0.0-alpha.33) |
-| fluxcd.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.fluxcd.io/1.0.0-alpha.33) |
-| istio.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.istio.io/1.0.0-alpha.33) |
-| jetstack.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.jetstack.io/1.0.0-alpha.33) |
-| projectcalico.org | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.projectcalico.org/1.0.0-alpha.33) |
+| argoproj.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.argoproj.io/) |
+| azure.com | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.com/)  |
+| azure.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.upbound.io/) |
+| fluxcd.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.fluxcd.io/) |
+| istio.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.istio.io/) |
+| jetstack.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.jetstack.io/) |
+| projectcalico.org | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.projectcalico.org/) |
 
 ## Type Mappings
 
