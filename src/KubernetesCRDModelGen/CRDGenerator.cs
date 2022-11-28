@@ -474,8 +474,17 @@ public class CRDGenerator : ICRDGenerator
                                 combinedPropertyName = "string";
                                 break;
                             case "integer":
+                                if (property.Value.Format != null && property.Value.Format == "int64")
+                                {
+                                    combinedPropertyName = "long";
+                                }
+                                else
+                                {
+                                    combinedPropertyName = "int";
+                                }
+                                break;
                             case "number":
-                                combinedPropertyName = "int";
+                                combinedPropertyName = "double";
                                 break;
                             case "JsonNode":
                             case "array":

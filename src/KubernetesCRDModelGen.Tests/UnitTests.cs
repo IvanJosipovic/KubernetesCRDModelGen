@@ -556,7 +556,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArray()
+    public async Task TestArrayOject()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -614,7 +614,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArray2()
+    public async Task TestArray()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -659,7 +659,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArray3()
+    public async Task TestArrayPresreveUnkown()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -701,6 +701,142 @@ spec:
         var specType = type.GetProperty("Spec").PropertyType;
 
         specType.GetProperty("Array").PropertyType.Should().Be<IList<JsonNode>>();
+    }
+
+    [Fact]
+    public async Task TestArrayNumber()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                array:
+                  items:
+                    type: number
+                  type: array
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("Array").PropertyType.Should().Be<IList<double>>();
+    }
+
+    [Fact]
+    public async Task TestArrayInteger()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                array:
+                  items:
+                    type: integer
+                  type: array
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("Array").PropertyType.Should().Be<IList<int>>();
+    }
+
+    [Fact]
+    public async Task TestArrayInteger64()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                array:
+                  items:
+                    type: integer
+                    format: int64
+                  type: array
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("Array").PropertyType.Should().Be<IList<int>>();
     }
 
     [Fact]
