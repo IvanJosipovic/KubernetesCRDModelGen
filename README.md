@@ -32,13 +32,14 @@ We publish the following premade packages
 | 'object' with AdditionalProperties | Dictionary
 | 'object' with x-kubernetes-embedded-type | object |
 | 'object' with x-kubernetes-preserve-unknown-fields | object |
-| x-kubernetes-int-or-string | k8s.Models.IntstrIntOrString |
+| 'object' with x-kubernetes-int-or-string | k8s.Models.IntstrIntOrString |
 | 'array' | List |
 | 'array' with x-kubernetes-list-type=map | List |
 | 'array' with x-kubernetes-list-type=set | List |
 | 'boolean' | boolean |
 | 'number' (all formats) | double |
-| 'integer' (all formats) | int (64) |
+| 'integer' (all formats) | int |
+| 'integer' with format=int64 | long |
 | 'null' | null |
 | 'string' | string |
 | 'string' with format=byte (base64 encoded) | bytes |

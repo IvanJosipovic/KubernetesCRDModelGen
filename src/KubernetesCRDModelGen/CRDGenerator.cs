@@ -450,11 +450,11 @@ public class CRDGenerator : ICRDGenerator
 
                         if (prop.XKubernetesPreserveUnknownFields == true)
                         {
-                            type = "JsonNode";
+                            type = typeof(JsonNode).Name;
                         }
                         else if (prop.XKubernetesIntOrString == true)
                         {
-                            type = "IntstrIntOrString";
+                            type = typeof(IntstrIntOrString).Name;
                         }
                         else if (!string.IsNullOrEmpty(prop.Type))
                         {
@@ -479,10 +479,10 @@ public class CRDGenerator : ICRDGenerator
                                 break;
                             case "JsonNode":
                             case "array":
-                                combinedPropertyName = "JsonNode";
+                                combinedPropertyName = typeof(JsonNode).Name;
                                 break;
                             case "IntstrIntOrString":
-                                combinedPropertyName = "IntstrIntOrString";
+                                combinedPropertyName = typeof(IntstrIntOrString).Name;
                                 break;
                             default:
                                 throw new Exception($"Unknown Type2: {type}");
@@ -505,6 +505,12 @@ public class CRDGenerator : ICRDGenerator
                         break;
 
                     case "number":
+                        model.Properties.Add(new Property("double" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
+                        {
+                            Attributes = attribute,
+                            Comment = CleanDescription(property.Value.Description)
+                        });
+                        break;
                     case "integer":
                         if (property.Value.Format != null && property.Value.Format == "int64")
                         {

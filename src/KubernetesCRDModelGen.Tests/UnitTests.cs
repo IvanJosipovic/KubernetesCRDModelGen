@@ -387,7 +387,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("NumberProp").PropertyType.Should().Be<int?>();
+        specType.GetProperty("NumberProp").PropertyType.Should().Be<double?>();
     }
 
     [Fact]
@@ -609,7 +609,7 @@ spec:
         var listType = prop.GenericTypeArguments[0];
 
         listType.Name.Should().Be("TestSpecConditions");
-        listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<int?>();
+        listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<double?>();
         listType.GetProperty("Message").PropertyType.Should().Be<string?>();
     }
 
@@ -792,9 +792,9 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("NumberProp").PropertyType.Should().Be<int>();
+        specType.GetProperty("NumberProp").PropertyType.Should().Be<double>();
 
-        specType.GetProperty("NumberProp2").PropertyType.Should().Be<int?>();
+        specType.GetProperty("NumberProp2").PropertyType.Should().Be<double?>();
     }
 
     [Fact]
@@ -846,9 +846,9 @@ spec:
 
         var rootType = specType.GetProperty("Root").PropertyType;
 
-        rootType.GetProperty("NumberProp").PropertyType.Should().Be<int>();
+        rootType.GetProperty("NumberProp").PropertyType.Should().Be<double>();
 
-        rootType.GetProperty("NumberProp2").PropertyType.Should().Be<int?>();
+        rootType.GetProperty("NumberProp2").PropertyType.Should().Be<double?>();
     }
 
     [Fact]
@@ -902,9 +902,9 @@ spec:
 
         var itemType = specType.GetProperty("Array").PropertyType.GenericTypeArguments[0];
 
-        itemType.GetProperty("NumberProp").PropertyType.Should().Be<int>();
+        itemType.GetProperty("NumberProp").PropertyType.Should().Be<double>();
 
-        itemType.GetProperty("NumberProp2").PropertyType.Should().Be<int?>();
+        itemType.GetProperty("NumberProp2").PropertyType.Should().Be<double?>();
     }
 
     [Fact]
