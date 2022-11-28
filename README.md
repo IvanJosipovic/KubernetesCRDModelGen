@@ -39,6 +39,7 @@ We publish the following premade packages
 | 'object' with x-kubernetes-preserve-unknown-fields | object |
 | 'object' with x-kubernetes-int-or-string | k8s.Models.IntstrIntOrString |
 | 'array' | List |
+| 'array' with x-kubernetes-list-type=atomic | List |
 | 'array' with x-kubernetes-list-type=map | List |
 | 'array' with x-kubernetes-list-type=set | List |
 | 'boolean' | boolean |
@@ -47,7 +48,8 @@ We publish the following premade packages
 | 'integer' with format=int64 | long |
 | 'null' | null |
 | 'string' | string |
-| 'string' with format=byte (base64 encoded) | bytes |
-| 'string' with format=date | timestamp (google.protobuf.Timestamp) |
-| 'string' with format=datetime | timestamp (google.protobuf.Timestamp) |
-| 'string' with format=duration | duration (google.protobuf.Duration) |
+| 'string' with format=binary | ~~bytes~~ |
+| 'string' with format=byte (base64 encoded) | ~~bytes~~ |
+| 'string' with format=date | ~~timestamp (google.protobuf.Timestamp)~~ |
+| 'string' with format=date-time | ~~timestamp (google.protobuf.Timestamp)~~ |
+| 'string' with format=duration | ~~duration (google.protobuf.Duration)~~ |
