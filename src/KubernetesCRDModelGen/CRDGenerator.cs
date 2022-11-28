@@ -454,7 +454,7 @@ public class CRDGenerator : ICRDGenerator
                         }
                         else if (prop.XKubernetesIntOrString == true)
                         {
-                            type = "string";
+                            type = "IntstrIntOrString";
                         }
                         else if (!string.IsNullOrEmpty(prop.Type))
                         {
@@ -480,6 +480,9 @@ public class CRDGenerator : ICRDGenerator
                             case "JsonNode":
                             case "array":
                                 combinedPropertyName = "JsonNode";
+                                break;
+                            case "IntstrIntOrString":
+                                combinedPropertyName = "IntstrIntOrString";
                                 break;
                             default:
                                 throw new Exception($"Unknown Type2: {type}");
@@ -552,6 +555,15 @@ public class CRDGenerator : ICRDGenerator
                                     model.Interfaces.Add($"ISpec<JsonNode{(IsNullable(schema.Required, property.Key) ? "?" : "")}>");
                                 }
                             }
+                        }
+
+                        if (property.Value.XKubernetesIntOrString == true)
+                        {
+                            model.Properties.Add(new Property("IntstrIntOrString" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
+                            {
+                                Attributes = attribute,
+                                Comment = CleanDescription(property.Value.Description)
+                            });
                         }
                         break;
 

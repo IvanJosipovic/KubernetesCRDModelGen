@@ -906,4 +906,100 @@ spec:
 
         itemType.GetProperty("NumberProp2").PropertyType.Should().Be<int?>();
     }
+
+    [Fact]
+    public async Task TestIntOrString()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                intOrString:
+                  anyOf:
+                  - type: integer
+                  - type: string
+                  x-kubernetes-int-or-string: true
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var itemType = specType.GetProperty("IntOrString").PropertyType.Should().Be<IntstrIntOrString?>();
+    }
+
+    [Fact]
+    public async Task TestIntOrStringArray()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                intOrStringArray:
+                  items:
+                    anyOf:
+                    - type: integer
+                    - type: string
+                    x-kubernetes-int-or-string: true
+                  type: array
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var itemType = specType.GetProperty("IntOrStringArray").PropertyType.GenericTypeArguments[0];
+
+        itemType.Should().Be<IntstrIntOrString>();
+    }
 }
