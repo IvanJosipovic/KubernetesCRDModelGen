@@ -16,9 +16,9 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <IsPackable>true</IsPackable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<!--<EmitCompilerGeneratedFiles Condition="'$(Configuration)' == 'Debug'">true</EmitCompilerGeneratedFiles>
-		<CompilerGeneratedFilesOutputPath Condition="'$(Configuration)' == 'Debug'">Generated</CompilerGeneratedFilesOutputPath>-->
-	</PropertyGroup>
+        <!--<EmitCompilerGeneratedFiles Condition="'$(Configuration)' == 'Debug'">true</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath Condition="'$(Configuration)' == 'Debug'">Generated</CompilerGeneratedFilesOutputPath>-->
+    </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="KubernetesClient.Models" Version="9.0.38" />

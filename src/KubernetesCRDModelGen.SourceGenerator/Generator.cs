@@ -23,8 +23,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
             var name = context.Compilation.AssemblyName;
 
-            var serializer = new SerializerBuilder()
-                .Build();
+            var serializer = new SerializerBuilder().Build();
 
             var deserializer = new DeserializerBuilder().Build();
 
@@ -55,7 +54,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
                             try
                             {
                                 var crd = KubernetesYaml.Deserialize<V1CustomResourceDefinition>(yaml);
-                                var code = crdGen.GenerateCode(crd, "KubernetesCRDModelGen.Models." + CRDGenerator.GetCleanNamespace(crd.Spec.Group.ToLower()));
+                                var code = crdGen.GenerateCode(crd, "KubernetesCRDModelGen.Models." + CRDGenerator.GetCleanNamespace(crd.Spec.Group));
 
                                 // fix for summary https://github.com/borisdj/CsCodeGenerator/issues/6
                                 code = code.Replace("    // <summary>", "    /// <summary>");
