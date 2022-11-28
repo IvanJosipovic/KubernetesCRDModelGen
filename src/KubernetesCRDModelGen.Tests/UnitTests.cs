@@ -836,7 +836,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("Array").PropertyType.Should().Be<IList<int>>();
+        specType.GetProperty("Array").PropertyType.Should().Be<IList<long>>();
     }
 
     [Fact]

@@ -474,7 +474,7 @@ public class CRDGenerator : ICRDGenerator
                                 combinedPropertyName = "string";
                                 break;
                             case "integer":
-                                if (property.Value.Format != null && property.Value.Format == "int64")
+                                if (prop.Format != null && prop.Format == "int64")
                                 {
                                     combinedPropertyName = "long";
                                 }
