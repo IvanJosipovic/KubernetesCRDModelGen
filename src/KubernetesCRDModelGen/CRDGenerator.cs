@@ -450,11 +450,11 @@ public class CRDGenerator : ICRDGenerator
 
                         if (prop.XKubernetesPreserveUnknownFields == true)
                         {
-                            type = typeof(JsonNode).Name;
+                            type = "JsonNode";
                         }
                         else if (prop.XKubernetesIntOrString == true)
                         {
-                            type = typeof(IntstrIntOrString).Name;
+                            type = "IntstrIntOrString";
                         }
                         else if (!string.IsNullOrEmpty(prop.Type))
                         {
@@ -479,10 +479,10 @@ public class CRDGenerator : ICRDGenerator
                                 break;
                             case "JsonNode":
                             case "array":
-                                combinedPropertyName = typeof(JsonNode).Name;
+                                combinedPropertyName = "JsonNode";
                                 break;
                             case "IntstrIntOrString":
-                                combinedPropertyName = typeof(IntstrIntOrString).Name;
+                                combinedPropertyName = "IntstrIntOrString";
                                 break;
                             default:
                                 throw new Exception($"Unknown Type2: {type}");
