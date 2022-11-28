@@ -1,7 +1,9 @@
 # KubernetesCRDModelGen
+
 [![codecov](https://codecov.io/gh/IvanJosipovic/KubernetesCRDModelGen/branch/alpha/graph/badge.svg?token=Xxq5yw1TtO)](https://codecov.io/gh/IvanJosipovic/KubernetesCRDModelGen)
 
 ## What is this?
+
 This project contains components which allow generation of C# Classes/Assemblies from Kubernetes Custom Resource Definitions.
 
 - KubernetesCRDModelGen
@@ -12,6 +14,7 @@ This project contains components which allow generation of C# Classes/Assemblies
   - Synchronizes Custom Resource Definitions from numerous sources
 
 ## Published Packages
+
 We publish the following premade packages
 
 | Group | NuGet |
@@ -29,7 +32,7 @@ We publish the following premade packages
 | OpenAPIv3 type | Type |
 |---|---|
 | 'object' with Properties | object |
-| 'object' with AdditionalProperties | Dictionary
+| 'object' with AdditionalProperties | Dictionary |
 | 'object' with x-kubernetes-embedded-type | object |
 | 'object' with x-kubernetes-preserve-unknown-fields | object |
 | 'object' with x-kubernetes-int-or-string | k8s.Models.IntstrIntOrString |
