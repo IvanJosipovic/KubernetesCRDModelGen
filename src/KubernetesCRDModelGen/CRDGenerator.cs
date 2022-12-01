@@ -151,6 +151,7 @@ public class CRDGenerator : ICRDGenerator
             "System;",
             "k8s.Models;",
             "k8s;",
+            "KubernetesCRDModelGen.Models;",
         };
 
         FileModel complexNumberFile = new FileModel(crd.Metadata.Name);
@@ -540,6 +541,16 @@ public class CRDGenerator : ICRDGenerator
                         break;
 
                     case "string":
+                        if (property.Value.EnumProperty != null && property.Value.EnumProperty.Count > 0)
+                        {
+                            var attr = new AttributeModel()
+                            {
+                                Name = "EnumAttribute",
+                                SingleParameter = new Parameter($"new[] {{ {property.Value.EnumProperty.Aggregate((a,b) => $"{a}, \"{b}\"" )} }}")
+                            };
+                            attribute.Add(attr);
+                        }
+
                         model.Properties.Add(new Property("string" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,

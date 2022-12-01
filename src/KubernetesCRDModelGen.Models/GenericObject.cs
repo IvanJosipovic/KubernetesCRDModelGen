@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
-namespace KubernetesCRDModelGen;
+namespace KubernetesCRDModelGen.Models;
 
 public class GenericObject : IKubernetesObject<V1ObjectMeta>, ISpec<JsonObject>
 {

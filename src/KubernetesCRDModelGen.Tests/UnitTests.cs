@@ -1,15 +1,14 @@
 using FluentAssertions;
 using k8s;
 using k8s.Models;
+using KubernetesCRDModelGen.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json;
+using System.Reflection;
 using System.Text.Json.Nodes;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -1137,5 +1136,57 @@ spec:
         var itemType = specType.GetProperty("IntOrStringArray").PropertyType.GenericTypeArguments[0];
 
         itemType.Should().Be<IntstrIntOrString>();
+    }
+
+    [Fact]
+    public async Task TestEnum()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                testEnum:
+                  enum:
+                  - Always
+                  - IfNotPresent
+                  type: string
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var itemType = specType.GetProperty("TestEnum");
+
+        var attr = itemType.GetCustomAttribute<EnumAttribute>();
+
+        string[] test = new[] { "Always", "IfNotPresent" };
+
+        attr.Options.Should().Equal(test);
     }
 }
