@@ -16,6 +16,7 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <IsPackable>true</IsPackable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>1591,8669</NoWarn>
         <!--<EmitCompilerGeneratedFiles Condition="'$(Configuration)' == 'Debug'">true</EmitCompilerGeneratedFiles>
         <CompilerGeneratedFilesOutputPath Condition="'$(Configuration)' == 'Debug'">Generated</CompilerGeneratedFilesOutputPath>-->
     </PropertyGroup>

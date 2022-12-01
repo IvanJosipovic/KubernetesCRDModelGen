@@ -27,6 +27,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ADEAADA0-E242-41C9-8260-01241B2C4D3B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{C8A0D23A-5D92-4D34-B00D-0429F68AD7A6}"
+	ProjectSection(SolutionItems) = preProject
+		src\Models\.editorconfig = src\Models\.editorconfig
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubernetesCRDModelGen.Models.argoproj.io", "src\Models\KubernetesCRDModelGen.Models.argoproj.io\KubernetesCRDModelGen.Models.argoproj.io.csproj", "{E63C1497-85FA-442C-A680-F95F24732AD1}"
 EndProject
