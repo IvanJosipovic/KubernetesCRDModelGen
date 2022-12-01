@@ -56,6 +56,7 @@
     </Target>
 
     <ItemGroup>
+        <ProjectReference Include="..\KubernetesCRDModelGen.Models\KubernetesCRDModelGen.Models.csproj" />
         <ProjectReference Include="..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" />
     </ItemGroup>
 
