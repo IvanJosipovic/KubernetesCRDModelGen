@@ -473,6 +473,15 @@ public class CRDGenerator : ICRDGenerator
                                 break;
                             case "string":
                                 combinedPropertyName = "string";
+                                if (prop.EnumProperty != null && prop.EnumProperty.Count > 0)
+                                {
+                                    var attr = new AttributeModel()
+                                    {
+                                        Name = "EnumAttribute",
+                                        SingleParameter = new Parameter($"new[] {{ {string.Join(",", prop.EnumProperty.Select(x => "\"" + x.ToString() + "\""))} }}")
+                                    };
+                                    attribute.Add(attr);
+                                }
                                 break;
                             case "integer":
                                 if (prop.Format != null && prop.Format == "int64")
@@ -546,7 +555,7 @@ public class CRDGenerator : ICRDGenerator
                             var attr = new AttributeModel()
                             {
                                 Name = "EnumAttribute",
-                                SingleParameter = new Parameter($"new[] {{ {property.Value.EnumProperty.Aggregate((a,b) => $"{a}, \"{b}\"" )} }}")
+                                SingleParameter = new Parameter($"new[] {{ {string.Join(",", property.Value.EnumProperty.Select(x => "\"" + x.ToString() + "\""))} }}")
                             };
                             attribute.Add(attr);
                         }

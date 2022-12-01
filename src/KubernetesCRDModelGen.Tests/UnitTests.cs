@@ -1138,6 +1138,7 @@ spec:
         itemType.Should().Be<IntstrIntOrString>();
     }
 
+
     [Fact]
     public async Task TestEnum()
     {
@@ -1175,6 +1176,7 @@ spec:
                   enum:
                   - Always
                   - IfNotPresent
+                  - Never
                   type: string
 ";
         var type = await GetTypeYaml(yaml, "Test");
@@ -1185,7 +1187,62 @@ spec:
 
         var attr = itemType.GetCustomAttribute<EnumAttribute>();
 
-        string[] test = new[] { "Always", "IfNotPresent" };
+        string[] test = new[] { "Always", "IfNotPresent", "Never" };
+
+        attr.Options.Should().Equal(test);
+    }
+
+    [Fact]
+    public async Task TestEnumArray()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                enumArray:
+                  items:
+                    type: string
+                    enum:
+                    - Always
+                    - IfNotPresent
+                    - Never
+                  type: array
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var itemType = specType.GetProperty("EnumArray");
+
+        var attr = itemType.GetCustomAttribute<EnumAttribute>();
+
+        string[] test = new[] { "Always", "IfNotPresent", "Never" };
 
         attr.Options.Should().Equal(test);
     }
