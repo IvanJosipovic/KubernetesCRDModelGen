@@ -15,11 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.releaserc.json = .releaserc.json
-		.github\workflows\sync-crds.yaml = .github\workflows\sync-crds.yaml
 		.github\workflows\cicd.yaml = .github\workflows\cicd.yaml
 		src\Models\Directory.Build.props = src\Models\Directory.Build.props
 		global.json = global.json
 		README.md = README.md
+		.github\workflows\sync-crds.yaml = .github\workflows\sync-crds.yaml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubernetesCRDModelGen.Sync", "src\KubernetesCRDModelGen.Sync\KubernetesCRDModelGen.Sync.csproj", "{C5612CD0-4CCB-4A68-8592-8C984548B5BD}"
@@ -28,7 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ADEAADA0-E24
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{C8A0D23A-5D92-4D34-B00D-0429F68AD7A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Models.argoproj.io", "src\Models\KubernetesCRDModelGen.Models.argoproj.io\KubernetesCRDModelGen.Models.argoproj.io.csproj", "{E63C1497-85FA-442C-A680-F95F24732AD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubernetesCRDModelGen.Models.argoproj.io", "src\Models\KubernetesCRDModelGen.Models.argoproj.io\KubernetesCRDModelGen.Models.argoproj.io.csproj", "{E63C1497-85FA-442C-A680-F95F24732AD1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Models.aws.upbound.io", "src\Models\KubernetesCRDModelGen.Models.aws.upbound.io\KubernetesCRDModelGen.Models.aws.upbound.io.csproj", "{8281E893-F8C7-4103-8331-59239E30FC97}"
 EndProject
@@ -47,6 +47,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Models.jetstack.io", "src\Models\KubernetesCRDModelGen.Models.jetstack.io\KubernetesCRDModelGen.Models.jetstack.io.csproj", "{8C9CF06C-EA6D-4B8C-AFA2-A57F1CC2AAE3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Models.projectcalico.org", "src\Models\KubernetesCRDModelGen.Models.projectcalico.org\KubernetesCRDModelGen.Models.projectcalico.org.csproj", "{DE473BD7-29E4-414F-9BB8-17EBA3BDF2D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubernetesCRDModelGen.Models", "src\KubernetesCRDModelGen.Models\KubernetesCRDModelGen.Models.csproj", "{7AD179F4-5F68-4516-94A9-DD51A68BA118}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,14 +116,20 @@ Global
 		{DE473BD7-29E4-414F-9BB8-17EBA3BDF2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE473BD7-29E4-414F-9BB8-17EBA3BDF2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE473BD7-29E4-414F-9BB8-17EBA3BDF2D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD179F4-5F68-4516-94A9-DD51A68BA118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD179F4-5F68-4516-94A9-DD51A68BA118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD179F4-5F68-4516-94A9-DD51A68BA118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD179F4-5F68-4516-94A9-DD51A68BA118}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {85C5FEF7-AB6B-473B-8EC8-C2B35531DA80}
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{ECBA3700-5700-4DC8-9091-201755AEE9E5} = {ADEAADA0-E242-41C9-8260-01241B2C4D3B}
+		{A49FD3D4-4148-4D30-B06C-7B217EC3C056} = {ADEAADA0-E242-41C9-8260-01241B2C4D3B}
+		{4D2E27AC-BAFE-4FCD-970D-1EC4869DFC89} = {ADEAADA0-E242-41C9-8260-01241B2C4D3B}
+		{A83C1998-4BC4-4FE9-BE4A-9D732B77BF77} = {ADEAADA0-E242-41C9-8260-01241B2C4D3B}
+		{C5612CD0-4CCB-4A68-8592-8C984548B5BD} = {ADEAADA0-E242-41C9-8260-01241B2C4D3B}
 		{C8A0D23A-5D92-4D34-B00D-0429F68AD7A6} = {ADEAADA0-E242-41C9-8260-01241B2C4D3B}
 		{E63C1497-85FA-442C-A680-F95F24732AD1} = {C8A0D23A-5D92-4D34-B00D-0429F68AD7A6}
 		{8281E893-F8C7-4103-8331-59239E30FC97} = {C8A0D23A-5D92-4D34-B00D-0429F68AD7A6}
@@ -133,5 +141,9 @@ Global
 		{9005A01A-4B5A-448E-BF52-D10E200DC070} = {C8A0D23A-5D92-4D34-B00D-0429F68AD7A6}
 		{8C9CF06C-EA6D-4B8C-AFA2-A57F1CC2AAE3} = {C8A0D23A-5D92-4D34-B00D-0429F68AD7A6}
 		{DE473BD7-29E4-414F-9BB8-17EBA3BDF2D3} = {C8A0D23A-5D92-4D34-B00D-0429F68AD7A6}
+		{7AD179F4-5F68-4516-94A9-DD51A68BA118} = {ADEAADA0-E242-41C9-8260-01241B2C4D3B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85C5FEF7-AB6B-473B-8EC8-C2B35531DA80}
 	EndGlobalSection
 EndGlobal
