@@ -39,10 +39,10 @@ jobs:
         run: |
           git add .
           $createPR = (git diff --cached --numstat | Measure-Object -Line).Lines -gt 1;
-          echo "createpr=$createPR" >> $GITHUB_OUTPUT
+          echo "createpr=$createPR" >> $env:GITHUB_OUTPUT
 
       - name: Create Pull Request
-        if: steps.checkfiles.outputs.createpr == 'true'
+        if: steps.checkfiles.outputs.createpr == 'True'
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
