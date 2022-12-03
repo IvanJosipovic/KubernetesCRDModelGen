@@ -33,7 +33,16 @@ jobs:
       - name: Add Models to Solution
         run: dotnet sln add ./src/Models/**/*.csproj
 
+      - name: Check Files Changed
+        id: checkfiles
+        run: |
+          git add .
+          $createPR = (git diff --cached --numstat | Measure-Object -Line).Lines -gt 1;
+          echo "createpr=$createPR" >> $GITHUB_OUTPUT
+        shell: pwsh
+
       - name: Create Pull Request
+        if: steps.checkfiles.outputs.createpr == 'True'
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
