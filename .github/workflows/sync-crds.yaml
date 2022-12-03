@@ -46,8 +46,8 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            branch: sync-charts
-            commit-message: "feat: Update CRDs"
-            title: "feat: Update CRDs"
-            body: "Automated CRD Sync"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: sync-charts
+          commit-message: "feat: Update CRDs"
+          title: "feat: Update CRDs"
+          body: "Automated CRD Sync"
