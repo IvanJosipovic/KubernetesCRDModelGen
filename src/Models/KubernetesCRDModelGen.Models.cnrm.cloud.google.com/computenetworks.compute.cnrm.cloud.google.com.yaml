@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.97.0
+    cnrm.cloud.google.com/version: 1.98.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -67,6 +67,10 @@ spec:
                   the user can explicitly connect subnetwork resources.
                 type: boolean
               deleteDefaultRoutesOnCreate:
+                description: >-
+                  If set to 'true', default routes ('0.0.0.0/0') will be deleted
+
+                  immediately after network creation. Defaults to 'false'.
                 type: boolean
               description:
                 description: >-
