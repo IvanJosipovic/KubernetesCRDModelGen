@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.97.0
+    cnrm.cloud.google.com/version: 1.98.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -637,6 +637,12 @@ spec:
                             host's Docker daemon's cache and is available to use as the name for a
 
                             later build step.
+                          type: string
+                        script:
+                          description: >-
+                            A shell script to be executed in the step. 
+
+                            When script is provided, the user cannot specify the entrypoint or args.
                           type: string
                         secretEnv:
                           description: >-
