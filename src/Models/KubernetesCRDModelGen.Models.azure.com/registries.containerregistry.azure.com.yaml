@@ -233,6 +233,7 @@ spec:
                 - Enabled
                 type: string
             required:
+            - location
             - owner
             - sku
             type: object
@@ -396,28 +397,10 @@ spec:
                 type: object
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210901.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210901.PrivateEndpointConnection_STATUS instead
                   properties:
                     id:
                       type: string
-                    systemData:
-                      description: Deprecated version of SystemData_STATUS. Use v1beta20210901.SystemData_STATUS instead
-                      properties:
-                        createdAt:
-                          type: string
-                        createdBy:
-                          type: string
-                        createdByType:
-                          description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1beta20210901.SystemData_CreatedByType_STATUS instead
-                          type: string
-                        lastModifiedAt:
-                          type: string
-                        lastModifiedBy:
-                          type: string
-                        lastModifiedByType:
-                          description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1beta20210901.SystemData_LastModifiedByType_STATUS instead
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -906,7 +889,7 @@ spec:
                 type: object
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20210901.PrivateEndpointConnection_STATUS_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210901.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20210901.PrivateEndpointConnection_STATUS Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210901.PrivateEndpointConnection_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -915,27 +898,6 @@ spec:
                       type: object
                     id:
                       type: string
-                    systemData:
-                      description: Storage version of v1alpha1api20210901.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1beta20210901.SystemData_STATUS instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        createdAt:
-                          type: string
-                        createdBy:
-                          type: string
-                        createdByType:
-                          type: string
-                        lastModifiedAt:
-                          type: string
-                        lastModifiedBy:
-                          type: string
-                        lastModifiedByType:
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -1021,7 +983,7 @@ spec:
     name: v1beta20210901
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/resourceDefinitions/registries'
+        description: 'Generator information: - Generated from: /containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2021-09-01/containerregistry.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1046,10 +1008,10 @@ spec:
                 description: 'DataEndpointEnabled: Enable a single data endpoint per region for serving data.'
                 type: boolean
               encryption:
-                description: 'Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/EncryptionProperty'
+                description: 'Encryption: The encryption settings of container registry.'
                 properties:
                   keyVaultProperties:
-                    description: 'Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/KeyVaultProperties'
+                    description: 'KeyVaultProperties: Key vault properties.'
                     properties:
                       identity:
                         description: 'Identity: The client id of the identity which will be used to access key vault.'
@@ -1066,7 +1028,7 @@ spec:
                     type: string
                 type: object
               identity:
-                description: 'Identity: Managed identity for the resource.'
+                description: 'Identity: The identity of the container registry.'
                 properties:
                   principalId:
                     description: 'PrincipalId: The principal ID of resource identity.'
@@ -1084,7 +1046,6 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/UserIdentityProperties'
                       properties:
                         clientId:
                           description: 'ClientId: The client id of user assigned identity.'
@@ -1117,7 +1078,7 @@ spec:
                   ipRules:
                     description: 'IpRules: The IP ACL rules.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/IPRule'
+                      description: IP rule with specific IP or IP range in CIDR format.
                       properties:
                         action:
                           description: 'Action: The action of IP ACL rule.'
@@ -1202,7 +1163,7 @@ spec:
                 - Enabled
                 type: string
               sku:
-                description: 'Sku: The SKU of a container registry.'
+                description: 'Sku: The SKU of the container registry.'
                 properties:
                   name:
                     description: 'Name: The SKU name of the container registry. Required for registry creation.'
@@ -1218,19 +1179,21 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: The tags of the resource.'
                 type: object
               zoneRedundancy:
-                description: 'ZoneRedundancy: Whether or not zone redundancy is enabled for this container registry.'
+                description: 'ZoneRedundancy: Whether or not zone redundancy is enabled for this container registry'
                 enum:
                 - Disabled
                 - Enabled
                 type: string
             required:
+            - location
             - owner
             - sku
             type: object
           status:
+            description: An object that represents a container registry.
             properties:
               adminUserEnabled:
                 description: 'AdminUserEnabled: The value that indicates whether the admin user is enabled.'
@@ -1356,6 +1319,7 @@ spec:
                   ipRules:
                     description: 'IpRules: The IP ACL rules.'
                     items:
+                      description: IP rule with specific IP or IP range in CIDR format.
                       properties:
                         action:
                           description: 'Action: The action of IP ACL rule.'
@@ -1410,32 +1374,11 @@ spec:
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: List of private endpoint connections for a container registry.'
                 items:
+                  description: An object that represents a private endpoint connection for a container registry.
                   properties:
                     id:
                       description: 'Id: The resource ID.'
                       type: string
-                    systemData:
-                      description: 'SystemData: Metadata pertaining to creation and last modification of the resource.'
-                      properties:
-                        createdAt:
-                          description: 'CreatedAt: The timestamp of resource creation (UTC).'
-                          type: string
-                        createdBy:
-                          description: 'CreatedBy: The identity that created the resource.'
-                          type: string
-                        createdByType:
-                          description: 'CreatedByType: The type of identity that created the resource.'
-                          type: string
-                        lastModifiedAt:
-                          description: 'LastModifiedAt: The timestamp of resource modification (UTC).'
-                          type: string
-                        lastModifiedBy:
-                          description: 'LastModifiedBy: The identity that last modified the resource.'
-                          type: string
-                        lastModifiedByType:
-                          description: 'LastModifiedByType: The type of identity that last modified the resource.'
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -1522,7 +1465,7 @@ spec:
     name: v1beta20210901storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210901.Registry Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/resourceDefinitions/registries'
+        description: 'Storage version of v1beta20210901.Registry Generator information: - Generated from: /containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2021-09-01/containerregistry.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1551,7 +1494,7 @@ spec:
               dataEndpointEnabled:
                 type: boolean
               encryption:
-                description: 'Storage version of v1beta20210901.EncryptionProperty Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/EncryptionProperty'
+                description: Storage version of v1beta20210901.EncryptionProperty
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1559,7 +1502,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   keyVaultProperties:
-                    description: 'Storage version of v1beta20210901.KeyVaultProperties Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/KeyVaultProperties'
+                    description: Storage version of v1beta20210901.KeyVaultProperties
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1575,7 +1518,7 @@ spec:
                     type: string
                 type: object
               identity:
-                description: 'Storage version of v1beta20210901.IdentityProperties Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/IdentityProperties'
+                description: Storage version of v1beta20210901.IdentityProperties Managed identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1590,7 +1533,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: 'Storage version of v1beta20210901.UserIdentityProperties Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/UserIdentityProperties'
+                      description: Storage version of v1beta20210901.UserIdentityProperties
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1609,7 +1552,7 @@ spec:
               networkRuleBypassOptions:
                 type: string
               networkRuleSet:
-                description: 'Storage version of v1beta20210901.NetworkRuleSet Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/NetworkRuleSet'
+                description: Storage version of v1beta20210901.NetworkRuleSet The network rule set for a container registry.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1620,7 +1563,7 @@ spec:
                     type: string
                   ipRules:
                     items:
-                      description: 'Storage version of v1beta20210901.IPRule Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/IPRule'
+                      description: Storage version of v1beta20210901.IPRule IP rule with specific IP or IP range in CIDR format.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1646,7 +1589,7 @@ spec:
                 - name
                 type: object
               policies:
-                description: 'Storage version of v1beta20210901.Policies Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/Policies'
+                description: Storage version of v1beta20210901.Policies The policies for a container registry.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1654,7 +1597,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   exportPolicy:
-                    description: 'Storage version of v1beta20210901.ExportPolicy Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/ExportPolicy'
+                    description: Storage version of v1beta20210901.ExportPolicy The export policy for a container registry.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1665,7 +1608,7 @@ spec:
                         type: string
                     type: object
                   quarantinePolicy:
-                    description: 'Storage version of v1beta20210901.QuarantinePolicy Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/QuarantinePolicy'
+                    description: Storage version of v1beta20210901.QuarantinePolicy The quarantine policy for a container registry.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1676,7 +1619,7 @@ spec:
                         type: string
                     type: object
                   retentionPolicy:
-                    description: 'Storage version of v1beta20210901.RetentionPolicy Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/RetentionPolicy'
+                    description: Storage version of v1beta20210901.RetentionPolicy The retention policy for a container registry.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1689,7 +1632,7 @@ spec:
                         type: string
                     type: object
                   trustPolicy:
-                    description: 'Storage version of v1beta20210901.TrustPolicy Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/TrustPolicy'
+                    description: Storage version of v1beta20210901.TrustPolicy The content trust policy for a container registry.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1705,7 +1648,7 @@ spec:
               publicNetworkAccess:
                 type: string
               sku:
-                description: 'Storage version of v1beta20210901.Sku Generated from: https://schema.management.azure.com/schemas/2021-09-01/Microsoft.ContainerRegistry.json#/definitions/Sku'
+                description: Storage version of v1beta20210901.Sku The SKU of a container registry.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1725,7 +1668,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210901.Registry_STATUS
+            description: Storage version of v1beta20210901.Registry_STATUS An object that represents a container registry.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1809,7 +1752,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210901.IdentityProperties_STATUS
+                description: Storage version of v1beta20210901.IdentityProperties_STATUS Managed identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1847,7 +1790,7 @@ spec:
               networkRuleBypassOptions:
                 type: string
               networkRuleSet:
-                description: Storage version of v1beta20210901.NetworkRuleSet_STATUS
+                description: Storage version of v1beta20210901.NetworkRuleSet_STATUS The network rule set for a container registry.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1858,7 +1801,7 @@ spec:
                     type: string
                   ipRules:
                     items:
-                      description: Storage version of v1beta20210901.IPRule_STATUS
+                      description: Storage version of v1beta20210901.IPRule_STATUS IP rule with specific IP or IP range in CIDR format.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1873,7 +1816,7 @@ spec:
                     type: array
                 type: object
               policies:
-                description: Storage version of v1beta20210901.Policies_STATUS
+                description: Storage version of v1beta20210901.Policies_STATUS The policies for a container registry.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1881,7 +1824,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   exportPolicy:
-                    description: Storage version of v1beta20210901.ExportPolicy_STATUS
+                    description: Storage version of v1beta20210901.ExportPolicy_STATUS The export policy for a container registry.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1892,7 +1835,7 @@ spec:
                         type: string
                     type: object
                   quarantinePolicy:
-                    description: Storage version of v1beta20210901.QuarantinePolicy_STATUS
+                    description: Storage version of v1beta20210901.QuarantinePolicy_STATUS The quarantine policy for a container registry.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1903,7 +1846,7 @@ spec:
                         type: string
                     type: object
                   retentionPolicy:
-                    description: Storage version of v1beta20210901.RetentionPolicy_STATUS
+                    description: Storage version of v1beta20210901.RetentionPolicy_STATUS The retention policy for a container registry.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1918,7 +1861,7 @@ spec:
                         type: string
                     type: object
                   trustPolicy:
-                    description: Storage version of v1beta20210901.TrustPolicy_STATUS
+                    description: Storage version of v1beta20210901.TrustPolicy_STATUS The content trust policy for a container registry.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1933,7 +1876,7 @@ spec:
                 type: object
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210901.PrivateEndpointConnection_STATUS_SubResourceEmbedded
+                  description: Storage version of v1beta20210901.PrivateEndpointConnection_STATUS An object that represents a private endpoint connection for a container registry.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1942,27 +1885,6 @@ spec:
                       type: object
                     id:
                       type: string
-                    systemData:
-                      description: Storage version of v1beta20210901.SystemData_STATUS
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        createdAt:
-                          type: string
-                        createdBy:
-                          type: string
-                        createdByType:
-                          type: string
-                        lastModifiedAt:
-                          type: string
-                        lastModifiedBy:
-                          type: string
-                        lastModifiedByType:
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -1970,7 +1892,7 @@ spec:
               publicNetworkAccess:
                 type: string
               sku:
-                description: Storage version of v1beta20210901.Sku_STATUS
+                description: Storage version of v1beta20210901.Sku_STATUS The SKU of a container registry.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1983,7 +1905,7 @@ spec:
                     type: string
                 type: object
               status:
-                description: Storage version of v1beta20210901.Status_STATUS
+                description: Storage version of v1beta20210901.Status_STATUS The status of an Azure resource at the time the operation was called.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1998,7 +1920,7 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1beta20210901.SystemData_STATUS
+                description: Storage version of v1beta20210901.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

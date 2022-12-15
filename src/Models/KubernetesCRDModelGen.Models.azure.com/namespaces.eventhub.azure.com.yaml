@@ -152,33 +152,6 @@ spec:
                 required:
                 - name
                 type: object
-              privateEndpointConnections:
-                items:
-                  description: Deprecated version of Namespace_Properties_PrivateEndpointConnections_Spec. Use v1beta20211101.Namespace_Properties_PrivateEndpointConnections_Spec instead
-                  properties:
-                    privateEndpoint:
-                      description: Deprecated version of PrivateEndpoint. Use v1beta20211101.PrivateEndpoint instead
-                      properties:
-                        reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-                          properties:
-                            armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                              type: string
-                            group:
-                              description: Group is the Kubernetes group of the resource.
-                              type: string
-                            kind:
-                              description: Kind is the Kubernetes kind of the resource.
-                              type: string
-                            name:
-                              description: Name is the Kubernetes name of the resource.
-                              type: string
-                          type: object
-                      type: object
-                  type: object
-                type: array
               sku:
                 description: Deprecated version of Sku. Use v1beta20211101.Sku instead
                 properties:
@@ -212,7 +185,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of EHNamespace_STATUS. Use v1beta20211101.EHNamespace_STATUS instead
+            description: Deprecated version of Namespace_STATUS. Use v1beta20211101.Namespace_STATUS instead
             properties:
               alternateName:
                 type: string
@@ -321,28 +294,10 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20211101.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20211101.PrivateEndpointConnection_STATUS instead
                   properties:
                     id:
                       type: string
-                    systemData:
-                      description: Deprecated version of SystemData_STATUS. Use v1beta20211101.SystemData_STATUS instead
-                      properties:
-                        createdAt:
-                          type: string
-                        createdBy:
-                          type: string
-                        createdByType:
-                          description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1beta20211101.SystemData_CreatedByType_STATUS instead
-                          type: string
-                        lastModifiedAt:
-                          type: string
-                        lastModifiedBy:
-                          type: string
-                        lastModifiedByType:
-                          description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1beta20211101.SystemData_LastModifiedByType_STATUS instead
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -543,43 +498,6 @@ spec:
                 required:
                 - name
                 type: object
-              privateEndpointConnections:
-                items:
-                  description: Storage version of v1alpha1api20211101.Namespace_Properties_PrivateEndpointConnections_Spec Deprecated version of Namespace_Properties_PrivateEndpointConnections_Spec. Use v1beta20211101.Namespace_Properties_PrivateEndpointConnections_Spec instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    privateEndpoint:
-                      description: Storage version of v1alpha1api20211101.PrivateEndpoint Deprecated version of PrivateEndpoint. Use v1beta20211101.PrivateEndpoint instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        reference:
-                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-                          properties:
-                            armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                              type: string
-                            group:
-                              description: Group is the Kubernetes group of the resource.
-                              type: string
-                            kind:
-                              description: Kind is the Kubernetes kind of the resource.
-                              type: string
-                            name:
-                              description: Name is the Kubernetes name of the resource.
-                              type: string
-                          type: object
-                      type: object
-                  type: object
-                type: array
               sku:
                 description: Storage version of v1alpha1api20211101.Sku Deprecated version of Sku. Use v1beta20211101.Sku instead
                 properties:
@@ -605,7 +523,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20211101.EHNamespace_STATUS Deprecated version of EHNamespace_STATUS. Use v1beta20211101.EHNamespace_STATUS instead
+            description: Storage version of v1alpha1api20211101.Namespace_STATUS Deprecated version of Namespace_STATUS. Use v1beta20211101.Namespace_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -741,7 +659,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20211101.PrivateEndpointConnection_STATUS_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20211101.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20211101.PrivateEndpointConnection_STATUS Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20211101.PrivateEndpointConnection_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -750,27 +668,6 @@ spec:
                       type: object
                     id:
                       type: string
-                    systemData:
-                      description: Storage version of v1alpha1api20211101.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1beta20211101.SystemData_STATUS instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        createdAt:
-                          type: string
-                        createdBy:
-                          type: string
-                        createdByType:
-                          type: string
-                        lastModifiedAt:
-                          type: string
-                        lastModifiedBy:
-                          type: string
-                        lastModifiedByType:
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -847,7 +744,7 @@ spec:
     name: v1beta20211101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/resourceDefinitions/namespaces'
+        description: 'Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/namespaces-preview.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -888,20 +785,19 @@ spec:
                 description: 'DisableLocalAuth: This property disables SAS authentication for the Event Hubs namespace.'
                 type: boolean
               encryption:
-                description: 'Encryption: Properties to configure Encryption'
+                description: 'Encryption: Properties of BYOK Encryption description'
                 properties:
                   keySource:
-                    description: 'KeySource: Enumerates the possible value of keySource for Encryption.'
+                    description: 'KeySource: Enumerates the possible value of keySource for Encryption'
                     enum:
                     - Microsoft.KeyVault
                     type: string
                   keyVaultProperties:
                     description: 'KeyVaultProperties: Properties of KeyVault'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/definitions/KeyVaultProperties'
+                      description: Properties to configure keyVault Properties
                       properties:
                         identity:
-                          description: 'Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/definitions/UserAssignedIdentityProperties'
                           properties:
                             userAssignedIdentityReference:
                               description: 'UserAssignedIdentityReference: ARM ID of user Identity selected for encryption'
@@ -937,7 +833,7 @@ spec:
                     type: boolean
                 type: object
               identity:
-                description: 'Identity: Properties to configure Identity for Bring your Own Keys'
+                description: 'Identity: Properties of BYOK Identity description'
                 properties:
                   type:
                     description: 'Type: Type of managed service identity.'
@@ -955,7 +851,7 @@ spec:
                 description: 'KafkaEnabled: Value that indicates whether Kafka is enabled for eventhub namespace.'
                 type: boolean
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource location.'
                 type: string
               maximumThroughputUnits:
                 description: "MaximumThroughputUnits: Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)"
@@ -969,35 +865,8 @@ spec:
                 required:
                 - name
                 type: object
-              privateEndpointConnections:
-                description: 'PrivateEndpointConnections: List of private endpoint connections.'
-                items:
-                  properties:
-                    privateEndpoint:
-                      description: 'PrivateEndpoint: PrivateEndpoint information.'
-                      properties:
-                        reference:
-                          description: 'Reference: The ARM identifier for Private Endpoint.'
-                          properties:
-                            armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                              type: string
-                            group:
-                              description: Group is the Kubernetes group of the resource.
-                              type: string
-                            kind:
-                              description: Kind is the Kubernetes kind of the resource.
-                              type: string
-                            name:
-                              description: Name is the Kubernetes name of the resource.
-                              type: string
-                          type: object
-                      type: object
-                  type: object
-                type: array
               sku:
-                description: 'Sku: SKU parameters supplied to the create namespace operation'
+                description: 'Sku: Properties of sku resource'
                 properties:
                   capacity:
                     description: 'Capacity: The Event Hubs throughput units for Basic or Standard tiers, where value should be 0 to 20 throughput units. The Event Hubs premium units for Premium tier, where value should be 0 to 10 premium units.'
@@ -1023,7 +892,7 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
               zoneRedundant:
                 description: 'ZoneRedundant: Enabling this property creates a Standard Event Hubs Namespace in regions supported availability zones.'
@@ -1089,6 +958,7 @@ spec:
                   keyVaultProperties:
                     description: 'KeyVaultProperties: Properties of KeyVault'
                     items:
+                      description: Properties to configure keyVault Properties
                       properties:
                         identity:
                           properties:
@@ -1128,6 +998,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
+                      description: Recognized Dictionary value.
                       properties:
                         clientId:
                           description: 'ClientId: Client Id of user assigned identity'
@@ -1160,32 +1031,11 @@ spec:
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: List of private endpoint connections.'
                 items:
+                  description: Properties of the PrivateEndpointConnection.
                   properties:
                     id:
                       description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
                       type: string
-                    systemData:
-                      description: 'SystemData: The system meta data relating to this resource.'
-                      properties:
-                        createdAt:
-                          description: 'CreatedAt: The timestamp of resource creation (UTC).'
-                          type: string
-                        createdBy:
-                          description: 'CreatedBy: The identity that created the resource.'
-                          type: string
-                        createdByType:
-                          description: 'CreatedByType: The type of identity that created the resource.'
-                          type: string
-                        lastModifiedAt:
-                          description: 'LastModifiedAt: The type of identity that last modified the resource.'
-                          type: string
-                        lastModifiedBy:
-                          description: 'LastModifiedBy: The identity that last modified the resource.'
-                          type: string
-                        lastModifiedByType:
-                          description: 'LastModifiedByType: The type of identity that last modified the resource.'
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -1268,7 +1118,7 @@ spec:
     name: v1beta20211101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20211101.Namespace Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/resourceDefinitions/namespaces'
+        description: 'Storage version of v1beta20211101.Namespace Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/namespaces-preview.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1313,7 +1163,7 @@ spec:
               disableLocalAuth:
                 type: boolean
               encryption:
-                description: 'Storage version of v1beta20211101.Encryption Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/definitions/Encryption'
+                description: Storage version of v1beta20211101.Encryption Properties to configure Encryption
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1324,7 +1174,7 @@ spec:
                     type: string
                   keyVaultProperties:
                     items:
-                      description: 'Storage version of v1beta20211101.KeyVaultProperties Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/definitions/KeyVaultProperties'
+                      description: Storage version of v1beta20211101.KeyVaultProperties Properties to configure keyVault Properties
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1332,7 +1182,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         identity:
-                          description: 'Storage version of v1beta20211101.UserAssignedIdentityProperties Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/definitions/UserAssignedIdentityProperties'
+                          description: Storage version of v1beta20211101.UserAssignedIdentityProperties
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1369,7 +1219,7 @@ spec:
                     type: boolean
                 type: object
               identity:
-                description: 'Storage version of v1beta20211101.Identity Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/definitions/Identity'
+                description: Storage version of v1beta20211101.Identity Properties to configure Identity for Bring your Own Keys
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1398,45 +1248,8 @@ spec:
                 required:
                 - name
                 type: object
-              privateEndpointConnections:
-                items:
-                  description: Storage version of v1beta20211101.Namespace_Properties_PrivateEndpointConnections_Spec
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    privateEndpoint:
-                      description: 'Storage version of v1beta20211101.PrivateEndpoint Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/definitions/PrivateEndpoint'
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        reference:
-                          description: 'Reference: The ARM identifier for Private Endpoint.'
-                          properties:
-                            armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                              type: string
-                            group:
-                              description: Group is the Kubernetes group of the resource.
-                              type: string
-                            kind:
-                              description: Kind is the Kubernetes kind of the resource.
-                              type: string
-                            name:
-                              description: Name is the Kubernetes name of the resource.
-                              type: string
-                          type: object
-                      type: object
-                  type: object
-                type: array
               sku:
-                description: 'Storage version of v1beta20211101.Sku Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/definitions/Sku'
+                description: Storage version of v1beta20211101.Sku SKU parameters supplied to the create namespace operation
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1460,7 +1273,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20211101.EHNamespace_STATUS
+            description: Storage version of v1beta20211101.Namespace_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1510,7 +1323,7 @@ spec:
               disableLocalAuth:
                 type: boolean
               encryption:
-                description: Storage version of v1beta20211101.Encryption_STATUS
+                description: Storage version of v1beta20211101.Encryption_STATUS Properties to configure Encryption
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1521,7 +1334,7 @@ spec:
                     type: string
                   keyVaultProperties:
                     items:
-                      description: Storage version of v1beta20211101.KeyVaultProperties_STATUS
+                      description: Storage version of v1beta20211101.KeyVaultProperties_STATUS Properties to configure keyVault Properties
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1553,7 +1366,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20211101.Identity_STATUS
+                description: Storage version of v1beta20211101.Identity_STATUS Properties to configure Identity for Bring your Own Keys
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1568,7 +1381,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20211101.UserAssignedIdentity_STATUS
+                      description: Storage version of v1beta20211101.UserAssignedIdentity_STATUS Recognized Dictionary value.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1596,7 +1409,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20211101.PrivateEndpointConnection_STATUS_SubResourceEmbedded
+                  description: Storage version of v1beta20211101.PrivateEndpointConnection_STATUS Properties of the PrivateEndpointConnection.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1605,27 +1418,6 @@ spec:
                       type: object
                     id:
                       type: string
-                    systemData:
-                      description: Storage version of v1beta20211101.SystemData_STATUS
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        createdAt:
-                          type: string
-                        createdBy:
-                          type: string
-                        createdByType:
-                          type: string
-                        lastModifiedAt:
-                          type: string
-                        lastModifiedBy:
-                          type: string
-                        lastModifiedByType:
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -1633,7 +1425,7 @@ spec:
               serviceBusEndpoint:
                 type: string
               sku:
-                description: Storage version of v1beta20211101.Sku_STATUS
+                description: Storage version of v1beta20211101.Sku_STATUS SKU parameters supplied to the create namespace operation
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1650,7 +1442,7 @@ spec:
               status:
                 type: string
               systemData:
-                description: Storage version of v1beta20211101.SystemData_STATUS
+                description: Storage version of v1beta20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

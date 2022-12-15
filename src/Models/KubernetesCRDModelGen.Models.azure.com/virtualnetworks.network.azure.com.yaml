@@ -60,8 +60,6 @@ spec:
                     items:
                       type: string
                     type: array
-                required:
-                - addressPrefixes
                 type: object
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
@@ -94,8 +92,6 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
                 type: object
               dhcpOptions:
                 description: Deprecated version of DhcpOptions. Use v1beta20201101.DhcpOptions instead
@@ -104,8 +100,6 @@ spec:
                     items:
                       type: string
                     type: array
-                required:
-                - dnsServers
                 type: object
               enableDdosProtection:
                 type: boolean
@@ -117,7 +111,7 @@ spec:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20201101.ExtendedLocation_Type instead
+                    description: Deprecated version of ExtendedLocationType. Use v1beta20201101.ExtendedLocationType instead
                     enum:
                     - EdgeZone
                     type: string
@@ -146,8 +140,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               location:
@@ -166,7 +158,6 @@ spec:
                   type: string
                 type: object
             required:
-            - addressSpace
             - owner
             type: object
           status:
@@ -369,8 +360,6 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
                 type: object
               dhcpOptions:
                 description: Storage version of v1alpha1api20201101.DhcpOptions Deprecated version of DhcpOptions. Use v1beta20201101.DhcpOptions instead
@@ -428,8 +417,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               location:
@@ -614,7 +601,7 @@ spec:
     name: v1beta20201101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/virtualNetworks'
+        description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -634,8 +621,6 @@ spec:
                     items:
                       type: string
                     type: array
-                required:
-                - addressPrefixes
                 type: object
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
@@ -669,8 +654,6 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
                 type: object
               dhcpOptions:
                 description: 'DhcpOptions: The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.'
@@ -680,8 +663,6 @@ spec:
                     items:
                       type: string
                     type: array
-                required:
-                - dnsServers
                 type: object
               enableDdosProtection:
                 description: 'EnableDdosProtection: Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.'
@@ -707,7 +688,7 @@ spec:
               ipAllocations:
                 description: 'IpAllocations: Array of IpAllocation which reference this VNET.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                  description: Reference to another subresource.
                   properties:
                     reference:
                       description: 'Reference: Resource ID.'
@@ -726,12 +707,10 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource location.'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
@@ -745,13 +724,13 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
             required:
-            - addressSpace
             - owner
             type: object
           status:
+            description: Virtual Network resource.
             properties:
               addressSpace:
                 description: 'AddressSpace: The AddressSpace that contains an array of IP address ranges that can be used by subnets.'
@@ -848,6 +827,7 @@ spec:
               ipAllocations:
                 description: 'IpAllocations: Array of IpAllocation which reference this VNET.'
                 items:
+                  description: Reference to another subresource.
                   properties:
                     id:
                       description: 'Id: Resource ID.'
@@ -896,7 +876,7 @@ spec:
     name: v1beta20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201101.VirtualNetwork Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/virtualNetworks'
+        description: 'Storage version of v1beta20201101.VirtualNetwork Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -915,7 +895,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               addressSpace:
-                description: 'Storage version of v1beta20201101.AddressSpace Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/AddressSpace'
+                description: Storage version of v1beta20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -931,7 +911,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               bgpCommunities:
-                description: 'Storage version of v1beta20201101.VirtualNetworkBgpCommunities Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/VirtualNetworkBgpCommunities'
+                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -942,7 +922,7 @@ spec:
                     type: string
                 type: object
               ddosProtectionPlan:
-                description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -966,11 +946,9 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
                 type: object
               dhcpOptions:
-                description: 'Storage version of v1beta20201101.DhcpOptions Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/DhcpOptions'
+                description: Storage version of v1beta20201101.DhcpOptions DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -987,7 +965,7 @@ spec:
               enableVmProtection:
                 type: boolean
               extendedLocation:
-                description: 'Storage version of v1beta20201101.ExtendedLocation Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/ExtendedLocation'
+                description: Storage version of v1beta20201101.ExtendedLocation ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1001,7 +979,7 @@ spec:
                 type: object
               ipAllocations:
                 items:
-                  description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                  description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1025,8 +1003,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               location:
@@ -1050,7 +1026,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.VirtualNetwork_STATUS
+            description: Storage version of v1beta20201101.VirtualNetwork_STATUS Virtual Network resource.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1058,7 +1034,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               addressSpace:
-                description: Storage version of v1beta20201101.AddressSpace_STATUS
+                description: Storage version of v1beta20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1071,7 +1047,7 @@ spec:
                     type: array
                 type: object
               bgpCommunities:
-                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_STATUS
+                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1118,7 +1094,7 @@ spec:
                   type: object
                 type: array
               ddosProtectionPlan:
-                description: Storage version of v1beta20201101.SubResource_STATUS
+                description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1129,7 +1105,7 @@ spec:
                     type: string
                 type: object
               dhcpOptions:
-                description: Storage version of v1beta20201101.DhcpOptions_STATUS
+                description: Storage version of v1beta20201101.DhcpOptions_STATUS DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1148,7 +1124,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1beta20201101.ExtendedLocation_STATUS
+                description: Storage version of v1beta20201101.ExtendedLocation_STATUS ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1164,7 +1140,7 @@ spec:
                 type: string
               ipAllocations:
                 items:
-                  description: Storage version of v1beta20201101.SubResource_STATUS
+                  description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                   properties:
                     $propertyBag:
                       additionalProperties:

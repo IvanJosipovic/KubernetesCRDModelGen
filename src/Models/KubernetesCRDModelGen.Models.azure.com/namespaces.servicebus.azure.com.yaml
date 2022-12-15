@@ -173,10 +173,11 @@ spec:
               zoneRedundant:
                 type: boolean
             required:
+            - location
             - owner
             type: object
           status:
-            description: Deprecated version of SBNamespace_STATUS. Use v1beta20210101preview.SBNamespace_STATUS instead
+            description: Deprecated version of Namespace_STATUS. Use v1beta20210101preview.Namespace_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -273,28 +274,10 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210101preview.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210101preview.PrivateEndpointConnection_STATUS instead
                   properties:
                     id:
                       type: string
-                    systemData:
-                      description: Deprecated version of SystemData_STATUS. Use v1beta20210101preview.SystemData_STATUS instead
-                      properties:
-                        createdAt:
-                          type: string
-                        createdBy:
-                          type: string
-                        createdByType:
-                          description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1beta20210101preview.SystemData_CreatedByType_STATUS instead
-                          type: string
-                        lastModifiedAt:
-                          type: string
-                        lastModifiedBy:
-                          type: string
-                        lastModifiedByType:
-                          description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1beta20210101preview.SystemData_LastModifiedByType_STATUS instead
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -522,7 +505,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210101preview.SBNamespace_STATUS Deprecated version of SBNamespace_STATUS. Use v1beta20210101preview.SBNamespace_STATUS instead
+            description: Storage version of v1alpha1api20210101preview.Namespace_STATUS Deprecated version of Namespace_STATUS. Use v1beta20210101preview.Namespace_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -646,7 +629,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20210101preview.PrivateEndpointConnection_STATUS_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210101preview.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20210101preview.PrivateEndpointConnection_STATUS Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210101preview.PrivateEndpointConnection_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -655,27 +638,6 @@ spec:
                       type: object
                     id:
                       type: string
-                    systemData:
-                      description: Storage version of v1alpha1api20210101preview.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1beta20210101preview.SystemData_STATUS instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        createdAt:
-                          type: string
-                        createdBy:
-                          type: string
-                        createdByType:
-                          type: string
-                        lastModifiedAt:
-                          type: string
-                        lastModifiedBy:
-                          type: string
-                        lastModifiedByType:
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -752,7 +714,7 @@ spec:
     name: v1beta20210101preview
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces'
+        description: 'Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -768,20 +730,19 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               encryption:
-                description: 'Encryption: Properties to configure Encryption'
+                description: 'Encryption: Properties of BYOK Encryption description'
                 properties:
                   keySource:
-                    description: 'KeySource: Enumerates the possible value of keySource for Encryption.'
+                    description: 'KeySource: Enumerates the possible value of keySource for Encryption'
                     enum:
                     - Microsoft.KeyVault
                     type: string
                   keyVaultProperties:
                     description: 'KeyVaultProperties: Properties of KeyVault'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/KeyVaultProperties'
+                      description: Properties to configure keyVault Properties
                       properties:
                         identity:
-                          description: 'Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/UserAssignedIdentityProperties'
                           properties:
                             userAssignedIdentityReference:
                               description: 'UserAssignedIdentityReference: ARM ID of user Identity selected for encryption'
@@ -817,7 +778,7 @@ spec:
                     type: boolean
                 type: object
               identity:
-                description: 'Identity: Properties to configure User Assigned Identities for Bring your Own Keys'
+                description: 'Identity: Properties of BYOK Identity description'
                 properties:
                   type:
                     description: 'Type: Type of managed service identity.'
@@ -862,7 +823,7 @@ spec:
                 - name
                 type: object
               sku:
-                description: 'Sku: SKU of the namespace.'
+                description: 'Sku: Properties of SKU'
                 properties:
                   capacity:
                     description: 'Capacity: The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.'
@@ -887,12 +848,13 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags'
                 type: object
               zoneRedundant:
                 description: 'ZoneRedundant: Enabling this property creates a Premium Service Bus Namespace in regions supported availability zones.'
                 type: boolean
             required:
+            - location
             - owner
             type: object
           status:
@@ -944,6 +906,7 @@ spec:
                   keyVaultProperties:
                     description: 'KeyVaultProperties: Properties of KeyVault'
                     items:
+                      description: Properties to configure keyVault Properties
                       properties:
                         identity:
                           properties:
@@ -983,6 +946,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
+                      description: Recognized Dictionary value.
                       properties:
                         clientId:
                           description: 'ClientId: Client Id of user assigned identity'
@@ -1006,32 +970,11 @@ spec:
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: List of private endpoint connections.'
                 items:
+                  description: Properties of the PrivateEndpointConnection.
                   properties:
                     id:
                       description: 'Id: Resource Id'
                       type: string
-                    systemData:
-                      description: 'SystemData: The system meta data relating to this resource.'
-                      properties:
-                        createdAt:
-                          description: 'CreatedAt: The timestamp of resource creation (UTC).'
-                          type: string
-                        createdBy:
-                          description: 'CreatedBy: The identity that created the resource.'
-                          type: string
-                        createdByType:
-                          description: 'CreatedByType: The type of identity that created the resource.'
-                          type: string
-                        lastModifiedAt:
-                          description: 'LastModifiedAt: The type of identity that last modified the resource.'
-                          type: string
-                        lastModifiedBy:
-                          description: 'LastModifiedBy: The identity that last modified the resource.'
-                          type: string
-                        lastModifiedByType:
-                          description: 'LastModifiedByType: The type of identity that last modified the resource.'
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -1114,7 +1057,7 @@ spec:
     name: v1beta20210101previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210101preview.Namespace Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces'
+        description: 'Storage version of v1beta20210101preview.Namespace Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/namespace-preview.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1136,7 +1079,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               encryption:
-                description: 'Storage version of v1beta20210101preview.Encryption Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/Encryption'
+                description: Storage version of v1beta20210101preview.Encryption Properties to configure Encryption
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1147,7 +1090,7 @@ spec:
                     type: string
                   keyVaultProperties:
                     items:
-                      description: 'Storage version of v1beta20210101preview.KeyVaultProperties Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/KeyVaultProperties'
+                      description: Storage version of v1beta20210101preview.KeyVaultProperties Properties to configure keyVault Properties
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1155,7 +1098,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         identity:
-                          description: 'Storage version of v1beta20210101preview.UserAssignedIdentityProperties Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/UserAssignedIdentityProperties'
+                          description: Storage version of v1beta20210101preview.UserAssignedIdentityProperties
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1192,7 +1135,7 @@ spec:
                     type: boolean
                 type: object
               identity:
-                description: 'Storage version of v1beta20210101preview.Identity Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/Identity'
+                description: Storage version of v1beta20210101preview.Identity Properties to configure User Assigned Identities for Bring your Own Keys
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1247,7 +1190,7 @@ spec:
                 - name
                 type: object
               sku:
-                description: 'Storage version of v1beta20210101preview.SBSku Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/SBSku'
+                description: Storage version of v1beta20210101preview.SBSku SKU of the namespace.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1271,7 +1214,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210101preview.SBNamespace_STATUS
+            description: Storage version of v1beta20210101preview.Namespace_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1315,7 +1258,7 @@ spec:
               createdAt:
                 type: string
               encryption:
-                description: Storage version of v1beta20210101preview.Encryption_STATUS
+                description: Storage version of v1beta20210101preview.Encryption_STATUS Properties to configure Encryption
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1326,7 +1269,7 @@ spec:
                     type: string
                   keyVaultProperties:
                     items:
-                      description: Storage version of v1beta20210101preview.KeyVaultProperties_STATUS
+                      description: Storage version of v1beta20210101preview.KeyVaultProperties_STATUS Properties to configure keyVault Properties
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1358,7 +1301,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210101preview.Identity_STATUS
+                description: Storage version of v1beta20210101preview.Identity_STATUS Properties to configure User Assigned Identities for Bring your Own Keys
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1373,7 +1316,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20210101preview.DictionaryValue_STATUS
+                      description: Storage version of v1beta20210101preview.DictionaryValue_STATUS Recognized Dictionary value.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1395,7 +1338,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210101preview.PrivateEndpointConnection_STATUS_SubResourceEmbedded
+                  description: Storage version of v1beta20210101preview.PrivateEndpointConnection_STATUS Properties of the PrivateEndpointConnection.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1404,27 +1347,6 @@ spec:
                       type: object
                     id:
                       type: string
-                    systemData:
-                      description: Storage version of v1beta20210101preview.SystemData_STATUS
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        createdAt:
-                          type: string
-                        createdBy:
-                          type: string
-                        createdByType:
-                          type: string
-                        lastModifiedAt:
-                          type: string
-                        lastModifiedBy:
-                          type: string
-                        lastModifiedByType:
-                          type: string
-                      type: object
                   type: object
                 type: array
               provisioningState:
@@ -1432,7 +1354,7 @@ spec:
               serviceBusEndpoint:
                 type: string
               sku:
-                description: Storage version of v1beta20210101preview.SBSku_STATUS
+                description: Storage version of v1beta20210101preview.SBSku_STATUS SKU of the namespace.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1449,7 +1371,7 @@ spec:
               status:
                 type: string
               systemData:
-                description: Storage version of v1beta20210101preview.SystemData_STATUS
+                description: Storage version of v1beta20210101preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

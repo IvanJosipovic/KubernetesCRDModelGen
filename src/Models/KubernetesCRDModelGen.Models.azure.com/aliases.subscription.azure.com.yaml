@@ -41,7 +41,7 @@ spec:
     name: v1beta20211001
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.Subscription.json#/tenant_resourceDefinitions/aliases'
+        description: 'Generator information: - Generated from: /subscription/resource-manager/Microsoft.Subscription/stable/2021-10-01/subscriptions.json - ARM URI: /providers/Microsoft.Subscription/aliases/{aliasName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -57,10 +57,10 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               properties:
-                description: 'Properties: Put subscription properties.'
+                description: 'Properties: Put alias request properties.'
                 properties:
                   additionalProperties:
-                    description: 'AdditionalProperties: Put subscription additional properties.'
+                    description: 'AdditionalProperties: Put alias request additional properties.'
                     properties:
                       managementGroupId:
                         description: 'ManagementGroupId: Management group Id for the subscription.'
@@ -78,7 +78,6 @@ spec:
                         type: object
                     type: object
                   billingScope:
-                    description: 'BillingScope: Billing scope of the subscription. For CustomerLed and FieldLed - /billingAccounts/{billingAccountName}/billingProfiles/{billingProfileName}/invoiceSections/{invoiceSectionName} For PartnerLed - /billingAccounts/{billingAccountName}/customers/{customerName} For Legacy EA - /billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}'
                     type: string
                   displayName:
                     description: 'DisplayName: The friendly name of the subscription.'
@@ -90,13 +89,12 @@ spec:
                     description: 'SubscriptionId: This parameter can be used to create alias for existing subscription Id'
                     type: string
                   workload:
+                    description: 'Workload: The workload type of the subscription. It can be either Production or DevTest.'
                     enum:
                     - DevTest
                     - Production
                     type: string
                 type: object
-            required:
-            - properties
             type: object
           status:
             properties:
@@ -145,6 +143,7 @@ spec:
                 description: 'Properties: Subscription Alias response properties.'
                 properties:
                   acceptOwnershipState:
+                    description: 'AcceptOwnershipState: The accept ownership state of the resource.'
                     type: string
                   acceptOwnershipUrl:
                     description: 'AcceptOwnershipUrl: Url to accept ownership of the subscription.'
@@ -178,9 +177,11 @@ spec:
                     description: 'Tags: Tags for the subscription'
                     type: object
                   workload:
+                    description: 'Workload: The workload type of the subscription. It can be either Production or DevTest.'
                     type: string
                 type: object
               systemData:
+                description: 'SystemData: Metadata pertaining to creation and last modification of the resource.'
                 properties:
                   createdAt:
                     description: 'CreatedAt: The timestamp of resource creation (UTC).'
@@ -226,7 +227,7 @@ spec:
     name: v1beta20211001storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20211001.Alias Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.Subscription.json#/tenant_resourceDefinitions/aliases'
+        description: 'Storage version of v1beta20211001.Alias Generator information: - Generated from: /subscription/resource-manager/Microsoft.Subscription/stable/2021-10-01/subscriptions.json - ARM URI: /providers/Microsoft.Subscription/aliases/{aliasName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -250,7 +251,7 @@ spec:
               originalVersion:
                 type: string
               properties:
-                description: 'Storage version of v1beta20211001.PutAliasRequestProperties Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.Subscription.json#/definitions/PutAliasRequestProperties'
+                description: Storage version of v1beta20211001.PutAliasRequestProperties Put subscription properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -258,7 +259,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   additionalProperties:
-                    description: 'Storage version of v1beta20211001.PutAliasRequestAdditionalProperties Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.Subscription.json#/definitions/PutAliasRequestAdditionalProperties'
+                    description: Storage version of v1beta20211001.PutAliasRequestAdditionalProperties Put subscription additional properties.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -289,7 +290,7 @@ spec:
                 type: object
             type: object
           status:
-            description: Storage version of v1beta20211001.SubscriptionAliasResponse_STATUS
+            description: Storage version of v1beta20211001.Alias_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -335,7 +336,7 @@ spec:
               name:
                 type: string
               properties:
-                description: Storage version of v1beta20211001.SubscriptionAliasResponseProperties_STATUS
+                description: Storage version of v1beta20211001.SubscriptionAliasResponseProperties_STATUS Put subscription creation result properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -370,7 +371,7 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1beta20211001.SystemData_STATUS
+                description: Storage version of v1beta20211001.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

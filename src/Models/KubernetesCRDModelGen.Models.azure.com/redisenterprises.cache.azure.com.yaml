@@ -102,11 +102,12 @@ spec:
                   type: string
                 type: array
             required:
+            - location
             - owner
             - sku
             type: object
           status:
-            description: Deprecated version of Cluster_STATUS. Use v1beta20210301.Cluster_STATUS instead
+            description: Deprecated version of RedisEnterprise_STATUS. Use v1beta20210301.RedisEnterprise_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -156,7 +157,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210301.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210301.PrivateEndpointConnection_STATUS instead
                   properties:
                     id:
                       type: string
@@ -272,7 +273,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210301.Cluster_STATUS Deprecated version of Cluster_STATUS. Use v1beta20210301.Cluster_STATUS instead
+            description: Storage version of v1alpha1api20210301.RedisEnterprise_STATUS Deprecated version of RedisEnterprise_STATUS. Use v1beta20210301.RedisEnterprise_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -325,7 +326,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20210301.PrivateEndpointConnection_STATUS_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210301.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20210301.PrivateEndpointConnection_STATUS Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210301.PrivateEndpointConnection_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -387,7 +388,7 @@ spec:
     name: v1beta20210301
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-03-01/Microsoft.Cache.Enterprise.json#/resourceDefinitions/redisEnterprise'
+        description: 'Generator information: - Generated from: /redisenterprise/resource-manager/Microsoft.Cache/stable/2021-03-01/redisenterprise.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -406,7 +407,7 @@ spec:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               minimumTlsVersion:
-                description: "MinimumTlsVersion: The minimum TLS version for the cluster to support, e.g. '1.2'."
+                description: "MinimumTlsVersion: The minimum TLS version for the cluster to support, e.g. '1.2'"
                 enum:
                 - 1.0
                 - 1.1
@@ -422,13 +423,13 @@ spec:
                 - name
                 type: object
               sku:
-                description: 'Sku: SKU parameters supplied to the create RedisEnterprise operation.'
+                description: 'Sku: The SKU to create, which affects price, performance, and features.'
                 properties:
                   capacity:
                     description: 'Capacity: The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.'
                     type: integer
                   name:
-                    description: 'Name: The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.).'
+                    description: 'Name: The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)'
                     enum:
                     - EnterpriseFlash_F1500
                     - EnterpriseFlash_F300
@@ -444,7 +445,7 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
               zones:
                 description: 'Zones: The Availability Zones where this cluster will be deployed.'
@@ -452,6 +453,7 @@ spec:
                   type: string
                 type: array
             required:
+            - location
             - owner
             - sku
             type: object
@@ -510,6 +512,7 @@ spec:
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: List of private endpoint connections associated with the specified RedisEnterprise cluster'
                 items:
+                  description: The Private Endpoint Connection resource.
                   properties:
                     id:
                       description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
@@ -570,7 +573,7 @@ spec:
     name: v1beta20210301storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210301.RedisEnterprise Generated from: https://schema.management.azure.com/schemas/2021-03-01/Microsoft.Cache.Enterprise.json#/resourceDefinitions/redisEnterprise'
+        description: 'Storage version of v1beta20210301.RedisEnterprise Generator information: - Generated from: /redisenterprise/resource-manager/Microsoft.Cache/stable/2021-03-01/redisenterprise.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -607,7 +610,7 @@ spec:
                 - name
                 type: object
               sku:
-                description: 'Storage version of v1beta20210301.Sku Generated from: https://schema.management.azure.com/schemas/2021-03-01/Microsoft.Cache.Enterprise.json#/definitions/Sku'
+                description: Storage version of v1beta20210301.Sku SKU parameters supplied to the create RedisEnterprise operation.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -631,7 +634,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210301.Cluster_STATUS
+            description: Storage version of v1beta20210301.RedisEnterprise_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -684,7 +687,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210301.PrivateEndpointConnection_STATUS_SubResourceEmbedded
+                  description: Storage version of v1beta20210301.PrivateEndpointConnection_STATUS The Private Endpoint Connection resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -702,7 +705,7 @@ spec:
               resourceState:
                 type: string
               sku:
-                description: Storage version of v1beta20210301.Sku_STATUS
+                description: Storage version of v1beta20210301.Sku_STATUS SKU parameters supplied to the create RedisEnterprise operation.
                 properties:
                   $propertyBag:
                     additionalProperties:

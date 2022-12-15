@@ -62,8 +62,8 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                type: string
+              doNotVerifyRemoteGateways:
+                type: boolean
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource'
                 properties:
@@ -87,8 +87,6 @@ spec:
                     items:
                       type: string
                     type: array
-                required:
-                - addressPrefixes
                 type: object
               remoteBgpCommunities:
                 description: Deprecated version of VirtualNetworkBgpCommunities. Use v1beta20201101.VirtualNetworkBgpCommunities instead
@@ -118,21 +116,14 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
                 type: object
               useRemoteGateways:
                 type: boolean
             required:
             - owner
-            - remoteVirtualNetwork
             type: object
           status:
-            description: Deprecated version of VirtualNetworkPeering_STATUS. Use v1beta20201101.VirtualNetworkPeering_STATUS instead
+            description: Deprecated version of VirtualNetworks_VirtualNetworkPeering_STATUS. Use v1beta20201101.VirtualNetworks_VirtualNetworkPeering_STATUS instead
             properties:
               allowForwardedTraffic:
                 type: boolean
@@ -266,8 +257,8 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                type: string
+              doNotVerifyRemoteGateways:
+                type: boolean
               originalVersion:
                 type: string
               owner:
@@ -330,12 +321,6 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
                 type: object
               useRemoteGateways:
                 type: boolean
@@ -343,7 +328,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201101.VirtualNetworkPeering_STATUS Deprecated version of VirtualNetworkPeering_STATUS. Use v1beta20201101.VirtualNetworkPeering_STATUS instead
+            description: Storage version of v1alpha1api20201101.VirtualNetworks_VirtualNetworkPeering_STATUS Deprecated version of VirtualNetworks_VirtualNetworkPeering_STATUS. Use v1beta20201101.VirtualNetworks_VirtualNetworkPeering_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -467,7 +452,7 @@ spec:
     name: v1beta20201101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/virtualNetworks_virtualNetworkPeerings'
+        description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -491,9 +476,9 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
+              doNotVerifyRemoteGateways:
+                description: 'DoNotVerifyRemoteGateways: If we need to verify the provisioning state of the remote gateway.'
+                type: boolean
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource'
                 properties:
@@ -518,8 +503,6 @@ spec:
                     items:
                       type: string
                     type: array
-                required:
-                - addressPrefixes
                 type: object
               remoteBgpCommunities:
                 description: "RemoteBgpCommunities: The reference to the remote virtual network's Bgp Communities."
@@ -550,20 +533,12 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
                 type: object
               useRemoteGateways:
                 description: 'UseRemoteGateways: If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.'
                 type: boolean
             required:
             - owner
-            - remoteVirtualNetwork
             type: object
           status:
             properties:
@@ -686,7 +661,7 @@ spec:
     name: v1beta20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201101.VirtualNetworksVirtualNetworkPeering Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/virtualNetworks_virtualNetworkPeerings'
+        description: 'Storage version of v1beta20201101.VirtualNetworksVirtualNetworkPeering Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -713,8 +688,8 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                type: string
+              doNotVerifyRemoteGateways:
+                type: boolean
               originalVersion:
                 type: string
               owner:
@@ -729,7 +704,7 @@ spec:
               peeringState:
                 type: string
               remoteAddressSpace:
-                description: 'Storage version of v1beta20201101.AddressSpace Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/AddressSpace'
+                description: Storage version of v1beta20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -742,7 +717,7 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: 'Storage version of v1beta20201101.VirtualNetworkBgpCommunities Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/VirtualNetworkBgpCommunities'
+                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -753,7 +728,7 @@ spec:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -777,12 +752,6 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
                 type: object
               useRemoteGateways:
                 type: boolean
@@ -790,7 +759,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.VirtualNetworkPeering_STATUS
+            description: Storage version of v1beta20201101.VirtualNetworks_VirtualNetworkPeering_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -850,7 +819,7 @@ spec:
               provisioningState:
                 type: string
               remoteAddressSpace:
-                description: Storage version of v1beta20201101.AddressSpace_STATUS
+                description: Storage version of v1beta20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -863,7 +832,7 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_STATUS
+                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -876,7 +845,7 @@ spec:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: Storage version of v1beta20201101.SubResource_STATUS
+                description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:

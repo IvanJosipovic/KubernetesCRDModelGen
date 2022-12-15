@@ -75,8 +75,6 @@ spec:
                     description: Name is the Kubernetes name of the resource.
                     type: string
                 type: object
-              location:
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource'
                 properties:
@@ -92,10 +90,6 @@ spec:
                 - Primary
                 - Secondary
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - linkedRedisCacheLocation
             - linkedRedisCacheReference
@@ -103,7 +97,7 @@ spec:
             - serverRole
             type: object
           status:
-            description: Deprecated version of RedisLinkedServerWithProperties_STATUS. Use v1beta20201201.RedisLinkedServerWithProperties_STATUS instead
+            description: Deprecated version of Redis_LinkedServer_STATUS. Use v1beta20201201.Redis_LinkedServer_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -217,8 +211,6 @@ spec:
                     description: Name is the Kubernetes name of the resource.
                     type: string
                 type: object
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -232,16 +224,12 @@ spec:
                 type: object
               serverRole:
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - linkedRedisCacheReference
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201201.RedisLinkedServerWithProperties_STATUS Deprecated version of RedisLinkedServerWithProperties_STATUS. Use v1beta20201201.RedisLinkedServerWithProperties_STATUS instead
+            description: Storage version of v1alpha1api20201201.Redis_LinkedServer_STATUS Deprecated version of Redis_LinkedServer_STATUS. Use v1beta20201201.Redis_LinkedServer_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -318,7 +306,7 @@ spec:
     name: v1beta20201201
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-12-01/Microsoft.Cache.json#/resourceDefinitions/redis_linkedServers'
+        description: 'Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/linkedServers/{linkedServerName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -353,9 +341,6 @@ spec:
                     description: Name is the Kubernetes name of the resource.
                     type: string
                 type: object
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource'
                 properties:
@@ -371,11 +356,6 @@ spec:
                 - Primary
                 - Secondary
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - linkedRedisCacheLocation
             - linkedRedisCacheReference
@@ -462,7 +442,7 @@ spec:
     name: v1beta20201201storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201201.RedisLinkedServer Generated from: https://schema.management.azure.com/schemas/2020-12-01/Microsoft.Cache.json#/resourceDefinitions/redis_linkedServers'
+        description: 'Storage version of v1beta20201201.RedisLinkedServer Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/linkedServers/{linkedServerName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -502,8 +482,6 @@ spec:
                     description: Name is the Kubernetes name of the resource.
                     type: string
                 type: object
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -517,16 +495,12 @@ spec:
                 type: object
               serverRole:
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - linkedRedisCacheReference
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201201.RedisLinkedServerWithProperties_STATUS
+            description: Storage version of v1beta20201201.Redis_LinkedServer_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

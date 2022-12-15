@@ -77,15 +77,10 @@ spec:
                 - EventGridSchema
                 type: string
               inputSchemaMapping:
-                description: Deprecated version of JsonInputSchemaMapping. Use v1beta20200601.JsonInputSchemaMapping instead
+                description: Deprecated version of InputSchemaMapping. Use v1beta20200601.InputSchemaMapping instead
                 properties:
-                  inputSchemaMappingType:
-                    description: Deprecated version of JsonInputSchemaMapping_InputSchemaMappingType. Use v1beta20200601.JsonInputSchemaMapping_InputSchemaMappingType instead
-                    enum:
-                    - Json
-                    type: string
-                  properties:
-                    description: Deprecated version of JsonInputSchemaMappingProperties. Use v1beta20200601.JsonInputSchemaMappingProperties instead
+                  json:
+                    description: Deprecated version of JsonInputSchemaMapping. Use v1beta20200601.JsonInputSchemaMapping instead
                     properties:
                       dataVersion:
                         description: Deprecated version of JsonFieldWithDefault. Use v1beta20200601.JsonFieldWithDefault instead
@@ -115,6 +110,11 @@ spec:
                           sourceField:
                             type: string
                         type: object
+                      inputSchemaMappingType:
+                        description: Deprecated version of JsonInputSchemaMapping_InputSchemaMappingType. Use v1beta20200601.JsonInputSchemaMapping_InputSchemaMappingType instead
+                        enum:
+                        - Json
+                        type: string
                       subject:
                         description: Deprecated version of JsonFieldWithDefault. Use v1beta20200601.JsonFieldWithDefault instead
                         properties:
@@ -129,9 +129,9 @@ spec:
                           sourceField:
                             type: string
                         type: object
+                    required:
+                    - inputSchemaMappingType
                     type: object
-                required:
-                - inputSchemaMappingType
                 type: object
               location:
                 type: string
@@ -155,6 +155,7 @@ spec:
                   type: string
                 type: object
             required:
+            - location
             - owner
             type: object
           status:
@@ -216,9 +217,55 @@ spec:
               inputSchemaMapping:
                 description: Deprecated version of InputSchemaMapping_STATUS. Use v1beta20200601.InputSchemaMapping_STATUS instead
                 properties:
-                  inputSchemaMappingType:
-                    description: Deprecated version of InputSchemaMapping_InputSchemaMappingType_STATUS. Use v1beta20200601.InputSchemaMapping_InputSchemaMappingType_STATUS instead
-                    type: string
+                  json:
+                    description: Deprecated version of JsonInputSchemaMapping_STATUS. Use v1beta20200601.JsonInputSchemaMapping_STATUS instead
+                    properties:
+                      dataVersion:
+                        description: Deprecated version of JsonFieldWithDefault_STATUS. Use v1beta20200601.JsonFieldWithDefault_STATUS instead
+                        properties:
+                          defaultValue:
+                            type: string
+                          sourceField:
+                            type: string
+                        type: object
+                      eventTime:
+                        description: Deprecated version of JsonField_STATUS. Use v1beta20200601.JsonField_STATUS instead
+                        properties:
+                          sourceField:
+                            type: string
+                        type: object
+                      eventType:
+                        description: Deprecated version of JsonFieldWithDefault_STATUS. Use v1beta20200601.JsonFieldWithDefault_STATUS instead
+                        properties:
+                          defaultValue:
+                            type: string
+                          sourceField:
+                            type: string
+                        type: object
+                      id:
+                        description: Deprecated version of JsonField_STATUS. Use v1beta20200601.JsonField_STATUS instead
+                        properties:
+                          sourceField:
+                            type: string
+                        type: object
+                      inputSchemaMappingType:
+                        description: Deprecated version of JsonInputSchemaMapping_InputSchemaMappingType_STATUS. Use v1beta20200601.JsonInputSchemaMapping_InputSchemaMappingType_STATUS instead
+                        type: string
+                      subject:
+                        description: Deprecated version of JsonFieldWithDefault_STATUS. Use v1beta20200601.JsonFieldWithDefault_STATUS instead
+                        properties:
+                          defaultValue:
+                            type: string
+                          sourceField:
+                            type: string
+                        type: object
+                      topic:
+                        description: Deprecated version of JsonField_STATUS. Use v1beta20200601.JsonField_STATUS instead
+                        properties:
+                          sourceField:
+                            type: string
+                        type: object
+                    type: object
                 type: object
               location:
                 type: string
@@ -325,17 +372,15 @@ spec:
               inputSchema:
                 type: string
               inputSchemaMapping:
-                description: Storage version of v1alpha1api20200601.JsonInputSchemaMapping Deprecated version of JsonInputSchemaMapping. Use v1beta20200601.JsonInputSchemaMapping instead
+                description: Storage version of v1alpha1api20200601.InputSchemaMapping Deprecated version of InputSchemaMapping. Use v1beta20200601.InputSchemaMapping instead
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  inputSchemaMappingType:
-                    type: string
-                  properties:
-                    description: Storage version of v1alpha1api20200601.JsonInputSchemaMappingProperties Deprecated version of JsonInputSchemaMappingProperties. Use v1beta20200601.JsonInputSchemaMappingProperties instead
+                  json:
+                    description: Storage version of v1alpha1api20200601.JsonInputSchemaMapping Deprecated version of JsonInputSchemaMapping. Use v1beta20200601.JsonInputSchemaMapping instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -390,6 +435,8 @@ spec:
                           sourceField:
                             type: string
                         type: object
+                      inputSchemaMappingType:
+                        type: string
                       subject:
                         description: Storage version of v1alpha1api20200601.JsonFieldWithDefault Deprecated version of JsonFieldWithDefault. Use v1beta20200601.JsonFieldWithDefault instead
                         properties:
@@ -509,8 +556,89 @@ spec:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  inputSchemaMappingType:
-                    type: string
+                  json:
+                    description: Storage version of v1alpha1api20200601.JsonInputSchemaMapping_STATUS Deprecated version of JsonInputSchemaMapping_STATUS. Use v1beta20200601.JsonInputSchemaMapping_STATUS instead
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      dataVersion:
+                        description: Storage version of v1alpha1api20200601.JsonFieldWithDefault_STATUS Deprecated version of JsonFieldWithDefault_STATUS. Use v1beta20200601.JsonFieldWithDefault_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          defaultValue:
+                            type: string
+                          sourceField:
+                            type: string
+                        type: object
+                      eventTime:
+                        description: Storage version of v1alpha1api20200601.JsonField_STATUS Deprecated version of JsonField_STATUS. Use v1beta20200601.JsonField_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          sourceField:
+                            type: string
+                        type: object
+                      eventType:
+                        description: Storage version of v1alpha1api20200601.JsonFieldWithDefault_STATUS Deprecated version of JsonFieldWithDefault_STATUS. Use v1beta20200601.JsonFieldWithDefault_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          defaultValue:
+                            type: string
+                          sourceField:
+                            type: string
+                        type: object
+                      id:
+                        description: Storage version of v1alpha1api20200601.JsonField_STATUS Deprecated version of JsonField_STATUS. Use v1beta20200601.JsonField_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          sourceField:
+                            type: string
+                        type: object
+                      inputSchemaMappingType:
+                        type: string
+                      subject:
+                        description: Storage version of v1alpha1api20200601.JsonFieldWithDefault_STATUS Deprecated version of JsonFieldWithDefault_STATUS. Use v1beta20200601.JsonFieldWithDefault_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          defaultValue:
+                            type: string
+                          sourceField:
+                            type: string
+                        type: object
+                      topic:
+                        description: Storage version of v1alpha1api20200601.JsonField_STATUS Deprecated version of JsonField_STATUS. Use v1beta20200601.JsonField_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          sourceField:
+                            type: string
+                        type: object
+                    type: object
                 type: object
               location:
                 type: string
@@ -584,7 +712,7 @@ spec:
     name: v1beta20200601
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/resourceDefinitions/domains'
+        description: 'Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -602,7 +730,6 @@ spec:
               inboundIpRules:
                 description: 'InboundIpRules: This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/InboundIpRule'
                   properties:
                     action:
                       description: 'Action: Action to perform based on the match or no match of the IpMask.'
@@ -622,17 +749,13 @@ spec:
                 - EventGridSchema
                 type: string
               inputSchemaMapping:
-                description: "InputSchemaMapping: By default, Event Grid expects events to be in the Event Grid event schema. Specifying an input schema mapping enables publishing to Event Grid using a custom input schema. Currently, the only supported type of InputSchemaMapping is 'JsonInputSchemaMapping'."
+                description: 'InputSchemaMapping: Information about the InputSchemaMapping which specified the info about mapping event payload.'
                 properties:
-                  inputSchemaMappingType:
-                    enum:
-                    - Json
-                    type: string
-                  properties:
-                    description: 'Properties: This can be used to map properties of a source schema (or default values, for certain supported properties) to properties of the EventGridEvent schema.'
+                  json:
+                    description: 'Json: Mutually exclusive with all other properties'
                     properties:
                       dataVersion:
-                        description: "DataVersion: This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided."
+                        description: 'DataVersion: The mapping information for the DataVersion property of the Event Grid Event.'
                         properties:
                           defaultValue:
                             description: "DefaultValue: The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload."
@@ -642,14 +765,14 @@ spec:
                             type: string
                         type: object
                       eventTime:
-                        description: "EventTime: This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema."
+                        description: 'EventTime: The mapping information for the EventTime property of the Event Grid Event.'
                         properties:
                           sourceField:
                             description: "SourceField: Name of a field in the input event schema that's to be used as the source of a mapping."
                             type: string
                         type: object
                       eventType:
-                        description: "EventType: This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided."
+                        description: 'EventType: The mapping information for the EventType property of the Event Grid Event.'
                         properties:
                           defaultValue:
                             description: "DefaultValue: The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload."
@@ -659,14 +782,19 @@ spec:
                             type: string
                         type: object
                       id:
-                        description: "Id: This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema."
+                        description: 'Id: The mapping information for the Id property of the Event Grid Event.'
                         properties:
                           sourceField:
                             description: "SourceField: Name of a field in the input event schema that's to be used as the source of a mapping."
                             type: string
                         type: object
+                      inputSchemaMappingType:
+                        description: 'InputSchemaMappingType: Type of the custom mapping'
+                        enum:
+                        - Json
+                        type: string
                       subject:
-                        description: "Subject: This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided."
+                        description: 'Subject: The mapping information for the Subject property of the Event Grid Event.'
                         properties:
                           defaultValue:
                             description: "DefaultValue: The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload."
@@ -676,18 +804,18 @@ spec:
                             type: string
                         type: object
                       topic:
-                        description: "Topic: This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema."
+                        description: 'Topic: The mapping information for the Topic property of the Event Grid Event.'
                         properties:
                           sourceField:
                             description: "SourceField: Name of a field in the input event schema that's to be used as the source of a mapping."
                             type: string
                         type: object
+                    required:
+                    - inputSchemaMappingType
                     type: object
-                required:
-                - inputSchemaMappingType
                 type: object
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Location of the resource.'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
@@ -699,7 +827,7 @@ spec:
                 - name
                 type: object
               publicNetworkAccess:
-                description: 'PublicNetworkAccess: This determines if traffic is allowed over public network. By default it is enabled. You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />.'
+                description: 'PublicNetworkAccess: This determines if traffic is allowed over public network. By default it is enabled. You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />'
                 enum:
                 - Disabled
                 - Enabled
@@ -707,12 +835,14 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Tags of the resource.'
                 type: object
             required:
+            - location
             - owner
             type: object
           status:
+            description: EventGrid Domain.
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -773,9 +903,64 @@ spec:
               inputSchemaMapping:
                 description: 'InputSchemaMapping: Information about the InputSchemaMapping which specified the info about mapping event payload.'
                 properties:
-                  inputSchemaMappingType:
-                    description: 'InputSchemaMappingType: Type of the custom mapping'
-                    type: string
+                  json:
+                    description: 'Json: Mutually exclusive with all other properties'
+                    properties:
+                      dataVersion:
+                        description: 'DataVersion: The mapping information for the DataVersion property of the Event Grid Event.'
+                        properties:
+                          defaultValue:
+                            description: "DefaultValue: The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload."
+                            type: string
+                          sourceField:
+                            description: "SourceField: Name of a field in the input event schema that's to be used as the source of a mapping."
+                            type: string
+                        type: object
+                      eventTime:
+                        description: 'EventTime: The mapping information for the EventTime property of the Event Grid Event.'
+                        properties:
+                          sourceField:
+                            description: "SourceField: Name of a field in the input event schema that's to be used as the source of a mapping."
+                            type: string
+                        type: object
+                      eventType:
+                        description: 'EventType: The mapping information for the EventType property of the Event Grid Event.'
+                        properties:
+                          defaultValue:
+                            description: "DefaultValue: The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload."
+                            type: string
+                          sourceField:
+                            description: "SourceField: Name of a field in the input event schema that's to be used as the source of a mapping."
+                            type: string
+                        type: object
+                      id:
+                        description: 'Id: The mapping information for the Id property of the Event Grid Event.'
+                        properties:
+                          sourceField:
+                            description: "SourceField: Name of a field in the input event schema that's to be used as the source of a mapping."
+                            type: string
+                        type: object
+                      inputSchemaMappingType:
+                        description: 'InputSchemaMappingType: Type of the custom mapping'
+                        type: string
+                      subject:
+                        description: 'Subject: The mapping information for the Subject property of the Event Grid Event.'
+                        properties:
+                          defaultValue:
+                            description: "DefaultValue: The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload."
+                            type: string
+                          sourceField:
+                            description: "SourceField: Name of a field in the input event schema that's to be used as the source of a mapping."
+                            type: string
+                        type: object
+                      topic:
+                        description: 'Topic: The mapping information for the Topic property of the Event Grid Event.'
+                        properties:
+                          sourceField:
+                            description: "SourceField: Name of a field in the input event schema that's to be used as the source of a mapping."
+                            type: string
+                        type: object
+                    type: object
                 type: object
               location:
                 description: 'Location: Location of the resource.'
@@ -853,7 +1038,7 @@ spec:
     name: v1beta20200601storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20200601.Domain Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/resourceDefinitions/domains'
+        description: 'Storage version of v1beta20200601.Domain Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -876,7 +1061,7 @@ spec:
                 type: string
               inboundIpRules:
                 items:
-                  description: 'Storage version of v1beta20200601.InboundIpRule Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/InboundIpRule'
+                  description: Storage version of v1beta20200601.InboundIpRule
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -892,17 +1077,15 @@ spec:
               inputSchema:
                 type: string
               inputSchemaMapping:
-                description: 'Storage version of v1beta20200601.JsonInputSchemaMapping Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/JsonInputSchemaMapping'
+                description: Storage version of v1beta20200601.InputSchemaMapping
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  inputSchemaMappingType:
-                    type: string
-                  properties:
-                    description: 'Storage version of v1beta20200601.JsonInputSchemaMappingProperties Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/JsonInputSchemaMappingProperties'
+                  json:
+                    description: Storage version of v1beta20200601.JsonInputSchemaMapping
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -910,7 +1093,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       dataVersion:
-                        description: 'Storage version of v1beta20200601.JsonFieldWithDefault Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/JsonFieldWithDefault'
+                        description: Storage version of v1beta20200601.JsonFieldWithDefault This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -923,7 +1106,7 @@ spec:
                             type: string
                         type: object
                       eventTime:
-                        description: 'Storage version of v1beta20200601.JsonField Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/JsonField'
+                        description: Storage version of v1beta20200601.JsonField This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -934,7 +1117,7 @@ spec:
                             type: string
                         type: object
                       eventType:
-                        description: 'Storage version of v1beta20200601.JsonFieldWithDefault Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/JsonFieldWithDefault'
+                        description: Storage version of v1beta20200601.JsonFieldWithDefault This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -947,7 +1130,7 @@ spec:
                             type: string
                         type: object
                       id:
-                        description: 'Storage version of v1beta20200601.JsonField Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/JsonField'
+                        description: Storage version of v1beta20200601.JsonField This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -957,8 +1140,10 @@ spec:
                           sourceField:
                             type: string
                         type: object
+                      inputSchemaMappingType:
+                        type: string
                       subject:
-                        description: 'Storage version of v1beta20200601.JsonFieldWithDefault Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/JsonFieldWithDefault'
+                        description: Storage version of v1beta20200601.JsonFieldWithDefault This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -971,7 +1156,7 @@ spec:
                             type: string
                         type: object
                       topic:
-                        description: 'Storage version of v1beta20200601.JsonField Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/definitions/JsonField'
+                        description: Storage version of v1beta20200601.JsonField This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1006,7 +1191,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20200601.Domain_STATUS
+            description: Storage version of v1beta20200601.Domain_STATUS EventGrid Domain.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1076,8 +1261,89 @@ spec:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  inputSchemaMappingType:
-                    type: string
+                  json:
+                    description: Storage version of v1beta20200601.JsonInputSchemaMapping_STATUS
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      dataVersion:
+                        description: Storage version of v1beta20200601.JsonFieldWithDefault_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          defaultValue:
+                            type: string
+                          sourceField:
+                            type: string
+                        type: object
+                      eventTime:
+                        description: Storage version of v1beta20200601.JsonField_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          sourceField:
+                            type: string
+                        type: object
+                      eventType:
+                        description: Storage version of v1beta20200601.JsonFieldWithDefault_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          defaultValue:
+                            type: string
+                          sourceField:
+                            type: string
+                        type: object
+                      id:
+                        description: Storage version of v1beta20200601.JsonField_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          sourceField:
+                            type: string
+                        type: object
+                      inputSchemaMappingType:
+                        type: string
+                      subject:
+                        description: Storage version of v1beta20200601.JsonFieldWithDefault_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'subject', 'eventtype' and 'dataversion' properties. This represents a field in the input event schema along with a default value to be used, and at least one of these two properties should be provided.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          defaultValue:
+                            type: string
+                          sourceField:
+                            type: string
+                        type: object
+                      topic:
+                        description: Storage version of v1beta20200601.JsonField_STATUS This is used to express the source of an input schema mapping for a single target field in the Event Grid Event schema. This is currently used in the mappings for the 'id', 'topic' and 'eventtime' properties. This represents a field in the input event schema.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          sourceField:
+                            type: string
+                        type: object
+                    type: object
                 type: object
               location:
                 type: string
@@ -1103,7 +1369,7 @@ spec:
               publicNetworkAccess:
                 type: string
               systemData:
-                description: Storage version of v1beta20200601.SystemData_STATUS
+                description: Storage version of v1beta20200601.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

@@ -241,16 +241,12 @@ spec:
                 required:
                 - rules
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             - policy
             type: object
           status:
-            description: Deprecated version of ManagementPolicy_STATUS. Use v1beta20210401.ManagementPolicy_STATUS instead
+            description: Deprecated version of StorageAccounts_ManagementPolicy_STATUS. Use v1beta20210401.StorageAccounts_ManagementPolicy_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -681,15 +677,11 @@ spec:
                       type: object
                     type: array
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210401.ManagementPolicy_STATUS Deprecated version of ManagementPolicy_STATUS. Use v1beta20210401.ManagementPolicy_STATUS instead
+            description: Storage version of v1alpha1api20210401.StorageAccounts_ManagementPolicy_STATUS Deprecated version of StorageAccounts_ManagementPolicy_STATUS. Use v1beta20210401.StorageAccounts_ManagementPolicy_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -972,7 +964,7 @@ spec:
     name: v1beta20210401
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts_managementPolicies'
+        description: 'Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/managementPolicies/default'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -994,24 +986,24 @@ spec:
                 - name
                 type: object
               policy:
-                description: 'Policy: The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
+                description: 'Policy: The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
                 properties:
                   rules:
                     description: 'Rules: The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ManagementPolicyRule'
+                      description: An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
                       properties:
                         definition:
-                          description: 'Definition: An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.'
+                          description: 'Definition: An object that defines the Lifecycle rule.'
                           properties:
                             actions:
-                              description: 'Actions: Actions are applied to the filtered blobs when the execution condition is met.'
+                              description: 'Actions: An object that defines the action set.'
                               properties:
                                 baseBlob:
-                                  description: 'BaseBlob: Management policy action for base blob.'
+                                  description: 'BaseBlob: The management policy action for base blob'
                                   properties:
                                     delete:
-                                      description: 'Delete: Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.'
+                                      description: 'Delete: The function to delete the blob'
                                       properties:
                                         daysAfterLastAccessTimeGreaterThan:
                                           description: 'DaysAfterLastAccessTimeGreaterThan: Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy'
@@ -1028,7 +1020,7 @@ spec:
                                       description: 'EnableAutoTierToHotFromCool: This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.'
                                       type: boolean
                                     tierToArchive:
-                                      description: 'TierToArchive: Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.'
+                                      description: 'TierToArchive: The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier'
                                       properties:
                                         daysAfterLastAccessTimeGreaterThan:
                                           description: 'DaysAfterLastAccessTimeGreaterThan: Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy'
@@ -1042,7 +1034,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToCool:
-                                      description: 'TierToCool: Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.'
+                                      description: 'TierToCool: The function to tier blobs to cool storage. Support blobs currently at Hot tier'
                                       properties:
                                         daysAfterLastAccessTimeGreaterThan:
                                           description: 'DaysAfterLastAccessTimeGreaterThan: Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy'
@@ -1057,10 +1049,10 @@ spec:
                                       type: object
                                   type: object
                                 snapshot:
-                                  description: 'Snapshot: Management policy action for snapshot.'
+                                  description: 'Snapshot: The management policy action for snapshot'
                                   properties:
                                     delete:
-                                      description: 'Delete: Object to define the number of days after creation.'
+                                      description: 'Delete: The function to delete the blob snapshot'
                                       properties:
                                         daysAfterCreationGreaterThan:
                                           description: 'DaysAfterCreationGreaterThan: Value indicating the age in days after creation'
@@ -1071,7 +1063,7 @@ spec:
                                       - daysAfterCreationGreaterThan
                                       type: object
                                     tierToArchive:
-                                      description: 'TierToArchive: Object to define the number of days after creation.'
+                                      description: 'TierToArchive: The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier'
                                       properties:
                                         daysAfterCreationGreaterThan:
                                           description: 'DaysAfterCreationGreaterThan: Value indicating the age in days after creation'
@@ -1082,7 +1074,7 @@ spec:
                                       - daysAfterCreationGreaterThan
                                       type: object
                                     tierToCool:
-                                      description: 'TierToCool: Object to define the number of days after creation.'
+                                      description: 'TierToCool: The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier'
                                       properties:
                                         daysAfterCreationGreaterThan:
                                           description: 'DaysAfterCreationGreaterThan: Value indicating the age in days after creation'
@@ -1094,10 +1086,10 @@ spec:
                                       type: object
                                   type: object
                                 version:
-                                  description: 'Version: Management policy action for blob version.'
+                                  description: 'Version: The management policy action for version'
                                   properties:
                                     delete:
-                                      description: 'Delete: Object to define the number of days after creation.'
+                                      description: 'Delete: The function to delete the blob version'
                                       properties:
                                         daysAfterCreationGreaterThan:
                                           description: 'DaysAfterCreationGreaterThan: Value indicating the age in days after creation'
@@ -1108,7 +1100,7 @@ spec:
                                       - daysAfterCreationGreaterThan
                                       type: object
                                     tierToArchive:
-                                      description: 'TierToArchive: Object to define the number of days after creation.'
+                                      description: 'TierToArchive: The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier'
                                       properties:
                                         daysAfterCreationGreaterThan:
                                           description: 'DaysAfterCreationGreaterThan: Value indicating the age in days after creation'
@@ -1119,7 +1111,7 @@ spec:
                                       - daysAfterCreationGreaterThan
                                       type: object
                                     tierToCool:
-                                      description: 'TierToCool: Object to define the number of days after creation.'
+                                      description: 'TierToCool: The function to tier blob version to cool storage. Support blob version currently at Hot tier'
                                       properties:
                                         daysAfterCreationGreaterThan:
                                           description: 'DaysAfterCreationGreaterThan: Value indicating the age in days after creation'
@@ -1132,12 +1124,12 @@ spec:
                                   type: object
                               type: object
                             filters:
-                              description: 'Filters: Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.'
+                              description: 'Filters: An object that defines the filter set.'
                               properties:
                                 blobIndexMatch:
                                   description: 'BlobIndexMatch: An array of blob index tag based filters, there can be at most 10 tag filters'
                                   items:
-                                    description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/TagFilter'
+                                    description: Blob index tag based filtering for blob objects
                                     properties:
                                       name:
                                         description: 'Name: This is the filter tag name, it can have 1 - 128 characters'
@@ -1193,11 +1185,6 @@ spec:
                     type: array
                 required:
                 - rules
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
                 type: object
             required:
             - owner
@@ -1255,6 +1242,7 @@ spec:
                   rules:
                     description: 'Rules: The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
                     items:
+                      description: An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
                       properties:
                         definition:
                           description: 'Definition: An object that defines the Lifecycle rule.'
@@ -1356,6 +1344,7 @@ spec:
                                 blobIndexMatch:
                                   description: 'BlobIndexMatch: An array of blob index tag based filters, there can be at most 10 tag filters'
                                   items:
+                                    description: Blob index tag based filtering for blob objects
                                     properties:
                                       name:
                                         description: 'Name: This is the filter tag name, it can have 1 - 128 characters'
@@ -1417,7 +1406,7 @@ spec:
     name: v1beta20210401storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210401.StorageAccountsManagementPolicy Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts_managementPolicies'
+        description: 'Storage version of v1beta20210401.StorageAccountsManagementPolicy Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/managementPolicies/default'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1447,7 +1436,7 @@ spec:
                 - name
                 type: object
               policy:
-                description: 'Storage version of v1beta20210401.ManagementPolicySchema Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ManagementPolicySchema'
+                description: 'Storage version of v1beta20210401.ManagementPolicySchema The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1456,7 +1445,7 @@ spec:
                     type: object
                   rules:
                     items:
-                      description: 'Storage version of v1beta20210401.ManagementPolicyRule Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ManagementPolicyRule'
+                      description: Storage version of v1beta20210401.ManagementPolicyRule An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1464,7 +1453,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         definition:
-                          description: 'Storage version of v1beta20210401.ManagementPolicyDefinition Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ManagementPolicyDefinition'
+                          description: Storage version of v1beta20210401.ManagementPolicyDefinition An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1472,7 +1461,7 @@ spec:
                               description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                               type: object
                             actions:
-                              description: 'Storage version of v1beta20210401.ManagementPolicyAction Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ManagementPolicyAction'
+                              description: Storage version of v1beta20210401.ManagementPolicyAction Actions are applied to the filtered blobs when the execution condition is met.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1480,7 +1469,7 @@ spec:
                                   description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                   type: object
                                 baseBlob:
-                                  description: 'Storage version of v1beta20210401.ManagementPolicyBaseBlob Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ManagementPolicyBaseBlob'
+                                  description: Storage version of v1beta20210401.ManagementPolicyBaseBlob Management policy action for base blob.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1488,7 +1477,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: 'Storage version of v1beta20210401.DateAfterModification Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DateAfterModification'
+                                      description: Storage version of v1beta20210401.DateAfterModification Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1503,7 +1492,7 @@ spec:
                                     enableAutoTierToHotFromCool:
                                       type: boolean
                                     tierToArchive:
-                                      description: 'Storage version of v1beta20210401.DateAfterModification Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DateAfterModification'
+                                      description: Storage version of v1beta20210401.DateAfterModification Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1516,7 +1505,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToCool:
-                                      description: 'Storage version of v1beta20210401.DateAfterModification Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DateAfterModification'
+                                      description: Storage version of v1beta20210401.DateAfterModification Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1530,7 +1519,7 @@ spec:
                                       type: object
                                   type: object
                                 snapshot:
-                                  description: 'Storage version of v1beta20210401.ManagementPolicySnapShot Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ManagementPolicySnapShot'
+                                  description: Storage version of v1beta20210401.ManagementPolicySnapShot Management policy action for snapshot.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1538,7 +1527,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: 'Storage version of v1beta20210401.DateAfterCreation Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DateAfterCreation'
+                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1549,7 +1538,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToArchive:
-                                      description: 'Storage version of v1beta20210401.DateAfterCreation Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DateAfterCreation'
+                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1560,7 +1549,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToCool:
-                                      description: 'Storage version of v1beta20210401.DateAfterCreation Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DateAfterCreation'
+                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1572,7 +1561,7 @@ spec:
                                       type: object
                                   type: object
                                 version:
-                                  description: 'Storage version of v1beta20210401.ManagementPolicyVersion Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ManagementPolicyVersion'
+                                  description: Storage version of v1beta20210401.ManagementPolicyVersion Management policy action for blob version.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1580,7 +1569,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: 'Storage version of v1beta20210401.DateAfterCreation Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DateAfterCreation'
+                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1591,7 +1580,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToArchive:
-                                      description: 'Storage version of v1beta20210401.DateAfterCreation Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DateAfterCreation'
+                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1602,7 +1591,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToCool:
-                                      description: 'Storage version of v1beta20210401.DateAfterCreation Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DateAfterCreation'
+                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1615,7 +1604,7 @@ spec:
                                   type: object
                               type: object
                             filters:
-                              description: 'Storage version of v1beta20210401.ManagementPolicyFilter Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ManagementPolicyFilter'
+                              description: Storage version of v1beta20210401.ManagementPolicyFilter Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1624,7 +1613,7 @@ spec:
                                   type: object
                                 blobIndexMatch:
                                   items:
-                                    description: 'Storage version of v1beta20210401.TagFilter Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/TagFilter'
+                                    description: Storage version of v1beta20210401.TagFilter Blob index tag based filtering for blob objects
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
@@ -1658,15 +1647,11 @@ spec:
                       type: object
                     type: array
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401.ManagementPolicy_STATUS
+            description: Storage version of v1beta20210401.StorageAccounts_ManagementPolicy_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1714,7 +1699,7 @@ spec:
               name:
                 type: string
               policy:
-                description: Storage version of v1beta20210401.ManagementPolicySchema_STATUS
+                description: 'Storage version of v1beta20210401.ManagementPolicySchema_STATUS The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1723,7 +1708,7 @@ spec:
                     type: object
                   rules:
                     items:
-                      description: Storage version of v1beta20210401.ManagementPolicyRule_STATUS
+                      description: Storage version of v1beta20210401.ManagementPolicyRule_STATUS An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1731,7 +1716,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         definition:
-                          description: Storage version of v1beta20210401.ManagementPolicyDefinition_STATUS
+                          description: Storage version of v1beta20210401.ManagementPolicyDefinition_STATUS An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1739,7 +1724,7 @@ spec:
                               description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                               type: object
                             actions:
-                              description: Storage version of v1beta20210401.ManagementPolicyAction_STATUS
+                              description: Storage version of v1beta20210401.ManagementPolicyAction_STATUS Actions are applied to the filtered blobs when the execution condition is met.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1747,7 +1732,7 @@ spec:
                                   description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                   type: object
                                 baseBlob:
-                                  description: Storage version of v1beta20210401.ManagementPolicyBaseBlob_STATUS
+                                  description: Storage version of v1beta20210401.ManagementPolicyBaseBlob_STATUS Management policy action for base blob.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1755,7 +1740,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS
+                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1770,7 +1755,7 @@ spec:
                                     enableAutoTierToHotFromCool:
                                       type: boolean
                                     tierToArchive:
-                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS
+                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1783,7 +1768,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToCool:
-                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS
+                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1797,7 +1782,7 @@ spec:
                                       type: object
                                   type: object
                                 snapshot:
-                                  description: Storage version of v1beta20210401.ManagementPolicySnapShot_STATUS
+                                  description: Storage version of v1beta20210401.ManagementPolicySnapShot_STATUS Management policy action for snapshot.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1805,7 +1790,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1816,7 +1801,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToArchive:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1827,7 +1812,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToCool:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1839,7 +1824,7 @@ spec:
                                       type: object
                                   type: object
                                 version:
-                                  description: Storage version of v1beta20210401.ManagementPolicyVersion_STATUS
+                                  description: Storage version of v1beta20210401.ManagementPolicyVersion_STATUS Management policy action for blob version.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1847,7 +1832,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1858,7 +1843,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToArchive:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1869,7 +1854,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToCool:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1882,7 +1867,7 @@ spec:
                                   type: object
                               type: object
                             filters:
-                              description: Storage version of v1beta20210401.ManagementPolicyFilter_STATUS
+                              description: Storage version of v1beta20210401.ManagementPolicyFilter_STATUS Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1891,7 +1876,7 @@ spec:
                                   type: object
                                 blobIndexMatch:
                                   items:
-                                    description: Storage version of v1beta20210401.TagFilter_STATUS
+                                    description: Storage version of v1beta20210401.TagFilter_STATUS Blob index tag based filtering for blob objects
                                     properties:
                                       $propertyBag:
                                         additionalProperties:

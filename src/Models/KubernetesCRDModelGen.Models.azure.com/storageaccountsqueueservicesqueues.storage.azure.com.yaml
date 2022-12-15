@@ -58,8 +58,6 @@ spec:
                 maxLength: 63
                 minLength: 3
                 type: string
-              location:
-                type: string
               metadata:
                 additionalProperties:
                   type: string
@@ -73,15 +71,11 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Deprecated version of StorageQueue_STATUS. Use v1beta20210401.StorageQueue_STATUS instead
+            description: Deprecated version of StorageAccounts_QueueServices_Queue_STATUS. Use v1beta20210401.StorageAccounts_QueueServices_Queue_STATUS instead
             properties:
               approximateMessageCount:
                 type: integer
@@ -175,8 +169,6 @@ spec:
                 maxLength: 63
                 minLength: 3
                 type: string
-              location:
-                type: string
               metadata:
                 additionalProperties:
                   type: string
@@ -192,15 +184,11 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210401.StorageQueue_STATUS Deprecated version of StorageQueue_STATUS. Use v1beta20210401.StorageQueue_STATUS instead
+            description: Storage version of v1alpha1api20210401.StorageAccounts_QueueServices_Queue_STATUS Deprecated version of StorageAccounts_QueueServices_Queue_STATUS. Use v1beta20210401.StorageAccounts_QueueServices_Queue_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -275,7 +263,7 @@ spec:
     name: v1beta20210401
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts_queueServices_queues'
+        description: 'Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/queue.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/queueServices/default/queues/{queueName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -292,9 +280,6 @@ spec:
                 maxLength: 63
                 minLength: 3
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               metadata:
                 additionalProperties:
                   type: string
@@ -308,11 +293,6 @@ spec:
                     type: string
                 required:
                 - name
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
                 type: object
             required:
             - owner
@@ -393,7 +373,7 @@ spec:
     name: v1beta20210401storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210401.StorageAccountsQueueServicesQueue Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts_queueServices_queues'
+        description: 'Storage version of v1beta20210401.StorageAccountsQueueServicesQueue Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/queue.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/queueServices/default/queues/{queueName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -416,8 +396,6 @@ spec:
                 maxLength: 63
                 minLength: 3
                 type: string
-              location:
-                type: string
               metadata:
                 additionalProperties:
                   type: string
@@ -433,15 +411,11 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401.StorageQueue_STATUS
+            description: Storage version of v1beta20210401.StorageAccounts_QueueServices_Queue_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

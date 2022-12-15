@@ -151,8 +151,6 @@ spec:
                 required:
                 - enable
                 type: object
-              location:
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
                 properties:
@@ -174,15 +172,11 @@ spec:
                 required:
                 - enabled
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Deprecated version of BlobServiceProperties_STATUS. Use v1beta20210401.BlobServiceProperties_STATUS instead
+            description: Deprecated version of StorageAccounts_BlobService_STATUS. Use v1beta20210401.StorageAccounts_BlobService_STATUS instead
             properties:
               automaticSnapshotPolicyEnabled:
                 type: boolean
@@ -463,8 +457,6 @@ spec:
                   trackingGranularityInDays:
                     type: integer
                 type: object
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -489,15 +481,11 @@ spec:
                   enabled:
                     type: boolean
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210401.BlobServiceProperties_STATUS Deprecated version of BlobServiceProperties_STATUS. Use v1beta20210401.BlobServiceProperties_STATUS instead
+            description: Storage version of v1alpha1api20210401.StorageAccounts_BlobService_STATUS Deprecated version of StorageAccounts_BlobService_STATUS. Use v1beta20210401.StorageAccounts_BlobService_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -698,7 +686,7 @@ spec:
     name: v1beta20210401
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts_blobServices'
+        description: 'Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -726,7 +714,7 @@ spec:
                     type: integer
                 type: object
               containerDeleteRetentionPolicy:
-                description: 'ContainerDeleteRetentionPolicy: The service properties for soft delete.'
+                description: 'ContainerDeleteRetentionPolicy: The blob service properties for container soft delete.'
                 properties:
                   days:
                     description: 'Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.'
@@ -738,12 +726,12 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: 'Cors: Sets the CORS rules. You can include up to five CorsRule elements in the request.'
+                description: 'Cors: Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.'
                 properties:
                   corsRules:
                     description: 'CorsRules: The List of CORS rules. You can include up to five CorsRule elements in the request.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/CorsRule'
+                      description: Specifies a CORS rule for the Blob service.
                       properties:
                         allowedHeaders:
                           description: 'AllowedHeaders: Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.'
@@ -789,7 +777,7 @@ spec:
                 description: 'DefaultServiceVersion: DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.'
                 type: string
               deleteRetentionPolicy:
-                description: 'DeleteRetentionPolicy: The service properties for soft delete.'
+                description: 'DeleteRetentionPolicy: The blob service properties for blob soft delete.'
                 properties:
                   days:
                     description: 'Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.'
@@ -804,7 +792,7 @@ spec:
                 description: 'IsVersioningEnabled: Versioning is enabled if set to true.'
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: 'LastAccessTimeTrackingPolicy: The blob service properties for Last access time based tracking policy.'
+                description: 'LastAccessTimeTrackingPolicy: The blob service property to configure last access time based tracking policy.'
                 properties:
                   blobType:
                     description: 'BlobType: An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only'
@@ -815,7 +803,7 @@ spec:
                     description: 'Enable: When set to true last access time based tracking is enabled.'
                     type: boolean
                   name:
-                    description: 'Name: Name of the policy. The valid value is AccessTimeTracking. This field is currently read only.'
+                    description: 'Name: Name of the policy. The valid value is AccessTimeTracking. This field is currently read only'
                     enum:
                     - AccessTimeTracking
                     type: string
@@ -825,9 +813,6 @@ spec:
                 required:
                 - enable
                 type: object
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
                 properties:
@@ -838,7 +823,7 @@ spec:
                 - name
                 type: object
               restorePolicy:
-                description: 'RestorePolicy: The blob service properties for blob restore policy'
+                description: 'RestorePolicy: The blob service properties for blob restore policy.'
                 properties:
                   days:
                     description: 'Days: how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.'
@@ -850,11 +835,6 @@ spec:
                     type: boolean
                 required:
                 - enabled
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
                 type: object
             required:
             - owner
@@ -925,6 +905,7 @@ spec:
                   corsRules:
                     description: 'CorsRules: The List of CORS rules. You can include up to five CorsRule elements in the request.'
                     items:
+                      description: Specifies a CORS rule for the Blob service.
                       properties:
                         allowedHeaders:
                           description: 'AllowedHeaders: Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.'
@@ -1012,8 +993,10 @@ spec:
                 description: 'Sku: Sku name and tier.'
                 properties:
                   name:
+                    description: 'Name: The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.'
                     type: string
                   tier:
+                    description: 'Tier: The SKU tier. This is based on the SKU name.'
                     type: string
                 type: object
               type:
@@ -1041,7 +1024,7 @@ spec:
     name: v1beta20210401storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210401.StorageAccountsBlobService Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts_blobServices'
+        description: 'Storage version of v1beta20210401.StorageAccountsBlobService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1062,7 +1045,7 @@ spec:
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: 'Storage version of v1beta20210401.ChangeFeed Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ChangeFeed'
+                description: Storage version of v1beta20210401.ChangeFeed The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1075,7 +1058,7 @@ spec:
                     type: integer
                 type: object
               containerDeleteRetentionPolicy:
-                description: 'Storage version of v1beta20210401.DeleteRetentionPolicy Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DeleteRetentionPolicy'
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1088,7 +1071,7 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: 'Storage version of v1beta20210401.CorsRules Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/CorsRules'
+                description: Storage version of v1beta20210401.CorsRules Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1097,7 +1080,7 @@ spec:
                     type: object
                   corsRules:
                     items:
-                      description: 'Storage version of v1beta20210401.CorsRule Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/CorsRule'
+                      description: Storage version of v1beta20210401.CorsRule Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1128,7 +1111,7 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: 'Storage version of v1beta20210401.DeleteRetentionPolicy Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/DeleteRetentionPolicy'
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1143,7 +1126,7 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: 'Storage version of v1beta20210401.LastAccessTimeTrackingPolicy Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/LastAccessTimeTrackingPolicy'
+                description: Storage version of v1beta20210401.LastAccessTimeTrackingPolicy The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1161,8 +1144,6 @@ spec:
                   trackingGranularityInDays:
                     type: integer
                 type: object
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -1175,7 +1156,7 @@ spec:
                 - name
                 type: object
               restorePolicy:
-                description: 'Storage version of v1beta20210401.RestorePolicyProperties Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/RestorePolicyProperties'
+                description: Storage version of v1beta20210401.RestorePolicyProperties The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1187,15 +1168,11 @@ spec:
                   enabled:
                     type: boolean
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401.BlobServiceProperties_STATUS
+            description: Storage version of v1beta20210401.StorageAccounts_BlobService_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1205,7 +1182,7 @@ spec:
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: Storage version of v1beta20210401.ChangeFeed_STATUS
+                description: Storage version of v1beta20210401.ChangeFeed_STATUS The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1252,7 +1229,7 @@ spec:
                   type: object
                 type: array
               containerDeleteRetentionPolicy:
-                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1265,7 +1242,7 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: Storage version of v1beta20210401.CorsRules_STATUS
+                description: Storage version of v1beta20210401.CorsRules_STATUS Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1274,7 +1251,7 @@ spec:
                     type: object
                   corsRules:
                     items:
-                      description: Storage version of v1beta20210401.CorsRule_STATUS
+                      description: Storage version of v1beta20210401.CorsRule_STATUS Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1305,7 +1282,7 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1322,7 +1299,7 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: Storage version of v1beta20210401.LastAccessTimeTrackingPolicy_STATUS
+                description: Storage version of v1beta20210401.LastAccessTimeTrackingPolicy_STATUS The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1343,7 +1320,7 @@ spec:
               name:
                 type: string
               restorePolicy:
-                description: Storage version of v1beta20210401.RestorePolicyProperties_STATUS
+                description: Storage version of v1beta20210401.RestorePolicyProperties_STATUS The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1360,7 +1337,7 @@ spec:
                     type: string
                 type: object
               sku:
-                description: Storage version of v1beta20210401.Sku_STATUS
+                description: Storage version of v1beta20210401.Sku_STATUS The SKU of the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:

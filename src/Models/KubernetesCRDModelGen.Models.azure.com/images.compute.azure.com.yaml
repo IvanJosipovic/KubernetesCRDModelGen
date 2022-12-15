@@ -62,13 +62,13 @@ spec:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20210701.ExtendedLocation_Type instead
+                    description: Deprecated version of ExtendedLocationType. Use v1beta20210701.ExtendedLocationType instead
                     enum:
                     - EdgeZone
                     type: string
                 type: object
               hyperVGeneration:
-                description: Deprecated version of ImageProperties_HyperVGeneration. Use v1beta20210701.ImageProperties_HyperVGeneration instead
+                description: Deprecated version of HyperVGenerationType. Use v1beta20210701.HyperVGenerationType instead
                 enum:
                 - V1
                 - V2
@@ -122,7 +122,7 @@ spec:
                           - ReadWrite
                           type: string
                         diskEncryptionSet:
-                          description: Deprecated version of DiskEncryptionSetParameters. Use v1beta20210701.DiskEncryptionSetParameters instead
+                          description: Deprecated version of SubResource. Use v1beta20210701.SubResource instead
                           properties:
                             reference:
                               description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
@@ -189,7 +189,7 @@ spec:
                               type: object
                           type: object
                         storageAccountType:
-                          description: Deprecated version of ImageDataDisk_StorageAccountType. Use v1beta20210701.ImageDataDisk_StorageAccountType instead
+                          description: Deprecated version of StorageAccountType. Use v1beta20210701.StorageAccountType instead
                           enum:
                           - Premium_LRS
                           - Premium_ZRS
@@ -215,7 +215,7 @@ spec:
                         - ReadWrite
                         type: string
                       diskEncryptionSet:
-                        description: Deprecated version of DiskEncryptionSetParameters. Use v1beta20210701.DiskEncryptionSetParameters instead
+                        description: Deprecated version of SubResource. Use v1beta20210701.SubResource instead
                         properties:
                           reference:
                             description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
@@ -292,7 +292,7 @@ spec:
                             type: object
                         type: object
                       storageAccountType:
-                        description: Deprecated version of ImageOSDisk_StorageAccountType. Use v1beta20210701.ImageOSDisk_StorageAccountType instead
+                        description: Deprecated version of StorageAccountType. Use v1beta20210701.StorageAccountType instead
                         enum:
                         - Premium_LRS
                         - Premium_ZRS
@@ -313,6 +313,7 @@ spec:
                   type: string
                 type: object
             required:
+            - location
             - owner
             type: object
           status:
@@ -584,7 +585,7 @@ spec:
                         caching:
                           type: string
                         diskEncryptionSet:
-                          description: Storage version of v1alpha1api20210701.DiskEncryptionSetParameters Deprecated version of DiskEncryptionSetParameters. Use v1beta20210701.DiskEncryptionSetParameters instead
+                          description: Storage version of v1alpha1api20210701.SubResource Deprecated version of SubResource. Use v1beta20210701.SubResource instead
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -682,7 +683,7 @@ spec:
                       caching:
                         type: string
                       diskEncryptionSet:
-                        description: Storage version of v1alpha1api20210701.DiskEncryptionSetParameters Deprecated version of DiskEncryptionSetParameters. Use v1beta20210701.DiskEncryptionSetParameters instead
+                        description: Storage version of v1alpha1api20210701.SubResource Deprecated version of SubResource. Use v1beta20210701.SubResource instead
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1001,7 +1002,7 @@ spec:
     name: v1beta20210701
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/resourceDefinitions/images'
+        description: 'Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2021-07-01/compute.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1017,7 +1018,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               extendedLocation:
-                description: 'ExtendedLocation: The complex type of the extended location.'
+                description: 'ExtendedLocation: The extended location of the Image.'
                 properties:
                   name:
                     description: 'Name: The name of the extended location.'
@@ -1035,7 +1036,7 @@ spec:
                 - V2
                 type: string
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource location'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
@@ -1047,7 +1048,7 @@ spec:
                 - name
                 type: object
               sourceVirtualMachine:
-                description: 'Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                description: 'SourceVirtualMachine: The source virtual machine from which Image is created.'
                 properties:
                   reference:
                     description: 'Reference: Resource Id'
@@ -1068,25 +1069,25 @@ spec:
                     type: object
                 type: object
               storageProfile:
-                description: 'StorageProfile: Describes a storage profile.'
+                description: 'StorageProfile: Specifies the storage settings for the virtual machine disks.'
                 properties:
                   dataDisks:
                     description: 'DataDisks: Specifies the parameters that are used to add a data disk to a virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/ImageDataDisk'
+                      description: Describes a data disk.
                       properties:
                         blobUri:
                           description: 'BlobUri: The Virtual Hard Disk.'
                           type: string
                         caching:
-                          description: 'Caching: Specifies the caching requirements. Possible values are: None ReadOnly ReadWrite Default: None for Standard storage. ReadOnly for Premium storage.'
+                          description: 'Caching: Specifies the caching requirements. Possible values are: None ReadOnly ReadWrite Default: None for Standard storage. ReadOnly for Premium storage'
                           enum:
                           - None
                           - ReadOnly
                           - ReadWrite
                           type: string
                         diskEncryptionSet:
-                          description: 'DiskEncryptionSet: Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.'
+                          description: 'DiskEncryptionSet: Specifies the customer managed disk encryption set resource id for the managed image disk.'
                           properties:
                             reference:
                               description: 'Reference: Resource Id'
@@ -1113,7 +1114,7 @@ spec:
                           description: 'Lun: Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.'
                           type: integer
                         managedDisk:
-                          description: 'Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                          description: 'ManagedDisk: The managedDisk.'
                           properties:
                             reference:
                               description: 'Reference: Resource Id'
@@ -1134,7 +1135,7 @@ spec:
                               type: object
                           type: object
                         snapshot:
-                          description: 'Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                          description: 'Snapshot: The snapshot.'
                           properties:
                             reference:
                               description: 'Reference: Resource Id'
@@ -1169,20 +1170,20 @@ spec:
                       type: object
                     type: array
                   osDisk:
-                    description: 'OsDisk: Describes an Operating System disk.'
+                    description: 'OsDisk: Specifies information about the operating system disk used by the virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).'
                     properties:
                       blobUri:
                         description: 'BlobUri: The Virtual Hard Disk.'
                         type: string
                       caching:
-                        description: 'Caching: Specifies the caching requirements. Possible values are: None ReadOnly ReadWrite Default: None for Standard storage. ReadOnly for Premium storage.'
+                        description: 'Caching: Specifies the caching requirements. Possible values are: None ReadOnly ReadWrite Default: None for Standard storage. ReadOnly for Premium storage'
                         enum:
                         - None
                         - ReadOnly
                         - ReadWrite
                         type: string
                       diskEncryptionSet:
-                        description: 'DiskEncryptionSet: Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.'
+                        description: 'DiskEncryptionSet: Specifies the customer managed disk encryption set resource id for the managed image disk.'
                         properties:
                           reference:
                             description: 'Reference: Resource Id'
@@ -1206,7 +1207,7 @@ spec:
                         description: 'DiskSizeGB: Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. This value cannot be larger than 1023 GB'
                         type: integer
                       managedDisk:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                        description: 'ManagedDisk: The managedDisk.'
                         properties:
                           reference:
                             description: 'Reference: Resource Id'
@@ -1233,13 +1234,13 @@ spec:
                         - Specialized
                         type: string
                       osType:
-                        description: 'OsType: This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. Possible values are: Windows Linux.'
+                        description: 'OsType: This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. Possible values are: Windows Linux'
                         enum:
                         - Linux
                         - Windows
                         type: string
                       snapshot:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                        description: 'Snapshot: The snapshot.'
                         properties:
                           reference:
                             description: 'Reference: Resource Id'
@@ -1280,12 +1281,14 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags'
                 type: object
             required:
+            - location
             - owner
             type: object
           status:
+            description: The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -1360,6 +1363,7 @@ spec:
                   dataDisks:
                     description: 'DataDisks: Specifies the parameters that are used to add a data disk to a virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).'
                     items:
+                      description: Describes a data disk.
                       properties:
                         blobUri:
                           description: 'BlobUri: The Virtual Hard Disk.'
@@ -1476,7 +1480,7 @@ spec:
     name: v1beta20210701storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210701.Image Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/resourceDefinitions/images'
+        description: 'Storage version of v1beta20210701.Image Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2021-07-01/compute.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1498,7 +1502,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               extendedLocation:
-                description: 'Storage version of v1beta20210701.ExtendedLocation Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/ExtendedLocation'
+                description: Storage version of v1beta20210701.ExtendedLocation The complex type of the extended location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1526,7 +1530,7 @@ spec:
                 - name
                 type: object
               sourceVirtualMachine:
-                description: 'Storage version of v1beta20210701.SubResource Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                description: Storage version of v1beta20210701.SubResource
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1552,7 +1556,7 @@ spec:
                     type: object
                 type: object
               storageProfile:
-                description: 'Storage version of v1beta20210701.ImageStorageProfile Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/ImageStorageProfile'
+                description: Storage version of v1beta20210701.ImageStorageProfile Describes a storage profile.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1561,7 +1565,7 @@ spec:
                     type: object
                   dataDisks:
                     items:
-                      description: 'Storage version of v1beta20210701.ImageDataDisk Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/ImageDataDisk'
+                      description: Storage version of v1beta20210701.ImageDataDisk Describes a data disk.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1573,7 +1577,7 @@ spec:
                         caching:
                           type: string
                         diskEncryptionSet:
-                          description: 'Storage version of v1beta20210701.DiskEncryptionSetParameters Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/DiskEncryptionSetParameters'
+                          description: Storage version of v1beta20210701.SubResource
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1603,7 +1607,7 @@ spec:
                         lun:
                           type: integer
                         managedDisk:
-                          description: 'Storage version of v1beta20210701.SubResource Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                          description: Storage version of v1beta20210701.SubResource
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1629,7 +1633,7 @@ spec:
                               type: object
                           type: object
                         snapshot:
-                          description: 'Storage version of v1beta20210701.SubResource Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                          description: Storage version of v1beta20210701.SubResource
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1659,7 +1663,7 @@ spec:
                       type: object
                     type: array
                   osDisk:
-                    description: 'Storage version of v1beta20210701.ImageOSDisk Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/ImageOSDisk'
+                    description: Storage version of v1beta20210701.ImageOSDisk Describes an Operating System disk.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1671,7 +1675,7 @@ spec:
                       caching:
                         type: string
                       diskEncryptionSet:
-                        description: 'Storage version of v1beta20210701.DiskEncryptionSetParameters Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/DiskEncryptionSetParameters'
+                        description: Storage version of v1beta20210701.SubResource
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1699,7 +1703,7 @@ spec:
                       diskSizeGB:
                         type: integer
                       managedDisk:
-                        description: 'Storage version of v1beta20210701.SubResource Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                        description: Storage version of v1beta20210701.SubResource
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1729,7 +1733,7 @@ spec:
                       osType:
                         type: string
                       snapshot:
-                        description: 'Storage version of v1beta20210701.SubResource Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Compute.json#/definitions/SubResource'
+                        description: Storage version of v1beta20210701.SubResource
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1768,7 +1772,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210701.Image_STATUS
+            description: Storage version of v1beta20210701.Image_STATUS The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1810,7 +1814,7 @@ spec:
                   type: object
                 type: array
               extendedLocation:
-                description: Storage version of v1beta20210701.ExtendedLocation_STATUS
+                description: Storage version of v1beta20210701.ExtendedLocation_STATUS The complex type of the extended location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1844,7 +1848,7 @@ spec:
                     type: string
                 type: object
               storageProfile:
-                description: Storage version of v1beta20210701.ImageStorageProfile_STATUS
+                description: Storage version of v1beta20210701.ImageStorageProfile_STATUS Describes a storage profile.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1853,7 +1857,7 @@ spec:
                     type: object
                   dataDisks:
                     items:
-                      description: Storage version of v1beta20210701.ImageDataDisk_STATUS
+                      description: Storage version of v1beta20210701.ImageDataDisk_STATUS Describes a data disk.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1906,7 +1910,7 @@ spec:
                       type: object
                     type: array
                   osDisk:
-                    description: Storage version of v1beta20210701.ImageOSDisk_STATUS
+                    description: Storage version of v1beta20210701.ImageOSDisk_STATUS Describes an Operating System disk.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1990,7 +1994,7 @@ spec:
     name: v1beta20220301
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/resourceDefinitions/images'
+        description: 'Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/image.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -2006,7 +2010,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               extendedLocation:
-                description: 'ExtendedLocation: The complex type of the extended location.'
+                description: 'ExtendedLocation: The extended location of the Image.'
                 properties:
                   name:
                     description: 'Name: The name of the extended location.'
@@ -2024,7 +2028,7 @@ spec:
                 - V2
                 type: string
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource location'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
@@ -2036,7 +2040,7 @@ spec:
                 - name
                 type: object
               sourceVirtualMachine:
-                description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                description: 'SourceVirtualMachine: The source virtual machine from which Image is created.'
                 properties:
                   reference:
                     description: 'Reference: Resource Id'
@@ -2057,25 +2061,25 @@ spec:
                     type: object
                 type: object
               storageProfile:
-                description: 'StorageProfile: Describes a storage profile.'
+                description: 'StorageProfile: Specifies the storage settings for the virtual machine disks.'
                 properties:
                   dataDisks:
                     description: 'DataDisks: Specifies the parameters that are used to add a data disk to a virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/ImageDataDisk'
+                      description: Describes a data disk.
                       properties:
                         blobUri:
                           description: 'BlobUri: The Virtual Hard Disk.'
                           type: string
                         caching:
-                          description: 'Caching: Specifies the caching requirements. Possible values are: None ReadOnly ReadWrite Default: None for Standard storage. ReadOnly for Premium storage.'
+                          description: 'Caching: Specifies the caching requirements. Possible values are: None ReadOnly ReadWrite Default: None for Standard storage. ReadOnly for Premium storage'
                           enum:
                           - None
                           - ReadOnly
                           - ReadWrite
                           type: string
                         diskEncryptionSet:
-                          description: 'DiskEncryptionSet: Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.'
+                          description: 'DiskEncryptionSet: Specifies the customer managed disk encryption set resource id for the managed image disk.'
                           properties:
                             reference:
                               description: 'Reference: Resource Id'
@@ -2102,7 +2106,7 @@ spec:
                           description: 'Lun: Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.'
                           type: integer
                         managedDisk:
-                          description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                          description: 'ManagedDisk: The managedDisk.'
                           properties:
                             reference:
                               description: 'Reference: Resource Id'
@@ -2123,7 +2127,7 @@ spec:
                               type: object
                           type: object
                         snapshot:
-                          description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                          description: 'Snapshot: The snapshot.'
                           properties:
                             reference:
                               description: 'Reference: Resource Id'
@@ -2159,20 +2163,20 @@ spec:
                       type: object
                     type: array
                   osDisk:
-                    description: 'OsDisk: Describes an Operating System disk.'
+                    description: 'OsDisk: Specifies information about the operating system disk used by the virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).'
                     properties:
                       blobUri:
                         description: 'BlobUri: The Virtual Hard Disk.'
                         type: string
                       caching:
-                        description: 'Caching: Specifies the caching requirements. Possible values are: None ReadOnly ReadWrite Default: None for Standard storage. ReadOnly for Premium storage.'
+                        description: 'Caching: Specifies the caching requirements. Possible values are: None ReadOnly ReadWrite Default: None for Standard storage. ReadOnly for Premium storage'
                         enum:
                         - None
                         - ReadOnly
                         - ReadWrite
                         type: string
                       diskEncryptionSet:
-                        description: 'DiskEncryptionSet: Describes the parameter of customer managed disk encryption set resource id that can be specified for disk. NOTE: The disk encryption set resource id can only be specified for managed disk. Please refer https://aka.ms/mdssewithcmkoverview for more details.'
+                        description: 'DiskEncryptionSet: Specifies the customer managed disk encryption set resource id for the managed image disk.'
                         properties:
                           reference:
                             description: 'Reference: Resource Id'
@@ -2196,7 +2200,7 @@ spec:
                         description: 'DiskSizeGB: Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. This value cannot be larger than 1023 GB'
                         type: integer
                       managedDisk:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                        description: 'ManagedDisk: The managedDisk.'
                         properties:
                           reference:
                             description: 'Reference: Resource Id'
@@ -2223,13 +2227,13 @@ spec:
                         - Specialized
                         type: string
                       osType:
-                        description: 'OsType: This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. Possible values are: Windows Linux.'
+                        description: 'OsType: This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. Possible values are: Windows Linux'
                         enum:
                         - Linux
                         - Windows
                         type: string
                       snapshot:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                        description: 'Snapshot: The snapshot.'
                         properties:
                           reference:
                             description: 'Reference: Resource Id'
@@ -2271,12 +2275,14 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags'
                 type: object
             required:
+            - location
             - owner
             type: object
           status:
+            description: The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -2351,6 +2357,7 @@ spec:
                   dataDisks:
                     description: 'DataDisks: Specifies the parameters that are used to add a data disk to a virtual machine. For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).'
                     items:
+                      description: Describes a data disk.
                       properties:
                         blobUri:
                           description: 'BlobUri: The Virtual Hard Disk.'
@@ -2467,7 +2474,7 @@ spec:
     name: v1beta20220301storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20220301.Image Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/resourceDefinitions/images'
+        description: 'Storage version of v1beta20220301.Image Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/image.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -2489,7 +2496,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               extendedLocation:
-                description: 'Storage version of v1beta20220301.ExtendedLocation Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/ExtendedLocation'
+                description: Storage version of v1beta20220301.ExtendedLocation The complex type of the extended location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2517,7 +2524,7 @@ spec:
                 - name
                 type: object
               sourceVirtualMachine:
-                description: 'Storage version of v1beta20220301.SubResource Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                description: Storage version of v1beta20220301.SubResource
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2543,7 +2550,7 @@ spec:
                     type: object
                 type: object
               storageProfile:
-                description: 'Storage version of v1beta20220301.ImageStorageProfile Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/ImageStorageProfile'
+                description: Storage version of v1beta20220301.ImageStorageProfile Describes a storage profile.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2552,7 +2559,7 @@ spec:
                     type: object
                   dataDisks:
                     items:
-                      description: 'Storage version of v1beta20220301.ImageDataDisk Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/ImageDataDisk'
+                      description: Storage version of v1beta20220301.ImageDataDisk Describes a data disk.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2564,7 +2571,7 @@ spec:
                         caching:
                           type: string
                         diskEncryptionSet:
-                          description: 'Storage version of v1beta20220301.DiskEncryptionSetParameters Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/DiskEncryptionSetParameters'
+                          description: Storage version of v1beta20220301.SubResource
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2594,7 +2601,7 @@ spec:
                         lun:
                           type: integer
                         managedDisk:
-                          description: 'Storage version of v1beta20220301.SubResource Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                          description: Storage version of v1beta20220301.SubResource
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2620,7 +2627,7 @@ spec:
                               type: object
                           type: object
                         snapshot:
-                          description: 'Storage version of v1beta20220301.SubResource Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                          description: Storage version of v1beta20220301.SubResource
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2650,7 +2657,7 @@ spec:
                       type: object
                     type: array
                   osDisk:
-                    description: 'Storage version of v1beta20220301.ImageOSDisk Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/ImageOSDisk'
+                    description: Storage version of v1beta20220301.ImageOSDisk Describes an Operating System disk.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2662,7 +2669,7 @@ spec:
                       caching:
                         type: string
                       diskEncryptionSet:
-                        description: 'Storage version of v1beta20220301.DiskEncryptionSetParameters Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/DiskEncryptionSetParameters'
+                        description: Storage version of v1beta20220301.SubResource
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2690,7 +2697,7 @@ spec:
                       diskSizeGB:
                         type: integer
                       managedDisk:
-                        description: 'Storage version of v1beta20220301.SubResource Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                        description: Storage version of v1beta20220301.SubResource
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2720,7 +2727,7 @@ spec:
                       osType:
                         type: string
                       snapshot:
-                        description: 'Storage version of v1beta20220301.SubResource Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Compute.json#/definitions/SubResource'
+                        description: Storage version of v1beta20220301.SubResource
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2759,7 +2766,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20220301.Image_STATUS
+            description: Storage version of v1beta20220301.Image_STATUS The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2801,7 +2808,7 @@ spec:
                   type: object
                 type: array
               extendedLocation:
-                description: Storage version of v1beta20220301.ExtendedLocation_STATUS
+                description: Storage version of v1beta20220301.ExtendedLocation_STATUS The complex type of the extended location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2835,7 +2842,7 @@ spec:
                     type: string
                 type: object
               storageProfile:
-                description: Storage version of v1beta20220301.ImageStorageProfile_STATUS
+                description: Storage version of v1beta20220301.ImageStorageProfile_STATUS Describes a storage profile.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2844,7 +2851,7 @@ spec:
                     type: object
                   dataDisks:
                     items:
-                      description: Storage version of v1beta20220301.ImageDataDisk_STATUS
+                      description: Storage version of v1beta20220301.ImageDataDisk_STATUS Describes a data disk.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2897,7 +2904,7 @@ spec:
                       type: object
                     type: array
                   osDisk:
-                    description: Storage version of v1beta20220301.ImageOSDisk_STATUS
+                    description: Storage version of v1beta20220301.ImageOSDisk_STATUS Describes an Operating System disk.
                     properties:
                       $propertyBag:
                         additionalProperties:

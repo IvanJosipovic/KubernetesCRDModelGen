@@ -90,6 +90,19 @@ spec:
                         - key
                         - name
                         type: object
+                      tenantId:
+                        description: 'TenantId: indicates where the TenantId config map should be placed. If omitted, no config map will be created.'
+                        properties:
+                          key:
+                            description: Key is the key in the ConfigMap being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
                     type: object
                 type: object
               owner:
@@ -106,10 +119,11 @@ spec:
                   type: string
                 type: object
             required:
+            - location
             - owner
             type: object
           status:
-            description: Deprecated version of Identity_STATUS. Use v1beta20181130.Identity_STATUS instead
+            description: Deprecated version of UserAssignedIdentity_STATUS. Use v1beta20181130.UserAssignedIdentity_STATUS instead
             properties:
               clientId:
                 type: string
@@ -251,6 +265,19 @@ spec:
                         - key
                         - name
                         type: object
+                      tenantId:
+                        description: 'ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the ConfigMap being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
                     type: object
                 type: object
               originalVersion:
@@ -272,7 +299,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20181130.Identity_STATUS Deprecated version of Identity_STATUS. Use v1beta20181130.Identity_STATUS instead
+            description: Storage version of v1alpha1api20181130.UserAssignedIdentity_STATUS Deprecated version of UserAssignedIdentity_STATUS. Use v1beta20181130.UserAssignedIdentity_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -353,7 +380,7 @@ spec:
     name: v1beta20181130
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2018-11-30/Microsoft.ManagedIdentity.json#/resourceDefinitions/userAssignedIdentities'
+        description: 'Generator information: - Generated from: /msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{resourceName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -403,6 +430,19 @@ spec:
                         - key
                         - name
                         type: object
+                      tenantId:
+                        description: 'TenantId: indicates where the TenantId config map should be placed. If omitted, no config map will be created.'
+                        properties:
+                          key:
+                            description: Key is the key in the ConfigMap being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
                     type: object
                 type: object
               owner:
@@ -417,9 +457,10 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
             required:
+            - location
             - owner
             type: object
           status:
@@ -507,7 +548,7 @@ spec:
     name: v1beta20181130storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20181130.UserAssignedIdentity Generated from: https://schema.management.azure.com/schemas/2018-11-30/Microsoft.ManagedIdentity.json#/resourceDefinitions/userAssignedIdentities'
+        description: 'Storage version of v1beta20181130.UserAssignedIdentity Generator information: - Generated from: /msi/resource-manager/Microsoft.ManagedIdentity/stable/2018-11-30/ManagedIdentity.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{resourceName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -572,6 +613,19 @@ spec:
                         - key
                         - name
                         type: object
+                      tenantId:
+                        description: 'ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the ConfigMap being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
                     type: object
                 type: object
               originalVersion:
@@ -593,7 +647,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20181130.Identity_STATUS
+            description: Storage version of v1beta20181130.UserAssignedIdentity_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

@@ -41,7 +41,7 @@ spec:
     name: v1beta20210101preview
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces_topics_subscriptions_rules'
+        description: 'Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -72,7 +72,7 @@ spec:
                 minLength: 1
                 type: string
               correlationFilter:
-                description: 'CorrelationFilter: Represents the correlation filter expression.'
+                description: 'CorrelationFilter: Properties of correlationFilter'
                 properties:
                   contentType:
                     description: 'ContentType: Content type of the message.'
@@ -113,9 +113,6 @@ spec:
                 - CorrelationFilter
                 - SqlFilter
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource'
                 properties:
@@ -126,7 +123,7 @@ spec:
                 - name
                 type: object
               sqlFilter:
-                description: 'SqlFilter: Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.'
+                description: 'SqlFilter: Properties of sqlFilter'
                 properties:
                   compatibilityLevel:
                     description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
@@ -139,11 +136,6 @@ spec:
                   sqlExpression:
                     description: "SqlExpression: The SQL expression. e.g. MyProperty='ABC'"
                     type: string
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
                 type: object
             required:
             - owner
@@ -303,7 +295,7 @@ spec:
     name: v1beta20210101previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210101preview.NamespacesTopicsSubscriptionsRule Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces_topics_subscriptions_rules'
+        description: 'Storage version of v1beta20210101preview.NamespacesTopicsSubscriptionsRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -322,7 +314,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               action:
-                description: 'Storage version of v1beta20210101preview.Action Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/Action'
+                description: Storage version of v1beta20210101preview.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -342,7 +334,7 @@ spec:
                 minLength: 1
                 type: string
               correlationFilter:
-                description: 'Storage version of v1beta20210101preview.CorrelationFilter Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/CorrelationFilter'
+                description: Storage version of v1beta20210101preview.CorrelationFilter Represents the correlation filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -374,8 +366,6 @@ spec:
                 type: object
               filterType:
                 type: string
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -388,7 +378,7 @@ spec:
                 - name
                 type: object
               sqlFilter:
-                description: 'Storage version of v1beta20210101preview.SqlFilter Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/definitions/SqlFilter'
+                description: Storage version of v1beta20210101preview.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -402,15 +392,11 @@ spec:
                   sqlExpression:
                     type: string
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210101preview.Rule_STATUS
+            description: Storage version of v1beta20210101preview.Namespaces_Topics_Subscriptions_Rule_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -418,7 +404,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               action:
-                description: Storage version of v1beta20210101preview.Action_STATUS
+                description: Storage version of v1beta20210101preview.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -467,7 +453,7 @@ spec:
                   type: object
                 type: array
               correlationFilter:
-                description: Storage version of v1beta20210101preview.CorrelationFilter_STATUS
+                description: Storage version of v1beta20210101preview.CorrelationFilter_STATUS Represents the correlation filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -504,7 +490,7 @@ spec:
               name:
                 type: string
               sqlFilter:
-                description: Storage version of v1beta20210101preview.SqlFilter_STATUS
+                description: Storage version of v1beta20210101preview.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -519,7 +505,7 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1beta20210101preview.SystemData_STATUS
+                description: Storage version of v1beta20210101preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

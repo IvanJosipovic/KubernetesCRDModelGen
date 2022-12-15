@@ -88,8 +88,6 @@ spec:
                     items:
                       type: string
                     type: array
-                required:
-                - addressPrefixes
                 type: object
               enableBgp:
                 type: boolean
@@ -97,6 +95,20 @@ spec:
                 type: boolean
               enablePrivateIpAddress:
                 type: boolean
+              extendedLocation:
+                description: Deprecated version of ExtendedLocation. Use v1beta20201101.ExtendedLocation instead
+                properties:
+                  name:
+                    type: string
+                  type:
+                    description: Deprecated version of ExtendedLocationType. Use v1beta20201101.ExtendedLocationType instead
+                    enum:
+                    - EdgeZone
+                    type: string
+                required:
+                - name
+                - type
+                type: object
               gatewayDefaultSite:
                 description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
                 properties:
@@ -117,25 +129,22 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
                 type: object
               gatewayType:
-                description: Deprecated version of VirtualNetworkGateway_Properties_GatewayType_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_GatewayType_Spec instead
+                description: Deprecated version of VirtualNetworkGatewayPropertiesFormat_GatewayType. Use v1beta20201101.VirtualNetworkGatewayPropertiesFormat_GatewayType instead
                 enum:
                 - ExpressRoute
-                - HyperNet
                 - LocalGateway
                 - Vpn
                 type: string
               ipConfigurations:
                 items:
-                  description: Deprecated version of VirtualNetworkGateway_Properties_IpConfigurations_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_IpConfigurations_Spec instead
+                  description: Deprecated version of VirtualNetworkGatewayIPConfiguration. Use v1beta20201101.VirtualNetworkGatewayIPConfiguration instead
                   properties:
                     name:
                       type: string
                     privateIPAllocationMethod:
-                      description: Deprecated version of VirtualNetworkGatewayIPConfigurationPropertiesFormat_PrivateIPAllocationMethod. Use v1beta20201101.VirtualNetworkGatewayIPConfigurationPropertiesFormat_PrivateIPAllocationMethod instead
+                      description: Deprecated version of IPAllocationMethod. Use v1beta20201101.IPAllocationMethod instead
                       enum:
                       - Dynamic
                       - Static
@@ -160,8 +169,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     subnet:
                       description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
@@ -183,8 +190,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                   type: object
                 type: array
@@ -266,22 +271,8 @@ spec:
                     description: Name is the Kubernetes name of the resource.
                     type: string
                 type: object
-              virtualNetworkExtendedLocation:
-                description: Deprecated version of ExtendedLocation. Use v1beta20201101.ExtendedLocation instead
-                properties:
-                  name:
-                    type: string
-                  type:
-                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20201101.ExtendedLocation_Type instead
-                    enum:
-                    - EdgeZone
-                    type: string
-                required:
-                - name
-                - type
-                type: object
               vpnClientConfiguration:
-                description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec instead
+                description: Deprecated version of VpnClientConfiguration. Use v1beta20201101.VpnClientConfiguration instead
                 properties:
                   aadAudience:
                     type: string
@@ -309,7 +300,7 @@ spec:
                     type: array
                   vpnAuthenticationTypes:
                     items:
-                      description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnAuthenticationTypes_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnAuthenticationTypes_Spec instead
+                      description: Deprecated version of VpnClientConfiguration_VpnAuthenticationTypes. Use v1beta20201101.VpnClientConfiguration_VpnAuthenticationTypes instead
                       enum:
                       - AAD
                       - Certificate
@@ -323,15 +314,13 @@ spec:
                         items:
                           type: string
                         type: array
-                    required:
-                    - addressPrefixes
                     type: object
                   vpnClientIpsecPolicies:
                     items:
                       description: Deprecated version of IpsecPolicy. Use v1beta20201101.IpsecPolicy instead
                       properties:
                         dhGroup:
-                          description: Deprecated version of IpsecPolicy_DhGroup. Use v1beta20201101.IpsecPolicy_DhGroup instead
+                          description: Deprecated version of DhGroup. Use v1beta20201101.DhGroup instead
                           enum:
                           - DHGroup1
                           - DHGroup14
@@ -343,7 +332,7 @@ spec:
                           - None
                           type: string
                         ikeEncryption:
-                          description: Deprecated version of IpsecPolicy_IkeEncryption. Use v1beta20201101.IpsecPolicy_IkeEncryption instead
+                          description: Deprecated version of IkeEncryption. Use v1beta20201101.IkeEncryption instead
                           enum:
                           - AES128
                           - AES192
@@ -354,7 +343,7 @@ spec:
                           - GCMAES256
                           type: string
                         ikeIntegrity:
-                          description: Deprecated version of IpsecPolicy_IkeIntegrity. Use v1beta20201101.IpsecPolicy_IkeIntegrity instead
+                          description: Deprecated version of IkeIntegrity. Use v1beta20201101.IkeIntegrity instead
                           enum:
                           - GCMAES128
                           - GCMAES256
@@ -364,7 +353,7 @@ spec:
                           - SHA384
                           type: string
                         ipsecEncryption:
-                          description: Deprecated version of IpsecPolicy_IpsecEncryption. Use v1beta20201101.IpsecPolicy_IpsecEncryption instead
+                          description: Deprecated version of IpsecEncryption. Use v1beta20201101.IpsecEncryption instead
                           enum:
                           - AES128
                           - AES192
@@ -377,7 +366,7 @@ spec:
                           - None
                           type: string
                         ipsecIntegrity:
-                          description: Deprecated version of IpsecPolicy_IpsecIntegrity. Use v1beta20201101.IpsecPolicy_IpsecIntegrity instead
+                          description: Deprecated version of IpsecIntegrity. Use v1beta20201101.IpsecIntegrity instead
                           enum:
                           - GCMAES128
                           - GCMAES192
@@ -387,7 +376,7 @@ spec:
                           - SHA256
                           type: string
                         pfsGroup:
-                          description: Deprecated version of IpsecPolicy_PfsGroup. Use v1beta20201101.IpsecPolicy_PfsGroup instead
+                          description: Deprecated version of PfsGroup. Use v1beta20201101.PfsGroup instead
                           enum:
                           - ECP256
                           - ECP384
@@ -416,7 +405,7 @@ spec:
                     type: array
                   vpnClientProtocols:
                     items:
-                      description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientProtocols_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientProtocols_Spec instead
+                      description: Deprecated version of VpnClientConfiguration_VpnClientProtocols. Use v1beta20201101.VpnClientConfiguration_VpnClientProtocols instead
                       enum:
                       - IkeV2
                       - OpenVPN
@@ -425,7 +414,7 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec instead
+                      description: Deprecated version of VpnClientRevokedCertificate. Use v1beta20201101.VpnClientRevokedCertificate instead
                       properties:
                         name:
                           type: string
@@ -435,7 +424,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec instead
+                      description: Deprecated version of VpnClientRootCertificate. Use v1beta20201101.VpnClientRootCertificate instead
                       properties:
                         name:
                           type: string
@@ -447,14 +436,14 @@ spec:
                     type: array
                 type: object
               vpnGatewayGeneration:
-                description: Deprecated version of VirtualNetworkGateway_Properties_VpnGatewayGeneration_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnGatewayGeneration_Spec instead
+                description: Deprecated version of VirtualNetworkGatewayPropertiesFormat_VpnGatewayGeneration. Use v1beta20201101.VirtualNetworkGatewayPropertiesFormat_VpnGatewayGeneration instead
                 enum:
                 - Generation1
                 - Generation2
                 - None
                 type: string
               vpnType:
-                description: Deprecated version of VirtualNetworkGateway_Properties_VpnType_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnType_Spec instead
+                description: Deprecated version of VirtualNetworkGatewayPropertiesFormat_VpnType. Use v1beta20201101.VirtualNetworkGatewayPropertiesFormat_VpnType instead
                 enum:
                 - PolicyBased
                 - RouteBased
@@ -841,6 +830,19 @@ spec:
                 type: boolean
               enablePrivateIpAddress:
                 type: boolean
+              extendedLocation:
+                description: Storage version of v1alpha1api20201101.ExtendedLocation Deprecated version of ExtendedLocation. Use v1beta20201101.ExtendedLocation instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  name:
+                    type: string
+                  type:
+                    type: string
+                type: object
               gatewayDefaultSite:
                 description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
                 properties:
@@ -866,14 +868,12 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
                 type: object
               gatewayType:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Properties_IpConfigurations_Spec Deprecated version of VirtualNetworkGateway_Properties_IpConfigurations_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_IpConfigurations_Spec instead
+                  description: Storage version of v1alpha1api20201101.VirtualNetworkGatewayIPConfiguration Deprecated version of VirtualNetworkGatewayIPConfiguration. Use v1beta20201101.VirtualNetworkGatewayIPConfiguration instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -909,8 +909,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     subnet:
                       description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
@@ -937,8 +935,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                   type: object
                 type: array
@@ -989,21 +985,8 @@ spec:
                     description: Name is the Kubernetes name of the resource.
                     type: string
                 type: object
-              virtualNetworkExtendedLocation:
-                description: Storage version of v1alpha1api20201101.ExtendedLocation Deprecated version of ExtendedLocation. Use v1beta20201101.ExtendedLocation instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  name:
-                    type: string
-                  type:
-                    type: string
-                type: object
               vpnClientConfiguration:
-                description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec instead
+                description: Storage version of v1alpha1api20201101.VpnClientConfiguration Deprecated version of VpnClientConfiguration. Use v1beta20201101.VpnClientConfiguration instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1087,7 +1070,7 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec instead
+                      description: Storage version of v1alpha1api20201101.VpnClientRevokedCertificate Deprecated version of VpnClientRevokedCertificate. Use v1beta20201101.VpnClientRevokedCertificate instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1102,7 +1085,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Storage version of v1alpha1api20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec Deprecated version of VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec. Use v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec instead
+                      description: Storage version of v1alpha1api20201101.VpnClientRootCertificate Deprecated version of VpnClientRootCertificate. Use v1beta20201101.VpnClientRootCertificate instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1487,7 +1470,7 @@ spec:
     name: v1beta20201101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/virtualNetworkGateways'
+        description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetworkGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1518,7 +1501,7 @@ spec:
                   bgpPeeringAddresses:
                     description: 'BgpPeeringAddresses: BGP peering address with IP configuration ID for virtual network gateway.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/IPConfigurationBgpPeeringAddress'
+                      description: Properties of IPConfigurationBgpPeeringAddress.
                       properties:
                         customBgpIpAddresses:
                           description: 'CustomBgpIpAddresses: The list of custom BGP peering addresses which belong to IP configuration.'
@@ -1542,8 +1525,6 @@ spec:
                     items:
                       type: string
                     type: array
-                required:
-                - addressPrefixes
                 type: object
               enableBgp:
                 description: 'EnableBgp: Whether BGP is enabled for this virtual network gateway or not.'
@@ -1554,6 +1535,21 @@ spec:
               enablePrivateIpAddress:
                 description: 'EnablePrivateIpAddress: Whether private IP needs to be enabled on this gateway for connections or not.'
                 type: boolean
+              extendedLocation:
+                description: 'ExtendedLocation: The extended location of type local virtual network gateway.'
+                properties:
+                  name:
+                    description: 'Name: The name of the extended location.'
+                    type: string
+                  type:
+                    description: 'Type: The type of the extended location.'
+                    enum:
+                    - EdgeZone
+                    type: string
+                required:
+                - name
+                - type
+                type: object
               gatewayDefaultSite:
                 description: 'GatewayDefaultSite: The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.'
                 properties:
@@ -1574,20 +1570,18 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
                 type: object
               gatewayType:
                 description: 'GatewayType: The type of this virtual network gateway.'
                 enum:
                 - ExpressRoute
-                - HyperNet
                 - LocalGateway
                 - Vpn
                 type: string
               ipConfigurations:
                 description: 'IpConfigurations: IP configurations for virtual network gateway.'
                 items:
+                  description: IP configuration for virtual network gateway.
                   properties:
                     name:
                       description: 'Name: The name of the resource that is unique within a resource group. This name can be used to access the resource.'
@@ -1618,8 +1612,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     subnet:
                       description: 'Subnet: The reference to the subnet resource.'
@@ -1641,13 +1633,11 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                   type: object
                 type: array
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource location.'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
@@ -1707,10 +1697,10 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
               vNetExtendedLocationResourceReference:
-                description: 'VNetExtendedLocationResourceReference: MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.'
+                description: 'VNetExtendedLocationResourceReference: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.'
                 properties:
                   armId:
                     description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
@@ -1725,21 +1715,6 @@ spec:
                   name:
                     description: Name is the Kubernetes name of the resource.
                     type: string
-                type: object
-              virtualNetworkExtendedLocation:
-                description: 'VirtualNetworkExtendedLocation: The extended location of type local virtual network gateway.'
-                properties:
-                  name:
-                    description: 'Name: The name of the extended location.'
-                    type: string
-                  type:
-                    description: 'Type: The type of the extended location.'
-                    enum:
-                    - EdgeZone
-                    type: string
-                required:
-                - name
-                - type
                 type: object
               vpnClientConfiguration:
                 description: 'VpnClientConfiguration: The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.'
@@ -1762,7 +1737,7 @@ spec:
                   radiusServers:
                     description: 'RadiusServers: The radiusServers property for multiple radius server configuration.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/RadiusServer'
+                      description: Radius Server Settings.
                       properties:
                         radiusServerAddress:
                           description: 'RadiusServerAddress: The address of this radius server.'
@@ -1794,13 +1769,11 @@ spec:
                         items:
                           type: string
                         type: array
-                    required:
-                    - addressPrefixes
                     type: object
                   vpnClientIpsecPolicies:
                     description: 'VpnClientIpsecPolicies: VpnClientIpsecPolicies for virtual network gateway P2S client.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/IpsecPolicy'
+                      description: An IPSec Policy configuration for a virtual network gateway connection.
                       properties:
                         dhGroup:
                           description: 'DhGroup: The DH Group used in IKE Phase 1 for initial SA.'
@@ -1900,6 +1873,7 @@ spec:
                   vpnClientRevokedCertificates:
                     description: 'VpnClientRevokedCertificates: VpnClientRevokedCertificate for Virtual network gateway.'
                     items:
+                      description: VPN client revoked certificate of virtual network gateway.
                       properties:
                         name:
                           description: 'Name: The name of the resource that is unique within a resource group. This name can be used to access the resource.'
@@ -1912,6 +1886,7 @@ spec:
                   vpnClientRootCertificates:
                     description: 'VpnClientRootCertificates: VpnClientRootCertificate for virtual network gateway.'
                     items:
+                      description: VPN client root certificate of virtual network gateway.
                       properties:
                         name:
                           description: 'Name: The name of the resource that is unique within a resource group. This name can be used to access the resource.'
@@ -1941,6 +1916,7 @@ spec:
             - owner
             type: object
           status:
+            description: A common class for general resource information.
             properties:
               activeActive:
                 description: 'ActiveActive: ActiveActive flag.'
@@ -1958,6 +1934,7 @@ spec:
                   bgpPeeringAddresses:
                     description: 'BgpPeeringAddresses: BGP peering address with IP configuration ID for virtual network gateway.'
                     items:
+                      description: Properties of IPConfigurationBgpPeeringAddress.
                       properties:
                         customBgpIpAddresses:
                           description: 'CustomBgpIpAddresses: The list of custom BGP peering addresses which belong to IP configuration.'
@@ -2068,6 +2045,7 @@ spec:
               ipConfigurations:
                 description: 'IpConfigurations: IP configurations for virtual network gateway.'
                 items:
+                  description: IP configuration for virtual network gateway.
                   properties:
                     etag:
                       description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
@@ -2160,6 +2138,7 @@ spec:
                   radiusServers:
                     description: 'RadiusServers: The radiusServers property for multiple radius server configuration.'
                     items:
+                      description: Radius Server Settings.
                       properties:
                         radiusServerAddress:
                           description: 'RadiusServerAddress: The address of this radius server.'
@@ -2189,6 +2168,7 @@ spec:
                   vpnClientIpsecPolicies:
                     description: 'VpnClientIpsecPolicies: VpnClientIpsecPolicies for virtual network gateway P2S client.'
                     items:
+                      description: An IPSec Policy configuration for a virtual network gateway connection.
                       properties:
                         dhGroup:
                           description: 'DhGroup: The DH Group used in IKE Phase 1 for initial SA.'
@@ -2224,6 +2204,7 @@ spec:
                   vpnClientRevokedCertificates:
                     description: 'VpnClientRevokedCertificates: VpnClientRevokedCertificate for Virtual network gateway.'
                     items:
+                      description: VPN client revoked certificate of virtual network gateway.
                       properties:
                         etag:
                           description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
@@ -2245,6 +2226,7 @@ spec:
                   vpnClientRootCertificates:
                     description: 'VpnClientRootCertificates: VpnClientRootCertificate for virtual network gateway.'
                     items:
+                      description: VPN client root certificate of virtual network gateway.
                       properties:
                         etag:
                           description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
@@ -2292,7 +2274,7 @@ spec:
     name: v1beta20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201101.VirtualNetworkGateway Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/virtualNetworkGateways'
+        description: 'Storage version of v1beta20201101.VirtualNetworkGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetworkGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -2316,7 +2298,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               bgpSettings:
-                description: 'Storage version of v1beta20201101.BgpSettings Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/BgpSettings'
+                description: Storage version of v1beta20201101.BgpSettings BGP settings details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2330,7 +2312,7 @@ spec:
                     type: string
                   bgpPeeringAddresses:
                     items:
-                      description: 'Storage version of v1beta20201101.IPConfigurationBgpPeeringAddress Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/IPConfigurationBgpPeeringAddress'
+                      description: Storage version of v1beta20201101.IPConfigurationBgpPeeringAddress Properties of IPConfigurationBgpPeeringAddress.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2349,7 +2331,7 @@ spec:
                     type: integer
                 type: object
               customRoutes:
-                description: 'Storage version of v1beta20201101.AddressSpace Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/AddressSpace'
+                description: Storage version of v1beta20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2367,8 +2349,21 @@ spec:
                 type: boolean
               enablePrivateIpAddress:
                 type: boolean
+              extendedLocation:
+                description: Storage version of v1beta20201101.ExtendedLocation ExtendedLocation complex type.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  name:
+                    type: string
+                  type:
+                    type: string
+                type: object
               gatewayDefaultSite:
-                description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2392,14 +2387,12 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
                 type: object
               gatewayType:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.VirtualNetworkGateway_Properties_IpConfigurations_Spec
+                  description: Storage version of v1beta20201101.VirtualNetworkGatewayIPConfiguration IP configuration for virtual network gateway.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2411,7 +2404,7 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     publicIPAddress:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                      description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2435,11 +2428,9 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     subnet:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                      description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2463,8 +2454,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                   type: object
                 type: array
@@ -2482,7 +2471,7 @@ spec:
                 - name
                 type: object
               sku:
-                description: 'Storage version of v1beta20201101.VirtualNetworkGatewaySku Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/VirtualNetworkGatewaySku'
+                description: Storage version of v1beta20201101.VirtualNetworkGatewaySku VirtualNetworkGatewaySku details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2499,7 +2488,7 @@ spec:
                   type: string
                 type: object
               vNetExtendedLocationResourceReference:
-                description: 'VNetExtendedLocationResourceReference: MAS FIJI customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.'
+                description: 'VNetExtendedLocationResourceReference: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.'
                 properties:
                   armId:
                     description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
@@ -2515,21 +2504,8 @@ spec:
                     description: Name is the Kubernetes name of the resource.
                     type: string
                 type: object
-              virtualNetworkExtendedLocation:
-                description: 'Storage version of v1beta20201101.ExtendedLocation Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/ExtendedLocation'
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  name:
-                    type: string
-                  type:
-                    type: string
-                type: object
               vpnClientConfiguration:
-                description: Storage version of v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_Spec
+                description: Storage version of v1beta20201101.VpnClientConfiguration VpnClientConfiguration for P2S client.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2548,7 +2524,7 @@ spec:
                     type: string
                   radiusServers:
                     items:
-                      description: 'Storage version of v1beta20201101.RadiusServer Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/RadiusServer'
+                      description: Storage version of v1beta20201101.RadiusServer Radius Server Settings.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2568,7 +2544,7 @@ spec:
                       type: string
                     type: array
                   vpnClientAddressPool:
-                    description: 'Storage version of v1beta20201101.AddressSpace Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/AddressSpace'
+                    description: Storage version of v1beta20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2582,7 +2558,7 @@ spec:
                     type: object
                   vpnClientIpsecPolicies:
                     items:
-                      description: 'Storage version of v1beta20201101.IpsecPolicy Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/IpsecPolicy'
+                      description: Storage version of v1beta20201101.IpsecPolicy An IPSec Policy configuration for a virtual network gateway connection.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2613,7 +2589,7 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Storage version of v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRevokedCertificates_Spec
+                      description: Storage version of v1beta20201101.VpnClientRevokedCertificate VPN client revoked certificate of virtual network gateway.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2628,7 +2604,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Storage version of v1beta20201101.VirtualNetworkGateway_Properties_VpnClientConfiguration_VpnClientRootCertificates_Spec
+                      description: Storage version of v1beta20201101.VpnClientRootCertificate VPN client root certificate of virtual network gateway.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2650,7 +2626,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.VirtualNetworkGateway_STATUS
+            description: Storage version of v1beta20201101.VirtualNetworkGateway_STATUS A common class for general resource information.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2660,7 +2636,7 @@ spec:
               activeActive:
                 type: boolean
               bgpSettings:
-                description: Storage version of v1beta20201101.BgpSettings_STATUS
+                description: Storage version of v1beta20201101.BgpSettings_STATUS BGP settings details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2674,7 +2650,7 @@ spec:
                     type: string
                   bgpPeeringAddresses:
                     items:
-                      description: Storage version of v1beta20201101.IPConfigurationBgpPeeringAddress_STATUS
+                      description: Storage version of v1beta20201101.IPConfigurationBgpPeeringAddress_STATUS Properties of IPConfigurationBgpPeeringAddress.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2735,7 +2711,7 @@ spec:
                   type: object
                 type: array
               customRoutes:
-                description: Storage version of v1beta20201101.AddressSpace_STATUS
+                description: Storage version of v1beta20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2756,7 +2732,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1beta20201101.ExtendedLocation_STATUS
+                description: Storage version of v1beta20201101.ExtendedLocation_STATUS ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2769,7 +2745,7 @@ spec:
                     type: string
                 type: object
               gatewayDefaultSite:
-                description: Storage version of v1beta20201101.SubResource_STATUS
+                description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2787,7 +2763,7 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.VirtualNetworkGatewayIPConfiguration_STATUS
+                  description: Storage version of v1beta20201101.VirtualNetworkGatewayIPConfiguration_STATUS IP configuration for virtual network gateway.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2807,7 +2783,7 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1beta20201101.SubResource_STATUS
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2818,7 +2794,7 @@ spec:
                           type: string
                       type: object
                     subnet:
-                      description: Storage version of v1beta20201101.SubResource_STATUS
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2839,7 +2815,7 @@ spec:
               resourceGuid:
                 type: string
               sku:
-                description: Storage version of v1beta20201101.VirtualNetworkGatewaySku_STATUS
+                description: Storage version of v1beta20201101.VirtualNetworkGatewaySku_STATUS VirtualNetworkGatewaySku details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2862,7 +2838,7 @@ spec:
               vNetExtendedLocationResourceId:
                 type: string
               vpnClientConfiguration:
-                description: Storage version of v1beta20201101.VpnClientConfiguration_STATUS
+                description: Storage version of v1beta20201101.VpnClientConfiguration_STATUS VpnClientConfiguration for P2S client.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2881,7 +2857,7 @@ spec:
                     type: string
                   radiusServers:
                     items:
-                      description: Storage version of v1beta20201101.RadiusServer_STATUS
+                      description: Storage version of v1beta20201101.RadiusServer_STATUS Radius Server Settings.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2901,7 +2877,7 @@ spec:
                       type: string
                     type: array
                   vpnClientAddressPool:
-                    description: Storage version of v1beta20201101.AddressSpace_STATUS
+                    description: Storage version of v1beta20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2915,7 +2891,7 @@ spec:
                     type: object
                   vpnClientIpsecPolicies:
                     items:
-                      description: Storage version of v1beta20201101.IpsecPolicy_STATUS
+                      description: Storage version of v1beta20201101.IpsecPolicy_STATUS An IPSec Policy configuration for a virtual network gateway connection.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2946,7 +2922,7 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Storage version of v1beta20201101.VpnClientRevokedCertificate_STATUS
+                      description: Storage version of v1beta20201101.VpnClientRevokedCertificate_STATUS VPN client revoked certificate of virtual network gateway.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2967,7 +2943,7 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Storage version of v1beta20201101.VpnClientRootCertificate_STATUS
+                      description: Storage version of v1beta20201101.VpnClientRootCertificate_STATUS VPN client root certificate of virtual network gateway.
                       properties:
                         $propertyBag:
                           additionalProperties:
