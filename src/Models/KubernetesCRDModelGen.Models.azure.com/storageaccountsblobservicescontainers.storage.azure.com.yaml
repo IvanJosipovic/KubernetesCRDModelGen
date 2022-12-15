@@ -68,8 +68,6 @@ spec:
                   enabled:
                     type: boolean
                 type: object
-              location:
-                type: string
               metadata:
                 additionalProperties:
                   type: string
@@ -90,15 +88,11 @@ spec:
                 - Container
                 - None
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Deprecated version of BlobContainer_STATUS. Use v1beta20210401.BlobContainer_STATUS instead
+            description: Deprecated version of StorageAccounts_BlobServices_Container_STATUS. Use v1beta20210401.StorageAccounts_BlobServices_Container_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -302,8 +296,6 @@ spec:
                   enabled:
                     type: boolean
                 type: object
-              location:
-                type: string
               metadata:
                 additionalProperties:
                   type: string
@@ -321,15 +313,11 @@ spec:
                 type: object
               publicAccess:
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210401.BlobContainer_STATUS Deprecated version of BlobContainer_STATUS. Use v1beta20210401.BlobContainer_STATUS instead
+            description: Storage version of v1alpha1api20210401.StorageAccounts_BlobServices_Container_STATUS Deprecated version of StorageAccounts_BlobServices_Container_STATUS. Use v1beta20210401.StorageAccounts_BlobServices_Container_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -517,7 +505,7 @@ spec:
     name: v1beta20210401
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts_blobServices_containers'
+        description: 'Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -541,15 +529,12 @@ spec:
                 description: 'DenyEncryptionScopeOverride: Block override of encryption scope from the container default.'
                 type: boolean
               immutableStorageWithVersioning:
-                description: 'ImmutableStorageWithVersioning: Object level immutability properties of the container.'
+                description: 'ImmutableStorageWithVersioning: The object level immutability property of the container. The property is immutable and can only be set to true at the container creation time. Existing containers must undergo a migration process.'
                 properties:
                   enabled:
                     description: 'Enabled: This is an immutable property, when set to true it enables object level immutability at the container level.'
                     type: boolean
                 type: object
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               metadata:
                 additionalProperties:
                   type: string
@@ -571,11 +556,6 @@ spec:
                 - Container
                 - None
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - owner
             type: object
@@ -658,6 +638,7 @@ spec:
                   updateHistory:
                     description: 'UpdateHistory: The ImmutabilityPolicy update history of the blob container.'
                     items:
+                      description: An update history of the ImmutabilityPolicy of a blob container.
                       properties:
                         immutabilityPeriodSinceCreationInDays:
                           description: 'ImmutabilityPeriodSinceCreationInDays: The immutability period for the blobs in the container since the policy creation, in days.'
@@ -714,6 +695,7 @@ spec:
                   tags:
                     description: 'Tags: The list of LegalHold tags of a blob container.'
                     items:
+                      description: A tag of the LegalHold of a blob container.
                       properties:
                         objectIdentifier:
                           description: 'ObjectIdentifier: Returns the Object ID of the user who added the tag.'
@@ -775,7 +757,7 @@ spec:
     name: v1beta20210401storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210401.StorageAccountsBlobServicesContainer Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts_blobServices_containers'
+        description: 'Storage version of v1beta20210401.StorageAccountsBlobServicesContainer Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -803,7 +785,7 @@ spec:
               denyEncryptionScopeOverride:
                 type: boolean
               immutableStorageWithVersioning:
-                description: 'Storage version of v1beta20210401.ImmutableStorageWithVersioning Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ImmutableStorageWithVersioning'
+                description: Storage version of v1beta20210401.ImmutableStorageWithVersioning Object level immutability properties of the container.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -813,8 +795,6 @@ spec:
                   enabled:
                     type: boolean
                 type: object
-              location:
-                type: string
               metadata:
                 additionalProperties:
                   type: string
@@ -832,15 +812,11 @@ spec:
                 type: object
               publicAccess:
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401.BlobContainer_STATUS
+            description: Storage version of v1beta20210401.StorageAccounts_BlobServices_Container_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -898,7 +874,7 @@ spec:
               id:
                 type: string
               immutabilityPolicy:
-                description: Storage version of v1beta20210401.ImmutabilityPolicyProperties_STATUS
+                description: Storage version of v1beta20210401.ImmutabilityPolicyProperties_STATUS The properties of an ImmutabilityPolicy of a blob container.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -915,7 +891,7 @@ spec:
                     type: string
                   updateHistory:
                     items:
-                      description: Storage version of v1beta20210401.UpdateHistoryProperty_STATUS
+                      description: Storage version of v1beta20210401.UpdateHistoryProperty_STATUS An update history of the ImmutabilityPolicy of a blob container.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -938,7 +914,7 @@ spec:
                     type: array
                 type: object
               immutableStorageWithVersioning:
-                description: Storage version of v1beta20210401.ImmutableStorageWithVersioning_STATUS
+                description: Storage version of v1beta20210401.ImmutableStorageWithVersioning_STATUS Object level immutability properties of the container.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -961,7 +937,7 @@ spec:
               leaseStatus:
                 type: string
               legalHold:
-                description: Storage version of v1beta20210401.LegalHoldProperties_STATUS
+                description: Storage version of v1beta20210401.LegalHoldProperties_STATUS The LegalHold property of a blob container.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -972,7 +948,7 @@ spec:
                     type: boolean
                   tags:
                     items:
-                      description: Storage version of v1beta20210401.TagProperty_STATUS
+                      description: Storage version of v1beta20210401.TagProperty_STATUS A tag of the LegalHold of a blob container.
                       properties:
                         $propertyBag:
                           additionalProperties:

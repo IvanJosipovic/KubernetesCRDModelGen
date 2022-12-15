@@ -99,7 +99,7 @@ spec:
             - resource
             type: object
           status:
-            description: Deprecated version of ThroughputSettingsGetResults_STATUS. Use v1beta20210515.ThroughputSettingsGetResults_STATUS instead
+            description: Deprecated version of DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_STATUS. Use v1beta20210515.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -289,7 +289,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210515.ThroughputSettingsGetResults_STATUS Deprecated version of ThroughputSettingsGetResults_STATUS. Use v1beta20210515.ThroughputSettingsGetResults_STATUS instead
+            description: Storage version of v1alpha1api20210515.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_STATUS Deprecated version of DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_STATUS. Use v1beta20210515.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -420,7 +420,7 @@ spec:
     name: v1beta20210515
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/resourceDefinitions/databaseAccounts_sqlDatabases_containers_throughputSettings'
+        description: 'Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/throughputSettings/default'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -445,16 +445,16 @@ spec:
                 - name
                 type: object
               resource:
-                description: 'Resource: Cosmos DB resource throughput object. Either throughput is required or autoscaleSettings is required, but not both.'
+                description: 'Resource: The standard JSON format of a resource throughput'
                 properties:
                   autoscaleSettings:
-                    description: 'AutoscaleSettings: Cosmos DB provisioned throughput settings object'
+                    description: 'AutoscaleSettings: Cosmos DB resource for autoscale settings. Either throughput is required or autoscaleSettings is required, but not both.'
                     properties:
                       autoUpgradePolicy:
                         description: 'AutoUpgradePolicy: Cosmos DB resource auto-upgrade policy'
                         properties:
                           throughputPolicy:
-                            description: 'ThroughputPolicy: Cosmos DB resource throughput policy'
+                            description: 'ThroughputPolicy: Represents throughput policy which service must adhere to for auto-upgrade'
                             properties:
                               incrementPercent:
                                 description: 'IncrementPercent: Represents the percentage by which throughput can increase every time throughput policy kicks in.'
@@ -477,7 +477,6 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".'
                 type: object
             required:
             - owner
@@ -603,7 +602,7 @@ spec:
     name: v1beta20210515storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210515.SqlDatabaseContainerThroughputSetting Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/resourceDefinitions/databaseAccounts_sqlDatabases_containers_throughputSettings'
+        description: 'Storage version of v1beta20210515.SqlDatabaseContainerThroughputSetting Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/throughputSettings/default'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -635,7 +634,7 @@ spec:
                 - name
                 type: object
               resource:
-                description: 'Storage version of v1beta20210515.ThroughputSettingsResource Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/ThroughputSettingsResource'
+                description: Storage version of v1beta20210515.ThroughputSettingsResource Cosmos DB resource throughput object. Either throughput is required or autoscaleSettings is required, but not both.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -643,7 +642,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
-                    description: 'Storage version of v1beta20210515.AutoscaleSettingsResource Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/AutoscaleSettingsResource'
+                    description: Storage version of v1beta20210515.AutoscaleSettingsResource Cosmos DB provisioned throughput settings object
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -651,7 +650,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       autoUpgradePolicy:
-                        description: 'Storage version of v1beta20210515.AutoUpgradePolicyResource Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/AutoUpgradePolicyResource'
+                        description: Storage version of v1beta20210515.AutoUpgradePolicyResource Cosmos DB resource auto-upgrade policy
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -659,7 +658,7 @@ spec:
                             description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                             type: object
                           throughputPolicy:
-                            description: 'Storage version of v1beta20210515.ThroughputPolicyResource Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/ThroughputPolicyResource'
+                            description: Storage version of v1beta20210515.ThroughputPolicyResource Cosmos DB resource throughput policy
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -686,7 +685,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210515.ThroughputSettingsGetResults_STATUS
+            description: Storage version of v1beta20210515.DatabaseAccounts_SqlDatabases_Containers_ThroughputSetting_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -748,7 +747,7 @@ spec:
                   _ts:
                     type: number
                   autoscaleSettings:
-                    description: Storage version of v1beta20210515.AutoscaleSettingsResource_STATUS
+                    description: Storage version of v1beta20210515.AutoscaleSettingsResource_STATUS Cosmos DB provisioned throughput settings object
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -756,7 +755,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       autoUpgradePolicy:
-                        description: Storage version of v1beta20210515.AutoUpgradePolicyResource_STATUS
+                        description: Storage version of v1beta20210515.AutoUpgradePolicyResource_STATUS Cosmos DB resource auto-upgrade policy
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -764,7 +763,7 @@ spec:
                             description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                             type: object
                           throughputPolicy:
-                            description: Storage version of v1beta20210515.ThroughputPolicyResource_STATUS
+                            description: Storage version of v1beta20210515.ThroughputPolicyResource_STATUS Cosmos DB resource throughput policy
                             properties:
                               $propertyBag:
                                 additionalProperties:

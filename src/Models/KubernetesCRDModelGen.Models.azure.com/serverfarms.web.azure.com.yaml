@@ -41,7 +41,7 @@ spec:
     name: v1beta20220301
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/resourceDefinitions/serverfarms'
+        description: 'Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -70,7 +70,7 @@ spec:
                 description: 'FreeOfferExpirationTime: The time when the server farm free offer expires.'
                 type: string
               hostingEnvironmentProfile:
-                description: 'HostingEnvironmentProfile: Specification for an App Service Environment to use for this resource.'
+                description: 'HostingEnvironmentProfile: Specification for the App Service Environment to use for the App Service plan.'
                 properties:
                   reference:
                     description: 'Reference: Resource ID of the App Service Environment.'
@@ -103,7 +103,7 @@ spec:
                 description: 'Kind: Kind of resource.'
                 type: string
               kubeEnvironmentProfile:
-                description: 'KubeEnvironmentProfile: Specification for a Kubernetes Environment to use for this resource.'
+                description: 'KubeEnvironmentProfile: Specification for the Kubernetes Environment to use for the App Service plan.'
                 properties:
                   reference:
                     description: 'Reference: Resource ID of the Kubernetes Environment.'
@@ -124,7 +124,7 @@ spec:
                     type: object
                 type: object
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource Location.'
                 type: string
               maximumElasticWorkerCount:
                 description: 'MaximumElasticWorkerCount: Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan'
@@ -150,7 +150,7 @@ spec:
                   capabilities:
                     description: 'Capabilities: Capabilities of the SKU, e.g., is traffic manager enabled?'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/Capability'
+                      description: Describes the capabilities/features allowed for a specific SKU.
                       properties:
                         name:
                           description: 'Name: Name of the SKU capability.'
@@ -181,7 +181,7 @@ spec:
                     description: 'Size: Size specifier of the resource SKU.'
                     type: string
                   skuCapacity:
-                    description: 'SkuCapacity: Description of the App Service plan scale options.'
+                    description: 'SkuCapacity: Min, max, and default scale values of the SKU.'
                     properties:
                       default:
                         description: 'Default: Default number of workers for this App Service plan SKU.'
@@ -209,7 +209,7 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
               targetWorkerCount:
                 description: 'TargetWorkerCount: Scaling worker count.'
@@ -224,6 +224,7 @@ spec:
                 description: 'ZoneRedundant: If <code>true</code>, this App Service Plan will perform availability zone balancing. If <code>false</code>, this App Service Plan will not perform availability zone balancing.'
                 type: boolean
             required:
+            - location
             - owner
             type: object
           status:
@@ -267,6 +268,7 @@ spec:
                 description: 'ElasticScaleEnabled: ServerFarm supports ElasticScale. Apps in this plan will scale as if the ServerFarm was ElasticPremium sku'
                 type: boolean
               extendedLocation:
+                description: 'ExtendedLocation: Extended Location.'
                 properties:
                   name:
                     description: 'Name: Name of extended location.'
@@ -353,10 +355,12 @@ spec:
                 description: 'ResourceGroup: Resource group of the App Service plan.'
                 type: string
               sku:
+                description: 'Sku: Description of a SKU for a scalable resource.'
                 properties:
                   capabilities:
                     description: 'Capabilities: Capabilities of the SKU, e.g., is traffic manager enabled?'
                     items:
+                      description: Describes the capabilities/features allowed for a specific SKU.
                       properties:
                         name:
                           description: 'Name: Name of the SKU capability.'
@@ -460,7 +464,7 @@ spec:
     name: v1beta20220301storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20220301.ServerFarm Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/resourceDefinitions/serverfarms'
+        description: 'Storage version of v1beta20220301.ServerFarm Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -484,7 +488,7 @@ spec:
               elasticScaleEnabled:
                 type: boolean
               extendedLocation:
-                description: 'Storage version of v1beta20220301.ExtendedLocation Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/ExtendedLocation'
+                description: Storage version of v1beta20220301.ExtendedLocation Extended Location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -497,7 +501,7 @@ spec:
               freeOfferExpirationTime:
                 type: string
               hostingEnvironmentProfile:
-                description: 'Storage version of v1beta20220301.HostingEnvironmentProfile Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/HostingEnvironmentProfile'
+                description: Storage version of v1beta20220301.HostingEnvironmentProfile Specification for an App Service Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -531,7 +535,7 @@ spec:
               kind:
                 type: string
               kubeEnvironmentProfile:
-                description: 'Storage version of v1beta20220301.KubeEnvironmentProfile Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/KubeEnvironmentProfile'
+                description: Storage version of v1beta20220301.KubeEnvironmentProfile Specification for a Kubernetes Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -576,7 +580,7 @@ spec:
               reserved:
                 type: boolean
               sku:
-                description: 'Storage version of v1beta20220301.SkuDescription Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/SkuDescription'
+                description: Storage version of v1beta20220301.SkuDescription Description of a SKU for a scalable resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -585,7 +589,7 @@ spec:
                     type: object
                   capabilities:
                     items:
-                      description: 'Storage version of v1beta20220301.Capability Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/Capability'
+                      description: Storage version of v1beta20220301.Capability Describes the capabilities/features allowed for a specific SKU.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -613,7 +617,7 @@ spec:
                   size:
                     type: string
                   skuCapacity:
-                    description: 'Storage version of v1beta20220301.SkuCapacity Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/SkuCapacity'
+                    description: Storage version of v1beta20220301.SkuCapacity Description of the App Service plan scale options.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -652,7 +656,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20220301.AppServicePlan_STATUS
+            description: Storage version of v1beta20220301.Serverfarm_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -696,7 +700,7 @@ spec:
               elasticScaleEnabled:
                 type: boolean
               extendedLocation:
-                description: Storage version of v1beta20220301.ExtendedLocation_STATUS
+                description: Storage version of v1beta20220301.ExtendedLocation_STATUS Extended Location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -713,7 +717,7 @@ spec:
               geoRegion:
                 type: string
               hostingEnvironmentProfile:
-                description: Storage version of v1beta20220301.HostingEnvironmentProfile_STATUS
+                description: Storage version of v1beta20220301.HostingEnvironmentProfile_STATUS Specification for an App Service Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -738,7 +742,7 @@ spec:
               kind:
                 type: string
               kubeEnvironmentProfile:
-                description: Storage version of v1beta20220301.KubeEnvironmentProfile_STATUS
+                description: Storage version of v1beta20220301.KubeEnvironmentProfile_STATUS Specification for a Kubernetes Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -773,7 +777,7 @@ spec:
               resourceGroup:
                 type: string
               sku:
-                description: Storage version of v1beta20220301.SkuDescription_STATUS
+                description: Storage version of v1beta20220301.SkuDescription_STATUS Description of a SKU for a scalable resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -782,7 +786,7 @@ spec:
                     type: object
                   capabilities:
                     items:
-                      description: Storage version of v1beta20220301.Capability_STATUS
+                      description: Storage version of v1beta20220301.Capability_STATUS Describes the capabilities/features allowed for a specific SKU.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -810,7 +814,7 @@ spec:
                   size:
                     type: string
                   skuCapacity:
-                    description: Storage version of v1beta20220301.SkuCapacity_STATUS
+                    description: Storage version of v1beta20220301.SkuCapacity_STATUS Description of the App Service plan scale options.
                     properties:
                       $propertyBag:
                         additionalProperties:

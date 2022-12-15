@@ -69,8 +69,6 @@ spec:
                 type: boolean
               enablePartitioning:
                 type: boolean
-              location:
-                type: string
               maxSizeInMegabytes:
                 type: integer
               owner:
@@ -86,15 +84,11 @@ spec:
                 type: boolean
               supportOrdering:
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Deprecated version of SBTopic_STATUS. Use v1beta20210101preview.SBTopic_STATUS instead
+            description: Deprecated version of Namespaces_Topic_STATUS. Use v1beta20210101preview.Namespaces_Topic_STATUS instead
             properties:
               accessedAt:
                 type: string
@@ -256,8 +250,6 @@ spec:
                 type: boolean
               enablePartitioning:
                 type: boolean
-              location:
-                type: string
               maxSizeInMegabytes:
                 type: integer
               originalVersion:
@@ -275,15 +267,11 @@ spec:
                 type: boolean
               supportOrdering:
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210101preview.SBTopic_STATUS Deprecated version of SBTopic_STATUS. Use v1beta20210101preview.SBTopic_STATUS instead
+            description: Storage version of v1alpha1api20210101preview.Namespaces_Topic_STATUS Deprecated version of Namespaces_Topic_STATUS. Use v1beta20210101preview.Namespaces_Topic_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -422,7 +410,7 @@ spec:
     name: v1beta20210101preview
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces_topics'
+        description: 'Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/topics.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -456,9 +444,6 @@ spec:
               enablePartitioning:
                 description: 'EnablePartitioning: Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.'
                 type: boolean
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               maxSizeInMegabytes:
                 description: 'MaxSizeInMegabytes: Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.'
                 type: integer
@@ -477,11 +462,6 @@ spec:
               supportOrdering:
                 description: 'SupportOrdering: Value that indicates whether the topic supports ordering.'
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - owner
             type: object
@@ -639,7 +619,7 @@ spec:
     name: v1beta20210101previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210101preview.NamespacesTopic Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces_topics'
+        description: 'Storage version of v1beta20210101preview.NamespacesTopic Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/topics.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -673,8 +653,6 @@ spec:
                 type: boolean
               enablePartitioning:
                 type: boolean
-              location:
-                type: string
               maxSizeInMegabytes:
                 type: integer
               originalVersion:
@@ -692,15 +670,11 @@ spec:
                 type: boolean
               supportOrdering:
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210101preview.SBTopic_STATUS
+            description: Storage version of v1beta20210101preview.Namespaces_Topic_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -746,7 +720,7 @@ spec:
                   type: object
                 type: array
               countDetails:
-                description: Storage version of v1beta20210101preview.MessageCountDetails_STATUS
+                description: Storage version of v1beta20210101preview.MessageCountDetails_STATUS Message Count Details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -793,7 +767,7 @@ spec:
               supportOrdering:
                 type: boolean
               systemData:
-                description: Storage version of v1beta20210101preview.SystemData_STATUS
+                description: Storage version of v1beta20210101preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

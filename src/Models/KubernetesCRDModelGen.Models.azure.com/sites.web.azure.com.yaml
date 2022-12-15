@@ -41,7 +41,7 @@ spec:
     name: v1beta20220301
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/resourceDefinitions/sites'
+        description: 'Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -73,7 +73,7 @@ spec:
                 - Required
                 type: string
               cloningInfo:
-                description: 'CloningInfo: Information needed for cloning operation.'
+                description: 'CloningInfo: If specified during app creation, the app is cloned from a source app.'
                 properties:
                   appSettingsOverrides:
                     additionalProperties:
@@ -164,7 +164,7 @@ spec:
               hostNameSslStates:
                 description: "HostNameSslStates: Hostname SSL states are used to manage the SSL bindings for app's hostnames."
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/HostNameSslState'
+                  description: SSL-enabled hostname.
                   properties:
                     hostType:
                       description: 'HostType: Indicates whether the hostname is a standard or repository hostname.'
@@ -197,7 +197,7 @@ spec:
                 description: 'HostNamesDisabled: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>. If <code>true</code>, the app is only accessible via API management process.'
                 type: boolean
               hostingEnvironmentProfile:
-                description: 'HostingEnvironmentProfile: Specification for an App Service Environment to use for this resource.'
+                description: 'HostingEnvironmentProfile: App Service Environment to use for the app.'
                 properties:
                   reference:
                     description: 'Reference: Resource ID of the App Service Environment.'
@@ -234,11 +234,6 @@ spec:
                     - SystemAssigned, UserAssigned
                     - UserAssigned
                     type: string
-                  userAssignedIdentities:
-                    additionalProperties:
-                      x-kubernetes-preserve-unknown-fields: true
-                    description: "UserAssignedIdentities: The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}"
-                    type: object
                 type: object
               isXenon:
                 description: 'IsXenon: Obsolete: Hyper-V sandbox.'
@@ -250,7 +245,7 @@ spec:
                 description: 'Kind: Kind of resource.'
                 type: string
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource Location.'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
@@ -265,7 +260,7 @@ spec:
                 description: "PublicNetworkAccess: Property to allow or block all public traffic. Allowed Values: 'Enabled', 'Disabled' or an empty string."
                 type: string
               redundancyMode:
-                description: 'RedundancyMode: Site redundancy mode.'
+                description: 'RedundancyMode: Site redundancy mode'
                 enum:
                 - ActiveActive
                 - Failover
@@ -297,7 +292,7 @@ spec:
                     type: string
                 type: object
               siteConfig:
-                description: 'SiteConfig: Configuration of an App Service app.'
+                description: 'SiteConfig: Configuration of the app.'
                 properties:
                   acrUseManagedIdentityCreds:
                     description: 'AcrUseManagedIdentityCreds: Flag to use Managed Identity Creds for ACR pull'
@@ -316,7 +311,7 @@ spec:
                         type: string
                     type: object
                   apiManagementConfig:
-                    description: 'ApiManagementConfig: Azure API management (APIM) configuration linked to the app.'
+                    description: 'ApiManagementConfig: Azure API management settings linked to the app.'
                     properties:
                       reference:
                         description: 'Reference: APIM-Api Identifier.'
@@ -342,7 +337,7 @@ spec:
                   appSettings:
                     description: 'AppSettings: Application settings.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/NameValuePair'
+                      description: Name value pair.
                       properties:
                         name:
                           description: 'Name: Pair name.'
@@ -356,10 +351,10 @@ spec:
                     description: 'AutoHealEnabled: <code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.'
                     type: boolean
                   autoHealRules:
-                    description: 'AutoHealRules: Rules that can be defined for auto-heal.'
+                    description: 'AutoHealRules: Auto Heal rules.'
                     properties:
                       actions:
-                        description: 'Actions: Actions which to take by the auto-heal module when a rule is triggered.'
+                        description: 'Actions: Actions to be executed when a rule is triggered.'
                         properties:
                           actionType:
                             description: 'ActionType: Predefined action to be taken.'
@@ -369,7 +364,7 @@ spec:
                             - Recycle
                             type: string
                           customAction:
-                            description: 'CustomAction: Custom action to be executed when an auto heal rule is triggered.'
+                            description: 'CustomAction: Custom action to be taken.'
                             properties:
                               exe:
                                 description: 'Exe: Executable to be run.'
@@ -383,13 +378,13 @@ spec:
                             type: string
                         type: object
                       triggers:
-                        description: 'Triggers: Triggers for auto-heal.'
+                        description: 'Triggers: Conditions that describe when to execute the auto-heal actions.'
                         properties:
                           privateBytesInKB:
                             description: 'PrivateBytesInKB: A rule based on private bytes.'
                             type: integer
                           requests:
-                            description: 'Requests: Trigger based on total requests.'
+                            description: 'Requests: A rule based on total requests.'
                             properties:
                               count:
                                 description: 'Count: Request Count.'
@@ -399,7 +394,7 @@ spec:
                                 type: string
                             type: object
                           slowRequests:
-                            description: 'SlowRequests: Trigger based on request execution time.'
+                            description: 'SlowRequests: A rule based on request execution time.'
                             properties:
                               count:
                                 description: 'Count: Request Count.'
@@ -417,7 +412,7 @@ spec:
                           slowRequestsWithPath:
                             description: 'SlowRequestsWithPath: A rule based on multiple Slow Requests Rule with path'
                             items:
-                              description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/SlowRequestsBasedTrigger'
+                              description: Trigger based on request execution time.
                               properties:
                                 count:
                                   description: 'Count: Request Count.'
@@ -436,7 +431,7 @@ spec:
                           statusCodes:
                             description: 'StatusCodes: A rule based on status codes.'
                             items:
-                              description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/StatusCodesBasedTrigger'
+                              description: Trigger based on status code.
                               properties:
                                 count:
                                   description: 'Count: Request Count.'
@@ -461,7 +456,7 @@ spec:
                           statusCodesRange:
                             description: 'StatusCodesRange: A rule based on status codes ranges.'
                             items:
-                              description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/StatusCodesRangeBasedTrigger'
+                              description: Trigger based on range of status codes.
                               properties:
                                 count:
                                   description: 'Count: Request Count.'
@@ -483,6 +478,7 @@ spec:
                     type: string
                   azureStorageAccounts:
                     additionalProperties:
+                      description: Azure Files or Blob Storage access information value for dictionary storage.
                       properties:
                         accessKey:
                           description: 'AccessKey: Access key for the storage account.'
@@ -518,7 +514,7 @@ spec:
                   connectionStrings:
                     description: 'ConnectionStrings: Connection strings.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/ConnStringInfo'
+                      description: Database connection string information.
                       properties:
                         connectionString:
                           description: 'ConnectionString: Connection string value.'
@@ -544,7 +540,7 @@ spec:
                       type: object
                     type: array
                   cors:
-                    description: 'Cors: Cross-Origin Resource Sharing (CORS) settings for the app.'
+                    description: 'Cors: Cross-Origin Resource Sharing (CORS) settings.'
                     properties:
                       allowedOrigins:
                         description: 'AllowedOrigins: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all.'
@@ -567,12 +563,12 @@ spec:
                     description: 'DocumentRoot: Document root.'
                     type: string
                   experiments:
-                    description: 'Experiments: Routing rules in production experiments.'
+                    description: 'Experiments: This is work around for polymorphic types.'
                     properties:
                       rampUpRules:
                         description: 'RampUpRules: List of ramp-up rules.'
                         items:
-                          description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/RampUpRule'
+                          description: Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
                           properties:
                             actionHostName:
                               description: 'ActionHostName: Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.'
@@ -602,7 +598,7 @@ spec:
                         type: array
                     type: object
                   ftpsState:
-                    description: 'FtpsState: State of FTP / FTPS service.'
+                    description: 'FtpsState: State of FTP / FTPS service'
                     enum:
                     - AllAllowed
                     - Disabled
@@ -618,7 +614,7 @@ spec:
                   handlerMappings:
                     description: 'HandlerMappings: Handler mappings.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/HandlerMapping'
+                      description: The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
                       properties:
                         arguments:
                           description: 'Arguments: Command-line arguments to be passed to the script processor.'
@@ -643,7 +639,7 @@ spec:
                   ipSecurityRestrictions:
                     description: 'IpSecurityRestrictions: IP security restrictions for main.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/IpSecurityRestriction'
+                      description: IP security restriction on an app.
                       properties:
                         action:
                           description: 'Action: Allow or Deny access for this IP range.'
@@ -715,7 +711,7 @@ spec:
                     description: 'KeyVaultReferenceIdentity: Identity to use for Key Vault Reference authentication.'
                     type: string
                   limits:
-                    description: 'Limits: Metric limits set on an app.'
+                    description: 'Limits: Site limits.'
                     properties:
                       maxDiskSizeInMb:
                         description: 'MaxDiskSizeInMb: Maximum allowed disk size usage in MB.'
@@ -756,7 +752,7 @@ spec:
                     description: 'ManagedServiceIdentityId: Managed Service Identity Id'
                     type: integer
                   minTlsVersion:
-                    description: 'MinTlsVersion: MinTlsVersion: configures the minimum version of TLS required for SSL requests.'
+                    description: 'MinTlsVersion: MinTlsVersion: configures the minimum version of TLS required for SSL requests'
                     enum:
                     - 1.0
                     - 1.1
@@ -794,7 +790,7 @@ spec:
                     description: 'PublishingUsername: Publishing user name.'
                     type: string
                   push:
-                    description: 'Push: Push settings for the App.'
+                    description: 'Push: Push endpoint settings.'
                     properties:
                       dynamicTagsJson:
                         description: 'DynamicTagsJson: Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.'
@@ -832,7 +828,7 @@ spec:
                   scmIpSecurityRestrictions:
                     description: 'ScmIpSecurityRestrictions: IP security restrictions for scm.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/IpSecurityRestriction'
+                      description: IP security restriction on an app.
                       properties:
                         action:
                           description: 'Action: Allow or Deny access for this IP range.'
@@ -895,7 +891,7 @@ spec:
                     description: 'ScmIpSecurityRestrictionsUseMain: IP security restrictions for scm to use main.'
                     type: boolean
                   scmMinTlsVersion:
-                    description: 'ScmMinTlsVersion: ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site.'
+                    description: 'ScmMinTlsVersion: ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site'
                     enum:
                     - 1.0
                     - 1.1
@@ -928,7 +924,7 @@ spec:
                   virtualApplications:
                     description: 'VirtualApplications: Virtual applications.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/VirtualApplication'
+                      description: Virtual application in an app.
                       properties:
                         physicalPath:
                           description: 'PhysicalPath: Physical path.'
@@ -939,7 +935,7 @@ spec:
                         virtualDirectories:
                           description: 'VirtualDirectories: Virtual directories for virtual application.'
                           items:
-                            description: 'Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/VirtualDirectory'
+                            description: Directory for virtual application.
                             properties:
                               physicalPath:
                                 description: 'PhysicalPath: Physical path.'
@@ -982,7 +978,7 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
               virtualNetworkSubnetReference:
                 description: 'VirtualNetworkSubnetReference: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration. This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}'
@@ -1011,9 +1007,11 @@ spec:
                 description: 'VnetRouteAllEnabled: Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.'
                 type: boolean
             required:
+            - location
             - owner
             type: object
           status:
+            description: A web app, a mobile app backend, or an API app.
             properties:
               availabilityState:
                 description: 'AvailabilityState: Management information availability state for the app.'
@@ -1125,6 +1123,7 @@ spec:
                   type: string
                 type: array
               extendedLocation:
+                description: 'ExtendedLocation: Extended Location.'
                 properties:
                   name:
                     description: 'Name: Name of extended location.'
@@ -1136,6 +1135,7 @@ spec:
               hostNameSslStates:
                 description: "HostNameSslStates: Hostname SSL states are used to manage the SSL bindings for app's hostnames."
                 items:
+                  description: SSL-enabled hostname.
                   properties:
                     hostType:
                       description: 'HostType: Indicates whether the hostname is a standard or repository hostname.'
@@ -1188,6 +1188,7 @@ spec:
                 description: 'Id: Resource Id.'
                 type: string
               identity:
+                description: 'Identity: Managed service identity.'
                 properties:
                   principalId:
                     description: 'PrincipalId: Principal Id of managed service identity.'
@@ -1200,6 +1201,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
+                      description: User Assigned identity.
                       properties:
                         clientId:
                           description: 'ClientId: Client Id of user assigned identity'
@@ -1297,6 +1299,7 @@ spec:
                   appSettings:
                     description: 'AppSettings: Application settings.'
                     items:
+                      description: Name value pair.
                       properties:
                         name:
                           description: 'Name: Pair name.'
@@ -1367,6 +1370,7 @@ spec:
                           slowRequestsWithPath:
                             description: 'SlowRequestsWithPath: A rule based on multiple Slow Requests Rule with path'
                             items:
+                              description: Trigger based on request execution time.
                               properties:
                                 count:
                                   description: 'Count: Request Count.'
@@ -1385,6 +1389,7 @@ spec:
                           statusCodes:
                             description: 'StatusCodes: A rule based on status codes.'
                             items:
+                              description: Trigger based on status code.
                               properties:
                                 count:
                                   description: 'Count: Request Count.'
@@ -1409,6 +1414,7 @@ spec:
                           statusCodesRange:
                             description: 'StatusCodesRange: A rule based on status codes ranges.'
                             items:
+                              description: Trigger based on range of status codes.
                               properties:
                                 count:
                                   description: 'Count: Request Count.'
@@ -1430,6 +1436,7 @@ spec:
                     type: string
                   azureStorageAccounts:
                     additionalProperties:
+                      description: Azure Files or Blob Storage access information value for dictionary storage.
                       properties:
                         accountName:
                           description: 'AccountName: Name of the storage account.'
@@ -1452,6 +1459,7 @@ spec:
                   connectionStrings:
                     description: 'ConnectionStrings: Connection strings.'
                     items:
+                      description: Database connection string information.
                       properties:
                         connectionString:
                           description: 'ConnectionString: Connection string value.'
@@ -1493,6 +1501,7 @@ spec:
                       rampUpRules:
                         description: 'RampUpRules: List of ramp-up rules.'
                         items:
+                          description: Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
                           properties:
                             actionHostName:
                               description: 'ActionHostName: Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.'
@@ -1533,6 +1542,7 @@ spec:
                   handlerMappings:
                     description: 'HandlerMappings: Handler mappings.'
                     items:
+                      description: The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
                       properties:
                         arguments:
                           description: 'Arguments: Command-line arguments to be passed to the script processor.'
@@ -1557,6 +1567,7 @@ spec:
                   ipSecurityRestrictions:
                     description: 'IpSecurityRestrictions: IP security restrictions for main.'
                     items:
+                      description: IP security restriction on an app.
                       properties:
                         action:
                           description: 'Action: Allow or Deny access for this IP range.'
@@ -1732,6 +1743,7 @@ spec:
                   scmIpSecurityRestrictions:
                     description: 'ScmIpSecurityRestrictions: IP security restrictions for scm.'
                     items:
+                      description: IP security restriction on an app.
                       properties:
                         action:
                           description: 'Action: Allow or Deny access for this IP range.'
@@ -1790,6 +1802,7 @@ spec:
                   virtualApplications:
                     description: 'VirtualApplications: Virtual applications.'
                     items:
+                      description: Virtual application in an app.
                       properties:
                         physicalPath:
                           description: 'PhysicalPath: Physical path.'
@@ -1800,6 +1813,7 @@ spec:
                         virtualDirectories:
                           description: 'VirtualDirectories: Virtual directories for virtual application.'
                           items:
+                            description: Directory for virtual application.
                             properties:
                               physicalPath:
                                 description: 'PhysicalPath: Physical path.'
@@ -1911,7 +1925,7 @@ spec:
     name: v1beta20220301storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20220301.Site Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/resourceDefinitions/sites'
+        description: 'Storage version of v1beta20220301.Site Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1941,7 +1955,7 @@ spec:
               clientCertMode:
                 type: string
               cloningInfo:
-                description: 'Storage version of v1beta20220301.CloningInfo Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/CloningInfo'
+                description: Storage version of v1beta20220301.CloningInfo Information needed for cloning operation.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2014,7 +2028,7 @@ spec:
               enabled:
                 type: boolean
               extendedLocation:
-                description: 'Storage version of v1beta20220301.ExtendedLocation Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/ExtendedLocation'
+                description: Storage version of v1beta20220301.ExtendedLocation Extended Location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2026,7 +2040,7 @@ spec:
                 type: object
               hostNameSslStates:
                 items:
-                  description: 'Storage version of v1beta20220301.HostNameSslState Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/HostNameSslState'
+                  description: Storage version of v1beta20220301.HostNameSslState SSL-enabled hostname.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2050,7 +2064,7 @@ spec:
               hostNamesDisabled:
                 type: boolean
               hostingEnvironmentProfile:
-                description: 'Storage version of v1beta20220301.HostingEnvironmentProfile Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/HostingEnvironmentProfile'
+                description: Storage version of v1beta20220301.HostingEnvironmentProfile Specification for an App Service Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2080,7 +2094,7 @@ spec:
               hyperV:
                 type: boolean
               identity:
-                description: 'Storage version of v1beta20220301.ManagedServiceIdentity Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/ManagedServiceIdentity'
+                description: Storage version of v1beta20220301.ManagedServiceIdentity Managed service identity.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2089,10 +2103,6 @@ spec:
                     type: object
                   type:
                     type: string
-                  userAssignedIdentities:
-                    additionalProperties:
-                      x-kubernetes-preserve-unknown-fields: true
-                    type: object
                 type: object
               isXenon:
                 type: boolean
@@ -2139,7 +2149,7 @@ spec:
                     type: string
                 type: object
               siteConfig:
-                description: Storage version of v1beta20220301.Site_Properties_SiteConfig_Spec
+                description: Storage version of v1beta20220301.SiteConfig Configuration of an App Service app.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2153,7 +2163,7 @@ spec:
                   alwaysOn:
                     type: boolean
                   apiDefinition:
-                    description: 'Storage version of v1beta20220301.ApiDefinitionInfo Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/ApiDefinitionInfo'
+                    description: Storage version of v1beta20220301.ApiDefinitionInfo Information about the formal API definition for the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2164,7 +2174,7 @@ spec:
                         type: string
                     type: object
                   apiManagementConfig:
-                    description: 'Storage version of v1beta20220301.ApiManagementConfig Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/ApiManagementConfig'
+                    description: Storage version of v1beta20220301.ApiManagementConfig Azure API management (APIM) configuration linked to the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2193,7 +2203,7 @@ spec:
                     type: string
                   appSettings:
                     items:
-                      description: 'Storage version of v1beta20220301.NameValuePair Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/NameValuePair'
+                      description: Storage version of v1beta20220301.NameValuePair Name value pair.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2209,7 +2219,7 @@ spec:
                   autoHealEnabled:
                     type: boolean
                   autoHealRules:
-                    description: 'Storage version of v1beta20220301.AutoHealRules Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/AutoHealRules'
+                    description: Storage version of v1beta20220301.AutoHealRules Rules that can be defined for auto-heal.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2217,7 +2227,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       actions:
-                        description: 'Storage version of v1beta20220301.AutoHealActions Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/AutoHealActions'
+                        description: Storage version of v1beta20220301.AutoHealActions Actions which to take by the auto-heal module when a rule is triggered.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2227,7 +2237,7 @@ spec:
                           actionType:
                             type: string
                           customAction:
-                            description: 'Storage version of v1beta20220301.AutoHealCustomAction Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/AutoHealCustomAction'
+                            description: Storage version of v1beta20220301.AutoHealCustomAction Custom action to be executed when an auto heal rule is triggered.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -2243,7 +2253,7 @@ spec:
                             type: string
                         type: object
                       triggers:
-                        description: 'Storage version of v1beta20220301.AutoHealTriggers Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/AutoHealTriggers'
+                        description: Storage version of v1beta20220301.AutoHealTriggers Triggers for auto-heal.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2253,7 +2263,7 @@ spec:
                           privateBytesInKB:
                             type: integer
                           requests:
-                            description: 'Storage version of v1beta20220301.RequestsBasedTrigger Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/RequestsBasedTrigger'
+                            description: Storage version of v1beta20220301.RequestsBasedTrigger Trigger based on total requests.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -2266,7 +2276,7 @@ spec:
                                 type: string
                             type: object
                           slowRequests:
-                            description: 'Storage version of v1beta20220301.SlowRequestsBasedTrigger Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/SlowRequestsBasedTrigger'
+                            description: Storage version of v1beta20220301.SlowRequestsBasedTrigger Trigger based on request execution time.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -2284,7 +2294,7 @@ spec:
                             type: object
                           slowRequestsWithPath:
                             items:
-                              description: 'Storage version of v1beta20220301.SlowRequestsBasedTrigger Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/SlowRequestsBasedTrigger'
+                              description: Storage version of v1beta20220301.SlowRequestsBasedTrigger Trigger based on request execution time.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2303,7 +2313,7 @@ spec:
                             type: array
                           statusCodes:
                             items:
-                              description: 'Storage version of v1beta20220301.StatusCodesBasedTrigger Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/StatusCodesBasedTrigger'
+                              description: Storage version of v1beta20220301.StatusCodesBasedTrigger Trigger based on status code.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2326,7 +2336,7 @@ spec:
                             type: array
                           statusCodesRange:
                             items:
-                              description: 'Storage version of v1beta20220301.StatusCodesRangeBasedTrigger Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/StatusCodesRangeBasedTrigger'
+                              description: Storage version of v1beta20220301.StatusCodesRangeBasedTrigger Trigger based on range of status codes.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2349,7 +2359,7 @@ spec:
                     type: string
                   azureStorageAccounts:
                     additionalProperties:
-                      description: Storage version of v1beta20220301.Site_Properties_SiteConfig_AzureStorageAccounts_Spec
+                      description: Storage version of v1beta20220301.AzureStorageInfoValue Azure Files or Blob Storage access information value for dictionary storage.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2381,7 +2391,7 @@ spec:
                     type: object
                   connectionStrings:
                     items:
-                      description: 'Storage version of v1beta20220301.ConnStringInfo Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/ConnStringInfo'
+                      description: Storage version of v1beta20220301.ConnStringInfo Database connection string information.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2397,7 +2407,7 @@ spec:
                       type: object
                     type: array
                   cors:
-                    description: 'Storage version of v1beta20220301.CorsSettings Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/CorsSettings'
+                    description: Storage version of v1beta20220301.CorsSettings Cross-Origin Resource Sharing (CORS) settings for the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2420,7 +2430,7 @@ spec:
                   documentRoot:
                     type: string
                   experiments:
-                    description: 'Storage version of v1beta20220301.Experiments Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/Experiments'
+                    description: Storage version of v1beta20220301.Experiments Routing rules in production experiments.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2429,7 +2439,7 @@ spec:
                         type: object
                       rampUpRules:
                         items:
-                          description: 'Storage version of v1beta20220301.RampUpRule Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/RampUpRule'
+                          description: Storage version of v1beta20220301.RampUpRule Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2463,7 +2473,7 @@ spec:
                     type: boolean
                   handlerMappings:
                     items:
-                      description: 'Storage version of v1beta20220301.HandlerMapping Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/HandlerMapping'
+                      description: Storage version of v1beta20220301.HandlerMapping The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2486,7 +2496,7 @@ spec:
                     type: boolean
                   ipSecurityRestrictions:
                     items:
-                      description: 'Storage version of v1beta20220301.IpSecurityRestriction Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/IpSecurityRestriction'
+                      description: Storage version of v1beta20220301.IpSecurityRestriction IP security restriction on an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2545,7 +2555,7 @@ spec:
                   keyVaultReferenceIdentity:
                     type: string
                   limits:
-                    description: 'Storage version of v1beta20220301.SiteLimits Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/SiteLimits'
+                    description: Storage version of v1beta20220301.SiteLimits Metric limits set on an app.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2592,7 +2602,7 @@ spec:
                   publishingUsername:
                     type: string
                   push:
-                    description: Storage version of v1beta20220301.Site_Properties_SiteConfig_Push_Spec
+                    description: Storage version of v1beta20220301.PushSettings Push settings for the App.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2622,7 +2632,7 @@ spec:
                     type: string
                   scmIpSecurityRestrictions:
                     items:
-                      description: 'Storage version of v1beta20220301.IpSecurityRestriction Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/IpSecurityRestriction'
+                      description: Storage version of v1beta20220301.IpSecurityRestriction IP security restriction on an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2684,7 +2694,7 @@ spec:
                     type: boolean
                   virtualApplications:
                     items:
-                      description: 'Storage version of v1beta20220301.VirtualApplication Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/VirtualApplication'
+                      description: Storage version of v1beta20220301.VirtualApplication Virtual application in an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2697,7 +2707,7 @@ spec:
                           type: boolean
                         virtualDirectories:
                           items:
-                            description: 'Storage version of v1beta20220301.VirtualDirectory Generated from: https://schema.management.azure.com/schemas/2022-03-01/Microsoft.Web.json#/definitions/VirtualDirectory'
+                            description: Storage version of v1beta20220301.VirtualDirectory Directory for virtual application.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -2762,7 +2772,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20220301.Site_STATUS
+            description: Storage version of v1beta20220301.Site_STATUS A web app, a mobile app backend, or an API app.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2780,7 +2790,7 @@ spec:
               clientCertMode:
                 type: string
               cloningInfo:
-                description: Storage version of v1beta20220301.CloningInfo_STATUS
+                description: Storage version of v1beta20220301.CloningInfo_STATUS Information needed for cloning operation.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2861,7 +2871,7 @@ spec:
                   type: string
                 type: array
               extendedLocation:
-                description: Storage version of v1beta20220301.ExtendedLocation_STATUS
+                description: Storage version of v1beta20220301.ExtendedLocation_STATUS Extended Location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2875,7 +2885,7 @@ spec:
                 type: object
               hostNameSslStates:
                 items:
-                  description: Storage version of v1beta20220301.HostNameSslState_STATUS
+                  description: Storage version of v1beta20220301.HostNameSslState_STATUS SSL-enabled hostname.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2903,7 +2913,7 @@ spec:
               hostNamesDisabled:
                 type: boolean
               hostingEnvironmentProfile:
-                description: Storage version of v1beta20220301.HostingEnvironmentProfile_STATUS
+                description: Storage version of v1beta20220301.HostingEnvironmentProfile_STATUS Specification for an App Service Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2924,7 +2934,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20220301.ManagedServiceIdentity_STATUS
+                description: Storage version of v1beta20220301.ManagedServiceIdentity_STATUS Managed service identity.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2939,7 +2949,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20220301.UserAssignedIdentity_STATUS
+                      description: Storage version of v1beta20220301.UserAssignedIdentity_STATUS User Assigned identity.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2990,7 +3000,7 @@ spec:
               serverFarmId:
                 type: string
               siteConfig:
-                description: Storage version of v1beta20220301.SiteConfig_STATUS
+                description: Storage version of v1beta20220301.SiteConfig_STATUS Configuration of an App Service app.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3004,7 +3014,7 @@ spec:
                   alwaysOn:
                     type: boolean
                   apiDefinition:
-                    description: Storage version of v1beta20220301.ApiDefinitionInfo_STATUS
+                    description: Storage version of v1beta20220301.ApiDefinitionInfo_STATUS Information about the formal API definition for the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3015,7 +3025,7 @@ spec:
                         type: string
                     type: object
                   apiManagementConfig:
-                    description: Storage version of v1beta20220301.ApiManagementConfig_STATUS
+                    description: Storage version of v1beta20220301.ApiManagementConfig_STATUS Azure API management (APIM) configuration linked to the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3029,7 +3039,7 @@ spec:
                     type: string
                   appSettings:
                     items:
-                      description: Storage version of v1beta20220301.NameValuePair_STATUS
+                      description: Storage version of v1beta20220301.NameValuePair_STATUS Name value pair.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3045,7 +3055,7 @@ spec:
                   autoHealEnabled:
                     type: boolean
                   autoHealRules:
-                    description: Storage version of v1beta20220301.AutoHealRules_STATUS
+                    description: Storage version of v1beta20220301.AutoHealRules_STATUS Rules that can be defined for auto-heal.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3053,7 +3063,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       actions:
-                        description: Storage version of v1beta20220301.AutoHealActions_STATUS
+                        description: Storage version of v1beta20220301.AutoHealActions_STATUS Actions which to take by the auto-heal module when a rule is triggered.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3063,7 +3073,7 @@ spec:
                           actionType:
                             type: string
                           customAction:
-                            description: Storage version of v1beta20220301.AutoHealCustomAction_STATUS
+                            description: Storage version of v1beta20220301.AutoHealCustomAction_STATUS Custom action to be executed when an auto heal rule is triggered.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -3079,7 +3089,7 @@ spec:
                             type: string
                         type: object
                       triggers:
-                        description: Storage version of v1beta20220301.AutoHealTriggers_STATUS
+                        description: Storage version of v1beta20220301.AutoHealTriggers_STATUS Triggers for auto-heal.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3089,7 +3099,7 @@ spec:
                           privateBytesInKB:
                             type: integer
                           requests:
-                            description: Storage version of v1beta20220301.RequestsBasedTrigger_STATUS
+                            description: Storage version of v1beta20220301.RequestsBasedTrigger_STATUS Trigger based on total requests.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -3102,7 +3112,7 @@ spec:
                                 type: string
                             type: object
                           slowRequests:
-                            description: Storage version of v1beta20220301.SlowRequestsBasedTrigger_STATUS
+                            description: Storage version of v1beta20220301.SlowRequestsBasedTrigger_STATUS Trigger based on request execution time.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -3120,7 +3130,7 @@ spec:
                             type: object
                           slowRequestsWithPath:
                             items:
-                              description: Storage version of v1beta20220301.SlowRequestsBasedTrigger_STATUS
+                              description: Storage version of v1beta20220301.SlowRequestsBasedTrigger_STATUS Trigger based on request execution time.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -3139,7 +3149,7 @@ spec:
                             type: array
                           statusCodes:
                             items:
-                              description: Storage version of v1beta20220301.StatusCodesBasedTrigger_STATUS
+                              description: Storage version of v1beta20220301.StatusCodesBasedTrigger_STATUS Trigger based on status code.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -3162,7 +3172,7 @@ spec:
                             type: array
                           statusCodesRange:
                             items:
-                              description: Storage version of v1beta20220301.StatusCodesRangeBasedTrigger_STATUS
+                              description: Storage version of v1beta20220301.StatusCodesRangeBasedTrigger_STATUS Trigger based on range of status codes.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -3185,7 +3195,7 @@ spec:
                     type: string
                   azureStorageAccounts:
                     additionalProperties:
-                      description: Storage version of v1beta20220301.AzureStorageInfoValue_STATUS
+                      description: Storage version of v1beta20220301.AzureStorageInfoValue_STATUS Azure Files or Blob Storage access information value for dictionary storage.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3206,7 +3216,7 @@ spec:
                     type: object
                   connectionStrings:
                     items:
-                      description: Storage version of v1beta20220301.ConnStringInfo_STATUS
+                      description: Storage version of v1beta20220301.ConnStringInfo_STATUS Database connection string information.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3222,7 +3232,7 @@ spec:
                       type: object
                     type: array
                   cors:
-                    description: Storage version of v1beta20220301.CorsSettings_STATUS
+                    description: Storage version of v1beta20220301.CorsSettings_STATUS Cross-Origin Resource Sharing (CORS) settings for the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3245,7 +3255,7 @@ spec:
                   documentRoot:
                     type: string
                   experiments:
-                    description: Storage version of v1beta20220301.Experiments_STATUS
+                    description: Storage version of v1beta20220301.Experiments_STATUS Routing rules in production experiments.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3254,7 +3264,7 @@ spec:
                         type: object
                       rampUpRules:
                         items:
-                          description: Storage version of v1beta20220301.RampUpRule_STATUS
+                          description: Storage version of v1beta20220301.RampUpRule_STATUS Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -3288,7 +3298,7 @@ spec:
                     type: boolean
                   handlerMappings:
                     items:
-                      description: Storage version of v1beta20220301.HandlerMapping_STATUS
+                      description: Storage version of v1beta20220301.HandlerMapping_STATUS The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3311,7 +3321,7 @@ spec:
                     type: boolean
                   ipSecurityRestrictions:
                     items:
-                      description: Storage version of v1beta20220301.IpSecurityRestriction_STATUS
+                      description: Storage version of v1beta20220301.IpSecurityRestriction_STATUS IP security restriction on an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3355,7 +3365,7 @@ spec:
                   keyVaultReferenceIdentity:
                     type: string
                   limits:
-                    description: Storage version of v1beta20220301.SiteLimits_STATUS
+                    description: Storage version of v1beta20220301.SiteLimits_STATUS Metric limits set on an app.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3378,7 +3388,7 @@ spec:
                   logsDirectorySizeLimit:
                     type: integer
                   machineKey:
-                    description: Storage version of v1beta20220301.SiteMachineKey_STATUS
+                    description: Storage version of v1beta20220301.SiteMachineKey_STATUS MachineKey of an app.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3419,7 +3429,7 @@ spec:
                   publishingUsername:
                     type: string
                   push:
-                    description: Storage version of v1beta20220301.PushSettings_STATUS
+                    description: Storage version of v1beta20220301.PushSettings_STATUS Push settings for the App.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3455,7 +3465,7 @@ spec:
                     type: string
                   scmIpSecurityRestrictions:
                     items:
-                      description: Storage version of v1beta20220301.IpSecurityRestriction_STATUS
+                      description: Storage version of v1beta20220301.IpSecurityRestriction_STATUS IP security restriction on an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3502,7 +3512,7 @@ spec:
                     type: boolean
                   virtualApplications:
                     items:
-                      description: Storage version of v1beta20220301.VirtualApplication_STATUS
+                      description: Storage version of v1beta20220301.VirtualApplication_STATUS Virtual application in an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3515,7 +3525,7 @@ spec:
                           type: boolean
                         virtualDirectories:
                           items:
-                            description: Storage version of v1beta20220301.VirtualDirectory_STATUS
+                            description: Storage version of v1beta20220301.VirtualDirectory_STATUS Directory for virtual application.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -3548,7 +3558,7 @@ spec:
                     type: integer
                 type: object
               slotSwapStatus:
-                description: Storage version of v1beta20220301.SlotSwapStatus_STATUS
+                description: Storage version of v1beta20220301.SlotSwapStatus_STATUS The status of the last successful slot swap operation.
                 properties:
                   $propertyBag:
                     additionalProperties:

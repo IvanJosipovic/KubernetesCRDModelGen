@@ -59,10 +59,10 @@ spec:
                 minLength: 1
                 type: string
               captureDescription:
-                description: Deprecated version of Namespaces_Eventhub_Properties_CaptureDescription_Spec. Use v1beta20211101.Namespaces_Eventhub_Properties_CaptureDescription_Spec instead
+                description: Deprecated version of CaptureDescription. Use v1beta20211101.CaptureDescription instead
                 properties:
                   destination:
-                    description: Deprecated version of Namespaces_Eventhub_Properties_CaptureDescription_Destination_Spec. Use v1beta20211101.Namespaces_Eventhub_Properties_CaptureDescription_Destination_Spec instead
+                    description: Deprecated version of Destination. Use v1beta20211101.Destination instead
                     properties:
                       archiveNameFormat:
                         type: string
@@ -98,7 +98,7 @@ spec:
                   enabled:
                     type: boolean
                   encoding:
-                    description: Deprecated version of Namespaces_Eventhub_Properties_CaptureDescription_Encoding_Spec. Use v1beta20211101.Namespaces_Eventhub_Properties_CaptureDescription_Encoding_Spec instead
+                    description: Deprecated version of CaptureDescription_Encoding. Use v1beta20211101.CaptureDescription_Encoding instead
                     enum:
                     - Avro
                     - AvroDeflate
@@ -110,8 +110,6 @@ spec:
                   skipEmptyArchives:
                     type: boolean
                 type: object
-              location:
-                type: string
               messageRetentionInDays:
                 minimum: 1
                 type: integer
@@ -127,15 +125,11 @@ spec:
               partitionCount:
                 minimum: 1
                 type: integer
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Deprecated version of Eventhub_STATUS. Use v1beta20211101.Eventhub_STATUS instead
+            description: Deprecated version of Namespaces_Eventhub_STATUS. Use v1beta20211101.Namespaces_Eventhub_STATUS instead
             properties:
               captureDescription:
                 description: Deprecated version of CaptureDescription_STATUS. Use v1beta20211101.CaptureDescription_STATUS instead
@@ -222,7 +216,7 @@ spec:
                   type: string
                 type: array
               status:
-                description: Deprecated version of Eventhub_Properties_Status_STATUS. Use v1beta20211101.Eventhub_Properties_Status_STATUS instead
+                description: Deprecated version of Namespaces_Eventhub_Properties_Status_STATUS. Use v1beta20211101.Namespaces_Eventhub_Properties_Status_STATUS instead
                 type: string
               systemData:
                 description: Deprecated version of SystemData_STATUS. Use v1beta20211101.SystemData_STATUS instead
@@ -292,7 +286,7 @@ spec:
                 minLength: 1
                 type: string
               captureDescription:
-                description: Storage version of v1alpha1api20211101.Namespaces_Eventhub_Properties_CaptureDescription_Spec Deprecated version of Namespaces_Eventhub_Properties_CaptureDescription_Spec. Use v1beta20211101.Namespaces_Eventhub_Properties_CaptureDescription_Spec instead
+                description: Storage version of v1alpha1api20211101.CaptureDescription Deprecated version of CaptureDescription. Use v1beta20211101.CaptureDescription instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -300,7 +294,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   destination:
-                    description: Storage version of v1alpha1api20211101.Namespaces_Eventhub_Properties_CaptureDescription_Destination_Spec Deprecated version of Namespaces_Eventhub_Properties_CaptureDescription_Destination_Spec. Use v1beta20211101.Namespaces_Eventhub_Properties_CaptureDescription_Destination_Spec instead
+                    description: Storage version of v1alpha1api20211101.Destination Deprecated version of Destination. Use v1beta20211101.Destination instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -348,8 +342,6 @@ spec:
                   skipEmptyArchives:
                     type: boolean
                 type: object
-              location:
-                type: string
               messageRetentionInDays:
                 type: integer
               originalVersion:
@@ -365,15 +357,11 @@ spec:
                 type: object
               partitionCount:
                 type: integer
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20211101.Eventhub_STATUS Deprecated version of Eventhub_STATUS. Use v1beta20211101.Eventhub_STATUS instead
+            description: Storage version of v1alpha1api20211101.Namespaces_Eventhub_STATUS Deprecated version of Namespaces_Eventhub_STATUS. Use v1beta20211101.Namespaces_Eventhub_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -521,7 +509,7 @@ spec:
     name: v1beta20211101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/resourceDefinitions/namespaces_eventhubs'
+        description: 'Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/eventhubs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -539,10 +527,10 @@ spec:
                 minLength: 1
                 type: string
               captureDescription:
-                description: 'CaptureDescription: Properties to configure capture description for eventhub'
+                description: 'CaptureDescription: Properties of capture description'
                 properties:
                   destination:
-                    description: 'Destination: Capture storage details for capture description'
+                    description: 'Destination: Properties of Destination where capture will be stored. (Storage Account, Blob Names)'
                     properties:
                       archiveNameFormat:
                         description: 'ArchiveNameFormat: Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order'
@@ -585,7 +573,7 @@ spec:
                     description: 'Enabled: A value that indicates whether capture description is enabled.'
                     type: boolean
                   encoding:
-                    description: "Encoding: Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version."
+                    description: "Encoding: Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version"
                     enum:
                     - Avro
                     - AvroDeflate
@@ -600,9 +588,6 @@ spec:
                     description: 'SkipEmptyArchives: A value that indicates whether to Skip Empty Archives'
                     type: boolean
                 type: object
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               messageRetentionInDays:
                 description: 'MessageRetentionInDays: Number of days to retain the events for this Event Hub, value should be 1 to 7 days'
                 minimum: 1
@@ -620,11 +605,6 @@ spec:
                 description: 'PartitionCount: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.'
                 minimum: 1
                 type: integer
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - owner
             type: object
@@ -785,7 +765,7 @@ spec:
     name: v1beta20211101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20211101.NamespacesEventhub Generated from: https://schema.management.azure.com/schemas/2021-11-01/Microsoft.EventHub.json#/resourceDefinitions/namespaces_eventhubs'
+        description: 'Storage version of v1beta20211101.NamespacesEventhub Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/eventhubs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -809,7 +789,7 @@ spec:
                 minLength: 1
                 type: string
               captureDescription:
-                description: Storage version of v1beta20211101.Namespaces_Eventhub_Properties_CaptureDescription_Spec
+                description: Storage version of v1beta20211101.CaptureDescription Properties to configure capture description for eventhub
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -817,7 +797,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   destination:
-                    description: Storage version of v1beta20211101.Namespaces_Eventhub_Properties_CaptureDescription_Destination_Spec
+                    description: Storage version of v1beta20211101.Destination Capture storage details for capture description
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -865,8 +845,6 @@ spec:
                   skipEmptyArchives:
                     type: boolean
                 type: object
-              location:
-                type: string
               messageRetentionInDays:
                 type: integer
               originalVersion:
@@ -882,15 +860,11 @@ spec:
                 type: object
               partitionCount:
                 type: integer
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20211101.Eventhub_STATUS
+            description: Storage version of v1beta20211101.Namespaces_Eventhub_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -898,7 +872,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               captureDescription:
-                description: Storage version of v1beta20211101.CaptureDescription_STATUS
+                description: Storage version of v1beta20211101.CaptureDescription_STATUS Properties to configure capture description for eventhub
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -906,7 +880,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   destination:
-                    description: Storage version of v1beta20211101.Destination_STATUS
+                    description: Storage version of v1beta20211101.Destination_STATUS Capture storage details for capture description
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -992,7 +966,7 @@ spec:
               status:
                 type: string
               systemData:
-                description: Storage version of v1beta20211101.SystemData_STATUS
+                description: Storage version of v1beta20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

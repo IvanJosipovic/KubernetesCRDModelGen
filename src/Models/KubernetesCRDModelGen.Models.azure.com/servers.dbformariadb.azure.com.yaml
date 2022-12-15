@@ -41,7 +41,7 @@ spec:
     name: v1beta20180601
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/resourceDefinitions/servers'
+        description: 'Generator information: - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -90,10 +90,10 @@ spec:
                 - name
                 type: object
               properties:
-                description: 'Properties: The properties used to create a new server.'
+                description: 'Properties: Properties of the server.'
                 properties:
-                  serverPropertiesForDefaultCreate:
-                    description: 'ServerPropertiesForDefaultCreate: Mutually exclusive with all other properties'
+                  default:
+                    description: 'Default: Mutually exclusive with all other properties'
                     properties:
                       administratorLogin:
                         description: "AdministratorLogin: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation)."
@@ -112,6 +112,7 @@ spec:
                         - name
                         type: object
                       createMode:
+                        description: 'CreateMode: The mode to create a new server.'
                         enum:
                         - Default
                         type: string
@@ -124,7 +125,7 @@ spec:
                         - TLSEnforcementDisabled
                         type: string
                       publicNetworkAccess:
-                        description: "PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'."
+                        description: "PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'"
                         enum:
                         - Disabled
                         - Enabled
@@ -136,7 +137,7 @@ spec:
                         - Enabled
                         type: string
                       storageProfile:
-                        description: 'StorageProfile: Storage Profile properties of a server'
+                        description: 'StorageProfile: Storage profile of a server.'
                         properties:
                           backupRetentionDays:
                             description: 'BackupRetentionDays: Backup retention days for the server.'
@@ -168,10 +169,11 @@ spec:
                     - administratorLoginPassword
                     - createMode
                     type: object
-                  serverPropertiesForGeoRestore:
-                    description: 'ServerPropertiesForGeoRestore: Mutually exclusive with all other properties'
+                  geoRestore:
+                    description: 'GeoRestore: Mutually exclusive with all other properties'
                     properties:
                       createMode:
+                        description: 'CreateMode: The mode to create a new server.'
                         enum:
                         - GeoRestore
                         type: string
@@ -184,7 +186,7 @@ spec:
                         - TLSEnforcementDisabled
                         type: string
                       publicNetworkAccess:
-                        description: "PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'."
+                        description: "PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'"
                         enum:
                         - Disabled
                         - Enabled
@@ -199,7 +201,7 @@ spec:
                         - Enabled
                         type: string
                       storageProfile:
-                        description: 'StorageProfile: Storage Profile properties of a server'
+                        description: 'StorageProfile: Storage profile of a server.'
                         properties:
                           backupRetentionDays:
                             description: 'BackupRetentionDays: Backup retention days for the server.'
@@ -230,72 +232,11 @@ spec:
                     - createMode
                     - sourceServerId
                     type: object
-                  serverPropertiesForReplica:
-                    description: 'ServerPropertiesForReplica: Mutually exclusive with all other properties'
+                  pointInTimeRestore:
+                    description: 'PointInTimeRestore: Mutually exclusive with all other properties'
                     properties:
                       createMode:
-                        enum:
-                        - Replica
-                        type: string
-                      minimalTlsVersion:
-                        description: 'MinimalTlsVersion: Enforce a minimal Tls version for the server.'
-                        enum:
-                        - TLS1_0
-                        - TLS1_1
-                        - TLS1_2
-                        - TLSEnforcementDisabled
-                        type: string
-                      publicNetworkAccess:
-                        description: "PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'."
-                        enum:
-                        - Disabled
-                        - Enabled
-                        type: string
-                      sourceServerId:
-                        description: 'SourceServerId: The master server id to create replica from.'
-                        type: string
-                      sslEnforcement:
-                        description: 'SslEnforcement: Enable ssl enforcement or not when connect to server.'
-                        enum:
-                        - Disabled
-                        - Enabled
-                        type: string
-                      storageProfile:
-                        description: 'StorageProfile: Storage Profile properties of a server'
-                        properties:
-                          backupRetentionDays:
-                            description: 'BackupRetentionDays: Backup retention days for the server.'
-                            type: integer
-                          geoRedundantBackup:
-                            description: 'GeoRedundantBackup: Enable Geo-redundant or not for server backup.'
-                            enum:
-                            - Disabled
-                            - Enabled
-                            type: string
-                          storageAutogrow:
-                            description: 'StorageAutogrow: Enable Storage Auto Grow.'
-                            enum:
-                            - Disabled
-                            - Enabled
-                            type: string
-                          storageMB:
-                            description: 'StorageMB: Max storage allowed for a server.'
-                            type: integer
-                        type: object
-                      version:
-                        description: 'Version: Server version.'
-                        enum:
-                        - 10.2
-                        - 10.3
-                        type: string
-                    required:
-                    - createMode
-                    - sourceServerId
-                    type: object
-                  serverPropertiesForRestore:
-                    description: 'ServerPropertiesForRestore: Mutually exclusive with all other properties'
-                    properties:
-                      createMode:
+                        description: 'CreateMode: The mode to create a new server.'
                         enum:
                         - PointInTimeRestore
                         type: string
@@ -308,7 +249,7 @@ spec:
                         - TLSEnforcementDisabled
                         type: string
                       publicNetworkAccess:
-                        description: "PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'."
+                        description: "PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'"
                         enum:
                         - Disabled
                         - Enabled
@@ -326,7 +267,7 @@ spec:
                         - Enabled
                         type: string
                       storageProfile:
-                        description: 'StorageProfile: Storage Profile properties of a server'
+                        description: 'StorageProfile: Storage profile of a server.'
                         properties:
                           backupRetentionDays:
                             description: 'BackupRetentionDays: Backup retention days for the server.'
@@ -358,9 +299,72 @@ spec:
                     - restorePointInTime
                     - sourceServerId
                     type: object
+                  replica:
+                    description: 'Replica: Mutually exclusive with all other properties'
+                    properties:
+                      createMode:
+                        description: 'CreateMode: The mode to create a new server.'
+                        enum:
+                        - Replica
+                        type: string
+                      minimalTlsVersion:
+                        description: 'MinimalTlsVersion: Enforce a minimal Tls version for the server.'
+                        enum:
+                        - TLS1_0
+                        - TLS1_1
+                        - TLS1_2
+                        - TLSEnforcementDisabled
+                        type: string
+                      publicNetworkAccess:
+                        description: "PublicNetworkAccess: Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'"
+                        enum:
+                        - Disabled
+                        - Enabled
+                        type: string
+                      sourceServerId:
+                        description: 'SourceServerId: The master server id to create replica from.'
+                        type: string
+                      sslEnforcement:
+                        description: 'SslEnforcement: Enable ssl enforcement or not when connect to server.'
+                        enum:
+                        - Disabled
+                        - Enabled
+                        type: string
+                      storageProfile:
+                        description: 'StorageProfile: Storage profile of a server.'
+                        properties:
+                          backupRetentionDays:
+                            description: 'BackupRetentionDays: Backup retention days for the server.'
+                            type: integer
+                          geoRedundantBackup:
+                            description: 'GeoRedundantBackup: Enable Geo-redundant or not for server backup.'
+                            enum:
+                            - Disabled
+                            - Enabled
+                            type: string
+                          storageAutogrow:
+                            description: 'StorageAutogrow: Enable Storage Auto Grow.'
+                            enum:
+                            - Disabled
+                            - Enabled
+                            type: string
+                          storageMB:
+                            description: 'StorageMB: Max storage allowed for a server.'
+                            type: integer
+                        type: object
+                      version:
+                        description: 'Version: Server version.'
+                        enum:
+                        - 10.2
+                        - 10.3
+                        type: string
+                    required:
+                    - createMode
+                    - sourceServerId
+                    type: object
                 type: object
               sku:
-                description: 'Sku: Billing information related properties of a server.'
+                description: 'Sku: The SKU (pricing tier) of the server.'
                 properties:
                   capacity:
                     description: "Capacity: The scale up/out capacity, representing server's compute units."
@@ -391,10 +395,12 @@ spec:
                 description: 'Tags: Application-specific metadata in the form of key-value pairs.'
                 type: object
             required:
+            - location
             - owner
             - properties
             type: object
           status:
+            description: Represents a server.
             properties:
               administratorLogin:
                 description: "AdministratorLogin: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation)."
@@ -458,6 +464,7 @@ spec:
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: List of private endpoint connections on a server'
                 items:
+                  description: A private endpoint connection under a server
                   properties:
                     id:
                       description: 'Id: Resource Id of the private endpoint connection.'
@@ -574,7 +581,7 @@ spec:
     name: v1beta20180601storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20180601.Server Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/resourceDefinitions/servers'
+        description: 'Storage version of v1beta20180601.Server Generator information: - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -640,14 +647,14 @@ spec:
                 - name
                 type: object
               properties:
-                description: 'Storage version of v1beta20180601.ServerPropertiesForCreate Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/definitions/ServerPropertiesForCreate'
+                description: Storage version of v1beta20180601.ServerPropertiesForCreate
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  serverPropertiesForDefaultCreate:
+                  default:
                     description: Storage version of v1beta20180601.ServerPropertiesForDefaultCreate
                     properties:
                       $propertyBag:
@@ -679,7 +686,7 @@ spec:
                       sslEnforcement:
                         type: string
                       storageProfile:
-                        description: 'Storage version of v1beta20180601.StorageProfile Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/definitions/StorageProfile'
+                        description: Storage version of v1beta20180601.StorageProfile Storage Profile properties of a server
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -698,7 +705,7 @@ spec:
                       version:
                         type: string
                     type: object
-                  serverPropertiesForGeoRestore:
+                  geoRestore:
                     description: Storage version of v1beta20180601.ServerPropertiesForGeoRestore
                     properties:
                       $propertyBag:
@@ -717,7 +724,7 @@ spec:
                       sslEnforcement:
                         type: string
                       storageProfile:
-                        description: 'Storage version of v1beta20180601.StorageProfile Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/definitions/StorageProfile'
+                        description: Storage version of v1beta20180601.StorageProfile Storage Profile properties of a server
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -736,45 +743,7 @@ spec:
                       version:
                         type: string
                     type: object
-                  serverPropertiesForReplica:
-                    description: Storage version of v1beta20180601.ServerPropertiesForReplica
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      createMode:
-                        type: string
-                      minimalTlsVersion:
-                        type: string
-                      publicNetworkAccess:
-                        type: string
-                      sourceServerId:
-                        type: string
-                      sslEnforcement:
-                        type: string
-                      storageProfile:
-                        description: 'Storage version of v1beta20180601.StorageProfile Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/definitions/StorageProfile'
-                        properties:
-                          $propertyBag:
-                            additionalProperties:
-                              type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                            type: object
-                          backupRetentionDays:
-                            type: integer
-                          geoRedundantBackup:
-                            type: string
-                          storageAutogrow:
-                            type: string
-                          storageMB:
-                            type: integer
-                        type: object
-                      version:
-                        type: string
-                    type: object
-                  serverPropertiesForRestore:
+                  pointInTimeRestore:
                     description: Storage version of v1beta20180601.ServerPropertiesForRestore
                     properties:
                       $propertyBag:
@@ -795,7 +764,45 @@ spec:
                       sslEnforcement:
                         type: string
                       storageProfile:
-                        description: 'Storage version of v1beta20180601.StorageProfile Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/definitions/StorageProfile'
+                        description: Storage version of v1beta20180601.StorageProfile Storage Profile properties of a server
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          backupRetentionDays:
+                            type: integer
+                          geoRedundantBackup:
+                            type: string
+                          storageAutogrow:
+                            type: string
+                          storageMB:
+                            type: integer
+                        type: object
+                      version:
+                        type: string
+                    type: object
+                  replica:
+                    description: Storage version of v1beta20180601.ServerPropertiesForReplica
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      createMode:
+                        type: string
+                      minimalTlsVersion:
+                        type: string
+                      publicNetworkAccess:
+                        type: string
+                      sourceServerId:
+                        type: string
+                      sslEnforcement:
+                        type: string
+                      storageProfile:
+                        description: Storage version of v1beta20180601.StorageProfile Storage Profile properties of a server
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -816,7 +823,7 @@ spec:
                     type: object
                 type: object
               sku:
-                description: 'Storage version of v1beta20180601.Sku Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/definitions/Sku'
+                description: Storage version of v1beta20180601.Sku Billing information related properties of a server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -842,7 +849,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20180601.Server_STATUS
+            description: Storage version of v1beta20180601.Server_STATUS Represents a server.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -901,7 +908,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20180601.ServerPrivateEndpointConnection_STATUS
+                  description: Storage version of v1beta20180601.ServerPrivateEndpointConnection_STATUS A private endpoint connection under a server
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -911,7 +918,7 @@ spec:
                     id:
                       type: string
                     properties:
-                      description: Storage version of v1beta20180601.ServerPrivateEndpointConnectionProperties_STATUS
+                      description: Storage version of v1beta20180601.ServerPrivateEndpointConnectionProperties_STATUS Properties of a private endpoint connection.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -956,7 +963,7 @@ spec:
               replicationRole:
                 type: string
               sku:
-                description: Storage version of v1beta20180601.Sku_STATUS
+                description: Storage version of v1beta20180601.Sku_STATUS Billing information related properties of a server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -977,7 +984,7 @@ spec:
               sslEnforcement:
                 type: string
               storageProfile:
-                description: Storage version of v1beta20180601.StorageProfile_STATUS
+                description: Storage version of v1beta20180601.StorageProfile_STATUS Storage Profile properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:

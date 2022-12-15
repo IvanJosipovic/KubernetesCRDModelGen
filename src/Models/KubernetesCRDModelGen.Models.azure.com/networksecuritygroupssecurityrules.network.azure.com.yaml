@@ -54,7 +54,7 @@ spec:
           spec:
             properties:
               access:
-                description: Deprecated version of SecurityRulePropertiesFormat_Access. Use v1beta20201101.SecurityRulePropertiesFormat_Access instead
+                description: Deprecated version of SecurityRuleAccess. Use v1beta20201101.SecurityRuleAccess instead
                 enum:
                 - Allow
                 - Deny
@@ -72,7 +72,7 @@ spec:
                 type: array
               destinationApplicationSecurityGroups:
                 items:
-                  description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                  description: Deprecated version of ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded. Use v1beta20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded instead
                   properties:
                     reference:
                       description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
@@ -91,8 +91,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               destinationPortRange:
@@ -102,12 +100,10 @@ spec:
                   type: string
                 type: array
               direction:
-                description: Deprecated version of SecurityRulePropertiesFormat_Direction. Use v1beta20201101.SecurityRulePropertiesFormat_Direction instead
+                description: Deprecated version of SecurityRuleDirection. Use v1beta20201101.SecurityRuleDirection instead
                 enum:
                 - Inbound
                 - Outbound
-                type: string
-              location:
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/NetworkSecurityGroup resource'
@@ -138,7 +134,7 @@ spec:
                 type: array
               sourceApplicationSecurityGroups:
                 items:
-                  description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                  description: Deprecated version of ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded. Use v1beta20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded instead
                   properties:
                     reference:
                       description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
@@ -157,8 +153,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               sourcePortRange:
@@ -167,19 +161,14 @@ spec:
                 items:
                   type: string
                 type: array
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - access
             - direction
             - owner
-            - priority
             - protocol
             type: object
           status:
-            description: Deprecated version of SecurityRule_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded. Use v1beta20201101.SecurityRule_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded instead
+            description: Deprecated version of NetworkSecurityGroups_SecurityRule_STATUS. Use v1beta20201101.NetworkSecurityGroups_SecurityRule_STATUS instead
             properties:
               access:
                 description: Deprecated version of SecurityRuleAccess_STATUS. Use v1beta20201101.SecurityRuleAccess_STATUS instead
@@ -335,7 +324,7 @@ spec:
                 type: array
               destinationApplicationSecurityGroups:
                 items:
-                  description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                  description: Storage version of v1alpha1api20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded Deprecated version of ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded. Use v1beta20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -359,8 +348,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               destinationPortRange:
@@ -370,8 +357,6 @@ spec:
                   type: string
                 type: array
               direction:
-                type: string
-              location:
                 type: string
               originalVersion:
                 type: string
@@ -396,7 +381,7 @@ spec:
                 type: array
               sourceApplicationSecurityGroups:
                 items:
-                  description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                  description: Storage version of v1alpha1api20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded Deprecated version of ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded. Use v1beta20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -420,8 +405,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               sourcePortRange:
@@ -430,15 +413,11 @@ spec:
                 items:
                   type: string
                 type: array
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201101.SecurityRule_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded Deprecated version of SecurityRule_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded. Use v1beta20201101.SecurityRule_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded instead
+            description: Storage version of v1alpha1api20201101.NetworkSecurityGroups_SecurityRule_STATUS Deprecated version of NetworkSecurityGroups_SecurityRule_STATUS. Use v1beta20201101.NetworkSecurityGroups_SecurityRule_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -571,7 +550,7 @@ spec:
     name: v1beta20201101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/networkSecurityGroups_securityRules'
+        description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkSecurityGroup.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -606,7 +585,7 @@ spec:
               destinationApplicationSecurityGroups:
                 description: 'DestinationApplicationSecurityGroups: The application security group specified as destination.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                  description: An application security group in a resource group.
                   properties:
                     reference:
                       description: 'Reference: Resource ID.'
@@ -625,8 +604,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               destinationPortRange:
@@ -642,9 +619,6 @@ spec:
                 enum:
                 - Inbound
                 - Outbound
-                type: string
-              location:
-                description: 'Location: Location to deploy resource to'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/NetworkSecurityGroup resource'
@@ -679,7 +653,7 @@ spec:
               sourceApplicationSecurityGroups:
                 description: 'SourceApplicationSecurityGroups: The application security group specified as source.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                  description: An application security group in a resource group.
                   properties:
                     reference:
                       description: 'Reference: Resource ID.'
@@ -698,8 +672,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               sourcePortRange:
@@ -710,16 +682,10 @@ spec:
                 items:
                   type: string
                 type: array
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - access
             - direction
             - owner
-            - priority
             - protocol
             type: object
           status:
@@ -776,6 +742,7 @@ spec:
               destinationApplicationSecurityGroups:
                 description: 'DestinationApplicationSecurityGroups: The application security group specified as destination.'
                 items:
+                  description: An application security group in a resource group.
                   properties:
                     id:
                       description: 'Id: Resource ID.'
@@ -822,6 +789,7 @@ spec:
               sourceApplicationSecurityGroups:
                 description: 'SourceApplicationSecurityGroups: The application security group specified as source.'
                 items:
+                  description: An application security group in a resource group.
                   properties:
                     id:
                       description: 'Id: Resource ID.'
@@ -861,7 +829,7 @@ spec:
     name: v1beta20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201101.NetworkSecurityGroupsSecurityRule Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/networkSecurityGroups_securityRules'
+        description: 'Storage version of v1beta20201101.NetworkSecurityGroupsSecurityRule Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkSecurityGroup.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}/securityRules/{securityRuleName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -894,7 +862,7 @@ spec:
                 type: array
               destinationApplicationSecurityGroups:
                 items:
-                  description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                  description: Storage version of v1beta20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded An application security group in a resource group.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -918,8 +886,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               destinationPortRange:
@@ -929,8 +895,6 @@ spec:
                   type: string
                 type: array
               direction:
-                type: string
-              location:
                 type: string
               originalVersion:
                 type: string
@@ -955,7 +919,7 @@ spec:
                 type: array
               sourceApplicationSecurityGroups:
                 items:
-                  description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                  description: Storage version of v1beta20201101.ApplicationSecurityGroupSpec_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded An application security group in a resource group.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -979,8 +943,6 @@ spec:
                           description: Name is the Kubernetes name of the resource.
                           type: string
                       type: object
-                  required:
-                  - reference
                   type: object
                 type: array
               sourcePortRange:
@@ -989,15 +951,11 @@ spec:
                 items:
                   type: string
                 type: array
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.SecurityRule_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded
+            description: Storage version of v1beta20201101.NetworkSecurityGroups_SecurityRule_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1050,7 +1008,7 @@ spec:
                 type: array
               destinationApplicationSecurityGroups:
                 items:
-                  description: Storage version of v1beta20201101.ApplicationSecurityGroup_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.ApplicationSecurityGroup_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded An application security group in a resource group.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1089,7 +1047,7 @@ spec:
                 type: array
               sourceApplicationSecurityGroups:
                 items:
-                  description: Storage version of v1beta20201101.ApplicationSecurityGroup_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.ApplicationSecurityGroup_STATUS_NetworkSecurityGroups_SecurityRule_SubResourceEmbedded An application security group in a resource group.
                   properties:
                     $propertyBag:
                       additionalProperties:

@@ -96,7 +96,7 @@ spec:
             - resource
             type: object
           status:
-            description: Deprecated version of SqlDatabaseGetResults_STATUS. Use v1beta20210515.SqlDatabaseGetResults_STATUS instead
+            description: Deprecated version of DatabaseAccounts_SqlDatabase_STATUS. Use v1beta20210515.DatabaseAccounts_SqlDatabase_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -270,7 +270,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210515.SqlDatabaseGetResults_STATUS Deprecated version of SqlDatabaseGetResults_STATUS. Use v1beta20210515.SqlDatabaseGetResults_STATUS instead
+            description: Storage version of v1alpha1api20210515.DatabaseAccounts_SqlDatabase_STATUS Deprecated version of DatabaseAccounts_SqlDatabase_STATUS. Use v1beta20210515.DatabaseAccounts_SqlDatabase_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -388,7 +388,7 @@ spec:
     name: v1beta20210515
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/resourceDefinitions/databaseAccounts_sqlDatabases'
+        description: 'Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -407,10 +407,10 @@ spec:
                 description: 'Location: The location of the resource group to which the resource belongs.'
                 type: string
               options:
-                description: 'Options: CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"'
+                description: 'Options: A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.'
                 properties:
                   autoscaleSettings:
-                    description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/AutoscaleSettings'
+                    description: 'AutoscaleSettings: Specifies the Autoscale settings.'
                     properties:
                       maxThroughput:
                         description: 'MaxThroughput: Represents maximum throughput, the resource can scale up to.'
@@ -430,7 +430,7 @@ spec:
                 - name
                 type: object
               resource:
-                description: 'Resource: Cosmos DB SQL database resource object'
+                description: 'Resource: The standard JSON format of a SQL database'
                 properties:
                   id:
                     description: 'Id: Name of the Cosmos DB SQL database'
@@ -441,7 +441,6 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".'
                 type: object
             required:
             - owner
@@ -494,6 +493,7 @@ spec:
                 description: 'Name: The name of the ARM resource.'
                 type: string
               options:
+                description: 'Options: Cosmos DB options resource object'
                 properties:
                   autoscaleSettings:
                     description: 'AutoscaleSettings: Specifies the Autoscale settings.'
@@ -556,7 +556,7 @@ spec:
     name: v1beta20210515storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210515.SqlDatabase Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/resourceDefinitions/databaseAccounts_sqlDatabases'
+        description: 'Storage version of v1beta20210515.SqlDatabase Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -580,7 +580,7 @@ spec:
               location:
                 type: string
               options:
-                description: 'Storage version of v1beta20210515.CreateUpdateOptions Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/CreateUpdateOptions'
+                description: Storage version of v1beta20210515.CreateUpdateOptions CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match", "If-None-Match", "Session-Token" and "Throughput"
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -588,7 +588,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
-                    description: 'Storage version of v1beta20210515.AutoscaleSettings Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/AutoscaleSettings'
+                    description: Storage version of v1beta20210515.AutoscaleSettings
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -613,7 +613,7 @@ spec:
                 - name
                 type: object
               resource:
-                description: 'Storage version of v1beta20210515.SqlDatabaseResource Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/SqlDatabaseResource'
+                description: Storage version of v1beta20210515.SqlDatabaseResource Cosmos DB SQL database resource object
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -631,7 +631,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210515.SqlDatabaseGetResults_STATUS
+            description: Storage version of v1beta20210515.DatabaseAccounts_SqlDatabase_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -679,7 +679,7 @@ spec:
               name:
                 type: string
               options:
-                description: Storage version of v1beta20210515.OptionsResource_STATUS
+                description: Storage version of v1beta20210515.OptionsResource_STATUS Cosmos DB options resource object
                 properties:
                   $propertyBag:
                     additionalProperties:

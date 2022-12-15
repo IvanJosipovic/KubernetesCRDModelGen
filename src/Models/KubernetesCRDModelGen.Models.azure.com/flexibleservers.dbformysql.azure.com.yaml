@@ -79,7 +79,7 @@ spec:
                   backupRetentionDays:
                     type: integer
                   geoRedundantBackup:
-                    description: Deprecated version of Backup_GeoRedundantBackup. Use v1beta20210501.Backup_GeoRedundantBackup instead
+                    description: Deprecated version of EnableStatusEnum. Use v1beta20210501.EnableStatusEnum instead
                     enum:
                     - Disabled
                     - Enabled
@@ -246,7 +246,7 @@ spec:
                 - name
                 type: object
               replicationRole:
-                description: Deprecated version of ServerProperties_ReplicationRole. Use v1beta20210501.ServerProperties_ReplicationRole instead
+                description: Deprecated version of ReplicationRole. Use v1beta20210501.ReplicationRole instead
                 enum:
                 - None
                 - Replica
@@ -276,7 +276,7 @@ spec:
                 description: Deprecated version of Storage. Use v1beta20210501.Storage instead
                 properties:
                   autoGrow:
-                    description: Deprecated version of Storage_AutoGrow. Use v1beta20210501.Storage_AutoGrow instead
+                    description: Deprecated version of EnableStatusEnum. Use v1beta20210501.EnableStatusEnum instead
                     enum:
                     - Disabled
                     - Enabled
@@ -291,16 +291,17 @@ spec:
                   type: string
                 type: object
               version:
-                description: Deprecated version of ServerProperties_Version. Use v1beta20210501.ServerProperties_Version instead
+                description: Deprecated version of ServerVersion. Use v1beta20210501.ServerVersion instead
                 enum:
                 - 5.7
                 - 8.0.21
                 type: string
             required:
+            - location
             - owner
             type: object
           status:
-            description: Deprecated version of Server_STATUS. Use v1beta20210501.Server_STATUS instead
+            description: Deprecated version of FlexibleServer_STATUS. Use v1beta20210501.FlexibleServer_STATUS instead
             properties:
               administratorLogin:
                 type: string
@@ -785,7 +786,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210501.Server_STATUS Deprecated version of Server_STATUS. Use v1beta20210501.Server_STATUS instead
+            description: Storage version of v1alpha1api20210501.FlexibleServer_STATUS Deprecated version of FlexibleServer_STATUS. Use v1beta20210501.FlexibleServer_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1031,7 +1032,7 @@ spec:
     name: v1beta20210501
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/resourceDefinitions/flexibleServers'
+        description: 'Generator information: - Generated from: /mysql/resource-manager/Microsoft.DBforMySQL/stable/2021-05-01/mysql.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1066,7 +1067,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               backup:
-                description: 'Backup: Storage Profile properties of a server'
+                description: 'Backup: Backup related properties of a server.'
                 properties:
                   backupRetentionDays:
                     description: 'BackupRetentionDays: Backup retention days for the server.'
@@ -1087,7 +1088,7 @@ spec:
                 - Replica
                 type: string
               dataEncryption:
-                description: 'DataEncryption: The date encryption for cmk.'
+                description: 'DataEncryption: The Data Encryption for CMK.'
                 properties:
                   geoBackupKeyURI:
                     description: "GeoBackupKeyURI: Geo backup key uri as key vault can't cross region, need cmk in same region as geo backup"
@@ -1137,7 +1138,7 @@ spec:
                     type: string
                 type: object
               highAvailability:
-                description: 'HighAvailability: Network related properties of a server'
+                description: 'HighAvailability: High availability related properties of a server.'
                 properties:
                   mode:
                     description: 'Mode: High availability mode for a server.'
@@ -1151,7 +1152,7 @@ spec:
                     type: string
                 type: object
               identity:
-                description: 'Identity: Properties to configure Identity for Bring your Own Keys'
+                description: 'Identity: The cmk identity for the server.'
                 properties:
                   type:
                     description: 'Type: Type of managed service identity.'
@@ -1179,7 +1180,7 @@ spec:
                     type: integer
                 type: object
               network:
-                description: 'Network: Network related properties of a server'
+                description: 'Network: Network related properties of a server.'
                 properties:
                   delegatedSubnetResourceReference:
                     description: 'DelegatedSubnetResourceReference: Delegated subnet resource id used to setup vnet for a server.'
@@ -1257,7 +1258,7 @@ spec:
                 description: 'RestorePointInTime: Restore point creation time (ISO8601 format), specifying the time to restore from.'
                 type: string
               sku:
-                description: 'Sku: Billing information related properties of a server.'
+                description: 'Sku: The SKU (pricing tier) of the server.'
                 properties:
                   name:
                     description: 'Name: The name of the sku, e.g. Standard_D32s_v3.'
@@ -1277,7 +1278,7 @@ spec:
                 description: 'SourceServerResourceId: The source MySQL server id.'
                 type: string
               storage:
-                description: 'Storage: Storage Profile properties of a server'
+                description: 'Storage: Storage related properties of a server.'
                 properties:
                   autoGrow:
                     description: 'AutoGrow: Enable Storage Auto Grow or not.'
@@ -1295,7 +1296,7 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
               version:
                 description: 'Version: Server version.'
@@ -1304,6 +1305,7 @@ spec:
                 - 8.0.21
                 type: string
             required:
+            - location
             - owner
             type: object
           status:
@@ -1552,7 +1554,7 @@ spec:
     name: v1beta20210501storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210501.FlexibleServer Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/resourceDefinitions/flexibleServers'
+        description: 'Storage version of v1beta20210501.FlexibleServer Generator information: - Generated from: /mysql/resource-manager/Microsoft.DBforMySQL/stable/2021-05-01/mysql.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1591,7 +1593,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               backup:
-                description: 'Storage version of v1beta20210501.Backup Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/definitions/Backup'
+                description: Storage version of v1beta20210501.Backup Storage Profile properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1606,7 +1608,7 @@ spec:
               createMode:
                 type: string
               dataEncryption:
-                description: 'Storage version of v1beta20210501.DataEncryption Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/definitions/DataEncryption'
+                description: Storage version of v1beta20210501.DataEncryption The date encryption for cmk.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1655,7 +1657,7 @@ spec:
                     type: string
                 type: object
               highAvailability:
-                description: 'Storage version of v1beta20210501.HighAvailability Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/definitions/HighAvailability'
+                description: Storage version of v1beta20210501.HighAvailability Network related properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1668,7 +1670,7 @@ spec:
                     type: string
                 type: object
               identity:
-                description: 'Storage version of v1beta20210501.Identity Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/definitions/Identity'
+                description: Storage version of v1beta20210501.Identity Properties to configure Identity for Bring your Own Keys
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1681,7 +1683,7 @@ spec:
               location:
                 type: string
               maintenanceWindow:
-                description: 'Storage version of v1beta20210501.MaintenanceWindow Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/definitions/MaintenanceWindow'
+                description: Storage version of v1beta20210501.MaintenanceWindow Maintenance window of a server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1698,7 +1700,7 @@ spec:
                     type: integer
                 type: object
               network:
-                description: 'Storage version of v1beta20210501.Network Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/definitions/Network'
+                description: Storage version of v1beta20210501.Network Network related properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1787,7 +1789,7 @@ spec:
               restorePointInTime:
                 type: string
               sku:
-                description: 'Storage version of v1beta20210501.Sku Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/definitions/Sku'
+                description: Storage version of v1beta20210501.Sku Billing information related properties of a server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1802,7 +1804,7 @@ spec:
               sourceServerResourceId:
                 type: string
               storage:
-                description: 'Storage version of v1beta20210501.Storage Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.DBforMySQL.json#/definitions/Storage'
+                description: Storage version of v1beta20210501.Storage Storage Profile properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1826,7 +1828,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210501.Server_STATUS
+            description: Storage version of v1beta20210501.FlexibleServer_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1838,7 +1840,7 @@ spec:
               availabilityZone:
                 type: string
               backup:
-                description: Storage version of v1beta20210501.Backup_STATUS
+                description: Storage version of v1beta20210501.Backup_STATUS Storage Profile properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1889,7 +1891,7 @@ spec:
               createMode:
                 type: string
               dataEncryption:
-                description: Storage version of v1beta20210501.DataEncryption_STATUS
+                description: Storage version of v1beta20210501.DataEncryption_STATUS The date encryption for cmk.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1910,7 +1912,7 @@ spec:
               fullyQualifiedDomainName:
                 type: string
               highAvailability:
-                description: Storage version of v1beta20210501.HighAvailability_STATUS
+                description: Storage version of v1beta20210501.HighAvailability_STATUS Network related properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1927,7 +1929,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210501.Identity_STATUS
+                description: Storage version of v1beta20210501.Identity_STATUS Properties to configure Identity for Bring your Own Keys
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1948,7 +1950,7 @@ spec:
               location:
                 type: string
               maintenanceWindow:
-                description: Storage version of v1beta20210501.MaintenanceWindow_STATUS
+                description: Storage version of v1beta20210501.MaintenanceWindow_STATUS Maintenance window of a server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1967,7 +1969,7 @@ spec:
               name:
                 type: string
               network:
-                description: Storage version of v1beta20210501.Network_STATUS
+                description: Storage version of v1beta20210501.Network_STATUS Network related properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1988,7 +1990,7 @@ spec:
               restorePointInTime:
                 type: string
               sku:
-                description: Storage version of v1beta20210501.Sku_STATUS
+                description: Storage version of v1beta20210501.Sku_STATUS Billing information related properties of a server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2005,7 +2007,7 @@ spec:
               state:
                 type: string
               storage:
-                description: Storage version of v1beta20210501.Storage_STATUS
+                description: Storage version of v1beta20210501.Storage_STATUS Storage Profile properties of a server
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2022,7 +2024,7 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1beta20210501.SystemData_STATUS
+                description: Storage version of v1beta20210501.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

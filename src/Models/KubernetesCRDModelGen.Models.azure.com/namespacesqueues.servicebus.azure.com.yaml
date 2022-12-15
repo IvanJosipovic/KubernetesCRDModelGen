@@ -75,8 +75,6 @@ spec:
                 type: string
               forwardTo:
                 type: string
-              location:
-                type: string
               lockDuration:
                 type: string
               maxDeliveryCount:
@@ -96,15 +94,11 @@ spec:
                 type: boolean
               requiresSession:
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Deprecated version of SBQueue_STATUS. Use v1beta20210101preview.SBQueue_STATUS instead
+            description: Deprecated version of Namespaces_Queue_STATUS. Use v1beta20210101preview.Namespaces_Queue_STATUS instead
             properties:
               accessedAt:
                 type: string
@@ -282,8 +276,6 @@ spec:
                 type: string
               forwardTo:
                 type: string
-              location:
-                type: string
               lockDuration:
                 type: string
               maxDeliveryCount:
@@ -305,15 +297,11 @@ spec:
                 type: boolean
               requiresSession:
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210101preview.SBQueue_STATUS Deprecated version of SBQueue_STATUS. Use v1beta20210101preview.SBQueue_STATUS instead
+            description: Storage version of v1alpha1api20210101preview.Namespaces_Queue_STATUS Deprecated version of Namespaces_Queue_STATUS. Use v1beta20210101preview.Namespaces_Queue_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -462,7 +450,7 @@ spec:
     name: v1beta20210101preview
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces_queues'
+        description: 'Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Queue.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/queues/{queueName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -505,9 +493,6 @@ spec:
               forwardTo:
                 description: 'ForwardTo: Queue/Topic name to forward the messages'
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               lockDuration:
                 description: 'LockDuration: ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.'
                 type: string
@@ -532,11 +517,6 @@ spec:
               requiresSession:
                 description: 'RequiresSession: A value that indicates whether the queue supports the concept of sessions.'
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - owner
             type: object
@@ -709,7 +689,7 @@ spec:
     name: v1beta20210101previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210101preview.NamespacesQueue Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces_queues'
+        description: 'Storage version of v1beta20210101preview.NamespacesQueue Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Queue.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/queues/{queueName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -749,8 +729,6 @@ spec:
                 type: string
               forwardTo:
                 type: string
-              location:
-                type: string
               lockDuration:
                 type: string
               maxDeliveryCount:
@@ -772,15 +750,11 @@ spec:
                 type: boolean
               requiresSession:
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210101preview.SBQueue_STATUS
+            description: Storage version of v1beta20210101preview.Namespaces_Queue_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -826,7 +800,7 @@ spec:
                   type: object
                 type: array
               countDetails:
-                description: Storage version of v1beta20210101preview.MessageCountDetails_STATUS
+                description: Storage version of v1beta20210101preview.MessageCountDetails_STATUS Message Count Details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -883,7 +857,7 @@ spec:
               status:
                 type: string
               systemData:
-                description: Storage version of v1beta20210101preview.SystemData_STATUS
+                description: Storage version of v1beta20210101preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

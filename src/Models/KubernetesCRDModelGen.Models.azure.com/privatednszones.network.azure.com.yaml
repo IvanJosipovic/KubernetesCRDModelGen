@@ -41,7 +41,7 @@ spec:
     name: v1beta20180901
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2018-09-01/Microsoft.Network.json#/resourceDefinitions/privateDnsZones'
+        description: 'Generator information: - Generated from: /privatedns/resource-manager/Microsoft.Network/stable/2018-09-01/privatedns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -57,10 +57,10 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               etag:
-                description: 'Etag: The ETag of the Private DNS zone.'
+                description: 'Etag: The ETag of the zone.'
                 type: string
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: The Azure Region where the resource lives'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
@@ -74,7 +74,7 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
             required:
             - owner
@@ -119,6 +119,12 @@ spec:
               etag:
                 description: 'Etag: The ETag of the zone.'
                 type: string
+              id:
+                description: "Id: Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'."
+                type: string
+              location:
+                description: 'Location: The Azure Region where the resource lives'
+                type: string
               maxNumberOfRecordSets:
                 description: 'MaxNumberOfRecordSets: The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.'
                 type: integer
@@ -128,6 +134,9 @@ spec:
               maxNumberOfVirtualNetworkLinksWithRegistration:
                 description: 'MaxNumberOfVirtualNetworkLinksWithRegistration: The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.'
                 type: integer
+              name:
+                description: 'Name: The name of the resource'
+                type: string
               numberOfRecordSets:
                 description: 'NumberOfRecordSets: The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.'
                 type: integer
@@ -139,6 +148,14 @@ spec:
                 type: integer
               provisioningState:
                 description: 'ProvisioningState: The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.'
+                type: string
+              tags:
+                additionalProperties:
+                  type: string
+                description: 'Tags: Resource tags.'
+                type: object
+              type:
+                description: "Type: The type of the resource. Example - 'Microsoft.Network/privateDnsZones'."
                 type: string
             type: object
         type: object
@@ -162,7 +179,7 @@ spec:
     name: v1beta20180901storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20180901.PrivateDnsZone Generated from: https://schema.management.azure.com/schemas/2018-09-01/Microsoft.Network.json#/resourceDefinitions/privateDnsZones'
+        description: 'Storage version of v1beta20180901.PrivateDnsZone Generator information: - Generated from: /privatedns/resource-manager/Microsoft.Network/stable/2018-09-01/privatedns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateZoneName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -206,7 +223,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20180901.PrivateZone_STATUS
+            description: Storage version of v1beta20180901.PrivateDnsZone_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -249,12 +266,18 @@ spec:
                 type: array
               etag:
                 type: string
+              id:
+                type: string
+              location:
+                type: string
               maxNumberOfRecordSets:
                 type: integer
               maxNumberOfVirtualNetworkLinks:
                 type: integer
               maxNumberOfVirtualNetworkLinksWithRegistration:
                 type: integer
+              name:
+                type: string
               numberOfRecordSets:
                 type: integer
               numberOfVirtualNetworkLinks:
@@ -262,6 +285,12 @@ spec:
               numberOfVirtualNetworkLinksWithRegistration:
                 type: integer
               provisioningState:
+                type: string
+              tags:
+                additionalProperties:
+                  type: string
+                type: object
+              type:
                 type: string
             type: object
         type: object

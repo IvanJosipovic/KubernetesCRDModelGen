@@ -80,8 +80,6 @@ spec:
                 - VolatileRandom
                 - VolatileTTL
                 type: string
-              location:
-                type: string
               modules:
                 items:
                   description: Deprecated version of Module. Use v1beta20210301.Module instead
@@ -126,15 +124,11 @@ spec:
                 type: object
               port:
                 type: integer
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Deprecated version of Database_STATUS. Use v1beta20210301.Database_STATUS instead
+            description: Deprecated version of RedisEnterprise_Database_STATUS. Use v1beta20210301.RedisEnterprise_Database_STATUS instead
             properties:
               clientProtocol:
                 description: Deprecated version of DatabaseProperties_ClientProtocol_STATUS. Use v1beta20210301.DatabaseProperties_ClientProtocol_STATUS instead
@@ -269,8 +263,6 @@ spec:
                 type: string
               evictionPolicy:
                 type: string
-              location:
-                type: string
               modules:
                 items:
                   description: Storage version of v1alpha1api20210301.Module Deprecated version of Module. Use v1beta20210301.Module instead
@@ -316,15 +308,11 @@ spec:
                 type: object
               port:
                 type: integer
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210301.Database_STATUS Deprecated version of Database_STATUS. Use v1beta20210301.Database_STATUS instead
+            description: Storage version of v1alpha1api20210301.RedisEnterprise_Database_STATUS Deprecated version of RedisEnterprise_Database_STATUS. Use v1beta20210301.RedisEnterprise_Database_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -439,7 +427,7 @@ spec:
     name: v1beta20210301
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-03-01/Microsoft.Cache.Enterprise.json#/resourceDefinitions/redisEnterprise_databases'
+        description: 'Generator information: - Generated from: /redisenterprise/resource-manager/Microsoft.Cache/stable/2021-03-01/redisenterprise.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -467,7 +455,7 @@ spec:
                 - OSSCluster
                 type: string
               evictionPolicy:
-                description: 'EvictionPolicy: Redis eviction policy - default is VolatileLRU.'
+                description: 'EvictionPolicy: Redis eviction policy - default is VolatileLRU'
                 enum:
                 - AllKeysLFU
                 - AllKeysLRU
@@ -478,13 +466,10 @@ spec:
                 - VolatileRandom
                 - VolatileTTL
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               modules:
                 description: 'Modules: Optional set of redis modules to enable in this database - modules can only be added at creation time.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2021-03-01/Microsoft.Cache.Enterprise.json#/definitions/Module'
+                  description: Specifies configuration of a redis module
                   properties:
                     args:
                       description: "Args: Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'."
@@ -506,7 +491,7 @@ spec:
                 - name
                 type: object
               persistence:
-                description: 'Persistence: Persistence-related configuration for the RedisEnterprise database'
+                description: 'Persistence: Persistence settings'
                 properties:
                   aofEnabled:
                     description: 'AofEnabled: Sets whether AOF is enabled.'
@@ -531,11 +516,6 @@ spec:
               port:
                 description: 'Port: TCP port of the database endpoint. Specified at create time. Defaults to an available port.'
                 type: integer
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - owner
             type: object
@@ -591,6 +571,7 @@ spec:
               modules:
                 description: 'Modules: Optional set of redis modules to enable in this database - modules can only be added at creation time.'
                 items:
+                  description: Specifies configuration of a redis module
                   properties:
                     args:
                       description: "Args: Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'."
@@ -656,7 +637,7 @@ spec:
     name: v1beta20210301storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210301.RedisEnterpriseDatabase Generated from: https://schema.management.azure.com/schemas/2021-03-01/Microsoft.Cache.Enterprise.json#/resourceDefinitions/redisEnterprise_databases'
+        description: 'Storage version of v1beta20210301.RedisEnterpriseDatabase Generator information: - Generated from: /redisenterprise/resource-manager/Microsoft.Cache/stable/2021-03-01/redisenterprise.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redisEnterprise/{clusterName}/databases/{databaseName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -683,11 +664,9 @@ spec:
                 type: string
               evictionPolicy:
                 type: string
-              location:
-                type: string
               modules:
                 items:
-                  description: 'Storage version of v1beta20210301.Module Generated from: https://schema.management.azure.com/schemas/2021-03-01/Microsoft.Cache.Enterprise.json#/definitions/Module'
+                  description: Storage version of v1beta20210301.Module Specifies configuration of a redis module
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -712,7 +691,7 @@ spec:
                 - name
                 type: object
               persistence:
-                description: 'Storage version of v1beta20210301.Persistence Generated from: https://schema.management.azure.com/schemas/2021-03-01/Microsoft.Cache.Enterprise.json#/definitions/Persistence'
+                description: Storage version of v1beta20210301.Persistence Persistence-related configuration for the RedisEnterprise database
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -730,15 +709,11 @@ spec:
                 type: object
               port:
                 type: integer
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210301.Database_STATUS
+            description: Storage version of v1beta20210301.RedisEnterprise_Database_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -789,7 +764,7 @@ spec:
                 type: string
               modules:
                 items:
-                  description: Storage version of v1beta20210301.Module_STATUS
+                  description: Storage version of v1beta20210301.Module_STATUS Specifies configuration of a redis module
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -807,7 +782,7 @@ spec:
               name:
                 type: string
               persistence:
-                description: Storage version of v1beta20210301.Persistence_STATUS
+                description: Storage version of v1beta20210301.Persistence_STATUS Persistence-related configuration for the RedisEnterprise database
                 properties:
                   $propertyBag:
                     additionalProperties:

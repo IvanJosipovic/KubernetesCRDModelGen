@@ -79,8 +79,6 @@ spec:
                             description: Name is the Kubernetes name of the resource.
                             type: string
                         type: object
-                    required:
-                    - reference
                     type: object
                   protectedIP:
                     type: boolean
@@ -100,8 +98,6 @@ spec:
                     type: string
                   reverseFqdn:
                     type: string
-                required:
-                - domainNameLabel
                 type: object
               extendedLocation:
                 description: Deprecated version of ExtendedLocation. Use v1beta20201101.ExtendedLocation instead
@@ -109,7 +105,7 @@ spec:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20201101.ExtendedLocation_Type instead
+                    description: Deprecated version of ExtendedLocationType. Use v1beta20201101.ExtendedLocationType instead
                     enum:
                     - EdgeZone
                     type: string
@@ -131,8 +127,50 @@ spec:
                       type: string
                   type: object
                 type: array
+              linkedPublicIPAddress:
+                description: Deprecated version of PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded instead
+                properties:
+                  reference:
+                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
               location:
                 type: string
+              natGateway:
+                description: Deprecated version of NatGatewaySpec_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.NatGatewaySpec_PublicIPAddress_SubResourceEmbedded instead
+                properties:
+                  reference:
+                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
                 properties:
@@ -143,13 +181,13 @@ spec:
                 - name
                 type: object
               publicIPAddressVersion:
-                description: Deprecated version of PublicIPAddressPropertiesFormat_PublicIPAddressVersion. Use v1beta20201101.PublicIPAddressPropertiesFormat_PublicIPAddressVersion instead
+                description: Deprecated version of IPVersion. Use v1beta20201101.IPVersion instead
                 enum:
                 - IPv4
                 - IPv6
                 type: string
               publicIPAllocationMethod:
-                description: Deprecated version of PublicIPAddressPropertiesFormat_PublicIPAllocationMethod. Use v1beta20201101.PublicIPAddressPropertiesFormat_PublicIPAllocationMethod instead
+                description: Deprecated version of IPAllocationMethod. Use v1beta20201101.IPAllocationMethod instead
                 enum:
                 - Dynamic
                 - Static
@@ -174,8 +212,27 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
+                type: object
+              servicePublicIPAddress:
+                description: Deprecated version of PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded instead
+                properties:
+                  reference:
+                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
                 type: object
               sku:
                 description: Deprecated version of PublicIPAddressSku. Use v1beta20201101.PublicIPAddressSku instead
@@ -203,10 +260,9 @@ spec:
                 type: array
             required:
             - owner
-            - publicIPAllocationMethod
             type: object
           status:
-            description: Deprecated version of PublicIPAddress_STATUS_PublicIPAddresses_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_STATUS_PublicIPAddresses_SubResourceEmbedded instead
+            description: Deprecated version of PublicIPAddress_STATUS_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_STATUS_PublicIPAddress_SubResourceEmbedded instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -286,28 +342,10 @@ spec:
               ipAddress:
                 type: string
               ipConfiguration:
-                description: Deprecated version of IPConfiguration_STATUS_PublicIPAddresses_SubResourceEmbedded. Use v1beta20201101.IPConfiguration_STATUS_PublicIPAddresses_SubResourceEmbedded instead
+                description: Deprecated version of IPConfiguration_STATUS_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.IPConfiguration_STATUS_PublicIPAddress_SubResourceEmbedded instead
                 properties:
-                  etag:
-                    type: string
                   id:
                     type: string
-                  name:
-                    type: string
-                  privateIPAddress:
-                    type: string
-                  privateIPAllocationMethod:
-                    description: Deprecated version of IPAllocationMethod_STATUS. Use v1beta20201101.IPAllocationMethod_STATUS instead
-                    type: string
-                  provisioningState:
-                    description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
-                    type: string
-                  subnet:
-                    description: Deprecated version of Subnet_STATUS_PublicIPAddresses_SubResourceEmbedded. Use v1beta20201101.Subnet_STATUS_PublicIPAddresses_SubResourceEmbedded instead
-                    properties:
-                      id:
-                        type: string
-                    type: object
                 type: object
               ipTags:
                 items:
@@ -327,21 +365,10 @@ spec:
               name:
                 type: string
               natGateway:
-                description: Deprecated version of NatGateway_STATUS_PublicIPAddresses_SubResourceEmbedded. Use v1beta20201101.NatGateway_STATUS_PublicIPAddresses_SubResourceEmbedded instead
+                description: Deprecated version of NatGateway_STATUS_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.NatGateway_STATUS_PublicIPAddress_SubResourceEmbedded instead
                 properties:
                   id:
                     type: string
-                  sku:
-                    description: Deprecated version of NatGatewaySku_STATUS. Use v1beta20201101.NatGatewaySku_STATUS instead
-                    properties:
-                      name:
-                        description: Deprecated version of NatGatewaySku_Name_STATUS. Use v1beta20201101.NatGatewaySku_Name_STATUS instead
-                        type: string
-                    type: object
-                  zones:
-                    items:
-                      type: string
-                    type: array
                 type: object
               provisioningState:
                 description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
@@ -413,7 +440,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1alpha1api20201101.PublicIPAddresses_Spec
+            description: Storage version of v1alpha1api20201101.PublicIPAddress_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -456,8 +483,6 @@ spec:
                             description: Name is the Kubernetes name of the resource.
                             type: string
                         type: object
-                    required:
-                    - reference
                     type: object
                   protectedIP:
                     type: boolean
@@ -511,8 +536,60 @@ spec:
                       type: string
                   type: object
                 type: array
+              linkedPublicIPAddress:
+                description: Storage version of v1alpha1api20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded Deprecated version of PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  reference:
+                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
               location:
                 type: string
+              natGateway:
+                description: Storage version of v1alpha1api20201101.NatGatewaySpec_PublicIPAddress_SubResourceEmbedded Deprecated version of NatGatewaySpec_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.NatGatewaySpec_PublicIPAddress_SubResourceEmbedded instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  reference:
+                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
               originalVersion:
                 type: string
               owner:
@@ -553,8 +630,32 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
+                type: object
+              servicePublicIPAddress:
+                description: Storage version of v1alpha1api20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded Deprecated version of PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  reference:
+                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
                 type: object
               sku:
                 description: Storage version of v1alpha1api20201101.PublicIPAddressSku Deprecated version of PublicIPAddressSku. Use v1beta20201101.PublicIPAddressSku instead
@@ -581,7 +682,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201101.PublicIPAddress_STATUS_PublicIPAddresses_SubResourceEmbedded Deprecated version of PublicIPAddress_STATUS_PublicIPAddresses_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_STATUS_PublicIPAddresses_SubResourceEmbedded instead
+            description: Storage version of v1alpha1api20201101.PublicIPAddress_STATUS_PublicIPAddress_SubResourceEmbedded Deprecated version of PublicIPAddress_STATUS_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_STATUS_PublicIPAddress_SubResourceEmbedded instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -683,36 +784,15 @@ spec:
               ipAddress:
                 type: string
               ipConfiguration:
-                description: Storage version of v1alpha1api20201101.IPConfiguration_STATUS_PublicIPAddresses_SubResourceEmbedded Deprecated version of IPConfiguration_STATUS_PublicIPAddresses_SubResourceEmbedded. Use v1beta20201101.IPConfiguration_STATUS_PublicIPAddresses_SubResourceEmbedded instead
+                description: Storage version of v1alpha1api20201101.IPConfiguration_STATUS_PublicIPAddress_SubResourceEmbedded Deprecated version of IPConfiguration_STATUS_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.IPConfiguration_STATUS_PublicIPAddress_SubResourceEmbedded instead
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  etag:
-                    type: string
                   id:
                     type: string
-                  name:
-                    type: string
-                  privateIPAddress:
-                    type: string
-                  privateIPAllocationMethod:
-                    type: string
-                  provisioningState:
-                    type: string
-                  subnet:
-                    description: Storage version of v1alpha1api20201101.Subnet_STATUS_PublicIPAddresses_SubResourceEmbedded Deprecated version of Subnet_STATUS_PublicIPAddresses_SubResourceEmbedded. Use v1beta20201101.Subnet_STATUS_PublicIPAddresses_SubResourceEmbedded instead
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      id:
-                        type: string
-                    type: object
                 type: object
               ipTags:
                 items:
@@ -736,7 +816,7 @@ spec:
               name:
                 type: string
               natGateway:
-                description: Storage version of v1alpha1api20201101.NatGateway_STATUS_PublicIPAddresses_SubResourceEmbedded Deprecated version of NatGateway_STATUS_PublicIPAddresses_SubResourceEmbedded. Use v1beta20201101.NatGateway_STATUS_PublicIPAddresses_SubResourceEmbedded instead
+                description: Storage version of v1alpha1api20201101.NatGateway_STATUS_PublicIPAddress_SubResourceEmbedded Deprecated version of NatGateway_STATUS_PublicIPAddress_SubResourceEmbedded. Use v1beta20201101.NatGateway_STATUS_PublicIPAddress_SubResourceEmbedded instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -745,21 +825,6 @@ spec:
                     type: object
                   id:
                     type: string
-                  sku:
-                    description: Storage version of v1alpha1api20201101.NatGatewaySku_STATUS Deprecated version of NatGatewaySku_STATUS. Use v1beta20201101.NatGatewaySku_STATUS instead
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      name:
-                        type: string
-                    type: object
-                  zones:
-                    items:
-                      type: string
-                    type: array
                 type: object
               provisioningState:
                 type: string
@@ -825,7 +890,7 @@ spec:
     name: v1beta20201101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/publicIPAddresses'
+        description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/publicIpAddress.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -863,8 +928,6 @@ spec:
                             description: Name is the Kubernetes name of the resource.
                             type: string
                         type: object
-                    required:
-                    - reference
                     type: object
                   protectedIP:
                     description: 'ProtectedIP: Enables DDoS protection on the public IP.'
@@ -888,8 +951,6 @@ spec:
                   reverseFqdn:
                     description: 'ReverseFqdn: The reverse FQDN. A user-visible, fully qualified domain name that resolves to this public IP address. If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN.'
                     type: string
-                required:
-                - domainNameLabel
                 type: object
               extendedLocation:
                 description: 'ExtendedLocation: The extended location of the public ip address.'
@@ -915,7 +976,7 @@ spec:
               ipTags:
                 description: 'IpTags: The list of tags associated with the public IP address.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/IpTag'
+                  description: Contains the IpTag associated with the object.
                   properties:
                     ipTagType:
                       description: 'IpTagType: The IP tag type. Example: FirstPartyUsage.'
@@ -925,9 +986,51 @@ spec:
                       type: string
                   type: object
                 type: array
+              linkedPublicIPAddress:
+                description: 'LinkedPublicIPAddress: The linked public IP address of the public IP address resource.'
+                properties:
+                  reference:
+                    description: 'Reference: Resource ID.'
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource location.'
                 type: string
+              natGateway:
+                description: 'NatGateway: The NatGateway for the Public IP address.'
+                properties:
+                  reference:
+                    description: 'Reference: Resource ID.'
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
                 properties:
@@ -969,8 +1072,27 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
-                required:
-                - reference
+                type: object
+              servicePublicIPAddress:
+                description: 'ServicePublicIPAddress: The service public IP address of the public IP address resource.'
+                properties:
+                  reference:
+                    description: 'Reference: Resource ID.'
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
                 type: object
               sku:
                 description: 'Sku: The public IP address SKU.'
@@ -991,7 +1113,7 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
               zones:
                 description: 'Zones: A list of availability zones denoting the IP allocated for the resource needs to come from.'
@@ -1000,9 +1122,9 @@ spec:
                 type: array
             required:
             - owner
-            - publicIPAllocationMethod
             type: object
           status:
+            description: Public IP address resource.
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -1094,35 +1216,14 @@ spec:
               ipConfiguration:
                 description: 'IpConfiguration: The IP configuration associated with the public IP address.'
                 properties:
-                  etag:
-                    description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
-                    type: string
                   id:
                     description: 'Id: Resource ID.'
                     type: string
-                  name:
-                    description: 'Name: The name of the resource that is unique within a resource group. This name can be used to access the resource.'
-                    type: string
-                  privateIPAddress:
-                    description: 'PrivateIPAddress: The private IP address of the IP configuration.'
-                    type: string
-                  privateIPAllocationMethod:
-                    description: 'PrivateIPAllocationMethod: The private IP address allocation method.'
-                    type: string
-                  provisioningState:
-                    description: 'ProvisioningState: The provisioning state of the IP configuration resource.'
-                    type: string
-                  subnet:
-                    description: 'Subnet: The reference to the subnet resource.'
-                    properties:
-                      id:
-                        description: 'Id: Resource ID.'
-                        type: string
-                    type: object
                 type: object
               ipTags:
                 description: 'IpTags: The list of tags associated with the public IP address.'
                 items:
+                  description: Contains the IpTag associated with the object.
                   properties:
                     ipTagType:
                       description: 'IpTagType: The IP tag type. Example: FirstPartyUsage.'
@@ -1147,18 +1248,6 @@ spec:
                   id:
                     description: 'Id: Resource ID.'
                     type: string
-                  sku:
-                    description: 'Sku: The nat gateway SKU.'
-                    properties:
-                      name:
-                        description: 'Name: Name of Nat Gateway SKU.'
-                        type: string
-                    type: object
-                  zones:
-                    description: 'Zones: A list of availability zones denoting the zone in which Nat Gateway should be deployed.'
-                    items:
-                      type: string
-                    type: array
                 type: object
               provisioningState:
                 description: 'ProvisioningState: The provisioning state of the public IP address resource.'
@@ -1224,7 +1313,7 @@ spec:
     name: v1beta20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201101.PublicIPAddress Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/publicIPAddresses'
+        description: 'Storage version of v1beta20201101.PublicIPAddress Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/publicIpAddress.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1235,7 +1324,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20201101.PublicIPAddresses_Spec
+            description: Storage version of v1beta20201101.PublicIPAddress_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1246,7 +1335,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               ddosSettings:
-                description: 'Storage version of v1beta20201101.DdosSettings Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/DdosSettings'
+                description: Storage version of v1beta20201101.DdosSettings Contains the DDoS protection settings of the public IP.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1254,7 +1343,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   ddosCustomPolicy:
-                    description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                    description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1278,8 +1367,6 @@ spec:
                             description: Name is the Kubernetes name of the resource.
                             type: string
                         type: object
-                    required:
-                    - reference
                     type: object
                   protectedIP:
                     type: boolean
@@ -1287,7 +1374,7 @@ spec:
                     type: string
                 type: object
               dnsSettings:
-                description: 'Storage version of v1beta20201101.PublicIPAddressDnsSettings Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/PublicIPAddressDnsSettings'
+                description: Storage version of v1beta20201101.PublicIPAddressDnsSettings Contains FQDN of the DNS record associated with the public IP address.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1302,7 +1389,7 @@ spec:
                     type: string
                 type: object
               extendedLocation:
-                description: 'Storage version of v1beta20201101.ExtendedLocation Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/ExtendedLocation'
+                description: Storage version of v1beta20201101.ExtendedLocation ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1320,7 +1407,7 @@ spec:
                 type: string
               ipTags:
                 items:
-                  description: 'Storage version of v1beta20201101.IpTag Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/IpTag'
+                  description: Storage version of v1beta20201101.IpTag Contains the IpTag associated with the object.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1333,25 +1420,8 @@ spec:
                       type: string
                   type: object
                 type: array
-              location:
-                type: string
-              originalVersion:
-                type: string
-              owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
-                properties:
-                  name:
-                    description: This is the name of the Kubernetes resource to reference.
-                    type: string
-                required:
-                - name
-                type: object
-              publicIPAddressVersion:
-                type: string
-              publicIPAllocationMethod:
-                type: string
-              publicIPPrefix:
-                description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+              linkedPublicIPAddress:
+                description: Storage version of v1beta20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded Public IP address resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1375,11 +1445,104 @@ spec:
                         description: Name is the Kubernetes name of the resource.
                         type: string
                     type: object
+                type: object
+              location:
+                type: string
+              natGateway:
+                description: Storage version of v1beta20201101.NatGatewaySpec_PublicIPAddress_SubResourceEmbedded Nat Gateway resource.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  reference:
+                    description: 'Reference: Resource ID.'
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
+              originalVersion:
+                type: string
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
                 required:
-                - reference
+                - name
+                type: object
+              publicIPAddressVersion:
+                type: string
+              publicIPAllocationMethod:
+                type: string
+              publicIPPrefix:
+                description: Storage version of v1beta20201101.SubResource Reference to another subresource.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  reference:
+                    description: 'Reference: Resource ID.'
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
+              servicePublicIPAddress:
+                description: Storage version of v1beta20201101.PublicIPAddressSpec_PublicIPAddress_SubResourceEmbedded Public IP address resource.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  reference:
+                    description: 'Reference: Resource ID.'
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
                 type: object
               sku:
-                description: 'Storage version of v1beta20201101.PublicIPAddressSku Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/PublicIPAddressSku'
+                description: Storage version of v1beta20201101.PublicIPAddressSku SKU of a public IP address.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1403,7 +1566,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.PublicIPAddress_STATUS_PublicIPAddresses_SubResourceEmbedded
+            description: Storage version of v1beta20201101.PublicIPAddress_STATUS_PublicIPAddress_SubResourceEmbedded Public IP address resource.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1445,7 +1608,7 @@ spec:
                   type: object
                 type: array
               ddosSettings:
-                description: Storage version of v1beta20201101.DdosSettings_STATUS
+                description: Storage version of v1beta20201101.DdosSettings_STATUS Contains the DDoS protection settings of the public IP.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1453,7 +1616,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   ddosCustomPolicy:
-                    description: Storage version of v1beta20201101.SubResource_STATUS
+                    description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1469,7 +1632,7 @@ spec:
                     type: string
                 type: object
               dnsSettings:
-                description: Storage version of v1beta20201101.PublicIPAddressDnsSettings_STATUS
+                description: Storage version of v1beta20201101.PublicIPAddressDnsSettings_STATUS Contains FQDN of the DNS record associated with the public IP address.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1486,7 +1649,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1beta20201101.ExtendedLocation_STATUS
+                description: Storage version of v1beta20201101.ExtendedLocation_STATUS ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1505,40 +1668,19 @@ spec:
               ipAddress:
                 type: string
               ipConfiguration:
-                description: Storage version of v1beta20201101.IPConfiguration_STATUS_PublicIPAddresses_SubResourceEmbedded
+                description: Storage version of v1beta20201101.IPConfiguration_STATUS_PublicIPAddress_SubResourceEmbedded IP configuration.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  etag:
-                    type: string
                   id:
                     type: string
-                  name:
-                    type: string
-                  privateIPAddress:
-                    type: string
-                  privateIPAllocationMethod:
-                    type: string
-                  provisioningState:
-                    type: string
-                  subnet:
-                    description: Storage version of v1beta20201101.Subnet_STATUS_PublicIPAddresses_SubResourceEmbedded
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      id:
-                        type: string
-                    type: object
                 type: object
               ipTags:
                 items:
-                  description: Storage version of v1beta20201101.IpTag_STATUS
+                  description: Storage version of v1beta20201101.IpTag_STATUS Contains the IpTag associated with the object.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1558,7 +1700,7 @@ spec:
               name:
                 type: string
               natGateway:
-                description: Storage version of v1beta20201101.NatGateway_STATUS_PublicIPAddresses_SubResourceEmbedded
+                description: Storage version of v1beta20201101.NatGateway_STATUS_PublicIPAddress_SubResourceEmbedded Nat Gateway resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1567,21 +1709,6 @@ spec:
                     type: object
                   id:
                     type: string
-                  sku:
-                    description: Storage version of v1beta20201101.NatGatewaySku_STATUS
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      name:
-                        type: string
-                    type: object
-                  zones:
-                    items:
-                      type: string
-                    type: array
                 type: object
               provisioningState:
                 type: string
@@ -1590,7 +1717,7 @@ spec:
               publicIPAllocationMethod:
                 type: string
               publicIPPrefix:
-                description: Storage version of v1beta20201101.SubResource_STATUS
+                description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1603,7 +1730,7 @@ spec:
               resourceGuid:
                 type: string
               sku:
-                description: Storage version of v1beta20201101.PublicIPAddressSku_STATUS
+                description: Storage version of v1beta20201101.PublicIPAddressSku_STATUS SKU of a public IP address.
                 properties:
                   $propertyBag:
                     additionalProperties:

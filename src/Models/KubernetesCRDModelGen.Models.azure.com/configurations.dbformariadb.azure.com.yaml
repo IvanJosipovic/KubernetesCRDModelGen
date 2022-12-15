@@ -41,7 +41,7 @@ spec:
     name: v1beta20180601
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/resourceDefinitions/servers_configurations'
+        description: 'Generator information: - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}/configurations/{configurationName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -56,9 +56,6 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a dbformariadb.azure.com/Server resource'
                 properties:
@@ -71,11 +68,6 @@ spec:
               source:
                 description: 'Source: Source of the configuration.'
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
               value:
                 description: 'Value: Value of the configuration.'
                 type: string
@@ -168,7 +160,7 @@ spec:
     name: v1beta20180601storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20180601.Configuration Generated from: https://schema.management.azure.com/schemas/2018-06-01/Microsoft.DBforMariaDB.json#/resourceDefinitions/servers_configurations'
+        description: 'Storage version of v1beta20180601.Configuration Generator information: - Generated from: /mariadb/resource-manager/Microsoft.DBforMariaDB/stable/2018-06-01/mariadb.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMariaDB/servers/{serverName}/configurations/{configurationName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -189,8 +181,6 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -204,17 +194,13 @@ spec:
                 type: object
               source:
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
               value:
                 type: string
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20180601.Configuration_STATUS
+            description: Storage version of v1beta20180601.Servers_Configuration_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

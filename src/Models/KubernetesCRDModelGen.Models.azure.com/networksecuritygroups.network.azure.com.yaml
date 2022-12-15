@@ -114,7 +114,7 @@ spec:
                 type: array
               defaultSecurityRules:
                 items:
-                  description: Deprecated version of SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded. Use v1beta20201101.SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded instead
+                  description: Deprecated version of SecurityRule_STATUS. Use v1beta20201101.SecurityRule_STATUS instead
                   properties:
                     id:
                       type: string
@@ -124,7 +124,7 @@ spec:
                 type: string
               flowLogs:
                 items:
-                  description: Deprecated version of FlowLog_STATUS_SubResourceEmbedded. Use v1beta20201101.FlowLog_STATUS_SubResourceEmbedded instead
+                  description: Deprecated version of FlowLog_STATUS. Use v1beta20201101.FlowLog_STATUS instead
                   properties:
                     id:
                       type: string
@@ -140,15 +140,6 @@ spec:
                 items:
                   description: Deprecated version of NetworkInterface_STATUS_NetworkSecurityGroup_SubResourceEmbedded. Use v1beta20201101.NetworkInterface_STATUS_NetworkSecurityGroup_SubResourceEmbedded instead
                   properties:
-                    extendedLocation:
-                      description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
-                      properties:
-                        name:
-                          type: string
-                        type:
-                          description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
-                          type: string
-                      type: object
                     id:
                       type: string
                   type: object
@@ -160,7 +151,7 @@ spec:
                 type: string
               securityRules:
                 items:
-                  description: Deprecated version of SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded. Use v1beta20201101.SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded instead
+                  description: Deprecated version of SecurityRule_STATUS. Use v1beta20201101.SecurityRule_STATUS instead
                   properties:
                     id:
                       type: string
@@ -287,7 +278,7 @@ spec:
                 type: array
               defaultSecurityRules:
                 items:
-                  description: Storage version of v1alpha1api20201101.SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded Deprecated version of SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded. Use v1beta20201101.SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20201101.SecurityRule_STATUS Deprecated version of SecurityRule_STATUS. Use v1beta20201101.SecurityRule_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -302,7 +293,7 @@ spec:
                 type: string
               flowLogs:
                 items:
-                  description: Storage version of v1alpha1api20201101.FlowLog_STATUS_SubResourceEmbedded Deprecated version of FlowLog_STATUS_SubResourceEmbedded. Use v1beta20201101.FlowLog_STATUS_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20201101.FlowLog_STATUS Deprecated version of FlowLog_STATUS. Use v1beta20201101.FlowLog_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -328,19 +319,6 @@ spec:
                         type: string
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
-                    extendedLocation:
-                      description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        name:
-                          type: string
-                        type:
-                          type: string
-                      type: object
                     id:
                       type: string
                   type: object
@@ -351,7 +329,7 @@ spec:
                 type: string
               securityRules:
                 items:
-                  description: Storage version of v1alpha1api20201101.SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded Deprecated version of SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded. Use v1beta20201101.SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20201101.SecurityRule_STATUS Deprecated version of SecurityRule_STATUS. Use v1beta20201101.SecurityRule_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -403,7 +381,7 @@ spec:
     name: v1beta20201101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/networkSecurityGroups'
+        description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkSecurityGroup.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -419,7 +397,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource location.'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
@@ -433,12 +411,13 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
             required:
             - owner
             type: object
           status:
+            description: NetworkSecurityGroup resource.
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -478,6 +457,7 @@ spec:
               defaultSecurityRules:
                 description: 'DefaultSecurityRules: The default security rules of network security group.'
                 items:
+                  description: Network security rule.
                   properties:
                     id:
                       description: 'Id: Resource ID.'
@@ -490,6 +470,7 @@ spec:
               flowLogs:
                 description: 'FlowLogs: A collection of references to flow log resources.'
                 items:
+                  description: A flow log resource.
                   properties:
                     id:
                       description: 'Id: Resource ID.'
@@ -508,17 +489,8 @@ spec:
               networkInterfaces:
                 description: 'NetworkInterfaces: A collection of references to network interfaces.'
                 items:
+                  description: A network interface in a resource group.
                   properties:
-                    extendedLocation:
-                      description: 'ExtendedLocation: The extended location of the network interface.'
-                      properties:
-                        name:
-                          description: 'Name: The name of the extended location.'
-                          type: string
-                        type:
-                          description: 'Type: The type of the extended location.'
-                          type: string
-                      type: object
                     id:
                       description: 'Id: Resource ID.'
                       type: string
@@ -533,6 +505,7 @@ spec:
               securityRules:
                 description: 'SecurityRules: A collection of security rules of the network security group.'
                 items:
+                  description: Network security rule.
                   properties:
                     id:
                       description: 'Id: Resource ID.'
@@ -542,6 +515,7 @@ spec:
               subnets:
                 description: 'Subnets: A collection of references to subnets.'
                 items:
+                  description: Subnet in a virtual network resource.
                   properties:
                     id:
                       description: 'Id: Resource ID.'
@@ -578,7 +552,7 @@ spec:
     name: v1beta20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201101.NetworkSecurityGroup Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/networkSecurityGroups'
+        description: 'Storage version of v1beta20201101.NetworkSecurityGroup Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkSecurityGroup.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkSecurityGroups/{networkSecurityGroupName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -620,7 +594,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.NetworkSecurityGroup_STATUS_NetworkSecurityGroup_SubResourceEmbedded
+            description: Storage version of v1beta20201101.NetworkSecurityGroup_STATUS_NetworkSecurityGroup_SubResourceEmbedded NetworkSecurityGroup resource.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -663,7 +637,7 @@ spec:
                 type: array
               defaultSecurityRules:
                 items:
-                  description: Storage version of v1beta20201101.SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.SecurityRule_STATUS Network security rule.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -678,7 +652,7 @@ spec:
                 type: string
               flowLogs:
                 items:
-                  description: Storage version of v1beta20201101.FlowLog_STATUS_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.FlowLog_STATUS A flow log resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -697,25 +671,12 @@ spec:
                 type: string
               networkInterfaces:
                 items:
-                  description: Storage version of v1beta20201101.NetworkInterface_STATUS_NetworkSecurityGroup_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.NetworkInterface_STATUS_NetworkSecurityGroup_SubResourceEmbedded A network interface in a resource group.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    extendedLocation:
-                      description: Storage version of v1beta20201101.ExtendedLocation_STATUS
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        name:
-                          type: string
-                        type:
-                          type: string
                       type: object
                     id:
                       type: string
@@ -727,7 +688,7 @@ spec:
                 type: string
               securityRules:
                 items:
-                  description: Storage version of v1beta20201101.SecurityRule_STATUS_NetworkSecurityGroup_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.SecurityRule_STATUS Network security rule.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -740,7 +701,7 @@ spec:
                 type: array
               subnets:
                 items:
-                  description: Storage version of v1beta20201101.Subnet_STATUS_NetworkSecurityGroup_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.Subnet_STATUS_NetworkSecurityGroup_SubResourceEmbedded Subnet in a virtual network resource.
                   properties:
                     $propertyBag:
                       additionalProperties:

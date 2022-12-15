@@ -58,8 +58,6 @@ spec:
                 type: string
               endIP:
                 type: string
-              location:
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource'
                 properties:
@@ -71,17 +69,13 @@ spec:
                 type: object
               startIP:
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - endIP
             - owner
             - startIP
             type: object
           status:
-            description: Deprecated version of RedisFirewallRule_STATUS. Use v1beta20201201.RedisFirewallRule_STATUS instead
+            description: Deprecated version of Redis_FirewallRule_STATUS. Use v1beta20201201.Redis_FirewallRule_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -173,8 +167,6 @@ spec:
                 type: string
               endIP:
                 type: string
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -188,15 +180,11 @@ spec:
                 type: object
               startIP:
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20201201.RedisFirewallRule_STATUS Deprecated version of RedisFirewallRule_STATUS. Use v1beta20201201.RedisFirewallRule_STATUS instead
+            description: Storage version of v1alpha1api20201201.Redis_FirewallRule_STATUS Deprecated version of Redis_FirewallRule_STATUS. Use v1beta20201201.Redis_FirewallRule_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -269,7 +257,7 @@ spec:
     name: v1beta20201201
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-12-01/Microsoft.Cache.json#/resourceDefinitions/redis_firewallRules'
+        description: 'Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{cacheName}/firewallRules/{ruleName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -287,9 +275,6 @@ spec:
               endIP:
                 description: 'EndIP: highest IP address included in the range'
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cache.azure.com/Redis resource'
                 properties:
@@ -302,11 +287,6 @@ spec:
               startIP:
                 description: 'StartIP: lowest IP address included in the range'
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - endIP
             - owner
@@ -386,7 +366,7 @@ spec:
     name: v1beta20201201storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201201.RedisFirewallRule Generated from: https://schema.management.azure.com/schemas/2020-12-01/Microsoft.Cache.json#/resourceDefinitions/redis_firewallRules'
+        description: 'Storage version of v1beta20201201.RedisFirewallRule Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2020-12-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{cacheName}/firewallRules/{ruleName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -409,8 +389,6 @@ spec:
                 type: string
               endIP:
                 type: string
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -424,15 +402,11 @@ spec:
                 type: object
               startIP:
                 type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201201.RedisFirewallRule_STATUS
+            description: Storage version of v1beta20201201.Redis_FirewallRule_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
