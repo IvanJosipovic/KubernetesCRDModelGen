@@ -22,7 +22,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="KubernetesClient.Models" Version="9.0.38" />
+        <PackageReference Include="KubernetesClient.Models" Version="9.1.3" />
         <ProjectReference Include="..\..\KubernetesCRDModelGen.Models\KubernetesCRDModelGen.Models.csproj" />
         <ProjectReference Include="..\..\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <ProjectReference Include="..\..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />

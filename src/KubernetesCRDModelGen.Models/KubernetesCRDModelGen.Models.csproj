@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KubernetesClient.Models" Version="9.0.38" />
+    <PackageReference Include="KubernetesClient.Models" Version="9.1.3" />
   </ItemGroup>
 
 </Project>
