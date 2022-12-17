@@ -41,7 +41,7 @@ spec:
     name: v1beta20210101preview
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces_topics_subscriptions'
+        description: 'Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/subscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -82,9 +82,6 @@ spec:
               forwardTo:
                 description: 'ForwardTo: Queue/Topic name to forward the messages'
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               lockDuration:
                 description: 'LockDuration: ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.'
                 type: string
@@ -103,11 +100,6 @@ spec:
               requiresSession:
                 description: 'RequiresSession: Value indicating if a subscription supports the concept of sessions.'
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - owner
             type: object
@@ -268,7 +260,7 @@ spec:
     name: v1beta20210101previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210101preview.NamespacesTopicsSubscription Generated from: https://schema.management.azure.com/schemas/2021-01-01-preview/Microsoft.ServiceBus.json#/resourceDefinitions/namespaces_topics_subscriptions'
+        description: 'Storage version of v1beta20210101preview.NamespacesTopicsSubscription Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/subscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -307,8 +299,6 @@ spec:
                 type: string
               forwardTo:
                 type: string
-              location:
-                type: string
               lockDuration:
                 type: string
               maxDeliveryCount:
@@ -326,15 +316,11 @@ spec:
                 type: object
               requiresSession:
                 type: boolean
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210101preview.SBSubscription_STATUS
+            description: Storage version of v1beta20210101preview.Namespaces_Topics_Subscription_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -380,7 +366,7 @@ spec:
                   type: object
                 type: array
               countDetails:
-                description: Storage version of v1beta20210101preview.MessageCountDetails_STATUS
+                description: Storage version of v1beta20210101preview.MessageCountDetails_STATUS Message Count Details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -429,7 +415,7 @@ spec:
               status:
                 type: string
               systemData:
-                description: Storage version of v1beta20210101preview.SystemData_STATUS
+                description: Storage version of v1beta20210101preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

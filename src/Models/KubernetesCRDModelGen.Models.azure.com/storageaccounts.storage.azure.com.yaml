@@ -228,7 +228,7 @@ spec:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20210401.ExtendedLocation_Type instead
+                    description: Deprecated version of ExtendedLocationType. Use v1beta20210401.ExtendedLocationType instead
                     enum:
                     - EdgeZone
                     type: string
@@ -535,7 +535,7 @@ spec:
                 description: Deprecated version of Sku. Use v1beta20210401.Sku instead
                 properties:
                   name:
-                    description: Deprecated version of Sku_Name. Use v1beta20210401.Sku_Name instead
+                    description: Deprecated version of SkuName. Use v1beta20210401.SkuName instead
                     enum:
                     - Premium_LRS
                     - Premium_ZRS
@@ -547,7 +547,7 @@ spec:
                     - Standard_ZRS
                     type: string
                   tier:
-                    description: Deprecated version of Sku_Tier. Use v1beta20210401.Sku_Tier instead
+                    description: Deprecated version of Tier. Use v1beta20210401.Tier instead
                     enum:
                     - Premium
                     - Standard
@@ -563,6 +563,7 @@ spec:
                 type: object
             required:
             - kind
+            - location
             - owner
             - sku
             type: object
@@ -924,7 +925,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210401.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210401.PrivateEndpointConnection_STATUS instead
                   properties:
                     id:
                       type: string
@@ -2037,7 +2038,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20210401.PrivateEndpointConnection_STATUS_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210401.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20210401.PrivateEndpointConnection_STATUS Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210401.PrivateEndpointConnection_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2186,7 +2187,7 @@ spec:
     name: v1beta20210401
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts'
+        description: 'Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -2214,10 +2215,10 @@ spec:
                 description: 'AllowSharedKeyAccess: Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.'
                 type: boolean
               azureFilesIdentityBasedAuthentication:
-                description: 'AzureFilesIdentityBasedAuthentication: Settings for Azure Files identity based authentication.'
+                description: 'AzureFilesIdentityBasedAuthentication: Provides the identity based authentication settings for Azure Files.'
                 properties:
                   activeDirectoryProperties:
-                    description: 'ActiveDirectoryProperties: Settings properties for Active Directory (AD).'
+                    description: 'ActiveDirectoryProperties: Required if choose AD.'
                     properties:
                       azureStorageSid:
                         description: 'AzureStorageSid: Specifies the security identifier (SID) for Azure Storage.'
@@ -2270,7 +2271,7 @@ spec:
                 minLength: 3
                 type: string
               customDomain:
-                description: 'CustomDomain: The custom domain assigned to this storage account. This can be set via Update.'
+                description: 'CustomDomain: User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.'
                 properties:
                   name:
                     description: 'Name: Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.'
@@ -2282,10 +2283,10 @@ spec:
                 - name
                 type: object
               encryption:
-                description: 'Encryption: The encryption settings on the storage account.'
+                description: 'Encryption: Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.'
                 properties:
                   identity:
-                    description: 'Identity: Encryption identity for the storage account.'
+                    description: 'Identity: The identity to be used with service-side encryption at rest.'
                     properties:
                       userAssignedIdentityReference:
                         description: 'UserAssignedIdentityReference: Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.'
@@ -2306,13 +2307,13 @@ spec:
                         type: object
                     type: object
                   keySource:
-                    description: 'KeySource: The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault.'
+                    description: 'KeySource: The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault'
                     enum:
                     - Microsoft.Keyvault
                     - Microsoft.Storage
                     type: string
                   keyvaultproperties:
-                    description: 'Keyvaultproperties: Properties of key vault.'
+                    description: 'Keyvaultproperties: Properties provided by key vault.'
                     properties:
                       keyname:
                         description: 'Keyname: The name of KeyVault key.'
@@ -2328,10 +2329,10 @@ spec:
                     description: 'RequireInfrastructureEncryption: A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.'
                     type: boolean
                   services:
-                    description: 'Services: A list of services that support encryption.'
+                    description: 'Services: List of services which support encryption.'
                     properties:
                       blob:
-                        description: 'Blob: A service that allows server-side encryption to be used.'
+                        description: 'Blob: The encryption function of the blob storage service.'
                         properties:
                           enabled:
                             description: 'Enabled: A boolean indicating whether or not the service encrypts the data as it is stored.'
@@ -2344,7 +2345,7 @@ spec:
                             type: string
                         type: object
                       file:
-                        description: 'File: A service that allows server-side encryption to be used.'
+                        description: 'File: The encryption function of the file storage service.'
                         properties:
                           enabled:
                             description: 'Enabled: A boolean indicating whether or not the service encrypts the data as it is stored.'
@@ -2357,7 +2358,7 @@ spec:
                             type: string
                         type: object
                       queue:
-                        description: 'Queue: A service that allows server-side encryption to be used.'
+                        description: 'Queue: The encryption function of the queue storage service.'
                         properties:
                           enabled:
                             description: 'Enabled: A boolean indicating whether or not the service encrypts the data as it is stored.'
@@ -2370,7 +2371,7 @@ spec:
                             type: string
                         type: object
                       table:
-                        description: 'Table: A service that allows server-side encryption to be used.'
+                        description: 'Table: The encryption function of the table storage service.'
                         properties:
                           enabled:
                             description: 'Enabled: A boolean indicating whether or not the service encrypts the data as it is stored.'
@@ -2387,7 +2388,7 @@ spec:
                 - keySource
                 type: object
               extendedLocation:
-                description: 'ExtendedLocation: The complex type of the extended location.'
+                description: 'ExtendedLocation: Optional. Set the extended location of the resource. If not set, the storage account will be created in Azure main region. Otherwise it will be created in the specified extended location'
                 properties:
                   name:
                     description: 'Name: The name of the extended location.'
@@ -2399,7 +2400,7 @@ spec:
                     type: string
                 type: object
               identity:
-                description: 'Identity: Identity for the resource.'
+                description: 'Identity: The identity of the resource.'
                 properties:
                   type:
                     description: 'Type: The identity type.'
@@ -2472,7 +2473,7 @@ spec:
                   ipRules:
                     description: 'IpRules: Sets the IP ACL rules'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/IPRule'
+                      description: IP rule with specific IP or IP range in CIDR format.
                       properties:
                         action:
                           description: 'Action: The action of IP ACL rule.'
@@ -2489,7 +2490,7 @@ spec:
                   resourceAccessRules:
                     description: 'ResourceAccessRules: Sets the resource access rules'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ResourceAccessRule'
+                      description: Resource Access Rule.
                       properties:
                         resourceReference:
                           description: 'ResourceReference: Resource Id'
@@ -2516,7 +2517,7 @@ spec:
                   virtualNetworkRules:
                     description: 'VirtualNetworkRules: Sets the virtual network rules'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/VirtualNetworkRule'
+                      description: Virtual Network rule.
                       properties:
                         action:
                           description: 'Action: The action of virtual network rule.'
@@ -2678,7 +2679,7 @@ spec:
                 - name
                 type: object
               routingPreference:
-                description: 'RoutingPreference: Routing preference defines the type of network, either microsoft or internet routing to be used to deliver the user data, the default option is microsoft routing'
+                description: 'RoutingPreference: Maintains information about the network routing choice opted by the user for data transfer'
                 properties:
                   publishInternetEndpoints:
                     description: 'PublishInternetEndpoints: A boolean flag which indicates whether internet routing storage endpoints are to be published'
@@ -2709,9 +2710,10 @@ spec:
                 - sasExpirationPeriod
                 type: object
               sku:
-                description: 'Sku: The SKU of the storage account.'
+                description: 'Sku: Required. Gets or sets the SKU name.'
                 properties:
                   name:
+                    description: 'Name: The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.'
                     enum:
                     - Premium_LRS
                     - Premium_ZRS
@@ -2723,6 +2725,7 @@ spec:
                     - Standard_ZRS
                     type: string
                   tier:
+                    description: 'Tier: The SKU tier. This is based on the SKU name.'
                     enum:
                     - Premium
                     - Standard
@@ -2740,10 +2743,12 @@ spec:
                 type: object
             required:
             - kind
+            - location
             - owner
             - sku
             type: object
           status:
+            description: The storage account.
             properties:
               accessTier:
                 description: 'AccessTier: Required for storage accounts where kind = BlobStorage. The access tier used for billing.'
@@ -2801,6 +2806,7 @@ spec:
                       blobRanges:
                         description: 'BlobRanges: Blob ranges to restore.'
                         items:
+                          description: Blob range
                           properties:
                             endRange:
                               description: 'EndRange: Blob end range. This is exclusive. Empty means account end.'
@@ -3004,6 +3010,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
+                      description: UserAssignedIdentity for the resource.
                       properties:
                         clientId:
                           description: 'ClientId: The client ID of the identity.'
@@ -3066,6 +3073,7 @@ spec:
                   ipRules:
                     description: 'IpRules: Sets the IP ACL rules'
                     items:
+                      description: IP rule with specific IP or IP range in CIDR format.
                       properties:
                         action:
                           description: 'Action: The action of IP ACL rule.'
@@ -3078,6 +3086,7 @@ spec:
                   resourceAccessRules:
                     description: 'ResourceAccessRules: Sets the resource access rules'
                     items:
+                      description: Resource Access Rule.
                       properties:
                         resourceId:
                           description: 'ResourceId: Resource Id'
@@ -3090,6 +3099,7 @@ spec:
                   virtualNetworkRules:
                     description: 'VirtualNetworkRules: Sets the virtual network rules'
                     items:
+                      description: Virtual Network rule.
                       properties:
                         action:
                           description: 'Action: The action of virtual network rule.'
@@ -3169,6 +3179,7 @@ spec:
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: List of private endpoint connection associated with the specified storage account'
                 items:
+                  description: The Private Endpoint Connection resource.
                   properties:
                     id:
                       description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
@@ -3268,8 +3279,10 @@ spec:
                 description: 'Sku: Gets the SKU.'
                 properties:
                   name:
+                    description: 'Name: The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.'
                     type: string
                   tier:
+                    description: 'Tier: The SKU tier. This is based on the SKU name.'
                     type: string
                 type: object
               statusOfPrimary:
@@ -3311,7 +3324,7 @@ spec:
     name: v1beta20210401storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210401.StorageAccount Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/resourceDefinitions/storageAccounts'
+        description: 'Storage version of v1beta20210401.StorageAccount Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -3338,7 +3351,7 @@ spec:
               allowSharedKeyAccess:
                 type: boolean
               azureFilesIdentityBasedAuthentication:
-                description: 'Storage version of v1beta20210401.AzureFilesIdentityBasedAuthentication Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/AzureFilesIdentityBasedAuthentication'
+                description: Storage version of v1beta20210401.AzureFilesIdentityBasedAuthentication Settings for Azure Files identity based authentication.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3346,7 +3359,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   activeDirectoryProperties:
-                    description: 'Storage version of v1beta20210401.ActiveDirectoryProperties Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ActiveDirectoryProperties'
+                    description: Storage version of v1beta20210401.ActiveDirectoryProperties Settings properties for Active Directory (AD).
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3377,7 +3390,7 @@ spec:
                 minLength: 3
                 type: string
               customDomain:
-                description: 'Storage version of v1beta20210401.CustomDomain Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/CustomDomain'
+                description: Storage version of v1beta20210401.CustomDomain The custom domain assigned to this storage account. This can be set via Update.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3390,7 +3403,7 @@ spec:
                     type: boolean
                 type: object
               encryption:
-                description: 'Storage version of v1beta20210401.Encryption Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/Encryption'
+                description: Storage version of v1beta20210401.Encryption The encryption settings on the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3398,7 +3411,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   identity:
-                    description: 'Storage version of v1beta20210401.EncryptionIdentity Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/EncryptionIdentity'
+                    description: Storage version of v1beta20210401.EncryptionIdentity Encryption identity for the storage account.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3426,7 +3439,7 @@ spec:
                   keySource:
                     type: string
                   keyvaultproperties:
-                    description: 'Storage version of v1beta20210401.KeyVaultProperties Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/KeyVaultProperties'
+                    description: Storage version of v1beta20210401.KeyVaultProperties Properties of key vault.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3443,7 +3456,7 @@ spec:
                   requireInfrastructureEncryption:
                     type: boolean
                   services:
-                    description: 'Storage version of v1beta20210401.EncryptionServices Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/EncryptionServices'
+                    description: Storage version of v1beta20210401.EncryptionServices A list of services that support encryption.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3451,7 +3464,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       blob:
-                        description: 'Storage version of v1beta20210401.EncryptionService Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/EncryptionService'
+                        description: Storage version of v1beta20210401.EncryptionService A service that allows server-side encryption to be used.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3464,7 +3477,7 @@ spec:
                             type: string
                         type: object
                       file:
-                        description: 'Storage version of v1beta20210401.EncryptionService Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/EncryptionService'
+                        description: Storage version of v1beta20210401.EncryptionService A service that allows server-side encryption to be used.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3477,7 +3490,7 @@ spec:
                             type: string
                         type: object
                       queue:
-                        description: 'Storage version of v1beta20210401.EncryptionService Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/EncryptionService'
+                        description: Storage version of v1beta20210401.EncryptionService A service that allows server-side encryption to be used.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3490,7 +3503,7 @@ spec:
                             type: string
                         type: object
                       table:
-                        description: 'Storage version of v1beta20210401.EncryptionService Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/EncryptionService'
+                        description: Storage version of v1beta20210401.EncryptionService A service that allows server-side encryption to be used.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3505,7 +3518,7 @@ spec:
                     type: object
                 type: object
               extendedLocation:
-                description: 'Storage version of v1beta20210401.ExtendedLocation Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ExtendedLocation'
+                description: Storage version of v1beta20210401.ExtendedLocation The complex type of the extended location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3518,7 +3531,7 @@ spec:
                     type: string
                 type: object
               identity:
-                description: 'Storage version of v1beta20210401.Identity Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/Identity'
+                description: Storage version of v1beta20210401.Identity Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3533,7 +3546,7 @@ spec:
               isNfsV3Enabled:
                 type: boolean
               keyPolicy:
-                description: 'Storage version of v1beta20210401.KeyPolicy Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/KeyPolicy'
+                description: Storage version of v1beta20210401.KeyPolicy KeyPolicy assigned to the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3552,7 +3565,7 @@ spec:
               minimumTlsVersion:
                 type: string
               networkAcls:
-                description: 'Storage version of v1beta20210401.NetworkRuleSet Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/NetworkRuleSet'
+                description: Storage version of v1beta20210401.NetworkRuleSet Network rule set
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3565,7 +3578,7 @@ spec:
                     type: string
                   ipRules:
                     items:
-                      description: 'Storage version of v1beta20210401.IPRule Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/IPRule'
+                      description: Storage version of v1beta20210401.IPRule IP rule with specific IP or IP range in CIDR format.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3580,7 +3593,7 @@ spec:
                     type: array
                   resourceAccessRules:
                     items:
-                      description: 'Storage version of v1beta20210401.ResourceAccessRule Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/ResourceAccessRule'
+                      description: Storage version of v1beta20210401.ResourceAccessRule Resource Access Rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3610,7 +3623,7 @@ spec:
                     type: array
                   virtualNetworkRules:
                     items:
-                      description: 'Storage version of v1beta20210401.VirtualNetworkRule Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/VirtualNetworkRule'
+                      description: Storage version of v1beta20210401.VirtualNetworkRule Virtual Network rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3777,7 +3790,7 @@ spec:
                 - name
                 type: object
               routingPreference:
-                description: 'Storage version of v1beta20210401.RoutingPreference Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/RoutingPreference'
+                description: Storage version of v1beta20210401.RoutingPreference Routing preference defines the type of network, either microsoft or internet routing to be used to deliver the user data, the default option is microsoft routing
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3792,7 +3805,7 @@ spec:
                     type: string
                 type: object
               sasPolicy:
-                description: 'Storage version of v1beta20210401.SasPolicy Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/SasPolicy'
+                description: Storage version of v1beta20210401.SasPolicy SasPolicy assigned to the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3805,7 +3818,7 @@ spec:
                     type: string
                 type: object
               sku:
-                description: 'Storage version of v1beta20210401.Sku Generated from: https://schema.management.azure.com/schemas/2021-04-01/Microsoft.Storage.json#/definitions/Sku'
+                description: Storage version of v1beta20210401.Sku The SKU of the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3827,7 +3840,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401.StorageAccount_STATUS
+            description: Storage version of v1beta20210401.StorageAccount_STATUS The storage account.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -3843,7 +3856,7 @@ spec:
               allowSharedKeyAccess:
                 type: boolean
               azureFilesIdentityBasedAuthentication:
-                description: Storage version of v1beta20210401.AzureFilesIdentityBasedAuthentication_STATUS
+                description: Storage version of v1beta20210401.AzureFilesIdentityBasedAuthentication_STATUS Settings for Azure Files identity based authentication.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3851,7 +3864,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   activeDirectoryProperties:
-                    description: Storage version of v1beta20210401.ActiveDirectoryProperties_STATUS
+                    description: Storage version of v1beta20210401.ActiveDirectoryProperties_STATUS Settings properties for Active Directory (AD).
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3877,7 +3890,7 @@ spec:
                     type: string
                 type: object
               blobRestoreStatus:
-                description: Storage version of v1beta20210401.BlobRestoreStatus_STATUS
+                description: Storage version of v1beta20210401.BlobRestoreStatus_STATUS Blob restore status.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3887,7 +3900,7 @@ spec:
                   failureReason:
                     type: string
                   parameters:
-                    description: Storage version of v1beta20210401.BlobRestoreParameters_STATUS
+                    description: Storage version of v1beta20210401.BlobRestoreParameters_STATUS Blob restore parameters
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3896,7 +3909,7 @@ spec:
                         type: object
                       blobRanges:
                         items:
-                          description: Storage version of v1beta20210401.BlobRestoreRange_STATUS
+                          description: Storage version of v1beta20210401.BlobRestoreRange_STATUS Blob range
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -3954,7 +3967,7 @@ spec:
               creationTime:
                 type: string
               customDomain:
-                description: Storage version of v1beta20210401.CustomDomain_STATUS
+                description: Storage version of v1beta20210401.CustomDomain_STATUS The custom domain assigned to this storage account. This can be set via Update.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3967,7 +3980,7 @@ spec:
                     type: boolean
                 type: object
               encryption:
-                description: Storage version of v1beta20210401.Encryption_STATUS
+                description: Storage version of v1beta20210401.Encryption_STATUS The encryption settings on the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3975,7 +3988,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   identity:
-                    description: Storage version of v1beta20210401.EncryptionIdentity_STATUS
+                    description: Storage version of v1beta20210401.EncryptionIdentity_STATUS Encryption identity for the storage account.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -3988,7 +4001,7 @@ spec:
                   keySource:
                     type: string
                   keyvaultproperties:
-                    description: Storage version of v1beta20210401.KeyVaultProperties_STATUS
+                    description: Storage version of v1beta20210401.KeyVaultProperties_STATUS Properties of key vault.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -4009,7 +4022,7 @@ spec:
                   requireInfrastructureEncryption:
                     type: boolean
                   services:
-                    description: Storage version of v1beta20210401.EncryptionServices_STATUS
+                    description: Storage version of v1beta20210401.EncryptionServices_STATUS A list of services that support encryption.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -4017,7 +4030,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       blob:
-                        description: Storage version of v1beta20210401.EncryptionService_STATUS
+                        description: Storage version of v1beta20210401.EncryptionService_STATUS A service that allows server-side encryption to be used.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -4032,7 +4045,7 @@ spec:
                             type: string
                         type: object
                       file:
-                        description: Storage version of v1beta20210401.EncryptionService_STATUS
+                        description: Storage version of v1beta20210401.EncryptionService_STATUS A service that allows server-side encryption to be used.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -4047,7 +4060,7 @@ spec:
                             type: string
                         type: object
                       queue:
-                        description: Storage version of v1beta20210401.EncryptionService_STATUS
+                        description: Storage version of v1beta20210401.EncryptionService_STATUS A service that allows server-side encryption to be used.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -4062,7 +4075,7 @@ spec:
                             type: string
                         type: object
                       table:
-                        description: Storage version of v1beta20210401.EncryptionService_STATUS
+                        description: Storage version of v1beta20210401.EncryptionService_STATUS A service that allows server-side encryption to be used.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -4079,7 +4092,7 @@ spec:
                     type: object
                 type: object
               extendedLocation:
-                description: Storage version of v1beta20210401.ExtendedLocation_STATUS
+                description: Storage version of v1beta20210401.ExtendedLocation_STATUS The complex type of the extended location.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4094,7 +4107,7 @@ spec:
               failoverInProgress:
                 type: boolean
               geoReplicationStats:
-                description: Storage version of v1beta20210401.GeoReplicationStats_STATUS
+                description: Storage version of v1beta20210401.GeoReplicationStats_STATUS Statistics related to replication for storage account's Blob, Table, Queue and File services. It is only available when geo-redundant replication is enabled for the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4111,7 +4124,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210401.Identity_STATUS
+                description: Storage version of v1beta20210401.Identity_STATUS Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4126,7 +4139,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20210401.UserAssignedIdentity_STATUS
+                      description: Storage version of v1beta20210401.UserAssignedIdentity_STATUS UserAssignedIdentity for the resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4145,7 +4158,7 @@ spec:
               isNfsV3Enabled:
                 type: boolean
               keyCreationTime:
-                description: Storage version of v1beta20210401.KeyCreationTime_STATUS
+                description: Storage version of v1beta20210401.KeyCreationTime_STATUS Storage account keys creation time.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4158,7 +4171,7 @@ spec:
                     type: string
                 type: object
               keyPolicy:
-                description: Storage version of v1beta20210401.KeyPolicy_STATUS
+                description: Storage version of v1beta20210401.KeyPolicy_STATUS KeyPolicy assigned to the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4181,7 +4194,7 @@ spec:
               name:
                 type: string
               networkAcls:
-                description: Storage version of v1beta20210401.NetworkRuleSet_STATUS
+                description: Storage version of v1beta20210401.NetworkRuleSet_STATUS Network rule set
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4194,7 +4207,7 @@ spec:
                     type: string
                   ipRules:
                     items:
-                      description: Storage version of v1beta20210401.IPRule_STATUS
+                      description: Storage version of v1beta20210401.IPRule_STATUS IP rule with specific IP or IP range in CIDR format.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4209,7 +4222,7 @@ spec:
                     type: array
                   resourceAccessRules:
                     items:
-                      description: Storage version of v1beta20210401.ResourceAccessRule_STATUS
+                      description: Storage version of v1beta20210401.ResourceAccessRule_STATUS Resource Access Rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4224,7 +4237,7 @@ spec:
                     type: array
                   virtualNetworkRules:
                     items:
-                      description: Storage version of v1beta20210401.VirtualNetworkRule_STATUS
+                      description: Storage version of v1beta20210401.VirtualNetworkRule_STATUS Virtual Network rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -4241,7 +4254,7 @@ spec:
                     type: array
                 type: object
               primaryEndpoints:
-                description: Storage version of v1beta20210401.Endpoints_STATUS
+                description: Storage version of v1beta20210401.Endpoints_STATUS The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4255,7 +4268,7 @@ spec:
                   file:
                     type: string
                   internetEndpoints:
-                    description: Storage version of v1beta20210401.StorageAccountInternetEndpoints_STATUS
+                    description: Storage version of v1beta20210401.StorageAccountInternetEndpoints_STATUS The URIs that are used to perform a retrieval of a public blob, file, web or dfs object via a internet routing endpoint.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -4272,7 +4285,7 @@ spec:
                         type: string
                     type: object
                   microsoftEndpoints:
-                    description: Storage version of v1beta20210401.StorageAccountMicrosoftEndpoints_STATUS
+                    description: Storage version of v1beta20210401.StorageAccountMicrosoftEndpoints_STATUS The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object via a microsoft routing endpoint.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -4303,7 +4316,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210401.PrivateEndpointConnection_STATUS_SubResourceEmbedded
+                  description: Storage version of v1beta20210401.PrivateEndpointConnection_STATUS The Private Endpoint Connection resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -4317,7 +4330,7 @@ spec:
               provisioningState:
                 type: string
               routingPreference:
-                description: Storage version of v1beta20210401.RoutingPreference_STATUS
+                description: Storage version of v1beta20210401.RoutingPreference_STATUS Routing preference defines the type of network, either microsoft or internet routing to be used to deliver the user data, the default option is microsoft routing
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4332,7 +4345,7 @@ spec:
                     type: string
                 type: object
               sasPolicy:
-                description: Storage version of v1beta20210401.SasPolicy_STATUS
+                description: Storage version of v1beta20210401.SasPolicy_STATUS SasPolicy assigned to the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4345,7 +4358,7 @@ spec:
                     type: string
                 type: object
               secondaryEndpoints:
-                description: Storage version of v1beta20210401.Endpoints_STATUS
+                description: Storage version of v1beta20210401.Endpoints_STATUS The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -4359,7 +4372,7 @@ spec:
                   file:
                     type: string
                   internetEndpoints:
-                    description: Storage version of v1beta20210401.StorageAccountInternetEndpoints_STATUS
+                    description: Storage version of v1beta20210401.StorageAccountInternetEndpoints_STATUS The URIs that are used to perform a retrieval of a public blob, file, web or dfs object via a internet routing endpoint.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -4376,7 +4389,7 @@ spec:
                         type: string
                     type: object
                   microsoftEndpoints:
-                    description: Storage version of v1beta20210401.StorageAccountMicrosoftEndpoints_STATUS
+                    description: Storage version of v1beta20210401.StorageAccountMicrosoftEndpoints_STATUS The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object via a microsoft routing endpoint.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -4406,7 +4419,7 @@ spec:
               secondaryLocation:
                 type: string
               sku:
-                description: Storage version of v1beta20210401.Sku_STATUS
+                description: Storage version of v1beta20210401.Sku_STATUS The SKU of the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:

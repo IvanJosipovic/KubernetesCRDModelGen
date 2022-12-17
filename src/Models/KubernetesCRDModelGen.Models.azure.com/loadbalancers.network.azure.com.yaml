@@ -58,11 +58,11 @@ spec:
                 type: string
               backendAddressPools:
                 items:
-                  description: Deprecated version of LoadBalancer_Properties_BackendAddressPools_Spec. Use v1beta20201101.LoadBalancer_Properties_BackendAddressPools_Spec instead
+                  description: Deprecated version of BackendAddressPool_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.BackendAddressPool_LoadBalancer_SubResourceEmbedded instead
                   properties:
                     loadBalancerBackendAddresses:
                       items:
-                        description: Deprecated version of LoadBalancer_Properties_BackendAddressPools_Properties_LoadBalancerBackendAddresses_Spec. Use v1beta20201101.LoadBalancer_Properties_BackendAddressPools_Properties_LoadBalancerBackendAddresses_Spec instead
+                        description: Deprecated version of LoadBalancerBackendAddress. Use v1beta20201101.LoadBalancerBackendAddress instead
                         properties:
                           ipAddress:
                             type: string
@@ -86,8 +86,6 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                           name:
                             type: string
@@ -111,8 +109,6 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                           virtualNetwork:
                             description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
@@ -134,17 +130,11 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                         type: object
                       type: array
-                    location:
-                      type: string
                     name:
                       type: string
-                  required:
-                  - name
                   type: object
                 type: array
               extendedLocation:
@@ -153,7 +143,7 @@ spec:
                   name:
                     type: string
                   type:
-                    description: Deprecated version of ExtendedLocation_Type. Use v1beta20201101.ExtendedLocation_Type instead
+                    description: Deprecated version of ExtendedLocationType. Use v1beta20201101.ExtendedLocationType instead
                     enum:
                     - EdgeZone
                     type: string
@@ -163,26 +153,26 @@ spec:
                 type: object
               frontendIPConfigurations:
                 items:
-                  description: Deprecated version of LoadBalancer_Properties_FrontendIPConfigurations_Spec. Use v1beta20201101.LoadBalancer_Properties_FrontendIPConfigurations_Spec instead
+                  description: Deprecated version of FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded instead
                   properties:
                     name:
                       type: string
                     privateIPAddress:
                       type: string
                     privateIPAddressVersion:
-                      description: Deprecated version of FrontendIPConfigurationPropertiesFormat_PrivateIPAddressVersion. Use v1beta20201101.FrontendIPConfigurationPropertiesFormat_PrivateIPAddressVersion instead
+                      description: Deprecated version of IPVersion. Use v1beta20201101.IPVersion instead
                       enum:
                       - IPv4
                       - IPv6
                       type: string
                     privateIPAllocationMethod:
-                      description: Deprecated version of FrontendIPConfigurationPropertiesFormat_PrivateIPAllocationMethod. Use v1beta20201101.FrontendIPConfigurationPropertiesFormat_PrivateIPAllocationMethod instead
+                      description: Deprecated version of IPAllocationMethod. Use v1beta20201101.IPAllocationMethod instead
                       enum:
                       - Dynamic
                       - Static
                       type: string
                     publicIPAddress:
-                      description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                      description: Deprecated version of PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded instead
                       properties:
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
@@ -201,8 +191,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     publicIPPrefix:
                       description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
@@ -224,11 +212,9 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     subnet:
-                      description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                      description: Deprecated version of Subnet_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.Subnet_LoadBalancer_SubResourceEmbedded instead
                       properties:
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
@@ -247,20 +233,16 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     zones:
                       items:
                         type: string
                       type: array
-                  required:
-                  - name
                   type: object
                 type: array
               inboundNatPools:
                 items:
-                  description: Deprecated version of LoadBalancer_Properties_InboundNatPools_Spec. Use v1beta20201101.LoadBalancer_Properties_InboundNatPools_Spec instead
+                  description: Deprecated version of InboundNatPool. Use v1beta20201101.InboundNatPool instead
                   properties:
                     backendPort:
                       type: integer
@@ -288,8 +270,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     frontendPortRangeEnd:
                       type: integer
@@ -300,7 +280,7 @@ spec:
                     name:
                       type: string
                     protocol:
-                      description: Deprecated version of InboundNatPoolPropertiesFormat_Protocol. Use v1beta20201101.InboundNatPoolPropertiesFormat_Protocol instead
+                      description: Deprecated version of TransportProtocol. Use v1beta20201101.TransportProtocol instead
                       enum:
                       - All
                       - Tcp
@@ -308,16 +288,60 @@ spec:
                       type: string
                   required:
                   - backendPort
-                  - frontendIPConfiguration
                   - frontendPortRangeEnd
                   - frontendPortRangeStart
-                  - name
                   - protocol
+                  type: object
+                type: array
+              inboundNatRules:
+                items:
+                  description: Deprecated version of InboundNatRule_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.InboundNatRule_LoadBalancer_SubResourceEmbedded instead
+                  properties:
+                    backendPort:
+                      type: integer
+                    enableFloatingIP:
+                      type: boolean
+                    enableTcpReset:
+                      type: boolean
+                    frontendIPConfiguration:
+                      description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                      properties:
+                        reference:
+                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          properties:
+                            armId:
+                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                              type: string
+                            group:
+                              description: Group is the Kubernetes group of the resource.
+                              type: string
+                            kind:
+                              description: Kind is the Kubernetes kind of the resource.
+                              type: string
+                            name:
+                              description: Name is the Kubernetes name of the resource.
+                              type: string
+                          type: object
+                      type: object
+                    frontendPort:
+                      type: integer
+                    idleTimeoutInMinutes:
+                      type: integer
+                    name:
+                      type: string
+                    protocol:
+                      description: Deprecated version of TransportProtocol. Use v1beta20201101.TransportProtocol instead
+                      enum:
+                      - All
+                      - Tcp
+                      - Udp
+                      type: string
                   type: object
                 type: array
               loadBalancingRules:
                 items:
-                  description: Deprecated version of LoadBalancer_Properties_LoadBalancingRules_Spec. Use v1beta20201101.LoadBalancer_Properties_LoadBalancingRules_Spec instead
+                  description: Deprecated version of LoadBalancingRule. Use v1beta20201101.LoadBalancingRule instead
                   properties:
                     backendAddressPool:
                       description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
@@ -339,8 +363,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     backendPort:
                       type: integer
@@ -370,8 +392,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     frontendPort:
                       type: integer
@@ -406,21 +426,16 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     protocol:
-                      description: Deprecated version of LoadBalancingRulePropertiesFormat_Protocol. Use v1beta20201101.LoadBalancingRulePropertiesFormat_Protocol instead
+                      description: Deprecated version of TransportProtocol. Use v1beta20201101.TransportProtocol instead
                       enum:
                       - All
                       - Tcp
                       - Udp
                       type: string
                   required:
-                  - backendPort
-                  - frontendIPConfiguration
                   - frontendPort
-                  - name
                   - protocol
                   type: object
                 type: array
@@ -428,7 +443,7 @@ spec:
                 type: string
               outboundRules:
                 items:
-                  description: Deprecated version of LoadBalancer_Properties_OutboundRules_Spec. Use v1beta20201101.LoadBalancer_Properties_OutboundRules_Spec instead
+                  description: Deprecated version of OutboundRule. Use v1beta20201101.OutboundRule instead
                   properties:
                     allocatedOutboundPorts:
                       type: integer
@@ -452,8 +467,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     enableTcpReset:
                       type: boolean
@@ -478,8 +491,6 @@ spec:
                                 description: Name is the Kubernetes name of the resource.
                                 type: string
                             type: object
-                        required:
-                        - reference
                         type: object
                       type: array
                     idleTimeoutInMinutes:
@@ -510,7 +521,7 @@ spec:
                 type: object
               probes:
                 items:
-                  description: Deprecated version of LoadBalancer_Properties_Probes_Spec. Use v1beta20201101.LoadBalancer_Properties_Probes_Spec instead
+                  description: Deprecated version of Probe. Use v1beta20201101.Probe instead
                   properties:
                     intervalInSeconds:
                       type: integer
@@ -530,8 +541,6 @@ spec:
                     requestPath:
                       type: string
                   required:
-                  - name
-                  - numberOfProbes
                   - port
                   - protocol
                   type: object
@@ -566,7 +575,80 @@ spec:
                 items:
                   description: Deprecated version of BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded instead
                   properties:
+                    backendIPConfigurations:
+                      items:
+                        description: Deprecated version of NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded instead
+                        properties:
+                          id:
+                            type: string
+                        type: object
+                      type: array
+                    etag:
+                      type: string
                     id:
+                      type: string
+                    loadBalancerBackendAddresses:
+                      items:
+                        description: Deprecated version of LoadBalancerBackendAddress_STATUS. Use v1beta20201101.LoadBalancerBackendAddress_STATUS instead
+                        properties:
+                          ipAddress:
+                            type: string
+                          loadBalancerFrontendIPConfiguration:
+                            description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                            properties:
+                              id:
+                                type: string
+                            type: object
+                          name:
+                            type: string
+                          networkInterfaceIPConfiguration:
+                            description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                            properties:
+                              id:
+                                type: string
+                            type: object
+                          subnet:
+                            description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                            properties:
+                              id:
+                                type: string
+                            type: object
+                          virtualNetwork:
+                            description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                            properties:
+                              id:
+                                type: string
+                            type: object
+                        type: object
+                      type: array
+                    loadBalancingRules:
+                      items:
+                        description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                        properties:
+                          id:
+                            type: string
+                        type: object
+                      type: array
+                    name:
+                      type: string
+                    outboundRule:
+                      description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                      properties:
+                        id:
+                          type: string
+                      type: object
+                    outboundRules:
+                      items:
+                        description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                        properties:
+                          id:
+                            type: string
+                        type: object
+                      type: array
+                    provisioningState:
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
+                      type: string
+                    type:
                       type: string
                   type: object
                 type: array
@@ -672,31 +754,8 @@ spec:
                     publicIPAddress:
                       description: Deprecated version of PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded instead
                       properties:
-                        extendedLocation:
-                          description: Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
-                          properties:
-                            name:
-                              type: string
-                            type:
-                              description: Deprecated version of ExtendedLocationType_STATUS. Use v1beta20201101.ExtendedLocationType_STATUS instead
-                              type: string
-                          type: object
                         id:
                           type: string
-                        sku:
-                          description: Deprecated version of PublicIPAddressSku_STATUS. Use v1beta20201101.PublicIPAddressSku_STATUS instead
-                          properties:
-                            name:
-                              description: Deprecated version of PublicIPAddressSku_Name_STATUS. Use v1beta20201101.PublicIPAddressSku_Name_STATUS instead
-                              type: string
-                            tier:
-                              description: Deprecated version of PublicIPAddressSku_Tier_STATUS. Use v1beta20201101.PublicIPAddressSku_Tier_STATUS instead
-                              type: string
-                          type: object
-                        zones:
-                          items:
-                            type: string
-                          type: array
                       type: object
                     publicIPPrefix:
                       description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
@@ -762,7 +821,41 @@ spec:
                 items:
                   description: Deprecated version of InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded instead
                   properties:
+                    backendIPConfiguration:
+                      description: Deprecated version of NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded instead
+                      properties:
+                        id:
+                          type: string
+                      type: object
+                    backendPort:
+                      type: integer
+                    enableFloatingIP:
+                      type: boolean
+                    enableTcpReset:
+                      type: boolean
+                    etag:
+                      type: string
+                    frontendIPConfiguration:
+                      description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                      properties:
+                        id:
+                          type: string
+                      type: object
+                    frontendPort:
+                      type: integer
                     id:
+                      type: string
+                    idleTimeoutInMinutes:
+                      type: integer
+                    name:
+                      type: string
+                    protocol:
+                      description: Deprecated version of TransportProtocol_STATUS. Use v1beta20201101.TransportProtocol_STATUS instead
+                      type: string
+                    provisioningState:
+                      description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
+                      type: string
+                    type:
                       type: string
                   type: object
                 type: array
@@ -965,7 +1058,7 @@ spec:
                 type: string
               backendAddressPools:
                 items:
-                  description: Storage version of v1alpha1api20201101.LoadBalancer_Properties_BackendAddressPools_Spec Deprecated version of LoadBalancer_Properties_BackendAddressPools_Spec. Use v1beta20201101.LoadBalancer_Properties_BackendAddressPools_Spec instead
+                  description: Storage version of v1alpha1api20201101.BackendAddressPool_LoadBalancer_SubResourceEmbedded Deprecated version of BackendAddressPool_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.BackendAddressPool_LoadBalancer_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -974,7 +1067,7 @@ spec:
                       type: object
                     loadBalancerBackendAddresses:
                       items:
-                        description: Storage version of v1alpha1api20201101.LoadBalancer_Properties_BackendAddressPools_Properties_LoadBalancerBackendAddresses_Spec Deprecated version of LoadBalancer_Properties_BackendAddressPools_Properties_LoadBalancerBackendAddresses_Spec. Use v1beta20201101.LoadBalancer_Properties_BackendAddressPools_Properties_LoadBalancerBackendAddresses_Spec instead
+                        description: Storage version of v1alpha1api20201101.LoadBalancerBackendAddress Deprecated version of LoadBalancerBackendAddress. Use v1beta20201101.LoadBalancerBackendAddress instead
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1008,8 +1101,6 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                           name:
                             type: string
@@ -1038,8 +1129,6 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                           virtualNetwork:
                             description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
@@ -1066,13 +1155,9 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                         type: object
                       type: array
-                    location:
-                      type: string
                     name:
                       type: string
                   type: object
@@ -1092,7 +1177,7 @@ spec:
                 type: object
               frontendIPConfigurations:
                 items:
-                  description: Storage version of v1alpha1api20201101.LoadBalancer_Properties_FrontendIPConfigurations_Spec Deprecated version of LoadBalancer_Properties_FrontendIPConfigurations_Spec. Use v1beta20201101.LoadBalancer_Properties_FrontendIPConfigurations_Spec instead
+                  description: Storage version of v1alpha1api20201101.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded Deprecated version of FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1108,7 +1193,7 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                      description: Storage version of v1alpha1api20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Deprecated version of PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1132,8 +1217,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     publicIPPrefix:
                       description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
@@ -1160,11 +1243,9 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     subnet:
-                      description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                      description: Storage version of v1alpha1api20201101.Subnet_LoadBalancer_SubResourceEmbedded Deprecated version of Subnet_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.Subnet_LoadBalancer_SubResourceEmbedded instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1188,8 +1269,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     zones:
                       items:
@@ -1199,7 +1278,7 @@ spec:
                 type: array
               inboundNatPools:
                 items:
-                  description: Storage version of v1alpha1api20201101.LoadBalancer_Properties_InboundNatPools_Spec Deprecated version of LoadBalancer_Properties_InboundNatPools_Spec. Use v1beta20201101.LoadBalancer_Properties_InboundNatPools_Spec instead
+                  description: Storage version of v1alpha1api20201101.InboundNatPool Deprecated version of InboundNatPool. Use v1beta20201101.InboundNatPool instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1237,8 +1316,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     frontendPortRangeEnd:
                       type: integer
@@ -1252,9 +1329,60 @@ spec:
                       type: string
                   type: object
                 type: array
+              inboundNatRules:
+                items:
+                  description: Storage version of v1alpha1api20201101.InboundNatRule_LoadBalancer_SubResourceEmbedded Deprecated version of InboundNatRule_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.InboundNatRule_LoadBalancer_SubResourceEmbedded instead
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    backendPort:
+                      type: integer
+                    enableFloatingIP:
+                      type: boolean
+                    enableTcpReset:
+                      type: boolean
+                    frontendIPConfiguration:
+                      description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        reference:
+                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          properties:
+                            armId:
+                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                              type: string
+                            group:
+                              description: Group is the Kubernetes group of the resource.
+                              type: string
+                            kind:
+                              description: Kind is the Kubernetes kind of the resource.
+                              type: string
+                            name:
+                              description: Name is the Kubernetes name of the resource.
+                              type: string
+                          type: object
+                      type: object
+                    frontendPort:
+                      type: integer
+                    idleTimeoutInMinutes:
+                      type: integer
+                    name:
+                      type: string
+                    protocol:
+                      type: string
+                  type: object
+                type: array
               loadBalancingRules:
                 items:
-                  description: Storage version of v1alpha1api20201101.LoadBalancer_Properties_LoadBalancingRules_Spec Deprecated version of LoadBalancer_Properties_LoadBalancingRules_Spec. Use v1beta20201101.LoadBalancer_Properties_LoadBalancingRules_Spec instead
+                  description: Storage version of v1alpha1api20201101.LoadBalancingRule Deprecated version of LoadBalancingRule. Use v1beta20201101.LoadBalancingRule instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1286,8 +1414,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     backendPort:
                       type: integer
@@ -1322,8 +1448,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     frontendPort:
                       type: integer
@@ -1358,8 +1482,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     protocol:
                       type: string
@@ -1371,7 +1493,7 @@ spec:
                 type: string
               outboundRules:
                 items:
-                  description: Storage version of v1alpha1api20201101.LoadBalancer_Properties_OutboundRules_Spec Deprecated version of LoadBalancer_Properties_OutboundRules_Spec. Use v1beta20201101.LoadBalancer_Properties_OutboundRules_Spec instead
+                  description: Storage version of v1alpha1api20201101.OutboundRule Deprecated version of OutboundRule. Use v1beta20201101.OutboundRule instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1405,8 +1527,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     enableTcpReset:
                       type: boolean
@@ -1436,8 +1556,6 @@ spec:
                                 description: Name is the Kubernetes name of the resource.
                                 type: string
                             type: object
-                        required:
-                        - reference
                         type: object
                       type: array
                     idleTimeoutInMinutes:
@@ -1459,7 +1577,7 @@ spec:
                 type: object
               probes:
                 items:
-                  description: Storage version of v1alpha1api20201101.LoadBalancer_Properties_Probes_Spec Deprecated version of LoadBalancer_Properties_Probes_Spec. Use v1beta20201101.LoadBalancer_Properties_Probes_Spec instead
+                  description: Storage version of v1alpha1api20201101.Probe Deprecated version of Probe. Use v1beta20201101.Probe instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1517,7 +1635,124 @@ spec:
                         type: string
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
+                    backendIPConfigurations:
+                      items:
+                        description: Storage version of v1alpha1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded Deprecated version of NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          id:
+                            type: string
+                        type: object
+                      type: array
+                    etag:
+                      type: string
                     id:
+                      type: string
+                    loadBalancerBackendAddresses:
+                      items:
+                        description: Storage version of v1alpha1api20201101.LoadBalancerBackendAddress_STATUS Deprecated version of LoadBalancerBackendAddress_STATUS. Use v1beta20201101.LoadBalancerBackendAddress_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          ipAddress:
+                            type: string
+                          loadBalancerFrontendIPConfiguration:
+                            description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                type: object
+                              id:
+                                type: string
+                            type: object
+                          name:
+                            type: string
+                          networkInterfaceIPConfiguration:
+                            description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                type: object
+                              id:
+                                type: string
+                            type: object
+                          subnet:
+                            description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                type: object
+                              id:
+                                type: string
+                            type: object
+                          virtualNetwork:
+                            description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                type: object
+                              id:
+                                type: string
+                            type: object
+                        type: object
+                      type: array
+                    loadBalancingRules:
+                      items:
+                        description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          id:
+                            type: string
+                        type: object
+                      type: array
+                    name:
+                      type: string
+                    outboundRule:
+                      description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        id:
+                          type: string
+                      type: object
+                    outboundRules:
+                      items:
+                        description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          id:
+                            type: string
+                        type: object
+                      type: array
+                    provisioningState:
+                      type: string
+                    type:
                       type: string
                   type: object
                 type: array
@@ -1653,38 +1888,8 @@ spec:
                             type: string
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
-                        extendedLocation:
-                          description: Storage version of v1alpha1api20201101.ExtendedLocation_STATUS Deprecated version of ExtendedLocation_STATUS. Use v1beta20201101.ExtendedLocation_STATUS instead
-                          properties:
-                            $propertyBag:
-                              additionalProperties:
-                                type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                              type: object
-                            name:
-                              type: string
-                            type:
-                              type: string
-                          type: object
                         id:
                           type: string
-                        sku:
-                          description: Storage version of v1alpha1api20201101.PublicIPAddressSku_STATUS Deprecated version of PublicIPAddressSku_STATUS. Use v1beta20201101.PublicIPAddressSku_STATUS instead
-                          properties:
-                            $propertyBag:
-                              additionalProperties:
-                                type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                              type: object
-                            name:
-                              type: string
-                            tier:
-                              type: string
-                          type: object
-                        zones:
-                          items:
-                            type: string
-                          type: array
                       type: object
                     publicIPPrefix:
                       description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
@@ -1773,7 +1978,49 @@ spec:
                         type: string
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
+                    backendIPConfiguration:
+                      description: Storage version of v1alpha1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded Deprecated version of NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded. Use v1beta20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded instead
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        id:
+                          type: string
+                      type: object
+                    backendPort:
+                      type: integer
+                    enableFloatingIP:
+                      type: boolean
+                    enableTcpReset:
+                      type: boolean
+                    etag:
+                      type: string
+                    frontendIPConfiguration:
+                      description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        id:
+                          type: string
+                      type: object
+                    frontendPort:
+                      type: integer
                     id:
+                      type: string
+                    idleTimeoutInMinutes:
+                      type: integer
+                    name:
+                      type: string
+                    protocol:
+                      type: string
+                    provisioningState:
+                      type: string
+                    type:
                       type: string
                   type: object
                 type: array
@@ -1993,7 +2240,7 @@ spec:
     name: v1beta20201101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/loadBalancers'
+        description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -2011,10 +2258,12 @@ spec:
               backendAddressPools:
                 description: 'BackendAddressPools: Collection of backend address pools used by a load balancer.'
                 items:
+                  description: Pool of backend IP addresses.
                   properties:
                     loadBalancerBackendAddresses:
                       description: 'LoadBalancerBackendAddresses: An array of backend addresses.'
                       items:
+                        description: Load balancer backend addresses.
                         properties:
                           ipAddress:
                             description: 'IpAddress: IP Address belonging to the referenced virtual network.'
@@ -2039,8 +2288,6 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                           name:
                             description: 'Name: Name of the backend address.'
@@ -2065,8 +2312,6 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                           virtualNetwork:
                             description: 'VirtualNetwork: Reference to an existing virtual network.'
@@ -2088,19 +2333,12 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                         type: object
                       type: array
-                    location:
-                      description: 'Location: The location of the backend address pool.'
-                      type: string
                     name:
                       description: 'Name: The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.'
                       type: string
-                  required:
-                  - name
                   type: object
                 type: array
               extendedLocation:
@@ -2121,6 +2359,7 @@ spec:
               frontendIPConfigurations:
                 description: 'FrontendIPConfigurations: Object representing the frontend IPs to be used for the load balancer.'
                 items:
+                  description: Frontend IP address of the load balancer.
                   properties:
                     name:
                       description: 'Name: The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.'
@@ -2160,8 +2399,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     publicIPPrefix:
                       description: 'PublicIPPrefix: The reference to the Public IP Prefix resource.'
@@ -2183,8 +2420,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     subnet:
                       description: 'Subnet: The reference to the subnet resource.'
@@ -2206,21 +2441,18 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     zones:
                       description: 'Zones: A list of availability zones denoting the IP allocated for the resource needs to come from.'
                       items:
                         type: string
                       type: array
-                  required:
-                  - name
                   type: object
                 type: array
               inboundNatPools:
                 description: 'InboundNatPools: Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.'
                 items:
+                  description: Inbound NAT pool of the load balancer.
                   properties:
                     backendPort:
                       description: 'BackendPort: The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.'
@@ -2251,8 +2483,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     frontendPortRangeEnd:
                       description: 'FrontendPortRangeEnd: The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.'
@@ -2275,16 +2505,68 @@ spec:
                       type: string
                   required:
                   - backendPort
-                  - frontendIPConfiguration
                   - frontendPortRangeEnd
                   - frontendPortRangeStart
-                  - name
                   - protocol
+                  type: object
+                type: array
+              inboundNatRules:
+                description: 'InboundNatRules: Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.'
+                items:
+                  description: Inbound NAT rule of the load balancer.
+                  properties:
+                    backendPort:
+                      description: 'BackendPort: The port used for the internal endpoint. Acceptable values range from 1 to 65535.'
+                      type: integer
+                    enableFloatingIP:
+                      description: "EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
+                      type: boolean
+                    enableTcpReset:
+                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      type: boolean
+                    frontendIPConfiguration:
+                      description: 'FrontendIPConfiguration: A reference to frontend IP addresses.'
+                      properties:
+                        reference:
+                          description: 'Reference: Resource ID.'
+                          properties:
+                            armId:
+                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                              type: string
+                            group:
+                              description: Group is the Kubernetes group of the resource.
+                              type: string
+                            kind:
+                              description: Kind is the Kubernetes kind of the resource.
+                              type: string
+                            name:
+                              description: Name is the Kubernetes name of the resource.
+                              type: string
+                          type: object
+                      type: object
+                    frontendPort:
+                      description: 'FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.'
+                      type: integer
+                    idleTimeoutInMinutes:
+                      description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.'
+                      type: integer
+                    name:
+                      description: 'Name: The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.'
+                      type: string
+                    protocol:
+                      description: 'Protocol: The reference to the transport protocol used by the load balancing rule.'
+                      enum:
+                      - All
+                      - Tcp
+                      - Udp
+                      type: string
                   type: object
                 type: array
               loadBalancingRules:
                 description: 'LoadBalancingRules: Object collection representing the load balancing rules Gets the provisioning.'
                 items:
+                  description: A load balancing rule for a load balancer.
                   properties:
                     backendAddressPool:
                       description: 'BackendAddressPool: A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.'
@@ -2306,8 +2588,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     backendPort:
                       description: 'BackendPort: The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port".'
@@ -2341,8 +2621,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     frontendPort:
                       description: 'FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".'
@@ -2380,8 +2658,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     protocol:
                       description: 'Protocol: The reference to the transport protocol used by the load balancing rule.'
@@ -2391,19 +2667,17 @@ spec:
                       - Udp
                       type: string
                   required:
-                  - backendPort
-                  - frontendIPConfiguration
                   - frontendPort
-                  - name
                   - protocol
                   type: object
                 type: array
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource location.'
                 type: string
               outboundRules:
                 description: 'OutboundRules: The outbound rules.'
                 items:
+                  description: Outbound rule of the load balancer.
                   properties:
                     allocatedOutboundPorts:
                       description: 'AllocatedOutboundPorts: The number of outbound ports to be used for NAT.'
@@ -2428,8 +2702,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     enableTcpReset:
                       description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
@@ -2437,7 +2709,7 @@ spec:
                     frontendIPConfigurations:
                       description: 'FrontendIPConfigurations: The Frontend IP addresses of the load balancer.'
                       items:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                        description: Reference to another subresource.
                         properties:
                           reference:
                             description: 'Reference: Resource ID.'
@@ -2456,8 +2728,6 @@ spec:
                                 description: Name is the Kubernetes name of the resource.
                                 type: string
                             type: object
-                        required:
-                        - reference
                         type: object
                       type: array
                     idleTimeoutInMinutes:
@@ -2491,6 +2761,7 @@ spec:
               probes:
                 description: 'Probes: Collection of probe objects used in the load balancer.'
                 items:
+                  description: A load balancer probe.
                   properties:
                     intervalInSeconds:
                       description: 'IntervalInSeconds: The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.'
@@ -2515,8 +2786,6 @@ spec:
                       description: 'RequestPath: The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.'
                       type: string
                   required:
-                  - name
-                  - numberOfProbes
                   - port
                   - protocol
                   type: object
@@ -2540,19 +2809,111 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
             required:
             - owner
             type: object
           status:
+            description: LoadBalancer resource.
             properties:
               backendAddressPools:
                 description: 'BackendAddressPools: Collection of backend address pools used by a load balancer.'
                 items:
+                  description: Pool of backend IP addresses.
                   properties:
+                    backendIPConfigurations:
+                      description: 'BackendIPConfigurations: An array of references to IP addresses defined in network interfaces.'
+                      items:
+                        description: IPConfiguration in a network interface.
+                        properties:
+                          id:
+                            description: 'Id: Resource ID.'
+                            type: string
+                        type: object
+                      type: array
+                    etag:
+                      description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
+                      type: string
                     id:
                       description: 'Id: Resource ID.'
+                      type: string
+                    loadBalancerBackendAddresses:
+                      description: 'LoadBalancerBackendAddresses: An array of backend addresses.'
+                      items:
+                        description: Load balancer backend addresses.
+                        properties:
+                          ipAddress:
+                            description: 'IpAddress: IP Address belonging to the referenced virtual network.'
+                            type: string
+                          loadBalancerFrontendIPConfiguration:
+                            description: 'LoadBalancerFrontendIPConfiguration: Reference to the frontend ip address configuration defined in regional loadbalancer.'
+                            properties:
+                              id:
+                                description: 'Id: Resource ID.'
+                                type: string
+                            type: object
+                          name:
+                            description: 'Name: Name of the backend address.'
+                            type: string
+                          networkInterfaceIPConfiguration:
+                            description: 'NetworkInterfaceIPConfiguration: Reference to IP address defined in network interfaces.'
+                            properties:
+                              id:
+                                description: 'Id: Resource ID.'
+                                type: string
+                            type: object
+                          subnet:
+                            description: 'Subnet: Reference to an existing subnet.'
+                            properties:
+                              id:
+                                description: 'Id: Resource ID.'
+                                type: string
+                            type: object
+                          virtualNetwork:
+                            description: 'VirtualNetwork: Reference to an existing virtual network.'
+                            properties:
+                              id:
+                                description: 'Id: Resource ID.'
+                                type: string
+                            type: object
+                        type: object
+                      type: array
+                    loadBalancingRules:
+                      description: 'LoadBalancingRules: An array of references to load balancing rules that use this backend address pool.'
+                      items:
+                        description: Reference to another subresource.
+                        properties:
+                          id:
+                            description: 'Id: Resource ID.'
+                            type: string
+                        type: object
+                      type: array
+                    name:
+                      description: 'Name: The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.'
+                      type: string
+                    outboundRule:
+                      description: 'OutboundRule: A reference to an outbound rule that uses this backend address pool.'
+                      properties:
+                        id:
+                          description: 'Id: Resource ID.'
+                          type: string
+                      type: object
+                    outboundRules:
+                      description: 'OutboundRules: An array of references to outbound rules that use this backend address pool.'
+                      items:
+                        description: Reference to another subresource.
+                        properties:
+                          id:
+                            description: 'Id: Resource ID.'
+                            type: string
+                        type: object
+                      type: array
+                    provisioningState:
+                      description: 'ProvisioningState: The provisioning state of the backend address pool resource.'
+                      type: string
+                    type:
+                      description: 'Type: Type of the resource.'
                       type: string
                   type: object
                 type: array
@@ -2607,6 +2968,7 @@ spec:
               frontendIPConfigurations:
                 description: 'FrontendIPConfigurations: Object representing the frontend IPs to be used for the load balancer.'
                 items:
+                  description: Frontend IP address of the load balancer.
                   properties:
                     etag:
                       description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
@@ -2617,6 +2979,7 @@ spec:
                     inboundNatPools:
                       description: 'InboundNatPools: An array of references to inbound pools that use this frontend IP.'
                       items:
+                        description: Reference to another subresource.
                         properties:
                           id:
                             description: 'Id: Resource ID.'
@@ -2626,6 +2989,7 @@ spec:
                     inboundNatRules:
                       description: 'InboundNatRules: An array of references to inbound rules that use this frontend IP.'
                       items:
+                        description: Reference to another subresource.
                         properties:
                           id:
                             description: 'Id: Resource ID.'
@@ -2635,6 +2999,7 @@ spec:
                     loadBalancingRules:
                       description: 'LoadBalancingRules: An array of references to load balancing rules that use this frontend IP.'
                       items:
+                        description: Reference to another subresource.
                         properties:
                           id:
                             description: 'Id: Resource ID.'
@@ -2647,6 +3012,7 @@ spec:
                     outboundRules:
                       description: 'OutboundRules: An array of references to outbound rules that use this frontend IP.'
                       items:
+                        description: Reference to another subresource.
                         properties:
                           id:
                             description: 'Id: Resource ID.'
@@ -2668,34 +3034,9 @@ spec:
                     publicIPAddress:
                       description: 'PublicIPAddress: The reference to the Public IP resource.'
                       properties:
-                        extendedLocation:
-                          description: 'ExtendedLocation: The extended location of the public ip address.'
-                          properties:
-                            name:
-                              description: 'Name: The name of the extended location.'
-                              type: string
-                            type:
-                              description: 'Type: The type of the extended location.'
-                              type: string
-                          type: object
                         id:
                           description: 'Id: Resource ID.'
                           type: string
-                        sku:
-                          description: 'Sku: The public IP address SKU.'
-                          properties:
-                            name:
-                              description: 'Name: Name of a public IP address SKU.'
-                              type: string
-                            tier:
-                              description: 'Tier: Tier of a public IP address SKU.'
-                              type: string
-                          type: object
-                        zones:
-                          description: 'Zones: A list of availability zones denoting the IP allocated for the resource needs to come from.'
-                          items:
-                            type: string
-                          type: array
                       type: object
                     publicIPPrefix:
                       description: 'PublicIPPrefix: The reference to the Public IP Prefix resource.'
@@ -2727,6 +3068,7 @@ spec:
               inboundNatPools:
                 description: 'InboundNatPools: Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.'
                 items:
+                  description: Inbound NAT pool of the load balancer.
                   properties:
                     backendPort:
                       description: 'BackendPort: The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.'
@@ -2776,15 +3118,61 @@ spec:
               inboundNatRules:
                 description: 'InboundNatRules: Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.'
                 items:
+                  description: Inbound NAT rule of the load balancer.
                   properties:
+                    backendIPConfiguration:
+                      description: 'BackendIPConfiguration: A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.'
+                      properties:
+                        id:
+                          description: 'Id: Resource ID.'
+                          type: string
+                      type: object
+                    backendPort:
+                      description: 'BackendPort: The port used for the internal endpoint. Acceptable values range from 1 to 65535.'
+                      type: integer
+                    enableFloatingIP:
+                      description: "EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
+                      type: boolean
+                    enableTcpReset:
+                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      type: boolean
+                    etag:
+                      description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
+                      type: string
+                    frontendIPConfiguration:
+                      description: 'FrontendIPConfiguration: A reference to frontend IP addresses.'
+                      properties:
+                        id:
+                          description: 'Id: Resource ID.'
+                          type: string
+                      type: object
+                    frontendPort:
+                      description: 'FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.'
+                      type: integer
                     id:
                       description: 'Id: Resource ID.'
+                      type: string
+                    idleTimeoutInMinutes:
+                      description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.'
+                      type: integer
+                    name:
+                      description: 'Name: The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.'
+                      type: string
+                    protocol:
+                      description: 'Protocol: The reference to the transport protocol used by the load balancing rule.'
+                      type: string
+                    provisioningState:
+                      description: 'ProvisioningState: The provisioning state of the inbound NAT rule resource.'
+                      type: string
+                    type:
+                      description: 'Type: Type of the resource.'
                       type: string
                   type: object
                 type: array
               loadBalancingRules:
                 description: 'LoadBalancingRules: Object collection representing the load balancing rules Gets the provisioning.'
                 items:
+                  description: A load balancing rule for a load balancer.
                   properties:
                     backendAddressPool:
                       description: 'BackendAddressPool: A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.'
@@ -2857,6 +3245,7 @@ spec:
               outboundRules:
                 description: 'OutboundRules: The outbound rules.'
                 items:
+                  description: Outbound rule of the load balancer.
                   properties:
                     allocatedOutboundPorts:
                       description: 'AllocatedOutboundPorts: The number of outbound ports to be used for NAT.'
@@ -2877,6 +3266,7 @@ spec:
                     frontendIPConfigurations:
                       description: 'FrontendIPConfigurations: The Frontend IP addresses of the load balancer.'
                       items:
+                        description: Reference to another subresource.
                         properties:
                           id:
                             description: 'Id: Resource ID.'
@@ -2906,6 +3296,7 @@ spec:
               probes:
                 description: 'Probes: Collection of probe objects used in the load balancer.'
                 items:
+                  description: A load balancer probe.
                   properties:
                     etag:
                       description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
@@ -2919,6 +3310,7 @@ spec:
                     loadBalancingRules:
                       description: 'LoadBalancingRules: The load balancer rules that use this probe.'
                       items:
+                        description: Reference to another subresource.
                         properties:
                           id:
                             description: 'Id: Resource ID.'
@@ -2994,7 +3386,7 @@ spec:
     name: v1beta20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201101.LoadBalancer Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/resourceDefinitions/loadBalancers'
+        description: 'Storage version of v1beta20201101.LoadBalancer Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -3017,7 +3409,7 @@ spec:
                 type: string
               backendAddressPools:
                 items:
-                  description: Storage version of v1beta20201101.LoadBalancer_Properties_BackendAddressPools_Spec
+                  description: Storage version of v1beta20201101.BackendAddressPool_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3026,7 +3418,7 @@ spec:
                       type: object
                     loadBalancerBackendAddresses:
                       items:
-                        description: Storage version of v1beta20201101.LoadBalancer_Properties_BackendAddressPools_Properties_LoadBalancerBackendAddresses_Spec
+                        description: Storage version of v1beta20201101.LoadBalancerBackendAddress Load balancer backend addresses.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3036,7 +3428,7 @@ spec:
                           ipAddress:
                             type: string
                           loadBalancerFrontendIPConfiguration:
-                            description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                            description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -3060,13 +3452,11 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                           name:
                             type: string
                           subnet:
-                            description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                            description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -3090,11 +3480,9 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                           virtualNetwork:
-                            description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                            description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -3118,19 +3506,15 @@ spec:
                                     description: Name is the Kubernetes name of the resource.
                                     type: string
                                 type: object
-                            required:
-                            - reference
                             type: object
                         type: object
                       type: array
-                    location:
-                      type: string
                     name:
                       type: string
                   type: object
                 type: array
               extendedLocation:
-                description: 'Storage version of v1beta20201101.ExtendedLocation Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/ExtendedLocation'
+                description: Storage version of v1beta20201101.ExtendedLocation ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3144,7 +3528,7 @@ spec:
                 type: object
               frontendIPConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.LoadBalancer_Properties_FrontendIPConfigurations_Spec
+                  description: Storage version of v1beta20201101.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3160,7 +3544,7 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     publicIPAddress:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                      description: Storage version of v1beta20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Public IP address resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3184,11 +3568,9 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     publicIPPrefix:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                      description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3212,11 +3594,9 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     subnet:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                      description: Storage version of v1beta20201101.Subnet_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3240,8 +3620,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     zones:
                       items:
@@ -3251,7 +3629,7 @@ spec:
                 type: array
               inboundNatPools:
                 items:
-                  description: Storage version of v1beta20201101.LoadBalancer_Properties_InboundNatPools_Spec
+                  description: Storage version of v1beta20201101.InboundNatPool Inbound NAT pool of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3265,7 +3643,7 @@ spec:
                     enableTcpReset:
                       type: boolean
                     frontendIPConfiguration:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                      description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3289,8 +3667,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     frontendPortRangeEnd:
                       type: integer
@@ -3304,17 +3680,23 @@ spec:
                       type: string
                   type: object
                 type: array
-              loadBalancingRules:
+              inboundNatRules:
                 items:
-                  description: Storage version of v1beta20201101.LoadBalancer_Properties_LoadBalancingRules_Spec
+                  description: Storage version of v1beta20201101.InboundNatRule_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
-                    backendAddressPool:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                    backendPort:
+                      type: integer
+                    enableFloatingIP:
+                      type: boolean
+                    enableTcpReset:
+                      type: boolean
+                    frontendIPConfiguration:
+                      description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3338,8 +3720,51 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
+                      type: object
+                    frontendPort:
+                      type: integer
+                    idleTimeoutInMinutes:
+                      type: integer
+                    name:
+                      type: string
+                    protocol:
+                      type: string
+                  type: object
+                type: array
+              loadBalancingRules:
+                items:
+                  description: Storage version of v1beta20201101.LoadBalancingRule A load balancing rule for a load balancer.
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    backendAddressPool:
+                      description: Storage version of v1beta20201101.SubResource Reference to another subresource.
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        reference:
+                          description: 'Reference: Resource ID.'
+                          properties:
+                            armId:
+                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                              type: string
+                            group:
+                              description: Group is the Kubernetes group of the resource.
+                              type: string
+                            kind:
+                              description: Kind is the Kubernetes kind of the resource.
+                              type: string
+                            name:
+                              description: Name is the Kubernetes name of the resource.
+                              type: string
+                          type: object
                       type: object
                     backendPort:
                       type: integer
@@ -3350,7 +3775,7 @@ spec:
                     enableTcpReset:
                       type: boolean
                     frontendIPConfiguration:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                      description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3374,8 +3799,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     frontendPort:
                       type: integer
@@ -3386,7 +3809,7 @@ spec:
                     name:
                       type: string
                     probe:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                      description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3410,8 +3833,6 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     protocol:
                       type: string
@@ -3423,7 +3844,7 @@ spec:
                 type: string
               outboundRules:
                 items:
-                  description: Storage version of v1beta20201101.LoadBalancer_Properties_OutboundRules_Spec
+                  description: Storage version of v1beta20201101.OutboundRule Outbound rule of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3433,7 +3854,7 @@ spec:
                     allocatedOutboundPorts:
                       type: integer
                     backendAddressPool:
-                      description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                      description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3457,14 +3878,12 @@ spec:
                               description: Name is the Kubernetes name of the resource.
                               type: string
                           type: object
-                      required:
-                      - reference
                       type: object
                     enableTcpReset:
                       type: boolean
                     frontendIPConfigurations:
                       items:
-                        description: 'Storage version of v1beta20201101.SubResource Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/SubResource'
+                        description: Storage version of v1beta20201101.SubResource Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3488,8 +3907,6 @@ spec:
                                 description: Name is the Kubernetes name of the resource.
                                 type: string
                             type: object
-                        required:
-                        - reference
                         type: object
                       type: array
                     idleTimeoutInMinutes:
@@ -3511,7 +3928,7 @@ spec:
                 type: object
               probes:
                 items:
-                  description: Storage version of v1beta20201101.LoadBalancer_Properties_Probes_Spec
+                  description: Storage version of v1beta20201101.Probe A load balancer probe.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3533,7 +3950,7 @@ spec:
                   type: object
                 type: array
               sku:
-                description: 'Storage version of v1beta20201101.LoadBalancerSku Generated from: https://schema.management.azure.com/schemas/2020-11-01/Microsoft.Network.json#/definitions/LoadBalancerSku'
+                description: Storage version of v1beta20201101.LoadBalancerSku SKU of a load balancer.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3553,7 +3970,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.LoadBalancer_STATUS
+            description: Storage version of v1beta20201101.LoadBalancer_STATUS LoadBalancer resource.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -3562,14 +3979,131 @@ spec:
                 type: object
               backendAddressPools:
                 items:
-                  description: Storage version of v1beta20201101.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
+                    backendIPConfigurations:
+                      items:
+                        description: Storage version of v1beta20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          id:
+                            type: string
+                        type: object
+                      type: array
+                    etag:
+                      type: string
                     id:
+                      type: string
+                    loadBalancerBackendAddresses:
+                      items:
+                        description: Storage version of v1beta20201101.LoadBalancerBackendAddress_STATUS Load balancer backend addresses.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          ipAddress:
+                            type: string
+                          loadBalancerFrontendIPConfiguration:
+                            description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                type: object
+                              id:
+                                type: string
+                            type: object
+                          name:
+                            type: string
+                          networkInterfaceIPConfiguration:
+                            description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                type: object
+                              id:
+                                type: string
+                            type: object
+                          subnet:
+                            description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                type: object
+                              id:
+                                type: string
+                            type: object
+                          virtualNetwork:
+                            description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                type: object
+                              id:
+                                type: string
+                            type: object
+                        type: object
+                      type: array
+                    loadBalancingRules:
+                      items:
+                        description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          id:
+                            type: string
+                        type: object
+                      type: array
+                    name:
+                      type: string
+                    outboundRule:
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        id:
+                          type: string
+                      type: object
+                    outboundRules:
+                      items:
+                        description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          id:
+                            type: string
+                        type: object
+                      type: array
+                    provisioningState:
+                      type: string
+                    type:
                       type: string
                   type: object
                 type: array
@@ -3610,7 +4144,7 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1beta20201101.ExtendedLocation_STATUS
+                description: Storage version of v1beta20201101.ExtendedLocation_STATUS ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -3624,7 +4158,7 @@ spec:
                 type: object
               frontendIPConfigurations:
                 items:
-                  description: Storage version of v1beta20201101.FrontendIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.FrontendIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3637,7 +4171,7 @@ spec:
                       type: string
                     inboundNatPools:
                       items:
-                        description: Storage version of v1beta20201101.SubResource_STATUS
+                        description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3650,7 +4184,7 @@ spec:
                       type: array
                     inboundNatRules:
                       items:
-                        description: Storage version of v1beta20201101.SubResource_STATUS
+                        description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3663,7 +4197,7 @@ spec:
                       type: array
                     loadBalancingRules:
                       items:
-                        description: Storage version of v1beta20201101.SubResource_STATUS
+                        description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3678,7 +4212,7 @@ spec:
                       type: string
                     outboundRules:
                       items:
-                        description: Storage version of v1beta20201101.SubResource_STATUS
+                        description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3698,48 +4232,18 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1beta20201101.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded
+                      description: Storage version of v1beta20201101.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded Public IP address resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
-                        extendedLocation:
-                          description: Storage version of v1beta20201101.ExtendedLocation_STATUS
-                          properties:
-                            $propertyBag:
-                              additionalProperties:
-                                type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                              type: object
-                            name:
-                              type: string
-                            type:
-                              type: string
-                          type: object
                         id:
                           type: string
-                        sku:
-                          description: Storage version of v1beta20201101.PublicIPAddressSku_STATUS
-                          properties:
-                            $propertyBag:
-                              additionalProperties:
-                                type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                              type: object
-                            name:
-                              type: string
-                            tier:
-                              type: string
-                          type: object
-                        zones:
-                          items:
-                            type: string
-                          type: array
                       type: object
                     publicIPPrefix:
-                      description: Storage version of v1beta20201101.SubResource_STATUS
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3750,7 +4254,7 @@ spec:
                           type: string
                       type: object
                     subnet:
-                      description: Storage version of v1beta20201101.Subnet_STATUS_LoadBalancer_SubResourceEmbedded
+                      description: Storage version of v1beta20201101.Subnet_STATUS_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3772,7 +4276,7 @@ spec:
                 type: string
               inboundNatPools:
                 items:
-                  description: Storage version of v1beta20201101.InboundNatPool_STATUS
+                  description: Storage version of v1beta20201101.InboundNatPool_STATUS Inbound NAT pool of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3788,7 +4292,7 @@ spec:
                     etag:
                       type: string
                     frontendIPConfiguration:
-                      description: Storage version of v1beta20201101.SubResource_STATUS
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3818,20 +4322,62 @@ spec:
                 type: array
               inboundNatRules:
                 items:
-                  description: Storage version of v1beta20201101.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded
+                  description: Storage version of v1beta20201101.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
+                    backendIPConfiguration:
+                      description: Storage version of v1beta20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        id:
+                          type: string
+                      type: object
+                    backendPort:
+                      type: integer
+                    enableFloatingIP:
+                      type: boolean
+                    enableTcpReset:
+                      type: boolean
+                    etag:
+                      type: string
+                    frontendIPConfiguration:
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        id:
+                          type: string
+                      type: object
+                    frontendPort:
+                      type: integer
                     id:
+                      type: string
+                    idleTimeoutInMinutes:
+                      type: integer
+                    name:
+                      type: string
+                    protocol:
+                      type: string
+                    provisioningState:
+                      type: string
+                    type:
                       type: string
                   type: object
                 type: array
               loadBalancingRules:
                 items:
-                  description: Storage version of v1beta20201101.LoadBalancingRule_STATUS
+                  description: Storage version of v1beta20201101.LoadBalancingRule_STATUS A load balancing rule for a load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3839,7 +4385,7 @@ spec:
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
                     backendAddressPool:
-                      description: Storage version of v1beta20201101.SubResource_STATUS
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3860,7 +4406,7 @@ spec:
                     etag:
                       type: string
                     frontendIPConfiguration:
-                      description: Storage version of v1beta20201101.SubResource_STATUS
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3881,7 +4427,7 @@ spec:
                     name:
                       type: string
                     probe:
-                      description: Storage version of v1beta20201101.SubResource_STATUS
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3905,7 +4451,7 @@ spec:
                 type: string
               outboundRules:
                 items:
-                  description: Storage version of v1beta20201101.OutboundRule_STATUS
+                  description: Storage version of v1beta20201101.OutboundRule_STATUS Outbound rule of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3915,7 +4461,7 @@ spec:
                     allocatedOutboundPorts:
                       type: integer
                     backendAddressPool:
-                      description: Storage version of v1beta20201101.SubResource_STATUS
+                      description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -3931,7 +4477,7 @@ spec:
                       type: string
                     frontendIPConfigurations:
                       items:
-                        description: Storage version of v1beta20201101.SubResource_STATUS
+                        description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -3958,7 +4504,7 @@ spec:
                 type: array
               probes:
                 items:
-                  description: Storage version of v1beta20201101.Probe_STATUS
+                  description: Storage version of v1beta20201101.Probe_STATUS A load balancer probe.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -3973,7 +4519,7 @@ spec:
                       type: integer
                     loadBalancingRules:
                       items:
-                        description: Storage version of v1beta20201101.SubResource_STATUS
+                        description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -4005,7 +4551,7 @@ spec:
               resourceGuid:
                 type: string
               sku:
-                description: Storage version of v1beta20201101.LoadBalancerSku_STATUS
+                description: Storage version of v1beta20201101.LoadBalancerSku_STATUS SKU of a load balancer.
                 properties:
                   $propertyBag:
                     additionalProperties:

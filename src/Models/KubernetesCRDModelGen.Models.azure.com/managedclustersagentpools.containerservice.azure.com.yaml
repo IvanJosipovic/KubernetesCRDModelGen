@@ -73,7 +73,7 @@ spec:
               enableUltraSSD:
                 type: boolean
               gpuInstanceProfile:
-                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_GpuInstanceProfile. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_GpuInstanceProfile instead
+                description: Deprecated version of GPUInstanceProfile. Use v1beta20210501.GPUInstanceProfile instead
                 enum:
                 - MIG1g
                 - MIG2g
@@ -111,7 +111,7 @@ spec:
                     type: string
                 type: object
               kubeletDiskType:
-                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_KubeletDiskType. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_KubeletDiskType instead
+                description: Deprecated version of KubeletDiskType. Use v1beta20210501.KubeletDiskType instead
                 enum:
                 - OS
                 - Temporary
@@ -186,8 +186,6 @@ spec:
                   transparentHugePageEnabled:
                     type: string
                 type: object
-              location:
-                type: string
               maxCount:
                 type: integer
               maxPods:
@@ -195,7 +193,7 @@ spec:
               minCount:
                 type: integer
               mode:
-                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_Mode. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_Mode instead
+                description: Deprecated version of AgentPoolMode. Use v1beta20210501.AgentPoolMode instead
                 enum:
                 - System
                 - User
@@ -228,23 +226,24 @@ spec:
               orchestratorVersion:
                 type: string
               osDiskSizeGB:
+                description: Deprecated version of ContainerServiceOSDisk. Use v1beta20210501.ContainerServiceOSDisk instead
                 maximum: 2048
                 minimum: 0
                 type: integer
               osDiskType:
-                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_OsDiskType. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_OsDiskType instead
+                description: Deprecated version of OSDiskType. Use v1beta20210501.OSDiskType instead
                 enum:
                 - Ephemeral
                 - Managed
                 type: string
               osSKU:
-                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_OsSKU. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_OsSKU instead
+                description: Deprecated version of OSSKU. Use v1beta20210501.OSSKU instead
                 enum:
                 - CBLMariner
                 - Ubuntu
                 type: string
               osType:
-                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_OsType. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_OsType instead
+                description: Deprecated version of OSType. Use v1beta20210501.OSType instead
                 enum:
                 - Linux
                 - Windows
@@ -276,15 +275,16 @@ spec:
                     type: string
                 type: object
               proximityPlacementGroupID:
+                description: Deprecated version of ProximityPlacementGroupID. Use v1beta20210501.ProximityPlacementGroupID instead
                 type: string
               scaleSetEvictionPolicy:
-                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_ScaleSetEvictionPolicy. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_ScaleSetEvictionPolicy instead
+                description: Deprecated version of ScaleSetEvictionPolicy. Use v1beta20210501.ScaleSetEvictionPolicy instead
                 enum:
                 - Deallocate
                 - Delete
                 type: string
               scaleSetPriority:
-                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_ScaleSetPriority. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_ScaleSetPriority instead
+                description: Deprecated version of ScaleSetPriority. Use v1beta20210501.ScaleSetPriority instead
                 enum:
                 - Regular
                 - Spot
@@ -296,7 +296,7 @@ spec:
                   type: string
                 type: object
               type:
-                description: Deprecated version of ManagedClusterAgentPoolProfileProperties_Type. Use v1beta20210501.ManagedClusterAgentPoolProfileProperties_Type instead
+                description: Deprecated version of AgentPoolType. Use v1beta20210501.AgentPoolType instead
                 enum:
                 - AvailabilitySet
                 - VirtualMachineScaleSets
@@ -330,7 +330,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of AgentPool_STATUS. Use v1beta20210501.AgentPool_STATUS instead
+            description: Deprecated version of ManagedClusters_AgentPool_STATUS. Use v1beta20210501.ManagedClusters_AgentPool_STATUS instead
             properties:
               availabilityZones:
                 items:
@@ -741,8 +741,6 @@ spec:
                   transparentHugePageEnabled:
                     type: string
                 type: object
-              location:
-                type: string
               maxCount:
                 type: integer
               maxPods:
@@ -862,7 +860,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210501.AgentPool_STATUS Deprecated version of AgentPool_STATUS. Use v1beta20210501.AgentPool_STATUS instead
+            description: Storage version of v1alpha1api20210501.ManagedClusters_AgentPool_STATUS Deprecated version of ManagedClusters_AgentPool_STATUS. Use v1beta20210501.ManagedClusters_AgentPool_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1138,7 +1136,7 @@ spec:
     name: v1beta20210501
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.ContainerService.json#/resourceDefinitions/managedClusters_agentPools'
+        description: 'Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/stable/2021-05-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/agentPools/{agentPoolName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1186,7 +1184,7 @@ spec:
                 - MIG7g
                 type: string
               kubeletConfig:
-                description: 'KubeletConfig: See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.'
+                description: 'KubeletConfig: The Kubelet configuration on the agent pool nodes.'
                 properties:
                   allowedUnsafeSysctls:
                     description: 'AllowedUnsafeSysctls: Allowed list of unsafe sysctls or unsafe sysctl patterns (ending in `*`).'
@@ -1226,12 +1224,13 @@ spec:
                     type: string
                 type: object
               kubeletDiskType:
+                description: 'KubeletDiskType: Determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage.'
                 enum:
                 - OS
                 - Temporary
                 type: string
               linuxOSConfig:
-                description: 'LinuxOSConfig: See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.'
+                description: 'LinuxOSConfig: The OS configuration of Linux agent nodes.'
                 properties:
                   swapFileSizeMB:
                     description: 'SwapFileSizeMB: The size in MB of a swap file that will be created on each node.'
@@ -1331,9 +1330,6 @@ spec:
                     description: "TransparentHugePageEnabled: Valid values are 'always', 'madvise', and 'never'. The default is 'always'. For more information see [Transparent Hugepages](https://www.kernel.org/doc/html/latest/admin-guide/mm/transhuge.html#admin-guide-transhuge)."
                     type: string
                 type: object
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               maxCount:
                 description: 'MaxCount: The maximum number of nodes for auto-scaling'
                 type: integer
@@ -1344,6 +1340,7 @@ spec:
                 description: 'MinCount: The minimum number of nodes for auto-scaling'
                 type: integer
               mode:
+                description: "Mode: A cluster must have at least one 'System' Agent Pool at all times. For additional information on agent pool restrictions  and best practices, see: https://docs.microsoft.com/azure/aks/use-system-pools"
                 enum:
                 - System
                 - User
@@ -1379,21 +1376,23 @@ spec:
                 description: 'OrchestratorVersion: As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see [upgrading a node pool](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#upgrade-a-node-pool).'
                 type: string
               osDiskSizeGB:
-                description: 'OsDiskSizeGB: OS Disk Size in GB to be used to specify the disk size for every machine in the master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.'
                 maximum: 2048
                 minimum: 0
                 type: integer
               osDiskType:
+                description: "OsDiskType: The default is 'Ephemeral' if the VM supports it and has a cache disk larger than the requested OSDiskSizeGB. Otherwise,  defaults to 'Managed'. May not be changed after creation. For more information see [Ephemeral OS](https://docs.microsoft.com/azure/aks/cluster-configuration#ephemeral-os)."
                 enum:
                 - Ephemeral
                 - Managed
                 type: string
               osSKU:
+                description: 'OsSKU: Specifies an OS SKU. This value must not be specified if OSType is Windows.'
                 enum:
                 - CBLMariner
                 - Ubuntu
                 type: string
               osType:
+                description: 'OsType: The operating system type. The default is Linux.'
                 enum:
                 - Linux
                 - Windows
@@ -1448,12 +1447,13 @@ spec:
                 description: 'Tags: The tags to be persisted on the agent pool virtual machine scale set.'
                 type: object
               type:
+                description: 'Type: The type of Agent Pool.'
                 enum:
                 - AvailabilitySet
                 - VirtualMachineScaleSets
                 type: string
               upgradeSettings:
-                description: 'UpgradeSettings: Settings for upgrading an agentpool'
+                description: 'UpgradeSettings: Settings for upgrading the agentpool'
                 properties:
                   maxSurge:
                     description: "MaxSurge: This can either be set to an integer (e.g. '5') or a percentage (e.g. '50%'). If a percentage is specified, it is the percentage of the total agent pool size at the time of the upgrade. For percentages, fractional nodes are rounded up. If not specified, the default is 1. For more information, including best practices, see: https://docs.microsoft.com/azure/aks/upgrade-cluster#customize-node-surge-upgrade"
@@ -1588,6 +1588,7 @@ spec:
                     type: string
                 type: object
               kubeletDiskType:
+                description: 'KubeletDiskType: Determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage.'
                 type: string
               linuxOSConfig:
                 description: 'LinuxOSConfig: The OS configuration of Linux agent nodes.'
@@ -1700,6 +1701,7 @@ spec:
                 description: 'MinCount: The minimum number of nodes for auto-scaling'
                 type: integer
               mode:
+                description: "Mode: A cluster must have at least one 'System' Agent Pool at all times. For additional information on agent pool restrictions  and best practices, see: https://docs.microsoft.com/azure/aks/use-system-pools"
                 type: string
               name:
                 description: 'Name: The name of the resource that is unique within a resource group. This name can be used to access the resource.'
@@ -1726,10 +1728,13 @@ spec:
               osDiskSizeGB:
                 type: integer
               osDiskType:
+                description: "OsDiskType: The default is 'Ephemeral' if the VM supports it and has a cache disk larger than the requested OSDiskSizeGB. Otherwise,  defaults to 'Managed'. May not be changed after creation. For more information see [Ephemeral OS](https://docs.microsoft.com/azure/aks/cluster-configuration#ephemeral-os)."
                 type: string
               osSKU:
+                description: 'OsSKU: Specifies an OS SKU. This value must not be specified if OSType is Windows.'
                 type: string
               osType:
+                description: 'OsType: The operating system type. The default is Linux.'
                 type: string
               podSubnetID:
                 description: 'PodSubnetID: If omitted, pod IPs are statically assigned on the node subnet (see vnetSubnetID for more details). This is of the form: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}'
@@ -1742,6 +1747,7 @@ spec:
                     type: string
                 type: object
               properties_type:
+                description: 'PropertiesType: The type of Agent Pool.'
                 type: string
               provisioningState:
                 description: 'ProvisioningState: The current deployment or provisioning state.'
@@ -1801,7 +1807,7 @@ spec:
     name: v1beta20210501storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210501.ManagedClustersAgentPool Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.ContainerService.json#/resourceDefinitions/managedClusters_agentPools'
+        description: 'Storage version of v1beta20210501.ManagedClustersAgentPool Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/stable/2021-05-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/agentPools/{agentPoolName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1841,7 +1847,7 @@ spec:
               gpuInstanceProfile:
                 type: string
               kubeletConfig:
-                description: 'Storage version of v1beta20210501.KubeletConfig Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.ContainerService.json#/definitions/KubeletConfig'
+                description: Storage version of v1beta20210501.KubeletConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1876,7 +1882,7 @@ spec:
               kubeletDiskType:
                 type: string
               linuxOSConfig:
-                description: 'Storage version of v1beta20210501.LinuxOSConfig Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.ContainerService.json#/definitions/LinuxOSConfig'
+                description: Storage version of v1beta20210501.LinuxOSConfig See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1886,7 +1892,7 @@ spec:
                   swapFileSizeMB:
                     type: integer
                   sysctls:
-                    description: 'Storage version of v1beta20210501.SysctlConfig Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.ContainerService.json#/definitions/SysctlConfig'
+                    description: Storage version of v1beta20210501.SysctlConfig Sysctl settings for Linux agent nodes.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1955,8 +1961,6 @@ spec:
                   transparentHugePageEnabled:
                     type: string
                 type: object
-              location:
-                type: string
               maxCount:
                 type: integer
               maxPods:
@@ -2043,7 +2047,7 @@ spec:
               type:
                 type: string
               upgradeSettings:
-                description: 'Storage version of v1beta20210501.AgentPoolUpgradeSettings Generated from: https://schema.management.azure.com/schemas/2021-05-01/Microsoft.ContainerService.json#/definitions/AgentPoolUpgradeSettings'
+                description: Storage version of v1beta20210501.AgentPoolUpgradeSettings Settings for upgrading an agentpool
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2076,7 +2080,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210501.AgentPool_STATUS
+            description: Storage version of v1beta20210501.ManagedClusters_AgentPool_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2138,7 +2142,7 @@ spec:
               id:
                 type: string
               kubeletConfig:
-                description: Storage version of v1beta20210501.KubeletConfig_STATUS
+                description: Storage version of v1beta20210501.KubeletConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2173,7 +2177,7 @@ spec:
               kubeletDiskType:
                 type: string
               linuxOSConfig:
-                description: Storage version of v1beta20210501.LinuxOSConfig_STATUS
+                description: Storage version of v1beta20210501.LinuxOSConfig_STATUS See [AKS custom node configuration](https://docs.microsoft.com/azure/aks/custom-node-configuration) for more details.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2183,7 +2187,7 @@ spec:
                   swapFileSizeMB:
                     type: integer
                   sysctls:
-                    description: Storage version of v1beta20210501.SysctlConfig_STATUS
+                    description: Storage version of v1beta20210501.SysctlConfig_STATUS Sysctl settings for Linux agent nodes.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2287,7 +2291,7 @@ spec:
               podSubnetID:
                 type: string
               powerState:
-                description: Storage version of v1beta20210501.PowerState_STATUS
+                description: Storage version of v1beta20210501.PowerState_STATUS Describes the Power State of the cluster
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2316,7 +2320,7 @@ spec:
               type:
                 type: string
               upgradeSettings:
-                description: Storage version of v1beta20210501.AgentPoolUpgradeSettings_STATUS
+                description: Storage version of v1beta20210501.AgentPoolUpgradeSettings_STATUS Settings for upgrading an agentpool
                 properties:
                   $propertyBag:
                     additionalProperties:

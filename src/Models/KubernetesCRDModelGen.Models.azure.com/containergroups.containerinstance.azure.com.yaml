@@ -41,7 +41,7 @@ spec:
     name: v1beta20211001
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/resourceDefinitions/containerGroups'
+        description: 'Generator information: - Generated from: /containerinstance/resource-manager/Microsoft.ContainerInstance/stable/2021-10-01/containerInstance.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerInstance/containerGroups/{containerGroupName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -59,6 +59,7 @@ spec:
               containers:
                 description: 'Containers: The containers within the container group.'
                 items:
+                  description: A container instance.
                   properties:
                     command:
                       description: 'Command: The commands to execute within the container instance in exec form.'
@@ -68,6 +69,7 @@ spec:
                     environmentVariables:
                       description: 'EnvironmentVariables: The environment variables to set in the container instance.'
                       items:
+                        description: The environment variable to set within the container instance.
                         properties:
                           name:
                             description: 'Name: The name of the environment variable.'
@@ -96,10 +98,10 @@ spec:
                       description: 'Image: The name of the image used to create the container instance.'
                       type: string
                     livenessProbe:
-                      description: 'LivenessProbe: The container probe, for liveness or readiness'
+                      description: 'LivenessProbe: The liveness probe.'
                       properties:
                         exec:
-                          description: 'Exec: The container execution command, for liveness or readiness probe'
+                          description: 'Exec: The execution command to probe'
                           properties:
                             command:
                               description: 'Command: The commands to execute within the container.'
@@ -111,12 +113,12 @@ spec:
                           description: 'FailureThreshold: The failure threshold.'
                           type: integer
                         httpGet:
-                          description: 'HttpGet: The container Http Get settings, for liveness or readiness probe'
+                          description: 'HttpGet: The Http Get settings to probe'
                           properties:
                             httpHeaders:
                               description: 'HttpHeaders: The HTTP headers.'
                               items:
-                                description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/HttpHeader'
+                                description: The HTTP header.
                                 properties:
                                   name:
                                     description: 'Name: The header name.'
@@ -160,7 +162,7 @@ spec:
                     ports:
                       description: 'Ports: The exposed ports on the container instance.'
                       items:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerPort'
+                        description: The port exposed on the container instance.
                         properties:
                           port:
                             description: 'Port: The port number exposed within the container group.'
@@ -176,10 +178,10 @@ spec:
                         type: object
                       type: array
                     readinessProbe:
-                      description: 'ReadinessProbe: The container probe, for liveness or readiness'
+                      description: 'ReadinessProbe: The readiness probe.'
                       properties:
                         exec:
-                          description: 'Exec: The container execution command, for liveness or readiness probe'
+                          description: 'Exec: The execution command to probe'
                           properties:
                             command:
                               description: 'Command: The commands to execute within the container.'
@@ -191,12 +193,12 @@ spec:
                           description: 'FailureThreshold: The failure threshold.'
                           type: integer
                         httpGet:
-                          description: 'HttpGet: The container Http Get settings, for liveness or readiness probe'
+                          description: 'HttpGet: The Http Get settings to probe'
                           properties:
                             httpHeaders:
                               description: 'HttpHeaders: The HTTP headers.'
                               items:
-                                description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/HttpHeader'
+                                description: The HTTP header.
                                 properties:
                                   name:
                                     description: 'Name: The header name.'
@@ -235,16 +237,16 @@ spec:
                           type: integer
                       type: object
                     resources:
-                      description: 'Resources: The resource requirements.'
+                      description: 'Resources: The resource requirements of the container instance.'
                       properties:
                         limits:
-                          description: 'Limits: The resource limits.'
+                          description: 'Limits: The resource limits of this container instance.'
                           properties:
                             cpu:
                               description: 'Cpu: The CPU limit of this container instance.'
                               type: number
                             gpu:
-                              description: 'Gpu: The GPU resource.'
+                              description: 'Gpu: The GPU limit of this container instance.'
                               properties:
                                 count:
                                   description: 'Count: The count of the GPU resource.'
@@ -265,13 +267,13 @@ spec:
                               type: number
                           type: object
                         requests:
-                          description: 'Requests: The resource requests.'
+                          description: 'Requests: The resource requests of this container instance.'
                           properties:
                             cpu:
                               description: 'Cpu: The CPU request of this container instance.'
                               type: number
                             gpu:
-                              description: 'Gpu: The GPU resource.'
+                              description: 'Gpu: The GPU request of this container instance.'
                               properties:
                                 count:
                                   description: 'Count: The count of the GPU resource.'
@@ -300,7 +302,7 @@ spec:
                     volumeMounts:
                       description: 'VolumeMounts: The volume mounts available to the container instance.'
                       items:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/VolumeMount'
+                        description: The properties of the volume mount.
                         properties:
                           mountPath:
                             description: 'MountPath: The path within the container where the volume should be mounted. Must not contain colon (:).'
@@ -323,7 +325,7 @@ spec:
                   type: object
                 type: array
               diagnostics:
-                description: 'Diagnostics: Container group diagnostic information.'
+                description: 'Diagnostics: The diagnostic information for a container group.'
                 properties:
                   logAnalytics:
                     description: 'LogAnalytics: Container group log analytics information.'
@@ -378,7 +380,7 @@ spec:
                     type: object
                 type: object
               dnsConfig:
-                description: 'DnsConfig: DNS configuration for the container group.'
+                description: 'DnsConfig: The DNS config information for a container group.'
                 properties:
                   nameServers:
                     description: 'NameServers: The DNS servers for the container group.'
@@ -395,7 +397,7 @@ spec:
                 - nameServers
                 type: object
               encryptionProperties:
-                description: 'EncryptionProperties: The container group encryption properties.'
+                description: 'EncryptionProperties: The encryption properties for a container group.'
                 properties:
                   keyName:
                     description: 'KeyName: The encryption key name.'
@@ -412,7 +414,7 @@ spec:
                 - vaultBaseUrl
                 type: object
               identity:
-                description: 'Identity: Identity for the container group.'
+                description: 'Identity: The identity of the container group, if configured.'
                 properties:
                   type:
                     description: "Type: The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group."
@@ -426,6 +428,7 @@ spec:
               imageRegistryCredentials:
                 description: 'ImageRegistryCredentials: The image registry credentials by which the container group is created from.'
                 items:
+                  description: Image registry credential.
                   properties:
                     identity:
                       description: 'Identity: The identity for the private registry.'
@@ -459,6 +462,7 @@ spec:
               initContainers:
                 description: 'InitContainers: The init containers for a container group.'
                 items:
+                  description: The init container definition.
                   properties:
                     command:
                       description: 'Command: The command to execute within the init container in exec form.'
@@ -468,6 +472,7 @@ spec:
                     environmentVariables:
                       description: 'EnvironmentVariables: The environment variables to set in the init container.'
                       items:
+                        description: The environment variable to set within the container instance.
                         properties:
                           name:
                             description: 'Name: The name of the environment variable.'
@@ -501,7 +506,7 @@ spec:
                     volumeMounts:
                       description: 'VolumeMounts: The volume mounts available to the init container.'
                       items:
-                        description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/VolumeMount'
+                        description: The properties of the volume mount.
                         properties:
                           mountPath:
                             description: 'MountPath: The path within the container where the volume should be mounted. Must not contain colon (:).'
@@ -522,7 +527,7 @@ spec:
                   type: object
                 type: array
               ipAddress:
-                description: 'IpAddress: IP address for the container group.'
+                description: 'IpAddress: The IP address type of the container group.'
                 properties:
                   autoGeneratedDomainNameLabelScope:
                     description: "AutoGeneratedDomainNameLabelScope: The value representing the security enum. The 'Unsecure' value is the default value if not selected and means the object's domain name label is not secured against subdomain takeover. The 'TenantReuse' value is the default value if selected and means the object's domain name label can be reused within the same tenant. The 'SubscriptionReuse' value means the object's domain name label can be reused within the same subscription. The 'ResourceGroupReuse' value means the object's domain name label can be reused within the same resource group. The 'NoReuse' value means the object's domain name label cannot be reused within the same resource group, subscription, or tenant."
@@ -542,7 +547,7 @@ spec:
                   ports:
                     description: 'Ports: The list of ports exposed on the container group.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/Port'
+                      description: The port exposed on the container group.
                       properties:
                         port:
                           description: 'Port: The port number.'
@@ -568,7 +573,7 @@ spec:
                 - type
                 type: object
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: The resource location.'
                 type: string
               osType:
                 description: 'OsType: The operating system type required by the containers in the container group.'
@@ -586,7 +591,7 @@ spec:
                 - name
                 type: object
               restartPolicy:
-                description: 'RestartPolicy: Restart policy for all containers within the container group. - `Always` Always restart - `OnFailure` Restart on failure - `Never` Never restart .'
+                description: 'RestartPolicy: Restart policy for all containers within the container group. - `Always` Always restart - `OnFailure` Restart on failure - `Never` Never restart'
                 enum:
                 - Always
                 - Never
@@ -601,7 +606,7 @@ spec:
               subnetIds:
                 description: 'SubnetIds: The subnet resource IDs for a container group.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerGroupSubnetId'
+                  description: Container group subnet information.
                   properties:
                     name:
                       description: 'Name: Friendly name for the subnet.'
@@ -630,15 +635,15 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: The resource tags.'
                 type: object
               volumes:
                 description: 'Volumes: The list of volumes that can be mounted by containers in this container group.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/Volume'
+                  description: The properties of the volume.
                   properties:
                     azureFile:
-                      description: 'AzureFile: The properties of the Azure File volume. Azure File shares are mounted as volumes.'
+                      description: 'AzureFile: The Azure File volume.'
                       properties:
                         readOnly:
                           description: 'ReadOnly: The flag indicating whether the Azure File shared mounted as a volume is read-only.'
@@ -662,7 +667,7 @@ spec:
                       description: 'EmptyDir: The empty directory volume.'
                       type: object
                     gitRepo:
-                      description: 'GitRepo: Represents a volume that is populated with the contents of a git repository'
+                      description: 'GitRepo: The git repo volume.'
                       properties:
                         directory:
                           description: "Directory: Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name."
@@ -699,6 +704,7 @@ spec:
             - owner
             type: object
           status:
+            description: A container group.
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -738,6 +744,7 @@ spec:
               containers:
                 description: 'Containers: The containers within the container group.'
                 items:
+                  description: A container instance.
                   properties:
                     command:
                       description: 'Command: The commands to execute within the container instance in exec form.'
@@ -747,6 +754,7 @@ spec:
                     environmentVariables:
                       description: 'EnvironmentVariables: The environment variables to set in the container instance.'
                       items:
+                        description: The environment variable to set within the container instance.
                         properties:
                           name:
                             description: 'Name: The name of the environment variable.'
@@ -784,6 +792,7 @@ spec:
                         events:
                           description: 'Events: The events of the container instance.'
                           items:
+                            description: A container group or container instance event.
                             properties:
                               count:
                                 description: 'Count: The count of the event.'
@@ -849,6 +858,7 @@ spec:
                             httpHeaders:
                               description: 'HttpHeaders: The HTTP headers.'
                               items:
+                                description: The HTTP header.
                                 properties:
                                   name:
                                     description: 'Name: The header name.'
@@ -887,6 +897,7 @@ spec:
                     ports:
                       description: 'Ports: The exposed ports on the container instance.'
                       items:
+                        description: The port exposed on the container instance.
                         properties:
                           port:
                             description: 'Port: The port number exposed within the container group.'
@@ -917,6 +928,7 @@ spec:
                             httpHeaders:
                               description: 'HttpHeaders: The HTTP headers.'
                               items:
+                                description: The HTTP header.
                                 properties:
                                   name:
                                     description: 'Name: The header name.'
@@ -996,6 +1008,7 @@ spec:
                     volumeMounts:
                       description: 'VolumeMounts: The volume mounts available to the container instance.'
                       items:
+                        description: The properties of the volume mount.
                         properties:
                           mountPath:
                             description: 'MountPath: The path within the container where the volume should be mounted. Must not contain colon (:).'
@@ -1074,6 +1087,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
+                      description: "The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
                       properties:
                         clientId:
                           description: 'ClientId: The client id of user assigned identity.'
@@ -1088,6 +1102,7 @@ spec:
               imageRegistryCredentials:
                 description: 'ImageRegistryCredentials: The image registry credentials by which the container group is created from.'
                 items:
+                  description: Image registry credential.
                   properties:
                     identity:
                       description: 'Identity: The identity for the private registry.'
@@ -1106,6 +1121,7 @@ spec:
               initContainers:
                 description: 'InitContainers: The init containers for a container group.'
                 items:
+                  description: The init container definition.
                   properties:
                     command:
                       description: 'Command: The command to execute within the init container in exec form.'
@@ -1115,6 +1131,7 @@ spec:
                     environmentVariables:
                       description: 'EnvironmentVariables: The environment variables to set in the init container.'
                       items:
+                        description: The environment variable to set within the container instance.
                         properties:
                           name:
                             description: 'Name: The name of the environment variable.'
@@ -1152,6 +1169,7 @@ spec:
                         events:
                           description: 'Events: The events of the init container.'
                           items:
+                            description: A container group or container instance event.
                             properties:
                               count:
                                 description: 'Count: The count of the event.'
@@ -1202,6 +1220,7 @@ spec:
                     volumeMounts:
                       description: 'VolumeMounts: The volume mounts available to the init container.'
                       items:
+                        description: The properties of the volume mount.
                         properties:
                           mountPath:
                             description: 'MountPath: The path within the container where the volume should be mounted. Must not contain colon (:).'
@@ -1222,6 +1241,7 @@ spec:
                   events:
                     description: 'Events: The events of this container group.'
                     items:
+                      description: A container group or container instance event.
                       properties:
                         count:
                           description: 'Count: The count of the event.'
@@ -1265,6 +1285,7 @@ spec:
                   ports:
                     description: 'Ports: The list of ports exposed on the container group.'
                     items:
+                      description: The port exposed on the container group.
                       properties:
                         port:
                           description: 'Port: The port number.'
@@ -1299,6 +1320,7 @@ spec:
               subnetIds:
                 description: 'SubnetIds: The subnet resource IDs for a container group.'
                 items:
+                  description: Container group subnet information.
                   properties:
                     id:
                       description: 'Id: Resource ID of virtual network and subnet.'
@@ -1319,6 +1341,7 @@ spec:
               volumes:
                 description: 'Volumes: The list of volumes that can be mounted by containers in this container group.'
                 items:
+                  description: The properties of the volume.
                   properties:
                     azureFile:
                       description: 'AzureFile: The Azure File volume.'
@@ -1391,7 +1414,7 @@ spec:
     name: v1beta20211001storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20211001.ContainerGroup Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/resourceDefinitions/containerGroups'
+        description: 'Storage version of v1beta20211001.ContainerGroup Generator information: - Generated from: /containerinstance/resource-manager/Microsoft.ContainerInstance/stable/2021-10-01/containerInstance.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerInstance/containerGroups/{containerGroupName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1414,7 +1437,7 @@ spec:
                 type: string
               containers:
                 items:
-                  description: Storage version of v1beta20211001.ContainerGroup_Properties_Containers_Spec
+                  description: Storage version of v1beta20211001.Container A container instance.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1427,7 +1450,7 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1beta20211001.ContainerGroup_Properties_Containers_Properties_EnvironmentVariables_Spec
+                        description: Storage version of v1beta20211001.EnvironmentVariable The environment variable to set within the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1456,7 +1479,7 @@ spec:
                     image:
                       type: string
                     livenessProbe:
-                      description: 'Storage version of v1beta20211001.ContainerProbe Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerProbe'
+                      description: Storage version of v1beta20211001.ContainerProbe The container probe, for liveness or readiness
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1464,7 +1487,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: 'Storage version of v1beta20211001.ContainerExec Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerExec'
+                          description: Storage version of v1beta20211001.ContainerExec The container execution command, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1479,7 +1502,7 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: 'Storage version of v1beta20211001.ContainerHttpGet Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerHttpGet'
+                          description: Storage version of v1beta20211001.ContainerHttpGet The container Http Get settings, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1488,7 +1511,7 @@ spec:
                               type: object
                             httpHeaders:
                               items:
-                                description: 'Storage version of v1beta20211001.HttpHeader Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/HttpHeader'
+                                description: Storage version of v1beta20211001.HttpHeader The HTTP header.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
@@ -1521,7 +1544,7 @@ spec:
                       type: string
                     ports:
                       items:
-                        description: 'Storage version of v1beta20211001.ContainerPort Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerPort'
+                        description: Storage version of v1beta20211001.ContainerPort The port exposed on the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1535,7 +1558,7 @@ spec:
                         type: object
                       type: array
                     readinessProbe:
-                      description: 'Storage version of v1beta20211001.ContainerProbe Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerProbe'
+                      description: Storage version of v1beta20211001.ContainerProbe The container probe, for liveness or readiness
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1543,7 +1566,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: 'Storage version of v1beta20211001.ContainerExec Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerExec'
+                          description: Storage version of v1beta20211001.ContainerExec The container execution command, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1558,7 +1581,7 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: 'Storage version of v1beta20211001.ContainerHttpGet Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerHttpGet'
+                          description: Storage version of v1beta20211001.ContainerHttpGet The container Http Get settings, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1567,7 +1590,7 @@ spec:
                               type: object
                             httpHeaders:
                               items:
-                                description: 'Storage version of v1beta20211001.HttpHeader Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/HttpHeader'
+                                description: Storage version of v1beta20211001.HttpHeader The HTTP header.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
@@ -1597,7 +1620,7 @@ spec:
                           type: integer
                       type: object
                     resources:
-                      description: 'Storage version of v1beta20211001.ResourceRequirements Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ResourceRequirements'
+                      description: Storage version of v1beta20211001.ResourceRequirements The resource requirements.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1605,7 +1628,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         limits:
-                          description: 'Storage version of v1beta20211001.ResourceLimits Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ResourceLimits'
+                          description: Storage version of v1beta20211001.ResourceLimits The resource limits.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1615,7 +1638,7 @@ spec:
                             cpu:
                               type: number
                             gpu:
-                              description: 'Storage version of v1beta20211001.GpuResource Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/GpuResource'
+                              description: Storage version of v1beta20211001.GpuResource The GPU resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1631,7 +1654,7 @@ spec:
                               type: number
                           type: object
                         requests:
-                          description: 'Storage version of v1beta20211001.ResourceRequests Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ResourceRequests'
+                          description: Storage version of v1beta20211001.ResourceRequests The resource requests.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1641,7 +1664,7 @@ spec:
                             cpu:
                               type: number
                             gpu:
-                              description: 'Storage version of v1beta20211001.GpuResource Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/GpuResource'
+                              description: Storage version of v1beta20211001.GpuResource The GPU resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1659,7 +1682,7 @@ spec:
                       type: object
                     volumeMounts:
                       items:
-                        description: 'Storage version of v1beta20211001.VolumeMount Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/VolumeMount'
+                        description: Storage version of v1beta20211001.VolumeMount The properties of the volume mount.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1677,7 +1700,7 @@ spec:
                   type: object
                 type: array
               diagnostics:
-                description: Storage version of v1beta20211001.ContainerGroup_Properties_Diagnostics_Spec
+                description: Storage version of v1beta20211001.ContainerGroupDiagnostics Container group diagnostic information.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1685,7 +1708,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   logAnalytics:
-                    description: Storage version of v1beta20211001.ContainerGroup_Properties_Diagnostics_LogAnalytics_Spec
+                    description: Storage version of v1beta20211001.LogAnalytics Container group log analytics information.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1733,7 +1756,7 @@ spec:
                     type: object
                 type: object
               dnsConfig:
-                description: 'Storage version of v1beta20211001.DnsConfiguration Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/DnsConfiguration'
+                description: Storage version of v1beta20211001.DnsConfiguration DNS configuration for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1750,7 +1773,7 @@ spec:
                     type: string
                 type: object
               encryptionProperties:
-                description: 'Storage version of v1beta20211001.EncryptionProperties Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/EncryptionProperties'
+                description: Storage version of v1beta20211001.EncryptionProperties The container group encryption properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1765,7 +1788,7 @@ spec:
                     type: string
                 type: object
               identity:
-                description: 'Storage version of v1beta20211001.ContainerGroupIdentity Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerGroupIdentity'
+                description: Storage version of v1beta20211001.ContainerGroupIdentity Identity for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1777,7 +1800,7 @@ spec:
                 type: object
               imageRegistryCredentials:
                 items:
-                  description: Storage version of v1beta20211001.ContainerGroup_Properties_ImageRegistryCredentials_Spec
+                  description: Storage version of v1beta20211001.ImageRegistryCredential Image registry credential.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1809,7 +1832,7 @@ spec:
                 type: array
               initContainers:
                 items:
-                  description: Storage version of v1beta20211001.ContainerGroup_Properties_InitContainers_Spec
+                  description: Storage version of v1beta20211001.InitContainerDefinition The init container definition.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1822,7 +1845,7 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1beta20211001.ContainerGroup_Properties_InitContainers_Properties_EnvironmentVariables_Spec
+                        description: Storage version of v1beta20211001.EnvironmentVariable The environment variable to set within the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1854,7 +1877,7 @@ spec:
                       type: string
                     volumeMounts:
                       items:
-                        description: 'Storage version of v1beta20211001.VolumeMount Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/VolumeMount'
+                        description: Storage version of v1beta20211001.VolumeMount The properties of the volume mount.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -1872,7 +1895,7 @@ spec:
                   type: object
                 type: array
               ipAddress:
-                description: 'Storage version of v1beta20211001.IpAddress Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/IpAddress'
+                description: Storage version of v1beta20211001.IpAddress IP address for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1887,7 +1910,7 @@ spec:
                     type: string
                   ports:
                     items:
-                      description: 'Storage version of v1beta20211001.Port Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/Port'
+                      description: Storage version of v1beta20211001.Port The port exposed on the container group.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1924,7 +1947,7 @@ spec:
                 type: string
               subnetIds:
                 items:
-                  description: 'Storage version of v1beta20211001.ContainerGroupSubnetId Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/ContainerGroupSubnetId'
+                  description: Storage version of v1beta20211001.ContainerGroupSubnetId Container group subnet information.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1960,7 +1983,7 @@ spec:
                 type: object
               volumes:
                 items:
-                  description: 'Storage version of v1beta20211001.Volume Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/Volume'
+                  description: Storage version of v1beta20211001.Volume The properties of the volume.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1968,7 +1991,7 @@ spec:
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
                     azureFile:
-                      description: 'Storage version of v1beta20211001.AzureFileVolume Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/AzureFileVolume'
+                      description: Storage version of v1beta20211001.AzureFileVolume The properties of the Azure File volume. Azure File shares are mounted as volumes.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1989,7 +2012,7 @@ spec:
                         x-kubernetes-preserve-unknown-fields: true
                       type: object
                     gitRepo:
-                      description: 'Storage version of v1beta20211001.GitRepoVolume Generated from: https://schema.management.azure.com/schemas/2021-10-01/Microsoft.ContainerInstance.json#/definitions/GitRepoVolume'
+                      description: Storage version of v1beta20211001.GitRepoVolume Represents a volume that is populated with the contents of a git repository
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2019,7 +2042,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20211001.ContainerGroup_STATUS
+            description: Storage version of v1beta20211001.ContainerGroup_STATUS A container group.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2062,7 +2085,7 @@ spec:
                 type: array
               containers:
                 items:
-                  description: Storage version of v1beta20211001.Container_STATUS
+                  description: Storage version of v1beta20211001.Container_STATUS A container instance.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2075,7 +2098,7 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1beta20211001.EnvironmentVariable_STATUS
+                        description: Storage version of v1beta20211001.EnvironmentVariable_STATUS The environment variable to set within the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2099,7 +2122,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         currentState:
-                          description: Storage version of v1beta20211001.ContainerState_STATUS
+                          description: Storage version of v1beta20211001.ContainerState_STATUS The container instance state.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2119,7 +2142,7 @@ spec:
                           type: object
                         events:
                           items:
-                            description: Storage version of v1beta20211001.Event_STATUS
+                            description: Storage version of v1beta20211001.Event_STATUS A container group or container instance event.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -2141,7 +2164,7 @@ spec:
                             type: object
                           type: array
                         previousState:
-                          description: Storage version of v1beta20211001.ContainerState_STATUS
+                          description: Storage version of v1beta20211001.ContainerState_STATUS The container instance state.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2163,7 +2186,7 @@ spec:
                           type: integer
                       type: object
                     livenessProbe:
-                      description: Storage version of v1beta20211001.ContainerProbe_STATUS
+                      description: Storage version of v1beta20211001.ContainerProbe_STATUS The container probe, for liveness or readiness
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2171,7 +2194,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: Storage version of v1beta20211001.ContainerExec_STATUS
+                          description: Storage version of v1beta20211001.ContainerExec_STATUS The container execution command, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2186,7 +2209,7 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: Storage version of v1beta20211001.ContainerHttpGet_STATUS
+                          description: Storage version of v1beta20211001.ContainerHttpGet_STATUS The container Http Get settings, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2195,7 +2218,7 @@ spec:
                               type: object
                             httpHeaders:
                               items:
-                                description: Storage version of v1beta20211001.HttpHeader_STATUS
+                                description: Storage version of v1beta20211001.HttpHeader_STATUS The HTTP header.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
@@ -2228,7 +2251,7 @@ spec:
                       type: string
                     ports:
                       items:
-                        description: Storage version of v1beta20211001.ContainerPort_STATUS
+                        description: Storage version of v1beta20211001.ContainerPort_STATUS The port exposed on the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2242,7 +2265,7 @@ spec:
                         type: object
                       type: array
                     readinessProbe:
-                      description: Storage version of v1beta20211001.ContainerProbe_STATUS
+                      description: Storage version of v1beta20211001.ContainerProbe_STATUS The container probe, for liveness or readiness
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2250,7 +2273,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: Storage version of v1beta20211001.ContainerExec_STATUS
+                          description: Storage version of v1beta20211001.ContainerExec_STATUS The container execution command, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2265,7 +2288,7 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: Storage version of v1beta20211001.ContainerHttpGet_STATUS
+                          description: Storage version of v1beta20211001.ContainerHttpGet_STATUS The container Http Get settings, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2274,7 +2297,7 @@ spec:
                               type: object
                             httpHeaders:
                               items:
-                                description: Storage version of v1beta20211001.HttpHeader_STATUS
+                                description: Storage version of v1beta20211001.HttpHeader_STATUS The HTTP header.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
@@ -2304,7 +2327,7 @@ spec:
                           type: integer
                       type: object
                     resources:
-                      description: Storage version of v1beta20211001.ResourceRequirements_STATUS
+                      description: Storage version of v1beta20211001.ResourceRequirements_STATUS The resource requirements.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2312,7 +2335,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         limits:
-                          description: Storage version of v1beta20211001.ResourceLimits_STATUS
+                          description: Storage version of v1beta20211001.ResourceLimits_STATUS The resource limits.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2322,7 +2345,7 @@ spec:
                             cpu:
                               type: number
                             gpu:
-                              description: Storage version of v1beta20211001.GpuResource_STATUS
+                              description: Storage version of v1beta20211001.GpuResource_STATUS The GPU resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2338,7 +2361,7 @@ spec:
                               type: number
                           type: object
                         requests:
-                          description: Storage version of v1beta20211001.ResourceRequests_STATUS
+                          description: Storage version of v1beta20211001.ResourceRequests_STATUS The resource requests.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2348,7 +2371,7 @@ spec:
                             cpu:
                               type: number
                             gpu:
-                              description: Storage version of v1beta20211001.GpuResource_STATUS
+                              description: Storage version of v1beta20211001.GpuResource_STATUS The GPU resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -2366,7 +2389,7 @@ spec:
                       type: object
                     volumeMounts:
                       items:
-                        description: Storage version of v1beta20211001.VolumeMount_STATUS
+                        description: Storage version of v1beta20211001.VolumeMount_STATUS The properties of the volume mount.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2384,7 +2407,7 @@ spec:
                   type: object
                 type: array
               diagnostics:
-                description: Storage version of v1beta20211001.ContainerGroupDiagnostics_STATUS
+                description: Storage version of v1beta20211001.ContainerGroupDiagnostics_STATUS Container group diagnostic information.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2392,7 +2415,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   logAnalytics:
-                    description: Storage version of v1beta20211001.LogAnalytics_STATUS
+                    description: Storage version of v1beta20211001.LogAnalytics_STATUS Container group log analytics information.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2410,7 +2433,7 @@ spec:
                     type: object
                 type: object
               dnsConfig:
-                description: Storage version of v1beta20211001.DnsConfiguration_STATUS
+                description: Storage version of v1beta20211001.DnsConfiguration_STATUS DNS configuration for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2427,7 +2450,7 @@ spec:
                     type: string
                 type: object
               encryptionProperties:
-                description: Storage version of v1beta20211001.EncryptionProperties_STATUS
+                description: Storage version of v1beta20211001.EncryptionProperties_STATUS The container group encryption properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2444,7 +2467,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20211001.ContainerGroupIdentity_STATUS
+                description: Storage version of v1beta20211001.ContainerGroupIdentity_STATUS Identity for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2459,7 +2482,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20211001.UserAssignedIdentities_STATUS
+                      description: "Storage version of v1beta20211001.UserAssignedIdentities_STATUS The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2475,7 +2498,7 @@ spec:
                 type: object
               imageRegistryCredentials:
                 items:
-                  description: Storage version of v1beta20211001.ImageRegistryCredential_STATUS
+                  description: Storage version of v1beta20211001.ImageRegistryCredential_STATUS Image registry credential.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2494,7 +2517,7 @@ spec:
                 type: array
               initContainers:
                 items:
-                  description: Storage version of v1beta20211001.InitContainerDefinition_STATUS
+                  description: Storage version of v1beta20211001.InitContainerDefinition_STATUS The init container definition.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2507,7 +2530,7 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1beta20211001.EnvironmentVariable_STATUS
+                        description: Storage version of v1beta20211001.EnvironmentVariable_STATUS The environment variable to set within the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2531,7 +2554,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         currentState:
-                          description: Storage version of v1beta20211001.ContainerState_STATUS
+                          description: Storage version of v1beta20211001.ContainerState_STATUS The container instance state.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2551,7 +2574,7 @@ spec:
                           type: object
                         events:
                           items:
-                            description: Storage version of v1beta20211001.Event_STATUS
+                            description: Storage version of v1beta20211001.Event_STATUS A container group or container instance event.
                             properties:
                               $propertyBag:
                                 additionalProperties:
@@ -2573,7 +2596,7 @@ spec:
                             type: object
                           type: array
                         previousState:
-                          description: Storage version of v1beta20211001.ContainerState_STATUS
+                          description: Storage version of v1beta20211001.ContainerState_STATUS The container instance state.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -2598,7 +2621,7 @@ spec:
                       type: string
                     volumeMounts:
                       items:
-                        description: Storage version of v1beta20211001.VolumeMount_STATUS
+                        description: Storage version of v1beta20211001.VolumeMount_STATUS The properties of the volume mount.
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2625,7 +2648,7 @@ spec:
                     type: object
                   events:
                     items:
-                      description: Storage version of v1beta20211001.Event_STATUS
+                      description: Storage version of v1beta20211001.Event_STATUS A container group or container instance event.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2650,7 +2673,7 @@ spec:
                     type: string
                 type: object
               ipAddress:
-                description: Storage version of v1beta20211001.IpAddress_STATUS
+                description: Storage version of v1beta20211001.IpAddress_STATUS IP address for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2667,7 +2690,7 @@ spec:
                     type: string
                   ports:
                     items:
-                      description: Storage version of v1beta20211001.Port_STATUS
+                      description: Storage version of v1beta20211001.Port_STATUS The port exposed on the container group.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2697,7 +2720,7 @@ spec:
                 type: string
               subnetIds:
                 items:
-                  description: Storage version of v1beta20211001.ContainerGroupSubnetId_STATUS
+                  description: Storage version of v1beta20211001.ContainerGroupSubnetId_STATUS Container group subnet information.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2718,7 +2741,7 @@ spec:
                 type: string
               volumes:
                 items:
-                  description: Storage version of v1beta20211001.Volume_STATUS
+                  description: Storage version of v1beta20211001.Volume_STATUS The properties of the volume.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2726,7 +2749,7 @@ spec:
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
                     azureFile:
-                      description: Storage version of v1beta20211001.AzureFileVolume_STATUS
+                      description: Storage version of v1beta20211001.AzureFileVolume_STATUS The properties of the Azure File volume. Azure File shares are mounted as volumes.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2747,7 +2770,7 @@ spec:
                         x-kubernetes-preserve-unknown-fields: true
                       type: object
                     gitRepo:
-                      description: Storage version of v1beta20211001.GitRepoVolume_STATUS
+                      description: Storage version of v1beta20211001.GitRepoVolume_STATUS Represents a volume that is populated with the contents of a git repository
                       properties:
                         $propertyBag:
                           additionalProperties:

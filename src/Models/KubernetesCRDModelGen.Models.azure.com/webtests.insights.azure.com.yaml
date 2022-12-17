@@ -54,7 +54,7 @@ spec:
           spec:
             properties:
               Configuration:
-                description: Deprecated version of WebTestPropertiesConfiguration. Use v1beta20180501preview.WebTestPropertiesConfiguration instead
+                description: Deprecated version of WebTestProperties_Configuration. Use v1beta20180501preview.WebTestProperties_Configuration instead
                 properties:
                   WebTest:
                     type: string
@@ -84,7 +84,7 @@ spec:
               Name:
                 type: string
               Request:
-                description: Deprecated version of WebTestPropertiesRequest. Use v1beta20180501preview.WebTestPropertiesRequest instead
+                description: Deprecated version of WebTestProperties_Request. Use v1beta20180501preview.WebTestProperties_Request instead
                 properties:
                   FollowRedirects:
                     type: boolean
@@ -114,10 +114,10 @@ spec:
               Timeout:
                 type: integer
               ValidationRules:
-                description: Deprecated version of WebTestPropertiesValidationRules. Use v1beta20180501preview.WebTestPropertiesValidationRules instead
+                description: Deprecated version of WebTestProperties_ValidationRules. Use v1beta20180501preview.WebTestProperties_ValidationRules instead
                 properties:
                   ContentValidation:
-                    description: Deprecated version of WebTestPropertiesValidationRulesContentValidation. Use v1beta20180501preview.WebTestPropertiesValidationRulesContentValidation instead
+                    description: Deprecated version of WebTestProperties_ValidationRules_ContentValidation. Use v1beta20180501preview.WebTestProperties_ValidationRules_ContentValidation instead
                     properties:
                       ContentMatch:
                         type: string
@@ -158,10 +158,11 @@ spec:
             - Locations
             - Name
             - SyntheticMonitorId
+            - location
             - owner
             type: object
           status:
-            description: Deprecated version of WebTest_STATUS. Use v1beta20180501preview.WebTest_STATUS instead
+            description: Deprecated version of Webtest_STATUS. Use v1beta20180501preview.Webtest_STATUS instead
             properties:
               Configuration:
                 description: Deprecated version of WebTestProperties_Configuration_STATUS. Use v1beta20180501preview.WebTestProperties_Configuration_STATUS instead
@@ -284,7 +285,9 @@ spec:
               provisioningState:
                 type: string
               tags:
-                x-kubernetes-preserve-unknown-fields: true
+                additionalProperties:
+                  type: string
+                type: object
               type:
                 type: string
             type: object
@@ -328,7 +331,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               Configuration:
-                description: Storage version of v1alpha1api20180501preview.WebTestPropertiesConfiguration Deprecated version of WebTestPropertiesConfiguration. Use v1beta20180501preview.WebTestPropertiesConfiguration instead
+                description: Storage version of v1alpha1api20180501preview.WebTestProperties_Configuration Deprecated version of WebTestProperties_Configuration. Use v1beta20180501preview.WebTestProperties_Configuration instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -362,7 +365,7 @@ spec:
               Name:
                 type: string
               Request:
-                description: Storage version of v1alpha1api20180501preview.WebTestPropertiesRequest Deprecated version of WebTestPropertiesRequest. Use v1beta20180501preview.WebTestPropertiesRequest instead
+                description: Storage version of v1alpha1api20180501preview.WebTestProperties_Request Deprecated version of WebTestProperties_Request. Use v1beta20180501preview.WebTestProperties_Request instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -402,7 +405,7 @@ spec:
               Timeout:
                 type: integer
               ValidationRules:
-                description: Storage version of v1alpha1api20180501preview.WebTestPropertiesValidationRules Deprecated version of WebTestPropertiesValidationRules. Use v1beta20180501preview.WebTestPropertiesValidationRules instead
+                description: Storage version of v1alpha1api20180501preview.WebTestProperties_ValidationRules Deprecated version of WebTestProperties_ValidationRules. Use v1beta20180501preview.WebTestProperties_ValidationRules instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -410,7 +413,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   ContentValidation:
-                    description: Storage version of v1alpha1api20180501preview.WebTestPropertiesValidationRulesContentValidation Deprecated version of WebTestPropertiesValidationRulesContentValidation. Use v1beta20180501preview.WebTestPropertiesValidationRulesContentValidation instead
+                    description: Storage version of v1alpha1api20180501preview.WebTestProperties_ValidationRules_ContentValidation Deprecated version of WebTestProperties_ValidationRules_ContentValidation. Use v1beta20180501preview.WebTestProperties_ValidationRules_ContentValidation instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -457,7 +460,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20180501preview.WebTest_STATUS Deprecated version of WebTest_STATUS. Use v1beta20180501preview.WebTest_STATUS instead
+            description: Storage version of v1alpha1api20180501preview.Webtest_STATUS Deprecated version of Webtest_STATUS. Use v1beta20180501preview.Webtest_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -613,7 +616,9 @@ spec:
               provisioningState:
                 type: string
               tags:
-                x-kubernetes-preserve-unknown-fields: true
+                additionalProperties:
+                  type: string
+                type: object
               type:
                 type: string
             type: object
@@ -638,7 +643,7 @@ spec:
     name: v1beta20180501preview
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/resourceDefinitions/webtests'
+        description: 'Generator information: - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/preview/2018-05-01-preview/webTests_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/webtests/{webTestName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -677,7 +682,7 @@ spec:
               Locations:
                 description: 'Locations: A list of where to physically run the tests from to give global coverage for accessibility of your application.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/definitions/WebTestGeolocation'
+                  description: Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
                   properties:
                     Id:
                       description: 'Id: Location ID for the WebTest to run from.'
@@ -696,7 +701,7 @@ spec:
                   Headers:
                     description: 'Headers: List of headers and their values to add to the WebTest call.'
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/definitions/HeaderField'
+                      description: A header to add to the WebTest.
                       properties:
                         key:
                           description: 'Key: The name of the header.'
@@ -761,7 +766,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               location:
-                description: 'Location: Location to deploy resource to'
+                description: 'Location: Resource location'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
@@ -775,13 +780,14 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags'
                 type: object
             required:
             - Kind
             - Locations
             - Name
             - SyntheticMonitorId
+            - location
             - owner
             type: object
           status:
@@ -808,6 +814,7 @@ spec:
               Locations:
                 description: 'Locations: A list of where to physically run the tests from to give global coverage for accessibility of your application.'
                 items:
+                  description: Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
                   properties:
                     Id:
                       description: 'Id: Location ID for the WebTest to run from.'
@@ -823,6 +830,7 @@ spec:
                   Headers:
                     description: 'Headers: List of headers and their values to add to the WebTest call.'
                     items:
+                      description: A header to add to the WebTest.
                       properties:
                         key:
                           description: 'Key: The name of the header.'
@@ -934,8 +942,10 @@ spec:
                 description: 'ProvisioningState: Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.'
                 type: string
               tags:
+                additionalProperties:
+                  type: string
                 description: 'Tags: Resource tags'
-                x-kubernetes-preserve-unknown-fields: true
+                type: object
               type:
                 description: 'Type: Azure resource type'
                 type: string
@@ -961,7 +971,7 @@ spec:
     name: v1beta20180501previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20180501preview.Webtest Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/resourceDefinitions/webtests'
+        description: 'Storage version of v1beta20180501preview.Webtest Generator information: - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/preview/2018-05-01-preview/webTests_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/webtests/{webTestName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -980,7 +990,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               Configuration:
-                description: 'Storage version of v1beta20180501preview.WebTestPropertiesConfiguration Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/definitions/WebTestPropertiesConfiguration'
+                description: Storage version of v1beta20180501preview.WebTestProperties_Configuration
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1000,7 +1010,7 @@ spec:
                 type: string
               Locations:
                 items:
-                  description: 'Storage version of v1beta20180501preview.WebTestGeolocation Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/definitions/WebTestGeolocation'
+                  description: Storage version of v1beta20180501preview.WebTestGeolocation Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1014,7 +1024,7 @@ spec:
               Name:
                 type: string
               Request:
-                description: 'Storage version of v1beta20180501preview.WebTestPropertiesRequest Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/definitions/WebTestPropertiesRequest'
+                description: Storage version of v1beta20180501preview.WebTestProperties_Request
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1025,7 +1035,7 @@ spec:
                     type: boolean
                   Headers:
                     items:
-                      description: 'Storage version of v1beta20180501preview.HeaderField Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/definitions/HeaderField'
+                      description: Storage version of v1beta20180501preview.HeaderField A header to add to the WebTest.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1054,7 +1064,7 @@ spec:
               Timeout:
                 type: integer
               ValidationRules:
-                description: 'Storage version of v1beta20180501preview.WebTestPropertiesValidationRules Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/definitions/WebTestPropertiesValidationRules'
+                description: Storage version of v1beta20180501preview.WebTestProperties_ValidationRules
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1062,7 +1072,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   ContentValidation:
-                    description: 'Storage version of v1beta20180501preview.WebTestPropertiesValidationRulesContentValidation Generated from: https://schema.management.azure.com/schemas/2018-05-01-preview/Microsoft.Insights.Application.json#/definitions/WebTestPropertiesValidationRulesContentValidation'
+                    description: Storage version of v1beta20180501preview.WebTestProperties_ValidationRules_ContentValidation
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1109,7 +1119,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20180501preview.WebTest_STATUS
+            description: Storage version of v1beta20180501preview.Webtest_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1137,7 +1147,7 @@ spec:
                 type: string
               Locations:
                 items:
-                  description: Storage version of v1beta20180501preview.WebTestGeolocation_STATUS
+                  description: Storage version of v1beta20180501preview.WebTestGeolocation_STATUS Geo-physical location to run a WebTest from. You must specify one or more locations for the test to run from.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1160,7 +1170,7 @@ spec:
                     type: boolean
                   Headers:
                     items:
-                      description: Storage version of v1beta20180501preview.HeaderField_STATUS
+                      description: Storage version of v1beta20180501preview.HeaderField_STATUS A header to add to the WebTest.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1265,7 +1275,9 @@ spec:
               provisioningState:
                 type: string
               tags:
-                x-kubernetes-preserve-unknown-fields: true
+                additionalProperties:
+                  type: string
+                type: object
               type:
                 type: string
             type: object

@@ -41,7 +41,7 @@ spec:
     name: v1beta20220501
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2022-05-01/Microsoft.AppConfiguration.json#/resourceDefinitions/configurationStores'
+        description: 'Generator information: - Generated from: /appconfiguration/resource-manager/Microsoft.AppConfiguration/stable/2022-05-01/appconfiguration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -72,10 +72,10 @@ spec:
                 description: 'EnablePurgeProtection: Property specifying whether protection against purge is enabled for this configuration store.'
                 type: boolean
               encryption:
-                description: 'Encryption: The encryption settings for a configuration store.'
+                description: 'Encryption: The encryption settings of the configuration store.'
                 properties:
                   keyVaultProperties:
-                    description: 'KeyVaultProperties: Settings concerning key vault encryption for a configuration store.'
+                    description: 'KeyVaultProperties: Key vault properties.'
                     properties:
                       identityClientId:
                         description: 'IdentityClientId: The client id of the identity which will be used to access key vault.'
@@ -86,7 +86,7 @@ spec:
                     type: object
                 type: object
               identity:
-                description: 'Identity: An identity that can be associated with a resource.'
+                description: 'Identity: The managed identity information, if configured.'
                 properties:
                   type:
                     description: "Type: The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities."
@@ -280,7 +280,7 @@ spec:
                 - Enabled
                 type: string
               sku:
-                description: 'Sku: Describes a configuration store SKU.'
+                description: 'Sku: The sku of the configuration store.'
                 properties:
                   name:
                     description: 'Name: The SKU name of the configuration store.'
@@ -292,7 +292,7 @@ spec:
                 description: 'SoftDeleteRetentionInDays: The amount of time in days that the configuration store will be retained when it is soft deleted.'
                 type: integer
               systemData:
-                description: 'SystemData: Metadata pertaining to creation and last modification of the resource.'
+                description: 'SystemData: Resource system metadata.'
                 properties:
                   createdAt:
                     description: 'CreatedAt: The timestamp of resource creation (UTC).'
@@ -326,13 +326,15 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Name-value pairs to add to the resource'
+                description: 'Tags: Resource tags.'
                 type: object
             required:
+            - location
             - owner
             - sku
             type: object
           status:
+            description: The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -415,6 +417,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
+                      description: A resource identity that is managed by the user of the service.
                       properties:
                         clientId:
                           description: 'ClientId: The client ID of the user-assigned identity.'
@@ -435,6 +438,7 @@ spec:
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: The list of private endpoint connections that are set up for this resource.'
                 items:
+                  description: A reference to a related private endpoint connection.
                   properties:
                     id:
                       description: 'Id: The resource ID.'
@@ -509,7 +513,7 @@ spec:
     name: v1beta20220501storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20220501.ConfigurationStore Generated from: https://schema.management.azure.com/schemas/2022-05-01/Microsoft.AppConfiguration.json#/resourceDefinitions/configurationStores'
+        description: 'Storage version of v1beta20220501.ConfigurationStore Generator information: - Generated from: /appconfiguration/resource-manager/Microsoft.AppConfiguration/stable/2022-05-01/appconfiguration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AppConfiguration/configurationStores/{configStoreName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -540,7 +544,7 @@ spec:
               enablePurgeProtection:
                 type: boolean
               encryption:
-                description: 'Storage version of v1beta20220501.EncryptionProperties Generated from: https://schema.management.azure.com/schemas/2022-05-01/Microsoft.AppConfiguration.json#/definitions/EncryptionProperties'
+                description: Storage version of v1beta20220501.EncryptionProperties The encryption settings for a configuration store.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -548,7 +552,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   keyVaultProperties:
-                    description: 'Storage version of v1beta20220501.KeyVaultProperties Generated from: https://schema.management.azure.com/schemas/2022-05-01/Microsoft.AppConfiguration.json#/definitions/KeyVaultProperties'
+                    description: Storage version of v1beta20220501.KeyVaultProperties Settings concerning key vault encryption for a configuration store.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -562,7 +566,7 @@ spec:
                     type: object
                 type: object
               identity:
-                description: 'Storage version of v1beta20220501.ResourceIdentity Generated from: https://schema.management.azure.com/schemas/2022-05-01/Microsoft.AppConfiguration.json#/definitions/ResourceIdentity'
+                description: Storage version of v1beta20220501.ResourceIdentity An identity that can be associated with a resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -762,7 +766,7 @@ spec:
               publicNetworkAccess:
                 type: string
               sku:
-                description: 'Storage version of v1beta20220501.Sku Generated from: https://schema.management.azure.com/schemas/2022-05-01/Microsoft.AppConfiguration.json#/definitions/Sku'
+                description: Storage version of v1beta20220501.Sku Describes a configuration store SKU.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -775,7 +779,7 @@ spec:
               softDeleteRetentionInDays:
                 type: integer
               systemData:
-                description: 'Storage version of v1beta20220501.SystemData Generated from: https://schema.management.azure.com/schemas/2022-05-01/Microsoft.AppConfiguration.json#/definitions/SystemData'
+                description: Storage version of v1beta20220501.SystemData Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -803,7 +807,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20220501.ConfigurationStore_STATUS
+            description: Storage version of v1beta20220501.ConfigurationStore_STATUS The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -853,7 +857,7 @@ spec:
               enablePurgeProtection:
                 type: boolean
               encryption:
-                description: Storage version of v1beta20220501.EncryptionProperties_STATUS
+                description: Storage version of v1beta20220501.EncryptionProperties_STATUS The encryption settings for a configuration store.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -861,7 +865,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   keyVaultProperties:
-                    description: Storage version of v1beta20220501.KeyVaultProperties_STATUS
+                    description: Storage version of v1beta20220501.KeyVaultProperties_STATUS Settings concerning key vault encryption for a configuration store.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -879,7 +883,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20220501.ResourceIdentity_STATUS
+                description: Storage version of v1beta20220501.ResourceIdentity_STATUS An identity that can be associated with a resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -894,7 +898,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20220501.UserIdentity_STATUS
+                      description: Storage version of v1beta20220501.UserIdentity_STATUS A resource identity that is managed by the user of the service.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -914,7 +918,7 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20220501.PrivateEndpointConnectionReference_STATUS
+                  description: Storage version of v1beta20220501.PrivateEndpointConnectionReference_STATUS A reference to a related private endpoint connection.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -930,7 +934,7 @@ spec:
               publicNetworkAccess:
                 type: string
               sku:
-                description: Storage version of v1beta20220501.Sku_STATUS
+                description: Storage version of v1beta20220501.Sku_STATUS Describes a configuration store SKU.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -943,7 +947,7 @@ spec:
               softDeleteRetentionInDays:
                 type: integer
               systemData:
-                description: Storage version of v1beta20220501.SystemData_STATUS
+                description: Storage version of v1beta20220501.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

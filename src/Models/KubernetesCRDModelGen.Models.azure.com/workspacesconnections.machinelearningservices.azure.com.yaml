@@ -41,7 +41,7 @@ spec:
     name: v1beta20210701
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.MachineLearningServices.json#/resourceDefinitions/workspaces_connections'
+        description: 'Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections/{connectionName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -62,9 +62,6 @@ spec:
               category:
                 description: 'Category: Category of the workspace connection.'
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a machinelearningservices.azure.com/Workspace resource'
                 properties:
@@ -74,11 +71,6 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
               target:
                 description: 'Target: Target of the workspace connection.'
                 type: string
@@ -86,7 +78,7 @@ spec:
                 description: 'Value: Value details of the workspace connection.'
                 type: string
               valueFormat:
-                description: 'ValueFormat: format for the workspace connection value.'
+                description: 'ValueFormat: format for the workspace connection value'
                 enum:
                 - JSON
                 type: string
@@ -176,7 +168,7 @@ spec:
     name: v1beta20210701storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210701.WorkspacesConnection Generated from: https://schema.management.azure.com/schemas/2021-07-01/Microsoft.MachineLearningServices.json#/resourceDefinitions/workspaces_connections'
+        description: 'Storage version of v1beta20210701.WorkspacesConnection Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections/{connectionName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -201,8 +193,6 @@ spec:
                 type: string
               category:
                 type: string
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -214,10 +204,6 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
               target:
                 type: string
               value:
@@ -228,7 +214,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210701.WorkspaceConnection_STATUS
+            description: Storage version of v1beta20210701.Workspaces_Connection_STATUS
             properties:
               $propertyBag:
                 additionalProperties:

@@ -56,8 +56,6 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventgrid.azure.com/Domain resource'
                 properties:
@@ -67,15 +65,11 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Deprecated version of DomainTopic_STATUS. Use v1beta20200601.DomainTopic_STATUS instead
+            description: Deprecated version of Domains_Topic_STATUS. Use v1beta20200601.Domains_Topic_STATUS instead
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -182,8 +176,6 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -195,15 +187,11 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20200601.DomainTopic_STATUS Deprecated version of DomainTopic_STATUS. Use v1beta20200601.DomainTopic_STATUS instead
+            description: Storage version of v1alpha1api20200601.Domains_Topic_STATUS Deprecated version of Domains_Topic_STATUS. Use v1beta20200601.Domains_Topic_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -295,7 +283,7 @@ spec:
     name: v1beta20200601
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/resourceDefinitions/domains_topics'
+        description: 'Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -310,9 +298,6 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                description: 'Location: Location to deploy resource to'
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a eventgrid.azure.com/Domain resource'
                 properties:
@@ -321,11 +306,6 @@ spec:
                     type: string
                 required:
                 - name
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
                 type: object
             required:
             - owner
@@ -423,7 +403,7 @@ spec:
     name: v1beta20200601storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20200601.DomainsTopic Generated from: https://schema.management.azure.com/schemas/2020-06-01/Microsoft.EventGrid.json#/resourceDefinitions/domains_topics'
+        description: 'Storage version of v1beta20200601.DomainsTopic Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}/topics/{domainTopicName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -444,8 +424,6 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -457,15 +435,11 @@ spec:
                 required:
                 - name
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20200601.DomainTopic_STATUS
+            description: Storage version of v1beta20200601.Domains_Topic_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -513,7 +487,7 @@ spec:
               provisioningState:
                 type: string
               systemData:
-                description: Storage version of v1beta20200601.SystemData_STATUS
+                description: Storage version of v1beta20200601.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:

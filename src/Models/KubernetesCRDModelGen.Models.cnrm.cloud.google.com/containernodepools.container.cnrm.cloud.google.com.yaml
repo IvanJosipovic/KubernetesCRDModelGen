@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.97.0
+    cnrm.cloud.google.com/version: 1.98.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -382,7 +382,7 @@ spec:
                     description: Immutable. Whether the nodes are created as spot VM instances.
                     type: boolean
                   tags:
-                    description: Immutable. The list of instance tags applied to all nodes.
+                    description: The list of instance tags applied to all nodes.
                     items:
                       type: string
                     type: array

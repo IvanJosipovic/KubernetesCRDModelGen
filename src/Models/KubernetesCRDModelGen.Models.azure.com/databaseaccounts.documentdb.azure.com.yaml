@@ -57,7 +57,7 @@ spec:
                 description: Deprecated version of AnalyticalStorageConfiguration. Use v1beta20210515.AnalyticalStorageConfiguration instead
                 properties:
                   schemaType:
-                    description: Deprecated version of AnalyticalStorageConfiguration_SchemaType. Use v1beta20210515.AnalyticalStorageConfiguration_SchemaType instead
+                    description: Deprecated version of AnalyticalStorageSchemaType. Use v1beta20210515.AnalyticalStorageSchemaType instead
                     enum:
                     - FullFidelity
                     - WellDefined
@@ -83,7 +83,7 @@ spec:
               backupPolicy:
                 description: Deprecated version of BackupPolicy. Use v1beta20210515.BackupPolicy instead
                 properties:
-                  continuousModeBackupPolicy:
+                  continuous:
                     description: Deprecated version of ContinuousModeBackupPolicy. Use v1beta20210515.ContinuousModeBackupPolicy instead
                     properties:
                       type:
@@ -94,7 +94,7 @@ spec:
                     required:
                     - type
                     type: object
-                  periodicModeBackupPolicy:
+                  periodic:
                     description: Deprecated version of PeriodicModeBackupPolicy. Use v1beta20210515.PeriodicModeBackupPolicy instead
                     properties:
                       periodicModeProperties:
@@ -125,7 +125,7 @@ spec:
                   type: object
                 type: array
               connectorOffer:
-                description: Deprecated version of DatabaseAccountCreateUpdateProperties_ConnectorOffer. Use v1beta20210515.DatabaseAccountCreateUpdateProperties_ConnectorOffer instead
+                description: Deprecated version of ConnectorOffer. Use v1beta20210515.ConnectorOffer instead
                 enum:
                 - Small
                 type: string
@@ -173,7 +173,7 @@ spec:
                   type: object
                 type: array
               databaseAccountOfferType:
-                description: Deprecated version of DatabaseAccountCreateUpdateProperties_DatabaseAccountOfferType. Use v1beta20210515.DatabaseAccountCreateUpdateProperties_DatabaseAccountOfferType instead
+                description: Deprecated version of DatabaseAccountOfferType. Use v1beta20210515.DatabaseAccountOfferType instead
                 enum:
                 - Standard
                 type: string
@@ -238,7 +238,7 @@ spec:
                   type: object
                 type: array
               networkAclBypass:
-                description: Deprecated version of DatabaseAccountCreateUpdateProperties_NetworkAclBypass. Use v1beta20210515.DatabaseAccountCreateUpdateProperties_NetworkAclBypass instead
+                description: Deprecated version of NetworkAclBypass. Use v1beta20210515.NetworkAclBypass instead
                 enum:
                 - AzureServices
                 - None
@@ -330,7 +330,7 @@ spec:
                 - name
                 type: object
               publicNetworkAccess:
-                description: Deprecated version of DatabaseAccountCreateUpdateProperties_PublicNetworkAccess. Use v1beta20210515.DatabaseAccountCreateUpdateProperties_PublicNetworkAccess instead
+                description: Deprecated version of PublicNetworkAccess. Use v1beta20210515.PublicNetworkAccess instead
                 enum:
                 - Disabled
                 - Enabled
@@ -370,7 +370,7 @@ spec:
             - owner
             type: object
           status:
-            description: Deprecated version of DatabaseAccountGetResults_STATUS. Use v1beta20210515.DatabaseAccountGetResults_STATUS instead
+            description: Deprecated version of DatabaseAccount_STATUS. Use v1beta20210515.DatabaseAccount_STATUS instead
             properties:
               analyticalStorageConfiguration:
                 description: Deprecated version of AnalyticalStorageConfiguration_STATUS. Use v1beta20210515.AnalyticalStorageConfiguration_STATUS instead
@@ -389,9 +389,28 @@ spec:
               backupPolicy:
                 description: Deprecated version of BackupPolicy_STATUS. Use v1beta20210515.BackupPolicy_STATUS instead
                 properties:
-                  type:
-                    description: Deprecated version of BackupPolicyType_STATUS. Use v1beta20210515.BackupPolicyType_STATUS instead
-                    type: string
+                  continuous:
+                    description: Deprecated version of ContinuousModeBackupPolicy_STATUS. Use v1beta20210515.ContinuousModeBackupPolicy_STATUS instead
+                    properties:
+                      type:
+                        description: Deprecated version of ContinuousModeBackupPolicy_Type_STATUS. Use v1beta20210515.ContinuousModeBackupPolicy_Type_STATUS instead
+                        type: string
+                    type: object
+                  periodic:
+                    description: Deprecated version of PeriodicModeBackupPolicy_STATUS. Use v1beta20210515.PeriodicModeBackupPolicy_STATUS instead
+                    properties:
+                      periodicModeProperties:
+                        description: Deprecated version of PeriodicModeProperties_STATUS. Use v1beta20210515.PeriodicModeProperties_STATUS instead
+                        properties:
+                          backupIntervalInMinutes:
+                            type: integer
+                          backupRetentionIntervalInHours:
+                            type: integer
+                        type: object
+                      type:
+                        description: Deprecated version of PeriodicModeBackupPolicy_Type_STATUS. Use v1beta20210515.PeriodicModeBackupPolicy_Type_STATUS instead
+                        type: string
+                    type: object
                 type: object
               capabilities:
                 items:
@@ -533,7 +552,7 @@ spec:
               keyVaultKeyUri:
                 type: string
               kind:
-                description: Deprecated version of DatabaseAccountGetResults_Kind_STATUS. Use v1beta20210515.DatabaseAccountGetResults_Kind_STATUS instead
+                description: Deprecated version of DatabaseAccount_Kind_STATUS. Use v1beta20210515.DatabaseAccount_Kind_STATUS instead
                 type: string
               location:
                 type: string
@@ -566,7 +585,7 @@ spec:
                 type: array
               privateEndpointConnections:
                 items:
-                  description: Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210515.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210515.PrivateEndpointConnection_STATUS instead
                   properties:
                     id:
                       type: string
@@ -705,7 +724,7 @@ spec:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  continuousModeBackupPolicy:
+                  continuous:
                     description: Storage version of v1alpha1api20210515.ContinuousModeBackupPolicy Deprecated version of ContinuousModeBackupPolicy. Use v1beta20210515.ContinuousModeBackupPolicy instead
                     properties:
                       $propertyBag:
@@ -716,7 +735,7 @@ spec:
                       type:
                         type: string
                     type: object
-                  periodicModeBackupPolicy:
+                  periodic:
                     description: Storage version of v1alpha1api20210515.PeriodicModeBackupPolicy Deprecated version of PeriodicModeBackupPolicy. Use v1beta20210515.PeriodicModeBackupPolicy instead
                     properties:
                       $propertyBag:
@@ -997,7 +1016,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1alpha1api20210515.DatabaseAccountGetResults_STATUS Deprecated version of DatabaseAccountGetResults_STATUS. Use v1beta20210515.DatabaseAccountGetResults_STATUS instead
+            description: Storage version of v1alpha1api20210515.DatabaseAccount_STATUS Deprecated version of DatabaseAccount_STATUS. Use v1beta20210515.DatabaseAccount_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1034,8 +1053,41 @@ spec:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  type:
-                    type: string
+                  continuous:
+                    description: Storage version of v1alpha1api20210515.ContinuousModeBackupPolicy_STATUS Deprecated version of ContinuousModeBackupPolicy_STATUS. Use v1beta20210515.ContinuousModeBackupPolicy_STATUS instead
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      type:
+                        type: string
+                    type: object
+                  periodic:
+                    description: Storage version of v1alpha1api20210515.PeriodicModeBackupPolicy_STATUS Deprecated version of PeriodicModeBackupPolicy_STATUS. Use v1beta20210515.PeriodicModeBackupPolicy_STATUS instead
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      periodicModeProperties:
+                        description: Storage version of v1alpha1api20210515.PeriodicModeProperties_STATUS Deprecated version of PeriodicModeProperties_STATUS. Use v1beta20210515.PeriodicModeProperties_STATUS instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          backupIntervalInMinutes:
+                            type: integer
+                          backupRetentionIntervalInHours:
+                            type: integer
+                        type: object
+                      type:
+                        type: string
+                    type: object
                 type: object
               capabilities:
                 items:
@@ -1243,7 +1295,7 @@ spec:
                 type: array
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1alpha1api20210515.PrivateEndpointConnection_STATUS_SubResourceEmbedded Deprecated version of PrivateEndpointConnection_STATUS_SubResourceEmbedded. Use v1beta20210515.PrivateEndpointConnection_STATUS_SubResourceEmbedded instead
+                  description: Storage version of v1alpha1api20210515.PrivateEndpointConnection_STATUS Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210515.PrivateEndpointConnection_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1347,7 +1399,7 @@ spec:
     name: v1beta20210515
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/resourceDefinitions/databaseAccounts'
+        description: 'Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1363,13 +1415,14 @@ spec:
                 description: 'AnalyticalStorageConfiguration: Analytical storage specific properties.'
                 properties:
                   schemaType:
+                    description: 'SchemaType: Describes the types of schema for analytical storage.'
                     enum:
                     - FullFidelity
                     - WellDefined
                     type: string
                 type: object
               apiProperties:
-                description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/ApiProperties'
+                description: 'ApiProperties: API specific properties. Currently, supported only for MongoDB API.'
                 properties:
                   serverVersion:
                     description: 'ServerVersion: Describes the ServerVersion of an a MongoDB account.'
@@ -1388,7 +1441,7 @@ spec:
               backupPolicy:
                 description: 'BackupPolicy: The object representing the policy for taking backups on an account.'
                 properties:
-                  continuousModeBackupPolicy:
+                  continuous:
                     description: 'Continuous: Mutually exclusive with all other properties'
                     properties:
                       type:
@@ -1398,7 +1451,7 @@ spec:
                     required:
                     - type
                     type: object
-                  periodicModeBackupPolicy:
+                  periodic:
                     description: 'Periodic: Mutually exclusive with all other properties'
                     properties:
                       periodicModeProperties:
@@ -1424,7 +1477,7 @@ spec:
               capabilities:
                 description: 'Capabilities: List of Cosmos DB capabilities for the account'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/Capability'
+                  description: Cosmos DB capability object
                   properties:
                     name:
                       description: 'Name: Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".'
@@ -1437,7 +1490,7 @@ spec:
                 - Small
                 type: string
               consistencyPolicy:
-                description: 'ConsistencyPolicy: The consistency policy for the Cosmos DB database account.'
+                description: 'ConsistencyPolicy: The consistency policy for the Cosmos DB account.'
                 properties:
                   defaultConsistencyLevel:
                     description: 'DefaultConsistencyLevel: The default consistency level and configuration settings of the Cosmos DB account.'
@@ -1464,7 +1517,7 @@ spec:
               cors:
                 description: 'Cors: The CORS policy for the Cosmos DB database account.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/CorsPolicy'
+                  description: The CORS policy for the Cosmos DB database account.
                   properties:
                     allowedHeaders:
                       description: 'AllowedHeaders: The request headers that the origin domain may specify on the CORS request.'
@@ -1526,9 +1579,9 @@ spec:
                     type: string
                 type: object
               ipRules:
-                description: 'IpRules: Array of IpAddressOrRange objects.'
+                description: 'IpRules: List of IpRules.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/IpAddressOrRange'
+                  description: IpAddressOrRange object
                   properties:
                     ipAddressOrRange:
                       description: 'IpAddressOrRange: A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.'
@@ -1554,7 +1607,7 @@ spec:
               locations:
                 description: 'Locations: An array that contains the georeplication locations enabled for the Cosmos DB account.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/Location'
+                  description: A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     failoverPriority:
                       description: 'FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
@@ -1662,7 +1715,7 @@ spec:
                 - name
                 type: object
               publicNetworkAccess:
-                description: 'PublicNetworkAccess: Whether requests from Public Network are allowed.'
+                description: 'PublicNetworkAccess: Whether requests from Public Network are allowed'
                 enum:
                 - Disabled
                 - Enabled
@@ -1670,12 +1723,11 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: 'Tags: Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".'
                 type: object
               virtualNetworkRules:
                 description: 'VirtualNetworkRules: List of Virtual Network ACL rules configured for the Cosmos DB account.'
                 items:
-                  description: 'Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/VirtualNetworkRule'
+                  description: Virtual Network ACL Rule object
                   properties:
                     ignoreMissingVNetServiceEndpoint:
                       description: 'IgnoreMissingVNetServiceEndpoint: Create firewall rule before the virtual network has vnet service endpoint enabled.'
@@ -1710,6 +1762,7 @@ spec:
                 description: 'AnalyticalStorageConfiguration: Analytical storage specific properties.'
                 properties:
                   schemaType:
+                    description: 'SchemaType: Describes the types of schema for analytical storage.'
                     type: string
                 type: object
               apiProperties:
@@ -1722,12 +1775,33 @@ spec:
               backupPolicy:
                 description: 'BackupPolicy: The object representing the policy for taking backups on an account.'
                 properties:
-                  type:
-                    type: string
+                  continuous:
+                    description: 'Continuous: Mutually exclusive with all other properties'
+                    properties:
+                      type:
+                        type: string
+                    type: object
+                  periodic:
+                    description: 'Periodic: Mutually exclusive with all other properties'
+                    properties:
+                      periodicModeProperties:
+                        description: 'PeriodicModeProperties: Configuration values for periodic mode backup'
+                        properties:
+                          backupIntervalInMinutes:
+                            description: 'BackupIntervalInMinutes: An integer representing the interval in minutes between two backups'
+                            type: integer
+                          backupRetentionIntervalInHours:
+                            description: 'BackupRetentionIntervalInHours: An integer representing the time (in hours) that each backup is retained'
+                            type: integer
+                        type: object
+                      type:
+                        type: string
+                    type: object
                 type: object
               capabilities:
                 description: 'Capabilities: List of Cosmos DB capabilities for the account'
                 items:
+                  description: Cosmos DB capability object
                   properties:
                     name:
                       description: 'Name: Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".'
@@ -1788,6 +1862,7 @@ spec:
               cors:
                 description: 'Cors: The CORS policy for the Cosmos DB database account.'
                 items:
+                  description: The CORS policy for the Cosmos DB database account.
                   properties:
                     allowedHeaders:
                       description: 'AllowedHeaders: The request headers that the origin domain may specify on the CORS request.'
@@ -1836,6 +1911,7 @@ spec:
               failoverPolicies:
                 description: 'FailoverPolicies: An array that contains the regions ordered by their failover priorities.'
                 items:
+                  description: The failover policy for a given region of a database account.
                   properties:
                     failoverPriority:
                       description: 'FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
@@ -1852,6 +1928,7 @@ spec:
                 description: 'Id: The unique resource identifier of the ARM resource.'
                 type: string
               identity:
+                description: 'Identity: Identity for the resource.'
                 properties:
                   principalId:
                     description: 'PrincipalId: The principal id of the system assigned identity. This property will only be provided for a system assigned identity.'
@@ -1878,6 +1955,7 @@ spec:
               ipRules:
                 description: 'IpRules: List of IpRules.'
                 items:
+                  description: IpAddressOrRange object
                   properties:
                     ipAddressOrRange:
                       description: 'IpAddressOrRange: A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.'
@@ -1899,6 +1977,7 @@ spec:
               locations:
                 description: 'Locations: An array that contains all of the locations enabled for the Cosmos DB account.'
                 items:
+                  description: A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     documentEndpoint:
                       description: 'DocumentEndpoint: The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/'
@@ -1933,6 +2012,7 @@ spec:
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: List of Private Endpoint Connections configured for the Cosmos DB account.'
                 items:
+                  description: A private endpoint connection
                   properties:
                     id:
                       description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
@@ -1947,6 +2027,7 @@ spec:
               readLocations:
                 description: 'ReadLocations: An array that contains of the read locations enabled for the Cosmos DB account.'
                 items:
+                  description: A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     documentEndpoint:
                       description: 'DocumentEndpoint: The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/'
@@ -1977,6 +2058,7 @@ spec:
               virtualNetworkRules:
                 description: 'VirtualNetworkRules: List of Virtual Network ACL rules configured for the Cosmos DB account.'
                 items:
+                  description: Virtual Network ACL Rule object
                   properties:
                     id:
                       description: 'Id: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.'
@@ -1989,6 +2071,7 @@ spec:
               writeLocations:
                 description: 'WriteLocations: An array that contains the write location for the Cosmos DB account.'
                 items:
+                  description: A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     documentEndpoint:
                       description: 'DocumentEndpoint: The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/'
@@ -2031,7 +2114,7 @@ spec:
     name: v1beta20210515storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210515.DatabaseAccount Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/resourceDefinitions/databaseAccounts'
+        description: 'Storage version of v1beta20210515.DatabaseAccount Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -2050,7 +2133,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               analyticalStorageConfiguration:
-                description: 'Storage version of v1beta20210515.AnalyticalStorageConfiguration Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/AnalyticalStorageConfiguration'
+                description: Storage version of v1beta20210515.AnalyticalStorageConfiguration Analytical storage specific properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2061,7 +2144,7 @@ spec:
                     type: string
                 type: object
               apiProperties:
-                description: 'Storage version of v1beta20210515.ApiProperties Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/ApiProperties'
+                description: Storage version of v1beta20210515.ApiProperties
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2078,15 +2161,15 @@ spec:
                 pattern: ^[a-z0-9]+(-[a-z0-9]+)*
                 type: string
               backupPolicy:
-                description: 'Storage version of v1beta20210515.BackupPolicy Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/BackupPolicy'
+                description: Storage version of v1beta20210515.BackupPolicy
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  continuousModeBackupPolicy:
-                    description: 'Storage version of v1beta20210515.ContinuousModeBackupPolicy Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/ContinuousModeBackupPolicy'
+                  continuous:
+                    description: Storage version of v1beta20210515.ContinuousModeBackupPolicy
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2096,8 +2179,8 @@ spec:
                       type:
                         type: string
                     type: object
-                  periodicModeBackupPolicy:
-                    description: 'Storage version of v1beta20210515.PeriodicModeBackupPolicy Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/PeriodicModeBackupPolicy'
+                  periodic:
+                    description: Storage version of v1beta20210515.PeriodicModeBackupPolicy
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2105,7 +2188,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       periodicModeProperties:
-                        description: 'Storage version of v1beta20210515.PeriodicModeProperties Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/PeriodicModeProperties'
+                        description: Storage version of v1beta20210515.PeriodicModeProperties Configuration values for periodic mode backup
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2123,7 +2206,7 @@ spec:
                 type: object
               capabilities:
                 items:
-                  description: 'Storage version of v1beta20210515.Capability Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/Capability'
+                  description: Storage version of v1beta20210515.Capability Cosmos DB capability object
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2137,7 +2220,7 @@ spec:
               connectorOffer:
                 type: string
               consistencyPolicy:
-                description: 'Storage version of v1beta20210515.ConsistencyPolicy Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/ConsistencyPolicy'
+                description: Storage version of v1beta20210515.ConsistencyPolicy The consistency policy for the Cosmos DB database account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2153,7 +2236,7 @@ spec:
                 type: object
               cors:
                 items:
-                  description: 'Storage version of v1beta20210515.CorsPolicy Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/CorsPolicy'
+                  description: Storage version of v1beta20210515.CorsPolicy The CORS policy for the Cosmos DB database account.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2189,7 +2272,7 @@ spec:
               enableMultipleWriteLocations:
                 type: boolean
               identity:
-                description: 'Storage version of v1beta20210515.ManagedServiceIdentity Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/ManagedServiceIdentity'
+                description: Storage version of v1beta20210515.ManagedServiceIdentity Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2201,7 +2284,7 @@ spec:
                 type: object
               ipRules:
                 items:
-                  description: 'Storage version of v1beta20210515.IpAddressOrRange Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/IpAddressOrRange'
+                  description: Storage version of v1beta20210515.IpAddressOrRange IpAddressOrRange object
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2222,7 +2305,7 @@ spec:
                 type: string
               locations:
                 items:
-                  description: 'Storage version of v1beta20210515.Location Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/Location'
+                  description: Storage version of v1beta20210515.Location A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2345,7 +2428,7 @@ spec:
                 type: object
               virtualNetworkRules:
                 items:
-                  description: 'Storage version of v1beta20210515.VirtualNetworkRule Generated from: https://schema.management.azure.com/schemas/2021-05-15/Microsoft.DocumentDB.json#/definitions/VirtualNetworkRule'
+                  description: Storage version of v1beta20210515.VirtualNetworkRule Virtual Network ACL Rule object
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2377,7 +2460,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210515.DatabaseAccountGetResults_STATUS
+            description: Storage version of v1beta20210515.DatabaseAccount_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2385,7 +2468,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               analyticalStorageConfiguration:
-                description: Storage version of v1beta20210515.AnalyticalStorageConfiguration_STATUS
+                description: Storage version of v1beta20210515.AnalyticalStorageConfiguration_STATUS Analytical storage specific properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2414,12 +2497,45 @@ spec:
                       type: string
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
-                  type:
-                    type: string
+                  continuous:
+                    description: Storage version of v1beta20210515.ContinuousModeBackupPolicy_STATUS
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      type:
+                        type: string
+                    type: object
+                  periodic:
+                    description: Storage version of v1beta20210515.PeriodicModeBackupPolicy_STATUS
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      periodicModeProperties:
+                        description: Storage version of v1beta20210515.PeriodicModeProperties_STATUS Configuration values for periodic mode backup
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          backupIntervalInMinutes:
+                            type: integer
+                          backupRetentionIntervalInHours:
+                            type: integer
+                        type: object
+                      type:
+                        type: string
+                    type: object
                 type: object
               capabilities:
                 items:
-                  description: Storage version of v1beta20210515.Capability_STATUS
+                  description: Storage version of v1beta20210515.Capability_STATUS Cosmos DB capability object
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2467,7 +2583,7 @@ spec:
               connectorOffer:
                 type: string
               consistencyPolicy:
-                description: Storage version of v1beta20210515.ConsistencyPolicy_STATUS
+                description: Storage version of v1beta20210515.ConsistencyPolicy_STATUS The consistency policy for the Cosmos DB database account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2483,7 +2599,7 @@ spec:
                 type: object
               cors:
                 items:
-                  description: Storage version of v1beta20210515.CorsPolicy_STATUS
+                  description: Storage version of v1beta20210515.CorsPolicy_STATUS The CORS policy for the Cosmos DB database account.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2522,7 +2638,7 @@ spec:
                 type: boolean
               failoverPolicies:
                 items:
-                  description: Storage version of v1beta20210515.FailoverPolicy_STATUS
+                  description: Storage version of v1beta20210515.FailoverPolicy_STATUS The failover policy for a given region of a database account.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2540,7 +2656,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210515.ManagedServiceIdentity_STATUS
+                description: Storage version of v1beta20210515.ManagedServiceIdentity_STATUS Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2571,7 +2687,7 @@ spec:
                 type: object
               ipRules:
                 items:
-                  description: Storage version of v1beta20210515.IpAddressOrRange_STATUS
+                  description: Storage version of v1beta20210515.IpAddressOrRange_STATUS IpAddressOrRange object
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2592,7 +2708,7 @@ spec:
                 type: string
               locations:
                 items:
-                  description: Storage version of v1beta20210515.Location_STATUS
+                  description: Storage version of v1beta20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2623,7 +2739,7 @@ spec:
                 type: array
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210515.PrivateEndpointConnection_STATUS_SubResourceEmbedded
+                  description: Storage version of v1beta20210515.PrivateEndpointConnection_STATUS A private endpoint connection
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2640,7 +2756,7 @@ spec:
                 type: string
               readLocations:
                 items:
-                  description: Storage version of v1beta20210515.Location_STATUS
+                  description: Storage version of v1beta20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2669,7 +2785,7 @@ spec:
                 type: string
               virtualNetworkRules:
                 items:
-                  description: Storage version of v1beta20210515.VirtualNetworkRule_STATUS
+                  description: Storage version of v1beta20210515.VirtualNetworkRule_STATUS Virtual Network ACL Rule object
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2684,7 +2800,7 @@ spec:
                 type: array
               writeLocations:
                 items:
-                  description: Storage version of v1beta20210515.Location_STATUS
+                  description: Storage version of v1beta20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     $propertyBag:
                       additionalProperties:

@@ -64,8 +64,6 @@ spec:
                 type: string
               description:
                 type: string
-              location:
-                type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
                 properties:
@@ -122,10 +120,6 @@ spec:
                   name:
                     description: Name is the Kubernetes name of the resource.
                     type: string
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
                 type: object
             required:
             - owner
@@ -251,8 +245,6 @@ spec:
                 type: string
               description:
                 type: string
-              location:
-                type: string
               originalVersion:
                 type: string
               owner:
@@ -305,10 +297,6 @@ spec:
                   name:
                     description: Name is the Kubernetes name of the resource.
                     type: string
-                type: object
-              tags:
-                additionalProperties:
-                  type: string
                 type: object
             required:
             - owner
@@ -408,7 +396,7 @@ spec:
     name: v1beta20200801preview
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2020-08-01-preview/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleAssignments'
+        description: 'Generator information: - Generated from: /authorization/resource-manager/Microsoft.Authorization/preview/2020-08-01-preview/authorization-RoleAssignmentsCalls.json - ARM URI: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -434,9 +422,6 @@ spec:
                 type: string
               description:
                 description: 'Description: Description of role assignment'
-                type: string
-              location:
-                description: 'Location: Location to deploy resource to'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
@@ -496,16 +481,12 @@ spec:
                     description: Name is the Kubernetes name of the resource.
                     type: string
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                description: 'Tags: Name-value pairs to add to the resource'
-                type: object
             required:
             - owner
             - roleDefinitionReference
             type: object
           status:
+            description: Role Assignments
             properties:
               condition:
                 description: "Condition: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'"
@@ -609,7 +590,7 @@ spec:
     name: v1beta20200801previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20200801preview.RoleAssignment Generated from: https://schema.management.azure.com/schemas/2020-08-01-preview/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleAssignments'
+        description: 'Storage version of v1beta20200801preview.RoleAssignment Generator information: - Generated from: /authorization/resource-manager/Microsoft.Authorization/preview/2020-08-01-preview/authorization-RoleAssignmentsCalls.json - ARM URI: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -637,8 +618,6 @@ spec:
               delegatedManagedIdentityResourceId:
                 type: string
               description:
-                type: string
-              location:
                 type: string
               originalVersion:
                 type: string
@@ -693,16 +672,12 @@ spec:
                     description: Name is the Kubernetes name of the resource.
                     type: string
                 type: object
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
             required:
             - owner
             - roleDefinitionReference
             type: object
           status:
-            description: Storage version of v1beta20200801preview.RoleAssignment_STATUS
+            description: Storage version of v1beta20200801preview.RoleAssignment_STATUS Role Assignments
             properties:
               $propertyBag:
                 additionalProperties:

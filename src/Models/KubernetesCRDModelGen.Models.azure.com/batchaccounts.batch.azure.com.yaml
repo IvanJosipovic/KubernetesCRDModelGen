@@ -80,7 +80,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 maxLength: 24
                 minLength: 3
-                pattern: ^[a-zA-Z0-9]+$
+                pattern: ^[a-z0-9]+$
                 type: string
               encryption:
                 description: Deprecated version of EncryptionProperties. Use v1beta20210101.EncryptionProperties instead
@@ -149,13 +149,13 @@ spec:
                 - name
                 type: object
               poolAllocationMode:
-                description: Deprecated version of BatchAccountCreateProperties_PoolAllocationMode. Use v1beta20210101.BatchAccountCreateProperties_PoolAllocationMode instead
+                description: Deprecated version of PoolAllocationMode. Use v1beta20210101.PoolAllocationMode instead
                 enum:
                 - BatchService
                 - UserSubscription
                 type: string
               publicNetworkAccess:
-                description: Deprecated version of BatchAccountCreateProperties_PublicNetworkAccess. Use v1beta20210101.BatchAccountCreateProperties_PublicNetworkAccess instead
+                description: Deprecated version of PublicNetworkAccessType. Use v1beta20210101.PublicNetworkAccessType instead
                 enum:
                 - Disabled
                 - Enabled
@@ -165,6 +165,7 @@ spec:
                   type: string
                 type: object
             required:
+            - location
             - owner
             type: object
           status:
@@ -290,33 +291,7 @@ spec:
                 items:
                   description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210101.PrivateEndpointConnection_STATUS instead
                   properties:
-                    etag:
-                      type: string
                     id:
-                      type: string
-                    name:
-                      type: string
-                    privateEndpoint:
-                      description: Deprecated version of PrivateEndpoint_STATUS. Use v1beta20210101.PrivateEndpoint_STATUS instead
-                      properties:
-                        id:
-                          type: string
-                      type: object
-                    privateLinkServiceConnectionState:
-                      description: Deprecated version of PrivateLinkServiceConnectionState_STATUS. Use v1beta20210101.PrivateLinkServiceConnectionState_STATUS instead
-                      properties:
-                        actionRequired:
-                          type: string
-                        description:
-                          type: string
-                        status:
-                          description: Deprecated version of PrivateLinkServiceConnectionStatus_STATUS. Use v1beta20210101.PrivateLinkServiceConnectionStatus_STATUS instead
-                          type: string
-                      type: object
-                    provisioningState:
-                      description: Deprecated version of PrivateEndpointConnectionProperties_ProvisioningState_STATUS. Use v1beta20210101.PrivateEndpointConnectionProperties_ProvisioningState_STATUS instead
-                      type: string
-                    type:
                       type: string
                   type: object
                 type: array
@@ -404,7 +379,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 maxLength: 24
                 minLength: 3
-                pattern: ^[a-zA-Z0-9]+$
+                pattern: ^[a-z0-9]+$
                 type: string
               encryption:
                 description: Storage version of v1alpha1api20210101.EncryptionProperties Deprecated version of EncryptionProperties. Use v1beta20210101.EncryptionProperties instead
@@ -657,41 +632,7 @@ spec:
                         type: string
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
-                    etag:
-                      type: string
                     id:
-                      type: string
-                    name:
-                      type: string
-                    privateEndpoint:
-                      description: Storage version of v1alpha1api20210101.PrivateEndpoint_STATUS Deprecated version of PrivateEndpoint_STATUS. Use v1beta20210101.PrivateEndpoint_STATUS instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        id:
-                          type: string
-                      type: object
-                    privateLinkServiceConnectionState:
-                      description: Storage version of v1alpha1api20210101.PrivateLinkServiceConnectionState_STATUS Deprecated version of PrivateLinkServiceConnectionState_STATUS. Use v1beta20210101.PrivateLinkServiceConnectionState_STATUS instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        actionRequired:
-                          type: string
-                        description:
-                          type: string
-                        status:
-                          type: string
-                      type: object
-                    provisioningState:
-                      type: string
-                    type:
                       type: string
                   type: object
                 type: array
@@ -727,7 +668,7 @@ spec:
     name: v1beta20210101
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-01-01/Microsoft.Batch.json#/resourceDefinitions/batchAccounts'
+        description: 'Generator information: - Generated from: /batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -766,7 +707,7 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 maxLength: 24
                 minLength: 3
-                pattern: ^[a-zA-Z0-9]+$
+                pattern: ^[a-z0-9]+$
                 type: string
               encryption:
                 description: 'Encryption: Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.'
@@ -778,7 +719,7 @@ spec:
                     - Microsoft.KeyVault
                     type: string
                   keyVaultProperties:
-                    description: 'KeyVaultProperties: KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.'
+                    description: 'KeyVaultProperties: Additional details when using Microsoft.KeyVault'
                     properties:
                       keyIdentifier:
                         description: 'KeyIdentifier: Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met: The Batch Account has a System Assigned identity The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions The KeyVault has soft-delete and purge protection enabled'
@@ -786,7 +727,7 @@ spec:
                     type: object
                 type: object
               identity:
-                description: "Identity: The identity of the Batch account, if configured. This is only used when the user specifies 'Microsoft.KeyVault' as their Batch account encryption configuration."
+                description: 'Identity: The identity of the Batch account.'
                 properties:
                   type:
                     description: 'Type: The type of identity used for the Batch account.'
@@ -799,7 +740,7 @@ spec:
                 - type
                 type: object
               keyVaultReference:
-                description: 'KeyVaultReference: Identifies the Azure key vault associated with a Batch account.'
+                description: 'KeyVaultReference: A reference to the Azure key vault associated with the Batch account.'
                 properties:
                   reference:
                     description: 'Reference: The resource ID of the Azure key vault associated with the Batch account.'
@@ -855,9 +796,11 @@ spec:
                 description: 'Tags: The user-specified tags associated with the account.'
                 type: object
             required:
+            - location
             - owner
             type: object
           status:
+            description: Contains information about an Azure Batch account.
             properties:
               accountEndpoint:
                 description: 'AccountEndpoint: The account endpoint used to interact with the Batch service.'
@@ -865,6 +808,7 @@ spec:
               activeJobAndJobScheduleQuota:
                 type: integer
               autoStorage:
+                description: 'AutoStorage: Contains information about the auto-storage account associated with a Batch account.'
                 properties:
                   lastKeySync:
                     description: 'LastKeySync: The UTC time at which storage keys were last synchronized with the Batch account.'
@@ -914,6 +858,7 @@ spec:
               dedicatedCoreQuotaPerVMFamily:
                 description: 'DedicatedCoreQuotaPerVMFamily: A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.'
                 items:
+                  description: A VM Family and its associated core quota for the Batch account.
                   properties:
                     coreQuota:
                       description: 'CoreQuota: The core quota for the VM family for the Batch account.'
@@ -969,6 +914,7 @@ spec:
                     type: object
                 type: object
               keyVaultReference:
+                description: 'KeyVaultReference: Identifies the Azure key vault associated with a Batch account.'
                 properties:
                   id:
                     description: 'Id: The resource ID of the Azure key vault associated with the Batch account.'
@@ -987,40 +933,17 @@ spec:
                 description: 'Name: The name of the resource.'
                 type: string
               poolAllocationMode:
+                description: 'PoolAllocationMode: The allocation mode for creating pools in the Batch account.'
                 type: string
               poolQuota:
                 type: integer
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: List of private endpoint connections associated with the Batch account'
                 items:
+                  description: Contains information about a private link resource.
                   properties:
-                    etag:
-                      description: 'Etag: The ETag of the resource, used for concurrency statements.'
-                      type: string
                     id:
                       description: 'Id: The ID of the resource.'
-                      type: string
-                    name:
-                      description: 'Name: The name of the resource.'
-                      type: string
-                    privateEndpoint:
-                      properties:
-                        id:
-                          type: string
-                      type: object
-                    privateLinkServiceConnectionState:
-                      properties:
-                        actionRequired:
-                          type: string
-                        description:
-                          type: string
-                        status:
-                          type: string
-                      type: object
-                    provisioningState:
-                      type: string
-                    type:
-                      description: 'Type: The type of the resource.'
                       type: string
                   type: object
                 type: array
@@ -1060,7 +983,7 @@ spec:
     name: v1beta20210101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210101.BatchAccount Generated from: https://schema.management.azure.com/schemas/2021-01-01/Microsoft.Batch.json#/resourceDefinitions/batchAccounts'
+        description: 'Storage version of v1beta20210101.BatchAccount Generator information: - Generated from: /batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1079,7 +1002,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               autoStorage:
-                description: 'Storage version of v1beta20210101.AutoStorageBaseProperties Generated from: https://schema.management.azure.com/schemas/2021-01-01/Microsoft.Batch.json#/definitions/AutoStorageBaseProperties'
+                description: Storage version of v1beta20210101.AutoStorageBaseProperties The properties related to the auto-storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1110,10 +1033,10 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 maxLength: 24
                 minLength: 3
-                pattern: ^[a-zA-Z0-9]+$
+                pattern: ^[a-z0-9]+$
                 type: string
               encryption:
-                description: 'Storage version of v1beta20210101.EncryptionProperties Generated from: https://schema.management.azure.com/schemas/2021-01-01/Microsoft.Batch.json#/definitions/EncryptionProperties'
+                description: Storage version of v1beta20210101.EncryptionProperties Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1123,7 +1046,7 @@ spec:
                   keySource:
                     type: string
                   keyVaultProperties:
-                    description: 'Storage version of v1beta20210101.KeyVaultProperties Generated from: https://schema.management.azure.com/schemas/2021-01-01/Microsoft.Batch.json#/definitions/KeyVaultProperties'
+                    description: Storage version of v1beta20210101.KeyVaultProperties KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1135,7 +1058,7 @@ spec:
                     type: object
                 type: object
               identity:
-                description: 'Storage version of v1beta20210101.BatchAccountIdentity Generated from: https://schema.management.azure.com/schemas/2021-01-01/Microsoft.Batch.json#/definitions/BatchAccountIdentity'
+                description: Storage version of v1beta20210101.BatchAccountIdentity The identity of the Batch account, if configured. This is only used when the user specifies 'Microsoft.KeyVault' as their Batch account encryption configuration.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1146,7 +1069,7 @@ spec:
                     type: string
                 type: object
               keyVaultReference:
-                description: 'Storage version of v1beta20210101.KeyVaultReference Generated from: https://schema.management.azure.com/schemas/2021-01-01/Microsoft.Batch.json#/definitions/KeyVaultReference'
+                description: Storage version of v1beta20210101.KeyVaultReference Identifies the Azure key vault associated with a Batch account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1200,7 +1123,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210101.BatchAccount_STATUS
+            description: Storage version of v1beta20210101.BatchAccount_STATUS Contains information about an Azure Batch account.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1212,7 +1135,7 @@ spec:
               activeJobAndJobScheduleQuota:
                 type: integer
               autoStorage:
-                description: Storage version of v1beta20210101.AutoStorageProperties_STATUS
+                description: Storage version of v1beta20210101.AutoStorageProperties_STATUS Contains information about the auto-storage account associated with a Batch account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1262,7 +1185,7 @@ spec:
                 type: integer
               dedicatedCoreQuotaPerVMFamily:
                 items:
-                  description: Storage version of v1beta20210101.VirtualMachineFamilyCoreQuota_STATUS
+                  description: Storage version of v1beta20210101.VirtualMachineFamilyCoreQuota_STATUS A VM Family and its associated core quota for the Batch account.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -1278,7 +1201,7 @@ spec:
               dedicatedCoreQuotaPerVMFamilyEnforced:
                 type: boolean
               encryption:
-                description: Storage version of v1beta20210101.EncryptionProperties_STATUS
+                description: Storage version of v1beta20210101.EncryptionProperties_STATUS Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1288,7 +1211,7 @@ spec:
                   keySource:
                     type: string
                   keyVaultProperties:
-                    description: Storage version of v1beta20210101.KeyVaultProperties_STATUS
+                    description: Storage version of v1beta20210101.KeyVaultProperties_STATUS KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -1302,7 +1225,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210101.BatchAccountIdentity_STATUS
+                description: Storage version of v1beta20210101.BatchAccountIdentity_STATUS The identity of the Batch account, if configured. This is only used when the user specifies 'Microsoft.KeyVault' as their Batch account encryption configuration.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1332,7 +1255,7 @@ spec:
                     type: object
                 type: object
               keyVaultReference:
-                description: Storage version of v1beta20210101.KeyVaultReference_STATUS
+                description: Storage version of v1beta20210101.KeyVaultReference_STATUS Identifies the Azure key vault associated with a Batch account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1356,48 +1279,14 @@ spec:
                 type: integer
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210101.PrivateEndpointConnection_STATUS
+                  description: Storage version of v1beta20210101.PrivateEndpointConnection_STATUS Contains information about a private link resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                       type: object
-                    etag:
-                      type: string
                     id:
-                      type: string
-                    name:
-                      type: string
-                    privateEndpoint:
-                      description: Storage version of v1beta20210101.PrivateEndpoint_STATUS
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        id:
-                          type: string
-                      type: object
-                    privateLinkServiceConnectionState:
-                      description: Storage version of v1beta20210101.PrivateLinkServiceConnectionState_STATUS
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        actionRequired:
-                          type: string
-                        description:
-                          type: string
-                        status:
-                          type: string
-                      type: object
-                    provisioningState:
-                      type: string
-                    type:
                       type: string
                   type: object
                 type: array

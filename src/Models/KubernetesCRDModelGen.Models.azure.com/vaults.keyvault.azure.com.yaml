@@ -41,7 +41,7 @@ spec:
     name: v1beta20210401preview
     schema:
       openAPIV3Schema:
-        description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/resourceDefinitions/vaults'
+        description: 'Generator information: - Generated from: /keyvault/resource-manager/Microsoft.KeyVault/preview/2021-04-01-preview/keyvault.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -75,17 +75,43 @@ spec:
                   accessPolicies:
                     description: "AccessPolicies: An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required."
                     items:
-                      description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/AccessPolicyEntry'
+                      description: An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
                       properties:
                         applicationId:
                           description: 'ApplicationId:  Application ID of the client making request on behalf of a principal'
                           pattern: ^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$
                           type: string
+                        applicationIdFromConfig:
+                          description: 'ApplicationIdFromConfig:  Application ID of the client making request on behalf of a principal'
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                         objectId:
                           description: 'ObjectId: The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.'
                           type: string
+                        objectIdFromConfig:
+                          description: 'ObjectIdFromConfig: The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.'
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                         permissions:
-                          description: 'Permissions: Permissions the identity has for keys, secrets, certificates and storage.'
+                          description: 'Permissions: Permissions the identity has for keys, secrets and certificates.'
                           properties:
                             certificates:
                               description: 'Certificates: Permissions to certificates'
@@ -171,10 +197,21 @@ spec:
                           description: 'TenantId: The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.'
                           pattern: ^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$
                           type: string
+                        tenantIdFromConfig:
+                          description: 'TenantIdFromConfig: The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.'
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                       required:
-                      - objectId
                       - permissions
-                      - tenantId
                       type: object
                     type: array
                   createMode:
@@ -202,7 +239,7 @@ spec:
                     description: 'EnabledForTemplateDeployment: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.'
                     type: boolean
                   networkAcls:
-                    description: 'NetworkAcls: A set of rules governing the network accessibility of a vault.'
+                    description: 'NetworkAcls: Rules governing the accessibility of the key vault from specific network locations.'
                     properties:
                       bypass:
                         description: "Bypass: Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'."
@@ -219,7 +256,7 @@ spec:
                       ipRules:
                         description: 'IpRules: The list of IP address rules.'
                         items:
-                          description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/IPRule'
+                          description: A rule governing the accessibility of a vault from a specific ip address or ip range.
                           properties:
                             value:
                               description: "Value: An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78)."
@@ -231,7 +268,7 @@ spec:
                       virtualNetworkRules:
                         description: 'VirtualNetworkRules: The list of virtual network rules.'
                         items:
-                          description: 'Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/VirtualNetworkRule'
+                          description: A rule governing the accessibility of a vault from a specific virtual network.
                           properties:
                             ignoreMissingVnetServiceEndpoint:
                               description: 'IgnoreMissingVnetServiceEndpoint: Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.'
@@ -302,10 +339,12 @@ spec:
                 description: 'Tags: The tags that will be assigned to the key vault.'
                 type: object
             required:
+            - location
             - owner
             - properties
             type: object
           status:
+            description: Resource information with extended details.
             properties:
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -357,6 +396,7 @@ spec:
                   accessPolicies:
                     description: "AccessPolicies: An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required."
                     items:
+                      description: An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
                       properties:
                         applicationId:
                           description: 'ApplicationId:  Application ID of the client making request on behalf of a principal'
@@ -429,6 +469,7 @@ spec:
                       ipRules:
                         description: 'IpRules: The list of IP address rules.'
                         items:
+                          description: A rule governing the accessibility of a vault from a specific ip address or ip range.
                           properties:
                             value:
                               description: "Value: An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78)."
@@ -438,6 +479,7 @@ spec:
                       virtualNetworkRules:
                         description: 'VirtualNetworkRules: The list of virtual network rules.'
                         items:
+                          description: A rule governing the accessibility of a vault from a specific virtual network.
                           properties:
                             id:
                               description: "Id: Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'."
@@ -451,6 +493,7 @@ spec:
                   privateEndpointConnections:
                     description: 'PrivateEndpointConnections: List of private endpoint connections associated with the key vault.'
                     items:
+                      description: Private endpoint connection item.
                       properties:
                         etag:
                           description: 'Etag: Modified whenever there is a change in the state of private endpoint connection.'
@@ -558,7 +601,7 @@ spec:
     name: v1beta20210401previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210401preview.Vault Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/resourceDefinitions/vaults'
+        description: 'Storage version of v1beta20210401preview.Vault Generator information: - Generated from: /keyvault/resource-manager/Microsoft.KeyVault/preview/2021-04-01-preview/keyvault.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -594,7 +637,7 @@ spec:
                 - name
                 type: object
               properties:
-                description: 'Storage version of v1beta20210401preview.VaultProperties Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/VaultProperties'
+                description: Storage version of v1beta20210401preview.VaultProperties Properties of the vault
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -603,7 +646,7 @@ spec:
                     type: object
                   accessPolicies:
                     items:
-                      description: 'Storage version of v1beta20210401preview.AccessPolicyEntry Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/AccessPolicyEntry'
+                      description: Storage version of v1beta20210401preview.AccessPolicyEntry An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -612,10 +655,36 @@ spec:
                           type: object
                         applicationId:
                           type: string
+                        applicationIdFromConfig:
+                          description: ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                         objectId:
                           type: string
+                        objectIdFromConfig:
+                          description: ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                         permissions:
-                          description: 'Storage version of v1beta20210401preview.Permissions Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/Permissions'
+                          description: Storage version of v1beta20210401preview.Permissions Permissions the identity has for keys, secrets, certificates and storage.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -641,6 +710,19 @@ spec:
                           type: object
                         tenantId:
                           type: string
+                        tenantIdFromConfig:
+                          description: ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: Name is the name of the Kubernetes configmap being referenced. The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                       type: object
                     type: array
                   createMode:
@@ -658,7 +740,7 @@ spec:
                   enabledForTemplateDeployment:
                     type: boolean
                   networkAcls:
-                    description: 'Storage version of v1beta20210401preview.NetworkRuleSet Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/NetworkRuleSet'
+                    description: Storage version of v1beta20210401preview.NetworkRuleSet A set of rules governing the network accessibility of a vault.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -671,7 +753,7 @@ spec:
                         type: string
                       ipRules:
                         items:
-                          description: 'Storage version of v1beta20210401preview.IPRule Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/IPRule'
+                          description: Storage version of v1beta20210401preview.IPRule A rule governing the accessibility of a vault from a specific ip address or ip range.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -684,7 +766,7 @@ spec:
                         type: array
                       virtualNetworkRules:
                         items:
-                          description: 'Storage version of v1beta20210401preview.VirtualNetworkRule Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/VirtualNetworkRule'
+                          description: Storage version of v1beta20210401preview.VirtualNetworkRule A rule governing the accessibility of a vault from a specific virtual network.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -718,7 +800,7 @@ spec:
                   provisioningState:
                     type: string
                   sku:
-                    description: 'Storage version of v1beta20210401preview.Sku Generated from: https://schema.management.azure.com/schemas/2021-04-01-preview/Microsoft.KeyVault.json#/definitions/Sku'
+                    description: Storage version of v1beta20210401preview.Sku SKU details
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -745,7 +827,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401preview.Vault_STATUS
+            description: Storage version of v1beta20210401preview.Vault_STATUS Resource information with extended details.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -793,7 +875,7 @@ spec:
               name:
                 type: string
               properties:
-                description: Storage version of v1beta20210401preview.VaultProperties_STATUS
+                description: Storage version of v1beta20210401preview.VaultProperties_STATUS Properties of the vault
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -802,7 +884,7 @@ spec:
                     type: object
                   accessPolicies:
                     items:
-                      description: Storage version of v1beta20210401preview.AccessPolicyEntry_STATUS
+                      description: Storage version of v1beta20210401preview.AccessPolicyEntry_STATUS An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -814,7 +896,7 @@ spec:
                         objectId:
                           type: string
                         permissions:
-                          description: Storage version of v1beta20210401preview.Permissions_STATUS
+                          description: Storage version of v1beta20210401preview.Permissions_STATUS Permissions the identity has for keys, secrets, certificates and storage.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -859,7 +941,7 @@ spec:
                   hsmPoolResourceId:
                     type: string
                   networkAcls:
-                    description: Storage version of v1beta20210401preview.NetworkRuleSet_STATUS
+                    description: Storage version of v1beta20210401preview.NetworkRuleSet_STATUS A set of rules governing the network accessibility of a vault.
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -872,7 +954,7 @@ spec:
                         type: string
                       ipRules:
                         items:
-                          description: Storage version of v1beta20210401preview.IPRule_STATUS
+                          description: Storage version of v1beta20210401preview.IPRule_STATUS A rule governing the accessibility of a vault from a specific ip address or ip range.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -885,7 +967,7 @@ spec:
                         type: array
                       virtualNetworkRules:
                         items:
-                          description: Storage version of v1beta20210401preview.VirtualNetworkRule_STATUS
+                          description: Storage version of v1beta20210401preview.VirtualNetworkRule_STATUS A rule governing the accessibility of a vault from a specific virtual network.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -901,7 +983,7 @@ spec:
                     type: object
                   privateEndpointConnections:
                     items:
-                      description: Storage version of v1beta20210401preview.PrivateEndpointConnectionItem_STATUS
+                      description: Storage version of v1beta20210401preview.PrivateEndpointConnectionItem_STATUS Private endpoint connection item.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -913,7 +995,7 @@ spec:
                         id:
                           type: string
                         privateEndpoint:
-                          description: Storage version of v1beta20210401preview.PrivateEndpoint_STATUS
+                          description: Storage version of v1beta20210401preview.PrivateEndpoint_STATUS Private endpoint object properties.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -924,7 +1006,7 @@ spec:
                               type: string
                           type: object
                         privateLinkServiceConnectionState:
-                          description: Storage version of v1beta20210401preview.PrivateLinkServiceConnectionState_STATUS
+                          description: Storage version of v1beta20210401preview.PrivateLinkServiceConnectionState_STATUS An object that represents the approval state of the private link connection.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -945,7 +1027,7 @@ spec:
                   provisioningState:
                     type: string
                   sku:
-                    description: Storage version of v1beta20210401preview.Sku_STATUS
+                    description: Storage version of v1beta20210401preview.Sku_STATUS SKU details
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -965,7 +1047,7 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1beta20210401preview.SystemData_STATUS
+                description: Storage version of v1beta20210401preview.SystemData_STATUS Metadata pertaining to creation and last modification of the key vault resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
