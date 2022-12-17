@@ -159,7 +159,12 @@ public class CRDGenerator : ICRDGenerator
         complexNumberFile.Namespace = @namespace;
         complexNumberFile.Classes.AddRange(types);
 
-        return ArrangeUsingRoslyn(complexNumberFile.ToString());
+        var code = ArrangeUsingRoslyn(complexNumberFile.ToString());
+
+        // fix for summary https://github.com/borisdj/CsCodeGenerator/issues/6
+        code = code.Replace("    // <summary>", "    /// <summary>");
+
+        return code;
     }
 
     public async Task<(Assembly?, XmlDocument?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)

@@ -23,7 +23,7 @@ namespace Worker
 
             var code = gen.GenerateCode(crd);
 
-            var ass = gen.GenerateAssembly(crd);
+            var ass = await gen.GenerateAssembly(crd);
         }
     }
 }
