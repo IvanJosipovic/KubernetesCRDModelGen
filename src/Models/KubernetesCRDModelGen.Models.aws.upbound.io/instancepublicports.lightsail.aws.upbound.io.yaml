@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: regiontargethttpproxies.compute.gcp.upbound.io
+  name: instancepublicports.lightsail.aws.upbound.io
 spec:
-  group: compute.gcp.upbound.io
+  group: lightsail.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - gcp
-    kind: RegionTargetHTTPProxy
-    listKind: RegionTargetHTTPProxyList
-    plural: regiontargethttpproxies
-    singular: regiontargethttpproxy
+    - aws
+    kind: InstancePublicPorts
+    listKind: InstancePublicPortsList
+    plural: instancepublicports
+    singular: instancepublicports
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RegionTargetHTTPProxy is the Schema for the RegionTargetHTTPProxys API. Represents a RegionTargetHttpProxy resource, which is used by one or more forwarding rules to route incoming HTTP requests to a URL map.
+        description: InstancePublicPorts is the Schema for the InstancePublicPortss API. Provides an Lightsail Instance
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RegionTargetHTTPProxySpec defines the desired state of RegionTargetHTTPProxy
+            description: InstancePublicPortsSpec defines the desired state of InstancePublicPorts
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,20 +56,11 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  description:
-                    description: An optional description of this resource.
+                  instanceName:
+                    description: Name of the Lightsail Instance.
                     type: string
-                  project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-                    type: string
-                  region:
-                    description: The Region in which the created target https proxy should reside. If it is not provided, the provider region is used.
-                    type: string
-                  urlMap:
-                    description: A reference to the RegionUrlMap resource that defines the mapping from URL to the BackendService.
-                    type: string
-                  urlMapRef:
-                    description: Reference to a RegionURLMap to populate urlMap.
+                  instanceNameRef:
+                    description: Reference to a Instance in lightsail to populate instanceName.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -94,8 +85,8 @@ spec:
                     required:
                     - name
                     type: object
-                  urlMapSelector:
-                    description: Selector for a RegionURLMap to populate urlMap.
+                  instanceNameSelector:
+                    description: Selector for a Instance in lightsail to populate instanceName.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -123,7 +114,35 @@ spec:
                             type: string
                         type: object
                     type: object
+                  portInfo:
+                    description: Configuration block with port information. AWS closes all currently open ports that are not included in the port_info. Detailed below.
+                    items:
+                      properties:
+                        cidrs:
+                          description: Set of CIDR blocks.
+                          items:
+                            type: string
+                          type: array
+                        fromPort:
+                          description: First port in a range of open ports on an instance.
+                          type: number
+                        protocol:
+                          description: IP protocol name. Valid values are tcp, all, udp, and icmp.
+                          type: string
+                        toPort:
+                          description: Last port in a range of open ports on an instance.
+                          type: number
+                      required:
+                      - fromPort
+                      - protocol
+                      - toPort
+                      type: object
+                    type: array
+                  region:
+                    description: Region is the region you'd like your resource to be created in.
+                    type: string
                 required:
+                - portInfo
                 - region
                 type: object
               providerConfigRef:
@@ -251,21 +270,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: RegionTargetHTTPProxyStatus defines the observed state of RegionTargetHTTPProxy.
+            description: InstancePublicPortsStatus defines the observed state of InstancePublicPorts.
             properties:
               atProvider:
                 properties:
-                  creationTimestamp:
-                    description: Creation timestamp in RFC3339 text format.
-                    type: string
                   id:
-                    description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/targetHttpProxies/{{name}}
-                    type: string
-                  proxyId:
-                    description: The unique identifier for the resource.
-                    type: number
-                  selfLink:
-                    description: The URI of the created resource.
+                    description: ID of the resource.
                     type: string
                 type: object
               conditions:

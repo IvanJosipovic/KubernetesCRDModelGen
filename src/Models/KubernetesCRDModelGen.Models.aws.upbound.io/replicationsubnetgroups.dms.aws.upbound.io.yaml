@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: regiontargethttpproxies.compute.gcp.upbound.io
+  name: replicationsubnetgroups.dms.aws.upbound.io
 spec:
-  group: compute.gcp.upbound.io
+  group: dms.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - gcp
-    kind: RegionTargetHTTPProxy
-    listKind: RegionTargetHTTPProxyList
-    plural: regiontargethttpproxies
-    singular: regiontargethttpproxy
+    - aws
+    kind: ReplicationSubnetGroup
+    listKind: ReplicationSubnetGroupList
+    plural: replicationsubnetgroups
+    singular: replicationsubnetgroup
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RegionTargetHTTPProxy is the Schema for the RegionTargetHTTPProxys API. Represents a RegionTargetHttpProxy resource, which is used by one or more forwarding rules to route incoming HTTP requests to a URL map.
+        description: ReplicationSubnetGroup is the Schema for the ReplicationSubnetGroups API. Provides a DMS (Data Migration Service) subnet group resource.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RegionTargetHTTPProxySpec defines the desired state of RegionTargetHTTPProxy
+            description: ReplicationSubnetGroupSpec defines the desired state of ReplicationSubnetGroup
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,46 +56,43 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  description:
-                    description: An optional description of this resource.
-                    type: string
-                  project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-                    type: string
                   region:
-                    description: The Region in which the created target https proxy should reside. If it is not provided, the provider region is used.
+                    description: Region is the region you'd like your resource to be created in.
                     type: string
-                  urlMap:
-                    description: A reference to the RegionUrlMap resource that defines the mapping from URL to the BackendService.
+                  replicationSubnetGroupDescription:
+                    description: The description for the subnet group.
                     type: string
-                  urlMapRef:
-                    description: Reference to a RegionURLMap to populate urlMap.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  urlMapSelector:
-                    description: Selector for a RegionURLMap to populate urlMap.
+                  subnetIdRefs:
+                    description: References to Subnet in ec2 to populate subnetIds.
+                    items:
+                      description: A Reference to a named object.
+                      properties:
+                        name:
+                          description: Name of the referenced object.
+                          type: string
+                        policy:
+                          description: Policies for referencing.
+                          properties:
+                            resolution:
+                              default: Required
+                              description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                              enum:
+                              - Required
+                              - Optional
+                              type: string
+                            resolve:
+                              description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                              enum:
+                              - Always
+                              - IfNotPresent
+                              type: string
+                          type: object
+                      required:
+                      - name
+                      type: object
+                    type: array
+                  subnetIdSelector:
+                    description: Selector for a list of Subnet in ec2 to populate subnetIds.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -123,8 +120,19 @@ spec:
                             type: string
                         type: object
                     type: object
+                  subnetIds:
+                    description: A list of the EC2 subnet IDs for the subnet group.
+                    items:
+                      type: string
+                    type: array
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
                 required:
                 - region
+                - replicationSubnetGroupDescription
                 type: object
               providerConfigRef:
                 default:
@@ -251,21 +259,21 @@ spec:
             - forProvider
             type: object
           status:
-            description: RegionTargetHTTPProxyStatus defines the observed state of RegionTargetHTTPProxy.
+            description: ReplicationSubnetGroupStatus defines the observed state of ReplicationSubnetGroup.
             properties:
               atProvider:
                 properties:
-                  creationTimestamp:
-                    description: Creation timestamp in RFC3339 text format.
-                    type: string
                   id:
-                    description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/targetHttpProxies/{{name}}
                     type: string
-                  proxyId:
-                    description: The unique identifier for the resource.
-                    type: number
-                  selfLink:
-                    description: The URI of the created resource.
+                  replicationSubnetGroupArn:
+                    type: string
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    type: object
+                  vpcId:
+                    description: The ID of the VPC the subnet group is in.
                     type: string
                 type: object
               conditions:
