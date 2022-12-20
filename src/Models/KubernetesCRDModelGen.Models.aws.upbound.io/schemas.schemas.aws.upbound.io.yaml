@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: regiontargethttpproxies.compute.gcp.upbound.io
+  name: schemas.schemas.aws.upbound.io
 spec:
-  group: compute.gcp.upbound.io
+  group: schemas.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - gcp
-    kind: RegionTargetHTTPProxy
-    listKind: RegionTargetHTTPProxyList
-    plural: regiontargethttpproxies
-    singular: regiontargethttpproxy
+    - aws
+    kind: Schema
+    listKind: SchemaList
+    plural: schemas
+    singular: schema
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RegionTargetHTTPProxy is the Schema for the RegionTargetHTTPProxys API. Represents a RegionTargetHttpProxy resource, which is used by one or more forwarding rules to route incoming HTTP requests to a URL map.
+        description: Schema is the Schema for the Schemas API. Provides an EventBridge Schema resource.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RegionTargetHTTPProxySpec defines the desired state of RegionTargetHTTPProxy
+            description: SchemaSpec defines the desired state of Schema
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,20 +56,23 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  description:
-                    description: An optional description of this resource.
+                  content:
+                    description: The schema specification. Must be a valid Open API 3.0 spec.
                     type: string
-                  project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+                  description:
+                    description: The description of the schema. Maximum of 256 characters.
+                    type: string
+                  name:
+                    description: The name of the schema. Maximum of 385 characters consisting of lower case letters, upper case letters, ., -, _, @.
                     type: string
                   region:
-                    description: The Region in which the created target https proxy should reside. If it is not provided, the provider region is used.
+                    description: Region is the region you'd like your resource to be created in.
                     type: string
-                  urlMap:
-                    description: A reference to the RegionUrlMap resource that defines the mapping from URL to the BackendService.
+                  registryName:
+                    description: The name of the registry in which this schema belongs.
                     type: string
-                  urlMapRef:
-                    description: Reference to a RegionURLMap to populate urlMap.
+                  registryNameRef:
+                    description: Reference to a Registry in schemas to populate registryName.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -94,8 +97,8 @@ spec:
                     required:
                     - name
                     type: object
-                  urlMapSelector:
-                    description: Selector for a RegionURLMap to populate urlMap.
+                  registryNameSelector:
+                    description: Selector for a Registry in schemas to populate registryName.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -123,8 +126,19 @@ spec:
                             type: string
                         type: object
                     type: object
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                  type:
+                    description: 'The type of the schema. Valid values: OpenApi3.'
+                    type: string
                 required:
+                - content
+                - name
                 - region
+                - type
                 type: object
               providerConfigRef:
                 default:
@@ -251,21 +265,28 @@ spec:
             - forProvider
             type: object
           status:
-            description: RegionTargetHTTPProxyStatus defines the observed state of RegionTargetHTTPProxy.
+            description: SchemaStatus defines the observed state of Schema.
             properties:
               atProvider:
                 properties:
-                  creationTimestamp:
-                    description: Creation timestamp in RFC3339 text format.
+                  arn:
+                    description: The Amazon Resource Name (ARN) of the discoverer.
                     type: string
                   id:
-                    description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/targetHttpProxies/{{name}}
                     type: string
-                  proxyId:
-                    description: The unique identifier for the resource.
-                    type: number
-                  selfLink:
-                    description: The URI of the created resource.
+                  lastModified:
+                    description: The last modified date of the schema.
+                    type: string
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    type: object
+                  version:
+                    description: The version of the schema.
+                    type: string
+                  versionCreatedDate:
+                    description: The created date of the version of the schema.
                     type: string
                 type: object
               conditions:

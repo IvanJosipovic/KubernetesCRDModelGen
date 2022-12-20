@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: regiontargethttpproxies.compute.gcp.upbound.io
+  name: instances.lightsail.aws.upbound.io
 spec:
-  group: compute.gcp.upbound.io
+  group: lightsail.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - gcp
-    kind: RegionTargetHTTPProxy
-    listKind: RegionTargetHTTPProxyList
-    plural: regiontargethttpproxies
-    singular: regiontargethttpproxy
+    - aws
+    kind: Instance
+    listKind: InstanceList
+    plural: instances
+    singular: instance
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RegionTargetHTTPProxy is the Schema for the RegionTargetHTTPProxys API. Represents a RegionTargetHttpProxy resource, which is used by one or more forwarding rules to route incoming HTTP requests to a URL map.
+        description: Instance is the Schema for the Instances API. Provides an Lightsail Instance
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RegionTargetHTTPProxySpec defines the desired state of RegionTargetHTTPProxy
+            description: InstanceSpec defines the desired state of Instance
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,74 +56,33 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  description:
-                    description: An optional description of this resource.
+                  availabilityZone:
+                    description: The Availability Zone in which to create your instance (see list below)
                     type: string
-                  project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+                  blueprintId:
+                    description: 'The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: aws lightsail get-blueprints'
+                    type: string
+                  bundleId:
+                    description: The bundle of specification information (see list below)
+                    type: string
+                  keyPairName:
+                    description: The name of your key pair. Created in the Lightsail console (cannot use aws_key_pair at this time)
                     type: string
                   region:
-                    description: The Region in which the created target https proxy should reside. If it is not provided, the provider region is used.
+                    description: Region is the region you'd like your resource to be created in.
                     type: string
-                  urlMap:
-                    description: A reference to the RegionUrlMap resource that defines the mapping from URL to the BackendService.
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                  userData:
+                    description: launch script to configure server with additional user data
                     type: string
-                  urlMapRef:
-                    description: Reference to a RegionURLMap to populate urlMap.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  urlMapSelector:
-                    description: Selector for a RegionURLMap to populate urlMap.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
                 required:
+                - availabilityZone
+                - blueprintId
+                - bundleId
                 - region
                 type: object
               providerConfigRef:
@@ -251,21 +210,49 @@ spec:
             - forProvider
             type: object
           status:
-            description: RegionTargetHTTPProxyStatus defines the observed state of RegionTargetHTTPProxy.
+            description: InstanceStatus defines the observed state of Instance.
             properties:
               atProvider:
                 properties:
-                  creationTimestamp:
-                    description: Creation timestamp in RFC3339 text format.
+                  arn:
+                    description: The ARN of the Lightsail instance (matches id).
+                    type: string
+                  cpuCount:
+                    description: The number of vCPUs the instance has.
+                    type: number
+                  createdAt:
+                    description: The timestamp when the instance was created.
                     type: string
                   id:
-                    description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/targetHttpProxies/{{name}}
+                    description: The ARN of the Lightsail instance (matches arn).
                     type: string
-                  proxyId:
-                    description: The unique identifier for the resource.
+                  ipv6Address:
+                    description: (Deprecated) The first IPv6 address of the Lightsail instance. Use ipv6_addresses attribute instead.
+                    type: string
+                  ipv6Addresses:
+                    description: List of IPv6 addresses for the Lightsail instance.
+                    items:
+                      type: string
+                    type: array
+                  isStaticIp:
+                    description: A Boolean value indicating whether this instance has a static IP assigned to it.
+                    type: boolean
+                  privateIpAddress:
+                    description: The private IP address of the instance.
+                    type: string
+                  publicIpAddress:
+                    description: The public IP address of the instance.
+                    type: string
+                  ramSize:
+                    description: The amount of RAM in GB on the instance (e.g., 1.0).
                     type: number
-                  selfLink:
-                    description: The URI of the created resource.
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    type: object
+                  username:
+                    description: The user name for connecting to the instance (e.g., ec2-user).
                     type: string
                 type: object
               conditions:

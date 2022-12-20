@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: regiontargethttpproxies.compute.gcp.upbound.io
+  name: hostedpublicvirtualinterfaceaccepters.directconnect.aws.upbound.io
 spec:
-  group: compute.gcp.upbound.io
+  group: directconnect.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - gcp
-    kind: RegionTargetHTTPProxy
-    listKind: RegionTargetHTTPProxyList
-    plural: regiontargethttpproxies
-    singular: regiontargethttpproxy
+    - aws
+    kind: HostedPublicVirtualInterfaceAccepter
+    listKind: HostedPublicVirtualInterfaceAccepterList
+    plural: hostedpublicvirtualinterfaceaccepters
+    singular: hostedpublicvirtualinterfaceaccepter
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RegionTargetHTTPProxy is the Schema for the RegionTargetHTTPProxys API. Represents a RegionTargetHttpProxy resource, which is used by one or more forwarding rules to route incoming HTTP requests to a URL map.
+        description: HostedPublicVirtualInterfaceAccepter is the Schema for the HostedPublicVirtualInterfaceAccepters API. Provides a resource to manage the accepter's side of a Direct Connect hosted public virtual interface.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RegionTargetHTTPProxySpec defines the desired state of RegionTargetHTTPProxy
+            description: HostedPublicVirtualInterfaceAccepterSpec defines the desired state of HostedPublicVirtualInterfaceAccepter
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,20 +56,19 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  description:
-                    description: An optional description of this resource.
-                    type: string
-                  project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
-                    type: string
                   region:
-                    description: The Region in which the created target https proxy should reside. If it is not provided, the provider region is used.
+                    description: Region is the region you'd like your resource to be created in.
                     type: string
-                  urlMap:
-                    description: A reference to the RegionUrlMap resource that defines the mapping from URL to the BackendService.
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                  virtualInterfaceId:
+                    description: The ID of the Direct Connect virtual interface to accept.
                     type: string
-                  urlMapRef:
-                    description: Reference to a RegionURLMap to populate urlMap.
+                  virtualInterfaceIdRef:
+                    description: Reference to a HostedPublicVirtualInterface to populate virtualInterfaceId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -94,8 +93,8 @@ spec:
                     required:
                     - name
                     type: object
-                  urlMapSelector:
-                    description: Selector for a RegionURLMap to populate urlMap.
+                  virtualInterfaceIdSelector:
+                    description: Selector for a HostedPublicVirtualInterface to populate virtualInterfaceId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -251,22 +250,21 @@ spec:
             - forProvider
             type: object
           status:
-            description: RegionTargetHTTPProxyStatus defines the observed state of RegionTargetHTTPProxy.
+            description: HostedPublicVirtualInterfaceAccepterStatus defines the observed state of HostedPublicVirtualInterfaceAccepter.
             properties:
               atProvider:
                 properties:
-                  creationTimestamp:
-                    description: Creation timestamp in RFC3339 text format.
+                  arn:
+                    description: The ARN of the virtual interface.
                     type: string
                   id:
-                    description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/targetHttpProxies/{{name}}
+                    description: The ID of the virtual interface.
                     type: string
-                  proxyId:
-                    description: The unique identifier for the resource.
-                    type: number
-                  selfLink:
-                    description: The URI of the created resource.
-                    type: string
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    type: object
                 type: object
               conditions:
                 description: Conditions of the resource.
