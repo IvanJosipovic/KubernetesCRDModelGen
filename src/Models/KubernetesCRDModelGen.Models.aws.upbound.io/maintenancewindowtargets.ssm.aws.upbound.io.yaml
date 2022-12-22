@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: userpoolclients.cognitoidp.aws.upbound.io
+  name: maintenancewindowtargets.ssm.aws.upbound.io
 spec:
-  group: cognitoidp.aws.upbound.io
+  group: ssm.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - aws
-    kind: UserPoolClient
-    listKind: UserPoolClientList
-    plural: userpoolclients
-    singular: userpoolclient
+    kind: MaintenanceWindowTarget
+    listKind: MaintenanceWindowTargetList
+    plural: maintenancewindowtargets
+    singular: maintenancewindowtarget
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: UserPoolClient is the Schema for the UserPoolClients API. Provides a Cognito User Pool Client resource.
+        description: MaintenanceWindowTarget is the Schema for the MaintenanceWindowTargets API. Provides an SSM Maintenance Window Target resource
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: UserPoolClientSpec defines the desired state of UserPoolClient
+            description: MaintenanceWindowTargetSpec defines the desired state of MaintenanceWindowTarget
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,222 +56,41 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  accessTokenValidity:
-                    description: Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in token_validity_units.
-                    type: number
-                  allowedOauthFlows:
-                    description: List of allowed OAuth flows (code, implicit, client_credentials).
-                    items:
-                      type: string
-                    type: array
-                  allowedOauthFlowsUserPoolClient:
-                    description: Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
-                    type: boolean
-                  allowedOauthScopes:
-                    description: List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
-                    items:
-                      type: string
-                    type: array
-                  analyticsConfiguration:
-                    description: Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
-                    items:
-                      properties:
-                        applicationArn:
-                          description: Application ARN for an Amazon Pinpoint application. Conflicts with external_id and role_arn.
-                          type: string
-                        applicationId:
-                          description: Application ID for an Amazon Pinpoint application.
-                          type: string
-                        applicationIdRef:
-                          description: Reference to a App in pinpoint to populate applicationId.
-                          properties:
-                            name:
-                              description: Name of the referenced object.
-                              type: string
-                            policy:
-                              description: Policies for referencing.
-                              properties:
-                                resolution:
-                                  default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                                  enum:
-                                  - Required
-                                  - Optional
-                                  type: string
-                                resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                                  enum:
-                                  - Always
-                                  - IfNotPresent
-                                  type: string
-                              type: object
-                          required:
-                          - name
-                          type: object
-                        applicationIdSelector:
-                          description: Selector for a App in pinpoint to populate applicationId.
-                          properties:
-                            matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                              type: boolean
-                            matchLabels:
-                              additionalProperties:
-                                type: string
-                              description: MatchLabels ensures an object with matching labels is selected.
-                              type: object
-                            policy:
-                              description: Policies for selection.
-                              properties:
-                                resolution:
-                                  default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                                  enum:
-                                  - Required
-                                  - Optional
-                                  type: string
-                                resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                                  enum:
-                                  - Always
-                                  - IfNotPresent
-                                  type: string
-                              type: object
-                          type: object
-                        externalId:
-                          description: ID for the Analytics Configuration. Conflicts with application_arn.
-                          type: string
-                        roleArn:
-                          description: ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with application_arn.
-                          type: string
-                        roleArnRef:
-                          description: Reference to a Role in iam to populate roleArn.
-                          properties:
-                            name:
-                              description: Name of the referenced object.
-                              type: string
-                            policy:
-                              description: Policies for referencing.
-                              properties:
-                                resolution:
-                                  default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                                  enum:
-                                  - Required
-                                  - Optional
-                                  type: string
-                                resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                                  enum:
-                                  - Always
-                                  - IfNotPresent
-                                  type: string
-                              type: object
-                          required:
-                          - name
-                          type: object
-                        roleArnSelector:
-                          description: Selector for a Role in iam to populate roleArn.
-                          properties:
-                            matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                              type: boolean
-                            matchLabels:
-                              additionalProperties:
-                                type: string
-                              description: MatchLabels ensures an object with matching labels is selected.
-                              type: object
-                            policy:
-                              description: Policies for selection.
-                              properties:
-                                resolution:
-                                  default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                                  enum:
-                                  - Required
-                                  - Optional
-                                  type: string
-                                resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                                  enum:
-                                  - Always
-                                  - IfNotPresent
-                                  type: string
-                              type: object
-                          type: object
-                        userDataShared:
-                          description: If set to true, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
-                          type: boolean
-                      type: object
-                    type: array
-                  callbackUrls:
-                    description: List of allowed callback URLs for the identity providers.
-                    items:
-                      type: string
-                    type: array
-                  defaultRedirectUri:
-                    description: Default redirect URI. Must be in the list of callback URLs.
+                  description:
+                    description: The description of the maintenance window target.
                     type: string
-                  enableTokenRevocation:
-                    description: Enables or disables token revocation.
-                    type: boolean
-                  explicitAuthFlows:
-                    description: List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
-                    items:
-                      type: string
-                    type: array
-                  generateSecret:
-                    description: Should an application secret be generated.
-                    type: boolean
-                  idTokenValidity:
-                    description: Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in token_validity_units.
-                    type: number
-                  logoutUrls:
-                    description: List of allowed logout URLs for the identity providers.
-                    items:
-                      type: string
-                    type: array
                   name:
-                    description: Name of the application client.
+                    description: The name of the maintenance window target.
                     type: string
-                  preventUserExistenceErrors:
-                    description: Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to ENABLED and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to LEGACY, those APIs will return a UserNotFoundException exception if the user does not exist in the user pool.
+                  ownerInformation:
+                    description: User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
                     type: string
-                  readAttributes:
-                    description: List of user pool attributes the application client can read from.
-                    items:
-                      type: string
-                    type: array
-                  refreshTokenValidity:
-                    description: Time limit in days refresh tokens are valid for.
-                    type: number
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
-                  supportedIdentityProviders:
-                    description: List of provider names for the identity providers that are supported on this client. Uses the provider_name attribute of aws_cognito_identity_provider resource(s), or the equivalent string(s).
-                    items:
-                      type: string
-                    type: array
-                  tokenValidityUnits:
-                    description: Configuration block for units in which the validity times are represented in. Detailed below.
+                  resourceType:
+                    description: The type of target being registered with the Maintenance Window. Possible values are INSTANCE and RESOURCE_GROUP.
+                    type: string
+                  targets:
+                    description: The targets to register with the maintenance window. In other words, the instances to run commands on when the maintenance window runs. You can specify targets using instance IDs, resource group names, or tags that have been applied to instances. For more information about these examples formats see (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
                     items:
                       properties:
-                        accessToken:
-                          description: Time unit in for the value in access_token_validity, defaults to hours.
+                        key:
                           type: string
-                        idToken:
-                          description: Time unit in for the value in id_token_validity, defaults to hours.
-                          type: string
-                        refreshToken:
-                          description: Time unit in for the value in refresh_token_validity, defaults to days.
-                          type: string
+                        values:
+                          items:
+                            type: string
+                          type: array
+                      required:
+                      - key
+                      - values
                       type: object
                     type: array
-                  userPoolId:
-                    description: User pool the client belongs to.
+                  windowId:
+                    description: The Id of the maintenance window to register the target with.
                     type: string
-                  userPoolIdRef:
-                    description: Reference to a UserPool to populate userPoolId.
+                  windowIdRef:
+                    description: Reference to a MaintenanceWindow in ssm to populate windowId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -296,8 +115,8 @@ spec:
                     required:
                     - name
                     type: object
-                  userPoolIdSelector:
-                    description: Selector for a UserPool to populate userPoolId.
+                  windowIdSelector:
+                    description: Selector for a MaintenanceWindow in ssm to populate windowId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -325,14 +144,10 @@ spec:
                             type: string
                         type: object
                     type: object
-                  writeAttributes:
-                    description: List of user pool attributes the application client can write to.
-                    items:
-                      type: string
-                    type: array
                 required:
-                - name
                 - region
+                - resourceType
+                - targets
                 type: object
               providerConfigRef:
                 default:
@@ -459,12 +274,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: UserPoolClientStatus defines the observed state of UserPoolClient.
+            description: MaintenanceWindowTargetStatus defines the observed state of MaintenanceWindowTarget.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: ID of the user pool client.
+                    description: The ID of the maintenance window target.
                     type: string
                 type: object
               conditions:
