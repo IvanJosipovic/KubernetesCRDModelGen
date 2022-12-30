@@ -42,7 +42,7 @@ public class UnitTest
 
     private static async Task<Type?> GetType(V1CustomResourceDefinition crd, string kind)
     {
-        var assembly = await GetCRDGenerator().GenerateAssembly(crd, Namespace);
+        var assembly = await GetCRDGenerator().GenerateAssembly(crd, Namespace + "." + crd.Spec.Group);
 
         var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
 
@@ -82,7 +82,7 @@ spec:
 ";
         var type = await GetTypeYaml(yaml, "Test");
 
-        type.Namespace.Should().Be(Namespace);
+        type.Namespace.Should().Be(Namespace + ".kubeui.com");
     }
 
     [Fact]
@@ -508,7 +508,7 @@ spec:
 ";
         var type = await GetTypeYaml(yaml, "Test");
 
-        type.Assembly.ManifestModule.ScopeName.Should().Be("tests-kubeui-com.dll");
+        type.Assembly.ManifestModule.ScopeName.Should().Be("tests.kubeui.com.dll");
     }
 
     [Fact]

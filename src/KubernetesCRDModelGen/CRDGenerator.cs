@@ -694,7 +694,7 @@ public class CRDGenerator : ICRDGenerator
             }
         }
 
-        return name.ToLower();
+        return name;
     }
 
     private string? CleanDescription(string? description)
