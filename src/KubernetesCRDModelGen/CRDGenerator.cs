@@ -109,7 +109,6 @@ public class CRDGenerator : ICRDGenerator
         '!',
         '@',
         '#',
-        '$',
         '%',
         '^',
         '&',
@@ -135,6 +134,8 @@ public class CRDGenerator : ICRDGenerator
     public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
     {
         var types = new List<ClassModel>();
+
+        @namespace = GetCleanNamespace(@namespace);
 
         var version = crd.Spec.Versions.First(x => x.Served && x.Storage);
 
@@ -170,7 +171,7 @@ public class CRDGenerator : ICRDGenerator
     public async Task<(Assembly?, XmlDocument?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
     {
         var code = GenerateCode(crd, @namespace);
-        return await GenerateAssembly(crd.Metadata.Name.Replace(".", "-"), code);
+        return await GenerateAssembly(crd.Metadata.Name, code);
     }
 
     private async Task<(Assembly?, XmlDocument?)> GenerateAssembly(string name, string code)
