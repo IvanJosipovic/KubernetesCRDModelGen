@@ -6,21 +6,21 @@ metadata:
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/stability-level: stable
+    cnrm.cloud.google.com/stability-level: alpha
     cnrm.cloud.google.com/system: true
     cnrm.cloud.google.com/tf2crd: true
-  name: computeroutes.compute.cnrm.cloud.google.com
+  name: datacatalogpolicytags.datacatalog.cnrm.cloud.google.com
 spec:
-  group: compute.cnrm.cloud.google.com
+  group: datacatalog.cnrm.cloud.google.com
   names:
     categories:
     - gcp
-    kind: ComputeRoute
-    plural: computeroutes
+    kind: DataCatalogPolicyTag
+    plural: datacatalogpolicytags
     shortNames:
-    - gcpcomputeroute
-    - gcpcomputeroutes
-    singular: computeroute
+    - gcpdatacatalogpolicytag
+    - gcpdatacatalogpolicytags
+    singular: datacatalogpolicytag
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
@@ -55,18 +55,23 @@ spec:
             properties:
               description:
                 description: >-
-                  Immutable. An optional description of this resource. Provide this property
+                  Description of this policy tag. It must: contain only unicode characters, tabs,
 
-                  when you create the resource.
+                  newlines, carriage returns and page breaks; and be at most 2000 bytes long when
+
+                  encoded in UTF-8. If not set, defaults to an empty description.
+
+                  If not set, defaults to an empty description.
                 type: string
-              destRange:
+              displayName:
                 description: >-
-                  Immutable. The destination range of outgoing packets that this route applies to.
+                  User defined name of this policy tag. It must: be unique within the parent
 
-                  Only IPv4 is supported.
+                  taxonomy; contain only unicode letters, numbers, underscores, dashes and spaces;
+
+                  not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
                 type: string
-              networkRef:
-                description: The network that this route applies to.
+              parentPolicyTagRef:
                 oneOf:
                 - not:
                     required:
@@ -83,7 +88,7 @@ spec:
                   - external
                 properties:
                   external:
-                    description: 'Allowed value: The `selfLink` field of a `ComputeNetwork` resource.'
+                    description: 'Allowed value: The `name` field of a `DataCatalogPolicyTag` resource.'
                     type: string
                   name:
                     description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
@@ -92,139 +97,46 @@ spec:
                     description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
                     type: string
                 type: object
-              nextHopGateway:
-                description: >-
-                  Immutable. URL to a gateway that should handle matching packets.
-
-                  Currently, you can only specify the internet gateway, using a full or
-
-                  partial valid URL:
-
-                  * 'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway'
-
-                  * 'projects/project/global/gateways/default-internet-gateway'
-
-                  * 'global/gateways/default-internet-gateway'
-
-                  * The string 'default-internet-gateway'.
-                type: string
-              nextHopILBRef:
-                description: >-
-                  A forwarding rule of type loadBalancingScheme=INTERNAL that should
-
-                  handle matching packets.  Note that this can only be used when the
-
-                  destinationRange is a public (non-RFC 1918) IP CIDR range.
-                oneOf:
-                - not:
-                    required:
-                    - external
-                  required:
-                  - name
-                - not:
-                    anyOf:
-                    - required:
-                      - name
-                    - required:
-                      - namespace
-                  required:
-                  - external
-                properties:
-                  external:
-                    description: 'Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.'
-                    type: string
-                  name:
-                    description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
-                    type: string
-                  namespace:
-                    description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
-                    type: string
-                type: object
-              nextHopInstanceRef:
-                description: Instance that should handle matching packets.
-                oneOf:
-                - not:
-                    required:
-                    - external
-                  required:
-                  - name
-                - not:
-                    anyOf:
-                    - required:
-                      - name
-                    - required:
-                      - namespace
-                  required:
-                  - external
-                properties:
-                  external:
-                    description: 'Allowed value: The `selfLink` field of a `ComputeInstance` resource.'
-                    type: string
-                  name:
-                    description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
-                    type: string
-                  namespace:
-                    description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
-                    type: string
-                type: object
-              nextHopIp:
-                description: Immutable. Network IP address of an instance that should handle matching packets.
-                type: string
-              nextHopVPNTunnelRef:
-                description: The ComputeVPNTunnel that should handle matching packets
-                oneOf:
-                - not:
-                    required:
-                    - external
-                  required:
-                  - name
-                - not:
-                    anyOf:
-                    - required:
-                      - name
-                    - required:
-                      - namespace
-                  required:
-                  - external
-                properties:
-                  external:
-                    description: 'Allowed value: The `selfLink` field of a `ComputeVPNTunnel` resource.'
-                    type: string
-                  name:
-                    description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
-                    type: string
-                  namespace:
-                    description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
-                    type: string
-                type: object
-              priority:
-                description: >-
-                  Immutable. The priority of this route. Priority is used to break ties in cases
-
-                  where there is more than one matching route of equal prefix length.
-
-
-                  In the case of two routes with equal prefix length, the one with the
-
-                  lowest-numbered priority value wins.
-
-
-                  Default value is 1000. Valid range is 0 through 65535.
-                type: integer
               resourceID:
-                description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
+                description: Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.
                 type: string
-              tags:
-                description: Immutable. A list of instance tags to which this route applies.
-                items:
-                  type: string
-                type: array
+              taxonomyRef:
+                oneOf:
+                - not:
+                    required:
+                    - external
+                  required:
+                  - name
+                - not:
+                    anyOf:
+                    - required:
+                      - name
+                    - required:
+                      - namespace
+                  required:
+                  - external
+                properties:
+                  external:
+                    description: 'Allowed value: The `name` field of a `DataCatalogTaxonomy` resource.'
+                    type: string
+                  name:
+                    description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                    type: string
+                  namespace:
+                    description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
+                    type: string
+                type: object
             required:
-            - destRange
-            - networkRef
+            - displayName
+            - taxonomyRef
             type: object
           status:
             properties:
+              childPolicyTags:
+                description: Resource names of child policy tags of this policy tag.
+                items:
+                  type: string
+                type: array
               conditions:
                 description: Conditions represent the latest available observation of the resource's current state.
                 items:
@@ -246,14 +158,15 @@ spec:
                       type: string
                   type: object
                 type: array
-              nextHopNetwork:
-                description: URL to a Network that should handle matching packets.
+              name:
+                description: >-
+                  Resource name of this policy tag, whose format is:
+
+                  "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}".
                 type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
-              selfLink:
-                type: string
             type: object
         required:
         - spec
