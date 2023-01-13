@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: roleassignments.authorization.azure.upbound.io
+  name: devices.cloudiot.gcp.upbound.io
 spec:
-  group: authorization.azure.upbound.io
+  group: cloudiot.gcp.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - azure
-    kind: RoleAssignment
-    listKind: RoleAssignmentList
-    plural: roleassignments
-    singular: roleassignment
+    - gcp
+    kind: Device
+    listKind: DeviceList
+    plural: devices
+    singular: device
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RoleAssignment is the Schema for the RoleAssignments API. Assigns a given Principal (User or Group) to a given Role.
+        description: Device is the Schema for the Devices API. A Google Cloud IoT Core device.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RoleAssignmentSpec defines the desired state of RoleAssignment
+            description: DeviceSpec defines the desired state of Device
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,29 +56,60 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  condition:
-                    description: The condition that limits the resources that the role can be assigned to. Changing this forces a new resource to be created.
+                  blocked:
+                    description: If a device is blocked, connections or requests from this device will fail.
+                    type: boolean
+                  credentials:
+                    description: The credentials used to authenticate this device. Structure is documented below.
+                    items:
+                      properties:
+                        expirationTime:
+                          description: The time at which this credential becomes invalid.
+                          type: string
+                        publicKey:
+                          description: A public key used to verify the signature of JSON Web Tokens (JWTs). Structure is documented below.
+                          items:
+                            properties:
+                              format:
+                                description: The format of the key. Possible values are RSA_PEM, RSA_X509_PEM, ES256_PEM, and ES256_X509_PEM.
+                                type: string
+                              key:
+                                description: The key data.
+                                type: string
+                            required:
+                            - format
+                            - key
+                            type: object
+                          type: array
+                      required:
+                      - publicKey
+                      type: object
+                    type: array
+                  gatewayConfig:
+                    description: Gateway-related configuration and state. Structure is documented below.
+                    items:
+                      properties:
+                        gatewayAuthMethod:
+                          description: Indicates whether the device is a gateway. Possible values are ASSOCIATION_ONLY, DEVICE_AUTH_TOKEN_ONLY, and ASSOCIATION_AND_DEVICE_AUTH_TOKEN.
+                          type: string
+                        gatewayType:
+                          description: Indicates whether the device is a gateway. Default value is NON_GATEWAY. Possible values are GATEWAY and NON_GATEWAY.
+                          type: string
+                      type: object
+                    type: array
+                  logLevel:
+                    description: The logging verbosity for device activity. Possible values are NONE, ERROR, INFO, and DEBUG.
                     type: string
-                  conditionVersion:
-                    description: The version of the condition. Possible values are 1.0 or 2.0. Changing this forces a new resource to be created.
+                  metadata:
+                    additionalProperties:
+                      type: string
+                    description: The metadata key-value pairs assigned to the device.
+                    type: object
+                  registry:
+                    description: The name of the device registry where this device should be created.
                     type: string
-                  delegatedManagedIdentityResourceId:
-                    description: The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
-                    type: string
-                  description:
-                    description: The description for this Role Assignment. Changing this forces a new resource to be created.
-                    type: string
-                  name:
-                    description: A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
-                    type: string
-                  principalId:
-                    description: The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to. Changing this forces a new resource to be created.
-                    type: string
-                  roleDefinitionId:
-                    description: The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with role_definition_name.
-                    type: string
-                  roleDefinitionIdRef:
-                    description: Reference to a RoleDefinition in authorization to populate roleDefinitionId.
+                  registryRef:
+                    description: Reference to a Registry in cloudiot to populate registry.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -103,8 +134,8 @@ spec:
                     required:
                     - name
                     type: object
-                  roleDefinitionIdSelector:
-                    description: Selector for a RoleDefinition in authorization to populate roleDefinitionId.
+                  registrySelector:
+                    description: Selector for a Registry in cloudiot to populate registry.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -132,18 +163,6 @@ spec:
                             type: string
                         type: object
                     type: object
-                  roleDefinitionName:
-                    description: The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with role_definition_id.
-                    type: string
-                  scope:
-                    description: The scope at which the Role Assignment applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM, or /providers/Microsoft.Management/managementGroups/myMG. Changing this forces a new resource to be created.
-                    type: string
-                  skipServicePrincipalAadCheck:
-                    description: If the principal_id is a newly provisioned Service Principal set this value to true to skip the Azure Active Directory check which may fail due to replication lag. This argument is only valid if the principal_id is a Service Principal identity. If it is not a Service Principal identity it will cause the role assignment to fail. Defaults to false.
-                    type: boolean
-                required:
-                - principalId
-                - scope
                 type: object
               providerConfigRef:
                 default:
@@ -270,16 +289,93 @@ spec:
             - forProvider
             type: object
           status:
-            description: RoleAssignmentStatus defines the observed state of RoleAssignment.
+            description: DeviceStatus defines the observed state of Device.
             properties:
               atProvider:
                 properties:
+                  config:
+                    description: The most recent device configuration, which is eventually sent from Cloud IoT Core to the device. Structure is documented below.
+                    items:
+                      properties:
+                        binaryData:
+                          description: The device configuration data.
+                          type: string
+                        cloudUpdateTime:
+                          description: The time at which this configuration version was updated in Cloud IoT Core.
+                          type: string
+                        deviceAckTime:
+                          description: The time at which Cloud IoT Core received the acknowledgment from the device, indicating that the device has received this configuration version.
+                          type: string
+                        version:
+                          description: The version of this update.
+                          type: string
+                      type: object
+                    type: array
+                  gatewayConfig:
+                    description: Gateway-related configuration and state. Structure is documented below.
+                    items:
+                      properties:
+                        lastAccessedGatewayId:
+                          description: The ID of the gateway the device accessed most recently.
+                          type: string
+                        lastAccessedGatewayTime:
+                          description: The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
+                          type: string
+                      type: object
+                    type: array
                   id:
-                    description: The Role Assignment ID.
+                    description: an identifier for the resource with format {{registry}}/devices/{{name}}
                     type: string
-                  principalType:
-                    description: The type of the principal_id, e.g. User, Group, Service Principal, Application, etc.
+                  lastConfigAckTime:
+                    description: The last time a cloud-to-device config version acknowledgment was received from the device.
                     type: string
+                  lastConfigSendTime:
+                    description: The last time a cloud-to-device config version was sent to the device.
+                    type: string
+                  lastErrorStatus:
+                    description: The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub. Structure is documented below.
+                    items:
+                      properties:
+                        details:
+                          description: A list of messages that carry the error details.
+                          items:
+                            type: string
+                          type: array
+                        message:
+                          description: A developer-facing error message, which should be in English.
+                          type: string
+                        number:
+                          description: The status code, which should be an enum value of google.rpc.Code.
+                          type: number
+                      type: object
+                    type: array
+                  lastErrorTime:
+                    description: The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
+                    type: string
+                  lastEventTime:
+                    description: The last time a telemetry event was received.
+                    type: string
+                  lastHeartbeatTime:
+                    description: The last time an MQTT PINGREQ was received.
+                    type: string
+                  lastStateTime:
+                    description: The last time a state event was received.
+                    type: string
+                  numId:
+                    description: A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally unique.
+                    type: string
+                  state:
+                    description: The state most recently received from the device. Structure is documented below.
+                    items:
+                      properties:
+                        binaryData:
+                          description: The device state data.
+                          type: string
+                        updateTime:
+                          description: The time at which this state version was updated in Cloud IoT Core.
+                          type: string
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.
