@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: roleassignments.authorization.azure.upbound.io
+  name: variablestrings.automation.azure.upbound.io
 spec:
-  group: authorization.azure.upbound.io
+  group: automation.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: RoleAssignment
-    listKind: RoleAssignmentList
-    plural: roleassignments
-    singular: roleassignment
+    kind: VariableString
+    listKind: VariableStringList
+    plural: variablestrings
+    singular: variablestring
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RoleAssignment is the Schema for the RoleAssignments API. Assigns a given Principal (User or Group) to a given Role.
+        description: VariableString is the Schema for the VariableStrings API. Manages a string variable in Azure Automation.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RoleAssignmentSpec defines the desired state of RoleAssignment
+            description: VariableStringSpec defines the desired state of VariableString
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,29 +56,11 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  condition:
-                    description: The condition that limits the resources that the role can be assigned to. Changing this forces a new resource to be created.
+                  automationAccountName:
+                    description: The name of the automation account in which the Variable is created. Changing this forces a new resource to be created.
                     type: string
-                  conditionVersion:
-                    description: The version of the condition. Possible values are 1.0 or 2.0. Changing this forces a new resource to be created.
-                    type: string
-                  delegatedManagedIdentityResourceId:
-                    description: The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
-                    type: string
-                  description:
-                    description: The description for this Role Assignment. Changing this forces a new resource to be created.
-                    type: string
-                  name:
-                    description: A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
-                    type: string
-                  principalId:
-                    description: The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to. Changing this forces a new resource to be created.
-                    type: string
-                  roleDefinitionId:
-                    description: The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with role_definition_name.
-                    type: string
-                  roleDefinitionIdRef:
-                    description: Reference to a RoleDefinition in authorization to populate roleDefinitionId.
+                  automationAccountNameRef:
+                    description: Reference to a Account in automation to populate automationAccountName.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -103,8 +85,8 @@ spec:
                     required:
                     - name
                     type: object
-                  roleDefinitionIdSelector:
-                    description: Selector for a RoleDefinition in authorization to populate roleDefinitionId.
+                  automationAccountNameSelector:
+                    description: Selector for a Account in automation to populate automationAccountName.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -132,18 +114,73 @@ spec:
                             type: string
                         type: object
                     type: object
-                  roleDefinitionName:
-                    description: The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with role_definition_id.
+                  description:
+                    description: The description of the Automation Variable.
                     type: string
-                  scope:
-                    description: The scope at which the Role Assignment applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM, or /providers/Microsoft.Management/managementGroups/myMG. Changing this forces a new resource to be created.
-                    type: string
-                  skipServicePrincipalAadCheck:
-                    description: If the principal_id is a newly provisioned Service Principal set this value to true to skip the Azure Active Directory check which may fail due to replication lag. This argument is only valid if the principal_id is a Service Principal identity. If it is not a Service Principal identity it will cause the role assignment to fail. Defaults to false.
+                  encrypted:
+                    description: Specifies if the Automation Variable is encrypted. Defaults to false.
                     type: boolean
-                required:
-                - principalId
-                - scope
+                  resourceGroupName:
+                    description: The name of the resource group in which to create the Automation Variable. Changing this forces a new resource to be created.
+                    type: string
+                  resourceGroupNameRef:
+                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  resourceGroupNameSelector:
+                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  value:
+                    description: The value of the Automation Variable as a string.
+                    type: string
                 type: object
               providerConfigRef:
                 default:
@@ -270,15 +307,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: RoleAssignmentStatus defines the observed state of RoleAssignment.
+            description: VariableStringStatus defines the observed state of VariableString.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The Role Assignment ID.
-                    type: string
-                  principalType:
-                    description: The type of the principal_id, e.g. User, Group, Service Principal, Application, etc.
+                    description: The ID of the Automation Variable.
                     type: string
                 type: object
               conditions:

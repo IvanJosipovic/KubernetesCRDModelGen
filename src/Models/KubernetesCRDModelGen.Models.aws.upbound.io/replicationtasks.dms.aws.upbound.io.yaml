@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: roleassignments.authorization.azure.upbound.io
+  name: replicationtasks.dms.aws.upbound.io
 spec:
-  group: authorization.azure.upbound.io
+  group: dms.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - azure
-    kind: RoleAssignment
-    listKind: RoleAssignmentList
-    plural: roleassignments
-    singular: roleassignment
+    - aws
+    kind: ReplicationTask
+    listKind: ReplicationTaskList
+    plural: replicationtasks
+    singular: replicationtask
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RoleAssignment is the Schema for the RoleAssignments API. Assigns a given Principal (User or Group) to a given Role.
+        description: ReplicationTask is the Schema for the ReplicationTasks API. Provides a DMS (Data Migration Service) replication task resource.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RoleAssignmentSpec defines the desired state of RoleAssignment
+            description: ReplicationTaskSpec defines the desired state of ReplicationTask
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,29 +56,23 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  condition:
-                    description: The condition that limits the resources that the role can be assigned to. Changing this forces a new resource to be created.
+                  cdcStartPosition:
+                    description: Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see Determining a CDC native start point.
                     type: string
-                  conditionVersion:
-                    description: The version of the condition. Possible values are 1.0 or 2.0. Changing this forces a new resource to be created.
+                  cdcStartTime:
+                    description: The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
                     type: string
-                  delegatedManagedIdentityResourceId:
-                    description: The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
+                  migrationType:
+                    description: The migration type. Can be one of full-load | cdc | full-load-and-cdc.
                     type: string
-                  description:
-                    description: The description for this Role Assignment. Changing this forces a new resource to be created.
+                  region:
+                    description: Region is the region you'd like your resource to be created in.
                     type: string
-                  name:
-                    description: A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
+                  replicationInstanceArn:
+                    description: The Amazon Resource Name (ARN) of the replication instance.
                     type: string
-                  principalId:
-                    description: The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to. Changing this forces a new resource to be created.
-                    type: string
-                  roleDefinitionId:
-                    description: The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with role_definition_name.
-                    type: string
-                  roleDefinitionIdRef:
-                    description: Reference to a RoleDefinition in authorization to populate roleDefinitionId.
+                  replicationInstanceArnRef:
+                    description: Reference to a ReplicationInstance in dms to populate replicationInstanceArn.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -103,8 +97,8 @@ spec:
                     required:
                     - name
                     type: object
-                  roleDefinitionIdSelector:
-                    description: Selector for a RoleDefinition in authorization to populate roleDefinitionId.
+                  replicationInstanceArnSelector:
+                    description: Selector for a ReplicationInstance in dms to populate replicationInstanceArn.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -132,18 +126,140 @@ spec:
                             type: string
                         type: object
                     type: object
-                  roleDefinitionName:
-                    description: The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with role_definition_id.
+                  replicationTaskSettings:
+                    description: An escaped JSON string that contains the task settings. For a complete list of task settings, see Task Settings for AWS Database Migration Service Tasks.
                     type: string
-                  scope:
-                    description: The scope at which the Role Assignment applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM, or /providers/Microsoft.Management/managementGroups/myMG. Changing this forces a new resource to be created.
+                  sourceEndpointArn:
+                    description: The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
                     type: string
-                  skipServicePrincipalAadCheck:
-                    description: If the principal_id is a newly provisioned Service Principal set this value to true to skip the Azure Active Directory check which may fail due to replication lag. This argument is only valid if the principal_id is a Service Principal identity. If it is not a Service Principal identity it will cause the role assignment to fail. Defaults to false.
+                  sourceEndpointArnRef:
+                    description: Reference to a Endpoint in dms to populate sourceEndpointArn.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  sourceEndpointArnSelector:
+                    description: Selector for a Endpoint in dms to populate sourceEndpointArn.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  startReplicationTask:
+                    description: Whether to run or stop the replication task.
                     type: boolean
+                  tableMappings:
+                    description: An escaped JSON string that contains the table mappings. For information on table mapping see Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data
+                    type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                  targetEndpointArn:
+                    description: The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
+                    type: string
+                  targetEndpointArnRef:
+                    description: Reference to a Endpoint in dms to populate targetEndpointArn.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  targetEndpointArnSelector:
+                    description: Selector for a Endpoint in dms to populate targetEndpointArn.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                 required:
-                - principalId
-                - scope
+                - migrationType
+                - region
+                - tableMappings
                 type: object
               providerConfigRef:
                 default:
@@ -270,16 +386,23 @@ spec:
             - forProvider
             type: object
           status:
-            description: RoleAssignmentStatus defines the observed state of RoleAssignment.
+            description: ReplicationTaskStatus defines the observed state of ReplicationTask.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The Role Assignment ID.
                     type: string
-                  principalType:
-                    description: The type of the principal_id, e.g. User, Group, Service Principal, Application, etc.
+                  replicationTaskArn:
+                    description: The Amazon Resource Name (ARN) for the replication task.
                     type: string
+                  status:
+                    description: Replication Task status.
+                    type: string
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    type: object
                 type: object
               conditions:
                 description: Conditions of the resource.

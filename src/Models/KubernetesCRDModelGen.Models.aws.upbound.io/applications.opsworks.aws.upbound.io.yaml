@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: roleassignments.authorization.azure.upbound.io
+  name: applications.opsworks.aws.upbound.io
 spec:
-  group: authorization.azure.upbound.io
+  group: opsworks.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - azure
-    kind: RoleAssignment
-    listKind: RoleAssignmentList
-    plural: roleassignments
-    singular: roleassignment
+    - aws
+    kind: Application
+    listKind: ApplicationList
+    plural: applications
+    singular: application
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RoleAssignment is the Schema for the RoleAssignments API. Assigns a given Principal (User or Group) to a given Role.
+        description: Application is the Schema for the Applications API. Provides an OpsWorks application resource.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RoleAssignmentSpec defines the desired state of RoleAssignment
+            description: ApplicationSpec defines the desired state of Application
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,29 +56,153 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  condition:
-                    description: The condition that limits the resources that the role can be assigned to. Changing this forces a new resource to be created.
+                  appSource:
+                    description: SCM configuration of the app as described below.
+                    items:
+                      properties:
+                        passwordSecretRef:
+                          description: Password to use when authenticating to the source.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
+                        revision:
+                          description: For sources that are version-aware, the revision to use.
+                          type: string
+                        sshKeySecretRef:
+                          description: SSH key to use when authenticating to the source.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
+                        type:
+                          description: The type of source to use. For example, "archive".
+                          type: string
+                        url:
+                          description: The URL where the app resource can be found.
+                          type: string
+                        username:
+                          description: Username to use when authenticating to the source.
+                          type: string
+                      required:
+                      - type
+                      type: object
+                    type: array
+                  autoBundleOnDeploy:
+                    description: Run bundle install when deploying for application of type rails.
                     type: string
-                  conditionVersion:
-                    description: The version of the condition. Possible values are 1.0 or 2.0. Changing this forces a new resource to be created.
+                  awsFlowRubySettings:
+                    description: Specify activity and workflow workers for your app using the aws-flow gem.
                     type: string
-                  delegatedManagedIdentityResourceId:
-                    description: The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
+                  dataSourceArn:
+                    description: The data source's ARN.
+                    type: string
+                  dataSourceDatabaseName:
+                    description: The database name.
+                    type: string
+                  dataSourceType:
+                    description: The data source's type one of AutoSelectOpsworksMysqlInstance, OpsworksMysqlInstance, or RdsDbInstance.
                     type: string
                   description:
-                    description: The description for this Role Assignment. Changing this forces a new resource to be created.
+                    description: A description of the app.
                     type: string
+                  documentRoot:
+                    description: Subfolder for the document root for application of type rails.
+                    type: string
+                  domains:
+                    description: A list of virtual host alias.
+                    items:
+                      type: string
+                    type: array
+                  enableSsl:
+                    description: Whether to enable SSL for the app. This must be set in order to let ssl_configuration.private_key, ssl_configuration.certificate and ssl_configuration.chain take effect.
+                    type: boolean
+                  environment:
+                    description: Object to define environment variables.  Object is described below.
+                    items:
+                      properties:
+                        key:
+                          description: Variable name.
+                          type: string
+                        secure:
+                          description: Set visibility of the variable value to true or false.
+                          type: boolean
+                        value:
+                          description: Variable value.
+                          type: string
+                      required:
+                      - key
+                      - value
+                      type: object
+                    type: array
                   name:
-                    description: A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
+                    description: A human-readable name for the application.
                     type: string
-                  principalId:
-                    description: The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to. Changing this forces a new resource to be created.
+                  railsEnv:
+                    description: The name of the Rails environment for application of type rails.
                     type: string
-                  roleDefinitionId:
-                    description: The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with role_definition_name.
+                  shortName:
+                    description: A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
                     type: string
-                  roleDefinitionIdRef:
-                    description: Reference to a RoleDefinition in authorization to populate roleDefinitionId.
+                  sslConfiguration:
+                    description: The SSL configuration of the app. Object is described below.
+                    items:
+                      properties:
+                        certificate:
+                          description: The contents of the certificate's domain.crt file.
+                          type: string
+                        chain:
+                          description: Can be used to specify an intermediate certificate authority key or client authentication.
+                          type: string
+                        privateKeySecretRef:
+                          description: The private key; the contents of the certificate's domain.key file.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
+                      required:
+                      - certificate
+                      - privateKeySecretRef
+                      type: object
+                    type: array
+                  stackId:
+                    description: The id of the stack the application will belong to.
+                    type: string
+                  stackIdRef:
+                    description: Reference to a Stack in opsworks to populate stackId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -103,8 +227,8 @@ spec:
                     required:
                     - name
                     type: object
-                  roleDefinitionIdSelector:
-                    description: Selector for a RoleDefinition in authorization to populate roleDefinitionId.
+                  stackIdSelector:
+                    description: Selector for a Stack in opsworks to populate stackId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -132,18 +256,12 @@ spec:
                             type: string
                         type: object
                     type: object
-                  roleDefinitionName:
-                    description: The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with role_definition_id.
+                  type:
+                    description: Opsworks application type. One of aws-flow-ruby, java, rails, php, nodejs, static or other.
                     type: string
-                  scope:
-                    description: The scope at which the Role Assignment applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM, or /providers/Microsoft.Management/managementGroups/myMG. Changing this forces a new resource to be created.
-                    type: string
-                  skipServicePrincipalAadCheck:
-                    description: If the principal_id is a newly provisioned Service Principal set this value to true to skip the Azure Active Directory check which may fail due to replication lag. This argument is only valid if the principal_id is a Service Principal identity. If it is not a Service Principal identity it will cause the role assignment to fail. Defaults to false.
-                    type: boolean
                 required:
-                - principalId
-                - scope
+                - name
+                - type
                 type: object
               providerConfigRef:
                 default:
@@ -270,15 +388,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: RoleAssignmentStatus defines the observed state of RoleAssignment.
+            description: ApplicationStatus defines the observed state of Application.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The Role Assignment ID.
-                    type: string
-                  principalType:
-                    description: The type of the principal_id, e.g. User, Group, Service Principal, Application, etc.
+                    description: The id of the application.
                     type: string
                 type: object
               conditions:

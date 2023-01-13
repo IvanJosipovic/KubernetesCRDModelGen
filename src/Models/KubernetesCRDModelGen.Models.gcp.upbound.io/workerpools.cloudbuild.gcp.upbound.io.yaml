@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: roleassignments.authorization.azure.upbound.io
+  name: workerpools.cloudbuild.gcp.upbound.io
 spec:
-  group: authorization.azure.upbound.io
+  group: cloudbuild.gcp.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - azure
-    kind: RoleAssignment
-    listKind: RoleAssignmentList
-    plural: roleassignments
-    singular: roleassignment
+    - gcp
+    kind: WorkerPool
+    listKind: WorkerPoolList
+    plural: workerpools
+    singular: workerpool
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RoleAssignment is the Schema for the RoleAssignments API. Assigns a given Principal (User or Group) to a given Role.
+        description: WorkerPool is the Schema for the WorkerPools API. Configuration for custom WorkerPool to run builds
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RoleAssignmentSpec defines the desired state of RoleAssignment
+            description: WorkerPoolSpec defines the desired state of WorkerPool
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,94 +56,100 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  condition:
-                    description: The condition that limits the resources that the role can be assigned to. Changing this forces a new resource to be created.
-                    type: string
-                  conditionVersion:
-                    description: The version of the condition. Possible values are 1.0 or 2.0. Changing this forces a new resource to be created.
-                    type: string
-                  delegatedManagedIdentityResourceId:
-                    description: The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
-                    type: string
-                  description:
-                    description: The description for this Role Assignment. Changing this forces a new resource to be created.
-                    type: string
-                  name:
-                    description: A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
-                    type: string
-                  principalId:
-                    description: The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to. Changing this forces a new resource to be created.
-                    type: string
-                  roleDefinitionId:
-                    description: The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with role_definition_name.
-                    type: string
-                  roleDefinitionIdRef:
-                    description: Reference to a RoleDefinition in authorization to populate roleDefinitionId.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
+                  annotations:
+                    additionalProperties:
+                      type: string
                     type: object
-                  roleDefinitionIdSelector:
-                    description: Selector for a RoleDefinition in authorization to populate roleDefinitionId.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
+                  displayName:
+                    description: User-defined name of the WorkerPool.
+                    type: string
+                  location:
+                    description: The location for the resource
+                    type: string
+                  networkConfig:
+                    description: Network configuration for the WorkerPool. Structure is documented below.
+                    items:
+                      properties:
+                        peeredNetwork:
+                          description: Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to WorkerPool.project_id on the service producer network. Must be in the format projects/{project}/global/networks/{network}, where {project} is a project number, such as 12345, and {network} is the name of a VPC network in the project. See (https://cloud.google.com/cloud-build/docs/custom-workers/set-up-custom-worker-pool-environment#understanding_the_network_configuration_options)
                           type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  roleDefinitionName:
-                    description: The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with role_definition_id.
+                        peeredNetworkRef:
+                          description: Reference to a Network in compute to populate peeredNetwork.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        peeredNetworkSelector:
+                          description: Selector for a Network in compute to populate peeredNetwork.
+                          properties:
+                            matchControllerRef:
+                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
+                      type: object
+                    type: array
+                  project:
+                    description: The project for the resource
                     type: string
-                  scope:
-                    description: The scope at which the Role Assignment applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM, or /providers/Microsoft.Management/managementGroups/myMG. Changing this forces a new resource to be created.
-                    type: string
-                  skipServicePrincipalAadCheck:
-                    description: If the principal_id is a newly provisioned Service Principal set this value to true to skip the Azure Active Directory check which may fail due to replication lag. This argument is only valid if the principal_id is a Service Principal identity. If it is not a Service Principal identity it will cause the role assignment to fail. Defaults to false.
-                    type: boolean
+                  workerConfig:
+                    description: Configuration to be used for a creating workers in the WorkerPool. Structure is documented below.
+                    items:
+                      properties:
+                        diskSizeGb:
+                          description: Size of the disk attached to the worker, in GB. See (https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If 0 is specified, Cloud Build will use a standard disk size.
+                          type: number
+                        machineType:
+                          description: Machine type of a worker, such as n1-standard-1. See (https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use n1-standard-1.
+                          type: string
+                        noExternalIp:
+                          description: If true, workers are created without any public address, which prevents network egress to public IPs.
+                          type: boolean
+                      type: object
+                    type: array
                 required:
-                - principalId
-                - scope
+                - location
                 type: object
               providerConfigRef:
                 default:
@@ -270,15 +276,27 @@ spec:
             - forProvider
             type: object
           status:
-            description: RoleAssignmentStatus defines the observed state of RoleAssignment.
+            description: WorkerPoolStatus defines the observed state of WorkerPool.
             properties:
               atProvider:
                 properties:
-                  id:
-                    description: The Role Assignment ID.
+                  createTime:
+                    description: Output only. Time at which the request to create the WorkerPool was received.
                     type: string
-                  principalType:
-                    description: The type of the principal_id, e.g. User, Group, Service Principal, Application, etc.
+                  deleteTime:
+                    description: Output only. Time at which the request to delete the WorkerPool was received.
+                    type: string
+                  id:
+                    description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/workerPools/{{name}}
+                    type: string
+                  state:
+                    description: 'Output only. WorkerPool state. Possible values: STATE_UNSPECIFIED, PENDING, APPROVED, REJECTED, CANCELLED'
+                    type: string
+                  uid:
+                    description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/workerPools/{{name}}
+                    type: string
+                  updateTime:
+                    description: Output only. Time at which the request to update the WorkerPool was received.
                     type: string
                 type: object
               conditions:

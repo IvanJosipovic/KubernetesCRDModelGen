@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: roleassignments.authorization.azure.upbound.io
+  name: springcloudjavadeployments.appplatform.azure.upbound.io
 spec:
-  group: authorization.azure.upbound.io
+  group: appplatform.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: RoleAssignment
-    listKind: RoleAssignmentList
-    plural: roleassignments
-    singular: roleassignment
+    kind: SpringCloudJavaDeployment
+    listKind: SpringCloudJavaDeploymentList
+    plural: springcloudjavadeployments
+    singular: springcloudjavadeployment
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: RoleAssignment is the Schema for the RoleAssignments API. Assigns a given Principal (User or Group) to a given Role.
+        description: SpringCloudJavaDeployment is the Schema for the SpringCloudJavaDeployments API. Manages an Azure Spring Cloud Deployment with a Java runtime.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RoleAssignmentSpec defines the desired state of RoleAssignment
+            description: SpringCloudJavaDeploymentSpec defines the desired state of SpringCloudJavaDeployment
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,29 +56,37 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  condition:
-                    description: The condition that limits the resources that the role can be assigned to. Changing this forces a new resource to be created.
+                  environmentVariables:
+                    additionalProperties:
+                      type: string
+                    description: Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
+                    type: object
+                  instanceCount:
+                    description: Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between 1 and 500. Defaults to 1 if not specified.
+                    type: number
+                  jvmOptions:
+                    description: Specifies the jvm option of the Spring Cloud Deployment.
                     type: string
-                  conditionVersion:
-                    description: The version of the condition. Possible values are 1.0 or 2.0. Changing this forces a new resource to be created.
+                  quota:
+                    description: A quota block as defined below.
+                    items:
+                      properties:
+                        cpu:
+                          description: Specifies the required cpu of the Spring Cloud Deployment. Possible Values are 500m, 1, 2, 3 and 4. Defaults to 1 if not specified.
+                          type: string
+                        memory:
+                          description: Specifies the required memory size of the Spring Cloud Deployment. Possible Values are 512Mi, 1Gi, 2Gi, 3Gi, 4Gi, 5Gi, 6Gi, 7Gi, and 8Gi. Defaults to 1Gi if not specified.
+                          type: string
+                      type: object
+                    type: array
+                  runtimeVersion:
+                    description: Specifies the runtime version of the Spring Cloud Deployment. Possible Values are Java_8, Java_11 and Java_17. Defaults to Java_8.
                     type: string
-                  delegatedManagedIdentityResourceId:
-                    description: The delegated Azure Resource Id which contains a Managed Identity. Changing this forces a new resource to be created.
+                  springCloudAppId:
+                    description: Specifies the id of the Spring Cloud Application in which to create the Deployment. Changing this forces a new resource to be created.
                     type: string
-                  description:
-                    description: The description for this Role Assignment. Changing this forces a new resource to be created.
-                    type: string
-                  name:
-                    description: A unique UUID/GUID for this Role Assignment - one will be generated if not specified. Changing this forces a new resource to be created.
-                    type: string
-                  principalId:
-                    description: The ID of the Principal (User, Group or Service Principal) to assign the Role Definition to. Changing this forces a new resource to be created.
-                    type: string
-                  roleDefinitionId:
-                    description: The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with role_definition_name.
-                    type: string
-                  roleDefinitionIdRef:
-                    description: Reference to a RoleDefinition in authorization to populate roleDefinitionId.
+                  springCloudAppIdRef:
+                    description: Reference to a SpringCloudApp in appplatform to populate springCloudAppId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -103,8 +111,8 @@ spec:
                     required:
                     - name
                     type: object
-                  roleDefinitionIdSelector:
-                    description: Selector for a RoleDefinition in authorization to populate roleDefinitionId.
+                  springCloudAppIdSelector:
+                    description: Selector for a SpringCloudApp in appplatform to populate springCloudAppId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -132,18 +140,6 @@ spec:
                             type: string
                         type: object
                     type: object
-                  roleDefinitionName:
-                    description: The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with role_definition_id.
-                    type: string
-                  scope:
-                    description: The scope at which the Role Assignment applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM, or /providers/Microsoft.Management/managementGroups/myMG. Changing this forces a new resource to be created.
-                    type: string
-                  skipServicePrincipalAadCheck:
-                    description: If the principal_id is a newly provisioned Service Principal set this value to true to skip the Azure Active Directory check which may fail due to replication lag. This argument is only valid if the principal_id is a Service Principal identity. If it is not a Service Principal identity it will cause the role assignment to fail. Defaults to false.
-                    type: boolean
-                required:
-                - principalId
-                - scope
                 type: object
               providerConfigRef:
                 default:
@@ -270,15 +266,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: RoleAssignmentStatus defines the observed state of RoleAssignment.
+            description: SpringCloudJavaDeploymentStatus defines the observed state of SpringCloudJavaDeployment.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The Role Assignment ID.
-                    type: string
-                  principalType:
-                    description: The type of the principal_id, e.g. User, Group, Service Principal, Application, etc.
+                    description: The ID of the Spring Cloud Deployment.
                     type: string
                 type: object
               conditions:

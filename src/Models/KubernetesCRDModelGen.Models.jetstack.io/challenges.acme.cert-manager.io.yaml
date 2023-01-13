@@ -6,9 +6,9 @@ metadata:
     app: cert-manager
     app.kubernetes.io/name: cert-manager
     app.kubernetes.io/instance: release-name
-    app.kubernetes.io/version: v1.10.1
+    app.kubernetes.io/version: v1.11.0
     app.kubernetes.io/managed-by: Helm
-    helm.sh/chart: cert-manager-v1.10.1
+    helm.sh/chart: cert-manager-v1.11.0
 spec:
   group: acme.cert-manager.io
   names:
@@ -394,7 +394,7 @@ spec:
                             additionalProperties:
                               type: string
                           parentRefs:
-                            description: 'When solving an HTTP-01 challenge, cert-manager creates an HTTPRoute. cert-manager needs to know which parentRefs should be used when creating the HTTPRoute. Usually, the parentRef references a Gateway. See: https://gateway-api.sigs.k8s.io/v1alpha2/api-types/httproute/#attaching-to-gateways'
+                            description: 'When solving an HTTP-01 challenge, cert-manager creates an HTTPRoute. cert-manager needs to know which parentRefs should be used when creating the HTTPRoute. Usually, the parentRef references a Gateway. See: https://gateway-api.sigs.k8s.io/api-types/httproute/#attaching-to-gateways'
                             type: array
                             items:
                               description: >-
@@ -406,7 +406,7 @@ spec:
                               properties:
                                 group:
                                   description: >-
-                                    Group is the group of the referent. 
+                                    Group is the group of the referent. When unspecified, "gateway.networking.k8s.io" is inferred. To set the core API group (such as for a "Service" kind referent), Group must be explicitly set to "" (empty string). 
                                      Support: Core
                                   type: string
                                   default: gateway.networking.k8s.io
@@ -416,7 +416,7 @@ spec:
                                   description: >-
                                     Kind is kind of the referent. 
                                      Support: Core (Gateway) 
-                                     Support: Custom (Other Resources)
+                                     Support: Implementation-specific (Other Resources)
                                   type: string
                                   default: Gateway
                                   maxLength: 63
@@ -431,7 +431,8 @@ spec:
                                   minLength: 1
                                 namespace:
                                   description: >-
-                                    Namespace is the namespace of the referent. When unspecified (or empty string), this refers to the local namespace of the Route. 
+                                    Namespace is the namespace of the referent. When unspecified, this refers to the local namespace of the Route. 
+                                     Note that there are specific rules for ParentRefs which cross namespace boundaries. Cross-namespace references are only valid if they are explicitly allowed by something in the namespace they are referring to. For example: Gateway has the AllowedRoutes field, and ReferenceGrant provides a generic way to enable any other kind of cross-namespace reference. 
                                      Support: Core
                                   type: string
                                   maxLength: 63
