@@ -85,6 +85,7 @@ spec:
                     enum:
                     - None
                     - Secret
+                    - AccessToken
                     - InjectedIdentity
                     - Environment
                     - Filesystem
