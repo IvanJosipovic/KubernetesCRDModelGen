@@ -170,6 +170,9 @@ spec:
                   sku:
                     description: The SKU of the Bot Channels Registration. Valid values include F0 or S1. Changing this forces a new resource to be created.
                     type: string
+                  streamingEndpointEnabled:
+                    description: Is the streaming endpoint enabled for the Bot Channels Registration. Defaults to false.
+                    type: boolean
                   tags:
                     additionalProperties:
                       type: string

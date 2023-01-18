@@ -186,7 +186,7 @@ spec:
                         type: object
                     type: object
                   scope:
-                    description: Specifies the scope of repositories that can trigger an event. For example, foo:* means events for all tags under repository foo. foo:bar means events for 'foo:bar' only. foo is equivalent to foo:latest. Empty means all events.
+                    description: Specifies the scope of repositories that can trigger an event. For example, foo:* means events for all tags under repository foo. foo:bar means events for 'foo:bar' only. foo is equivalent to foo:latest. Empty means all events. Defaults to "".
                     type: string
                   serviceUri:
                     description: Specifies the service URI for the Webhook to post notifications.
@@ -197,6 +197,7 @@ spec:
                   tags:
                     additionalProperties:
                       type: string
+                    description: A mapping of tags to assign to the resource.
                     type: object
                 required:
                 - actions

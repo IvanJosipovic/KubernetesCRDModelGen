@@ -72,7 +72,7 @@ spec:
                     description: The metadata for this policy exemption. This is a JSON string representing additional metadata that should be stored with the policy exemption.
                     type: string
                   policyAssignmentId:
-                    description: The ID of the Policy Assignment to be exempted at the specified Scope.
+                    description: The ID of the Policy Assignment to be exempted at the specified Scope. Changing this forces a new resource to be created.
                     type: string
                   policyAssignmentIdRef:
                     description: Reference to a SubscriptionPolicyAssignment in authorization to populate policyAssignmentId.

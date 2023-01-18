@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: FrontdoorCustomHTTPSConfiguration is the Schema for the FrontdoorCustomHTTPSConfigurations API. Manages the Custom Https Configuration for an Azure Front Door Frontend Endpoint.
+        description: FrontdoorCustomHTTPSConfiguration is the Schema for the FrontdoorCustomHTTPSConfigurations API. Manages the Custom Https Configuration for an Azure Front Door (classic) Frontend Endpoint.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -57,14 +57,14 @@ spec:
               forProvider:
                 properties:
                   customHttpsConfiguration:
-                    description: A custom_https_configuration block as defined below.
+                    description: A custom_https_configuration block as defined above.
                     items:
                       properties:
                         azureKeyVaultCertificateSecretName:
                           description: The name of the Key Vault secret representing the full certificate PFX.
                           type: string
                         azureKeyVaultCertificateSecretVersion:
-                          description: The version of the Key Vault secret representing the full certificate PFX. Defaults to Latest.
+                          description: The version of the Key Vault secret representing the full certificate PFX.
                           type: string
                         azureKeyVaultCertificateVaultId:
                           description: The ID of the Key Vault containing the SSL certificate.
@@ -133,7 +133,7 @@ spec:
                     description: Should the HTTPS protocol be enabled for this custom domain associated with the Front Door?
                     type: boolean
                   frontendEndpointId:
-                    description: The ID of the FrontDoor Frontend Endpoint which this configuration refers to.
+                    description: The ID of the Front Door Frontend Endpoint which this configuration refers to. Changing this forces a new resource to be created.
                     type: string
                 required:
                 - customHttpsProvisioningEnabled
@@ -269,7 +269,7 @@ spec:
               atProvider:
                 properties:
                   customHttpsConfiguration:
-                    description: A custom_https_configuration block as defined below.
+                    description: A custom_https_configuration block as defined above.
                     items:
                       properties:
                         minimumTlsVersion:

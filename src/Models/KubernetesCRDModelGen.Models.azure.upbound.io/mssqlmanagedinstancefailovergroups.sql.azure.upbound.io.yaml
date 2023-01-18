@@ -190,7 +190,7 @@ spec:
                       type: object
                     type: array
                   readonlyEndpointFailoverPolicyEnabled:
-                    description: Failover policy for the read-only endpoint. Defaults to false.
+                    description: Failover policy for the read-only endpoint. Defaults to true.
                     type: boolean
                 required:
                 - location

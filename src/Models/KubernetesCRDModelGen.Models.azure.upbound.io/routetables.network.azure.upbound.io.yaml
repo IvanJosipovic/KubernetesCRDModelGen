@@ -128,7 +128,7 @@ spec:
                           description: The destination to which the route applies. Can be CIDR (such as 10.1.0.0/16) or Azure Service Tag (such as ApiManagement, AzureBackup or AzureMonitor) format.
                           type: string
                         name:
-                          description: The name of the route table. Changing this forces a new resource to be created.
+                          description: The name of the route. Changing this forces a new resource to be created.
                           type: string
                         nextHopInIpAddress:
                           description: Contains the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.

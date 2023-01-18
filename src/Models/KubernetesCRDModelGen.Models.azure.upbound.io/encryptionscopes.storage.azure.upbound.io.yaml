@@ -57,7 +57,7 @@ spec:
               forProvider:
                 properties:
                   infrastructureEncryptionRequired:
-                    description: Is a secondary layer of encryption with Platform Managed Keys for data applied?
+                    description: Is a secondary layer of encryption with Platform Managed Keys for data applied? Changing this forces a new resource to be created.
                     type: boolean
                   keyVaultKeyId:
                     description: The ID of the Key Vault Key. Required when source is Microsoft.KeyVault.

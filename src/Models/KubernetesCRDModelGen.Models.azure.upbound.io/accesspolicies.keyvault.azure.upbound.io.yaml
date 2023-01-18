@@ -57,7 +57,7 @@ spec:
               forProvider:
                 properties:
                   applicationId:
-                    description: The object ID of an Application in Azure Active Directory.
+                    description: The object ID of an Application in Azure Active Directory. Changing this forces a new resource to be created.
                     type: string
                   certificatePermissions:
                     description: 'List of certificate permissions, must be one or more from the following: Backup, Create, Delete, DeleteIssuers, Get, GetIssuers, Import, List, ListIssuers, ManageContacts, ManageIssuers, Purge, Recover, Restore, SetIssuers and Update.'
@@ -65,7 +65,7 @@ spec:
                       type: string
                     type: array
                   keyPermissions:
-                    description: 'List of key permissions, must be one or more from the following: Backup, Create, Decrypt, Delete, Encrypt, Get, Import, List, Purge, Recover, Restore, Sign, UnwrapKey, Update, Verify and WrapKey.'
+                    description: 'List of key permissions, must be one or more from the following: Backup, Create, Decrypt, Delete, Encrypt, Get, Import, List, Purge, Recover, Restore, Sign, UnwrapKey, Update, Verify, WrapKey, Release, Rotate, GetRotationPolicy, and SetRotationPolicy.'
                     items:
                       type: string
                     type: array

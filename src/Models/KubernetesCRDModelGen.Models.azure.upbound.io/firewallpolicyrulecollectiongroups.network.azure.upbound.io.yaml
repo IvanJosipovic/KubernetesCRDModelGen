@@ -70,14 +70,14 @@ spec:
                           description: The priority of the application rule collection. The range is 100 - 65000.
                           type: number
                         rule:
-                          description: One or more rule (application rule) blocks as defined below.
+                          description: One or more application_rule (application rule) blocks as defined below.
                           items:
                             properties:
                               description:
                                 description: The description which should be used for this rule.
                                 type: string
                               destinationAddresses:
-                                description: Specifies a list of destination IP addresses (including CIDR and *).
+                                description: Specifies a list of destination IP addresses (including CIDR and *) or Service Tags.
                                 items:
                                   type: string
                                 type: array
@@ -87,7 +87,7 @@ spec:
                                   type: string
                                 type: array
                               destinationFqdns:
-                                description: Specifies a list of destination FQDNs. Conflicts with destination_urls.
+                                description: Specifies a list of destination FQDNs.
                                 items:
                                   type: string
                                 type: array
@@ -97,10 +97,10 @@ spec:
                                   type: string
                                 type: array
                               name:
-                                description: The name which should be used for this rule.
+                                description: The name which should be used for this network rule collection.
                                 type: string
                               protocols:
-                                description: One or more protocols blocks as defined below. Not required when specifying destination_fqdn_tags, but required when specifying destination_fqdns.
+                                description: Specifies a list of network protocols this rule applies to. Possible values are Any, TCP, UDP, ICMP.
                                 items:
                                   properties:
                                     port:
@@ -215,7 +215,7 @@ spec:
                           description: The priority of the NAT rule collection. The range is 100 - 65000.
                           type: number
                         rule:
-                          description: A rule (NAT rule) block as defined above.
+                          description: A nat_rule (NAT rule) block as defined below.
                           items:
                             properties:
                               destinationAddress:
@@ -227,10 +227,10 @@ spec:
                                   type: string
                                 type: array
                               name:
-                                description: The name which should be used for this rule.
+                                description: The name which should be used for this network rule collection.
                                 type: string
                               protocols:
-                                description: One or more protocols blocks as defined below. Not required when specifying destination_fqdn_tags, but required when specifying destination_fqdns.
+                                description: Specifies a list of network protocols this rule applies to. Possible values are Any, TCP, UDP, ICMP.
                                 items:
                                   type: string
                                 type: array
@@ -280,16 +280,16 @@ spec:
                           description: The priority of the network rule collection. The range is 100 - 65000.
                           type: number
                         rule:
-                          description: One or more rule (network rule) blocks as defined above.
+                          description: One or more network_rule (network rule) blocks as defined below.
                           items:
                             properties:
                               destinationAddresses:
-                                description: Specifies a list of destination IP addresses (including CIDR and *).
+                                description: Specifies a list of destination IP addresses (including CIDR and *) or Service Tags.
                                 items:
                                   type: string
                                 type: array
                               destinationFqdns:
-                                description: Specifies a list of destination FQDNs. Conflicts with destination_urls.
+                                description: Specifies a list of destination FQDNs.
                                 items:
                                   type: string
                                 type: array
@@ -304,10 +304,10 @@ spec:
                                   type: string
                                 type: array
                               name:
-                                description: The name which should be used for this rule.
+                                description: The name which should be used for this network rule collection.
                                 type: string
                               protocols:
-                                description: One or more protocols blocks as defined below. Not required when specifying destination_fqdn_tags, but required when specifying destination_fqdns.
+                                description: Specifies a list of network protocols this rule applies to. Possible values are Any, TCP, UDP, ICMP.
                                 items:
                                   type: string
                                 type: array

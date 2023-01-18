@@ -136,17 +136,17 @@ spec:
                     items:
                       properties:
                         args:
-                          description: Configuration options for the module (e.g. ERROR_RATE 0.00 INITIAL_SIZE 400).
+                          description: Configuration options for the module (e.g. ERROR_RATE 0.00 INITIAL_SIZE 400). Changing this forces a new resource to be created. Defaults to "".
                           type: string
                         name:
-                          description: The name which should be used for this module. Possible values are RediSearch, RedisBloom and RedisTimeSeries. Changing this forces a new Redis Enterprise Database to be created.
+                          description: The name which should be used for this module. Possible values are RedisBloom, RedisTimeSeries, RediSearch and RedisJSON. Changing this forces a new Redis Enterprise Database to be created.
                           type: string
                       required:
                       - name
                       type: object
                     type: array
                   port:
-                    description: TCP port of the database endpoint. Specified at create time. Defaults to an available port. Changing this forces a new Redis Enterprise Database to be created.
+                    description: TCP port of the database endpoint. Specified at create time. Defaults to an available port. Changing this forces a new Redis Enterprise Database to be created. Defaults to 10000.
                     type: number
                   resourceGroupName:
                     description: The name of the Resource Group where the Redis Enterprise Database should exist. Changing this forces a new Redis Enterprise Database to be created.

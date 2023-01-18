@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: FrontDoor is the Schema for the FrontDoors API. Manages an Azure Front Door instance.
+        description: FrontDoor is the Schema for the FrontDoors API. Manages an Azure Front Door (classic) instance.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -99,7 +99,7 @@ spec:
                           description: Specifies the name of the backend_pool_load_balancing block within this resource to use for this Backend Pool.
                           type: string
                         name:
-                          description: Specifies the name of the Backend Pool.
+                          description: Specifies the name of the Backend Pool. Changing this forces a new resource to be created.
                           type: string
                       required:
                       - backend
@@ -119,16 +119,16 @@ spec:
                           description: The number of seconds between each Health Probe. Defaults to 120.
                           type: number
                         name:
-                          description: Specifies the name of the Health Probe.
+                          description: Specifies the name of the Health Probe. Changing this forces a new resource to be created.
                           type: string
                         path:
                           description: The path to use for the Health Probe. Default is /.
                           type: string
                         probeMethod:
-                          description: 'Specifies HTTP method the health probe uses when querying the backend pool instances. Possible values include: Get and Head. Defaults to Get.'
+                          description: 'Specifies HTTP method the health probe uses when querying the backend pool instances. Possible values include: Get and Head. Defaults to GET.'
                           type: string
                         protocol:
-                          description: Protocol scheme to use for the Health Probe. Defaults to Http.
+                          description: Protocol scheme to use for the Health Probe. Possible values are Http and Https. Defaults to Http.
                           type: string
                       required:
                       - name
@@ -142,7 +142,7 @@ spec:
                           description: The additional latency in milliseconds for probes to fall into the lowest latency bucket. Defaults to 0.
                           type: number
                         name:
-                          description: Specifies the name of the Load Balancer.
+                          description: Specifies the name of the Load Balancer. Changing this forces a new resource to be created.
                           type: string
                         sampleSize:
                           description: The number of samples to consider for load balancing decisions. Defaults to 4.
@@ -155,6 +155,7 @@ spec:
                       type: object
                     type: array
                   backendPoolSettings:
+                    description: A backend_pool_settings block as defined below.
                     items:
                       properties:
                         backendPoolsSendReceiveTimeoutSeconds:
@@ -178,7 +179,7 @@ spec:
                           description: Specifies the host name of the frontend_endpoint. Must be a domain name. In order to use a name.azurefd.net domain, the name value must match the Front Door name.
                           type: string
                         name:
-                          description: Specifies the name of the frontend_endpoint.
+                          description: Specifies the name of the frontend_endpoint. Changing this forces a new resource to be created.
                           type: string
                         sessionAffinityEnabled:
                           description: Whether to allow session affinity on this host. Valid options are true or false Defaults to false.
@@ -260,7 +261,7 @@ spec:
                     items:
                       properties:
                         acceptedProtocols:
-                          description: Protocol schemes to match for the Backend Routing Rule. Defaults to Http.
+                          description: Protocol schemes to match for the Backend Routing Rule. Possible values are Http and Https.
                           items:
                             type: string
                           type: array
@@ -307,10 +308,10 @@ spec:
                             type: string
                           type: array
                         name:
-                          description: Specifies the name of the Routing Rule.
+                          description: Specifies the name of the Routing Rule. Changing this forces a new resource to be created.
                           type: string
                         patternsToMatch:
-                          description: The route patterns for the Backend Routing Rule. Defaults to /*.
+                          description: The route patterns for the Backend Routing Rule.
                           items:
                             type: string
                           type: array
@@ -331,7 +332,7 @@ spec:
                                 description: Replace any existing query string from the incoming request URL.
                                 type: string
                               redirectProtocol:
-                                description: Protocol to use when redirecting. Valid options are HttpOnly, HttpsOnly, or MatchRequest. Defaults to MatchRequest
+                                description: Protocol to use when redirecting. Valid options are HttpOnly, HttpsOnly, or MatchRequest.
                                 type: string
                               redirectType:
                                 description: Status code for the redirect. Valida options are Moved, Found, TemporaryRedirect, PermanentRedirect.

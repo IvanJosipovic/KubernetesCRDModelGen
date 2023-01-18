@@ -74,16 +74,16 @@ spec:
                       type: object
                     type: array
                   enableRbacAuthorization:
-                    description: Boolean flag to specify whether Azure Key Vault uses Role Based Access Control (RBAC) for authorization of data actions. Defaults to false.
+                    description: Boolean flag to specify whether Azure Key Vault uses Role Based Access Control (RBAC) for authorization of data actions.
                     type: boolean
                   enabledForDeployment:
-                    description: Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to false.
+                    description: Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
                     type: boolean
                   enabledForDiskEncryption:
-                    description: Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to false.
+                    description: Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
                     type: boolean
                   enabledForTemplateDeployment:
-                    description: Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to false.
+                    description: Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
                     type: boolean
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -113,8 +113,11 @@ spec:
                       - defaultAction
                       type: object
                     type: array
+                  publicNetworkAccessEnabled:
+                    description: Whether public network access is allowed for this Key Vault. Defaults to true.
+                    type: boolean
                   purgeProtectionEnabled:
-                    description: Is Purge Protection enabled for this Key Vault? Defaults to false.
+                    description: Is Purge Protection enabled for this Key Vault?
                     type: boolean
                   resourceGroupName:
                     description: The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
@@ -323,7 +326,7 @@ spec:
               atProvider:
                 properties:
                   accessPolicy:
-                    description: A list of up to 16 objects describing access policies, as described below.
+                    description: A list of up to 1024 objects describing access policies, as described below.
                     items:
                       properties:
                         applicationId:
@@ -335,7 +338,7 @@ spec:
                             type: string
                           type: array
                         keyPermissions:
-                          description: 'List of key permissions, must be one or more from the following: Backup, Create, Decrypt, Delete, Encrypt, Get, Import, List, Purge, Recover, Restore, Sign, UnwrapKey, Update, Verify and WrapKey.'
+                          description: List of key permissions. Possible values are Backup, Create, Decrypt, Delete, Encrypt, Get, Import, List, Purge, Recover, Restore, Sign, UnwrapKey, Update, Verify, WrapKey, Release, Rotate, GetRotationPolicy and SetRotationPolicy.
                           items:
                             type: string
                           type: array

@@ -129,7 +129,7 @@ spec:
                     description: A mapping of tags which should be assigned to the Integration Service Environment.
                     type: object
                   virtualNetworkSubnetIds:
-                    description: A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
+                    description: A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to /27 subnets must be provided. Changing this forces a new Integration Service Environment to be created.
                     items:
                       type: string
                     type: array

@@ -114,6 +114,24 @@ spec:
                             type: string
                         type: object
                     type: object
+                  apiType:
+                    description: Type of API. Possible values are graphql, http, soap, and websocket. Defaults to http.
+                    type: string
+                  contact:
+                    description: A contact block as documented below.
+                    items:
+                      properties:
+                        email:
+                          description: The email address of the contact person/organization.
+                          type: string
+                        name:
+                          description: The name of the contact person/organization.
+                          type: string
+                        url:
+                          description: Absolute URL of the contact information.
+                          type: string
+                      type: object
+                    type: array
                   description:
                     description: A description of the API Management API, which may include HTML formatting tags.
                     type: string
@@ -150,6 +168,18 @@ spec:
                       - contentValue
                       type: object
                     type: array
+                  license:
+                    description: A license block as documented below.
+                    items:
+                      properties:
+                        name:
+                          description: The name of the license .
+                          type: string
+                        url:
+                          description: Absolute URL of the license.
+                          type: string
+                      type: object
+                    type: array
                   oauth2Authorization:
                     description: An oauth2_authorization block as documented below.
                     items:
@@ -184,7 +214,7 @@ spec:
                     description: The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
                     type: string
                   protocols:
-                    description: A list of protocols the operations in this API can be invoked. Possible values are http and https.
+                    description: A list of protocols the operations in this API can be invoked. Possible values are http, https, ws, and wss.
                     items:
                       type: string
                     type: array
@@ -247,7 +277,7 @@ spec:
                         type: object
                     type: object
                   revision:
-                    description: The Revision which used for this API.
+                    description: The Revision which used for this API. Changing this forces a new resource to be created.
                     type: string
                   revisionDescription:
                     description: The description of the API Revision of the API Management API.
@@ -277,8 +307,11 @@ spec:
                       type: object
                     type: array
                   subscriptionRequired:
-                    description: Should this API require a subscription key?
+                    description: Should this API require a subscription key? Defaults to true.
                     type: boolean
+                  termsOfServiceUrl:
+                    description: Absolute URL of the Terms of Service for the API.
+                    type: string
                   version:
                     description: The Version number of this API, if this API is versioned.
                     type: string
