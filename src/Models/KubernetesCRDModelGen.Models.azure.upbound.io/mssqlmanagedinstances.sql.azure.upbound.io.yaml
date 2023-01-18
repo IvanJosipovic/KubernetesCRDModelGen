@@ -80,7 +80,7 @@ spec:
                     description: Specifies how the SQL Managed Instance will be collated. Default value is SQL_Latin1_General_CP1_CI_AS. Changing this forces a new resource to be created.
                     type: string
                   dnsZonePartnerId:
-                    description: The ID of the SQL Managed Instance which will share the DNS zone. This is a prerequisite for creating an azurerm_managed_instance_failover_group. Setting this after creation forces a new resource to be created.
+                    description: The ID of the SQL Managed Instance which will share the DNS zone. This is a prerequisite for creating an azurerm_sql_managed_instance_failover_group. Setting this after creation forces a new resource to be created.
                     type: string
                   dnsZonePartnerIdRef:
                     description: Reference to a MSSQLManagedInstance to populate dnsZonePartnerId.
@@ -141,15 +141,20 @@ spec:
                     description: An identity block as defined below.
                     items:
                       properties:
+                        identityIds:
+                          description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Managed Instance. Required when type is set to UserAssigned.
+                          items:
+                            type: string
+                          type: array
                         type:
-                          description: The identity type of the SQL Managed Instance. The only possible value is SystemAssigned.
+                          description: Specifies the type of Managed Service Identity that should be configured on this SQL Managed Instance. Possible values are SystemAssigned, UserAssigned.
                           type: string
                       required:
                       - type
                       type: object
                     type: array
                   licenseType:
-                    description: What type of license the Managed Instance will use. Valid values include can be PriceIncluded or BasePrice.
+                    description: What type of license the Managed Instance will use. Possible values are LicenseIncluded and BasePrice.
                     type: string
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -167,7 +172,7 @@ spec:
                     description: Is the public data endpoint enabled? Default value is false.
                     type: boolean
                   resourceGroupName:
-                    description: The name of the resource group in which to create the SQL Managed Instance.
+                    description: The name of the resource group in which to create the SQL Managed Instance. Changing this forces a new resource to be created.
                     type: string
                   resourceGroupNameRef:
                     description: Reference to a ResourceGroup in azure to populate resourceGroupName.
@@ -225,7 +230,7 @@ spec:
                         type: object
                     type: object
                   skuName:
-                    description: Specifies the SKU Name for the SQL Managed Instance. Valid values include GP_Gen4, GP_Gen5, GP_G8IM, GP_G8IH, BC_Gen4, BC_Gen5, BC_G8IM or BC_G8IH.
+                    description: Specifies the SKU Name for the SQL Managed Instance. Valid values include GP_Gen4, GP_Gen5, GP_Gen8IM, GP_Gen8IH, BC_Gen4, BC_Gen5, BC_Gen8IM or BC_Gen8IH.
                     type: string
                   storageAccountType:
                     description: Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, LRS and ZRS. The default value is GRS.
@@ -234,7 +239,7 @@ spec:
                     description: Maximum storage space for the SQL Managed instance. This should be a multiple of 32 (GB).
                     type: number
                   subnetId:
-                    description: The subnet resource id that the SQL Managed Instance will be associated with.
+                    description: The subnet resource id that the SQL Managed Instance will be associated with. Changing this forces a new resource to be created.
                     type: string
                   subnetIdRef:
                     description: Reference to a Subnet in network to populate subnetId.

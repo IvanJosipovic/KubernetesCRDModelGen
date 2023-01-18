@@ -60,17 +60,17 @@ spec:
                     description: Specifies whether the admin user is enabled. Defaults to false.
                     type: boolean
                   anonymousPullEnabled:
-                    description: Whether allows anonymous (unauthenticated) pull access to this Container Registry? Defaults to false. This is only supported on resources with the Standard or Premium SKU.
+                    description: Whether allows anonymous (unauthenticated) pull access to this Container Registry?  This is only supported on resources with the Standard or Premium SKU.
                     type: boolean
                   dataEndpointEnabled:
-                    description: Whether to enable dedicated data endpoints for this Container Registry? Defaults to false. This is only supported on resources with the Premium SKU.
+                    description: Whether to enable dedicated data endpoints for this Container Registry?  This is only supported on resources with the Premium SKU.
                     type: boolean
                   encryption:
                     description: An encryption block as documented below.
                     items:
                       properties:
                         enabled:
-                          description: Boolean value that indicates whether the policy is enabled.
+                          description: Boolean value that indicates whether encryption is enabled.
                           type: boolean
                         identityClientId:
                           description: The client ID of the managed identity associated with the encryption key.
@@ -88,15 +88,15 @@ spec:
                     items:
                       properties:
                         location:
-                          description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+                          description: A location where the container registry should be geo-replicated. Changing this forces a new resource to be created.
                           type: string
                         regionalEndpointEnabled:
-                          description: Whether regional endpoint is enabled for this Container Registry? Defaults to false.
+                          description: Whether regional endpoint is enabled for this Container Registry?
                           type: boolean
                         tags:
                           additionalProperties:
                             type: string
-                          description: A mapping of tags to assign to the resource.
+                          description: A mapping of tags to assign to this replication location.
                           type: object
                         zoneRedundancyEnabled:
                           description: Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to false.
@@ -219,7 +219,7 @@ spec:
                     description: Whether public network access is allowed for the container registry. Defaults to true.
                     type: boolean
                   quarantinePolicyEnabled:
-                    description: Boolean value that indicates whether quarantine policy is enabled. Defaults to false.
+                    description: Boolean value that indicates whether quarantine policy is enabled.
                     type: boolean
                   resourceGroupName:
                     description: The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.

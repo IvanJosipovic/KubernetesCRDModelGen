@@ -57,7 +57,7 @@ spec:
               forProvider:
                 properties:
                   loadbalancerId:
-                    description: The ID of the Load Balancer in which to create the Backend Address Pool.
+                    description: The ID of the Load Balancer in which to create the Backend Address Pool. Changing this forces a new resource to be created.
                     type: string
                   loadbalancerIdRef:
                     description: Reference to a LoadBalancer to populate loadbalancerId.
@@ -125,10 +125,10 @@ spec:
                           description: The port number that this Gateway Lodbalancer Tunnel Interface listens to.
                           type: number
                         protocol:
-                          description: The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are Native and VXLAN.
+                          description: The protocol used for this Gateway Lodbalancer Tunnel Interface. Possible values are None, Native and VXLAN.
                           type: string
                         type:
-                          description: The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are Internal and External.
+                          description: The traffic type of this Gateway Lodbalancer Tunnel Interface. Possible values are None, Internal and External.
                           type: string
                       required:
                       - identifier
@@ -275,6 +275,11 @@ spec:
                   id:
                     description: The ID of the Backend Address Pool.
                     type: string
+                  inboundNatRules:
+                    description: An array of the Load Balancing Inbound NAT Rules associated with this Backend Address Pool.
+                    items:
+                      type: string
+                    type: array
                   loadBalancingRules:
                     description: The Load Balancing Rules associated with this Backend Address Pool.
                     items:

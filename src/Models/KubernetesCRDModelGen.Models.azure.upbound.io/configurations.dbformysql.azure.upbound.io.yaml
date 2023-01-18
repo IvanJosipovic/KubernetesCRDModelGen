@@ -176,7 +176,7 @@ spec:
                         type: object
                     type: object
                   value:
-                    description: Specifies the value of the MySQL Configuration. See the MySQL documentation for valid values.
+                    description: Specifies the value of the MySQL Configuration. See the MySQL documentation for valid values. Changing this forces a new resource to be created.
                     type: string
                 required:
                 - name

@@ -472,7 +472,7 @@ spec:
                                 description: Specifies the path part of the URL. This value must begin with a /.
                                 type: string
                               protocol:
-                                description: Specifies the protocol part of the URL. Valid values are Http and Https.
+                                description: Specifies the protocol part of the URL. Valid values are MatchRequest, Http and Https.
                                 type: string
                               queryString:
                                 description: Specifies the query string part of the URL. This value must not start with a ? or & and must be in <key>=<value> format separated by &.
@@ -610,7 +610,7 @@ spec:
                                 description: Specifies the path part of the URL. This value must begin with a /.
                                 type: string
                               protocol:
-                                description: Specifies the protocol part of the URL. Valid values are Http and Https.
+                                description: Specifies the protocol part of the URL. Valid values are MatchRequest, Http and Https.
                                 type: string
                               queryString:
                                 description: Specifies the query string part of the URL. This value must not start with a ? or & and must be in <key>=<value> format separated by &.
@@ -688,7 +688,7 @@ spec:
                     description: the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin_path.
                     type: string
                   profileName:
-                    description: The CDN Profile to which to attach the CDN Endpoint.
+                    description: The CDN Profile to which to attach the CDN Endpoint. Changing this forces a new resource to be created.
                     type: string
                   profileNameRef:
                     description: Reference to a Profile in cdn to populate profileName.
@@ -749,7 +749,7 @@ spec:
                     description: Sets query string caching behavior. Allowed values are IgnoreQueryString, BypassCaching and UseQueryString. NotSet value can be used for Premium Verizon CDN profile. Defaults to IgnoreQueryString.
                     type: string
                   resourceGroupName:
-                    description: The name of the resource group in which to create the CDN Endpoint.
+                    description: The name of the resource group in which to create the CDN Endpoint. Changing this forces a new resource to be created.
                     type: string
                   resourceGroupNameRef:
                     description: Reference to a ResourceGroup in azure to populate resourceGroupName.

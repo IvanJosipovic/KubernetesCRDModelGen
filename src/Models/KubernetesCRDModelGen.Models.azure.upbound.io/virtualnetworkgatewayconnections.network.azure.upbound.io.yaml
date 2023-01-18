@@ -77,7 +77,7 @@ spec:
                     description: Connection mode to use. Possible values are Default, InitiatorOnly and ResponderOnly. Defaults to Default. Changing this value will force a resource to be created.
                     type: string
                   connectionProtocol:
-                    description: 'The IKE protocol version to use. Possible values are IKEv1 and IKEv2. Defaults to IKEv2. Changing this value will force a resource to be created. -> Note: Only valid for IPSec connections on virtual network gateways with SKU VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ or VpnGw3AZ.'
+                    description: 'The IKE protocol version to use. Possible values are IKEv1 and IKEv2, values are IKEv1 and IKEv2. Defaults to IKEv2. Changing this forces a new resource to be created. -> Note: Only valid for IPSec connections on virtual network gateways with SKU VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ or VpnGw3AZ.'
                     type: string
                   customBgpAddresses:
                     description: A custom_bgp_addresses (Border Gateway Protocol custom IP Addresses) block which is documented below. The block can only be used on IPSec / activeactive connections, For details about see the relevant section in the Azure documentation.
@@ -106,7 +106,7 @@ spec:
                     description: If true, BGP (Border Gateway Protocol) is enabled for this connection. Defaults to false.
                     type: boolean
                   expressRouteCircuitId:
-                    description: The ID of the Express Route Circuit when creating an ExpressRoute connection (i.e. when type is ExpressRoute). The Express Route Circuit can be in the same or in a different subscription.
+                    description: The ID of the Express Route Circuit when creating an ExpressRoute connection (i.e. when type is ExpressRoute). The Express Route Circuit can be in the same or in a different subscription. Changing this forces a new resource to be created.
                     type: string
                   expressRouteGatewayBypass:
                     description: If true, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
@@ -218,7 +218,7 @@ spec:
                     description: The location/region where the connection is located. Changing this forces a new resource to be created.
                     type: string
                   peerVirtualNetworkGatewayId:
-                    description: The ID of the peer virtual network gateway when creating a VNet-to-VNet connection (i.e. when type is Vnet2Vnet). The peer Virtual Network Gateway can be in the same or in a different subscription.
+                    description: The ID of the peer virtual network gateway when creating a VNet-to-VNet connection (i.e. when type is Vnet2Vnet). The peer Virtual Network Gateway can be in the same or in a different subscription. Changing this forces a new resource to be created.
                     type: string
                   peerVirtualNetworkGatewayIdRef:
                     description: Reference to a VirtualNetworkGateway to populate peerVirtualNetworkGatewayId.
@@ -276,7 +276,7 @@ spec:
                         type: object
                     type: object
                   resourceGroupName:
-                    description: The name of the resource group in which to create the connection Changing the name forces a new resource to be created.
+                    description: The name of the resource group in which to create the connection Changing this forces a new resource to be created.
                     type: string
                   resourceGroupNameRef:
                     description: Reference to a ResourceGroup in azure to populate resourceGroupName.
@@ -378,13 +378,13 @@ spec:
                       type: object
                     type: array
                   type:
-                    description: The type of connection. Valid options are IPsec (Site-to-Site), ExpressRoute (ExpressRoute), and Vnet2Vnet (VNet-to-VNet). Each connection type requires different mandatory arguments (refer to the examples above). Changing the connection type will force a new connection to be created.
+                    description: The type of connection. Valid options are IPsec (Site-to-Site), ExpressRoute (ExpressRoute), and Vnet2Vnet (VNet-to-VNet). Each connection type requires different mandatory arguments (refer to the examples above). Changing this forces a new resource to be created.
                     type: string
                   usePolicyBasedTrafficSelectors:
                     description: If true, policy-based traffic selectors are enabled for this connection. Enabling policy-based traffic selectors requires an ipsec_policy block. Defaults to false.
                     type: boolean
                   virtualNetworkGatewayId:
-                    description: The ID of the Virtual Network Gateway in which the connection will be created. Changing the gateway forces a new resource to be created.
+                    description: The ID of the Virtual Network Gateway in which the connection will be created. Changing this forces a new resource to be created.
                     type: string
                   virtualNetworkGatewayIdRef:
                     description: Reference to a VirtualNetworkGateway to populate virtualNetworkGatewayId.

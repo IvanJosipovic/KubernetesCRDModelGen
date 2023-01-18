@@ -67,7 +67,7 @@ spec:
                           description: 'The time frame for pulling data for the query. If custom, then a specific time period must be provided. Possible values include: WeekToDate, MonthToDate, BillingMonthToDate, TheLastWeek, TheLastMonth, TheLastBillingMonth, Custom.'
                           type: string
                         type:
-                          description: The type of the query.
+                          description: The type of the query. Possible values are ActualCost, AmortizedCost and Usage.
                           type: string
                       required:
                       - timeFrame
@@ -79,7 +79,7 @@ spec:
                     items:
                       properties:
                         containerId:
-                          description: The Resource Manager ID of the container where exports will be uploaded.
+                          description: The Resource Manager ID of the container where exports will be uploaded. Changing this forces a new resource to be created.
                           type: string
                         containerIdRef:
                           description: Reference to a Container in storage to populate containerId.
@@ -137,7 +137,7 @@ spec:
                               type: object
                           type: object
                         rootFolderPath:
-                          description: The path of the directory where exports will be uploaded.
+                          description: The path of the directory where exports will be uploaded. Changing this forces a new resource to be created.
                           type: string
                       required:
                       - rootFolderPath
@@ -153,7 +153,7 @@ spec:
                     description: How often the requested information will be exported. Valid values include Annually, Daily, Monthly, Weekly.
                     type: string
                   resourceGroupId:
-                    description: The id of the resource group on which to create an export.
+                    description: The id of the resource group on which to create an export. Changing this forces a new resource to be created.
                     type: string
                   resourceGroupIdRef:
                     description: Reference to a ResourceGroup in azure to populate resourceGroupId.

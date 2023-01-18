@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: FrontdoorRulesEngine is the Schema for the FrontdoorRulesEngines API. Manages an Azure Front Door Rules Engine configuration and rules.
+        description: FrontdoorRulesEngine is the Schema for the FrontdoorRulesEngines API. Manages an Azure Front Door (classic) Rules Engine configuration and rules.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -57,6 +57,7 @@ spec:
               forProvider:
                 properties:
                   enabled:
+                    description: Whether this Rules engine configuration is enabled? Defaults to true.
                     type: boolean
                   frontdoorName:
                     description: The name of the Front Door instance. Changing this forces a new resource to be created.
@@ -179,7 +180,7 @@ spec:
                     items:
                       properties:
                         action:
-                          description: A rule_action block as defined below.
+                          description: An action block as defined below.
                           items:
                             properties:
                               requestHeader:
@@ -225,7 +226,7 @@ spec:
                                 description: can be set to Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith or EndsWith
                                 type: string
                               selector:
-                                description: match against a specific key when variable is set to PostArgs or RequestHeader. It cannot be used with QueryString and RequestMethod. Defaults to null.
+                                description: match against a specific key when variable is set to PostArgs or RequestHeader. It cannot be used with QueryString and RequestMethod.
                                 type: string
                               transform:
                                 description: can be set to one or more values out of Lowercase, RemoveNulls, Trim, Uppercase, UrlDecode and UrlEncode
@@ -245,7 +246,7 @@ spec:
                             type: object
                           type: array
                         name:
-                          description: The name of the rule.
+                          description: The name of the rule. Changing this forces a new resource to be created.
                           type: string
                         priority:
                           description: Priority of the rule, must be unique per rules engine definition.

@@ -71,7 +71,7 @@ spec:
                       type: object
                     type: array
                   analyticalStorageEnabled:
-                    description: Enable Analytical Storage option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.
+                    description: Enable Analytical Storage option for this Cosmos DB account. Defaults to false. Enabling and then disabling analytical storage forces a new resource to be created.
                     type: boolean
                   backup:
                     description: A backup block as defined below.
@@ -87,7 +87,7 @@ spec:
                           description: The storage redundancy which is used to indicate type of backup residency. This is configurable only when type is Periodic. Possible values are Geo, Local and Zone.
                           type: string
                         type:
-                          description: The type of the backup. Possible values are Continuous and Periodic. Defaults to Periodic. Migration of Periodic to Continuous is one-way, changing Continuous to Periodic forces a new resource to be created.
+                          description: The type of the backup. Possible values are Continuous and Periodic. Migration of Periodic to Continuous is one-way, changing Continuous to Periodic forces a new resource to be created.
                           type: string
                       required:
                       - type
@@ -190,7 +190,7 @@ spec:
                           description: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority 0.
                           type: number
                         location:
-                          description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+                          description: The name of the Azure region to host replicated data. Changing this forces a new resource to be created.
                           type: string
                         zoneRedundant:
                           description: Should zone redundancy be enabled for this region? Defaults to false.
@@ -204,8 +204,13 @@ spec:
                     description: An identity block as defined below.
                     items:
                       properties:
+                        identityIds:
+                          description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this Cosmos Account.
+                          items:
+                            type: string
+                          type: array
                         type:
-                          description: Specifies the type of Managed Service Identity that should be configured on this Cosmos Account. The only possible value is SystemAssigned.
+                          description: The Type of Managed Identity assigned to this Cosmos account. Possible values are SystemAssigned, UserAssigned and SystemAssigned, UserAssigned.
                           type: string
                       required:
                       - type
@@ -221,7 +226,7 @@ spec:
                     description: A versionless Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
                     type: string
                   kind:
-                    description: Specifies the Kind of CosmosDB to create - possible values are GlobalDocumentDB and MongoDB. Defaults to GlobalDocumentDB. Changing this forces a new resource to be created.
+                    description: Specifies the Kind of CosmosDB to create - possible values are GlobalDocumentDB, MongoDB and Parse. Defaults to GlobalDocumentDB. Changing this forces a new resource to be created.
                     type: string
                   localAuthenticationDisabled:
                     description: Disable local authentication and ensure only MSI and AAD can be used exclusively for authentication. Defaults to false. Can be set only when using the SQL API.
@@ -244,7 +249,7 @@ spec:
                     description: Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to Standard.
                     type: string
                   publicNetworkAccessEnabled:
-                    description: Whether or not public network access is allowed for this CosmosDB account.
+                    description: Whether or not public network access is allowed for this CosmosDB account. Defaults to true.
                     type: boolean
                   resourceGroupName:
                     description: The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
@@ -556,7 +561,7 @@ spec:
                       type: object
                     type: array
                   id:
-                    description: The ID of the virtual network subnet.
+                    description: The CosmosDB Account ID.
                     type: string
                   identity:
                     description: An identity block as defined below.

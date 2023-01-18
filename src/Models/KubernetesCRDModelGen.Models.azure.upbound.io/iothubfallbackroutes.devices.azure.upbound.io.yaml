@@ -242,7 +242,7 @@ spec:
                         type: object
                     type: object
                   source:
-                    description: 'The source that the routing rule is to be applied to. Possible values include: DeviceConnectionStateEvents, DeviceJobLifecycleEvents, DeviceLifecycleEvents, DeviceMessages, Invalid, TwinChangeEvents.'
+                    description: 'The source that the routing rule is to be applied to. Possible values include: DeviceConnectionStateEvents, DeviceJobLifecycleEvents, DeviceLifecycleEvents, DeviceMessages, DigitalTwinChangeEvents, Invalid, TwinChangeEvents.'
                     type: string
                 required:
                 - enabled

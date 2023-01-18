@@ -75,7 +75,7 @@ spec:
                     description: The name of the Policy Exemption. Changing this forces a new resource to be created.
                     type: string
                   policyAssignmentId:
-                    description: The ID of the Policy Assignment to be exempted at the specified Scope.
+                    description: The ID of the Policy Assignment to be exempted at the specified Scope. Changing this forces a new resource to be created.
                     type: string
                   policyAssignmentIdRef:
                     description: Reference to a ResourcePolicyAssignment in authorization to populate policyAssignmentId.

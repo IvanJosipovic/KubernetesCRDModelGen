@@ -156,7 +156,7 @@ spec:
                     description: The period of time (in form of ISO8601) for which a message is available to sync before it is expired. Allowed range is from P1D to P90D.
                     type: string
                   syncSchedule:
-                    description: The cron expression indicating the schedule that the Connected Registry will sync with its parent.
+                    description: The cron expression indicating the schedule that the Connected Registry will sync with its parent. Defaults to * * * * *.
                     type: string
                   syncTokenId:
                     description: The ID of the Container Registry Token which is used for synchronizing the Connected Registry. Changing this forces a new Container Connected Registry to be created.

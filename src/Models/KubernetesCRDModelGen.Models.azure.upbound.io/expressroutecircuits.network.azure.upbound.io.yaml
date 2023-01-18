@@ -66,7 +66,7 @@ spec:
                     description: The bandwidth in Mbps of the circuit being created on the Service Provider.
                     type: number
                   expressRoutePortId:
-                    description: The ID of the Express Route Port this Express Route Circuit is based on.
+                    description: The ID of the Express Route Port this Express Route Circuit is based on. Changing this forces a new resource to be created.
                     type: string
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.

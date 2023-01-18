@@ -60,7 +60,7 @@ spec:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
                   managed:
-                    description: Specifies whether the availability set is managed or not. Possible values are true (to specify aligned) or false (to specify classic). Default is true.
+                    description: Specifies whether the availability set is managed or not. Possible values are true (to specify aligned) or false (to specify classic). Default is true. Changing this forces a new resource to be created.
                     type: boolean
                   platformFaultDomainCount:
                     description: Specifies the number of fault domains that are used. Defaults to 3. Changing this forces a new resource to be created.

@@ -104,7 +104,7 @@ spec:
                     description: The Azure location where the Analysis Services Server exists. Changing this forces a new resource to be created.
                     type: string
                   name:
-                    description: The name of the Analysis Services Server. Changing this forces a new resource to be created.
+                    description: The name of the Analysis Services Server. Only lowercase Alphanumeric characters allowed, starting with a letter. Changing this forces a new resource to be created.
                     type: string
                   querypoolConnectionMode:
                     description: Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.

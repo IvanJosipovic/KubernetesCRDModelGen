@@ -69,7 +69,7 @@ spec:
                     description: The metadata for the policy definition. This is a JSON string representing additional metadata that should be stored with the policy definition.
                     type: string
                   mode:
-                    description: The policy mode that allows you to specify which resource types will be evaluated. Possible values are All, Indexed, Microsoft.ContainerService.Data, Microsoft.CustomerLockbox.Data, Microsoft.DataCatalog.Data, Microsoft.KeyVault.Data, Microsoft.Kubernetes.Data, Microsoft.MachineLearningServices.Data, Microsoft.Network.Data and Microsoft.Synapse.Data.
+                    description: The policy resource manager mode that allows you to specify which resource types will be evaluated. Possible values are All, Indexed, Microsoft.ContainerService.Data, Microsoft.CustomerLockbox.Data, Microsoft.DataCatalog.Data, Microsoft.KeyVault.Data, Microsoft.Kubernetes.Data, Microsoft.MachineLearningServices.Data, Microsoft.Network.Data and Microsoft.Synapse.Data.
                     type: string
                   parameters:
                     description: Parameters for the policy definition. This field is a JSON string that allows you to parameterize your policy definition.
@@ -78,7 +78,7 @@ spec:
                     description: The policy rule for the policy definition. This is a JSON string representing the rule that contains an if and a then block.
                     type: string
                   policyType:
-                    description: The policy type. Possible values are BuiltIn, Custom and NotSpecified. Changing this forces a new resource to be created.
+                    description: The policy type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.
                     type: string
                 required:
                 - displayName
@@ -217,6 +217,11 @@ spec:
                   id:
                     description: The ID of the Policy Definition.
                     type: string
+                  roleDefinitionIds:
+                    description: A list of role definition id extracted from policy_rule required for remediation.
+                    items:
+                      type: string
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.

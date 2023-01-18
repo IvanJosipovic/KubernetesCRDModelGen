@@ -115,7 +115,7 @@ spec:
                         type: object
                     type: object
                   apiName:
-                    description: The ID of the API Management API Operation within the API Management Service. Changing this forces a new resource to be created.
+                    description: The name of the API within the API Management Service where the Operation exists. Changing this forces a new resource to be created.
                     type: string
                   apiNameRef:
                     description: Reference to a APIOperation in apimanagement to populate apiName.
@@ -173,7 +173,7 @@ spec:
                         type: object
                     type: object
                   operationId:
-                    description: The operation identifier within an API. Must be unique in the current API Management service instance.
+                    description: The operation identifier within an API. Must be unique in the current API Management service instance. Changing this forces a new resource to be created.
                     type: string
                   operationIdRef:
                     description: Reference to a APIOperation in apimanagement to populate operationId.

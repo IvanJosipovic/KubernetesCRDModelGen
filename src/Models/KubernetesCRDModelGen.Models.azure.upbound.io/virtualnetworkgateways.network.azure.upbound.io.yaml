@@ -89,7 +89,7 @@ spec:
                     items:
                       properties:
                         addressPrefixes:
-                          description: A list of address blocks reserved for this virtual network in CIDR notation.
+                          description: A list of address blocks reserved for this virtual network in CIDR notation as defined below.
                           items:
                             type: string
                           type: array
@@ -105,14 +105,14 @@ spec:
                     description: If true, BGP (Border Gateway Protocol) will be enabled for this Virtual Network Gateway. Defaults to false.
                     type: boolean
                   generation:
-                    description: The Generation of the Virtual Network gateway. Possible values include Generation1, Generation2 or None.
+                    description: The Generation of the Virtual Network gateway. Possible values include Generation1, Generation2 or None. Changing this forces a new resource to be created.
                     type: string
                   ipConfiguration:
-                    description: standby gateway requires exactly one ip_configuration block, an active-active gateway requires exactly two ip_configuration blocks whereas an active-active zone redundant gateway with P2S configuration requires exactly three ip_configuration blocks.
+                    description: One, two or three ip_configuration blocks documented below. An active-standby gateway requires exactly one ip_configuration block, an active-active gateway requires exactly two ip_configuration blocks whereas an active-active zone redundant gateway with P2S configuration requires exactly three ip_configuration blocks.
                     items:
                       properties:
                         name:
-                          description: A user-defined name of the IP configuration. Defaults to vnetGatewayConfig.
+                          description: A user-defined name of the IP configuration. Defaults to vnetGatewayConfig. Changing this forces a new resource to be created.
                           type: string
                         privateIpAddressAllocation:
                           description: Defines how the private IP address of the gateways virtual interface is assigned. Valid options are Static or Dynamic. Defaults to Dynamic.
@@ -236,13 +236,13 @@ spec:
                       type: object
                     type: array
                   location:
-                    description: The location/region where the Virtual Network Gateway is located. Changing the location/region forces a new resource to be created.
+                    description: The location/region where the Virtual Network Gateway is located. Changing this forces a new resource to be created.
                     type: string
                   privateIpAddressEnabled:
                     description: Should private IP be enabled on this gateway for connections? Changing this forces a new resource to be created.
                     type: boolean
                   resourceGroupName:
-                    description: The name of the resource group in which to create the Virtual Network Gateway. Changing the resource group name forces a new resource to be created.
+                    description: The name of the resource group in which to create the Virtual Network Gateway. Changing this forces a new resource to be created.
                     type: string
                   resourceGroupNameRef:
                     description: Reference to a ResourceGroup in azure to populate resourceGroupName.
@@ -311,7 +311,7 @@ spec:
                     description: The type of the Virtual Network Gateway. Valid options are Vpn or ExpressRoute. Changing the type forces a new resource to be created.
                     type: string
                   vpnClientConfiguration:
-                    description: to-site connections.
+                    description: A vpn_client_configuration block which is documented below. In this block the Virtual Network Gateway can be configured to accept IPSec point-to-site connections.
                     items:
                       properties:
                         aadAudience:
@@ -339,7 +339,7 @@ spec:
                           items:
                             properties:
                               name:
-                                description: A user-defined name of the revoked certificate.
+                                description: A user-defined name of the revoked certificate. Changing this forces a new resource to be created.
                                 type: string
                               thumbprint:
                                 type: string
@@ -353,7 +353,7 @@ spec:
                           items:
                             properties:
                               name:
-                                description: A user-defined name of the revoked certificate.
+                                description: A user-defined name of the revoked certificate. Changing this forces a new resource to be created.
                                 type: string
                               publicCertData:
                                 description: The SHA1 thumbprint of the certificate to be revoked.
@@ -378,7 +378,7 @@ spec:
                       type: object
                     type: array
                   vpnType:
-                    description: The routing type of the Virtual Network Gateway. Valid options are RouteBased or PolicyBased. Defaults to RouteBased.
+                    description: The routing type of the Virtual Network Gateway. Valid options are RouteBased or PolicyBased. Defaults to RouteBased. Changing this forces a new resource to be created.
                     type: string
                 required:
                 - ipConfiguration
