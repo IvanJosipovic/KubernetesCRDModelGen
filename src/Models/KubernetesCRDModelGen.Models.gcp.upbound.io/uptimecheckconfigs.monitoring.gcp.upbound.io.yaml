@@ -66,8 +66,22 @@ spec:
                         content:
                           description: String or regex content to match (max 1024 bytes)
                           type: string
+                        jsonPathMatcher:
+                          description: Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH. Structure is documented below.
+                          items:
+                            properties:
+                              jsonMatcher:
+                                description: Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are EXACT_MATCH and REGEX_MATCH.
+                                type: string
+                              jsonPath:
+                                description: JSONPath within the response output pointing to the expected ContentMatcher::content to match against.
+                                type: string
+                            required:
+                            - jsonPath
+                            type: object
+                          type: array
                         matcher:
-                          description: The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value is CONTAINS_STRING. Possible values are CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, and NOT_MATCHES_REGEX.
+                          description: The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value is CONTAINS_STRING. Possible values are CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, and NOT_MATCHES_JSON_PATH.
                           type: string
                       required:
                       - content
@@ -80,6 +94,18 @@ spec:
                     description: Contains information needed to make an HTTP or HTTPS check. Structure is documented below.
                     items:
                       properties:
+                        acceptedResponseStatusCodes:
+                          description: If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299. Structure is documented below.
+                          items:
+                            properties:
+                              statusClass:
+                                description: A class of status codes to accept. Possible values are STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, and STATUS_CLASS_ANY.
+                                type: string
+                              statusValue:
+                                description: A status code to accept.
+                                type: number
+                            type: object
+                          type: array
                         authInfo:
                           description: The authentication information. Optional when creating an HTTP check; defaults to empty. Structure is documented below.
                           items:
@@ -141,7 +167,7 @@ spec:
                       type: object
                     type: array
                   monitoredResource:
-                    description: 'The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer Structure is documented below.'
+                    description: 'The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service Structure is documented below.'
                     items:
                       properties:
                         labels:
