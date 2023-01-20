@@ -66,6 +66,9 @@ spec:
                         threadsPerCore:
                           description: he number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.
                           type: number
+                        visibleCoreCount:
+                          description: The number of physical cores to expose to an instance. visible cores info (VC).
+                          type: number
                       type: object
                     type: array
                   allowStoppingForUpdate:
@@ -273,7 +276,7 @@ spec:
                   metadata:
                     additionalProperties:
                       type: string
-                    description: Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance.
+                    description: Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of default metadata values (e.g. ssh-keys) can be found here
                     type: object
                   metadataStartupScript:
                     description: An alternative to using the startup-script metadata key, except this one forces the instance to be recreated (thus re-running the script) if it is changed. This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously.  Users are free to use either mechanism - the only distinction is that this separate attribute will cause a recreate on modification.  On import, metadata_startup_script will not be set - if you choose to specify it you will see a diff immediately after import causing a destroy/recreate operation.
@@ -493,7 +496,7 @@ spec:
                       type: object
                     type: array
                   resourcePolicies:
-                    description: '- A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.'
+                    description: '- A list of self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.'
                     items:
                       type: string
                     type: array
@@ -504,6 +507,9 @@ spec:
                         automaticRestart:
                           description: Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user). Defaults to true.
                           type: boolean
+                        instanceTerminationAction:
+                          description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
+                          type: string
                         minNodeCpus:
                           description: The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
                           type: number

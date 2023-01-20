@@ -64,8 +64,13 @@ spec:
                       type: string
                     description: A set of key/value environment variable pairs available during build time.
                     type: object
+                  buildWorkerPool:
+                    type: string
                   description:
                     description: Description of the function.
+                    type: string
+                  dockerRegistry:
+                    description: Docker Registry to use for storing the function's Docker images. Allowed values are CONTAINER_REGISTRY (default) and ARTIFACT_REGISTRY.
                     type: string
                   dockerRepository:
                     description: User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. If unspecified, Container Registry will be used by default, unless specified otherwise by other means.
@@ -105,6 +110,7 @@ spec:
                       type: object
                     type: array
                   httpsTriggerSecurityLevel:
+                    description: 'The security level for the function. The following options are available:'
                     type: string
                   httpsTriggerUrl:
                     description: URL which triggers function execution. Returned only if trigger_http is used.
