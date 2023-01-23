@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: notificationhubs.notificationhubs.azure.upbound.io
+  name: vpcendpointsecuritygroupassociations.ec2.aws.upbound.io
 spec:
-  group: notificationhubs.azure.upbound.io
+  group: ec2.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - azure
-    kind: NotificationHub
-    listKind: NotificationHubList
-    plural: notificationhubs
-    singular: notificationhub
+    - aws
+    kind: VPCEndpointSecurityGroupAssociation
+    listKind: VPCEndpointSecurityGroupAssociationList
+    plural: vpcendpointsecuritygroupassociations
+    singular: vpcendpointsecuritygroupassociation
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: NotificationHub is the Schema for the NotificationHubs API. Manages a Notification Hub within a Notification Hub Namespace.
+        description: VPCEndpointSecurityGroupAssociation is the Schema for the VPCEndpointSecurityGroupAssociations API. Provides a resource to create an association between a VPC endpoint and a security group.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: NotificationHubSpec defines the desired state of NotificationHub
+            description: VPCEndpointSecurityGroupAssociationSpec defines the desired state of VPCEndpointSecurityGroupAssociation
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,80 +56,17 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  apnsCredential:
-                    description: A apns_credential block as defined below.
-                    items:
-                      properties:
-                        applicationMode:
-                          description: The Application Mode which defines which server the APNS Messages should be sent to. Possible values are Production and Sandbox.
-                          type: string
-                        bundleId:
-                          description: The Bundle ID of the iOS/macOS application to send push notifications for, such as com.hashicorp.example.
-                          type: string
-                        keyId:
-                          description: The Apple Push Notifications Service (APNS) Key.
-                          type: string
-                        teamId:
-                          description: The ID of the team the Token.
-                          type: string
-                        tokenSecretRef:
-                          description: The Push Token associated with the Apple Developer Account. This is the contents of the key downloaded from the Apple Developer Portal between the -----BEGIN PRIVATE KEY----- and -----END PRIVATE KEY----- blocks.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                      required:
-                      - applicationMode
-                      - bundleId
-                      - keyId
-                      - teamId
-                      - tokenSecretRef
-                      type: object
-                    type: array
-                  gcmCredential:
-                    description: A gcm_credential block as defined below.
-                    items:
-                      properties:
-                        apiKeySecretRef:
-                          description: The API Key associated with the Google Cloud Messaging service.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                      required:
-                      - apiKeySecretRef
-                      type: object
-                    type: array
-                  location:
-                    description: The Azure Region in which this Notification Hub Namespace exists. Changing this forces a new resource to be created.
+                  region:
+                    description: Region is the region you'd like your resource to be created in.
                     type: string
-                  namespaceName:
-                    description: The name of the Notification Hub Namespace in which to create this Notification Hub. Changing this forces a new resource to be created.
+                  replaceDefaultAssociation:
+                    description: Whether this association should replace the association with the VPC's default security group that is created when no security groups are specified during VPC endpoint creation. At most 1 association per-VPC endpoint should be configured with replace_default_association = true.
+                    type: boolean
+                  securityGroupId:
+                    description: The ID of the security group to be associated with the VPC endpoint.
                     type: string
-                  namespaceNameRef:
-                    description: Reference to a NotificationHubNamespace in notificationhubs to populate namespaceName.
+                  securityGroupIdRef:
+                    description: Reference to a SecurityGroup in ec2 to populate securityGroupId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -154,8 +91,8 @@ spec:
                     required:
                     - name
                     type: object
-                  namespaceNameSelector:
-                    description: Selector for a NotificationHubNamespace in notificationhubs to populate namespaceName.
+                  securityGroupIdSelector:
+                    description: Selector for a SecurityGroup in ec2 to populate securityGroupId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -183,11 +120,11 @@ spec:
                             type: string
                         type: object
                     type: object
-                  resourceGroupName:
-                    description: The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
+                  vpcEndpointId:
+                    description: The ID of the VPC endpoint with which the security group will be associated.
                     type: string
-                  resourceGroupNameRef:
-                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
+                  vpcEndpointIdRef:
+                    description: Reference to a VPCEndpoint in ec2 to populate vpcEndpointId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -212,8 +149,8 @@ spec:
                     required:
                     - name
                     type: object
-                  resourceGroupNameSelector:
-                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
+                  vpcEndpointIdSelector:
+                    description: Selector for a VPCEndpoint in ec2 to populate vpcEndpointId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -240,14 +177,9 @@ spec:
                             - IfNotPresent
                             type: string
                         type: object
-                    type: object
-                  tags:
-                    additionalProperties:
-                      type: string
-                    description: A mapping of tags to assign to the resource.
                     type: object
                 required:
-                - location
+                - region
                 type: object
               providerConfigRef:
                 default:
@@ -374,12 +306,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: NotificationHubStatus defines the observed state of NotificationHub.
+            description: VPCEndpointSecurityGroupAssociationStatus defines the observed state of VPCEndpointSecurityGroupAssociation.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Notification Hub.
+                    description: The ID of the association.
                     type: string
                 type: object
               conditions:

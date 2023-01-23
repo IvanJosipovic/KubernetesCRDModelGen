@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: notificationhubs.notificationhubs.azure.upbound.io
+  name: customdatasets.datafactory.azure.upbound.io
 spec:
-  group: notificationhubs.azure.upbound.io
+  group: datafactory.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: NotificationHub
-    listKind: NotificationHubList
-    plural: notificationhubs
-    singular: notificationhub
+    kind: CustomDataSet
+    listKind: CustomDataSetList
+    plural: customdatasets
+    singular: customdataset
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: NotificationHub is the Schema for the NotificationHubs API. Manages a Notification Hub within a Notification Hub Namespace.
+        description: CustomDataSet is the Schema for the CustomDataSets API. Manages a Dataset inside an Azure Data Factory. This is a generic resource that supports all different Dataset Types.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: NotificationHubSpec defines the desired state of NotificationHub
+            description: CustomDataSetSpec defines the desired state of CustomDataSet
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,198 +56,114 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  apnsCredential:
-                    description: A apns_credential block as defined below.
-                    items:
-                      properties:
-                        applicationMode:
-                          description: The Application Mode which defines which server the APNS Messages should be sent to. Possible values are Production and Sandbox.
-                          type: string
-                        bundleId:
-                          description: The Bundle ID of the iOS/macOS application to send push notifications for, such as com.hashicorp.example.
-                          type: string
-                        keyId:
-                          description: The Apple Push Notifications Service (APNS) Key.
-                          type: string
-                        teamId:
-                          description: The ID of the team the Token.
-                          type: string
-                        tokenSecretRef:
-                          description: The Push Token associated with the Apple Developer Account. This is the contents of the key downloaded from the Apple Developer Portal between the -----BEGIN PRIVATE KEY----- and -----END PRIVATE KEY----- blocks.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                      required:
-                      - applicationMode
-                      - bundleId
-                      - keyId
-                      - teamId
-                      - tokenSecretRef
-                      type: object
-                    type: array
-                  gcmCredential:
-                    description: A gcm_credential block as defined below.
-                    items:
-                      properties:
-                        apiKeySecretRef:
-                          description: The API Key associated with the Google Cloud Messaging service.
-                          properties:
-                            key:
-                              description: The key to select.
-                              type: string
-                            name:
-                              description: Name of the secret.
-                              type: string
-                            namespace:
-                              description: Namespace of the secret.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                      required:
-                      - apiKeySecretRef
-                      type: object
-                    type: array
-                  location:
-                    description: The Azure Region in which this Notification Hub Namespace exists. Changing this forces a new resource to be created.
-                    type: string
-                  namespaceName:
-                    description: The name of the Notification Hub Namespace in which to create this Notification Hub. Changing this forces a new resource to be created.
-                    type: string
-                  namespaceNameRef:
-                    description: Reference to a NotificationHubNamespace in notificationhubs to populate namespaceName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  namespaceNameSelector:
-                    description: Selector for a NotificationHubNamespace in notificationhubs to populate namespaceName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  resourceGroupName:
-                    description: The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
-                    type: string
-                  resourceGroupNameRef:
-                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  resourceGroupNameSelector:
-                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  tags:
+                  additionalProperties:
                     additionalProperties:
                       type: string
-                    description: A mapping of tags to assign to the resource.
+                    description: A map of additional properties to associate with the Data Factory Dataset.
                     type: object
+                  annotations:
+                    description: List of tags that can be used for describing the Data Factory Dataset.
+                    items:
+                      type: string
+                    type: array
+                  dataFactoryId:
+                    description: The Data Factory ID in which to associate the Dataset with. Changing this forces a new resource.
+                    type: string
+                  dataFactoryIdRef:
+                    description: Reference to a Factory in datafactory to populate dataFactoryId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  dataFactoryIdSelector:
+                    description: Selector for a Factory in datafactory to populate dataFactoryId.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  description:
+                    description: The description for the Data Factory Dataset.
+                    type: string
+                  folder:
+                    description: The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
+                    type: string
+                  linkedService:
+                    description: A linked_service block as defined below.
+                    items:
+                      properties:
+                        name:
+                          description: The name of the Data Factory Linked Service.
+                          type: string
+                        parameters:
+                          additionalProperties:
+                            type: string
+                          description: A map of parameters to associate with the Data Factory Linked Service.
+                          type: object
+                      required:
+                      - name
+                      type: object
+                    type: array
+                  parameters:
+                    additionalProperties:
+                      type: string
+                    description: A map of parameters to associate with the Data Factory Dataset.
+                    type: object
+                  schemaJson:
+                    description: A JSON object that contains the schema of the Data Factory Dataset.
+                    type: string
+                  type:
+                    description: The type of dataset that will be associated with Data Factory. Changing this forces a new resource to be created.
+                    type: string
+                  typePropertiesJson:
+                    description: A JSON object that contains the properties of the Data Factory Dataset.
+                    type: string
                 required:
-                - location
+                - linkedService
+                - type
+                - typePropertiesJson
                 type: object
               providerConfigRef:
                 default:
@@ -374,12 +290,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: NotificationHubStatus defines the observed state of NotificationHub.
+            description: CustomDataSetStatus defines the observed state of CustomDataSet.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Notification Hub.
+                    description: The ID of the Data Factory Dataset.
                     type: string
                 type: object
               conditions:
