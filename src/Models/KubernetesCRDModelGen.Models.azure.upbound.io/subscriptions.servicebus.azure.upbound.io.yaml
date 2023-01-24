@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: projects.cloudplatform.gcp.upbound.io
+  name: subscriptions.servicebus.azure.upbound.io
 spec:
-  group: cloudplatform.gcp.upbound.io
+  group: servicebus.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - gcp
-    kind: Project
-    listKind: ProjectList
-    plural: projects
-    singular: project
+    - azure
+    kind: Subscription
+    listKind: SubscriptionList
+    plural: subscriptions
+    singular: subscription
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Project is the Schema for the Projects API. Allows management of a Google Cloud Platform project.
+        description: Subscription is the Schema for the Subscriptions API. Manages a ServiceBus Subscription.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: ProjectSpec defines the desired state of Project
+            description: SubscriptionSpec defines the desired state of Subscription
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,17 +56,59 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  autoCreateNetwork:
-                    description: Create the 'default' network automatically.  Default true. If set to false, the default network will be deleted.  Note that, for quota purposes, you will still need to have 1 network slot available to create the project successfully, even if you set auto_create_network to false, since the network will exist momentarily.
+                  autoDeleteOnIdle:
+                    description: The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M.
+                    type: string
+                  clientScopedSubscription:
+                    description: A client_scoped_subscription block as defined below.
+                    items:
+                      properties:
+                        clientId:
+                          description: Specifies the Client ID of the application that created the client-scoped subscription. Changing this forces a new resource to be created.
+                          type: string
+                        isClientScopedSubscriptionShareable:
+                          description: Whether the client scoped subscription is shareable. Defaults to true Changing this forces a new resource to be created.
+                          type: boolean
+                      type: object
+                    type: array
+                  clientScopedSubscriptionEnabled:
+                    description: whether the subscription is scoped to a client id. Defaults to False.
                     type: boolean
-                  billingAccount:
-                    description: The alphanumeric ID of the billing account this project belongs to.user) on the billing account. See Google Cloud Billing API Access Control for more details.
+                  deadLetteringOnFilterEvaluationError:
+                    description: Boolean flag which controls whether the Subscription has dead letter support on filter evaluation exceptions. Defaults to true.
+                    type: boolean
+                  deadLetteringOnMessageExpiration:
+                    description: Boolean flag which controls whether the Subscription has dead letter support when a message expires.
+                    type: boolean
+                  defaultMessageTtl:
+                    description: The Default message timespan to live as an ISO 8601 duration. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
                     type: string
-                  folderId:
-                    description: The numeric ID of the folder this project should be created under. Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder.
+                  enableBatchedOperations:
+                    description: Boolean flag which controls whether the Subscription supports batched operations.
+                    type: boolean
+                  forwardDeadLetteredMessagesTo:
+                    description: The name of a Queue or Topic to automatically forward Dead Letter messages to.
                     type: string
-                  folderIdRef:
-                    description: Reference to a Folder in cloudplatform to populate folderId.
+                  forwardTo:
+                    description: The name of a Queue or Topic to automatically forward messages to.
+                    type: string
+                  lockDuration:
+                    description: The lock duration for the subscription as an ISO 8601 duration. The default value is 1 minute or  P0DT0H1M0S . The maximum value is 5 minutes or P0DT0H5M0S .
+                    type: string
+                  maxDeliveryCount:
+                    description: The maximum number of deliveries.
+                    type: number
+                  requiresSession:
+                    description: Boolean flag which controls whether this Subscription supports the concept of a session. Changing this forces a new resource to be created.
+                    type: boolean
+                  status:
+                    description: The status of the Subscription. Possible values are Active,ReceiveDisabled, or Disabled. Defaults to Active.
+                    type: string
+                  topicId:
+                    description: The ID of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.
+                    type: string
+                  topicIdRef:
+                    description: Reference to a Topic in servicebus to populate topicId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -91,8 +133,8 @@ spec:
                     required:
                     - name
                     type: object
-                  folderIdSelector:
-                    description: Selector for a Folder in cloudplatform to populate folderId.
+                  topicIdSelector:
+                    description: Selector for a Topic in servicebus to populate topicId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -120,25 +162,8 @@ spec:
                             type: string
                         type: object
                     type: object
-                  labels:
-                    additionalProperties:
-                      type: string
-                    description: A set of key/value label pairs to assign to the project.
-                    type: object
-                  name:
-                    description: The display name of the project.
-                    type: string
-                  orgId:
-                    description: The numeric ID of the organization this project belongs to. Changing this forces a new project to be created.  Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization. The numeric ID of the organization this project belongs to.
-                    type: string
-                  projectId:
-                    description: The project ID. Changing this forces a new project to be created.
-                    type: string
-                  skipDelete:
-                    type: boolean
                 required:
-                - name
-                - projectId
+                - maxDeliveryCount
                 type: object
               providerConfigRef:
                 default:
@@ -265,15 +290,21 @@ spec:
             - forProvider
             type: object
           status:
-            description: ProjectStatus defines the observed state of Project.
+            description: SubscriptionStatus defines the observed state of Subscription.
             properties:
               atProvider:
                 properties:
+                  clientScopedSubscription:
+                    description: A client_scoped_subscription block as defined below.
+                    items:
+                      properties:
+                        isClientScopedSubscriptionDurable:
+                          description: Whether the client scoped subscription is durable. This property can only be controlled from the application side.
+                          type: boolean
+                      type: object
+                    type: array
                   id:
-                    description: an identifier for the resource with format projects/{{project}}
-                    type: string
-                  number:
-                    description: The numeric identifier of the project.
+                    description: The ServiceBus Subscription ID.
                     type: string
                 type: object
               conditions:

@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: projects.cloudplatform.gcp.upbound.io
+  name: subscriptionrules.servicebus.azure.upbound.io
 spec:
-  group: cloudplatform.gcp.upbound.io
+  group: servicebus.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - gcp
-    kind: Project
-    listKind: ProjectList
-    plural: projects
-    singular: project
+    - azure
+    kind: SubscriptionRule
+    listKind: SubscriptionRuleList
+    plural: subscriptionrules
+    singular: subscriptionrule
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Project is the Schema for the Projects API. Allows management of a Google Cloud Platform project.
+        description: SubscriptionRule is the Schema for the SubscriptionRules API. Manages a ServiceBus Subscription Rule.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: ProjectSpec defines the desired state of Project
+            description: SubscriptionRuleSpec defines the desired state of SubscriptionRule
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,17 +56,55 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  autoCreateNetwork:
-                    description: Create the 'default' network automatically.  Default true. If set to false, the default network will be deleted.  Note that, for quota purposes, you will still need to have 1 network slot available to create the project successfully, even if you set auto_create_network to false, since the network will exist momentarily.
-                    type: boolean
-                  billingAccount:
-                    description: The alphanumeric ID of the billing account this project belongs to.user) on the billing account. See Google Cloud Billing API Access Control for more details.
+                  action:
+                    description: Represents set of actions written in SQL language-based syntax that is performed against a BrokeredMessage.
                     type: string
-                  folderId:
-                    description: The numeric ID of the folder this project should be created under. Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder.
+                  correlationFilter:
+                    description: A correlation_filter block as documented below to be evaluated against a BrokeredMessage. Required when filter_type is set to CorrelationFilter.
+                    items:
+                      properties:
+                        contentType:
+                          description: Content type of the message.
+                          type: string
+                        correlationId:
+                          description: Identifier of the correlation.
+                          type: string
+                        label:
+                          description: Application specific label.
+                          type: string
+                        messageId:
+                          description: Identifier of the message.
+                          type: string
+                        properties:
+                          additionalProperties:
+                            type: string
+                          description: A list of user defined properties to be included in the filter. Specified as a map of name/value pairs.
+                          type: object
+                        replyTo:
+                          description: Address of the queue to reply to.
+                          type: string
+                        replyToSessionId:
+                          description: Session identifier to reply to.
+                          type: string
+                        sessionId:
+                          description: Session identifier.
+                          type: string
+                        to:
+                          description: Address to send to.
+                          type: string
+                      type: object
+                    type: array
+                  filterType:
+                    description: Type of filter to be applied to a BrokeredMessage. Possible values are SqlFilter and CorrelationFilter.
                     type: string
-                  folderIdRef:
-                    description: Reference to a Folder in cloudplatform to populate folderId.
+                  sqlFilter:
+                    description: Represents a filter written in SQL language-based syntax that to be evaluated against a BrokeredMessage. Required when filter_type is set to SqlFilter.
+                    type: string
+                  subscriptionId:
+                    description: The ID of the ServiceBus Subscription in which this Rule should be created. Changing this forces a new resource to be created.
+                    type: string
+                  subscriptionIdRef:
+                    description: Reference to a Subscription in servicebus to populate subscriptionId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -91,8 +129,8 @@ spec:
                     required:
                     - name
                     type: object
-                  folderIdSelector:
-                    description: Selector for a Folder in cloudplatform to populate folderId.
+                  subscriptionIdSelector:
+                    description: Selector for a Subscription in servicebus to populate subscriptionId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -120,25 +158,8 @@ spec:
                             type: string
                         type: object
                     type: object
-                  labels:
-                    additionalProperties:
-                      type: string
-                    description: A set of key/value label pairs to assign to the project.
-                    type: object
-                  name:
-                    description: The display name of the project.
-                    type: string
-                  orgId:
-                    description: The numeric ID of the organization this project belongs to. Changing this forces a new project to be created.  Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization. The numeric ID of the organization this project belongs to.
-                    type: string
-                  projectId:
-                    description: The project ID. Changing this forces a new project to be created.
-                    type: string
-                  skipDelete:
-                    type: boolean
                 required:
-                - name
-                - projectId
+                - filterType
                 type: object
               providerConfigRef:
                 default:
@@ -265,16 +286,15 @@ spec:
             - forProvider
             type: object
           status:
-            description: ProjectStatus defines the observed state of Project.
+            description: SubscriptionRuleStatus defines the observed state of SubscriptionRule.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: an identifier for the resource with format projects/{{project}}
+                    description: The ServiceBus Subscription Rule ID.
                     type: string
-                  number:
-                    description: The numeric identifier of the project.
-                    type: string
+                  sqlFilterCompatibilityLevel:
+                    type: number
                 type: object
               conditions:
                 description: Conditions of the resource.
