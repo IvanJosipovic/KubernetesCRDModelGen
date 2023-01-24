@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: projects.cloudplatform.gcp.upbound.io
+  name: securitycenterworkspaces.security.azure.upbound.io
 spec:
-  group: cloudplatform.gcp.upbound.io
+  group: security.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - gcp
-    kind: Project
-    listKind: ProjectList
-    plural: projects
-    singular: project
+    - azure
+    kind: SecurityCenterWorkspace
+    listKind: SecurityCenterWorkspaceList
+    plural: securitycenterworkspaces
+    singular: securitycenterworkspace
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Project is the Schema for the Projects API. Allows management of a Google Cloud Platform project.
+        description: SecurityCenterWorkspace is the Schema for the SecurityCenterWorkspaces API. Manages the subscription's Security Center Workspace.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: ProjectSpec defines the desired state of Project
+            description: SecurityCenterWorkspaceSpec defines the desired state of SecurityCenterWorkspace
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,17 +56,14 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  autoCreateNetwork:
-                    description: Create the 'default' network automatically.  Default true. If set to false, the default network will be deleted.  Note that, for quota purposes, you will still need to have 1 network slot available to create the project successfully, even if you set auto_create_network to false, since the network will exist momentarily.
-                    type: boolean
-                  billingAccount:
-                    description: The alphanumeric ID of the billing account this project belongs to.user) on the billing account. See Google Cloud Billing API Access Control for more details.
+                  scope:
+                    description: The scope of VMs to send their security data to the desired workspace, unless overridden by a setting with more specific scope.
                     type: string
-                  folderId:
-                    description: The numeric ID of the folder this project should be created under. Only one of org_id or folder_id may be specified. If the folder_id is specified, then the project is created under the specified folder. Changing this forces the project to be migrated to the newly specified folder.
+                  workspaceId:
+                    description: The ID of the Log Analytics Workspace to save the data in.
                     type: string
-                  folderIdRef:
-                    description: Reference to a Folder in cloudplatform to populate folderId.
+                  workspaceIdRef:
+                    description: Reference to a Workspace in operationalinsights to populate workspaceId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -91,8 +88,8 @@ spec:
                     required:
                     - name
                     type: object
-                  folderIdSelector:
-                    description: Selector for a Folder in cloudplatform to populate folderId.
+                  workspaceIdSelector:
+                    description: Selector for a Workspace in operationalinsights to populate workspaceId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -120,25 +117,8 @@ spec:
                             type: string
                         type: object
                     type: object
-                  labels:
-                    additionalProperties:
-                      type: string
-                    description: A set of key/value label pairs to assign to the project.
-                    type: object
-                  name:
-                    description: The display name of the project.
-                    type: string
-                  orgId:
-                    description: The numeric ID of the organization this project belongs to. Changing this forces a new project to be created.  Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization. The numeric ID of the organization this project belongs to.
-                    type: string
-                  projectId:
-                    description: The project ID. Changing this forces a new project to be created.
-                    type: string
-                  skipDelete:
-                    type: boolean
                 required:
-                - name
-                - projectId
+                - scope
                 type: object
               providerConfigRef:
                 default:
@@ -265,15 +245,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: ProjectStatus defines the observed state of Project.
+            description: SecurityCenterWorkspaceStatus defines the observed state of SecurityCenterWorkspace.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: an identifier for the resource with format projects/{{project}}
-                    type: string
-                  number:
-                    description: The numeric identifier of the project.
+                    description: The Security Center Workspace ID.
                     type: string
                 type: object
               conditions:
