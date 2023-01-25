@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.99.0
+    cnrm.cloud.google.com/version: 1.100.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -316,6 +316,9 @@ spec:
                       - value
                       type: object
                     type: array
+                  deletionProtectionEnabled:
+                    description: Configuration to protect against accidental instance deletion.
+                    type: boolean
                   denyMaintenancePeriod:
                     properties:
                       endDate:
@@ -505,8 +508,6 @@ spec:
                       uploadInterval:
                         description: "How often to upload generated audit files. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"3.5s\"."
                         type: string
-                    required:
-                    - bucketRef
                     type: object
                   tier:
                     description: The machine type to use. See tiers for more details and supported versions. Postgres supports only shared-core machine types, and custom machine types such as db-custom-2-13312. See the Custom Machine Type Documentation to learn about specifying custom machine types.
@@ -552,6 +553,9 @@ spec:
                 description: The connection name of the instance to be used in connection strings. For example, when connecting with Cloud SQL Proxy.
                 type: string
               firstIpAddress:
+                type: string
+              instanceType:
+                description: The type of the instance. The valid values are:- 'SQL_INSTANCE_TYPE_UNSPECIFIED', 'CLOUD_SQL_INSTANCE', 'ON_PREMISES_INSTANCE' and 'READ_REPLICA_INSTANCE'.
                 type: string
               ipAddress:
                 items:
