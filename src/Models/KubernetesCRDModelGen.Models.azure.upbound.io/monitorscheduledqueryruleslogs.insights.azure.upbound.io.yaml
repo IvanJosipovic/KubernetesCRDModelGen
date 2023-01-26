@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: datasetazureblobs.datafactory.azure.upbound.io
+  name: monitorscheduledqueryruleslogs.insights.azure.upbound.io
 spec:
-  group: datafactory.azure.upbound.io
+  group: insights.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: DataSetAzureBlob
-    listKind: DataSetAzureBlobList
-    plural: datasetazureblobs
-    singular: datasetazureblob
+    kind: MonitorScheduledQueryRulesLog
+    listKind: MonitorScheduledQueryRulesLogList
+    plural: monitorscheduledqueryruleslogs
+    singular: monitorscheduledqueryruleslog
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: DataSetAzureBlob is the Schema for the DataSetAzureBlobs API. Manages an Azure Blob Dataset inside an Azure Data Factory.
+        description: MonitorScheduledQueryRulesLog is the Schema for the MonitorScheduledQueryRulesLogs API. Manages a LogToMetricAction Scheduled Query Rules resources within Azure Monitor
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: DataSetAzureBlobSpec defines the desired state of DataSetAzureBlob
+            description: MonitorScheduledQueryRulesLogSpec defines the desired state of MonitorScheduledQueryRulesLog
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,21 +56,48 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  additionalProperties:
-                    additionalProperties:
-                      type: string
-                    description: A map of additional properties to associate with the Data Factory Dataset.
-                    type: object
-                  annotations:
-                    description: List of tags that can be used for describing the Data Factory Dataset.
+                  authorizedResourceIds:
+                    description: A list of IDs of Resources referred into query.
                     items:
                       type: string
                     type: array
-                  dataFactoryId:
-                    description: The Data Factory ID in which to associate the Linked Service with. Changing this forces a new resource.
+                  criteria:
+                    description: A criteria block as defined below.
+                    items:
+                      properties:
+                        dimension:
+                          description: A dimension block as defined below.
+                          items:
+                            properties:
+                              name:
+                                description: Name of the dimension. Changing this forces a new resource to be created.
+                                type: string
+                              operator:
+                                description: Operator for dimension values, - 'Include'.
+                                type: string
+                              values:
+                                description: List of dimension values.
+                                items:
+                                  type: string
+                                type: array
+                            required:
+                            - name
+                            - values
+                            type: object
+                          type: array
+                        metricName:
+                          description: Name of the metric.  Supported metrics are listed in the Azure Monitor Microsoft.OperationalInsights/workspaces metrics namespace.
+                          type: string
+                      required:
+                      - dimension
+                      - metricName
+                      type: object
+                    type: array
+                  dataSourceId:
+                    description: The resource URI over which log search query is to be run.
                     type: string
-                  dataFactoryIdRef:
-                    description: Reference to a Factory in datafactory to populate dataFactoryId.
+                  dataSourceIdRef:
+                    description: Reference to a Workspace in operationalinsights to populate dataSourceId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -95,8 +122,8 @@ spec:
                     required:
                     - name
                     type: object
-                  dataFactoryIdSelector:
-                    description: Selector for a Factory in datafactory to populate dataFactoryId.
+                  dataSourceIdSelector:
+                    description: Selector for a Workspace in operationalinsights to populate dataSourceId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -125,25 +152,22 @@ spec:
                         type: object
                     type: object
                   description:
-                    description: The description for the Data Factory Dataset.
+                    description: The description of the scheduled query rule.
                     type: string
-                  dynamicFilenameEnabled:
-                    description: Is the filename using dynamic expression, function or system variables? Defaults to false.
+                  enabled:
+                    description: Whether this scheduled query rule is enabled.  Default is true.
                     type: boolean
-                  dynamicPathEnabled:
-                    description: Is the path using dynamic expression, function or system variables? Defaults to false.
-                    type: boolean
-                  filename:
-                    description: The filename of the Azure Blob.
+                  location:
+                    description: Specifies the Azure Region where the resource should exist. Changing this forces a new resource to be created.
                     type: string
-                  folder:
-                    description: The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
+                  name:
+                    description: The name of the scheduled query rule. Changing this forces a new resource to be created.
                     type: string
-                  linkedServiceName:
-                    description: The Data Factory Linked Service name in which to associate the Dataset with.
+                  resourceGroupName:
+                    description: The name of the resource group in which to create the scheduled query rule instance. Changing this forces a new resource to be created.
                     type: string
-                  linkedServiceNameRef:
-                    description: Reference to a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
+                  resourceGroupNameRef:
+                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -168,8 +192,8 @@ spec:
                     required:
                     - name
                     type: object
-                  linkedServiceNameSelector:
-                    description: Selector for a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
+                  resourceGroupNameSelector:
+                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -197,31 +221,15 @@ spec:
                             type: string
                         type: object
                     type: object
-                  parameters:
+                  tags:
                     additionalProperties:
                       type: string
-                    description: A map of parameters to associate with the Data Factory Dataset.
+                    description: A mapping of tags to assign to the resource.
                     type: object
-                  path:
-                    description: The path of the Azure Blob.
-                    type: string
-                  schemaColumn:
-                    description: A schema_column block as defined below.
-                    items:
-                      properties:
-                        description:
-                          description: The description of the column.
-                          type: string
-                        name:
-                          description: The name of the column.
-                          type: string
-                        type:
-                          description: Type of the column. Valid values are Byte, Byte[], Boolean, Date, DateTime,DateTimeOffset, Decimal, Double, Guid, Int16, Int32, Int64, Single, String, TimeSpan. Please note these values are case sensitive.
-                          type: string
-                      required:
-                      - name
-                      type: object
-                    type: array
+                required:
+                - criteria
+                - location
+                - name
                 type: object
               providerConfigRef:
                 default:
@@ -348,12 +356,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: DataSetAzureBlobStatus defines the observed state of DataSetAzureBlob.
+            description: MonitorScheduledQueryRulesLogStatus defines the observed state of MonitorScheduledQueryRulesLog.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Data Factory Dataset.
+                    description: The ID of the scheduled query rule.
                     type: string
                 type: object
               conditions:

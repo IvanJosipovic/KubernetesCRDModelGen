@@ -4,7 +4,7 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: datasetazureblobs.datafactory.azure.upbound.io
+  name: linkedserviceazuresearches.datafactory.azure.upbound.io
 spec:
   group: datafactory.azure.upbound.io
   names:
@@ -12,10 +12,10 @@ spec:
     - crossplane
     - managed
     - azure
-    kind: DataSetAzureBlob
-    listKind: DataSetAzureBlobList
-    plural: datasetazureblobs
-    singular: datasetazureblob
+    kind: LinkedServiceAzureSearch
+    listKind: LinkedServiceAzureSearchList
+    plural: linkedserviceazuresearches
+    singular: linkedserviceazuresearch
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: DataSetAzureBlob is the Schema for the DataSetAzureBlobs API. Manages an Azure Blob Dataset inside an Azure Data Factory.
+        description: LinkedServiceAzureSearch is the Schema for the LinkedServiceAzureSearchs API. Manages a Linked Service (connection) between Azure Search Service and Azure Data Factory.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: DataSetAzureBlobSpec defines the desired state of DataSetAzureBlob
+            description: LinkedServiceAzureSearchSpec defines the desired state of LinkedServiceAzureSearch
             properties:
               deletionPolicy:
                 default: Delete
@@ -59,10 +59,10 @@ spec:
                   additionalProperties:
                     additionalProperties:
                       type: string
-                    description: A map of additional properties to associate with the Data Factory Dataset.
+                    description: A map of additional properties to associate with the Data Factory Linked Service.
                     type: object
                   annotations:
-                    description: List of tags that can be used for describing the Data Factory Dataset.
+                    description: List of tags that can be used for describing the Data Factory Linked Service.
                     items:
                       type: string
                     type: array
@@ -125,25 +125,21 @@ spec:
                         type: object
                     type: object
                   description:
-                    description: The description for the Data Factory Dataset.
+                    description: The description for the Data Factory Linked Service.
                     type: string
-                  dynamicFilenameEnabled:
-                    description: Is the filename using dynamic expression, function or system variables? Defaults to false.
-                    type: boolean
-                  dynamicPathEnabled:
-                    description: Is the path using dynamic expression, function or system variables? Defaults to false.
-                    type: boolean
-                  filename:
-                    description: The filename of the Azure Blob.
+                  integrationRuntimeName:
+                    description: The integration runtime reference to associate with the Data Factory Linked Service.
                     type: string
-                  folder:
-                    description: The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
+                  parameters:
+                    additionalProperties:
+                      type: string
+                    description: A map of parameters to associate with the Data Factory Linked Service.
+                    type: object
+                  searchServiceKey:
+                    description: The key of the Azure Search Service.
                     type: string
-                  linkedServiceName:
-                    description: The Data Factory Linked Service name in which to associate the Dataset with.
-                    type: string
-                  linkedServiceNameRef:
-                    description: Reference to a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
+                  searchServiceKeyRef:
+                    description: Reference to a Service in search to populate searchServiceKey.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -168,8 +164,8 @@ spec:
                     required:
                     - name
                     type: object
-                  linkedServiceNameSelector:
-                    description: Selector for a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
+                  searchServiceKeySelector:
+                    description: Selector for a Service in search to populate searchServiceKey.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -197,31 +193,11 @@ spec:
                             type: string
                         type: object
                     type: object
-                  parameters:
-                    additionalProperties:
-                      type: string
-                    description: A map of parameters to associate with the Data Factory Dataset.
-                    type: object
-                  path:
-                    description: The path of the Azure Blob.
+                  url:
+                    description: The URL of the Search Service endpoint (e.g. https://{searchServiceName}.search.windows.net).
                     type: string
-                  schemaColumn:
-                    description: A schema_column block as defined below.
-                    items:
-                      properties:
-                        description:
-                          description: The description of the column.
-                          type: string
-                        name:
-                          description: The name of the column.
-                          type: string
-                        type:
-                          description: Type of the column. Valid values are Byte, Byte[], Boolean, Date, DateTime,DateTimeOffset, Decimal, Double, Guid, Int16, Int32, Int64, Single, String, TimeSpan. Please note these values are case sensitive.
-                          type: string
-                      required:
-                      - name
-                      type: object
-                    type: array
+                required:
+                - url
                 type: object
               providerConfigRef:
                 default:
@@ -348,12 +324,15 @@ spec:
             - forProvider
             type: object
           status:
-            description: DataSetAzureBlobStatus defines the observed state of DataSetAzureBlob.
+            description: LinkedServiceAzureSearchStatus defines the observed state of LinkedServiceAzureSearch.
             properties:
               atProvider:
                 properties:
+                  encryptedCredential:
+                    description: The encrypted credential to connect to Azure Search Service.
+                    type: string
                   id:
-                    description: The ID of the Data Factory Dataset.
+                    description: The ID of the Data Factory Linked Service.
                     type: string
                 type: object
               conditions:

@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: datasetazureblobs.datafactory.azure.upbound.io
+  name: services.signalrservice.azure.upbound.io
 spec:
-  group: datafactory.azure.upbound.io
+  group: signalrservice.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: DataSetAzureBlob
-    listKind: DataSetAzureBlobList
-    plural: datasetazureblobs
-    singular: datasetazureblob
+    kind: Service
+    listKind: ServiceList
+    plural: services
+    singular: service
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: DataSetAzureBlob is the Schema for the DataSetAzureBlobs API. Manages an Azure Blob Dataset inside an Azure Data Factory.
+        description: Service is the Schema for the Services API. Manages an Azure SignalR service.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: DataSetAzureBlobSpec defines the desired state of DataSetAzureBlob
+            description: ServiceSpec defines the desired state of Service
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,172 +56,162 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  additionalProperties:
-                    additionalProperties:
-                      type: string
-                    description: A map of additional properties to associate with the Data Factory Dataset.
-                    type: object
-                  annotations:
-                    description: List of tags that can be used for describing the Data Factory Dataset.
-                    items:
-                      type: string
-                    type: array
-                  dataFactoryId:
-                    description: The Data Factory ID in which to associate the Linked Service with. Changing this forces a new resource.
-                    type: string
-                  dataFactoryIdRef:
-                    description: Reference to a Factory in datafactory to populate dataFactoryId.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  dataFactoryIdSelector:
-                    description: Selector for a Factory in datafactory to populate dataFactoryId.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  description:
-                    description: The description for the Data Factory Dataset.
-                    type: string
-                  dynamicFilenameEnabled:
-                    description: Is the filename using dynamic expression, function or system variables? Defaults to false.
+                  connectivityLogsEnabled:
+                    description: Specifies if Connectivity Logs are enabled or not. Defaults to false.
                     type: boolean
-                  dynamicPathEnabled:
-                    description: Is the path using dynamic expression, function or system variables? Defaults to false.
-                    type: boolean
-                  filename:
-                    description: The filename of the Azure Blob.
-                    type: string
-                  folder:
-                    description: The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
-                    type: string
-                  linkedServiceName:
-                    description: The Data Factory Linked Service name in which to associate the Dataset with.
-                    type: string
-                  linkedServiceNameRef:
-                    description: Reference to a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  linkedServiceNameSelector:
-                    description: Selector for a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  parameters:
-                    additionalProperties:
-                      type: string
-                    description: A map of parameters to associate with the Data Factory Dataset.
-                    type: object
-                  path:
-                    description: The path of the Azure Blob.
-                    type: string
-                  schemaColumn:
-                    description: A schema_column block as defined below.
+                  cors:
+                    description: A cors block as documented below.
                     items:
                       properties:
-                        description:
-                          description: The description of the column.
+                        allowedOrigins:
+                          description: A list of origins which should be able to make cross-origin calls. * can be used to allow all calls.
+                          items:
+                            type: string
+                          type: array
+                      required:
+                      - allowedOrigins
+                      type: object
+                    type: array
+                  liveTrace:
+                    description: A live_trace block as defined below.
+                    items:
+                      properties:
+                        connectivityLogsEnabled:
+                          description: Whether the log category ConnectivityLogs is enabled? Defaults to true
+                          type: boolean
+                        enabled:
+                          description: Whether the live trace is enabled? Defaults to true.
+                          type: boolean
+                        httpRequestLogsEnabled:
+                          description: Whether the log category HttpRequestLogs is enabled? Defaults to true
+                          type: boolean
+                        messagingLogsEnabled:
+                          description: Whether the log category MessagingLogs is enabled? Defaults to true
+                          type: boolean
+                      type: object
+                    type: array
+                  liveTraceEnabled:
+                    description: Specifies if Live Trace is enabled or not. Defaults to false.
+                    type: boolean
+                  location:
+                    description: Specifies the supported Azure location where the SignalR service exists. Changing this forces a new resource to be created.
+                    type: string
+                  messagingLogsEnabled:
+                    description: Specifies if Messaging Logs are enabled or not. Defaults to false.
+                    type: boolean
+                  resourceGroupName:
+                    description: The name of the resource group in which to create the SignalR service. Changing this forces a new resource to be created.
+                    type: string
+                  resourceGroupNameRef:
+                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  resourceGroupNameSelector:
+                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
                           type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  serviceMode:
+                    description: Specifies the service mode. Possible values are Classic, Default and Serverless. Defaults to Default.
+                    type: string
+                  sku:
+                    description: A sku block as documented below.
+                    items:
+                      properties:
+                        capacity:
+                          description: Specifies the number of units associated with this SignalR service. Valid values are 1, 2, 5, 10, 20, 50 and 100.
+                          type: number
                         name:
-                          description: The name of the column.
-                          type: string
-                        type:
-                          description: Type of the column. Valid values are Byte, Byte[], Boolean, Date, DateTime,DateTimeOffset, Decimal, Double, Guid, Int16, Int32, Int64, Single, String, TimeSpan. Please note these values are case sensitive.
+                          description: Specifies which tier to use. Valid values are Free_F1, Standard_S1 and Premium_P1.
                           type: string
                       required:
+                      - capacity
                       - name
                       type: object
                     type: array
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: A mapping of tags to assign to the resource.
+                    type: object
+                  upstreamEndpoint:
+                    description: An upstream_endpoint block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
+                    items:
+                      properties:
+                        categoryPattern:
+                          description: The categories to match on, or * for all.
+                          items:
+                            type: string
+                          type: array
+                        eventPattern:
+                          description: The events to match on, or * for all.
+                          items:
+                            type: string
+                          type: array
+                        hubPattern:
+                          description: The hubs to match on, or * for all.
+                          items:
+                            type: string
+                          type: array
+                        urlTemplate:
+                          description: The upstream URL Template. This can be a url or a template such as http://host.com/{hub}/api/{category}/{event}.
+                          type: string
+                      required:
+                      - categoryPattern
+                      - eventPattern
+                      - hubPattern
+                      - urlTemplate
+                      type: object
+                    type: array
+                required:
+                - location
+                - sku
                 type: object
               providerConfigRef:
                 default:
@@ -348,13 +338,25 @@ spec:
             - forProvider
             type: object
           status:
-            description: DataSetAzureBlobStatus defines the observed state of DataSetAzureBlob.
+            description: ServiceStatus defines the observed state of Service.
             properties:
               atProvider:
                 properties:
-                  id:
-                    description: The ID of the Data Factory Dataset.
+                  hostname:
+                    description: The FQDN of the SignalR service.
                     type: string
+                  id:
+                    description: The ID of the SignalR service.
+                    type: string
+                  ipAddress:
+                    description: The publicly accessible IP of the SignalR service.
+                    type: string
+                  publicPort:
+                    description: The publicly accessible port of the SignalR service which is designed for browser/client use.
+                    type: number
+                  serverPort:
+                    description: The publicly accessible port of the SignalR service which is designed for customer server side use.
+                    type: number
                 type: object
               conditions:
                 description: Conditions of the resource.

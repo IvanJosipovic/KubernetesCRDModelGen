@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: datasetazureblobs.datafactory.azure.upbound.io
+  name: projectsinks.logging.gcp.upbound.io
 spec:
-  group: datafactory.azure.upbound.io
+  group: logging.gcp.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - azure
-    kind: DataSetAzureBlob
-    listKind: DataSetAzureBlobList
-    plural: datasetazureblobs
-    singular: datasetazureblob
+    - gcp
+    kind: ProjectSink
+    listKind: ProjectSinkList
+    plural: projectsinks
+    singular: projectsink
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: DataSetAzureBlob is the Schema for the DataSetAzureBlobs API. Manages an Azure Blob Dataset inside an Azure Data Factory.
+        description: ProjectSink is the Schema for the ProjectSinks API. Manages a project-level logging sink.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: DataSetAzureBlobSpec defines the desired state of DataSetAzureBlob
+            description: ProjectSinkSpec defines the desired state of ProjectSink
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,172 +56,58 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  additionalProperties:
-                    additionalProperties:
-                      type: string
-                    description: A map of additional properties to associate with the Data Factory Dataset.
-                    type: object
-                  annotations:
-                    description: List of tags that can be used for describing the Data Factory Dataset.
+                  bigqueryOptions:
+                    description: Options that affect sinks exporting data to BigQuery. Structure documented below.
                     items:
-                      type: string
+                      properties:
+                        usePartitionedTables:
+                          description: Whether to use BigQuery's partition tables. By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax has to be used instead. In both cases, tables are sharded based on UTC timezone.
+                          type: boolean
+                      required:
+                      - usePartitionedTables
+                      type: object
                     type: array
-                  dataFactoryId:
-                    description: The Data Factory ID in which to associate the Linked Service with. Changing this forces a new resource.
-                    type: string
-                  dataFactoryIdRef:
-                    description: Reference to a Factory in datafactory to populate dataFactoryId.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  dataFactoryIdSelector:
-                    description: Selector for a Factory in datafactory to populate dataFactoryId.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
                   description:
-                    description: The description for the Data Factory Dataset.
+                    description: A description of this sink. The maximum length of the description is 8000 characters.
                     type: string
-                  dynamicFilenameEnabled:
-                    description: Is the filename using dynamic expression, function or system variables? Defaults to false.
+                  destination:
+                    description: 'The destination of the sink (or, in other words, where logs are written to). Can be a Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket . Examples:'
+                    type: string
+                  disabled:
+                    description: If set to True, then this sink is disabled and it does not export any log entries.
                     type: boolean
-                  dynamicPathEnabled:
-                    description: Is the path using dynamic expression, function or system variables? Defaults to false.
-                    type: boolean
-                  filename:
-                    description: The filename of the Azure Blob.
-                    type: string
-                  folder:
-                    description: The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
-                    type: string
-                  linkedServiceName:
-                    description: The Data Factory Linked Service name in which to associate the Dataset with.
-                    type: string
-                  linkedServiceNameRef:
-                    description: Reference to a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  linkedServiceNameSelector:
-                    description: Selector for a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  parameters:
-                    additionalProperties:
-                      type: string
-                    description: A map of parameters to associate with the Data Factory Dataset.
-                    type: object
-                  path:
-                    description: The path of the Azure Blob.
-                    type: string
-                  schemaColumn:
-                    description: A schema_column block as defined below.
+                  exclusions:
+                    description: Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusions.filter, it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
                     items:
                       properties:
                         description:
-                          description: The description of the column.
+                          description: A description of this exclusion.
+                          type: string
+                        disabled:
+                          description: If set to True, then this exclusion is disabled and it does not exclude any log entries.
+                          type: boolean
+                        filter:
+                          description: An advanced logs filter that matches the log entries to be excluded. By using the sample function, you can exclude less than 100% of the matching log entries. See Advanced Log Filters for information on how to write a filter.
                           type: string
                         name:
-                          description: The name of the column.
-                          type: string
-                        type:
-                          description: Type of the column. Valid values are Byte, Byte[], Boolean, Date, DateTime,DateTimeOffset, Decimal, Double, Guid, Int16, Int32, Int64, Single, String, TimeSpan. Please note these values are case sensitive.
+                          description: A client-assigned identifier, such as load-balancer-exclusion. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
                           type: string
                       required:
+                      - filter
                       - name
                       type: object
                     type: array
+                  filter:
+                    description: The filter to apply when exporting logs. Only log entries that match the filter are exported. See Advanced Log Filters for information on how to write a filter.
+                    type: string
+                  project:
+                    description: The ID of the project to create the sink in. If omitted, the project associated with the provider is used.
+                    type: string
+                  uniqueWriterIdentity:
+                    description: Whether or not to create a unique identity associated with this sink. If false (the default), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true, then a unique service account is created and used for this sink. If you wish to publish logs across projects or utilize bigquery_options, you must set unique_writer_identity to true.
+                    type: boolean
+                required:
+                - destination
                 type: object
               providerConfigRef:
                 default:
@@ -348,12 +234,15 @@ spec:
             - forProvider
             type: object
           status:
-            description: DataSetAzureBlobStatus defines the observed state of DataSetAzureBlob.
+            description: ProjectSinkStatus defines the observed state of ProjectSink.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Data Factory Dataset.
+                    description: an identifier for the resource with format projects/{{project}}/sinks/{{name}}
+                    type: string
+                  writerIdentity:
+                    description: The identity associated with this sink. This identity must be granted write access to the configured destination.
                     type: string
                 type: object
               conditions:

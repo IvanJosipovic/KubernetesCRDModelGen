@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: datasetazureblobs.datafactory.azure.upbound.io
+  name: monitorscheduledqueryrulesalerts.insights.azure.upbound.io
 spec:
-  group: datafactory.azure.upbound.io
+  group: insights.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: DataSetAzureBlob
-    listKind: DataSetAzureBlobList
-    plural: datasetazureblobs
-    singular: datasetazureblob
+    kind: MonitorScheduledQueryRulesAlert
+    listKind: MonitorScheduledQueryRulesAlertList
+    plural: monitorscheduledqueryrulesalerts
+    singular: monitorscheduledqueryrulesalert
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: DataSetAzureBlob is the Schema for the DataSetAzureBlobs API. Manages an Azure Blob Dataset inside an Azure Data Factory.
+        description: MonitorScheduledQueryRulesAlert is the Schema for the MonitorScheduledQueryRulesAlerts API. Manages an AlertingAction Scheduled Query Rules resource within Azure Monitor
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: DataSetAzureBlobSpec defines the desired state of DataSetAzureBlob
+            description: MonitorScheduledQueryRulesAlertSpec defines the desired state of MonitorScheduledQueryRulesAlert
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,21 +56,94 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  additionalProperties:
-                    additionalProperties:
-                      type: string
-                    description: A map of additional properties to associate with the Data Factory Dataset.
-                    type: object
-                  annotations:
-                    description: List of tags that can be used for describing the Data Factory Dataset.
+                  action:
+                    description: An action block as defined below.
+                    items:
+                      properties:
+                        actionGroup:
+                          description: List of action group reference resource IDs.
+                          items:
+                            type: string
+                          type: array
+                        actionGroupRefs:
+                          description: References to MonitorActionGroup to populate actionGroup.
+                          items:
+                            description: A Reference to a named object.
+                            properties:
+                              name:
+                                description: Name of the referenced object.
+                                type: string
+                              policy:
+                                description: Policies for referencing.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            required:
+                            - name
+                            type: object
+                          type: array
+                        actionGroupSelector:
+                          description: Selector for a list of MonitorActionGroup to populate actionGroup.
+                          properties:
+                            matchControllerRef:
+                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
+                        customWebhookPayload:
+                          description: Custom payload to be sent for all webhook payloads in alerting action.
+                          type: string
+                        emailSubject:
+                          description: Custom subject override for all email ids in Azure action group.
+                          type: string
+                      type: object
+                    type: array
+                  authorizedResourceIds:
+                    description: List of Resource IDs referred into query.
                     items:
                       type: string
                     type: array
-                  dataFactoryId:
-                    description: The Data Factory ID in which to associate the Linked Service with. Changing this forces a new resource.
+                  autoMitigationEnabled:
+                    description: Should the alerts in this Metric Alert be auto resolved? Defaults to false. -> NOTE auto_mitigation_enabled and throttling are mutually exclusive and cannot both be set.
+                    type: boolean
+                  dataSourceId:
+                    description: The resource URI over which log search query is to be run.
                     type: string
-                  dataFactoryIdRef:
-                    description: Reference to a Factory in datafactory to populate dataFactoryId.
+                  dataSourceIdRef:
+                    description: Reference to a ApplicationInsights in insights to populate dataSourceId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -95,8 +168,8 @@ spec:
                     required:
                     - name
                     type: object
-                  dataFactoryIdSelector:
-                    description: Selector for a Factory in datafactory to populate dataFactoryId.
+                  dataSourceIdSelector:
+                    description: Selector for a ApplicationInsights in insights to populate dataSourceId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -125,25 +198,31 @@ spec:
                         type: object
                     type: object
                   description:
-                    description: The description for the Data Factory Dataset.
+                    description: The description of the scheduled query rule.
                     type: string
-                  dynamicFilenameEnabled:
-                    description: Is the filename using dynamic expression, function or system variables? Defaults to false.
+                  enabled:
+                    description: Whether this scheduled query rule is enabled.  Default is true.
                     type: boolean
-                  dynamicPathEnabled:
-                    description: Is the path using dynamic expression, function or system variables? Defaults to false.
-                    type: boolean
-                  filename:
-                    description: The filename of the Azure Blob.
+                  frequency:
+                    description: Frequency (in minutes) at which rule condition should be evaluated.  Values must be between 5 and 1440 (inclusive).
+                    type: number
+                  location:
+                    description: Specifies the Azure Region where the resource should exist. Changing this forces a new resource to be created.
                     type: string
-                  folder:
-                    description: The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
+                  name:
+                    description: The name of the scheduled query rule. Changing this forces a new resource to be created.
                     type: string
-                  linkedServiceName:
-                    description: The Data Factory Linked Service name in which to associate the Dataset with.
+                  query:
+                    description: Log search query.
                     type: string
-                  linkedServiceNameRef:
-                    description: Reference to a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
+                  queryType:
+                    description: The type of query results. Possible values are ResultCount and Number. Default is ResultCount.
+                    type: string
+                  resourceGroupName:
+                    description: The name of the resource group in which to create the scheduled query rule instance. Changing this forces a new resource to be created.
+                    type: string
+                  resourceGroupNameRef:
+                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -168,8 +247,8 @@ spec:
                     required:
                     - name
                     type: object
-                  linkedServiceNameSelector:
-                    description: Selector for a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
+                  resourceGroupNameSelector:
+                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -197,31 +276,66 @@ spec:
                             type: string
                         type: object
                     type: object
-                  parameters:
+                  severity:
+                    description: 'Severity of the alert. Possible values include: 0, 1, 2, 3, or 4.'
+                    type: number
+                  tags:
                     additionalProperties:
                       type: string
-                    description: A map of parameters to associate with the Data Factory Dataset.
+                    description: A mapping of tags to assign to the resource.
                     type: object
-                  path:
-                    description: The path of the Azure Blob.
-                    type: string
-                  schemaColumn:
-                    description: A schema_column block as defined below.
+                  throttling:
+                    description: Time (in minutes) for which Alerts should be throttled or suppressed.  Values must be between 0 and 10000 (inclusive).
+                    type: number
+                  timeWindow:
+                    description: Time window for which data needs to be fetched for query (must be greater than or equal to frequency).  Values must be between 5 and 2880 (inclusive).
+                    type: number
+                  trigger:
+                    description: A trigger block as defined below.
                     items:
                       properties:
-                        description:
-                          description: The description of the column.
+                        metricTrigger:
+                          description: A metric_trigger block as defined above. Trigger condition for metric query rule.
+                          items:
+                            properties:
+                              metricColumn:
+                                description: Evaluation of metric on a particular column.
+                                type: string
+                              metricTriggerType:
+                                description: Metric Trigger Type - 'Consecutive' or 'Total'.
+                                type: string
+                              operator:
+                                description: Evaluation operation for rule - 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
+                                type: string
+                              threshold:
+                                description: Result or count threshold based on which rule should be triggered.  Values must be between 0 and 10000 inclusive.
+                                type: number
+                            required:
+                            - metricColumn
+                            - metricTriggerType
+                            - operator
+                            - threshold
+                            type: object
+                          type: array
+                        operator:
+                          description: Evaluation operation for rule - 'GreaterThan', GreaterThanOrEqual', 'LessThan', or 'LessThanOrEqual'.
                           type: string
-                        name:
-                          description: The name of the column.
-                          type: string
-                        type:
-                          description: Type of the column. Valid values are Byte, Byte[], Boolean, Date, DateTime,DateTimeOffset, Decimal, Double, Guid, Int16, Int32, Int64, Single, String, TimeSpan. Please note these values are case sensitive.
-                          type: string
+                        threshold:
+                          description: Result or count threshold based on which rule should be triggered.  Values must be between 0 and 10000 inclusive.
+                          type: number
                       required:
-                      - name
+                      - operator
+                      - threshold
                       type: object
                     type: array
+                required:
+                - action
+                - frequency
+                - location
+                - name
+                - query
+                - timeWindow
+                - trigger
                 type: object
               providerConfigRef:
                 default:
@@ -348,12 +462,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: DataSetAzureBlobStatus defines the observed state of DataSetAzureBlob.
+            description: MonitorScheduledQueryRulesAlertStatus defines the observed state of MonitorScheduledQueryRulesAlert.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Data Factory Dataset.
+                    description: The ID of the scheduled query rule.
                     type: string
                 type: object
               conditions:
