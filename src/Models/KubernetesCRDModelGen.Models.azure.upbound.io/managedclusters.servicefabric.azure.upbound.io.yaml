@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: datasetazureblobs.datafactory.azure.upbound.io
+  name: managedclusters.servicefabric.azure.upbound.io
 spec:
-  group: datafactory.azure.upbound.io
+  group: servicefabric.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: DataSetAzureBlob
-    listKind: DataSetAzureBlobList
-    plural: datasetazureblobs
-    singular: datasetazureblob
+    kind: ManagedCluster
+    listKind: ManagedClusterList
+    plural: managedclusters
+    singular: managedcluster
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: DataSetAzureBlob is the Schema for the DataSetAzureBlobs API. Manages an Azure Blob Dataset inside an Azure Data Factory.
+        description: ManagedCluster is the Schema for the ManagedClusters API. Manages a Resource Group.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: DataSetAzureBlobSpec defines the desired state of DataSetAzureBlob
+            description: ManagedClusterSpec defines the desired state of ManagedCluster
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,172 +56,288 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  additionalProperties:
-                    additionalProperties:
-                      type: string
-                    description: A map of additional properties to associate with the Data Factory Dataset.
-                    type: object
-                  annotations:
-                    description: List of tags that can be used for describing the Data Factory Dataset.
-                    items:
-                      type: string
-                    type: array
-                  dataFactoryId:
-                    description: The Data Factory ID in which to associate the Linked Service with. Changing this forces a new resource.
-                    type: string
-                  dataFactoryIdRef:
-                    description: Reference to a Factory in datafactory to populate dataFactoryId.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  dataFactoryIdSelector:
-                    description: Selector for a Factory in datafactory to populate dataFactoryId.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  description:
-                    description: The description for the Data Factory Dataset.
-                    type: string
-                  dynamicFilenameEnabled:
-                    description: Is the filename using dynamic expression, function or system variables? Defaults to false.
-                    type: boolean
-                  dynamicPathEnabled:
-                    description: Is the path using dynamic expression, function or system variables? Defaults to false.
-                    type: boolean
-                  filename:
-                    description: The filename of the Azure Blob.
-                    type: string
-                  folder:
-                    description: The folder that this Dataset is in. If not specified, the Dataset will appear at the root level.
-                    type: string
-                  linkedServiceName:
-                    description: The Data Factory Linked Service name in which to associate the Dataset with.
-                    type: string
-                  linkedServiceNameRef:
-                    description: Reference to a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  linkedServiceNameSelector:
-                    description: Selector for a LinkedServiceAzureBlobStorage in datafactory to populate linkedServiceName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  parameters:
-                    additionalProperties:
-                      type: string
-                    description: A map of parameters to associate with the Data Factory Dataset.
-                    type: object
-                  path:
-                    description: The path of the Azure Blob.
-                    type: string
-                  schemaColumn:
-                    description: A schema_column block as defined below.
+                  authentication:
+                    description: Controls how connections to the cluster are authenticated. A authentication block as defined below.
                     items:
                       properties:
-                        description:
-                          description: The description of the column.
-                          type: string
-                        name:
-                          description: The name of the column.
-                          type: string
-                        type:
-                          description: Type of the column. Valid values are Byte, Byte[], Boolean, Date, DateTime,DateTimeOffset, Decimal, Double, Guid, Int16, Int32, Int64, Single, String, TimeSpan. Please note these values are case sensitive.
-                          type: string
-                      required:
-                      - name
+                        activeDirectory:
+                          description: A active_directory block as defined above.
+                          items:
+                            properties:
+                              clientApplicationId:
+                                description: The ID of the Client Application.
+                                type: string
+                              clusterApplicationId:
+                                description: The ID of the Cluster Application.
+                                type: string
+                              tenantId:
+                                description: The ID of the Tenant.
+                                type: string
+                            required:
+                            - clientApplicationId
+                            - clusterApplicationId
+                            - tenantId
+                            type: object
+                          type: array
+                        certificate:
+                          description: One or more certificate blocks as defined below.
+                          items:
+                            properties:
+                              commonName:
+                                description: The certificate's CN.
+                                type: string
+                              thumbprint:
+                                description: The thumbprint of the certificate.
+                                type: string
+                              type:
+                                description: The type of the certificate. Can be AdminClient or ReadOnlyClient.
+                                type: string
+                            required:
+                            - thumbprint
+                            - type
+                            type: object
+                          type: array
                       type: object
                     type: array
+                  backupServiceEnabled:
+                    description: If true, backup service is enabled.
+                    type: boolean
+                  clientConnectionPort:
+                    description: Port to use when connecting to the cluster.
+                    type: number
+                  customFabricSetting:
+                    description: One or more custom_fabric_setting blocks as defined below.
+                    items:
+                      properties:
+                        parameter:
+                          description: Parameter name.
+                          type: string
+                        section:
+                          description: Section name.
+                          type: string
+                        value:
+                          description: Parameter value.
+                          type: string
+                      required:
+                      - parameter
+                      - section
+                      - value
+                      type: object
+                    type: array
+                  dnsName:
+                    description: Hostname for the cluster. If unset the cluster's name will be used..
+                    type: string
+                  dnsServiceEnabled:
+                    description: If true, DNS service is enabled.
+                    type: boolean
+                  httpGatewayPort:
+                    description: Port that should be used by the Service Fabric Explorer to visualize applications and cluster status.
+                    type: number
+                  lbRule:
+                    description: One or more lb_rule blocks as defined below.
+                    items:
+                      properties:
+                        backendPort:
+                          description: LB Backend port.
+                          type: number
+                        frontendPort:
+                          description: LB Frontend port.
+                          type: number
+                        probeProtocol:
+                          description: Protocol for the probe. Can be one of tcp, udp, http, or https.
+                          type: string
+                        probeRequestPath:
+                          description: Path for the probe to check, when probe protocol is set to http.
+                          type: string
+                        protocol:
+                          description: The transport protocol used in this rule. Can be one of tcp or udp.
+                          type: string
+                      required:
+                      - backendPort
+                      - frontendPort
+                      - probeProtocol
+                      - protocol
+                      type: object
+                    type: array
+                  location:
+                    description: The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created.
+                    type: string
+                  nodeType:
+                    description: One or more node_type blocks as defined below.
+                    items:
+                      properties:
+                        applicationPortRange:
+                          description: Sets the port range available for applications. Format is <from_port>-<to_port>, for example 10000-20000.
+                          type: string
+                        capacities:
+                          additionalProperties:
+                            type: string
+                          description: Specifies a list of key/value pairs used to set capacity tags for this node type.
+                          type: object
+                        dataDiskSizeGb:
+                          description: The size of the data disk in gigabytes..
+                          type: number
+                        dataDiskType:
+                          description: The type of the disk to use for storing data. It can be one of Premium_LRS, Standard_LRS, or StandardSSD_LRS.
+                          type: string
+                        ephemeralPortRange:
+                          description: Sets the port range available for the OS. Format is <from_port>-<to_port>, for example 10000-20000. There has to be at least 255 ports available and cannot overlap with application_port_range..
+                          type: string
+                        multiplePlacementGroupsEnabled:
+                          description: If set the node type can be composed of multiple placement groups.
+                          type: boolean
+                        name:
+                          description: The name which should be used for this node type.
+                          type: string
+                        placementProperties:
+                          additionalProperties:
+                            type: string
+                          description: Specifies a list of placement tags that can be used to indicate where services should run..
+                          type: object
+                        primary:
+                          description: If set to true, system services will run on this node type. Only one node type should be marked as primary. Primary node type cannot be deleted or changed once they're created.
+                          type: boolean
+                        stateless:
+                          description: If set to true, only stateless workloads can run on this node type.
+                          type: boolean
+                        vmImageOffer:
+                          description: The offer type of the marketplace image cluster VMs will use.
+                          type: string
+                        vmImagePublisher:
+                          description: The publisher of the marketplace image cluster VMs will use.
+                          type: string
+                        vmImageSku:
+                          description: The SKU of the marketplace image cluster VMs will use.
+                          type: string
+                        vmImageVersion:
+                          description: The version of the marketplace image cluster VMs will use.
+                          type: string
+                        vmInstanceCount:
+                          description: The number of instances this node type will launch.
+                          type: number
+                        vmSecrets:
+                          description: One or more vm_secrets blocks as defined below.
+                          items:
+                            properties:
+                              certificates:
+                                description: One or more certificates blocks as defined above.
+                                items:
+                                  properties:
+                                    store:
+                                      description: The certificate store on the Virtual Machine to which the certificate should be added.
+                                      type: string
+                                    url:
+                                      description: The URL of a certificate that has been uploaded to Key Vault as a secret
+                                      type: string
+                                  required:
+                                  - store
+                                  - url
+                                  type: object
+                                type: array
+                              vaultId:
+                                description: The ID of the Vault that contain the certificates.
+                                type: string
+                            required:
+                            - certificates
+                            - vaultId
+                            type: object
+                          type: array
+                        vmSize:
+                          description: The size of the instances in this node type.
+                          type: string
+                      required:
+                      - applicationPortRange
+                      - dataDiskSizeGb
+                      - ephemeralPortRange
+                      - name
+                      - vmImageOffer
+                      - vmImagePublisher
+                      - vmImageSku
+                      - vmImageVersion
+                      - vmInstanceCount
+                      - vmSize
+                      type: object
+                    type: array
+                  password:
+                    description: Administrator password for the VMs that will be created as part of this cluster.
+                    type: string
+                  resourceGroupName:
+                    description: The name of the Resource Group where the Resource Group should exist.
+                    type: string
+                  resourceGroupNameRef:
+                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  resourceGroupNameSelector:
+                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  sku:
+                    description: SKU for this cluster.  Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.
+                    type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: A mapping of tags which should be assigned to the Resource Group.
+                    type: object
+                  upgradeWave:
+                    description: Upgrade wave for the fabric runtime. Default is Wave0, allowed value must be one of Wave0, Wave1, or Wave2.
+                    type: string
+                  username:
+                    description: Administrator password for the VMs that will be created as part of this cluster.
+                    type: string
+                required:
+                - clientConnectionPort
+                - httpGatewayPort
+                - lbRule
+                - location
                 type: object
               providerConfigRef:
                 default:
@@ -348,13 +464,22 @@ spec:
             - forProvider
             type: object
           status:
-            description: DataSetAzureBlobStatus defines the observed state of DataSetAzureBlob.
+            description: ManagedClusterStatus defines the observed state of ManagedCluster.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Data Factory Dataset.
+                    description: The ID of the Resource Group.
                     type: string
+                  nodeType:
+                    description: One or more node_type blocks as defined below.
+                    items:
+                      properties:
+                        id:
+                          description: The ID of the Resource Group.
+                          type: string
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.
