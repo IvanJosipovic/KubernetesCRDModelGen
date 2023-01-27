@@ -375,7 +375,7 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                   type:
-                    description: –  The type of trigger. Valid values are CONDITIONAL, ON_DEMAND, and SCHEDULED.
+                    description: –  The type of trigger. Valid values are CONDITIONAL, EVENT, ON_DEMAND, and SCHEDULED.
                     type: string
                   workflowName:
                     description: A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (ON_DEMAND or SCHEDULED type) and can contain multiple additional CONDITIONAL triggers.

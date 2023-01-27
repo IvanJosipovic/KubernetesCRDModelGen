@@ -89,6 +89,11 @@ spec:
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
                 required:
                 - region
                 type: object
@@ -233,6 +238,11 @@ spec:
                   repositoryUri:
                     description: The URI of the repository.
                     type: string
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    type: object
                 type: object
               conditions:
                 description: Conditions of the resource.

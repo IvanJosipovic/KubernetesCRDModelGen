@@ -72,11 +72,20 @@ spec:
                     description: The AZ for the RDS instance.
                     type: string
                   backupRetentionPeriod:
-                    description: The days to retain backups for. Must be between 0 and 35. Must be greater than 0 if the database is used as a source for a Read Replica. See Read Replica.
+                    description: The days to retain backups for. Must be between 0 and 35. Default is 0. Must be greater than 0 if the database is used as a source for a Read Replica, uses low-downtime updates, or will use RDS Blue/Green deployments.
                     type: number
                   backupWindow:
                     description: 'The daily time range (in UTC) during which automated backups are created if they are enabled. Example: "09:46-10:16". Must not overlap with maintenance_window.'
                     type: string
+                  blueGreenUpdate:
+                    description: Enables low-downtime updates using RDS Blue/Green deployments. See blue_green_update below
+                    items:
+                      properties:
+                        enabled:
+                          description: Enables [low-downtime updates](#Low-Downtime Updates) when true. Default is false.
+                          type: boolean
+                      type: object
+                    type: array
                   caCertIdentifier:
                     description: The identifier of the CA certificate for the DB instance.
                     type: string
@@ -86,6 +95,9 @@ spec:
                   copyTagsToSnapshot:
                     description: –  Copy all Instance tags to snapshots. Default is false.
                     type: boolean
+                  customIamInstanceProfile:
+                    description: The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance.
+                    type: string
                   customerOwnedIpEnabled:
                     description: Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See CoIP for RDS on Outposts for more information.
                     type: boolean
@@ -177,13 +189,13 @@ spec:
                     description: The name of your final DB snapshot when this DB instance is deleted. Must be provided if skip_final_snapshot is set to false. The value must begin with a letter, only contain alphanumeric characters and hyphens, and not end with a hyphen or contain two consecutive hyphens. Must not be provided when deleting a read replica.
                     type: string
                   iamDatabaseAuthenticationEnabled:
-                    description: Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
+                    description: Specifies whether mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
                     type: boolean
                   instanceClass:
                     description: The instance type of the RDS instance.
                     type: string
                   iops:
-                    description: The amount of provisioned IOPS. Setting this implies a storage_type of "io1".
+                    description: The amount of provisioned IOPS. Setting this implies a storage_type of "io1". Can only be set when storage_type is "io1" or "gp3". Cannot be specified for gp3 storage if the allocated_storage value is below a per-engine threshold. See the RDS User Guide for details.
                     type: number
                   kmsKeyId:
                     description: The ARN for the KMS encryption key. If creating an encrypted replica, set this to the destination KMS ARN.
@@ -322,6 +334,9 @@ spec:
                   ncharCharacterSetName:
                     description: The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See Oracle Character Sets Supported in Amazon RDS.
                     type: string
+                  networkType:
+                    description: 'The network type of the DB instance. Valid values: IPV4, DUAL.'
+                    type: string
                   optionGroupName:
                     description: Name of the DB option group to associate.
                     type: string
@@ -352,7 +367,7 @@ spec:
                     description: The ARN for the KMS key to encrypt Performance Insights data. When specifying performance_insights_kms_key_id, performance_insights_enabled needs to be set to true. Once KMS key is set, it can never be changed.
                     type: string
                   performanceInsightsRetentionPeriod:
-                    description: The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying performance_insights_retention_period, performance_insights_enabled needs to be set to true. Defaults to '7'.
+                    description: Amount of time in days to retain Performance Insights data. Valid values are 7, 731 (2 years) or a multiple of 31. When specifying performance_insights_retention_period, performance_insights_enabled needs to be set to true. Defaults to '7'.
                     type: number
                   port:
                     description: The port on which the DB accepts connections.
@@ -430,8 +445,11 @@ spec:
                   storageEncrypted:
                     description: Specifies whether the DB instance is encrypted. Note that if you are creating a cross-region read replica this field is ignored and you should instead declare kms_key_id with a valid ARN. The default is false if not specified.
                     type: boolean
+                  storageThroughput:
+                    description: The storage throughput value for the DB instance. Can only be set when storage_type is "gp3". Cannot be specified if the allocated_storage value is below a per-engine threshold. See the RDS User Guide for details.
+                    type: number
                   storageType:
-                    description: One of "standard" (magnetic), "gp2" (general purpose SSD), or "io1" (provisioned IOPS SSD). The default is "io1" if iops is specified, "gp2" if not.
+                    description: One of "standard" (magnetic), "gp2" (general purpose SSD), "gp3" (general purpose SSD that needs iops independently) or "io1" (provisioned IOPS SSD). The default is "io1" if iops is specified, "gp2" if not.
                     type: string
                   tags:
                     additionalProperties:

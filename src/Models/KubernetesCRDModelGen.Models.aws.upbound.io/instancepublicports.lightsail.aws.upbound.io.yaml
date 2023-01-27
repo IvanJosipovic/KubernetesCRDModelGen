@@ -118,6 +118,11 @@ spec:
                     description: Configuration block with port information. AWS closes all currently open ports that are not included in the port_info. Detailed below.
                     items:
                       properties:
+                        cidrListAliases:
+                          description: Set of CIDR aliases that define access for a preconfigured range of IP addresses.
+                          items:
+                            type: string
+                          type: array
                         cidrs:
                           description: Set of CIDR blocks.
                           items:
@@ -126,6 +131,10 @@ spec:
                         fromPort:
                           description: First port in a range of open ports on an instance.
                           type: number
+                        ipv6Cidrs:
+                          items:
+                            type: string
+                          type: array
                         protocol:
                           description: IP protocol name. Valid values are tcp, all, udp, and icmp.
                           type: string

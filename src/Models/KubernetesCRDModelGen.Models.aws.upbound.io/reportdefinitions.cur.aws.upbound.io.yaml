@@ -146,7 +146,7 @@ spec:
                     description: Region of the existing S3 bucket to hold generated reports.
                     type: string
                   timeUnit:
-                    description: 'The frequency on which report data are measured and displayed.  Valid values are: HOURLY, DAILY.'
+                    description: 'The frequency on which report data are measured and displayed.  Valid values are: DAILY, HOURLY, MONTHLY.'
                     type: string
                 required:
                 - additionalSchemaElements

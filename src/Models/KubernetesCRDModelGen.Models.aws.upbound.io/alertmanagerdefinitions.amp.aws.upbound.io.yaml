@@ -63,7 +63,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   workspaceId:
-                    description: The id of the prometheus workspace the alert manager definition should be linked to
+                    description: ID of the prometheus workspace the alert manager definition should be linked to
                     type: string
                   workspaceIdRef:
                     description: Reference to a Workspace in amp to populate workspaceId.
