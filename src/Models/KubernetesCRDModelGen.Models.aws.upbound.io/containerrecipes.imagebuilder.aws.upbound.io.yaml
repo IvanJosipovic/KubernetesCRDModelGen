@@ -99,7 +99,7 @@ spec:
                     items:
                       properties:
                         blockDeviceMapping:
-                          description: Configuration block(s) with block device mappings for the the container recipe. Detailed below.
+                          description: Configuration block(s) with block device mappings for the container recipe. Detailed below.
                           items:
                             properties:
                               deviceName:
@@ -124,6 +124,9 @@ spec:
                                     snapshotId:
                                       description: Identifier of the EC2 Volume Snapshot.
                                       type: string
+                                    throughput:
+                                      description: For GP3 volumes only. The throughput in MiB/s that the volume supports.
+                                      type: number
                                     volumeSize:
                                       description: Size of the volume, in GiB.
                                       type: number

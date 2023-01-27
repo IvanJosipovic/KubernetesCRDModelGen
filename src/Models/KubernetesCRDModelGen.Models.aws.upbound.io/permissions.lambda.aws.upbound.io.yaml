@@ -121,10 +121,10 @@ spec:
                         type: object
                     type: object
                   functionUrlAuthType:
-                    description: 'Lambda Function URLs authentication type. Valid values are: AWS_IAM or NONE.'
+                    description: 'Lambda Function URLs authentication type. Valid values are: AWS_IAM or NONE. Only supported for lambda:InvokeFunctionUrl action.'
                     type: string
                   principal:
-                    description: The principal who is getting this permission e.g., s3.amazonaws.com, an AWS account ID, or any valid AWS service principal such as events.amazonaws.com or sns.amazonaws.com.
+                    description: The principal who is getting this permission e.g., s3.amazonaws.com, an AWS account ID, or AWS IAM principal, or AWS service principal such as events.amazonaws.com or sns.amazonaws.com.
                     type: string
                   principalOrgId:
                     description: The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.
@@ -191,7 +191,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   sourceAccount:
-                    description: This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+                    description: This parameter is used when allowing cross-account access, or for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
                     type: string
                   sourceArn:
                     description: When the principal is an AWS service, the ARN of the specific resource within that service to grant permission to. Without this, any resource from principal will be granted permission – even if that resource is from another account. For S3, this should be the ARN of the S3 Bucket. For EventBridge events, this should be the ARN of the EventBridge Rule. For API Gateway, this should be the ARN of the API, as described here.

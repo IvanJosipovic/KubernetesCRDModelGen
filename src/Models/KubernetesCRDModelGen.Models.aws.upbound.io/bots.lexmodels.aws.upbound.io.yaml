@@ -137,7 +137,7 @@ spec:
                     description: The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is 300. Must be a number between 60 and 86400 (inclusive).
                     type: number
                   intent:
-                    description: A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
+                    description: A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 250 Intent objects.
                     items:
                       properties:
                         intentName:

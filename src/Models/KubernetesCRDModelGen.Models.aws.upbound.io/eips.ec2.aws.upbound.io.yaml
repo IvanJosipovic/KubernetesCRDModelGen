@@ -196,7 +196,7 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                   vpc:
-                    description: Boolean if the EIP is in a VPC or not.
+                    description: Boolean if the EIP is in a VPC or not. Defaults to true unless the region supports EC2-Classic.
                     type: boolean
                 required:
                 - region
@@ -343,7 +343,7 @@ spec:
                     description: Customer owned IP.
                     type: string
                   domain:
-                    description: Indicates if this EIP is for use in VPC (vpc) or EC2 Classic (standard).
+                    description: Indicates if this EIP is for use in VPC (vpc) or EC2-Classic (standard).
                     type: string
                   id:
                     description: Contains the EIP allocation ID.
