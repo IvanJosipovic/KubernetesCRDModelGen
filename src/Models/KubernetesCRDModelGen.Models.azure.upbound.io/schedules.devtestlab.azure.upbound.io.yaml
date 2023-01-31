@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: outputsynapses.streamanalytics.azure.upbound.io
+  name: schedules.devtestlab.azure.upbound.io
 spec:
-  group: streamanalytics.azure.upbound.io
+  group: devtestlab.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: OutputSynapse
-    listKind: OutputSynapseList
-    plural: outputsynapses
-    singular: outputsynapse
+    kind: Schedule
+    listKind: ScheduleList
+    plural: schedules
+    singular: schedule
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: OutputSynapse is the Schema for the OutputSynapses API. Manages a Stream Analytics Output to an Azure Synapse Analytics Workspace.
+        description: Schedule is the Schema for the Schedules API. Manages automated startup and shutdown schedules for Azure Dev Test Lab.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: OutputSynapseSpec defines the desired state of OutputSynapse
+            description: ScheduleSpec defines the desired state of Schedule
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,28 +56,106 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  database:
-                    description: The name of the Azure SQL database. Changing this forces a new resource to be created.
+                  dailyRecurrence:
+                    description: The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.
+                    items:
+                      properties:
+                        time:
+                          description: The time each day when the schedule takes effect.
+                          type: string
+                      required:
+                      - time
+                      type: object
+                    type: array
+                  hourlyRecurrence:
+                    description: The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.
+                    items:
+                      properties:
+                        minute:
+                          description: Minutes of the hour the schedule will run.
+                          type: number
+                      required:
+                      - minute
+                      type: object
+                    type: array
+                  labName:
+                    description: The name of the dev test lab. Changing this forces a new resource to be created.
                     type: string
-                  passwordSecretRef:
-                    description: The password that will be used to connect to the Azure SQL database.
+                  labNameRef:
+                    description: Reference to a Lab in devtestlab to populate labName.
                     properties:
-                      key:
-                        description: The key to select.
-                        type: string
                       name:
-                        description: Name of the secret.
+                        description: Name of the referenced object.
                         type: string
-                      namespace:
-                        description: Namespace of the secret.
-                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
                     required:
-                    - key
                     - name
-                    - namespace
                     type: object
+                  labNameSelector:
+                    description: Selector for a Lab in devtestlab to populate labName.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  location:
+                    description: The location where the schedule is created. Changing this forces a new resource to be created.
+                    type: string
+                  notificationSettings:
+                    description: The notification setting of a schedule. A notification_settings as defined below.
+                    items:
+                      properties:
+                        status:
+                          description: The status of the notification. Possible values are Enabled and Disabled. Defaults to Disabled
+                          type: string
+                        timeInMinutes:
+                          description: Time in minutes before event at which notification will be sent.
+                          type: number
+                        webhookUrl:
+                          description: The webhook URL to which the notification will be sent.
+                          type: string
+                      type: object
+                    type: array
                   resourceGroupName:
-                    description: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+                    description: The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created.
                     type: string
                   resourceGroupNameRef:
                     description: Reference to a ResourceGroup in azure to populate resourceGroupName.
@@ -134,133 +212,41 @@ spec:
                             type: string
                         type: object
                     type: object
-                  server:
-                    description: The name of the SQL server containing the Azure SQL database. Changing this forces a new resource to be created.
+                  status:
+                    description: The status of this schedule. Possible values are Enabled and Disabled. Defaults to Disabled.
                     type: string
-                  streamAnalyticsJobName:
-                    description: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-                    type: string
-                  streamAnalyticsJobNameRef:
-                    description: Reference to a Job to populate streamAnalyticsJobName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: A mapping of tags to assign to the resource.
                     type: object
-                  streamAnalyticsJobNameSelector:
-                    description: Selector for a Job to populate streamAnalyticsJobName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
+                  taskType:
+                    description: The task type of the schedule. Possible values include LabVmsShutdownTask and LabVmAutoStart.
+                    type: string
+                  timeZoneId:
+                    description: The time zone ID (e.g. Pacific Standard time).
+                    type: string
+                  weeklyRecurrence:
+                    description: The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.
+                    items:
+                      properties:
+                        time:
+                          description: The time when the schedule takes effect.
                           type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
+                        weekDays:
+                          description: A list of days that this schedule takes effect . Possible values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
+                          items:
                             type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  table:
-                    description: The name of the table in the Azure SQL database. Changing this forces a new resource to be created.
-                    type: string
-                  user:
-                    description: The user name that will be used to connect to the Azure SQL database. Changing this forces a new resource to be created.
-                    type: string
-                  userRef:
-                    description: Reference to a Workspace in synapse to populate user.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  userSelector:
-                    description: Selector for a Workspace in synapse to populate user.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
+                          type: array
+                      required:
+                      - time
+                      type: object
+                    type: array
                 required:
-                - database
-                - passwordSecretRef
-                - server
-                - table
+                - location
+                - notificationSettings
+                - taskType
+                - timeZoneId
                 type: object
               providerConfigRef:
                 default:
@@ -387,12 +373,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: OutputSynapseStatus defines the observed state of OutputSynapse.
+            description: ScheduleStatus defines the observed state of Schedule.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Stream Analytics Output to an Azure Synapse Analytics Workspace.
+                    description: The ID of the DevTest Schedule.
                     type: string
                 type: object
               conditions:

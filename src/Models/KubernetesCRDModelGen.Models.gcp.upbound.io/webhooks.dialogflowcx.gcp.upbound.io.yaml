@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: outputsynapses.streamanalytics.azure.upbound.io
+  name: webhooks.dialogflowcx.gcp.upbound.io
 spec:
-  group: streamanalytics.azure.upbound.io
+  group: dialogflowcx.gcp.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - azure
-    kind: OutputSynapse
-    listKind: OutputSynapseList
-    plural: outputsynapses
-    singular: outputsynapse
+    - gcp
+    kind: Webhook
+    listKind: WebhookList
+    plural: webhooks
+    singular: webhook
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: OutputSynapse is the Schema for the OutputSynapses API. Manages a Stream Analytics Output to an Azure Synapse Analytics Workspace.
+        description: Webhook is the Schema for the Webhooks API. Webhooks host the developer's business logic.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: OutputSynapseSpec defines the desired state of OutputSynapse
+            description: WebhookSpec defines the desired state of Webhook
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,31 +56,44 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  database:
-                    description: The name of the Azure SQL database. Changing this forces a new resource to be created.
+                  disabled:
+                    description: Indicates whether the webhook is disabled.
+                    type: boolean
+                  displayName:
+                    description: The human-readable name of the webhook, unique within the agent.
                     type: string
-                  passwordSecretRef:
-                    description: The password that will be used to connect to the Azure SQL database.
-                    properties:
-                      key:
-                        description: The key to select.
-                        type: string
-                      name:
-                        description: Name of the secret.
-                        type: string
-                      namespace:
-                        description: Namespace of the secret.
-                        type: string
-                    required:
-                    - key
-                    - name
-                    - namespace
-                    type: object
-                  resourceGroupName:
-                    description: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
+                  enableSpellCorrection:
+                    description: Indicates if automatic spell correction is enabled in detect intent requests.
+                    type: boolean
+                  enableStackdriverLogging:
+                    description: Determines whether this agent should log conversation queries.
+                    type: boolean
+                  genericWebService:
+                    description: Configuration for a generic web service. Structure is documented below.
+                    items:
+                      properties:
+                        allowedCaCerts:
+                          description: Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.
+                          items:
+                            type: string
+                          type: array
+                        requestHeaders:
+                          additionalProperties:
+                            type: string
+                          description: The HTTP request headers to send together with webhook requests.
+                          type: object
+                        uri:
+                          description: Whether to use speech adaptation for speech recognition.
+                          type: string
+                      required:
+                      - uri
+                      type: object
+                    type: array
+                  parent:
+                    description: 'The agent to create a webhook for. Format: projects//locations//agents/.'
                     type: string
-                  resourceGroupNameRef:
-                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
+                  parentRef:
+                    description: Reference to a Agent in dialogflowcx to populate parent.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -105,8 +118,8 @@ spec:
                     required:
                     - name
                     type: object
-                  resourceGroupNameSelector:
-                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
+                  parentSelector:
+                    description: Selector for a Agent in dialogflowcx to populate parent.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -134,133 +147,47 @@ spec:
                             type: string
                         type: object
                     type: object
-                  server:
-                    description: The name of the SQL server containing the Azure SQL database. Changing this forces a new resource to be created.
+                  securitySettings:
+                    description: 'Name of the SecuritySettings reference for the agent. Format: projects//locations//securitySettings/.'
                     type: string
-                  streamAnalyticsJobName:
-                    description: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-                    type: string
-                  streamAnalyticsJobNameRef:
-                    description: Reference to a Job to populate streamAnalyticsJobName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  streamAnalyticsJobNameSelector:
-                    description: Selector for a Job to populate streamAnalyticsJobName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
+                  serviceDirectory:
+                    description: Configuration for a Service Directory service. Structure is documented below.
+                    items:
+                      properties:
+                        genericWebService:
+                          description: The name of Service Directory service. Structure is documented below.
+                          items:
+                            properties:
+                              allowedCaCerts:
+                                description: Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.
+                                items:
+                                  type: string
+                                type: array
+                              requestHeaders:
+                                additionalProperties:
+                                  type: string
+                                description: The HTTP request headers to send together with webhook requests.
+                                type: object
+                              uri:
+                                description: Whether to use speech adaptation for speech recognition.
+                                type: string
+                            required:
+                            - uri
+                            type: object
+                          type: array
+                        service:
+                          description: The name of Service Directory service.
                           type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  table:
-                    description: The name of the table in the Azure SQL database. Changing this forces a new resource to be created.
+                      required:
+                      - genericWebService
+                      - service
+                      type: object
+                    type: array
+                  timeout:
+                    description: Webhook execution timeout.
                     type: string
-                  user:
-                    description: The user name that will be used to connect to the Azure SQL database. Changing this forces a new resource to be created.
-                    type: string
-                  userRef:
-                    description: Reference to a Workspace in synapse to populate user.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  userSelector:
-                    description: Selector for a Workspace in synapse to populate user.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
                 required:
-                - database
-                - passwordSecretRef
-                - server
-                - table
+                - displayName
                 type: object
               providerConfigRef:
                 default:
@@ -387,12 +314,18 @@ spec:
             - forProvider
             type: object
           status:
-            description: OutputSynapseStatus defines the observed state of OutputSynapse.
+            description: WebhookStatus defines the observed state of Webhook.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Stream Analytics Output to an Azure Synapse Analytics Workspace.
+                    description: an identifier for the resource with format {{parent}}/webhooks/{{name}}
+                    type: string
+                  name:
+                    description: 'The unique identifier of the webhook. Format: projects//locations//agents//webhooks/.'
+                    type: string
+                  startFlow:
+                    description: 'Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: projects//locations//agents//flows/.'
                     type: string
                 type: object
               conditions:

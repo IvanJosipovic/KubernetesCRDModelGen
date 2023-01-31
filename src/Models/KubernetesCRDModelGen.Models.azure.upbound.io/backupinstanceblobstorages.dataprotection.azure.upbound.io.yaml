@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: outputsynapses.streamanalytics.azure.upbound.io
+  name: backupinstanceblobstorages.dataprotection.azure.upbound.io
 spec:
-  group: streamanalytics.azure.upbound.io
+  group: dataprotection.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: OutputSynapse
-    listKind: OutputSynapseList
-    plural: outputsynapses
-    singular: outputsynapse
+    kind: BackupInstanceBlobStorage
+    listKind: BackupInstanceBlobStorageList
+    plural: backupinstanceblobstorages
+    singular: backupinstanceblobstorage
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: OutputSynapse is the Schema for the OutputSynapses API. Manages a Stream Analytics Output to an Azure Synapse Analytics Workspace.
+        description: BackupInstanceBlobStorage is the Schema for the BackupInstanceBlobStorages API. Manages a Backup Instance Blob Storage.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: OutputSynapseSpec defines the desired state of OutputSynapse
+            description: BackupInstanceBlobStorageSpec defines the desired state of BackupInstanceBlobStorage
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,31 +56,11 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  database:
-                    description: The name of the Azure SQL database. Changing this forces a new resource to be created.
+                  backupPolicyId:
+                    description: The ID of the Backup Policy.
                     type: string
-                  passwordSecretRef:
-                    description: The password that will be used to connect to the Azure SQL database.
-                    properties:
-                      key:
-                        description: The key to select.
-                        type: string
-                      name:
-                        description: Name of the secret.
-                        type: string
-                      namespace:
-                        description: Namespace of the secret.
-                        type: string
-                    required:
-                    - key
-                    - name
-                    - namespace
-                    type: object
-                  resourceGroupName:
-                    description: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-                    type: string
-                  resourceGroupNameRef:
-                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
+                  backupPolicyIdRef:
+                    description: Reference to a BackupPolicyBlobStorage in dataprotection to populate backupPolicyId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -105,8 +85,8 @@ spec:
                     required:
                     - name
                     type: object
-                  resourceGroupNameSelector:
-                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
+                  backupPolicyIdSelector:
+                    description: Selector for a BackupPolicyBlobStorage in dataprotection to populate backupPolicyId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -134,14 +114,14 @@ spec:
                             type: string
                         type: object
                     type: object
-                  server:
-                    description: The name of the SQL server containing the Azure SQL database. Changing this forces a new resource to be created.
+                  location:
+                    description: The location of the source Storage Account. Changing this forces a new Backup Instance Blob Storage to be created.
                     type: string
-                  streamAnalyticsJobName:
-                    description: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
+                  storageAccountId:
+                    description: The ID of the source Storage Account. Changing this forces a new Backup Instance Blob Storage to be created.
                     type: string
-                  streamAnalyticsJobNameRef:
-                    description: Reference to a Job to populate streamAnalyticsJobName.
+                  storageAccountIdRef:
+                    description: Reference to a Account in storage to populate storageAccountId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -166,8 +146,8 @@ spec:
                     required:
                     - name
                     type: object
-                  streamAnalyticsJobNameSelector:
-                    description: Selector for a Job to populate streamAnalyticsJobName.
+                  storageAccountIdSelector:
+                    description: Selector for a Account in storage to populate storageAccountId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -195,14 +175,11 @@ spec:
                             type: string
                         type: object
                     type: object
-                  table:
-                    description: The name of the table in the Azure SQL database. Changing this forces a new resource to be created.
+                  vaultId:
+                    description: The ID of the Backup Vault within which the Backup Instance Blob Storage should exist. Changing this forces a new Backup Instance Blob Storage to be created.
                     type: string
-                  user:
-                    description: The user name that will be used to connect to the Azure SQL database. Changing this forces a new resource to be created.
-                    type: string
-                  userRef:
-                    description: Reference to a Workspace in synapse to populate user.
+                  vaultIdRef:
+                    description: Reference to a BackupVault in dataprotection to populate vaultId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -227,8 +204,8 @@ spec:
                     required:
                     - name
                     type: object
-                  userSelector:
-                    description: Selector for a Workspace in synapse to populate user.
+                  vaultIdSelector:
+                    description: Selector for a BackupVault in dataprotection to populate vaultId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -257,10 +234,7 @@ spec:
                         type: object
                     type: object
                 required:
-                - database
-                - passwordSecretRef
-                - server
-                - table
+                - location
                 type: object
               providerConfigRef:
                 default:
@@ -387,12 +361,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: OutputSynapseStatus defines the observed state of OutputSynapse.
+            description: BackupInstanceBlobStorageStatus defines the observed state of BackupInstanceBlobStorage.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Stream Analytics Output to an Azure Synapse Analytics Workspace.
+                    description: The ID of the Backup Instance Blob Storage.
                     type: string
                 type: object
               conditions:

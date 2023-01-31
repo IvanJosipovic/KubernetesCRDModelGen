@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: outputsynapses.streamanalytics.azure.upbound.io
+  name: applicationinsightsanalyticsitems.insights.azure.upbound.io
 spec:
-  group: streamanalytics.azure.upbound.io
+  group: insights.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: OutputSynapse
-    listKind: OutputSynapseList
-    plural: outputsynapses
-    singular: outputsynapse
+    kind: ApplicationInsightsAnalyticsItem
+    listKind: ApplicationInsightsAnalyticsItemList
+    plural: applicationinsightsanalyticsitems
+    singular: applicationinsightsanalyticsitem
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: OutputSynapse is the Schema for the OutputSynapses API. Manages a Stream Analytics Output to an Azure Synapse Analytics Workspace.
+        description: ApplicationInsightsAnalyticsItem is the Schema for the ApplicationInsightsAnalyticsItems API. Manages an Application Insights Analytics Item component.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: OutputSynapseSpec defines the desired state of OutputSynapse
+            description: ApplicationInsightsAnalyticsItemSpec defines the desired state of ApplicationInsightsAnalyticsItem
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,31 +56,11 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  database:
-                    description: The name of the Azure SQL database. Changing this forces a new resource to be created.
+                  applicationInsightsId:
+                    description: The ID of the Application Insights component on which the Analytics Item exists. Changing this forces a new resource to be created.
                     type: string
-                  passwordSecretRef:
-                    description: The password that will be used to connect to the Azure SQL database.
-                    properties:
-                      key:
-                        description: The key to select.
-                        type: string
-                      name:
-                        description: Name of the secret.
-                        type: string
-                      namespace:
-                        description: Namespace of the secret.
-                        type: string
-                    required:
-                    - key
-                    - name
-                    - namespace
-                    type: object
-                  resourceGroupName:
-                    description: The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-                    type: string
-                  resourceGroupNameRef:
-                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
+                  applicationInsightsIdRef:
+                    description: Reference to a ApplicationInsights in insights to populate applicationInsightsId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -105,8 +85,8 @@ spec:
                     required:
                     - name
                     type: object
-                  resourceGroupNameSelector:
-                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
+                  applicationInsightsIdSelector:
+                    description: Selector for a ApplicationInsights in insights to populate applicationInsightsId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -134,133 +114,26 @@ spec:
                             type: string
                         type: object
                     type: object
-                  server:
-                    description: The name of the SQL server containing the Azure SQL database. Changing this forces a new resource to be created.
+                  content:
+                    description: The content for the Analytics Item, for example the query text if type is query.
                     type: string
-                  streamAnalyticsJobName:
-                    description: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
+                  functionAlias:
+                    description: The alias to use for the function. Required when type is function.
                     type: string
-                  streamAnalyticsJobNameRef:
-                    description: Reference to a Job to populate streamAnalyticsJobName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  streamAnalyticsJobNameSelector:
-                    description: Selector for a Job to populate streamAnalyticsJobName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  table:
-                    description: The name of the table in the Azure SQL database. Changing this forces a new resource to be created.
+                  name:
+                    description: Specifies the name of the Application Insights Analytics Item. Changing this forces a new resource to be created.
                     type: string
-                  user:
-                    description: The user name that will be used to connect to the Azure SQL database. Changing this forces a new resource to be created.
+                  scope:
+                    description: The scope for the Analytics Item. Can be shared or user. Changing this forces a new resource to be created. Must be shared for functions.
                     type: string
-                  userRef:
-                    description: Reference to a Workspace in synapse to populate user.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  userSelector:
-                    description: Selector for a Workspace in synapse to populate user.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
+                  type:
+                    description: The type of Analytics Item to create. Can be one of query, function, folder, recent. Changing this forces a new resource to be created.
+                    type: string
                 required:
-                - database
-                - passwordSecretRef
-                - server
-                - table
+                - content
+                - name
+                - scope
+                - type
                 type: object
               providerConfigRef:
                 default:
@@ -387,12 +260,21 @@ spec:
             - forProvider
             type: object
           status:
-            description: OutputSynapseStatus defines the observed state of OutputSynapse.
+            description: ApplicationInsightsAnalyticsItemStatus defines the observed state of ApplicationInsightsAnalyticsItem.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Stream Analytics Output to an Azure Synapse Analytics Workspace.
+                    description: The ID of the Application Insights Analytics Item.
+                    type: string
+                  timeCreated:
+                    description: A string containing the time the Analytics Item was created.
+                    type: string
+                  timeModified:
+                    description: A string containing the time the Analytics Item was last modified.
+                    type: string
+                  version:
+                    description: A string indicating the version of the query format
                     type: string
                 type: object
               conditions:
