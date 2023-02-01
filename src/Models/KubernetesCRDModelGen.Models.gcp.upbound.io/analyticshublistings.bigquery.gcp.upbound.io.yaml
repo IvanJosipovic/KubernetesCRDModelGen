@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: outputfunctions.streamanalytics.azure.upbound.io
+  name: analyticshublistings.bigquery.gcp.upbound.io
 spec:
-  group: streamanalytics.azure.upbound.io
+  group: bigquery.gcp.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - azure
-    kind: OutputFunction
-    listKind: OutputFunctionList
-    plural: outputfunctions
-    singular: outputfunction
+    - gcp
+    kind: AnalyticsHubListing
+    listKind: AnalyticsHubListingList
+    plural: analyticshublistings
+    singular: analyticshublisting
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: OutputFunction is the Schema for the OutputFunctions API. Manages a Stream Analytics Output Function.
+        description: AnalyticsHubListing is the Schema for the AnalyticsHubListings API. A Bigquery Analytics Hub data exchange listing
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: OutputFunctionSpec defines the desired state of OutputFunction
+            description: AnalyticsHubListingSpec defines the desired state of AnalyticsHubListing
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,34 +56,80 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  apiKeySecretRef:
-                    description: The API key for the Function.
-                    properties:
-                      key:
-                        description: The key to select.
-                        type: string
-                      name:
-                        description: Name of the secret.
-                        type: string
-                      namespace:
-                        description: Namespace of the secret.
-                        type: string
-                    required:
-                    - key
-                    - name
-                    - namespace
-                    type: object
-                  batchMaxCount:
-                    description: The maximum number of events in each batch that's sent to the function. Defaults to 100.
-                    type: number
-                  batchMaxInBytes:
-                    description: The maximum batch size in bytes that's sent to the function. Defaults to 262144 (256 kB).
-                    type: number
-                  functionApp:
-                    description: The name of the Function App.
+                  bigqueryDataset:
+                    description: Shared dataset i.e. BigQuery dataset source. Structure is documented below.
+                    items:
+                      properties:
+                        dataset:
+                          description: Resource name of the dataset source for this listing. e.g. projects/myproject/datasets/123
+                          type: string
+                        datasetRef:
+                          description: Reference to a Dataset in bigquery to populate dataset.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        datasetSelector:
+                          description: Selector for a Dataset in bigquery to populate dataset.
+                          properties:
+                            matchControllerRef:
+                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
+                      type: object
+                    type: array
+                  categories:
+                    description: Categories of the listing. Up to two categories are allowed.
+                    items:
+                      type: string
+                    type: array
+                  dataExchangeId:
+                    description: The ID of the data exchange. Must contain only Unicode letters, numbers (0-9), underscores (_). Should not use characters that require URL-escaping, or characters outside of ASCII, spaces.
                     type: string
-                  functionAppRef:
-                    description: Reference to a FunctionApp in web to populate functionApp.
+                  dataExchangeIdRef:
+                    description: Reference to a AnalyticsHubDataExchange in bigquery to populate dataExchangeId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -108,8 +154,8 @@ spec:
                     required:
                     - name
                     type: object
-                  functionAppSelector:
-                    description: Selector for a FunctionApp in web to populate functionApp.
+                  dataExchangeIdSelector:
+                    description: Selector for a AnalyticsHubDataExchange in bigquery to populate dataExchangeId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -137,128 +183,62 @@ spec:
                             type: string
                         type: object
                     type: object
-                  functionName:
-                    description: The name of the function in the Function App.
-                    type: string
-                  resourceGroupName:
-                    description: The name of the Resource Group where the Stream Analytics Output should exist. Changing this forces a new resource to be created.
-                    type: string
-                  resourceGroupNameRef:
-                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  resourceGroupNameSelector:
-                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
+                  dataProvider:
+                    description: Details of the data provider who owns the source data. Structure is documented below.
+                    items:
+                      properties:
+                        name:
+                          description: Name of the data provider.
                           type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  streamAnalyticsJobName:
-                    description: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-                    type: string
-                  streamAnalyticsJobNameRef:
-                    description: Reference to a Job in streamanalytics to populate streamAnalyticsJobName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  streamAnalyticsJobNameSelector:
-                    description: Selector for a Job in streamanalytics to populate streamAnalyticsJobName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
+                        primaryContact:
+                          description: Email or URL of the data provider.
                           type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
+                      required:
+                      - name
+                      type: object
+                    type: array
+                  description:
+                    description: Short description of the listing. The description must not contain Unicode non-characters and C0 and C1 control codes except tabs (HT), new lines (LF), carriage returns (CR), and page breaks (FF).
+                    type: string
+                  displayName:
+                    description: Human-readable display name of the listing. The display name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), ampersands (&) and can't start or end with spaces.
+                    type: string
+                  documentation:
+                    description: Documentation describing the listing.
+                    type: string
+                  icon:
+                    description: Base64 encoded image representing the listing.
+                    type: string
+                  location:
+                    description: The name of the location this data exchange listing.
+                    type: string
+                  primaryContact:
+                    description: Email or URL of the listing publisher.
+                    type: string
+                  project:
+                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+                    type: string
+                  publisher:
+                    description: Details of the publisher who owns the listing and who can share the source data. Structure is documented below.
+                    items:
+                      properties:
+                        name:
+                          description: Name of the listing publisher.
+                          type: string
+                        primaryContact:
+                          description: Email or URL of the listing publisher.
+                          type: string
+                      required:
+                      - name
+                      type: object
+                    type: array
+                  requestAccess:
+                    description: Email or URL of the request access of the listing. Subscribers can use this reference to request access.
+                    type: string
                 required:
-                - apiKeySecretRef
-                - functionName
+                - bigqueryDataset
+                - displayName
+                - location
                 type: object
               providerConfigRef:
                 default:
@@ -385,12 +365,15 @@ spec:
             - forProvider
             type: object
           status:
-            description: OutputFunctionStatus defines the observed state of OutputFunction.
+            description: AnalyticsHubListingStatus defines the observed state of AnalyticsHubListing.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Stream Analytics Output Function.
+                    description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/dataExchanges/{{data_exchange_id}}/listings/{{listing_id}}
+                    type: string
+                  name:
+                    description: The resource name of the listing. e.g. "projects/myproject/locations/US/dataExchanges/123/listings/456"
                     type: string
                 type: object
               conditions:

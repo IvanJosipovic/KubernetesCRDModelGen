@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: outputfunctions.streamanalytics.azure.upbound.io
+  name: apptriggercustoms.logic.azure.upbound.io
 spec:
-  group: streamanalytics.azure.upbound.io
+  group: logic.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: OutputFunction
-    listKind: OutputFunctionList
-    plural: outputfunctions
-    singular: outputfunction
+    kind: AppTriggerCustom
+    listKind: AppTriggerCustomList
+    plural: apptriggercustoms
+    singular: apptriggercustom
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: OutputFunction is the Schema for the OutputFunctions API. Manages a Stream Analytics Output Function.
+        description: AppTriggerCustom is the Schema for the AppTriggerCustoms API. Manages a Custom Trigger within a Logic App Workflow
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: OutputFunctionSpec defines the desired state of OutputFunction
+            description: AppTriggerCustomSpec defines the desired state of AppTriggerCustom
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,34 +56,14 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  apiKeySecretRef:
-                    description: The API key for the Function.
-                    properties:
-                      key:
-                        description: The key to select.
-                        type: string
-                      name:
-                        description: Name of the secret.
-                        type: string
-                      namespace:
-                        description: Namespace of the secret.
-                        type: string
-                    required:
-                    - key
-                    - name
-                    - namespace
-                    type: object
-                  batchMaxCount:
-                    description: The maximum number of events in each batch that's sent to the function. Defaults to 100.
-                    type: number
-                  batchMaxInBytes:
-                    description: The maximum batch size in bytes that's sent to the function. Defaults to 262144 (256 kB).
-                    type: number
-                  functionApp:
-                    description: The name of the Function App.
+                  body:
+                    description: Specifies the JSON Blob defining the Body of this Custom Trigger.
                     type: string
-                  functionAppRef:
-                    description: Reference to a FunctionApp in web to populate functionApp.
+                  logicAppId:
+                    description: Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
+                    type: string
+                  logicAppIdRef:
+                    description: Reference to a AppWorkflow in logic to populate logicAppId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -108,127 +88,8 @@ spec:
                     required:
                     - name
                     type: object
-                  functionAppSelector:
-                    description: Selector for a FunctionApp in web to populate functionApp.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  functionName:
-                    description: The name of the function in the Function App.
-                    type: string
-                  resourceGroupName:
-                    description: The name of the Resource Group where the Stream Analytics Output should exist. Changing this forces a new resource to be created.
-                    type: string
-                  resourceGroupNameRef:
-                    description: Reference to a ResourceGroup in azure to populate resourceGroupName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  resourceGroupNameSelector:
-                    description: Selector for a ResourceGroup in azure to populate resourceGroupName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  streamAnalyticsJobName:
-                    description: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-                    type: string
-                  streamAnalyticsJobNameRef:
-                    description: Reference to a Job in streamanalytics to populate streamAnalyticsJobName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  streamAnalyticsJobNameSelector:
-                    description: Selector for a Job in streamanalytics to populate streamAnalyticsJobName.
+                  logicAppIdSelector:
+                    description: Selector for a AppWorkflow in logic to populate logicAppId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -257,8 +118,7 @@ spec:
                         type: object
                     type: object
                 required:
-                - apiKeySecretRef
-                - functionName
+                - body
                 type: object
               providerConfigRef:
                 default:
@@ -385,12 +245,12 @@ spec:
             - forProvider
             type: object
           status:
-            description: OutputFunctionStatus defines the observed state of OutputFunction.
+            description: AppTriggerCustomStatus defines the observed state of AppTriggerCustom.
             properties:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the Stream Analytics Output Function.
+                    description: The ID of the Trigger within the Logic App Workflow.
                     type: string
                 type: object
               conditions:
