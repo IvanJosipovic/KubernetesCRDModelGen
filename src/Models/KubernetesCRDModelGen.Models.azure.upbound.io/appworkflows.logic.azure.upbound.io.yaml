@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: outputfunctions.streamanalytics.azure.upbound.io
+  name: appworkflows.logic.azure.upbound.io
 spec:
-  group: streamanalytics.azure.upbound.io
+  group: logic.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - azure
-    kind: OutputFunction
-    listKind: OutputFunctionList
-    plural: outputfunctions
-    singular: outputfunction
+    kind: AppWorkflow
+    listKind: AppWorkflowList
+    plural: appworkflows
+    singular: appworkflow
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: OutputFunction is the Schema for the OutputFunctions API. Manages a Stream Analytics Output Function.
+        description: AppWorkflow is the Schema for the AppWorkflows API. Manages a Logic App Workflow.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: OutputFunctionSpec defines the desired state of OutputFunction
+            description: AppWorkflowSpec defines the desired state of AppWorkflow
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,92 +56,126 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  apiKeySecretRef:
-                    description: The API key for the Function.
-                    properties:
-                      key:
-                        description: The key to select.
-                        type: string
-                      name:
-                        description: Name of the secret.
-                        type: string
-                      namespace:
-                        description: Namespace of the secret.
-                        type: string
-                    required:
-                    - key
-                    - name
-                    - namespace
-                    type: object
-                  batchMaxCount:
-                    description: The maximum number of events in each batch that's sent to the function. Defaults to 100.
-                    type: number
-                  batchMaxInBytes:
-                    description: The maximum batch size in bytes that's sent to the function. Defaults to 262144 (256 kB).
-                    type: number
-                  functionApp:
-                    description: The name of the Function App.
-                    type: string
-                  functionAppRef:
-                    description: Reference to a FunctionApp in web to populate functionApp.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
+                  accessControl:
+                    description: A access_control block as defined below.
+                    items:
+                      properties:
+                        action:
+                          description: A action block as defined below.
+                          items:
+                            properties:
+                              allowedCallerIpAddressRange:
+                                description: A list of the allowed caller IP address ranges.
+                                items:
+                                  type: string
+                                type: array
+                            required:
+                            - allowedCallerIpAddressRange
+                            type: object
+                          type: array
+                        content:
+                          description: A content block as defined below.
+                          items:
+                            properties:
+                              allowedCallerIpAddressRange:
+                                description: A list of the allowed caller IP address ranges.
+                                items:
+                                  type: string
+                                type: array
+                            required:
+                            - allowedCallerIpAddressRange
+                            type: object
+                          type: array
+                        trigger:
+                          description: A trigger block as defined below.
+                          items:
+                            properties:
+                              allowedCallerIpAddressRange:
+                                description: A list of the allowed caller IP address ranges.
+                                items:
+                                  type: string
+                                type: array
+                              openAuthenticationPolicy:
+                                description: A open_authentication_policy block as defined below.
+                                items:
+                                  properties:
+                                    claim:
+                                      description: A claim block as defined below.
+                                      items:
+                                        properties:
+                                          name:
+                                            description: The OAuth policy name for the Logic App Workflow.
+                                            type: string
+                                          value:
+                                            description: The value of the OAuth policy claim for the Logic App Workflow.
+                                            type: string
+                                        required:
+                                        - name
+                                        - value
+                                        type: object
+                                      type: array
+                                    name:
+                                      description: The OAuth policy name for the Logic App Workflow.
+                                      type: string
+                                  required:
+                                  - claim
+                                  - name
+                                  type: object
+                                type: array
+                            required:
+                            - allowedCallerIpAddressRange
+                            type: object
+                          type: array
+                        workflowManagement:
+                          description: A workflow_management block as defined below.
+                          items:
+                            properties:
+                              allowedCallerIpAddressRange:
+                                description: A list of the allowed caller IP address ranges.
+                                items:
+                                  type: string
+                                type: array
+                            required:
+                            - allowedCallerIpAddressRange
+                            type: object
+                          type: array
+                      type: object
+                    type: array
+                  enabled:
+                    description: Is the Logic App Workflow enabled? Defaults to true.
+                    type: boolean
+                  identity:
+                    description: An identity block as defined below.
+                    items:
+                      properties:
+                        identityIds:
+                          description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this Logic App Workflow.
+                          items:
                             type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  functionAppSelector:
-                    description: Selector for a FunctionApp in web to populate functionApp.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
+                          type: array
+                        type:
+                          description: Specifies the type of Managed Service Identity that should be configured on this Logic App Workflow. Possible values are SystemAssigned, UserAssigned.
                           type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  functionName:
-                    description: The name of the function in the Function App.
+                      required:
+                      - type
+                      type: object
+                    type: array
+                  integrationServiceEnvironmentId:
+                    description: The ID of the Integration Service Environment to which this Logic App Workflow belongs.  Changing this forces a new Logic App Workflow to be created.
                     type: string
+                  location:
+                    description: Specifies the supported Azure location where the Logic App Workflow exists. Changing this forces a new resource to be created.
+                    type: string
+                  logicAppIntegrationAccountId:
+                    description: The ID of the integration account linked by this Logic App Workflow.
+                    type: string
+                  parameters:
+                    additionalProperties:
+                      type: string
+                    description: A map of Key-Value pairs.
+                    type: object
                   resourceGroupName:
-                    description: The name of the Resource Group where the Stream Analytics Output should exist. Changing this forces a new resource to be created.
+                    description: The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
                     type: string
                   resourceGroupNameRef:
                     description: Reference to a ResourceGroup in azure to populate resourceGroupName.
@@ -198,67 +232,24 @@ spec:
                             type: string
                         type: object
                     type: object
-                  streamAnalyticsJobName:
-                    description: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: A mapping of tags to assign to the resource.
+                    type: object
+                  workflowParameters:
+                    additionalProperties:
+                      type: string
+                    description: 'Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a JSON encoded string of the parameter definition (see: https://docs.microsoft.com/azure/logic-apps/logic-apps-workflow-definition-language#parameters).'
+                    type: object
+                  workflowSchema:
+                    description: Specifies the Schema to use for this Logic App Workflow. Defaults to https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#. Changing this forces a new resource to be created.
                     type: string
-                  streamAnalyticsJobNameRef:
-                    description: Reference to a Job in streamanalytics to populate streamAnalyticsJobName.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  streamAnalyticsJobNameSelector:
-                    description: Selector for a Job in streamanalytics to populate streamAnalyticsJobName.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
+                  workflowVersion:
+                    description: Specifies the version of the Schema used for this Logic App Workflow. Defaults to 1.0.0.0. Changing this forces a new resource to be created.
+                    type: string
                 required:
-                - apiKeySecretRef
-                - functionName
+                - location
                 type: object
               providerConfigRef:
                 default:
@@ -385,13 +376,48 @@ spec:
             - forProvider
             type: object
           status:
-            description: OutputFunctionStatus defines the observed state of OutputFunction.
+            description: AppWorkflowStatus defines the observed state of AppWorkflow.
             properties:
               atProvider:
                 properties:
-                  id:
-                    description: The ID of the Stream Analytics Output Function.
+                  accessEndpoint:
+                    description: The Access Endpoint for the Logic App Workflow.
                     type: string
+                  connectorEndpointIpAddresses:
+                    description: The list of access endpoint IP addresses of connector.
+                    items:
+                      type: string
+                    type: array
+                  connectorOutboundIpAddresses:
+                    description: The list of outgoing IP addresses of connector.
+                    items:
+                      type: string
+                    type: array
+                  id:
+                    description: The Logic App Workflow ID.
+                    type: string
+                  identity:
+                    description: An identity block as defined below.
+                    items:
+                      properties:
+                        principalId:
+                          description: The Principal ID for the Service Principal associated with the Managed Service Identity of this Logic App Workflow.
+                          type: string
+                        tenantId:
+                          description: The Tenant ID for the Service Principal associated with the Managed Service Identity of this Logic App Workflow.
+                          type: string
+                      type: object
+                    type: array
+                  workflowEndpointIpAddresses:
+                    description: The list of access endpoint IP addresses of workflow.
+                    items:
+                      type: string
+                    type: array
+                  workflowOutboundIpAddresses:
+                    description: The list of outgoing IP addresses of workflow.
+                    items:
+                      type: string
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.
