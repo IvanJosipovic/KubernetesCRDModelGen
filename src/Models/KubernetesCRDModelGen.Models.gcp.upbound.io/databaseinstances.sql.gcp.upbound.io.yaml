@@ -198,7 +198,7 @@ spec:
                             type: object
                           type: array
                         availabilityType:
-                          description: The availability type of the Cloud SQL instance, high availability (REGIONAL) or single zone (ZONAL).' For all instances, ensure that settings.backup_configuration.enabled is set to true. For MySQL instances, ensure that settings.backup_configuration.binary_log_enabled is set to true. For Postgres instances, ensure that settings.backup_configuration.point_in_time_recovery_enabled is set to true. Defaults to ZONAL.
+                          description: The availability type of the Cloud SQL instance, high availability (REGIONAL) or single zone (ZONAL).' For all instances, ensure that settings.backup_configuration.enabled is set to true. For MySQL instances, ensure that settings.backup_configuration.binary_log_enabled is set to true. For Postgres and SQL Server instances, ensure that settings.backup_configuration.point_in_time_recovery_enabled is set to true. Defaults to ZONAL.
                           type: string
                         backupConfiguration:
                           items:
@@ -227,7 +227,7 @@ spec:
                                 description: The region where the backup will be stored
                                 type: string
                               pointInTimeRecoveryEnabled:
-                                description: True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
+                                description: True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL and SQL Server instances.
                                 type: boolean
                               startTime:
                                 description: HH:MM format time indicating when backup configuration starts.
@@ -627,6 +627,9 @@ spec:
                     description: The first IPv4 address of any type assigned.
                     type: string
                   id:
+                    type: string
+                  instanceType:
+                    description: The type of the instance. The supported values are SQL_INSTANCE_TYPE_UNSPECIFIED, CLOUD_SQL_INSTANCE, ON_PREMISES_INSTANCE and READ_REPLICA_INSTANCE.
                     type: string
                   ipAddress:
                     description: The IPv4 address assigned.

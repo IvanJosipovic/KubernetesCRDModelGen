@@ -125,7 +125,7 @@ spec:
                     description: ID of a Gallery Image Version to copy when create_option is FromImage. This field cannot be specified if image_reference_id is specified. Changing this forces a new resource to be created.
                     type: string
                   hyperVGeneration:
-                    description: The HyperV Generation of the Disk when the source of an Import or Copy operation targets a source that contains an operating system. Possible values are V1 and V2. Changing this forces a new resource to be created.
+                    description: The HyperV Generation of the Disk when the source of an Import or Copy operation targets a source that contains an operating system. Possible values are V1 and V2. For ImportSecure it must be set to V2. Changing this forces a new resource to be created.
                     type: string
                   imageReferenceId:
                     description: ID of an existing platform/marketplace disk image to copy when create_option is FromImage. This field cannot be specified if gallery_image_reference_id is specified. Changing this forces a new resource to be created.
@@ -146,7 +146,7 @@ spec:
                     description: Specifies if On-Demand Bursting is enabled for the Managed Disk.
                     type: boolean
                   osType:
-                    description: Specify a value when the source of an Import or Copy operation targets a source that contains an operating system. Valid values are Linux or Windows.
+                    description: Specify a value when the source of an Import, ImportSecure or Copy operation targets a source that contains an operating system. Valid values are Linux or Windows.
                     type: string
                   publicNetworkAccessEnabled:
                     description: Whether it is allowed to access the disk via public network. Defaults to true.
@@ -213,7 +213,7 @@ spec:
                     description: The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk when the Virtual Machine is a Confidential VM. Conflicts with disk_encryption_set_id. Changing this forces a new resource to be created.
                     type: string
                   securityType:
-                    description: Security Type of the Managed Disk when it is used for a Confidential VM. Possible values are ConfidentialVM_VMGuestStateOnlyEncryptedWithPlatformKey, ConfidentialVM_DiskEncryptedWithPlatformKey and ConfidentialVM_DiskEncryptedWithCustomerKey. Changing this forces a new resource to be created.
+                    description: Security Type of the Managed Disk when it is used for a Confidential VM. Possible values are VMGuestStateOnlyEncryptedWithPlatformKey, ConfidentialVM_DiskEncryptedWithPlatformKey and ConfidentialVM_DiskEncryptedWithCustomerKey. Changing this forces a new resource to be created.
                     type: string
                   sourceResourceId:
                     description: The ID of an existing Managed Disk or Snapshot to copy when create_option is Copy or the recovery point to restore when create_option is Restore. Changing this forces a new resource to be created.
@@ -274,10 +274,10 @@ spec:
                         type: object
                     type: object
                   sourceUri:
-                    description: URI to a valid VHD file to be used when create_option is Import. Changing this forces a new resource to be created.
+                    description: URI to a valid VHD file to be used when create_option is Import or ImportSecure. Changing this forces a new resource to be created.
                     type: string
                   storageAccountId:
-                    description: The ID of the Storage Account where the source_uri is located. Required when create_option is set to Import.  Changing this forces a new resource to be created.
+                    description: The ID of the Storage Account where the source_uri is located. Required when create_option is set to Import or ImportSecure. Changing this forces a new resource to be created.
                     type: string
                   storageAccountType:
                     description: The type of storage to use for the managed disk. Possible values are Standard_LRS, StandardSSD_ZRS, Premium_LRS, PremiumV2_LRS, Premium_ZRS, StandardSSD_LRS or UltraSSD_LRS.

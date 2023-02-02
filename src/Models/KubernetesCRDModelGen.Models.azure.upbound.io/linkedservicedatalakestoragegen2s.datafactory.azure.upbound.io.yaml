@@ -136,13 +136,13 @@ spec:
                     description: A map of parameters to associate with the Data Factory Linked Service.
                     type: object
                   servicePrincipalId:
-                    description: The service principal id with which to authenticate against the Azure Data Lake Storage Gen2 account.  Incompatible with storage_account_key and use_managed_identity.
+                    description: The service principal id with which to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with storage_account_key and use_managed_identity.
                     type: string
                   servicePrincipalKey:
                     description: The service principal key with which to authenticate against the Azure Data Lake Storage Gen2 account.
                     type: string
                   storageAccountKey:
-                    description: The Storage Account Key with which to authenticate against the Azure Data Lake Storage Gen2 account.  Incompatible with service_principal_id, service_principal_key, tenant and use_managed_identity.
+                    description: The Storage Account Key with which to authenticate against the Azure Data Lake Storage Gen2 account. Incompatible with service_principal_id, service_principal_key, tenant and use_managed_identity.
                     type: string
                   tenant:
                     description: The tenant id or name in which the service principal exists to authenticate against the Azure Data Lake Storage Gen2 account.

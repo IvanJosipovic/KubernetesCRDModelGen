@@ -66,10 +66,10 @@ spec:
                     description: The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes. (PT10M)
                     type: string
                   enableBatchedOperations:
-                    description: Boolean flag which controls if server-side batched operations are enabled. Defaults to false.
+                    description: Boolean flag which controls if server-side batched operations are enabled.
                     type: boolean
                   enableExpress:
-                    description: Boolean flag which controls whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage. Defaults to false.
+                    description: Boolean flag which controls whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
                     type: boolean
                   enablePartitioning:
                     description: Boolean flag which controls whether to enable Changing this forces a new resource to be created. the topic to be partitioned across multiple message brokers. Defaults to false. Changing this forces a new resource to be created.
@@ -145,7 +145,7 @@ spec:
                     description: The Status of the Service Bus Topic. Acceptable values are Active or Disabled. Defaults to Active.
                     type: string
                   supportOrdering:
-                    description: Boolean flag which controls whether the Topic supports ordering. Defaults to false.
+                    description: Boolean flag which controls whether the Topic supports ordering.
                     type: boolean
                 type: object
               providerConfigRef:

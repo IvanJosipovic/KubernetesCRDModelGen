@@ -105,7 +105,7 @@ spec:
                             type: object
                           type: array
                         name:
-                          description: Gets name of the resource that is unique within a policy. This name can be used to access the resource. Changing this forces a new resource to be created.
+                          description: Gets name of the resource that is unique within a policy. This name can be used to access the resource.
                           type: string
                         priority:
                           description: The priority of the rule. Rules with a lower value will be evaluated before rules with a higher value. Defaults to 1.

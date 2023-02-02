@@ -67,7 +67,7 @@ spec:
                     items:
                       properties:
                         action:
-                          description: The desired action for requests captured by this rule. Possible values are  Accept, Reject
+                          description: The desired action for requests captured by this rule. Possible values are Accept, Reject
                           type: string
                         ipMask:
                           description: The IP address range in CIDR notation for the rule.

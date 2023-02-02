@@ -161,7 +161,7 @@ spec:
                     description: Required if Upgrade Mode set to Manual, Specifies the Version of the Cluster Code of the cluster.
                     type: string
                   diagnosticsConfig:
-                    description: A diagnostics_config block as defined below. Changing this forces a new resource to be created.
+                    description: A diagnostics_config block as defined below.
                     items:
                       properties:
                         blobEndpoint:
@@ -278,7 +278,7 @@ spec:
                           description: The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
                           type: object
                         reverseProxyEndpointPort:
-                          description: The Port used for the Reverse Proxy Endpoint  for this Node Type. Changing this will upgrade the cluster.
+                          description: The Port used for the Reverse Proxy Endpoint for this Node Type. Changing this will upgrade the cluster.
                           type: number
                       required:
                       - clientEndpointPort

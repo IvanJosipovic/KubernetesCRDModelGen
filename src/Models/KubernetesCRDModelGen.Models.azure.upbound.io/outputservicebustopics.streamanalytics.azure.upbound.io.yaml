@@ -204,7 +204,7 @@ spec:
                         type: object
                     type: object
                   sharedAccessPolicyKeySecretRef:
-                    description: The shared access policy key for the specified shared access policy.
+                    description: The shared access policy key for the specified shared access policy. Required if authentication_mode is ConnectionString.
                     properties:
                       key:
                         description: The key to select.
@@ -221,7 +221,7 @@ spec:
                     - namespace
                     type: object
                   sharedAccessPolicyName:
-                    description: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
+                    description: The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required if authentication_mode is ConnectionString.
                     type: string
                   streamAnalyticsJobName:
                     description: The name of the Stream Analytics Job. Changing this forces a new resource to be created.
@@ -347,8 +347,6 @@ spec:
                 required:
                 - name
                 - serialization
-                - sharedAccessPolicyKeySecretRef
-                - sharedAccessPolicyName
                 type: object
               providerConfigRef:
                 default:

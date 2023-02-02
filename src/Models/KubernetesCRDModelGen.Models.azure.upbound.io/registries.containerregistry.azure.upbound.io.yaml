@@ -60,10 +60,10 @@ spec:
                     description: Specifies whether the admin user is enabled. Defaults to false.
                     type: boolean
                   anonymousPullEnabled:
-                    description: Whether allows anonymous (unauthenticated) pull access to this Container Registry?  This is only supported on resources with the Standard or Premium SKU.
+                    description: Whether allows anonymous (unauthenticated) pull access to this Container Registry? This is only supported on resources with the Standard or Premium SKU.
                     type: boolean
                   dataEndpointEnabled:
-                    description: Whether to enable dedicated data endpoints for this Container Registry?  This is only supported on resources with the Premium SKU.
+                    description: Whether to enable dedicated data endpoints for this Container Registry? This is only supported on resources with the Premium SKU.
                     type: boolean
                   encryption:
                     description: An encryption block as documented below.
@@ -75,6 +75,61 @@ spec:
                         identityClientId:
                           description: The client ID of the managed identity associated with the encryption key.
                           type: string
+                        identityClientIdRef:
+                          description: Reference to a UserAssignedIdentity in managedidentity to populate identityClientId.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        identityClientIdSelector:
+                          description: Selector for a UserAssignedIdentity in managedidentity to populate identityClientId.
+                          properties:
+                            matchControllerRef:
+                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
                         keyVaultKeyId:
                           description: The ID of the Key Vault Key.
                           type: string
@@ -88,7 +143,7 @@ spec:
                     items:
                       properties:
                         location:
-                          description: A location where the container registry should be geo-replicated. Changing this forces a new resource to be created.
+                          description: A location where the container registry should be geo-replicated.
                           type: string
                         regionalEndpointEnabled:
                           description: Whether regional endpoint is enabled for this Container Registry?
@@ -292,7 +347,7 @@ spec:
                       type: object
                     type: array
                   sku:
-                    description: The SKU name of the container registry. Possible values are  Basic, Standard and Premium.
+                    description: The SKU name of the container registry. Possible values are Basic, Standard and Premium.
                     type: string
                   tags:
                     additionalProperties:

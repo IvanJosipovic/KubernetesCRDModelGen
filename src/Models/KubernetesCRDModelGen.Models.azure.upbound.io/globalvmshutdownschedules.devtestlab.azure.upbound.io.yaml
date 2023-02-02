@@ -73,7 +73,7 @@ spec:
                           description: E-mail address to which the notification will be sent.
                           type: string
                         enabled:
-                          description: Whether to enable pre-shutdown notifications. Possible values are true and false. Defaults to false
+                          description: Whether to enable pre-shutdown notifications. Possible values are true and false.
                           type: boolean
                         timeInMinutes:
                           description: Time in minutes between 15 and 120 before a shutdown event at which a notification will be sent. Defaults to 30.

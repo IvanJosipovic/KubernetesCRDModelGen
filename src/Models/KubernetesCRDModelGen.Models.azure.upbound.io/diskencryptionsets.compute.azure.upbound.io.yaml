@@ -75,7 +75,7 @@ spec:
                             type: string
                           type: array
                         type:
-                          description: The type of Managed Service Identity that is configured on this Disk Encryption Set.  Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).
+                          description: The type of Managed Service Identity that is configured on this Disk Encryption Set. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).
                           type: string
                       required:
                       - type

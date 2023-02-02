@@ -67,7 +67,7 @@ spec:
                           description: The Frontend IP Configuration ID of a Gateway SKU Load Balancer.
                           type: string
                         name:
-                          description: Specifies the name of the frontend IP configuration. Changing this forces a new resource to be created.
+                          description: Specifies the name of the frontend IP configuration.
                           type: string
                         privateIpAddress:
                           description: Private IP Address to assign to the Load Balancer. The last one and first four IPs in any range are reserved and cannot be manually assigned.
@@ -198,7 +198,7 @@ spec:
                               type: object
                           type: object
                         zones:
-                          description: Specifies a list of Availability Zones in which the IP Address for this Load Balancer should be located. Changing this forces a new Load Balancer to be created.
+                          description: Specifies a list of Availability Zones in which the IP Address for this Load Balancer should be located.
                           items:
                             type: string
                           type: array

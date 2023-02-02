@@ -282,7 +282,7 @@ spec:
                                   type: number
                                 type: array
                               recurrenceWeekly:
-                                description: specifies the list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and  Saturday.
+                                description: specifies the list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.
                                 items:
                                   type: string
                                 type: array
