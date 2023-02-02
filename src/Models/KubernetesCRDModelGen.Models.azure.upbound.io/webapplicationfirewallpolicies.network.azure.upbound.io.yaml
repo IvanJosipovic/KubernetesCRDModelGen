@@ -234,7 +234,7 @@ spec:
                           description: The File Upload Limit in MB. Accepted values are in the range 1 to 4000. Defaults to 100.
                           type: number
                         maxRequestBodySizeInKb:
-                          description: The Maximum Request Body Size in KB.  Accepted values are in the range 8 to 2000. Defaults to 128.
+                          description: The Maximum Request Body Size in KB. Accepted values are in the range 8 to 2000. Defaults to 128.
                           type: number
                         mode:
                           description: Describes if it is in detection mode or prevention mode at the policy level. Valid values are Detection and Prevention. Defaults to Prevention.

@@ -182,7 +182,7 @@ spec:
                         type: object
                     type: object
                   throughput:
-                    description: The throughput of SQL database (RU/s). Must be set in increments of 100. The minimum value is 400.  Do not set when azurerm_cosmosdb_account is configured with EnableServerless capability.
+                    description: The throughput of SQL database (RU/s). Must be set in increments of 100. The minimum value is 400. Do not set when azurerm_cosmosdb_account is configured with EnableServerless capability.
                     type: number
                 type: object
               providerConfigRef:

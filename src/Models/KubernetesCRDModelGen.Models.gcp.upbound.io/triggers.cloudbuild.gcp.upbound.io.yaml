@@ -356,6 +356,9 @@ spec:
                     description: The file source describing the local or remote Build template. Structure is documented below.
                     items:
                       properties:
+                        githubEnterpriseConfig:
+                          description: 'The full resource name of the github enterprise config. Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}.'
+                          type: string
                         path:
                           description: The path of the file, with the repo root as the root of the path.
                           type: string
@@ -568,6 +571,9 @@ spec:
                     description: The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers. One of trigger_template, github, pubsub_config webhook_config or source_to_build must be provided. Structure is documented below.
                     items:
                       properties:
+                        githubEnterpriseConfig:
+                          description: 'The full resource name of the github enterprise config. Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}.'
+                          type: string
                         ref:
                           description: The branch or tag to use. Must start with "refs/" .
                           type: string

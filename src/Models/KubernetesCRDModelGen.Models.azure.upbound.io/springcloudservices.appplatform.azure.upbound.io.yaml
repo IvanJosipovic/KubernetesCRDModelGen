@@ -132,7 +132,7 @@ spec:
                                 description: The default label of the Git repository, should be the branch name, tag name, or commit-id of the repository.
                                 type: string
                               name:
-                                description: A name to identify on the Git repository, required only if repos exists. Changing this forces a new resource to be created.
+                                description: A name to identify on the Git repository, required only if repos exists.
                                 type: string
                               pattern:
                                 description: An array of strings used to match an application name. For each pattern, use the {application}/{profile} format with wildcards.
@@ -337,7 +337,7 @@ spec:
                             type: string
                           type: array
                         readTimeoutSeconds:
-                          description: Ingress read time out in seconds. Changing this forces a new resource to be created.
+                          description: Ingress read time out in seconds.
                           type: number
                         serviceRuntimeNetworkResourceGroup:
                           description: Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.

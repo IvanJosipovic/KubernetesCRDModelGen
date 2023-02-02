@@ -146,7 +146,7 @@ spec:
                     description: The default folder where Spark logs will be written. Defaults to /logs.
                     type: string
                   sparkVersion:
-                    description: The Apache Spark version. Possible values are 2.4 and 3.1 and 3.2. Defaults to 2.4.
+                    description: The Apache Spark version. Possible values are 2.4 , 3.1 , 3.2 and 3.3. Defaults to 2.4.
                     type: string
                   synapseWorkspaceId:
                     description: The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.

@@ -115,7 +115,7 @@ spec:
                         type: object
                     type: object
                   applicationInsights:
-                    description: An application_insights block as documented below.
+                    description: An application_insights block as documented below. Changing this forces a new resource to be created.
                     items:
                       properties:
                         instrumentationKeySecretRef:
@@ -146,7 +146,7 @@ spec:
                     description: A description of this Logger.
                     type: string
                   eventhub:
-                    description: An eventhub block as documented below.
+                    description: An eventhub block as documented below. Changing this forces a new resource to be created.
                     items:
                       properties:
                         connectionStringSecretRef:

@@ -183,14 +183,18 @@ spec:
                           description: Number of payload bytes to log (up to 8192).
                           type: number
                         dataMasking:
+                          description: A data_masking block as defined below.
                           items:
                             properties:
                               headers:
+                                description: A headers block as defined below.
                                 items:
                                   properties:
                                     mode:
+                                      description: The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.
                                       type: string
                                     value:
+                                      description: The name of the header or the query parameter to mask.
                                       type: string
                                   required:
                                   - mode
@@ -198,11 +202,14 @@ spec:
                                   type: object
                                 type: array
                               queryParams:
+                                description: A query_params block as defined below.
                                 items:
                                   properties:
                                     mode:
+                                      description: The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.
                                       type: string
                                     value:
+                                      description: The name of the header or the query parameter to mask.
                                       type: string
                                   required:
                                   - mode
@@ -226,14 +233,18 @@ spec:
                           description: Number of payload bytes to log (up to 8192).
                           type: number
                         dataMasking:
+                          description: A data_masking block as defined below.
                           items:
                             properties:
                               headers:
+                                description: A headers block as defined below.
                                 items:
                                   properties:
                                     mode:
+                                      description: The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.
                                       type: string
                                     value:
+                                      description: The name of the header or the query parameter to mask.
                                       type: string
                                   required:
                                   - mode
@@ -241,11 +252,14 @@ spec:
                                   type: object
                                 type: array
                               queryParams:
+                                description: A query_params block as defined below.
                                 items:
                                   properties:
                                     mode:
+                                      description: The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.
                                       type: string
                                     value:
+                                      description: The name of the header or the query parameter to mask.
                                       type: string
                                   required:
                                   - mode
@@ -269,14 +283,18 @@ spec:
                           description: Number of payload bytes to log (up to 8192).
                           type: number
                         dataMasking:
+                          description: A data_masking block as defined below.
                           items:
                             properties:
                               headers:
+                                description: A headers block as defined below.
                                 items:
                                   properties:
                                     mode:
+                                      description: The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.
                                       type: string
                                     value:
+                                      description: The name of the header or the query parameter to mask.
                                       type: string
                                   required:
                                   - mode
@@ -284,11 +302,14 @@ spec:
                                   type: object
                                 type: array
                               queryParams:
+                                description: A query_params block as defined below.
                                 items:
                                   properties:
                                     mode:
+                                      description: The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.
                                       type: string
                                     value:
+                                      description: The name of the header or the query parameter to mask.
                                       type: string
                                   required:
                                   - mode
@@ -312,14 +333,18 @@ spec:
                           description: Number of payload bytes to log (up to 8192).
                           type: number
                         dataMasking:
+                          description: A data_masking block as defined below.
                           items:
                             properties:
                               headers:
+                                description: A headers block as defined below.
                                 items:
                                   properties:
                                     mode:
+                                      description: The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.
                                       type: string
                                     value:
+                                      description: The name of the header or the query parameter to mask.
                                       type: string
                                   required:
                                   - mode
@@ -327,11 +352,14 @@ spec:
                                   type: object
                                 type: array
                               queryParams:
+                                description: A query_params block as defined below.
                                 items:
                                   properties:
                                     mode:
+                                      description: The data masking mode. Possible values are Mask and Hide for query_params. The only possible value is Mask for headers.
                                       type: string
                                     value:
+                                      description: The name of the header or the query parameter to mask.
                                       type: string
                                   required:
                                   - mode
