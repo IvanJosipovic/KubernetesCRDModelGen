@@ -2,20 +2,20 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.11.3
+    controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: workspaces.tf.upbound.io
+  name: routemaps.network.azure.upbound.io
 spec:
-  group: tf.upbound.io
+  group: network.azure.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - terraform
-    kind: Workspace
-    listKind: WorkspaceList
-    plural: workspaces
-    singular: workspace
+    - azure
+    kind: RouteMap
+    listKind: RouteMapList
+    plural: routemaps
+    singular: routemap
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -25,13 +25,16 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Synced')].status
       name: SYNCED
       type: string
+    - jsonPath: .metadata.annotations.crossplane\.io/external-name
+      name: EXTERNAL-NAME
+      type: string
     - jsonPath: .metadata.creationTimestamp
       name: AGE
       type: date
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: A Workspace of Terraform Configuration.
+        description: RouteMap is the Schema for the RouteMaps API. Manages a Route Map.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -42,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: A WorkspaceSpec defines the desired state of a Workspace.
+            description: RouteMapSpec defines the desired state of RouteMap
             properties:
               deletionPolicy:
                 default: Delete
@@ -52,114 +55,138 @@ spec:
                 - Delete
                 type: string
               forProvider:
-                description: WorkspaceParameters are the configurable fields of a Workspace.
                 properties:
-                  applyArgs:
-                    description: Arguments to be included in the terraform apply CLI command
+                  rule:
+                    description: A rule block as defined below.
                     items:
-                      type: string
-                    type: array
-                  destroyArgs:
-                    description: Arguments to be included in the terraform destroy CLI command
-                    items:
-                      type: string
-                    type: array
-                  entrypoint:
-                    default: ''
-                    description: Entrypoint for `terraform init` within the module
-                    type: string
-                  initArgs:
-                    description: Arguments to be included in the terraform init CLI command
-                    items:
-                      type: string
-                    type: array
-                  module:
-                    description: The root module of this workspace; i.e. the module containing its main.tf file. When the workspace's source is 'Remote' (the default) this can be any address supported by terraform init -from-module, for example a git repository or an S3 bucket. When the workspace's source is 'Inline' the content of a simple main.tf file may be written inline.
-                    type: string
-                  planArgs:
-                    description: Arguments to be included in the terraform plan CLI command
-                    items:
-                      type: string
-                    type: array
-                  source:
-                    description: Source of the root module of this workspace.
-                    enum:
-                    - Remote
-                    - Inline
-                    type: string
-                  varFiles:
-                    description: Files of configuration variables. Explicitly declared vars take precedence.
-                    items:
-                      description: A VarFile is a file containing many Terraform variables.
                       properties:
-                        configMapKeyRef:
-                          description: A ConfigMap key containing the vars file.
-                          properties:
-                            key:
-                              description: Key within the referenced resource.
-                              type: string
-                            name:
-                              description: Name of the referenced resource.
-                              type: string
-                            namespace:
-                              description: Namespace of the referenced resource.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                        format:
-                          default: HCL
-                          description: Format of this vars file.
-                          enum:
-                          - HCL
-                          - JSON
+                        action:
+                          description: An action block as defined below.
+                          items:
+                            properties:
+                              parameter:
+                                description: A parameter block as defined below.
+                                items:
+                                  properties:
+                                    asPath:
+                                      description: A list of AS paths.
+                                      items:
+                                        type: string
+                                      type: array
+                                    community:
+                                      description: A list of BGP communities.
+                                      items:
+                                        type: string
+                                      type: array
+                                    routePrefix:
+                                      description: A list of route prefixes.
+                                      items:
+                                        type: string
+                                      type: array
+                                  type: object
+                                type: array
+                              type:
+                                description: The type of the action to be taken. Possible values are Add, Drop, Remove, Replace and Unknown.
+                                type: string
+                            required:
+                            - parameter
+                            - type
+                            type: object
+                          type: array
+                        matchCriterion:
+                          description: A match_criterion block as defined below.
+                          items:
+                            properties:
+                              asPath:
+                                description: A list of AS paths.
+                                items:
+                                  type: string
+                                type: array
+                              community:
+                                description: A list of BGP communities.
+                                items:
+                                  type: string
+                                type: array
+                              matchCondition:
+                                description: The match condition to apply the rule of the Route Map. Possible values are Contains, Equals, NotContains, NotEquals and Unknown.
+                                type: string
+                              routePrefix:
+                                description: A list of route prefixes.
+                                items:
+                                  type: string
+                                type: array
+                            required:
+                            - matchCondition
+                            type: object
+                          type: array
+                        name:
+                          description: The unique name for the rule.
                           type: string
-                        secretKeyRef:
-                          description: A Secret key containing the vars file.
-                          properties:
-                            key:
-                              description: Key within the referenced resource.
-                              type: string
-                            name:
-                              description: Name of the referenced resource.
-                              type: string
-                            namespace:
-                              description: Namespace of the referenced resource.
-                              type: string
-                          required:
-                          - key
-                          - name
-                          - namespace
-                          type: object
-                        source:
-                          description: Source of this vars file.
-                          enum:
-                          - ConfigMapKey
-                          - SecretKey
+                        nextStepIfMatched:
+                          description: The next step after the rule is evaluated. Possible values are Continue, Terminate and Unknown. Defaults to Unknown.
                           type: string
                       required:
-                      - source
+                      - name
                       type: object
                     type: array
-                  vars:
-                    description: Configuration variables.
-                    items:
-                      description: A Var represents a Terraform configuration variable.
-                      properties:
-                        key:
+                  virtualHubId:
+                    description: The resource ID of the Virtual Hub. Changing this forces a new resource to be created.
+                    type: string
+                  virtualHubIdRef:
+                    description: Reference to a VirtualHub in network to populate virtualHubId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  virtualHubIdSelector:
+                    description: Selector for a VirtualHub in network to populate virtualHubId.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
                           type: string
-                        value:
-                          type: string
-                      required:
-                      - key
-                      - value
-                      type: object
-                    type: array
-                required:
-                - module
-                - source
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                 type: object
               providerConfigRef:
                 default:
@@ -286,15 +313,13 @@ spec:
             - forProvider
             type: object
           status:
-            description: A WorkspaceStatus represents the observed state of a Workspace.
+            description: RouteMapStatus defines the observed state of RouteMap.
             properties:
               atProvider:
-                description: WorkspaceObservation are the observable fields of a Workspace.
                 properties:
-                  outputs:
-                    additionalProperties:
-                      type: string
-                    type: object
+                  id:
+                    description: The ID of the Route Map.
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.
@@ -332,3 +357,9 @@ spec:
     storage: true
     subresources:
       status: {}
+status:
+  acceptedNames:
+    kind: ''
+    plural: ''
+  conditions: []
+  storedVersions: []
