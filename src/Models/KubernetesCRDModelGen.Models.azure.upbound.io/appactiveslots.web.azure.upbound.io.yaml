@@ -63,7 +63,7 @@ spec:
                     description: The ID of the Slot to swap with Production. The ID of the Slot to swap with `Production`.
                     type: string
                   slotIdRef:
-                    description: Reference to a LinuxWebAppSlot in web to populate slotId.
+                    description: Reference to a WindowsWebAppSlot in web to populate slotId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -89,7 +89,7 @@ spec:
                     - name
                     type: object
                   slotIdSelector:
-                    description: Selector for a LinuxWebAppSlot in web to populate slotId.
+                    description: Selector for a WindowsWebAppSlot in web to populate slotId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
