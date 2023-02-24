@@ -1,11 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Yardarm.Enrichment.Authentication;
 using Yardarm.Enrichment.Compilation;
 using Yardarm.Enrichment.Packaging;
-using Yardarm.Enrichment.Requests;
-using Yardarm.Enrichment.Responses;
 using Yardarm.Enrichment.Schema;
-using Yardarm.Enrichment.Tags;
 
 namespace Yardarm.Enrichment
 {
