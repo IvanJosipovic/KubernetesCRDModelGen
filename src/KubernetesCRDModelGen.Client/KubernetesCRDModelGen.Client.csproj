@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <RootNamespace>RootNamespace</RootNamespace>
+    <OutputType>Library</OutputType>
+
+    <Nullable>enable</Nullable>
+    <LangVersion>10</LangVersion>
+    <IsPackable>false</IsPackable>
+    <DefineConstants>$(DefineConstants);FORTESTS</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="**/*.netstandard.cs" Condition=" '$(TargetFramework)' == 'net6.0' " />
+    <Compile Remove="**/*.netcoreapp.cs" Condition=" '$(TargetFramework)' == 'netstandard2.0' " />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Internal\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>

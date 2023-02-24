@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
@@ -9,11 +9,52 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
-		<PackageReference Include="Microsoft.OpenApi.Readers" Version="1.5.0" />
+		<PackageReference Include="KubernetesClient.Models" Version="10.0.16" />
+		<PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.4.1" />
+		<PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.2" />
 	</ItemGroup>
+	<Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
+		<ItemGroup>
+			<FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient.Models' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'KubernetesCRDModelGen.Models')" />
+
+			<XmlFilesToEmbed Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).xml'-&gt; Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient.Models')" />
+
+			<!-- add these assemblies to the list of embedded resources -->
+			<EmbeddedResource Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).dll'-&gt; Exists())">
+				<LogicalName>runtime.%(FilesToEmbed.Filename)%(FilesToEmbed.Extension)</LogicalName>
+			</EmbeddedResource>
+
+			<!-- add xml documentation for list of assemblies -->
+			<EmbeddedResource Include="@(XmlFilesToEmbed)">
+				<LogicalName>runtime.%(XmlFilesToEmbed.Filename)%(XmlFilesToEmbed.Extension)</LogicalName>
+			</EmbeddedResource>
+		</ItemGroup>
+
+		<Message Importance="high" Text="Embedding: @(FilesToEmbed->'%(Filename)%(Extension)', ', ')" />
+		<Message Importance="high" Text="EmbeddingXml: @(XmlFilesToEmbed->'%(Filename)%(Extension)', ', ')" />
+	</Target>
+
+	<PropertyGroup>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+
+	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+		<ItemGroup>
+			<!-- Filter out unnecessary files -->
+			<_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+		</ItemGroup>
+
+		<!-- Print batches for debug purposes -->
+		<Message Text="Batch for .nupkg: ReferenceCopyLocalPaths = @(_ReferenceCopyLocalPaths), ReferenceCopyLocalPaths.DestinationSubDirectory = %(_ReferenceCopyLocalPaths.DestinationSubDirectory) Filename = %(_ReferenceCopyLocalPaths.Filename) Extension = %(_ReferenceCopyLocalPaths.Extension)" Importance="High" Condition="'@(_ReferenceCopyLocalPaths)' != ''" />
+
+		<ItemGroup>
+			<!-- Add file to package with consideration of sub folder. If empty, the root folder is chosen. -->
+			<BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
+		</ItemGroup>
+	</Target>
 
 	<ItemGroup>
-		<ProjectReference Include="..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" />
+	  <ProjectReference Include="..\Yardarm.SystemTextJson\Yardarm.SystemTextJson.csproj" />
+	  <ProjectReference Include="..\Yardarm\KubernetesCRDModelGen.csproj" />
 	</ItemGroup>
-
 </Project>

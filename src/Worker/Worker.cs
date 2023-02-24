@@ -1,15 +1,13 @@
+
+using Microsoft.OpenApi.Models;
 using k8s.Models;
 using k8s;
-using KubernetesCRDModelGen;
+using System.Text;
+using Yardarm.SystemTextJson;
+using Yardarm;
 using Microsoft.OpenApi.Readers;
-using System.IO;
-using Microsoft.OpenApi.Extensions;
-using Microsoft.OpenApi;
-using System.Net.Http;
-using System.ComponentModel;
 
-namespace Worker
-{
+namespace Worker {
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
@@ -21,40 +19,94 @@ namespace Worker
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            //var objects = await KubernetesYaml.LoadAllFromFileAsync("CRD.yaml");
+            var objects = await KubernetesYaml.LoadAllFromFileAsync("CRD.yaml");
 
-            //var crd = objects.First() as V1CustomResourceDefinition;
+            var crd = (V1CustomResourceDefinition)objects[0];
 
-            var stream = File.OpenRead("openapi.yaml");
+            var openApiDocument = ConvertCRDToOpenAPI(crd);
 
-            var openApiDocument = new OpenApiStreamReader().Read(stream, out var diagnostic);
+            var settings = new YardarmGenerationSettings();
+            settings.EmbedAllSources = true;
+            settings.RootNamespace = "KubernetesCRDModelGen.Models";
+            settings.AssemblyName = "KubernetesCRDModelGen.Models";
+            //settings.AddExtension<SystemTextJsonExtension>();
 
-            var stream2 = await new HttpClient().GetStreamAsync("https://raw.githubusercontent.com/kubernetes/kubernetes/v1.25.6/api/openapi-spec/swagger.json");
+            var generator = new YardarmGenerator(openApiDocument, settings);
 
-            // Read V3 as YAML
-            var openApiDocument2 = new OpenApiStreamReader().Read(stream2, out var diagnostic2);
+            var res = await generator.EmitAsync();
 
-            openApiDocument2.Paths.Clear();
+            if (!res.Success) throw new Exception("Assembly build is not successful");
 
-            // Write V2 as JSON
-            var outputString = openApiDocument2.Serialize(OpenApiSpecVersion.OpenApi3_0, OpenApiFormat.Yaml);
+            using (Stream outStream = File.OpenWrite("models.dll"))
+            {
+                settings.DllOutput.Seek(0, SeekOrigin.Begin);
+                settings.DllOutput.CopyTo(outStream);
+            }
 
-            //var gen = new CRDGenerator();
+            using (Stream outStream = File.OpenWrite("models.pdb"))
+            {
+                settings.PdbOutput.Seek(0, SeekOrigin.Begin);
+                settings.PdbOutput.CopyTo(outStream);
+            }
 
-            //var code = gen.GenerateCode(crd);
+            using (Stream outStream = File.OpenWrite("models.xml"))
+            {
+                settings.XmlDocumentationOutput.Seek(0, SeekOrigin.Begin);
+                settings.XmlDocumentationOutput.CopyTo(outStream);
+            }
+        }
 
-            //var ass = await gen.GenerateAssembly(crd);
+        private OpenApiDocument ConvertCRDToOpenAPI(V1CustomResourceDefinition crd)
+        {
+            var final = "openapi: \"3.0.0\"\r\npaths: {}\r\ncomponents:\r\n  schemas:\r\n";
+            var kind = crd.Spec.Names.Kind;
+
+            foreach (var version in crd.Spec.Versions) {
+                var yaml = KubernetesYaml.Serialize(version.Schema.OpenAPIV3Schema);
+
+                final = final + $"{(version.Name.CapitalizeFirstLetter() + kind).Indent(4)}:" + Environment.NewLine + yaml.Indent(6);
+            }
+
+            return new OpenApiStringReader().Read(final, out _);
         }
     }
 
+    public static class StringExtensions {
+        public static string Indent(this string input, int numSpaces) {
+            if (input == null)
+                throw new ArgumentNullException(nameof(input));
 
-    public class IPropertyWrapper<T> : INotifyPropertyChanged
-    {
-        public IPropertyWrapper()
-        {
-            
+            if (numSpaces < 0)
+                throw new ArgumentOutOfRangeException(nameof(numSpaces), "Number of spaces must be non-negative.");
+
+            if (numSpaces == 0)
+                return input;
+
+            StringBuilder sb = new();
+            string spaceStr = new(' ', numSpaces);
+
+            using (StringReader reader = new StringReader(input)) {
+                string line;
+                while ((line = reader.ReadLine()) != null) {
+                    sb.Append(spaceStr);
+                    sb.AppendLine(line);
+                }
+            }
+
+            return sb.ToString().TrimEnd();
         }
-        public event PropertyChangedEventHandler? PropertyChanged;
+
+        public static string CapitalizeFirstLetter(this string str) {
+            if (str.Length == 0) {
+                return string.Empty;
+            }
+            else if (str.Length == 1) {
+                return char.ToUpper(str[0]).ToString();
+            }
+            else {
+                return char.ToUpper(str[0]) + str.Substring(1);
+            }
+        }
     }
 
 }
