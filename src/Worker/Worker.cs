@@ -2,6 +2,7 @@
 using k8s.Models;
 using k8s;
 using KubernetesCRDModelGen;
+using System.Reflection.Emit;
 
 namespace Worker {
     public class Worker : BackgroundService
@@ -25,6 +26,23 @@ namespace Worker {
             var crd = (V1CustomResourceDefinition)objects[0];
 
             var ass = await CRDGenerator.GenerateAssembly(crd);
+
+            using (Stream outStream = File.OpenWrite("models.dll")) {
+                ass.Item1.Seek(0, SeekOrigin.Begin);
+                ass.Item1.CopyTo(outStream);
+            }
+
+            using (Stream outStream = File.OpenWrite("models.xml")) {
+                ass.Item2.Seek(0, SeekOrigin.Begin);
+                ass.Item2.CopyTo(outStream);
+            }
+
+            //settings.DllOutput.Seek(0, SeekOrigin.Begin);
+            //var assembly = System.Runtime.Loader.AssemblyLoadContext.Default.LoadFromStream(settings.DllOutput);
+
+            //settings.XmlDocumentationOutput.Seek(0, SeekOrigin.Begin);
+            //var xml = new XmlDocument();
+            //xml.Load(settings.XmlDocumentationOutput);
 
             hostApplicationLifetime.StopApplication();
         }

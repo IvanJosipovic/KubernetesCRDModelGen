@@ -31,10 +31,8 @@ namespace Yardarm
             _openApiDocument = new Lazy<OpenApiDocument>(serviceProvider.GetRequiredService<OpenApiDocument>);
             _elementRegistry = new Lazy<IOpenApiElementRegistry>(serviceProvider.GetRequiredService<IOpenApiElementRegistry>);
             _namespaceProvider = new Lazy<INamespaceProvider>(serviceProvider.GetRequiredService<INamespaceProvider>);
-            _nameFormatterSelector =
-                new Lazy<INameFormatterSelector>(serviceProvider.GetRequiredService<INameFormatterSelector>);
-            _typeGeneratorRegistry =
-                new Lazy<ITypeGeneratorRegistry>(serviceProvider.GetRequiredService<ITypeGeneratorRegistry>);
+            _nameFormatterSelector = new Lazy<INameFormatterSelector>(serviceProvider.GetRequiredService<INameFormatterSelector>);
+            _typeGeneratorRegistry = new Lazy<ITypeGeneratorRegistry>(serviceProvider.GetRequiredService<ITypeGeneratorRegistry>);
         }
     }
 }

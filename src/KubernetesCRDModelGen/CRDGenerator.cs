@@ -30,18 +30,17 @@ public class CRDGenerator : ICRDGenerator
 
     public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
     {
-
-
         return "";
     }
 
-    public async Task<(Assembly?, XmlDocument?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace, bool embedSources = true)
+    public async Task<(Stream?, Stream?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace, bool embedSources = false)
     {
         var settings = new YardarmGenerationSettings();
         settings.EmbedAllSources = embedSources;
-        settings.RootNamespace = "KubernetesCRDModelGen";
-        settings.AssemblyName = "KubernetesCRDModelGen.Models";
+        settings.RootNamespace = ModelNamespace;
+        settings.AssemblyName = ModelNamespace;
         //settings.AddExtension<SystemTextJsonExtension>();
+        settings.AddExtension<KubernetesExtension>();
 
         var openApiDocument = ConvertCRDToOpenAPI(crd);
 
@@ -51,30 +50,25 @@ public class CRDGenerator : ICRDGenerator
 
         if (!res.Success) throw new Exception("Assembly build is not successful");
 
-        settings.DllOutput.Seek(0, SeekOrigin.Begin);
-        var assembly = System.Runtime.Loader.AssemblyLoadContext.Default.LoadFromStream(settings.DllOutput);
-
-        settings.XmlDocumentationOutput.Seek(0, SeekOrigin.Begin);
-        var xml = new XmlDocument();
-        xml.Load(settings.XmlDocumentationOutput);
-
-        return (assembly, xml);
+        return (settings.DllOutput, settings.XmlDocumentationOutput);
     }
 
-    private OpenApiDocument ConvertCRDToOpenAPI(V1CustomResourceDefinition crd) {
+    private OpenApiDocument ConvertCRDToOpenAPI(V1CustomResourceDefinition crd)
+    {
         var final = "openapi: \"3.0.0\"\r\npaths: {}\r\ncomponents:\r\n  schemas:\r\n";
-        var kind = crd.Spec.Names.Kind;
 
-        foreach (var version in crd.Spec.Versions) {
+        foreach (var version in crd.Spec.Versions)
+        {
+            var schema = version.Schema.OpenAPIV3Schema;
 
-            // Supplement Schema
-            //todo add ApiVersion/Kind
-            //todo add
+            schema.Properties.Add("KubeApiVersion", new V1JSONSchemaProps() { Type = "string", DefaultProperty = version.Name });
+            schema.Properties.Add("KubeKind", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Names.Kind });
+            schema.Properties.Add("KubeGroup", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Group });
+            schema.Properties.Add("KubePluralName", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Names.Plural });
 
+            var yaml = KubernetesYaml.Serialize(schema);
 
-            var yaml = KubernetesYaml.Serialize(version.Schema.OpenAPIV3Schema);
-
-            final = final + $"{(version.Name.CapitalizeFirstLetter() + kind).Indent(4)}:" + Environment.NewLine + yaml.Indent(6);
+            final = final + $"{(version.Name.CapitalizeFirstLetter() + crd.Spec.Names.Kind).Indent(4)}:" + Environment.NewLine + yaml.Indent(6);
 
             final += Environment.NewLine;
         }
