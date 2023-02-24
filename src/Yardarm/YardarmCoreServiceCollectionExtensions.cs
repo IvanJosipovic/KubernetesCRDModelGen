@@ -8,7 +8,6 @@ using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
 using Yardarm.Enrichment;
 using Yardarm.Generation;
-using Yardarm.Generation.Authentication;
 using Yardarm.Generation.Internal;
 using Yardarm.Generation.MediaType;
 using Yardarm.Generation.Operation;
@@ -28,18 +27,11 @@ namespace Yardarm
 {
     public static class YardarmCoreServiceCollectionExtensions
     {
-        public static IServiceCollection AddYardarm(this IServiceCollection services, YardarmGenerationSettings settings, OpenApiDocument? document)
+        public static IServiceCollection AddYardarm(this IServiceCollection services, YardarmGenerationSettings settings, OpenApiDocument document)
         {
             services.AddDefaultEnrichers();
 
-            if (settings.ReferencedAssemblies is null || settings.ReferencedAssemblies.Count == 0)
-            {
-                services.AddTransient<IReferenceGenerator, NuGetReferenceGenerator>();
-            }
-            else
-            {
-                services.AddTransient<IReferenceGenerator, SuppliedReferenceGenerator>();
-            }
+            services.AddTransient<IReferenceGenerator, NuGetReferenceGenerator>();
 
             // Generators
             services
@@ -52,33 +44,7 @@ namespace Yardarm
             services.TryAdd(new ServiceDescriptor(typeof(ITypeGeneratorRegistry<,>), typeof(TypeGeneratorRegistry<,>), ServiceLifetime.Singleton));
             services.TryAdd(new ServiceDescriptor(typeof(ITypeGeneratorRegistry<>), typeof(PrimaryGeneratorCategory.TypeGeneratorRegistryWrapper<>), ServiceLifetime.Singleton));
             services.TryAdd(new ServiceDescriptor(typeof(ITypeGeneratorFactory<,>), typeof(NoopTypeGeneratorFactory<,>), ServiceLifetime.Singleton));
-            //services.TryAddTypeGeneratorFactory<OpenApiHeader, HeaderTypeGeneratorFactory>();
-            //services.TryAddTypeGeneratorFactory<OpenApiMediaType, MediaTypeGeneratorFactory>();
             services.TryAddTypeGeneratorFactory<OpenApiSchema, DefaultSchemaGeneratorFactory>();
-            //services.TryAddTypeGeneratorFactory<OpenApiSecurityScheme, SecuritySchemeTypeGeneratorFactory>();
-            //services.TryAddTypeGeneratorFactory<OpenApiResponse, ResponseTypeGeneratorFactory>();
-            //services.TryAddTypeGeneratorFactory<OpenApiResponses, ResponseSetTypeGeneratorFactory>();
-            //services.TryAddTypeGeneratorFactory<OpenApiOperation, RequestTypeGeneratorFactory>();
-            //services.TryAddTypeGeneratorFactory<OpenApiParameter, ParameterTypeGeneratorFactory>();
-            //services.TryAddTypeGeneratorFactory<OpenApiTag, TagTypeGeneratorFactory>();
-            //services.TryAddTypeGeneratorFactory<OpenApiTag, TagImplementationCategory, TagImplementationTypeGeneratorFactory>();
-            //services.TryAddTypeGeneratorFactory<OpenApiUnknownResponse, UnknownResponseTypeGeneratorFactory>()
-
-            //services.AddSingleton<IRequestMemberGenerator, AddHeadersMethodGenerator>();
-            //services.AddSingleton<IRequestMemberGenerator, BuildContentMethodGenerator>();
-            //services.AddSingleton<IRequestMemberGenerator, BuildRequestMethodGenerator>();
-            //services.AddSingleton<IRequestMemberGenerator, BuildUriMethodGenerator>();
-            //services.AddSingleton<IRequestMemberGenerator, SerializationDataPropertyGenerator>();
-            //services.AddSingleton<IResponseMethodGenerator, GetBodyMethodGenerator>();
-            //services.AddSingleton<IResponseMethodGenerator, BodyConstructorMethodGenerator>();
-            //services.AddSingleton<IResponseMethodGenerator, NoBodyConstructorMethodGenerator>();
-            //services.TryAddSingleton<IOperationMethodGenerator, OperationMethodGenerator>();
-            //services.TryAddSingleton<IMediaTypeSelector, PriorityMediaTypeSelector>();
-
-            // Need to be able to specifically inject this one as well
-            //services.TryAddSingleton(serviceProvider =>
-            //    serviceProvider.GetRequiredService<IEnumerable<IRequestMemberGenerator>>()
-            //        .OfType<IBuildContentMethodGenerator>().First());
 
             services.TryAddSingleton<IPackageSpecGenerator, DefaultPackageSpecGenerator>();
             services.TryAddSingleton(serviceProvider => serviceProvider.GetRequiredService<IPackageSpecGenerator>().Generate());
@@ -95,14 +61,7 @@ namespace Yardarm
             services.TryAddSingleton<IAuthenticationNamespace, AuthenticationNamespace>();
             services.TryAddSingleton<IRequestsNamespace, RequestsNamespace>();
             services.TryAddSingleton<IResponsesNamespace, ResponsesNamespace>();
-            services.TryAddSingleton<ISerializationNamespace, SerializationNamespace>();
-
-            // Serialization
-            services.TryAddSingleton<ISerializerSelector, DefaultSerializerSelector>();
-            services.AddSerializerDescriptor(serviceProvider => new SerializerDescriptor(
-                ImmutableHashSet.Create(new SerializerMediaType("multipart/form-data", 0.9)),
-                "Multipart",
-                serviceProvider.GetRequiredService<ISerializationNamespace>().MultipartFormDataSerializer));
+            //services.TryAddSingleton<ISerializationNamespace, SerializationNamespace>();
 
             // Other
             services
@@ -111,19 +70,10 @@ namespace Yardarm
                 .AddSingleton(settings)
                 .AddTransient<NuGetPacker>();
 
-            if (document is not null)
-            {
-                services
-                    .AddSingleton<GenerationContext>()
-                    // When requesting the YardarmContext simply return the GenerationContext
-                    .AddTransient<YardarmContext>(serviceProvider => serviceProvider.GetRequiredService<GenerationContext>())
-                    .AddSingleton(document);
-            }
-            else
-            {
-                // We don't have a document, so supply a basic YardarmContext only
-                services.AddSingleton<YardarmContext>();
-            }
+            services
+                .AddSingleton<GenerationContext>()
+                .AddTransient<YardarmContext>(serviceProvider => serviceProvider.GetRequiredService<GenerationContext>())
+                .AddSingleton(document);
 
             services.TryAddSingleton<IOpenApiElementRegistry, OpenApiElementRegistry>();
 
