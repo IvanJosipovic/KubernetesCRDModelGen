@@ -48,50 +48,17 @@ namespace Yardarm
 
                 var compilationResults = new List<YardarmCompilationResult>();
 
-                if (Settings.TargetFrameworkMonikers.Length == 1)
-                {
-                    var targetFramework = NuGetFramework.Parse(Settings.TargetFrameworkMonikers[0]);
+                var targetFramework = NuGetFramework.Parse(Settings.TargetFrameworkMonikers[0]);
 
-                    // Perform the compilation
-                    var (emitResult, additionalDiagnostics) = await BuildForTargetFrameworkAsync(
-                        context, targetFramework,
-                        Settings.DllOutput, Settings.PdbOutput, Settings.XmlDocumentationOutput, Settings.ReferenceAssemblyOutput,
-                        cancellationToken).ConfigureAwait(false);
+                // Perform the compilation
+                var (emitResult, additionalDiagnostics) = await BuildForTargetFrameworkAsync(
+                    context, targetFramework,
+                    Settings.DllOutput, Settings.PdbOutput, Settings.XmlDocumentationOutput, Settings.ReferenceAssemblyOutput,
+                    cancellationToken).ConfigureAwait(false);
 
-                    compilationResults.Add(new(targetFramework, emitResult,
-                        Settings.DllOutput, Settings.PdbOutput, Settings.XmlDocumentationOutput, Settings.ReferenceAssemblyOutput,
-                        additionalDiagnostics));
-                }
-                else
-                {
-                    if (Settings.NuGetOutput is null)
-                    {
-                        throw new InvalidOperationException(
-                            "Targeting multiple frameworks is only supported with NuGet output.");
-                    }
-
-                    foreach (var targetFramework in Settings.TargetFrameworkMonikers.Select(NuGetFramework.Parse))
-                    {
-                        var dllOutput = new MemoryStream();
-                        toDispose.Add(dllOutput);
-                        var pdbOutput = new MemoryStream();
-                        toDispose.Add(pdbOutput);
-                        var xmlDocumentationOutput = new MemoryStream();
-                        toDispose.Add(xmlDocumentationOutput);
-                        var referenceAssemblyOutput = new MemoryStream();
-                        toDispose.Add(referenceAssemblyOutput);
-
-                        // Perform the compilation
-                        var (emitResult, additionalDiagnostics) = await BuildForTargetFrameworkAsync(
-                            context, targetFramework,
-                            dllOutput, pdbOutput, xmlDocumentationOutput, referenceAssemblyOutput,
-                            cancellationToken).ConfigureAwait(false);
-
-                        compilationResults.Add(new(targetFramework, emitResult,
-                            dllOutput, pdbOutput, xmlDocumentationOutput, referenceAssemblyOutput,
-                            additionalDiagnostics));
-                    }
-                }
+                compilationResults.Add(new(targetFramework, emitResult,
+                    Settings.DllOutput, Settings.PdbOutput, Settings.XmlDocumentationOutput, Settings.ReferenceAssemblyOutput,
+                    additionalDiagnostics));
 
                 if (compilationResults.All(p => p.EmitResult.Success))
                 {
@@ -127,24 +94,24 @@ namespace Yardarm
             var enrichers = context.GenerationServices.GetRequiredService<IEnumerable<ICompilationEnricher>>();
             compilation = await compilation.EnrichAsync(enrichers, cancellationToken);
 
-            ImmutableArray<Diagnostic> additionalDiagnostics;
-            var assemblyLoadContext = new YardarmAssemblyLoadContext();
-            try
-            {
-                var sourceGenerators = context.GenerationServices.GetRequiredService<NuGetRestoreProcessor>()
-                    .GetSourceGenerators(context.NuGetRestoreInfo!.Providers, context.NuGetRestoreInfo!.LockFile,
-                        targetFramework, assemblyLoadContext);
+            ImmutableArray<Diagnostic> additionalDiagnostics = new ImmutableArray<Diagnostic>();
+            //var assemblyLoadContext = new YardarmAssemblyLoadContext();
+            //try
+            //{
+            //    var sourceGenerators = context.GenerationServices.GetRequiredService<NuGetRestoreProcessor>()
+            //        .GetSourceGenerators(context.NuGetRestoreInfo!.Providers, context.NuGetRestoreInfo!.LockFile,
+            //            targetFramework, assemblyLoadContext);
 
-                // Execute the source generators
-                compilation = ExecuteSourceGenerators(compilation,
-                    sourceGenerators,
-                    out additionalDiagnostics,
-                    cancellationToken);
-            }
-            finally
-            {
-                assemblyLoadContext.Unload();
-            }
+            //    // Execute the source generators
+            //    compilation = ExecuteSourceGenerators(compilation,
+            //        sourceGenerators,
+            //        out additionalDiagnostics,
+            //        cancellationToken);
+            //}
+            //finally
+            //{
+            //    assemblyLoadContext.Unload();
+            //}
 
             return (compilation.Emit(dllOutput,
                     pdbStream: pdbOutput,

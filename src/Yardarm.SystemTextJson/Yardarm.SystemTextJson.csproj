@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
 
     <Nullable>enable</Nullable>
     <LangVersion>10</LangVersion>
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Yardarm\KubernetesCRDModelGen.csproj" />
+    <ProjectReference Include="..\Yardarm\Yardarm.csproj" />
   </ItemGroup>
 
   <ItemGroup>

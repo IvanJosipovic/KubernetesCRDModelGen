@@ -80,7 +80,7 @@ spec:
             metadata:
               type: object
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = await GetTypeYaml(yaml, "V1beta1Test");
 
         type.Namespace.Should().Be(Namespace + ".kubeui.com");
     }

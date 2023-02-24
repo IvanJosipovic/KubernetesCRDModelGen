@@ -9,10 +9,12 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
-		<PackageReference Include="KubernetesClient.Models" Version="10.0.16" />
-		<PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.4.1" />
-		<PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.2" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" />
+	</ItemGroup>
+
 	<Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
 		<ItemGroup>
 			<FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient.Models' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'KubernetesCRDModelGen.Models')" />
@@ -52,9 +54,4 @@
 			<BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
 		</ItemGroup>
 	</Target>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\Yardarm.SystemTextJson\Yardarm.SystemTextJson.csproj" />
-	  <ProjectReference Include="..\Yardarm\KubernetesCRDModelGen.csproj" />
-	</ItemGroup>
 </Project>

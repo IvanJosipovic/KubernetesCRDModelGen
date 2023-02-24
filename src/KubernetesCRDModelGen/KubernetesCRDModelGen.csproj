@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <Authors>Ivan Josipovic</Authors>
         <Description>Converts Custom Resource Definition Yaml files to Models</Description>
         <PackageTags>Kubernetes Yaml CRD Converts Custom Resource Model</PackageTags>
@@ -20,15 +20,16 @@
 
     <ItemGroup>
         <PackageReference Include="KubernetesClient.Models" Version="10.0.16" />
-        <PackageReference Include="CsCodeGenerator" Version="2.0.0" />
+        <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.2" />
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
         <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.4.1" />
-        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.4.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\KubernetesCRDModelGen.Models\KubernetesCRDModelGen.Models.csproj" PrivateAssets="All" />
+        <ProjectReference Include="..\Yardarm.SystemTextJson\Yardarm.SystemTextJson.csproj" />
+        <ProjectReference Include="..\Yardarm\Yardarm.csproj" />
     </ItemGroup>
 
     <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
@@ -59,7 +60,7 @@
     <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
         <ItemGroup>
             <!-- Filter out unnecessary files -->
-            <_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')->WithMetadataValue('PrivateAssets', 'All'))"/>
+            <_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
         </ItemGroup>
 
         <!-- Print batches for debug purposes -->
@@ -67,7 +68,7 @@
 
         <ItemGroup>
             <!-- Add file to package with consideration of sub folder. If empty, the root folder is chosen. -->
-            <BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)"/>
+            <BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
         </ItemGroup>
     </Target>
 

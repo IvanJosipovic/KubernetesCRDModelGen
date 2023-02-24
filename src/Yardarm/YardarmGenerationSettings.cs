@@ -74,8 +74,7 @@ namespace Yardarm
         /// </summary>
         public bool NoRestore { get; set; }
 
-        public ImmutableArray<string> TargetFrameworkMonikers { get; set; } =
-            new[] {"netstandard2.0"}.ToImmutableArray();
+        public ImmutableArray<string> TargetFrameworkMonikers { get; set; } = new[] {"netstandard2.0"}.ToImmutableArray();
 
         public Stream? NuGetOutput { get; set; }
 
