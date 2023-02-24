@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
@@ -18,11 +18,6 @@
   <ItemGroup>
     <Compile Remove="**/*.netstandard.cs" Condition=" '$(TargetFramework)' == 'net6.0' " />
     <Compile Remove="**/*.netcoreapp.cs" Condition=" '$(TargetFramework)' == 'netstandard2.0' " />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Internal\" />
-    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>

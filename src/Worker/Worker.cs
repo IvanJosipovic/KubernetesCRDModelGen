@@ -10,11 +10,13 @@ using Microsoft.OpenApi.Readers;
 namespace Worker {
     public class Worker : BackgroundService
     {
-        private readonly ILogger<Worker> _logger;
+        IHostApplicationLifetime hostApplicationLifetime;
 
-        public Worker(ILogger<Worker> logger)
-        {
+        readonly ILogger<Worker> _logger;
+
+        public Worker(ILogger<Worker> logger, IHostApplicationLifetime hostApplicationLifetime) {
             _logger = logger;
+            this.hostApplicationLifetime = hostApplicationLifetime;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -27,7 +29,7 @@ namespace Worker {
 
             var settings = new YardarmGenerationSettings();
             settings.EmbedAllSources = true;
-            settings.RootNamespace = "KubernetesCRDModelGen.Models";
+            settings.RootNamespace = "KubernetesCRDModelGen";
             settings.AssemblyName = "KubernetesCRDModelGen.Models";
             //settings.AddExtension<SystemTextJsonExtension>();
 
@@ -54,6 +56,8 @@ namespace Worker {
                 settings.XmlDocumentationOutput.Seek(0, SeekOrigin.Begin);
                 settings.XmlDocumentationOutput.CopyTo(outStream);
             }
+
+            hostApplicationLifetime.StopApplication();
         }
 
         private OpenApiDocument ConvertCRDToOpenAPI(V1CustomResourceDefinition crd)
