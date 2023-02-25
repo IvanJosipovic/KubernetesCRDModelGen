@@ -5,6 +5,7 @@ using KubernetesCRDModelGen.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -42,7 +43,7 @@ public class UnitTest
 
     private static async Task<Type?> GetType(V1CustomResourceDefinition crd, string kind)
     {
-        var assembly = await GetCRDGenerator().GenerateAssembly(crd, Namespace + "." + crd.Spec.Group);
+        var assembly = await GetCRDGenerator().GenerateAssembly(crd, Namespace);
 
         var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
 
@@ -1074,6 +1075,10 @@ spec:
         var specType = type.GetProperty("Spec").PropertyType;
 
         var itemType = specType.GetProperty("Array").PropertyType.GenericTypeArguments[0];
+
+        var arrayType = typeof(IList<>).MakeGenericType(itemType);
+
+        specType.GetProperty("Array").PropertyType.Should().Be(arrayType);
 
         itemType.GetProperty("NumberProp").PropertyType.Should().Be<double>();
 

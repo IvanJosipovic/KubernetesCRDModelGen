@@ -38,17 +38,13 @@ namespace Yardarm.Generation.Schema
             };
         }
 
-        protected virtual ITypeGenerator GetArrayGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) =>
-            new ArraySchemaGenerator(element, _context, parent);
+        protected virtual ITypeGenerator GetArrayGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) => new ArraySchemaGenerator(element, _context, parent);
 
-        protected virtual ITypeGenerator GetBooleanGenerator(ILocatedOpenApiElement<OpenApiSchema> element) =>
-            BooleanSchemaGenerator.Instance;
+        protected virtual ITypeGenerator GetBooleanGenerator(ILocatedOpenApiElement<OpenApiSchema> element) => BooleanSchemaGenerator.Instance;
 
-        protected virtual ITypeGenerator GetNumberGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) =>
-            new NumberSchemaGenerator(element, _context, parent);
+        protected virtual ITypeGenerator GetNumberGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) => new NumberSchemaGenerator(element, _context, parent);
 
-        protected virtual ITypeGenerator GetObjectGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) =>
-            new ObjectSchemaGenerator(element, _context, parent);
+        protected virtual ITypeGenerator GetObjectGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) => new ObjectSchemaGenerator(element, _context, parent);
 
         protected virtual ITypeGenerator GetStringGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) =>
             element.Element.Enum?.Count > 0

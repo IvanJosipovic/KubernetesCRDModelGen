@@ -70,7 +70,7 @@ namespace Yardarm.Helpers
                             QualifiedName(
                                 Generic.Name,
                                 GenericName(
-                                    Identifier("List"),
+                                    Identifier("IList"),
                                     TypeArgumentList(SingletonSeparatedList(itemType))));
 
                         public static bool IsOfType(TypeSyntax nameSyntax, [NotNullWhen(true)] out TypeSyntax? genericArgument)

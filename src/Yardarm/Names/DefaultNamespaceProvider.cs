@@ -1,13 +1,16 @@
 ﻿using System;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
+using Yardarm.Names.Internal;
 using Yardarm.Spec;
 
 namespace Yardarm.Names
 {
     public class DefaultNamespaceProvider : INamespaceProvider
     {
+        private readonly IRootNamespace _rootNamespace;
         private readonly IResponsesNamespace _responsesNamespace;
         private readonly IRequestsNamespace _requestsNamespace;
         private readonly IAuthenticationNamespace _authenticationNamespace;
@@ -27,6 +30,7 @@ namespace Yardarm.Names
             ArgumentNullException.ThrowIfNull(requestsNamespace);
             ArgumentNullException.ThrowIfNull(apiNamespace);
 
+            _rootNamespace = rootNamespace;
             _responsesNamespace = responsesNamespace;
             _authenticationNamespace = authenticationNamespace;
             _requestsNamespace = requestsNamespace;
@@ -71,8 +75,12 @@ namespace Yardarm.Names
         protected virtual NameSyntax GetResponsesNamespace(ILocatedOpenApiElement<OpenApiResponses> responses) =>
             _responsesNamespace.Name;
 
-        protected virtual NameSyntax GetSchemaNamespace(ILocatedOpenApiElement<OpenApiSchema> schema) =>
-            _modelsNamespace;
+        protected virtual NameSyntax GetSchemaNamespace(ILocatedOpenApiElement<OpenApiSchema> schema) {
+            if (schema.Element.Properties.TryGetValue("KubeGroup", out var openApiSchema)) {
+                return SyntaxFactory.QualifiedName(_rootNamespace.Name, SyntaxFactory.IdentifierName((openApiSchema.Default as OpenApiString).Value));
+            }
+            return _modelsNamespace;
+        }
 
         protected virtual NameSyntax GetSecuritySchemeNamespace(ILocatedOpenApiElement<OpenApiSecurityScheme> schema) =>
             _authenticationNamespace.Name;

@@ -4,6 +4,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.OpenApi.Readers;
+using System.IO;
 using System.Reflection;
 using System.Runtime.Loader;
 using System.Text;
@@ -14,7 +15,7 @@ using Yardarm.SystemTextJson;
 namespace KubernetesCRDModelGen;
 
 public class CRDGenerator : ICRDGenerator {
-    public const string ModelNamespace = "KubernetesCRDModelGen.Models2";
+    public const string RootNamespace = "KubernetesCRDModelGen";
 
     private ILogger<CRDGenerator>? Logger { get; set; }
 
@@ -27,15 +28,15 @@ public class CRDGenerator : ICRDGenerator {
     public CRDGenerator() {
     }
 
-    public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = ModelNamespace) {
+    public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = RootNamespace) {
         return "";
     }
 
-    public async Task<(Stream?, Stream?)> GenerateAssemblyStream(V1CustomResourceDefinition crd, string @namespace = ModelNamespace, bool embedSources = false) {
+    public async Task<(Stream?, Stream?)> GenerateAssemblyStream(V1CustomResourceDefinition crd, string @namespace = RootNamespace, bool embedSources = false) {
         var settings = new YardarmGenerationSettings();
         settings.EmbedAllSources = embedSources;
-        settings.RootNamespace = ModelNamespace;
-        settings.AssemblyName = Guid.NewGuid().ToString();
+        settings.RootNamespace = @namespace;
+        settings.AssemblyName = crd.Metadata.Name;
         settings.AddExtension<SystemTextJsonExtension>();
         settings.AddExtension<KubernetesExtension>();
 
@@ -50,18 +51,24 @@ public class CRDGenerator : ICRDGenerator {
         return (settings.DllOutput, settings.XmlDocumentationOutput);
     }
 
-    public async Task<(Assembly?, XmlDocument?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace, bool embedSources = false)
+    public async Task<(Assembly?, XmlDocument?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = RootNamespace, bool embedSources = false)
     {
         var output = await GenerateAssemblyStream(crd, @namespace, embedSources);
 
         output.Item1.Seek(0, SeekOrigin.Begin);
-        var assembly = AssemblyLoadContext.Default.LoadFromStream(output.Item1);
+        using (var memoryStream = new MemoryStream()) {
+            output.Item1.CopyTo(memoryStream);
+            byte[] byteArray = memoryStream.ToArray();
+            var assembly = Assembly.Load(byteArray);
 
-        output.Item2.Seek(0, SeekOrigin.Begin);
-        var xml = new XmlDocument();
-        xml.Load(output.Item2);
+            output.Item2.Seek(0, SeekOrigin.Begin);
+            var xml = new XmlDocument();
+            xml.Load(output.Item2);
 
-        return (assembly, xml);
+            return (assembly, xml);
+        }
+
+        //var assembly = AssemblyLoadContext.Default.LoadFromStream(output.Item1);
     }
 
     private OpenApiDocument ConvertCRDToOpenAPI(V1CustomResourceDefinition crd)
