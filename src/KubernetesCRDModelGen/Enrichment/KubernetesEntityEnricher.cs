@@ -13,7 +13,7 @@ using Yardarm.Names;
 using Yardarm.Spec;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
-namespace KubernetesCRDModelGen.Encrichment;
+namespace KubernetesCRDModelGen.Enrichment;
 /// <summary>
 /// Adds KubernetesEntityEnricher to object schemas, but runs after the <see cref="BaseTypeEnricher"/>.
 /// </summary>

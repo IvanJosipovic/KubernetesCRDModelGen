@@ -1,4 +1,4 @@
-﻿using KubernetesCRDModelGen.Encrichment;
+﻿using KubernetesCRDModelGen.Enrichment;
 using Microsoft.Extensions.DependencyInjection;
 using Yardarm;
 using Yardarm.Enrichment;
