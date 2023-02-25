@@ -24,7 +24,7 @@ namespace Worker {
 
             var crd = (V1CustomResourceDefinition)objects[0];
 
-            var ass = await CRDGenerator.GenerateAssembly(crd);
+            var ass = await CRDGenerator.GenerateAssemblyStream(crd);
 
             using (Stream outStream = File.OpenWrite("models.dll")) {
                 ass.Item1.Seek(0, SeekOrigin.Begin);

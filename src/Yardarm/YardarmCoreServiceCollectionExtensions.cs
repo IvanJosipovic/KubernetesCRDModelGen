@@ -56,7 +56,7 @@ namespace Yardarm
             services.TryAddSingleton<IAuthenticationNamespace, AuthenticationNamespace>();
             services.TryAddSingleton<IRequestsNamespace, RequestsNamespace>();
             services.TryAddSingleton<IResponsesNamespace, ResponsesNamespace>();
-            //services.TryAddSingleton<ISerializationNamespace, SerializationNamespace>();
+            services.TryAddSingleton<ISerializationNamespace, SerializationNamespace>();
 
             // Other
             services

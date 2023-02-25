@@ -8,38 +8,34 @@ using System.Reflection;
 using System.Text;
 using System.Xml;
 using Yardarm;
+using Yardarm.SystemTextJson;
 
 namespace KubernetesCRDModelGen;
 
-public class CRDGenerator : ICRDGenerator
-{
-    public const string ModelNamespace = "KubernetesCRDModelGen.Models";
+public class CRDGenerator : ICRDGenerator {
+    public const string ModelNamespace = "KubernetesCRDModelGen.Models2";
 
     private ILogger<CRDGenerator>? Logger { get; set; }
 
     private MetadataReference[] MetadataReferences { get; set; }
 
-    public CRDGenerator(ILogger<CRDGenerator> logger)
-    {
+    public CRDGenerator(ILogger<CRDGenerator> logger) {
         Logger = logger;
     }
 
-    public CRDGenerator()
-    {
+    public CRDGenerator() {
     }
 
-    public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
-    {
+    public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = ModelNamespace) {
         return "";
     }
 
-    public async Task<(Stream?, Stream?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace, bool embedSources = false)
-    {
+    public async Task<(Stream?, Stream?)> GenerateAssemblyStream(V1CustomResourceDefinition crd, string @namespace = ModelNamespace, bool embedSources = false) {
         var settings = new YardarmGenerationSettings();
         settings.EmbedAllSources = embedSources;
         settings.RootNamespace = ModelNamespace;
-        settings.AssemblyName = ModelNamespace;
-        //settings.AddExtension<SystemTextJsonExtension>();
+        settings.AssemblyName = Guid.NewGuid().ToString();
+        settings.AddExtension<SystemTextJsonExtension>();
         settings.AddExtension<KubernetesExtension>();
 
         var openApiDocument = ConvertCRDToOpenAPI(crd);
@@ -51,6 +47,20 @@ public class CRDGenerator : ICRDGenerator
         if (!res.Success) throw new Exception("Assembly build is not successful");
 
         return (settings.DllOutput, settings.XmlDocumentationOutput);
+    }
+
+    public async Task<(Assembly?, XmlDocument?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace, bool embedSources = false)
+    {
+        var output = await GenerateAssemblyStream(crd, @namespace, embedSources);
+
+        output.Item1.Seek(0, SeekOrigin.Begin);
+        var assembly = System.Runtime.Loader.AssemblyLoadContext.Default.LoadFromStream(output.Item1);
+
+        output.Item2.Seek(0, SeekOrigin.Begin);
+        var xml = new XmlDocument();
+        xml.Load(output.Item2);
+
+        return (assembly, xml);
     }
 
     private OpenApiDocument ConvertCRDToOpenAPI(V1CustomResourceDefinition crd)

@@ -44,9 +44,9 @@ public class UnitTest
     {
         var assembly = await GetCRDGenerator().GenerateAssembly(crd, Namespace + "." + crd.Spec.Group);
 
-        //var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
+        var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
 
-        return typeof(string);
+        return types.First();
     }
 
     [Fact]
@@ -80,7 +80,7 @@ spec:
             metadata:
               type: object
 ";
-        var type = await GetTypeYaml(yaml, "V1beta1Test");
+        var type = await GetTypeYaml(yaml, "Test");
 
         type.Namespace.Should().Be(Namespace + ".kubeui.com");
     }
@@ -555,7 +555,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayOject()
+    public async Task TestArrayObject()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -658,7 +658,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayPresreveUnkown()
+    public async Task TestArrayPreserveUnkown()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
