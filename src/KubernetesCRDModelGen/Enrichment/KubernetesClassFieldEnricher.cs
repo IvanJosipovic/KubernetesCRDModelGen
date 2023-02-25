@@ -19,7 +19,7 @@ namespace KubernetesCRDModelGen.Enrichment;
 /// <summary>
 /// Adds  object schemas, but runs after the <see cref="BaseTypeEnricher"/>.
 /// </summary>
-public class KubernetesClassEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarationSyntax, OpenApiSchema>
+public class KubernetesClassFieldEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarationSyntax, OpenApiSchema>
 {
     readonly GenerationContext _context;
 
@@ -36,23 +36,23 @@ public class KubernetesClassEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarati
         "KubePluralName"
     };
 
-    public KubernetesClassEnricher(GenerationContext context)
+    public KubernetesClassFieldEnricher(GenerationContext context)
     {
         _context = context ?? throw new ArgumentNullException(nameof(context));
     }
 
     public ClassDeclarationSyntax Enrich(ClassDeclarationSyntax target, OpenApiEnrichmentContext<OpenApiSchema> context)
     {
-        if (context.LocatedElement.Parent == null)
+        if (context.LocatedElement.Parent != null)
         {
-            var props = target.Members.Where(x => x is PropertyDeclarationSyntax p &&  Fields.Contains(p.Identifier.ValueText));
-            target = target.RemoveNodes(props, SyntaxRemoveOptions.KeepNoTrivia);
+            return target;
+        }
 
-            foreach (var field in Fields) {
-                target = target.AddMembers(new[] { GetField(field, (context.LocatedElement.Element.Properties[field].Default as OpenApiString).Value ) });
-            }
+        var props = target.Members.Where(x => x is PropertyDeclarationSyntax p &&  Fields.Contains(p.Identifier.ValueText));
+        target = target.RemoveNodes(props, SyntaxRemoveOptions.KeepNoTrivia);
 
-            target = target.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.QualifiedName(SyntaxFactory.ParseName("k8s"), SyntaxFactory.IdentifierName("IKubernetesObject"))));
+        foreach (var field in Fields) {
+            target = target.AddMembers(new[] { GetField(field, (context.LocatedElement.Element.Properties[field].Default as OpenApiString).Value ) });
         }
 
         return target;

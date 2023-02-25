@@ -1,4 +1,5 @@
 ﻿using KubernetesCRDModelGen.Enrichment;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Extensions.DependencyInjection;
 using Yardarm;
 using Yardarm.Enrichment;
@@ -9,7 +10,9 @@ public class KubernetesExtension : YardarmExtension {
     public override IServiceCollection ConfigureServices(IServiceCollection services) {
         services
             .AddOpenApiSyntaxNodeEnricher<KubernetesClassAttributeEnricher>()
-            .AddOpenApiSyntaxNodeEnricher<KubernetesClassEnricher>()
+            .AddOpenApiSyntaxNodeEnricher<KubernetesClassFieldEnricher>()
+            .AddOpenApiSyntaxNodeEnricher<KubernetesClassBaseEnricher>()
+            .AddOpenApiSyntaxNodeEnricher<MetadataEnricher>()
         ;
 
         return services;
