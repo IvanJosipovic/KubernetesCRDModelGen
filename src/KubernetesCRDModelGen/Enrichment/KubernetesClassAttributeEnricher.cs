@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.OpenApi.Any;
@@ -8,10 +6,6 @@ using Microsoft.OpenApi.Models;
 using Yardarm;
 using Yardarm.Enrichment;
 using Yardarm.Enrichment.Schema;
-using Yardarm.Generation;
-using Yardarm.Helpers;
-using Yardarm.Names;
-using Yardarm.Spec;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
 namespace KubernetesCRDModelGen.Enrichment;
@@ -23,23 +17,11 @@ public class KubernetesClassAttributeEnricher : IOpenApiSyntaxNodeEnricher<Class
     private readonly GenerationContext _context;
 
     //k8s.Models.KubernetesEntityAttribute
-    public static NameSyntax Attribute { get; } = QualifiedName(
-    QualifiedName(
-            IdentifierName("k8s"),
-        IdentifierName("Models")),
-    IdentifierName("KubernetesEntityAttribute"));
+    public static NameSyntax Attribute { get; } = QualifiedName(QualifiedName(IdentifierName("k8s"),IdentifierName("Models")),IdentifierName("KubernetesEntityAttribute"));
 
     public Type[] ExecuteAfter { get; } =
     {
         typeof(BaseTypeEnricher)
-    };
-
-    string[] Fields = new string[]
-    {
-            "KubeApiVersion",
-            "KubeGroup",
-            "KubeKind",
-            "KubePluralName"
     };
 
     public KubernetesClassAttributeEnricher(GenerationContext context)

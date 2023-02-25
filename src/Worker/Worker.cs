@@ -1,8 +1,6 @@
-
 using k8s.Models;
 using k8s;
 using KubernetesCRDModelGen;
-using System.Reflection.Emit;
 
 namespace Worker {
     public class Worker : BackgroundService
@@ -13,7 +11,8 @@ namespace Worker {
 
         ICRDGenerator CRDGenerator;
 
-        public Worker(ILogger<Worker> logger, IHostApplicationLifetime hostApplicationLifetime, ICRDGenerator cRDGenerator) {
+        public Worker(ILogger<Worker> logger, IHostApplicationLifetime hostApplicationLifetime, ICRDGenerator cRDGenerator)
+        {
             _logger = logger;
             this.hostApplicationLifetime = hostApplicationLifetime;
             CRDGenerator = cRDGenerator;

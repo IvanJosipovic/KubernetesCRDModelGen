@@ -51,6 +51,8 @@ public class KubernetesClassEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarati
             foreach (var field in Fields) {
                 target = target.AddMembers(new[] { GetField(field, (context.LocatedElement.Element.Properties[field].Default as OpenApiString).Value ) });
             }
+
+            target = target.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.QualifiedName(SyntaxFactory.ParseName("k8s"), SyntaxFactory.IdentifierName("IKubernetesObject"))));
         }
 
         return target;
