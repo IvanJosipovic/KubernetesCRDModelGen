@@ -180,7 +180,6 @@ namespace Yardarm
                 }
             }
 
-
             var packer = ServiceProvider.GetRequiredService<NuGetPacker>();
 
             packer.Pack(results, Settings.NuGetOutput!);
@@ -192,8 +191,6 @@ namespace Yardarm
                     throw new InvalidOperationException(
                         $"{nameof(YardarmGenerationSettings.PdbOutput)} must be seekable and readable to pack a NuGet symbols package.");
                 }
-
-
 
                 packer.PackSymbols(results, Settings.NuGetSymbolsOutput);
             }

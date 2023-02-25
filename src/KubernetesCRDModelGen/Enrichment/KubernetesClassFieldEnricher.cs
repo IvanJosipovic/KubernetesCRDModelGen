@@ -1,23 +1,16 @@
-﻿using System;
-using System.Linq;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Extensions;
 using Microsoft.OpenApi.Models;
 using Yardarm;
 using Yardarm.Enrichment;
 using Yardarm.Enrichment.Schema;
-using Yardarm.Generation;
-using Yardarm.Helpers;
-using Yardarm.Names;
-using Yardarm.Spec;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
 namespace KubernetesCRDModelGen.Enrichment;
 /// <summary>
-/// Adds  object schemas, but runs after the <see cref="BaseTypeEnricher"/>.
+/// Adds Kube* string constant to the root object schemas, but runs after the <see cref="BaseTypeEnricher"/>.
 /// </summary>
 public class KubernetesClassFieldEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarationSyntax, OpenApiSchema>
 {
@@ -59,13 +52,11 @@ public class KubernetesClassFieldEnricher : IOpenApiSyntaxNodeEnricher<ClassDecl
     }
 
     private FieldDeclarationSyntax GetField(string name, string value) {
-        FieldDeclarationSyntax fieldDeclaration = SyntaxFactory.FieldDeclaration(
-                SyntaxFactory.VariableDeclaration(SyntaxFactory.ParseTypeName("string"))
-                    .AddVariables(SyntaxFactory.VariableDeclarator(name)
-                        .WithInitializer(SyntaxFactory.EqualsValueClause(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(value))))
+        return FieldDeclaration(
+                VariableDeclaration(ParseTypeName("string"))
+                    .AddVariables(VariableDeclarator(name)
+                        .WithInitializer(EqualsValueClause(LiteralExpression(SyntaxKind.StringLiteralExpression, Literal(value))))
             ))
-            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.ConstKeyword));
-
-        return fieldDeclaration;
+            .AddModifiers(Token(SyntaxKind.PublicKeyword), Token(SyntaxKind.ConstKeyword));
     }
 }

@@ -27,7 +27,7 @@ namespace Yardarm.Generation.Schema
                     (_, "int") => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.IntKeyword)),
                     (_, "int64") => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.LongKeyword)),
                     (_, "byte") => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.ByteKeyword)),
-                    ("integer", _) => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.LongKeyword)),
+                    ("integer", _) => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.IntKeyword)),
                     ("number", "decimal") => SyntaxFactory.PredefinedType(
                         SyntaxFactory.Token(SyntaxKind.DecimalKeyword)),
                     ("number", "float") => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.FloatKeyword)),

@@ -135,6 +135,44 @@ spec:
     }
 
     [Fact]
+    public async Task TestBaseClasses() {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        type.IsAssignableTo(typeof(IKubernetesObject)).Should().BeTrue();
+        type.IsAssignableTo(typeof(IKubernetesObject<V1ObjectMeta>)).Should().BeTrue();
+        type.IsAssignableTo(typeof(IMetadata<V1ObjectMeta>)).Should().BeTrue();
+    }
+
+    [Fact]
     public async Task TestConstants()
     {
         var yaml = @"
@@ -390,7 +428,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestUnkownFields()
+    public async Task TestUnknownFields()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -433,7 +471,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestUnkownFields2()
+    public async Task TestUnknownFields2()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -658,7 +696,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayPreserveUnkown()
+    public async Task TestArrayPreserveUnknown()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1137,7 +1175,6 @@ spec:
 
         itemType.Should().Be<IntstrIntOrString>();
     }
-
 
     [Fact]
     public async Task TestEnum()

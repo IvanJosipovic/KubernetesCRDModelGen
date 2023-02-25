@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.OpenApi.Readers;
 using System.Reflection;
+using System.Runtime.Loader;
 using System.Text;
 using System.Xml;
 using Yardarm;
@@ -54,7 +55,7 @@ public class CRDGenerator : ICRDGenerator {
         var output = await GenerateAssemblyStream(crd, @namespace, embedSources);
 
         output.Item1.Seek(0, SeekOrigin.Begin);
-        var assembly = System.Runtime.Loader.AssemblyLoadContext.Default.LoadFromStream(output.Item1);
+        var assembly = AssemblyLoadContext.Default.LoadFromStream(output.Item1);
 
         output.Item2.Seek(0, SeekOrigin.Begin);
         var xml = new XmlDocument();
