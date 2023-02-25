@@ -38,6 +38,14 @@ namespace Yardarm.Packaging.Internal
                     };
                 }
 
+                yield return new LibraryDependency {
+                    LibraryRange = new LibraryRange {
+                        Name = "KubernetesClient.Models",
+                        TypeConstraint = LibraryDependencyTarget.Package,
+                        VersionRange = VersionRange.Parse("10.0.16")
+                    }
+                };
+
                 yield return new LibraryDependency
                 {
                     LibraryRange = new LibraryRange

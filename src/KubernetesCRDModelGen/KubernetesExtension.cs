@@ -8,8 +8,8 @@ namespace KubernetesCRDModelGen;
 public class KubernetesExtension : YardarmExtension {
     public override IServiceCollection ConfigureServices(IServiceCollection services) {
         services
-            .AddOpenApiSyntaxNodeEnricher<KubernetesEntityEnricher>()
-            .AddOpenApiSyntaxNodeEnricher<KubernetesFieldEnricher>()
+            .AddOpenApiSyntaxNodeEnricher<KubernetesClassAttributeEnricher>()
+            .AddOpenApiSyntaxNodeEnricher<KubernetesClassEnricher>()
         ;
 
         return services;

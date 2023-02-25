@@ -19,7 +19,7 @@ namespace KubernetesCRDModelGen.Enrichment;
 /// <summary>
 /// Adds  object schemas, but runs after the <see cref="BaseTypeEnricher"/>.
 /// </summary>
-public class KubernetesFieldEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarationSyntax, OpenApiSchema>
+public class KubernetesClassEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarationSyntax, OpenApiSchema>
 {
     readonly GenerationContext _context;
 
@@ -36,7 +36,7 @@ public class KubernetesFieldEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarati
         "KubePluralName"
     };
 
-    public KubernetesFieldEnricher(GenerationContext context)
+    public KubernetesClassEnricher(GenerationContext context)
     {
         _context = context ?? throw new ArgumentNullException(nameof(context));
     }
@@ -57,7 +57,6 @@ public class KubernetesFieldEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarati
     }
 
     private FieldDeclarationSyntax GetField(string name, string value) {
-        // Define the field
         FieldDeclarationSyntax fieldDeclaration = SyntaxFactory.FieldDeclaration(
                 SyntaxFactory.VariableDeclaration(SyntaxFactory.ParseTypeName("string"))
                     .AddVariables(SyntaxFactory.VariableDeclarator(name)
@@ -66,6 +65,5 @@ public class KubernetesFieldEnricher : IOpenApiSyntaxNodeEnricher<ClassDeclarati
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.ConstKeyword));
 
         return fieldDeclaration;
-
     }
 }
