@@ -124,7 +124,7 @@ spec:
                       type: object
                     type: array
                   conflictResolutionPolicy:
-                    description: A conflict_resolution_policy blocks as defined below.
+                    description: A conflict_resolution_policy blocks as defined below. Changing this forces a new resource to be created.
                     items:
                       properties:
                         conflictResolutionPath:

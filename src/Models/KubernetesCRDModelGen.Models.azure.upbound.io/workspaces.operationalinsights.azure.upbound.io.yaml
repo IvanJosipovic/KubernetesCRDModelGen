@@ -63,7 +63,7 @@ spec:
                     description: Is Customer Managed Storage mandatory for query management?
                     type: boolean
                   dailyQuotaGb:
-                    description: The workspace daily quota for ingestion in GB.  Defaults to -1 (unlimited) if omitted.
+                    description: The workspace daily quota for ingestion in GB. Defaults to -1 (unlimited) if omitted.
                     type: number
                   internetIngestionEnabled:
                     description: Should the Log Analytics Workspace support ingestion over the Public Internet? Defaults to true.
@@ -71,11 +71,14 @@ spec:
                   internetQueryEnabled:
                     description: Should the Log Analytics Workspace support querying over the Public Internet? Defaults to true.
                     type: boolean
+                  localAuthenticationDisabled:
+                    description: Specifies if the log Analytics workspace should enforce authentication using Azure AD. Defaults to false.
+                    type: boolean
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
                   reservationCapacityInGbPerDay:
-                    description: The capacity reservation level in GB for this workspace.  Must be in increments of 100  between 100 and 5000.
+                    description: The capacity reservation level in GB for this workspace. Must be in increments of 100 between 100 and 5000.
                     type: number
                   resourceGroupName:
                     description: The name of the resource group in which the Log Analytics workspace is created. Changing this forces a new resource to be created.

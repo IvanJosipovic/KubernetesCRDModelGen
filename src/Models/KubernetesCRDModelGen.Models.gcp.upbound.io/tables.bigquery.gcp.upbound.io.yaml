@@ -145,8 +145,22 @@ spec:
                         autodetect:
                           description: '- Let BigQuery try to autodetect the schema and format of the table.'
                           type: boolean
+                        avroOptions:
+                          description: Additional options if source_format is set to "AVRO".  Structure is documented below.
+                          items:
+                            properties:
+                              useAvroLogicalTypes:
+                                description: If is set to true, indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
+                                type: boolean
+                            required:
+                            - useAvroLogicalTypes
+                            type: object
+                          type: array
                         compression:
                           description: The compression type of the data source. Valid values are "NONE" or "GZIP".
+                          type: string
+                        connectionId:
+                          description: The connection specifying the credentials to be used to read external storage, such as Azure Blob, Cloud Storage, or S3. The connection_id can have the form {{project}}.{{location}}.{{connection_id}} or projects/{{project}}/locations/{{location}}/connections/{{connection_id}}.
                           type: string
                         csvOptions:
                           description: Additional properties to set if source_format is set to "CSV". Structure is documented below.
@@ -207,6 +221,9 @@ spec:
                         maxBadRecords:
                           description: The maximum number of bad records that BigQuery can ignore when reading data.
                           type: number
+                        referenceFileSchemaUri:
+                          description: 'When creating an external table, the user can provide a reference file with the table schema. This is enabled for the following formats: AVRO, PARQUET, ORC.'
+                          type: string
                         schema:
                           description: "A JSON schema for the external table. Schema is required for CSV and JSON formats if autodetect is not on. Schema is disallowed for Google Cloud Bigtable, Cloud Datastore backups, Avro, ORC and Parquet formats. ~>NOTE: Because this field expects a JSON string, any changes to the string will create a diff, even if the JSON itself hasn't changed. Furthermore drift for this field cannot not be detected because BigQuery only uses this schema to compute the effective schema for the table, therefore any changes on the configured value will force the table to be recreated. This schema is effectively only applied when creating a table from an external datasource, after creation the computed schema will be stored in google_bigquery_table.schema"
                           type: string
@@ -284,7 +301,7 @@ spec:
                       type: object
                     type: array
                   schema:
-                    description: "A JSON schema for the table. ~>NOTE: Because this field expects a JSON string, any changes to the string will create a diff, even if the JSON itself hasn't changed. If the API returns a different value for the same schema, e.g. it switched the order of values or replaced STRUCT field type with RECORD field type, we currently cannot suppress the recurring diff this causes. As a workaround, we recommend using the schema as returned by the API."
+                    description: A JSON schema for the table.
                     type: string
                   timePartitioning:
                     description: If specified, configures time-based partitioning for this table. Structure is documented below.

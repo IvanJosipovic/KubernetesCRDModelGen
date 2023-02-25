@@ -165,7 +165,6 @@ spec:
                     type: object
                 required:
                 - region
-                - rule
                 type: object
               providerConfigRef:
                 default:

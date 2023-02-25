@@ -115,6 +115,17 @@ spec:
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
+                  serviceConnectDefaults:
+                    description: Configures a default Service Connect namespace. Detailed below.
+                    items:
+                      properties:
+                        namespace:
+                          description: The ARN of the aws_service_discovery_http_namespace that's used when you create a service and don't specify a Service Connect configuration.
+                          type: string
+                      required:
+                      - namespace
+                      type: object
+                    type: array
                   setting:
                     description: Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
                     items:
@@ -123,7 +134,7 @@ spec:
                           description: 'Name of the setting to manage. Valid values: containerInsights.'
                           type: string
                         value:
-                          description: The value to assign to the setting. Value values are enabled and disabled.
+                          description: The value to assign to the setting. Valid values are enabled and disabled.
                           type: string
                       required:
                       - name

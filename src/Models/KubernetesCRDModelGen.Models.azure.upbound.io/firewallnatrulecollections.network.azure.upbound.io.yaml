@@ -199,7 +199,7 @@ spec:
                           description: Specifies the name of the rule.
                           type: string
                         protocols:
-                          description: A list of protocols. Possible values are Any, ICMP, TCP and UDP.  If action is Dnat, protocols can only be TCP and UDP.
+                          description: A list of protocols. Possible values are Any, ICMP, TCP and UDP. If action is Dnat, protocols can only be TCP and UDP.
                           items:
                             type: string
                           type: array

@@ -57,7 +57,7 @@ spec:
               forProvider:
                 properties:
                   meshName:
-                    description: The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
+                    description: Name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
                     type: string
                   meshNameRef:
                     description: Reference to a Mesh in appmesh to populate meshName.
@@ -115,47 +115,47 @@ spec:
                         type: object
                     type: object
                   meshOwner:
-                    description: The AWS account ID of the service mesh's owner. Defaults to the account ID the AWS provider is currently connected to.
+                    description: AWS account ID of the service mesh's owner. Defaults to the account ID the AWS provider is currently connected to.
                     type: string
                   name:
-                    description: The name to use for the virtual node. Must be between 1 and 255 characters in length.
+                    description: Name to use for the virtual node. Must be between 1 and 255 characters in length.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   spec:
-                    description: The virtual node specification to apply.
+                    description: Virtual node specification to apply.
                     items:
                       properties:
                         backend:
-                          description: The backends to which the virtual node is expected to send outbound traffic.
+                          description: Backends to which the virtual node is expected to send outbound traffic.
                           items:
                             properties:
                               virtualService:
-                                description: Specifies a virtual service to use as a backend for a virtual node.
+                                description: Virtual service to use as a backend for a virtual node.
                                 items:
                                   properties:
                                     clientPolicy:
-                                      description: The client policy for the backend.
+                                      description: Client policy for the backend.
                                       items:
                                         properties:
                                           tls:
-                                            description: The Transport Layer Security (TLS) client policy.
+                                            description: Transport Layer Security (TLS) client policy.
                                             items:
                                               properties:
                                                 certificate:
-                                                  description: The virtual node's client's Transport Layer Security (TLS) certificate.
+                                                  description: Virtual node's client's Transport Layer Security (TLS) certificate.
                                                   items:
                                                     properties:
                                                       file:
-                                                        description: A local file certificate.
+                                                        description: Local file certificate.
                                                         items:
                                                           properties:
                                                             certificateChain:
-                                                              description: The certificate chain for the certificate.
+                                                              description: Certificate chain for the certificate.
                                                               type: string
                                                             privateKey:
-                                                              description: The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on.
+                                                              description: Private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on.
                                                               type: string
                                                           required:
                                                           - certificateChain
@@ -167,7 +167,7 @@ spec:
                                                         items:
                                                           properties:
                                                             secretName:
-                                                              description: The name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
+                                                              description: Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
                                                               type: string
                                                           required:
                                                           - secretName
@@ -184,19 +184,19 @@ spec:
                                                     type: number
                                                   type: array
                                                 validation:
-                                                  description: The TLS validation context.
+                                                  description: TLS validation context.
                                                   items:
                                                     properties:
                                                       subjectAlternativeNames:
-                                                        description: The SANs for a TLS validation context.
+                                                        description: SANs for a TLS validation context.
                                                         items:
                                                           properties:
                                                             match:
-                                                              description: The criteria for determining a SAN's match.
+                                                              description: Criteria for determining a SAN's match.
                                                               items:
                                                                 properties:
                                                                   exact:
-                                                                    description: The values sent must match the specified values exactly.
+                                                                    description: Values sent must match the specified values exactly.
                                                                     items:
                                                                       type: string
                                                                     type: array
@@ -209,15 +209,15 @@ spec:
                                                           type: object
                                                         type: array
                                                       trust:
-                                                        description: The TLS validation context trust.
+                                                        description: TLS validation context trust.
                                                         items:
                                                           properties:
                                                             acm:
-                                                              description: The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
+                                                              description: TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
                                                               items:
                                                                 properties:
                                                                   certificateAuthorityArns:
-                                                                    description: One or more ACM Amazon Resource Name (ARN)s.
+                                                                    description: One or more ACM ARNs.
                                                                     items:
                                                                       type: string
                                                                     type: array
@@ -226,11 +226,11 @@ spec:
                                                                 type: object
                                                               type: array
                                                             file:
-                                                              description: A local file certificate.
+                                                              description: Local file certificate.
                                                               items:
                                                                 properties:
                                                                   certificateChain:
-                                                                    description: The certificate chain for the certificate.
+                                                                    description: Certificate chain for the certificate.
                                                                     type: string
                                                                 required:
                                                                 - certificateChain
@@ -241,7 +241,7 @@ spec:
                                                               items:
                                                                 properties:
                                                                   secretName:
-                                                                    description: The name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
+                                                                    description: Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
                                                                     type: string
                                                                 required:
                                                                 - secretName
@@ -260,7 +260,7 @@ spec:
                                         type: object
                                       type: array
                                     virtualServiceName:
-                                      description: The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
+                                      description: Name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
                                       type: string
                                   required:
                                   - virtualServiceName
@@ -271,30 +271,30 @@ spec:
                             type: object
                           type: array
                         backendDefaults:
-                          description: The defaults for backends.
+                          description: Defaults for backends.
                           items:
                             properties:
                               clientPolicy:
-                                description: The client policy for the backend.
+                                description: Client policy for the backend.
                                 items:
                                   properties:
                                     tls:
-                                      description: The Transport Layer Security (TLS) client policy.
+                                      description: Transport Layer Security (TLS) client policy.
                                       items:
                                         properties:
                                           certificate:
-                                            description: The virtual node's client's Transport Layer Security (TLS) certificate.
+                                            description: Virtual node's client's Transport Layer Security (TLS) certificate.
                                             items:
                                               properties:
                                                 file:
-                                                  description: A local file certificate.
+                                                  description: Local file certificate.
                                                   items:
                                                     properties:
                                                       certificateChain:
-                                                        description: The certificate chain for the certificate.
+                                                        description: Certificate chain for the certificate.
                                                         type: string
                                                       privateKey:
-                                                        description: The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on.
+                                                        description: Private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on.
                                                         type: string
                                                     required:
                                                     - certificateChain
@@ -306,7 +306,7 @@ spec:
                                                   items:
                                                     properties:
                                                       secretName:
-                                                        description: The name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
+                                                        description: Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
                                                         type: string
                                                     required:
                                                     - secretName
@@ -323,19 +323,19 @@ spec:
                                               type: number
                                             type: array
                                           validation:
-                                            description: The TLS validation context.
+                                            description: TLS validation context.
                                             items:
                                               properties:
                                                 subjectAlternativeNames:
-                                                  description: The SANs for a TLS validation context.
+                                                  description: SANs for a TLS validation context.
                                                   items:
                                                     properties:
                                                       match:
-                                                        description: The criteria for determining a SAN's match.
+                                                        description: Criteria for determining a SAN's match.
                                                         items:
                                                           properties:
                                                             exact:
-                                                              description: The values sent must match the specified values exactly.
+                                                              description: Values sent must match the specified values exactly.
                                                               items:
                                                                 type: string
                                                               type: array
@@ -348,15 +348,15 @@ spec:
                                                     type: object
                                                   type: array
                                                 trust:
-                                                  description: The TLS validation context trust.
+                                                  description: TLS validation context trust.
                                                   items:
                                                     properties:
                                                       acm:
-                                                        description: The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
+                                                        description: TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
                                                         items:
                                                           properties:
                                                             certificateAuthorityArns:
-                                                              description: One or more ACM Amazon Resource Name (ARN)s.
+                                                              description: One or more ACM ARNs.
                                                               items:
                                                                 type: string
                                                               type: array
@@ -365,11 +365,11 @@ spec:
                                                           type: object
                                                         type: array
                                                       file:
-                                                        description: A local file certificate.
+                                                        description: Local file certificate.
                                                         items:
                                                           properties:
                                                             certificateChain:
-                                                              description: The certificate chain for the certificate.
+                                                              description: Certificate chain for the certificate.
                                                               type: string
                                                           required:
                                                           - certificateChain
@@ -380,7 +380,7 @@ spec:
                                                         items:
                                                           properties:
                                                             secretName:
-                                                              description: The name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
+                                                              description: Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
                                                               type: string
                                                           required:
                                                           - secretName
@@ -401,11 +401,11 @@ spec:
                             type: object
                           type: array
                         listener:
-                          description: The listeners from which the virtual node is expected to receive inbound traffic.
+                          description: Listeners from which the virtual node is expected to receive inbound traffic.
                           items:
                             properties:
                               connectionPool:
-                                description: The connection pool information for the listener.
+                                description: Connection pool information for the listener.
                                 items:
                                   properties:
                                     grpc:
@@ -458,29 +458,29 @@ spec:
                                   type: object
                                 type: array
                               healthCheck:
-                                description: The health check information for the listener.
+                                description: Health check information for the listener.
                                 items:
                                   properties:
                                     healthyThreshold:
-                                      description: The number of consecutive successful health checks that must occur before declaring listener healthy.
+                                      description: Number of consecutive successful health checks that must occur before declaring listener healthy.
                                       type: number
                                     intervalMillis:
-                                      description: The time period in milliseconds between each health check execution.
+                                      description: Time period in milliseconds between each health check execution.
                                       type: number
                                     path:
-                                      description: The file path to write access logs to. You can use /dev/stdout to send access logs to standard out. Must be between 1 and 255 characters in length.
+                                      description: File path to write access logs to. You can use /dev/stdout to send access logs to standard out. Must be between 1 and 255 characters in length.
                                       type: string
                                     port:
-                                      description: The port used for the port mapping.
+                                      description: Port used for the port mapping.
                                       type: number
                                     protocol:
-                                      description: The protocol used for the port mapping. Valid values are http, http2, tcp and grpc.
+                                      description: Protocol used for the port mapping. Valid values are http, http2, tcp and grpc.
                                       type: string
                                     timeoutMillis:
-                                      description: The amount of time to wait when receiving a response from the health check, in milliseconds.
+                                      description: Amount of time to wait when receiving a response from the health check, in milliseconds.
                                       type: number
                                     unhealthyThreshold:
-                                      description: The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
+                                      description: Number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
                                       type: number
                                   required:
                                   - healthyThreshold
@@ -491,18 +491,18 @@ spec:
                                   type: object
                                 type: array
                               outlierDetection:
-                                description: The outlier detection information for the listener.
+                                description: Outlier detection information for the listener.
                                 items:
                                   properties:
                                     baseEjectionDuration:
-                                      description: The base amount of time for which a host is ejected.
+                                      description: Base amount of time for which a host is ejected.
                                       items:
                                         properties:
                                           unit:
-                                            description: 'The unit of time. Valid values: ms, s.'
+                                            description: 'Unit of time. Valid values: ms, s.'
                                             type: string
                                           value:
-                                            description: The number of time units. Minimum value of 0.
+                                            description: Number of time units. Minimum value of 0.
                                             type: number
                                         required:
                                         - unit
@@ -510,14 +510,14 @@ spec:
                                         type: object
                                       type: array
                                     interval:
-                                      description: The time interval between ejection sweep analysis.
+                                      description: Time interval between ejection sweep analysis.
                                       items:
                                         properties:
                                           unit:
-                                            description: 'The unit of time. Valid values: ms, s.'
+                                            description: 'Unit of time. Valid values: ms, s.'
                                             type: string
                                           value:
-                                            description: The number of time units. Minimum value of 0.
+                                            description: Number of time units. Minimum value of 0.
                                             type: number
                                         required:
                                         - unit
@@ -538,14 +538,14 @@ spec:
                                   type: object
                                 type: array
                               portMapping:
-                                description: The port mapping information for the listener.
+                                description: Port mapping information for the listener.
                                 items:
                                   properties:
                                     port:
-                                      description: The port used for the port mapping.
+                                      description: Port used for the port mapping.
                                       type: number
                                     protocol:
-                                      description: The protocol used for the port mapping. Valid values are http, http2, tcp and grpc.
+                                      description: Protocol used for the port mapping. Valid values are http, http2, tcp and grpc.
                                       type: string
                                   required:
                                   - port
@@ -561,14 +561,14 @@ spec:
                                       items:
                                         properties:
                                           idle:
-                                            description: The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+                                            description: Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
                                             items:
                                               properties:
                                                 unit:
-                                                  description: 'The unit of time. Valid values: ms, s.'
+                                                  description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: The number of time units. Minimum value of 0.
+                                                  description: Number of time units. Minimum value of 0.
                                                   type: number
                                               required:
                                               - unit
@@ -576,14 +576,14 @@ spec:
                                               type: object
                                             type: array
                                           perRequest:
-                                            description: The per request timeout.
+                                            description: Per request timeout.
                                             items:
                                               properties:
                                                 unit:
-                                                  description: 'The unit of time. Valid values: ms, s.'
+                                                  description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: The number of time units. Minimum value of 0.
+                                                  description: Number of time units. Minimum value of 0.
                                                   type: number
                                               required:
                                               - unit
@@ -597,14 +597,14 @@ spec:
                                       items:
                                         properties:
                                           idle:
-                                            description: The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+                                            description: Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
                                             items:
                                               properties:
                                                 unit:
-                                                  description: 'The unit of time. Valid values: ms, s.'
+                                                  description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: The number of time units. Minimum value of 0.
+                                                  description: Number of time units. Minimum value of 0.
                                                   type: number
                                               required:
                                               - unit
@@ -612,14 +612,14 @@ spec:
                                               type: object
                                             type: array
                                           perRequest:
-                                            description: The per request timeout.
+                                            description: Per request timeout.
                                             items:
                                               properties:
                                                 unit:
-                                                  description: 'The unit of time. Valid values: ms, s.'
+                                                  description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: The number of time units. Minimum value of 0.
+                                                  description: Number of time units. Minimum value of 0.
                                                   type: number
                                               required:
                                               - unit
@@ -633,14 +633,14 @@ spec:
                                       items:
                                         properties:
                                           idle:
-                                            description: The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+                                            description: Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
                                             items:
                                               properties:
                                                 unit:
-                                                  description: 'The unit of time. Valid values: ms, s.'
+                                                  description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: The number of time units. Minimum value of 0.
+                                                  description: Number of time units. Minimum value of 0.
                                                   type: number
                                               required:
                                               - unit
@@ -648,14 +648,14 @@ spec:
                                               type: object
                                             type: array
                                           perRequest:
-                                            description: The per request timeout.
+                                            description: Per request timeout.
                                             items:
                                               properties:
                                                 unit:
-                                                  description: 'The unit of time. Valid values: ms, s.'
+                                                  description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: The number of time units. Minimum value of 0.
+                                                  description: Number of time units. Minimum value of 0.
                                                   type: number
                                               required:
                                               - unit
@@ -669,14 +669,14 @@ spec:
                                       items:
                                         properties:
                                           idle:
-                                            description: The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+                                            description: Idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
                                             items:
                                               properties:
                                                 unit:
-                                                  description: 'The unit of time. Valid values: ms, s.'
+                                                  description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: The number of time units. Minimum value of 0.
+                                                  description: Number of time units. Minimum value of 0.
                                                   type: number
                                               required:
                                               - unit
@@ -688,33 +688,33 @@ spec:
                                   type: object
                                 type: array
                               tls:
-                                description: The Transport Layer Security (TLS) client policy.
+                                description: Transport Layer Security (TLS) client policy.
                                 items:
                                   properties:
                                     certificate:
-                                      description: The virtual node's client's Transport Layer Security (TLS) certificate.
+                                      description: Virtual node's client's Transport Layer Security (TLS) certificate.
                                       items:
                                         properties:
                                           acm:
-                                            description: The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
+                                            description: TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
                                             items:
                                               properties:
                                                 certificateArn:
-                                                  description: The Amazon Resource Name (ARN) for the certificate.
+                                                  description: ARN for the certificate.
                                                   type: string
                                               required:
                                               - certificateArn
                                               type: object
                                             type: array
                                           file:
-                                            description: A local file certificate.
+                                            description: Local file certificate.
                                             items:
                                               properties:
                                                 certificateChain:
-                                                  description: The certificate chain for the certificate.
+                                                  description: Certificate chain for the certificate.
                                                   type: string
                                                 privateKey:
-                                                  description: The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on.
+                                                  description: Private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on.
                                                   type: string
                                               required:
                                               - certificateChain
@@ -726,7 +726,7 @@ spec:
                                             items:
                                               properties:
                                                 secretName:
-                                                  description: The name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
+                                                  description: Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
                                                   type: string
                                               required:
                                               - secretName
@@ -735,22 +735,22 @@ spec:
                                         type: object
                                       type: array
                                     mode:
-                                      description: "The listener's TLS mode. Valid values: DISABLED, PERMISSIVE, STRICT."
+                                      description: "Listener's TLS mode. Valid values: DISABLED, PERMISSIVE, STRICT."
                                       type: string
                                     validation:
-                                      description: The TLS validation context.
+                                      description: TLS validation context.
                                       items:
                                         properties:
                                           subjectAlternativeNames:
-                                            description: The SANs for a TLS validation context.
+                                            description: SANs for a TLS validation context.
                                             items:
                                               properties:
                                                 match:
-                                                  description: The criteria for determining a SAN's match.
+                                                  description: Criteria for determining a SAN's match.
                                                   items:
                                                     properties:
                                                       exact:
-                                                        description: The values sent must match the specified values exactly.
+                                                        description: Values sent must match the specified values exactly.
                                                         items:
                                                           type: string
                                                         type: array
@@ -763,15 +763,15 @@ spec:
                                               type: object
                                             type: array
                                           trust:
-                                            description: The TLS validation context trust.
+                                            description: TLS validation context trust.
                                             items:
                                               properties:
                                                 file:
-                                                  description: A local file certificate.
+                                                  description: Local file certificate.
                                                   items:
                                                     properties:
                                                       certificateChain:
-                                                        description: The certificate chain for the certificate.
+                                                        description: Certificate chain for the certificate.
                                                         type: string
                                                     required:
                                                     - certificateChain
@@ -782,7 +782,7 @@ spec:
                                                   items:
                                                     properties:
                                                       secretName:
-                                                        description: The name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
+                                                        description: Name of the secret secret requested from the Secret Discovery Service provider representing Transport Layer Security (TLS) materials like a certificate or certificate chain.
                                                         type: string
                                                     required:
                                                     - secretName
@@ -804,19 +804,19 @@ spec:
                             type: object
                           type: array
                         logging:
-                          description: The inbound and outbound access logging information for the virtual node.
+                          description: Inbound and outbound access logging information for the virtual node.
                           items:
                             properties:
                               accessLog:
-                                description: The access log configuration for a virtual node.
+                                description: Access log configuration for a virtual node.
                                 items:
                                   properties:
                                     file:
-                                      description: A local file certificate.
+                                      description: Local file certificate.
                                       items:
                                         properties:
                                           path:
-                                            description: The file path to write access logs to. You can use /dev/stdout to send access logs to standard out. Must be between 1 and 255 characters in length.
+                                            description: File path to write access logs to. You can use /dev/stdout to send access logs to standard out. Must be between 1 and 255 characters in length.
                                             type: string
                                         required:
                                         - path
@@ -827,20 +827,20 @@ spec:
                             type: object
                           type: array
                         serviceDiscovery:
-                          description: The service discovery information for the virtual node.
+                          description: Service discovery information for the virtual node.
                           items:
                             properties:
                               awsCloudMap:
-                                description: Specifies any AWS Cloud Map information for the virtual node.
+                                description: Any AWS Cloud Map information for the virtual node.
                                 items:
                                   properties:
                                     attributes:
                                       additionalProperties:
                                         type: string
-                                      description: A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
+                                      description: String map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
                                       type: object
                                     namespaceName:
-                                      description: The name of the AWS Cloud Map namespace to use. Use the aws_service_discovery_http_namespace resource to configure a Cloud Map namespace. Must be between 1 and 1024 characters in length.
+                                      description: Name of the AWS Cloud Map namespace to use. Use the aws_service_discovery_http_namespace resource to configure a Cloud Map namespace. Must be between 1 and 1024 characters in length.
                                       type: string
                                     namespaceNameRef:
                                       description: Reference to a HTTPNamespace in servicediscovery to populate namespaceName.
@@ -905,11 +905,11 @@ spec:
                                   type: object
                                 type: array
                               dns:
-                                description: Specifies the DNS service name for the virtual node.
+                                description: DNS service name for the virtual node.
                                 items:
                                   properties:
                                     hostname:
-                                      description: The DNS host name for your virtual node.
+                                      description: DNS host name for your virtual node.
                                       type: string
                                   required:
                                   - hostname
@@ -1059,24 +1059,24 @@ spec:
               atProvider:
                 properties:
                   arn:
-                    description: The ARN of the virtual node.
+                    description: ARN of the virtual node.
                     type: string
                   createdDate:
-                    description: The creation date of the virtual node.
+                    description: Creation date of the virtual node.
                     type: string
                   id:
-                    description: The ID of the virtual node.
+                    description: ID of the virtual node.
                     type: string
                   lastUpdatedDate:
-                    description: The last update date of the virtual node.
+                    description: Last update date of the virtual node.
                     type: string
                   resourceOwner:
-                    description: The resource owner's AWS account ID.
+                    description: Resource owner's AWS account ID.
                     type: string
                   tagsAll:
                     additionalProperties:
                       type: string
-                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                 type: object
               conditions:

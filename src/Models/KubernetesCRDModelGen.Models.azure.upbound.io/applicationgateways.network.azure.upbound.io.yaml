@@ -946,7 +946,7 @@ spec:
                           description: The Name of the SSL certificate that is unique within this Application Gateway
                           type: string
                         passwordSecretRef:
-                          description: Password for the pfx file specified in data.  Required if data is set.
+                          description: Password for the pfx file specified in data. Required if data is set.
                           properties:
                             key:
                               description: The key to select.
@@ -967,7 +967,7 @@ spec:
                       type: object
                     type: array
                   sslPolicy:
-                    description: a ssl policy block as defined below.
+                    description: a ssl_policy block as defined below.
                     items:
                       properties:
                         cipherSuites:
@@ -976,18 +976,18 @@ spec:
                             type: string
                           type: array
                         disabledProtocols:
-                          description: A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are TLSv1_0, TLSv1_1 and TLSv1_2.
+                          description: A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are TLSv1_0, TLSv1_1, TLSv1_2 and TLSv1_3.
                           items:
                             type: string
                           type: array
                         minProtocolVersion:
-                          description: The minimal TLS version. Possible values are TLSv1_0, TLSv1_1 and TLSv1_2.
+                          description: The minimal TLS version. Possible values are TLSv1_0, TLSv1_1, TLSv1_2 and TLSv1_3.
                           type: string
                         policyName:
                           description: The Name of the Policy e.g AppGwSslPolicy20170401S. Required if policy_type is set to Predefined. Possible values can change over time and are published here https://docs.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview. Not compatible with disabled_protocols.
                           type: string
                         policyType:
-                          description: The Type of the Policy. Possible values are Predefined and Custom.
+                          description: The Type of the Policy. Possible values are Predefined, Custom and CustomV2.
                           type: string
                       type: object
                     type: array
@@ -999,7 +999,7 @@ spec:
                           description: The name of the SSL Profile that is unique within this Application Gateway.
                           type: string
                         sslPolicy:
-                          description: a ssl policy block as defined below.
+                          description: a ssl_policy block as defined below.
                           items:
                             properties:
                               cipherSuites:
@@ -1008,18 +1008,18 @@ spec:
                                   type: string
                                 type: array
                               disabledProtocols:
-                                description: A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are TLSv1_0, TLSv1_1 and TLSv1_2.
+                                description: A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are TLSv1_0, TLSv1_1, TLSv1_2 and TLSv1_3.
                                 items:
                                   type: string
                                 type: array
                               minProtocolVersion:
-                                description: The minimal TLS version. Possible values are TLSv1_0, TLSv1_1 and TLSv1_2.
+                                description: The minimal TLS version. Possible values are TLSv1_0, TLSv1_1, TLSv1_2 and TLSv1_3.
                                 type: string
                               policyName:
                                 description: The Name of the Policy e.g AppGwSslPolicy20170401S. Required if policy_type is set to Predefined. Possible values can change over time and are published here https://docs.microsoft.com/azure/application-gateway/application-gateway-ssl-policy-overview. Not compatible with disabled_protocols.
                                 type: string
                               policyType:
-                                description: The Type of the Policy. Possible values are Predefined and Custom.
+                                description: The Type of the Policy. Possible values are Predefined, Custom and CustomV2.
                                 type: string
                             type: object
                           type: array
@@ -1029,7 +1029,7 @@ spec:
                             type: string
                           type: array
                         verifyClientCertIssuerDn:
-                          description: Should client certificate issuer DN be verified?  Defaults to false.
+                          description: Should client certificate issuer DN be verified? Defaults to false.
                           type: boolean
                       required:
                       - name
@@ -1203,10 +1203,10 @@ spec:
                           description: The Web Application Firewall Mode. Possible values are Detection and Prevention.
                           type: string
                         maxRequestBodySizeKb:
-                          description: The Maximum Request Body Size in KB.  Accepted values are in the range 1KB to 128KB.  Defaults to 128KB.
+                          description: The Maximum Request Body Size in KB. Accepted values are in the range 1KB to 128KB. Defaults to 128KB.
                           type: number
                         requestBodyCheck:
-                          description: Is Request Body Inspection enabled?  Defaults to true.
+                          description: Is Request Body Inspection enabled? Defaults to true.
                           type: boolean
                         ruleSetType:
                           description: The Type of the Rule Set used for this Web Application Firewall. Possible values are OWASP and Microsoft_BotManagerRuleSet.

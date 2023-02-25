@@ -83,7 +83,7 @@ spec:
                     - namespace
                     type: object
                   adminSshKey:
-                    description: One or more admin_ssh_key blocks as defined below.
+                    description: One or more admin_ssh_key blocks as defined below. Changing this forces a new resource to be created.
                     items:
                       properties:
                         publicKey:
@@ -446,16 +446,16 @@ spec:
                     items:
                       properties:
                         offer:
-                          description: Specifies the offer of the image used to create the virtual machines.
+                          description: Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.
                           type: string
                         publisher:
-                          description: Specifies the publisher of the image used to create the virtual machines.
+                          description: Specifies the publisher of the image used to create the virtual machines. Changing this forces a new resource to be created.
                           type: string
                         sku:
-                          description: Specifies the SKU of the image used to create the virtual machines.
+                          description: Specifies the SKU of the image used to create the virtual machines. Changing this forces a new resource to be created.
                           type: string
                         version:
-                          description: Specifies the version of the image used to create the virtual machines.
+                          description: Specifies the version of the image used to create the virtual machines. Changing this forces a new resource to be created.
                           type: string
                       required:
                       - offer

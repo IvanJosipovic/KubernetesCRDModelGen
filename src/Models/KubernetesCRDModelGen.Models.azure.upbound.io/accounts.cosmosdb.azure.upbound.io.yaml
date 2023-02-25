@@ -94,7 +94,7 @@ spec:
                       type: object
                     type: array
                   capabilities:
-                    description: The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below. Changing this forces a new resource to be created.
+                    description: The capabilities which should be enabled for this Cosmos DB account. Value is a capabilities block as defined below.
                     items:
                       properties:
                         name:
@@ -142,7 +142,7 @@ spec:
                             type: string
                           type: array
                         allowedMethods:
-                          description: A list of HTTP headers that are allowed to be executed by the origin. Valid options are  DELETE, GET, HEAD, MERGE, POST, OPTIONS, PUT or PATCH.
+                          description: A list of HTTP headers that are allowed to be executed by the origin. Valid options are DELETE, GET, HEAD, MERGE, POST, OPTIONS, PUT or PATCH.
                           items:
                             type: string
                           type: array
@@ -171,7 +171,7 @@ spec:
                     description: The creation mode for the CosmosDB Account. Possible values are Default and Restore. Changing this forces a new resource to be created.
                     type: string
                   defaultIdentityType:
-                    description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or start with UserAssignedIdentity. Defaults to FirstPartyIdentity.
+                    description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or start with UserAssignedIdentity.
                     type: string
                   enableAutomaticFailover:
                     description: Enable automatic fail over for this Cosmos DB account.
@@ -190,7 +190,7 @@ spec:
                           description: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority 0.
                           type: number
                         location:
-                          description: The name of the Azure region to host replicated data. Changing this forces a new resource to be created.
+                          description: The name of the Azure region to host replicated data.
                           type: string
                         zoneRedundant:
                           description: Should zone redundancy be enabled for this region? Defaults to false.

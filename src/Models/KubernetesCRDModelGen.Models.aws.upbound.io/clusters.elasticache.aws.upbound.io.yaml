@@ -77,6 +77,9 @@ spec:
                   finalSnapshotIdentifier:
                     description: Name of your final cluster snapshot. If omitted, no final snapshot will be made.
                     type: string
+                  ipDiscovery:
+                    description: The IP version to advertise in the discovery protocol. Valid values are ipv4 or ipv6.
+                    type: string
                   logDeliveryConfiguration:
                     description: Specifies the destination and format of Redis SLOWLOG or Redis Engine Log. See the documentation on Amazon ElastiCache. See Log Delivery Configuration below for more details.
                     items:
@@ -103,6 +106,9 @@ spec:
                   maintenanceWindow:
                     description: 'ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.'
                     type: string
+                  networkType:
+                    description: The IP versions for cache cluster connections. IPv6 is supported with Redis engine 6.2 onword or Memcached version 1.6.6 for all Nitro system instances. Valid values are ipv4, ipv6 or dual_stack.
+                    type: string
                   nodeType:
                     description: create the resource.
                     type: string
@@ -112,6 +118,9 @@ spec:
                   numCacheNodes:
                     description: –  The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
                     type: number
+                  outpostMode:
+                    description: Specify the outpost mode that will apply to the cache cluster creation. Valid values are "single-outpost" and "cross-outpost", however AWS currently only supports "single-outpost" mode.
+                    type: string
                   parameterGroupName:
                     description: –  The name of the parameter group to associate with this cache cluster.
                     type: string
@@ -178,6 +187,9 @@ spec:
                     items:
                       type: string
                     type: array
+                  preferredOutpostArn:
+                    description: The outpost ARN in which the cache cluster will be created.
+                    type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -416,6 +428,9 @@ spec:
                           description: 'Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use preferred_availability_zones instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.'
                           type: string
                         id:
+                          type: string
+                        outpostArn:
+                          description: The ARN of the created ElastiCache Cluster.
                           type: string
                         port:
                           description: create the resource.

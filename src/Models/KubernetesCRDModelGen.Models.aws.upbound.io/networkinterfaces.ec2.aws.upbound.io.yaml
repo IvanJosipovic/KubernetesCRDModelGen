@@ -79,6 +79,7 @@ spec:
                       type: string
                     type: array
                   ipv6AddressListEnabled:
+                    description: Whether ipv6_address_list is allowed and controls the IPs to assign to the ENI and ipv6_addresses and ipv6_address_count become read-only. Default false.
                     type: boolean
                   ipv6Addresses:
                     description: One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Addresses are assigned without regard to order. You can't use this option if you're specifying ipv6_address_count.
@@ -96,11 +97,12 @@ spec:
                   privateIp:
                     type: string
                   privateIpList:
-                    description: List of private IPs to assign to the ENI in sequential order. Requires setting private_ip_list_enable to true.
+                    description: List of private IPs to assign to the ENI in sequential order. Requires setting private_ip_list_enabled to true.
                     items:
                       type: string
                     type: array
                   privateIpListEnabled:
+                    description: Whether private_ip_list is allowed and controls the IPs to assign to the ENI and private_ips and private_ips_count become read-only. Default false.
                     type: boolean
                   privateIps:
                     description: List of private IPs to assign to the ENI without regard to order.

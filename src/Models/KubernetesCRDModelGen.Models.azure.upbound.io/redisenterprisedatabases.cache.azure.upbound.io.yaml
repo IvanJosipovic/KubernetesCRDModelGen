@@ -132,7 +132,7 @@ spec:
                       type: string
                     type: array
                   module:
-                    description: A module block as defined below.
+                    description: A module block as defined below. Changing this forces a new resource to be created.
                     items:
                       properties:
                         args:
@@ -340,7 +340,7 @@ spec:
                     description: The ID of the Redis Enterprise Database.
                     type: string
                   module:
-                    description: A module block as defined below.
+                    description: A module block as defined below. Changing this forces a new resource to be created.
                     items:
                       properties:
                         version:
