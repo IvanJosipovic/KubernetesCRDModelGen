@@ -21,7 +21,11 @@ namespace Yardarm.Generation.Schema
                 return GetDictionaryGenerator(element);
             }
 
-            if (schema.Extensions.TryGetValue("x-kubernetes-int-or-string", out var value) && value is OpenApiBoolean boolValue && boolValue.Value) {
+            if (schema.Extensions.TryGetValue("x-kubernetes-preserve-unknown-fields", out var value) && value is OpenApiBoolean boolValue && boolValue.Value) {
+                return GetJsonNodeGenerator(element);
+            }
+
+            if (schema.Extensions.TryGetValue("x-kubernetes-int-or-string", out var value2) && value2 is OpenApiBoolean boolValue2 && boolValue2.Value) {
                 return GetStringOrIntGenerator(element);
             }
 
@@ -63,6 +67,7 @@ namespace Yardarm.Generation.Schema
         protected virtual ITypeGenerator GetStringOrIntGenerator(ILocatedOpenApiElement<OpenApiSchema> element) => KubeStringOrIntSchemaGenerator.Instance;
 
         protected virtual ITypeGenerator GetDictionaryGenerator(ILocatedOpenApiElement<OpenApiSchema> element) => DictionarySchemaGenerator.Instance;
+        protected virtual ITypeGenerator GetJsonNodeGenerator(ILocatedOpenApiElement<OpenApiSchema> element) => JsonNodeGenerator.Instance;
 
     }
 }

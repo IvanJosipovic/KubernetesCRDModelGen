@@ -10,14 +10,14 @@ using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
 namespace Yardarm.Generation.Schema
 {
-    public class KubeStringOrIntSchemaGenerator : ITypeGenerator
+    public class JsonNodeGenerator : ITypeGenerator
     {
-        public static KubeStringOrIntSchemaGenerator Instance { get; } = new KubeStringOrIntSchemaGenerator();
+        public static JsonNodeGenerator Instance { get; } = new JsonNodeGenerator();
 
         public ITypeGenerator? Parent => null;
 
         public YardarmTypeInfo TypeInfo { get; } = new YardarmTypeInfo(
-            SimpleBaseType(QualifiedName(ParseName("k8s.Models"), IdentifierName("IntstrIntOrString"))).Type,
+            SimpleBaseType(QualifiedName(ParseName("System.Text.Json.Nodes"), IdentifierName("JsonNode"))).Type,
             NameKind.Struct,
             isGenerated: false);
 

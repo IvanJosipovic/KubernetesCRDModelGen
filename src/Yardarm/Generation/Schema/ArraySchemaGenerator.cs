@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Yardarm.Helpers;
 using Yardarm.Names;
@@ -23,6 +25,10 @@ namespace Yardarm.Generation.Schema
         protected override YardarmTypeInfo GetTypeInfo()
         {
             TypeSyntax itemTypeName = Context.TypeGeneratorRegistry.Get(GetItemSchema()).TypeInfo.Name;
+
+            if (Schema.Items.Extensions.TryGetValue("x-kubernetes-preserve-unknown-fields", out var value) && value is OpenApiBoolean boolValue && boolValue.Value) {
+                itemTypeName = SimpleBaseType(QualifiedName(ParseName("System.Text.Json.Nodes"), IdentifierName("JsonNode"))).Type;
+            }
 
             return new YardarmTypeInfo(
                 WellKnownTypes.System.Collections.Generic.ListT.Name(itemTypeName),

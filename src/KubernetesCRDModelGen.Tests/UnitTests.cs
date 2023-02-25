@@ -731,7 +731,7 @@ spec:
               properties:
                 array:
                   items:
-                    x-kubernetes-preserve-unknown-fields: ""True""
+                    x-kubernetes-preserve-unknown-fields: true
                   type: array
 ";
         var type = await GetTypeYaml(yaml, "Test");
