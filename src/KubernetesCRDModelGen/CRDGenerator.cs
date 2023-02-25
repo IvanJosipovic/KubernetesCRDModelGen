@@ -28,10 +28,6 @@ public class CRDGenerator : ICRDGenerator {
     public CRDGenerator() {
     }
 
-    public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = RootNamespace) {
-        return "";
-    }
-
     public async Task<(Stream?, Stream?)> GenerateAssemblyStream(V1CustomResourceDefinition crd, string @namespace = RootNamespace, bool embedSources = false) {
         var settings = new YardarmGenerationSettings();
         settings.EmbedAllSources = embedSources;
@@ -56,10 +52,10 @@ public class CRDGenerator : ICRDGenerator {
         var output = await GenerateAssemblyStream(crd, @namespace, embedSources);
 
         output.Item1.Seek(0, SeekOrigin.Begin);
+
         using (var memoryStream = new MemoryStream()) {
             output.Item1.CopyTo(memoryStream);
-            byte[] byteArray = memoryStream.ToArray();
-            var assembly = Assembly.Load(byteArray);
+            var assembly = Assembly.Load(memoryStream.ToArray());
 
             output.Item2.Seek(0, SeekOrigin.Begin);
             var xml = new XmlDocument();

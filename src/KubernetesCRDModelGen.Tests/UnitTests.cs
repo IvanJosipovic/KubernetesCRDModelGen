@@ -646,7 +646,7 @@ spec:
 
         var listType = prop.GenericTypeArguments[0];
 
-        listType.Name.Should().Be("TestSpecConditions");
+        listType.Name.Should().Be("ConditionsModelItem");
         listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<double?>();
         listType.GetProperty("Message").PropertyType.Should().Be<string?>();
     }
