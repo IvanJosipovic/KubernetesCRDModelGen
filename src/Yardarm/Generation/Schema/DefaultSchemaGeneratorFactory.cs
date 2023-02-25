@@ -1,4 +1,5 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using Microsoft.OpenApi.Any;
+using Microsoft.OpenApi.Models;
 using Yardarm.Spec;
 
 namespace Yardarm.Generation.Schema
@@ -15,6 +16,14 @@ namespace Yardarm.Generation.Schema
         public virtual ITypeGenerator Create(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent)
         {
             OpenApiSchema schema = element.Element;
+
+            if (schema.AdditionalProperties != null && schema.AdditionalProperties.Type == "string") {
+                return GetDictionaryGenerator(element);
+            }
+
+            if (schema.Extensions.TryGetValue("x-kubernetes-int-or-string", out var value) && value is OpenApiBoolean boolValue && boolValue.Value) {
+                return GetStringOrIntGenerator(element);
+            }
 
             if (schema.AllOf.Count > 0)
             {
@@ -48,7 +57,12 @@ namespace Yardarm.Generation.Schema
 
         protected virtual ITypeGenerator GetStringGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) =>
             element.Element.Enum?.Count > 0
-                ? (ITypeGenerator) new EnumSchemaGenerator(element, _context, parent)
+                ? new EnumSchemaGenerator(element, _context, parent)
                 : new StringSchemaGenerator(element, _context, parent);
+
+        protected virtual ITypeGenerator GetStringOrIntGenerator(ILocatedOpenApiElement<OpenApiSchema> element) => KubeStringOrIntSchemaGenerator.Instance;
+
+        protected virtual ITypeGenerator GetDictionaryGenerator(ILocatedOpenApiElement<OpenApiSchema> element) => DictionarySchemaGenerator.Instance;
+
     }
 }
