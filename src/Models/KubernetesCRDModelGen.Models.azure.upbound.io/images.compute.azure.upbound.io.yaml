@@ -70,7 +70,7 @@ spec:
                           description: Specifies the logical unit number of the data disk.
                           type: number
                         managedDiskId:
-                          description: Specifies the ID of the managed disk resource that you want to use to create the image.
+                          description: Specifies the ID of the managed disk resource that you want to use to create the image. Changing this forces a new resource to be created.
                           type: string
                         sizeGb:
                           description: Specifies the size of the image to be created. The target size can't be smaller than the source size.
@@ -84,11 +84,11 @@ spec:
                     description: Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created. Changing this forces a new resource to be created.
                     type: string
                   osDisk:
-                    description: One or more os_disk elements as defined below.
+                    description: One or more os_disk elements as defined below. Changing this forces a new resource to be created.
                     items:
                       properties:
                         blobUri:
-                          description: Specifies the URI in Azure storage of the blob that you want to use to create the image.
+                          description: Specifies the URI in Azure storage of the blob that you want to use to create the image. Changing this forces a new resource to be created.
                           type: string
                         caching:
                           description: Specifies the caching mode as ReadWrite, ReadOnly, or None. The default is None.
@@ -174,7 +174,7 @@ spec:
                     description: A mapping of tags to assign to the resource.
                     type: object
                   zoneResilient:
-                    description: Is zone resiliency enabled?  Defaults to false.  Changing this forces a new resource to be created.
+                    description: Is zone resiliency enabled? Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
                 required:
                 - location

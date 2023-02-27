@@ -252,6 +252,9 @@ spec:
                   id:
                     description: The ID of the Storage Queue.
                     type: string
+                  resourceManagerId:
+                    description: The ID of the Storage Queue.
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

@@ -129,7 +129,7 @@ spec:
                       type: object
                     type: array
                   name:
-                    description: Unique identifier of the metrics configuration for the bucket.
+                    description: Unique identifier of the metrics configuration for the bucket. Must be less than or equal to 64 characters in length.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.

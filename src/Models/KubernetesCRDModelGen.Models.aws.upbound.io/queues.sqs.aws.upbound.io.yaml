@@ -102,7 +102,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   sqsManagedSseEnabled:
-                    description: Boolean to enable server-side encryption (SSE) of message content with SQS-owned encryption keys. Defaults to false. See Encryption at rest.
+                    description: Boolean to enable server-side encryption (SSE) of message content with SQS-owned encryption keys. See Encryption at rest.
                     type: boolean
                   tags:
                     additionalProperties:

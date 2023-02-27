@@ -75,8 +75,13 @@ spec:
                     description: 'Indicates whether the accelerator is enabled. Defaults to true. Valid values: true, false.'
                     type: boolean
                   ipAddressType:
-                    description: 'The value for the address type. Defaults to IPV4. Valid values: IPV4.'
+                    description: 'The value for the address type. Defaults to IPV4. Valid values: IPV4, DUAL_STACK.'
                     type: string
+                  ipAddresses:
+                    description: 'The IP addresses to use for BYOIP accelerators. If not specified, the service assigns IP addresses. Valid values: 1 or 2 IPv4 addresses.'
+                    items:
+                      type: string
+                    type: array
                   name:
                     description: The name of the accelerator.
                     type: string
@@ -235,7 +240,7 @@ spec:
                     items:
                       properties:
                         ipAddresses:
-                          description: A list of IP addresses in the IP address set.
+                          description: 'The IP addresses to use for BYOIP accelerators. If not specified, the service assigns IP addresses. Valid values: 1 or 2 IPv4 addresses.'
                           items:
                             type: string
                           type: array

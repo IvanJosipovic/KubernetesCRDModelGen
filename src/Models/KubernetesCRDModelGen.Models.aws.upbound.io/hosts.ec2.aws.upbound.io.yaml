@@ -69,7 +69,10 @@ spec:
                     description: Specifies the instance family to be supported by the Dedicated Hosts. If you specify an instance family, the Dedicated Hosts support multiple instance types within that instance family. Exactly one of instance_family or instance_type must be specified.
                     type: string
                   instanceType:
-                    description: Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.  Exactly one of instance_family or instance_type must be specified.
+                    description: Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only. Exactly one of instance_family or instance_type must be specified.
+                    type: string
+                  outpostArn:
+                    description: The Amazon Resource Name (ARN) of the AWS Outpost on which to allocate the Dedicated Host.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.

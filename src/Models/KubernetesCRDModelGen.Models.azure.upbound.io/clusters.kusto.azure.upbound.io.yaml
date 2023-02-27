@@ -73,7 +73,7 @@ spec:
                     description: Specifies if the cluster's disks are encrypted.
                     type: boolean
                   doubleEncryptionEnabled:
-                    description: Is the cluster's double encryption enabled?  Changing this forces a new resource to be created.
+                    description: Is the cluster's double encryption enabled? Changing this forces a new resource to be created.
                     type: boolean
                   engine:
                     description: . The engine type that will be used in the backend. Possible values are V2 and V3. Defaults to V2. Changing this forces a new Kusto Cluster to be created.

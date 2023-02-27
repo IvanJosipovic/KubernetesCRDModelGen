@@ -99,7 +99,7 @@ spec:
                       type: object
                     type: array
                   certificatePolicy:
-                    description: A certificate_policy block as defined below.
+                    description: A certificate_policy block as defined below. Changing this forces a new resource to be created.
                     items:
                       properties:
                         issuerParameters:
@@ -199,7 +199,7 @@ spec:
                                 description: The Certificate's Subject. Changing this forces a new resource to be created.
                                 type: string
                               subjectAlternativeNames:
-                                description: A subject_alternative_names block as defined below.
+                                description: A subject_alternative_names block as defined below. Changing this forces a new resource to be created.
                                 items:
                                   properties:
                                     dnsNames:

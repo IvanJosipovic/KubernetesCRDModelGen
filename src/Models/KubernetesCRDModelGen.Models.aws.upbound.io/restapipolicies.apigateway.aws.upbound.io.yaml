@@ -63,7 +63,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   restApiId:
-                    description: The ID of the REST API.
+                    description: ID of the REST API.
                     type: string
                   restApiIdRef:
                     description: Reference to a RestAPI in apigateway to populate restApiId.
@@ -254,7 +254,7 @@ spec:
               atProvider:
                 properties:
                   id:
-                    description: The ID of the REST API
+                    description: ID of the REST API
                     type: string
                 type: object
               conditions:

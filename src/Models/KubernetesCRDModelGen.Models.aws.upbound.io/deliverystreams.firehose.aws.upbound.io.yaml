@@ -93,7 +93,7 @@ spec:
                           description: The endpoint to use when communicating with the cluster. Conflicts with domain_arn.
                           type: string
                         domainArn:
-                          description: The ARN of the Amazon ES domain.  The IAM role must have permission for DescribeElasticsearchDomain, DescribeElasticsearchDomains, and DescribeElasticsearchDomainConfig after assuming RoleARN.  The pattern needs to be arn:.*. Conflicts with cluster_endpoint.
+                          description: The ARN of the Amazon ES domain.  The pattern needs to be arn:.*.  Conflicts with cluster_endpoint.
                           type: string
                         domainArnRef:
                           description: Reference to a Domain in elasticsearch to populate domainArn.
@@ -1049,6 +1049,9 @@ spec:
                       - roleArn
                       type: object
                     type: array
+                  name:
+                    description: A name to identify the stream. This is unique to the AWS account and region the Stream is created in. When using for WAF logging, name must be prefixed with aws-waf-logs-. See AWS Documentation for more details.
+                    type: string
                   redshiftConfiguration:
                     description: Configuration options if redshift is the destination. Using redshift_configuration requires the user to also specify a s3_configuration block. More details are given below.
                     items:
@@ -1621,6 +1624,7 @@ spec:
                     type: string
                 required:
                 - destination
+                - name
                 - region
                 type: object
               providerConfigRef:

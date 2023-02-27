@@ -83,7 +83,7 @@ spec:
                     description: Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Only supported for engine type "redis" and if the engine version is 6 or higher. Defaults to true.
                     type: string
                   automaticFailoverEnabled:
-                    description: Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, number_cache_clusters must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to false.
+                    description: Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, num_cache_clusters must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to false.
                     type: boolean
                   availabilityZones:
                     description: List of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not considered.
@@ -95,10 +95,10 @@ spec:
                     items:
                       properties:
                         numNodeGroups:
-                          description: Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless global_replication_group_id is set.
+                          description: Number of node groups (shards) for this Redis replication group. Changing this number will trigger a resizing operation before other settings modifications.
                           type: number
                         replicasPerNodeGroup:
-                          description: Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+                          description: Number of replica nodes in each node group. Changing this number will trigger a resizing operation before other settings modifications. Valid values are 0 to 5.
                           type: number
                       type: object
                     type: array
@@ -214,13 +214,13 @@ spec:
                     description: east-1:012345678999:my_sns_topic
                     type: string
                   numCacheClusters:
-                    description: Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with num_node_groups, the deprecatednumber_cache_clusters, or the deprecated cluster_mode. Defaults to 1.
+                    description: 00#.
                     type: number
                   numNodeGroups:
-                    description: Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless global_replication_group_id is set.
+                    description: Number of node groups (shards) for this Redis replication group. Changing this number will trigger a resizing operation before other settings modifications.
                     type: number
                   numberCacheClusters:
-                    description: 00#.
+                    description: Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with num_cache_clusters, num_node_groups, or the deprecated cluster_mode. Defaults to 1.
                     type: number
                   parameterGroupName:
                     description: Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e., data sharding, use a parameter group that has the parameter cluster-enabled set to true.
@@ -237,7 +237,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   replicasPerNodeGroup:
-                    description: Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+                    description: Number of replica nodes in each node group. Changing this number will trigger a resizing operation before other settings modifications. Valid values are 0 to 5.
                     type: number
                   replicationGroupDescription:
                     description: created description for the replication group. Must not be empty.
