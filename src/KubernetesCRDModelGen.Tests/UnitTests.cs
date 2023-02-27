@@ -1,7 +1,6 @@
 using FluentAssertions;
 using k8s;
 using k8s.Models;
-using KubernetesCRDModelGen.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
@@ -163,6 +162,8 @@ spec:
             kind:
               type: string
             metadata:
+              type: object
+            spec:
               type: object
 
 ";
@@ -1227,11 +1228,17 @@ spec:
 
         var itemType = specType.GetProperty("TestEnum");
 
-        var attr = itemType.GetCustomAttribute<EnumAttribute>();
+        var attr = itemType.CustomAttributes.Where(x => x.AttributeType.Name == "EnumAttribute").First();
 
         string[] test = new[] { "Always", "IfNotPresent", "Never" };
 
-        attr.Options.Should().Equal(test);
+        var output = attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>;
+
+        test.Count().Should().Be(output.Count());
+
+        foreach (CustomAttributeTypedArgument item in attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>) {
+            test.Contains(item.Value.ToString()).Should().BeTrue();
+        }
     }
 
     [Fact]
@@ -1282,10 +1289,16 @@ spec:
 
         var itemType = specType.GetProperty("EnumArray");
 
-        var attr = itemType.GetCustomAttribute<EnumAttribute>();
+        var attr = itemType.CustomAttributes.Where(x => x.AttributeType.Name == "EnumAttribute").First();
 
         string[] test = new[] { "Always", "IfNotPresent", "Never" };
 
-        attr.Options.Should().Equal(test);
+        var output = attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>;
+
+        test.Count().Should().Be(output.Count());
+
+        foreach (CustomAttributeTypedArgument item in attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>) {
+            test.Contains(item.Value.ToString()).Should().BeTrue();
+        }
     }
 }

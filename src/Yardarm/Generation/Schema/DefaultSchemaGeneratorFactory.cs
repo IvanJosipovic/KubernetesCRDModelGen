@@ -59,10 +59,7 @@ namespace Yardarm.Generation.Schema
 
         protected virtual ITypeGenerator GetObjectGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) => new ObjectSchemaGenerator(element, _context, parent);
 
-        protected virtual ITypeGenerator GetStringGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) =>
-            element.Element.Enum?.Count > 0
-                ? new EnumSchemaGenerator(element, _context, parent)
-                : new StringSchemaGenerator(element, _context, parent);
+        protected virtual ITypeGenerator GetStringGenerator(ILocatedOpenApiElement<OpenApiSchema> element, ITypeGenerator? parent) => new StringSchemaGenerator(element, _context, parent);
 
         protected virtual ITypeGenerator GetStringOrIntGenerator(ILocatedOpenApiElement<OpenApiSchema> element) => KubeStringOrIntSchemaGenerator.Instance;
 

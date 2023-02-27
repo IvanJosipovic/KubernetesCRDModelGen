@@ -1,4 +1,5 @@
 ﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.OpenApi.Models;
 using Yardarm;
@@ -59,6 +60,28 @@ public class KubernetesClassBaseEnricher : IOpenApiSyntaxNodeEnricher<ClassDecla
 
         // Add IKubernetesObject<V1ObjectMeta>
         target = target.AddBaseListTypes(genericKubeObject);
+
+        // Add ISpec<T>
+        var specModel = target.Members.FirstOrDefault(x => x is ClassDeclarationSyntax clss && clss.Identifier.ValueText == "SpecModel") as ClassDeclarationSyntax;
+
+        if (specModel != null) {
+            var type = SimpleBaseType(
+                            QualifiedName(ParseName("k8s"), GenericName(Identifier("ISpec"))
+                                .WithTypeArgumentList(
+                                    TypeArgumentList(
+                                        SingletonSeparatedList<TypeSyntax>(
+                                            QualifiedName(
+                                                IdentifierName(((ClassDeclarationSyntax)specModel.Identifier.Parent.Parent).Identifier),
+                                                IdentifierName(specModel.Identifier.ValueText)
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        );
+
+            target = target.AddBaseListTypes(type);
+        }
 
         return target;
     }
