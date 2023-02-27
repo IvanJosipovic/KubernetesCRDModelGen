@@ -1,14 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<RootNamespace>RootNamespace</RootNamespace>
+		<OutputType>Library</OutputType>
 
-  <ItemGroup>
-    <PackageReference Include="KubernetesClient.Models" Version="10.0.16" />
-  </ItemGroup>
+		<Nullable>enable</Nullable>
+		<LangVersion>10</LangVersion>
+		<IsPackable>false</IsPackable>
+		<DefineConstants>$(DefineConstants);FORTESTS</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="KubernetesClient.Models" Version="10.0.16" />
+		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="**/*.netstandard.cs" Condition=" '$(TargetFramework)' == 'net6.0' " />
+		<Compile Remove="**/*.netcoreapp.cs" Condition=" '$(TargetFramework)' == 'netstandard2.0' " />
+	</ItemGroup>
 
 </Project>

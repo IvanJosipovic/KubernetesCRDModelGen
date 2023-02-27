@@ -30,7 +30,7 @@
 
   <ItemGroup>
     <!-- Collect cs files from Yardarm.Client as resources so we can compile them into generated SDKs -->
-    <EmbeddedResource Include="../Yardarm.Client/**/*.cs" Exclude="../Yardarm.Client/bin/**;../Yardarm.Client/obj/**">
+    <EmbeddedResource Include="../KubernetesCRDModelGen.Models/**/*.cs" Exclude="../KubernetesCRDModelGen.Models/bin/**;../KubernetesCRDModelGen.Models/obj/**">
       <Visible>False</Visible>
       <LogicalName>$([System.String]::Copy('%(RelativeDir)').Substring(3).Replace('/', '.').Replace('\', '.'))%(Filename)%(Extension)</LogicalName>
     </EmbeddedResource>

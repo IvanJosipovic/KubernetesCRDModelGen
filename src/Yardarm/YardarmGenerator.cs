@@ -87,8 +87,7 @@ namespace Yardarm
             context.CurrentTargetFramework = targetFramework;
 
             // Create the empty compilation
-            var compilation = CSharpCompilation.Create(Settings.AssemblyName)
-                .WithOptions(Settings.CompilationOptions);
+            var compilation = CSharpCompilation.Create(Settings.AssemblyName).WithOptions(Settings.CompilationOptions);
 
             // Run all enrichers against the compilation
             var enrichers = context.GenerationServices.GetRequiredService<IEnumerable<ICompilationEnricher>>();

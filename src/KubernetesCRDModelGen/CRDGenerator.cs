@@ -28,6 +28,25 @@ public class CRDGenerator : ICRDGenerator {
     public CRDGenerator() {
     }
 
+    public async Task<(Stream?, Stream?)> GenerateAssemblyStream(IEnumerable<V1CustomResourceDefinition> crds, string @namespace = RootNamespace, bool embedSources = false) {
+        var settings = new YardarmGenerationSettings();
+        settings.EmbedAllSources = embedSources;
+        settings.RootNamespace = @namespace;
+        settings.AssemblyName = @namespace;
+        settings.AddExtension<SystemTextJsonExtension>();
+        settings.AddExtension<KubernetesExtension>();
+
+        var openApiDocument = ConvertCRDToOpenAPI(crds);
+
+        var generator = new YardarmGenerator(openApiDocument, settings);
+
+        var res = await generator.EmitAsync();
+
+        if (!res.Success) throw new Exception("Assembly build is not successful");
+
+        return (settings.DllOutput, settings.XmlDocumentationOutput);
+    }
+
     public async Task<(Stream?, Stream?)> GenerateAssemblyStream(V1CustomResourceDefinition crd, string @namespace = RootNamespace, bool embedSources = false) {
         var settings = new YardarmGenerationSettings();
         settings.EmbedAllSources = embedSources;
@@ -67,24 +86,27 @@ public class CRDGenerator : ICRDGenerator {
         //var assembly = AssemblyLoadContext.Default.LoadFromStream(output.Item1);
     }
 
-    private OpenApiDocument ConvertCRDToOpenAPI(V1CustomResourceDefinition crd)
+    private static OpenApiDocument ConvertCRDToOpenAPI(V1CustomResourceDefinition crd) => ConvertCRDToOpenAPI(new[] { crd });
+
+    private static OpenApiDocument ConvertCRDToOpenAPI(IEnumerable<V1CustomResourceDefinition> crds)
     {
         var final = "openapi: \"3.0.0\"\r\npaths: {}\r\ncomponents:\r\n  schemas:\r\n";
 
-        foreach (var version in crd.Spec.Versions)
-        {
-            var schema = version.Schema.OpenAPIV3Schema;
+        foreach (var crd in crds) {
+            foreach (var version in crd.Spec.Versions) {
+                var schema = version.Schema.OpenAPIV3Schema;
 
-            schema.Properties.Add("KubeApiVersion", new V1JSONSchemaProps() { Type = "string", DefaultProperty = version.Name });
-            schema.Properties.Add("KubeKind", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Names.Kind });
-            schema.Properties.Add("KubeGroup", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Group });
-            schema.Properties.Add("KubePluralName", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Names.Plural });
+                schema.Properties.Add("KubeApiVersion", new V1JSONSchemaProps() { Type = "string", DefaultProperty = version.Name });
+                schema.Properties.Add("KubeKind", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Names.Kind });
+                schema.Properties.Add("KubeGroup", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Group });
+                schema.Properties.Add("KubePluralName", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Names.Plural });
 
-            var yaml = KubernetesYaml.Serialize(schema);
+                var yaml = KubernetesYaml.Serialize(schema);
 
-            final = final + $"{(version.Name.CapitalizeFirstLetter() + crd.Spec.Names.Kind).Indent(4)}:" + Environment.NewLine + yaml.Indent(6);
+                final = final + $"{(version.Name.CapitalizeFirstLetter() + crd.Spec.Names.Kind).Indent(4)}:" + Environment.NewLine + yaml.Indent(6);
 
-            final += Environment.NewLine;
+                final += Environment.NewLine;
+            }
         }
 
         return new OpenApiStringReader().Read(final, out _);

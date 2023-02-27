@@ -181,8 +181,6 @@ namespace KubernetesCRDModelGen.Sync
             var csprojPath = Path.Combine(projectPath, GetName(config) + ".csproj");
 
             Directory.CreateDirectory(projectPath);
-
-            File.WriteAllText(csprojPath, "<Project Sdk=\"Microsoft.NET.Sdk\"></Project>");
         }
     }
 }
