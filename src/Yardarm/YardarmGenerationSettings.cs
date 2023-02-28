@@ -29,6 +29,8 @@ namespace Yardarm
         public Version Version { get; set; } = new Version(1, 0, 0);
         public string? VersionSuffix { get; set; }
         public string Author { get; set; } = "anonymous";
+        public string Description { get; set; } = "Description";
+
         public RepositoryMetadata? Repository { get; set; }
 
         /// <summary>

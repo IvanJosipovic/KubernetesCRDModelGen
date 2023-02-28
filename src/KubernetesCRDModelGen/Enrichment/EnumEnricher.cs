@@ -14,7 +14,7 @@ public class EnumEnricher : IOpenApiSyntaxNodeEnricher<PropertyDeclarationSyntax
 
     public PropertyDeclarationSyntax Enrich(PropertyDeclarationSyntax target, OpenApiEnrichmentContext<OpenApiSchema> context)
     {
-        if (context.Element.Enum.Count > 0 || context.Element.Items?.Enum.Count > 0) {
+        if ((context.Element.Type == "string" || context.Element.Items?.Type == "string") && (context.Element.Enum.Count > 0 || context.Element.Items?.Enum.Count > 0)) {
 
             var options = new List<ExpressionSyntax>();
 

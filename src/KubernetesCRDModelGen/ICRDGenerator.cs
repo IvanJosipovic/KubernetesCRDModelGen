@@ -22,4 +22,13 @@ public interface ICRDGenerator
     /// <param name="embedSources"></param>
     /// <returns></returns>
     Task<(Stream?, Stream?)> GenerateAssemblyStream(V1CustomResourceDefinition crd, string @namespace = CRDGenerator.RootNamespace, bool embedSources = false);
+
+    /// <summary>
+    /// Generates an assembly stream from the given CRDs with the containing types
+    /// </summary>
+    /// <param name="crd"></param>
+    /// <param name="namespace"></param>
+    /// <param name="embedSources"></param>
+    /// <returns></returns>
+    Task<(Stream, Stream)> GeneratePackageStream(IEnumerable<V1CustomResourceDefinition> crds, string @namespace = CRDGenerator.RootNamespace);
 }

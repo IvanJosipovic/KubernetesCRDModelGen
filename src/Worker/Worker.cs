@@ -20,30 +20,43 @@ namespace Worker {
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            var objects = await KubernetesYaml.LoadAllFromFileAsync("CRD.yaml");
+            var directories = Directory.GetDirectories("../Models");
 
-            var crd = (V1CustomResourceDefinition)objects[0];
+            foreach (var item in directories) {
+                var crds = GetCRDS(item);
 
-            var ass = await CRDGenerator.GenerateAssemblyStream(crd);
+                var name = Path.GetFileName(item);
 
-            using (Stream outStream = File.OpenWrite("models.dll")) {
-                ass.Item1.Seek(0, SeekOrigin.Begin);
-                ass.Item1.CopyTo(outStream);
+                try {
+                    var stream = await CRDGenerator.GeneratePackageStream(crds, name);
+
+                    using (Stream outStream = File.OpenWrite($"{name}.nupkg")) {
+                        stream.Item1.Seek(0, SeekOrigin.Begin);
+                        stream.Item1.CopyTo(outStream);
+                    }
+
+                    using (Stream outStream = File.OpenWrite($"{name}.snupkg")) {
+                        stream.Item2.Seek(0, SeekOrigin.Begin);
+                        stream.Item2.CopyTo(outStream);
+                    }
+                }
+                catch (Exception ex) {
+
+                    //throw;
+                }
+
             }
-
-            using (Stream outStream = File.OpenWrite("models.xml")) {
-                ass.Item2.Seek(0, SeekOrigin.Begin);
-                ass.Item2.CopyTo(outStream);
-            }
-
-            //settings.DllOutput.Seek(0, SeekOrigin.Begin);
-            //var assembly = System.Runtime.Loader.AssemblyLoadContext.Default.LoadFromStream(settings.DllOutput);
-
-            //settings.XmlDocumentationOutput.Seek(0, SeekOrigin.Begin);
-            //var xml = new XmlDocument();
-            //xml.Load(settings.XmlDocumentationOutput);
 
             hostApplicationLifetime.StopApplication();
+        }
+
+        protected IEnumerable<V1CustomResourceDefinition> GetCRDS(string path) {
+            var crds = new List<V1CustomResourceDefinition>();
+            foreach (var item in Directory.GetFiles(path)) {
+                crds.Add(KubernetesYaml.Deserialize<V1CustomResourceDefinition>(File.OpenRead(item)));
+            }
+
+            return crds;
         }
     }
 }

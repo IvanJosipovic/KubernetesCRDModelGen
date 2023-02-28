@@ -54,9 +54,12 @@ public class KubernetesClassBaseEnricher : IOpenApiSyntaxNodeEnricher<ClassDecla
         target = target.AddBaseListTypes(kubeObject);
 
         // Remove duplicate Metadata Model that was generated
-        var classes = target.Members.First(x => x is ClassDeclarationSyntax clss && clss.Identifier.ValueText == "MetadataModel");
+        var classes = target.Members.FirstOrDefault(x => x is ClassDeclarationSyntax clss && clss.Identifier.ValueText == "MetadataModel");
 
-        target = target.RemoveNode(classes, SyntaxRemoveOptions.KeepNoTrivia);
+        if (classes != null) {
+            //target = target.RemoveNode(classes, SyntaxRemoveOptions.KeepNoTrivia);
+        }
+
 
         // Add IKubernetesObject<V1ObjectMeta>
         target = target.AddBaseListTypes(genericKubeObject);

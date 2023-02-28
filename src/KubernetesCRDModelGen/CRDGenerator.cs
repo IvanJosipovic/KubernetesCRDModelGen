@@ -28,13 +28,15 @@ public class CRDGenerator : ICRDGenerator {
     public CRDGenerator() {
     }
 
-    public async Task<(Stream?, Stream?)> GenerateAssemblyStream(IEnumerable<V1CustomResourceDefinition> crds, string @namespace = RootNamespace, bool embedSources = false) {
+    public async Task<(Stream, Stream)> GeneratePackageStream(IEnumerable<V1CustomResourceDefinition> crds, string @namespace = RootNamespace) {
         var settings = new YardarmGenerationSettings();
-        settings.EmbedAllSources = embedSources;
+        settings.EmbedAllSources = true;
         settings.RootNamespace = @namespace;
         settings.AssemblyName = @namespace;
         settings.AddExtension<SystemTextJsonExtension>();
         settings.AddExtension<KubernetesExtension>();
+        settings.NuGetOutput = new MemoryStream();
+        settings.NuGetSymbolsOutput = new MemoryStream();
 
         var openApiDocument = ConvertCRDToOpenAPI(crds);
 
@@ -44,7 +46,7 @@ public class CRDGenerator : ICRDGenerator {
 
         if (!res.Success) throw new Exception("Assembly build is not successful");
 
-        return (settings.DllOutput, settings.XmlDocumentationOutput);
+        return (settings.NuGetOutput, settings.NuGetSymbolsOutput);
     }
 
     public async Task<(Stream?, Stream?)> GenerateAssemblyStream(V1CustomResourceDefinition crd, string @namespace = RootNamespace, bool embedSources = false) {
@@ -107,6 +109,7 @@ public class CRDGenerator : ICRDGenerator {
 
                 final += Environment.NewLine;
             }
+            final += Environment.NewLine;
         }
 
         return new OpenApiStringReader().Read(final, out _);

@@ -41,7 +41,7 @@ namespace Yardarm.Packaging
                     _settings.VersionSuffix?.TrimStart('-').Split(new[] {'.'}, StringSplitOptions.RemoveEmptyEntries),
                     null, null),
                 Description = _settings.AssemblyName,
-                Summary = _document.Info.Description,
+                Summary = _settings.Description,
                 Authors = {_settings.Author},
                 Repository = _settings.Repository
             };
@@ -89,7 +89,7 @@ namespace Yardarm.Packaging
                     PackageType.SymbolsPackage
                 },
                 Description = _settings.AssemblyName,
-                Summary = _document.Info.Description,
+                Summary = _settings.Description,
                 Authors = { _settings.Author }
             };
 
