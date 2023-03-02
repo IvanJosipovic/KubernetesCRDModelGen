@@ -4,6 +4,7 @@ metadata:
   annotations:
     cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
+    helm.sh/resource-policy: keep
   name: managedclusters.containerservice.azure.com
 spec:
   conversion:
@@ -304,7 +305,6 @@ spec:
                           type: string
                       type: object
                     proximityPlacementGroupID:
-                      description: Deprecated version of ProximityPlacementGroupID. Use v1beta20210501.ProximityPlacementGroupID instead
                       type: string
                     scaleSetEvictionPolicy:
                       description: Deprecated version of ScaleSetEvictionPolicy. Use v1beta20210501.ScaleSetEvictionPolicy instead
