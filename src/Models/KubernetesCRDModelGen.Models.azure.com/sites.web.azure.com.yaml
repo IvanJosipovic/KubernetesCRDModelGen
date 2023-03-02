@@ -4,6 +4,7 @@ metadata:
   annotations:
     cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
+    helm.sh/resource-policy: keep
   name: sites.web.azure.com
 spec:
   conversion:
@@ -802,7 +803,7 @@ spec:
                         description: 'Kind: Kind of resource.'
                         type: string
                       tagWhitelistJson:
-                        description: 'TagWhitelistJson: Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.'
+                        description: 'TagWhitelistJson: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push registration endpoint.'
                         type: string
                       tagsRequiringAuth:
                         description: "TagsRequiringAuth: Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint. Tags can consist of alphanumeric characters and the following: '_', '@', '#', '.', ':', '-'. Validation should be performed at the PushRequestHandler."
@@ -1716,7 +1717,7 @@ spec:
                         description: 'Name: Resource Name.'
                         type: string
                       tagWhitelistJson:
-                        description: 'TagWhitelistJson: Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.'
+                        description: 'TagWhitelistJson: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push registration endpoint.'
                         type: string
                       tagsRequiringAuth:
                         description: "TagsRequiringAuth: Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint. Tags can consist of alphanumeric characters and the following: '_', '@', '#', '.', ':', '-'. Validation should be performed at the PushRequestHandler."

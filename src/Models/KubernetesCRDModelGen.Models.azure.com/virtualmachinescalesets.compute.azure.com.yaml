@@ -4,6 +4,7 @@ metadata:
   annotations:
     cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
+    helm.sh/resource-policy: keep
   name: virtualmachinescalesets.compute.azure.com
 spec:
   conversion:
@@ -8002,9 +8003,35 @@ spec:
                               description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
                               type: object
                             protectedSettingsFromKeyVault:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
                               description: 'ProtectedSettingsFromKeyVault: The extensions protected settings that are passed by reference, and consumed from key vault'
+                              properties:
+                                secretUrl:
+                                  description: 'SecretUrl: The URL referencing a secret in a Key Vault.'
+                                  type: string
+                                sourceVault:
+                                  description: 'SourceVault: The relative URL of the Key Vault containing the secret.'
+                                  properties:
+                                    reference:
+                                      description: 'Reference: Resource Id'
+                                      properties:
+                                        armId:
+                                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                          pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                          type: string
+                                        group:
+                                          description: Group is the Kubernetes group of the resource.
+                                          type: string
+                                        kind:
+                                          description: Kind is the Kubernetes kind of the resource.
+                                          type: string
+                                        name:
+                                          description: Name is the Kubernetes name of the resource.
+                                          type: string
+                                      type: object
+                                  type: object
+                              required:
+                              - secretUrl
+                              - sourceVault
                               type: object
                             provisionAfterExtensions:
                               description: 'ProvisionAfterExtensions: Collection of extension names after which this extension needs to be provisioned.'
@@ -9293,9 +9320,18 @@ spec:
                               description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
                               type: object
                             protectedSettingsFromKeyVault:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
                               description: 'ProtectedSettingsFromKeyVault: The extensions protected settings that are passed by reference, and consumed from key vault'
+                              properties:
+                                secretUrl:
+                                  description: 'SecretUrl: The URL referencing a secret in a Key Vault.'
+                                  type: string
+                                sourceVault:
+                                  description: 'SourceVault: The relative URL of the Key Vault containing the secret.'
+                                  properties:
+                                    id:
+                                      description: 'Id: Resource Id'
+                                      type: string
+                                  type: object
                               type: object
                             provisionAfterExtensions:
                               description: 'ProvisionAfterExtensions: Collection of extension names after which this extension needs to be provisioned.'
@@ -10330,8 +10366,41 @@ spec:
                                 x-kubernetes-preserve-unknown-fields: true
                               type: object
                             protectedSettingsFromKeyVault:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
+                              description: Storage version of v1beta20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret
+                              properties:
+                                $propertyBag:
+                                  additionalProperties:
+                                    type: string
+                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  type: object
+                                secretUrl:
+                                  type: string
+                                sourceVault:
+                                  description: Storage version of v1beta20220301.SubResource
+                                  properties:
+                                    $propertyBag:
+                                      additionalProperties:
+                                        type: string
+                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      type: object
+                                    reference:
+                                      description: 'Reference: Resource Id'
+                                      properties:
+                                        armId:
+                                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                          pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                          type: string
+                                        group:
+                                          description: Group is the Kubernetes group of the resource.
+                                          type: string
+                                        kind:
+                                          description: Kind is the Kubernetes kind of the resource.
+                                          type: string
+                                        name:
+                                          description: Name is the Kubernetes name of the resource.
+                                          type: string
+                                      type: object
+                                  type: object
                               type: object
                             provisionAfterExtensions:
                               items:
@@ -11696,8 +11765,26 @@ spec:
                                 x-kubernetes-preserve-unknown-fields: true
                               type: object
                             protectedSettingsFromKeyVault:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
+                              description: Storage version of v1beta20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret
+                              properties:
+                                $propertyBag:
+                                  additionalProperties:
+                                    type: string
+                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  type: object
+                                secretUrl:
+                                  type: string
+                                sourceVault:
+                                  description: Storage version of v1beta20220301.SubResource_STATUS
+                                  properties:
+                                    $propertyBag:
+                                      additionalProperties:
+                                        type: string
+                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      type: object
+                                    id:
+                                      type: string
+                                  type: object
                               type: object
                             provisionAfterExtensions:
                               items:
