@@ -194,8 +194,6 @@ spec:
                                 items:
                                   type: string
                                 type: array
-                            required:
-                            - defaultResourceSpec
                             type: object
                           type: array
                         kernelGatewayAppSettings:
@@ -243,8 +241,6 @@ spec:
                                 items:
                                   type: string
                                 type: array
-                            required:
-                            - defaultResourceSpec
                             type: object
                           type: array
                         rSessionAppSettings:

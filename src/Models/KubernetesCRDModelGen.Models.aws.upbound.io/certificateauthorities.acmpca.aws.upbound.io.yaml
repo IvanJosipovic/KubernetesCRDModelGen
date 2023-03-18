@@ -118,7 +118,7 @@ spec:
                       type: object
                     type: array
                   enabled:
-                    description: Whether the certificate authority is enabled or disabled. Defaults to true.
+                    description: Whether the certificate authority is enabled or disabled. Defaults to true. Can only be disabled if the CA is in an ACTIVE state.
                     type: boolean
                   permanentDeletionTimeInDays:
                     description: Number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
@@ -144,13 +144,11 @@ spec:
                                 description: Number of days until a certificate expires. Must be between 1 and 5000.
                                 type: number
                               s3BucketName:
-                                description: Name of the S3 bucket that contains the CRL. If you do not provide a value for the custom_cname argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
+                                description: Name of the S3 bucket that contains the CRL. If you do not provide a value for the custom_cname argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be between 3 and 255 characters in length.
                                 type: string
                               s3ObjectAcl:
                                 description: Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3 bucket. Defaults to PUBLIC_READ.
                                 type: string
-                            required:
-                            - expirationInDays
                             type: object
                           type: array
                         ocspConfiguration:

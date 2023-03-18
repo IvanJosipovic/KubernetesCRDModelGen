@@ -166,7 +166,7 @@ spec:
                         type: object
                     type: object
                   partitionCount:
-                    description: Specifies the current number of shards on the Event Hub.
+                    description: Specifies the current number of shards on the Event Hub. Changing this will force-recreate the resource.
                     type: number
                   resourceGroupName:
                     description: The name of the resource group in which the EventHub's parent Namespace exists. Changing this forces a new resource to be created.

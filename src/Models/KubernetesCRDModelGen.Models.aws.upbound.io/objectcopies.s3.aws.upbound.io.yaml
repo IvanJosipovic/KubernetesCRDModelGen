@@ -134,7 +134,7 @@ spec:
                           description: Email address of the grantee. Used only when type is AmazonCustomerByEmail.
                           type: string
                         id:
-                          description: The canonical user ID of the grantee. Used only when type is CanonicalUser.
+                          description: Canonical user ID of the grantee. Used only when type is CanonicalUser.
                           type: string
                         permissions:
                           description: List of permissions to grant to grantee. Valid values are READ, READ_ACP, WRITE_ACP, FULL_CONTROL.
@@ -192,7 +192,7 @@ spec:
                   metadata:
                     additionalProperties:
                       type: string
-                    description: A map of keys/values to provision metadata (will be automatically prefixed by x-amz-meta-, note that only lowercase label are currently supported by the AWS Go API).
+                    description: Map of keys/values to provision metadata (will be automatically prefixed by x-amz-meta-, note that only lowercase label are currently supported by the AWS Go API).
                     type: object
                   metadataDirective:
                     description: Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request. Valid values are COPY and REPLACE.
@@ -201,10 +201,10 @@ spec:
                     description: The legal hold status that you want to apply to the specified object. Valid values are ON and OFF.
                     type: string
                   objectLockMode:
-                    description: The object lock retention mode that you want to apply to this object. Valid values are GOVERNANCE and COMPLIANCE.
+                    description: Object lock retention mode that you want to apply to this object. Valid values are GOVERNANCE and COMPLIANCE.
                     type: string
                   objectLockRetainUntilDate:
-                    description: The date and time, in RFC3339 format, when this object's object lock will expire.
+                    description: Date and time, in RFC3339 format, when this object's object lock will expire.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
@@ -216,7 +216,7 @@ spec:
                     description: Specifies server-side encryption of the object in S3. Valid values are AES256 and aws:kms.
                     type: string
                   source:
-                    description: Specifies the source object for the copy operation. You specify the value in one of two formats. For objects not accessed through an access point, specify the name of the source bucket and the key of the source object, separated by a slash (/). For example, testbucket/test1.json. For objects accessed through access points, specify the Amazon Resource Name (ARN) of the object as accessed through the access point, in the format arn:aws:s3:<Region>:<account-id>:accesspoint/<access-point-name>/object/<key>. For example, arn:aws:s3:us-west-2:9999912999:accesspoint/my-access-point/object/testbucket/test1.json.
+                    description: Specifies the source object for the copy operation. You specify the value in one of two formats. For objects not accessed through an access point, specify the name of the source bucket and the key of the source object, separated by a slash (/). For example, testbucket/test1.json. For objects accessed through access points, specify the ARN of the object as accessed through the access point, in the format arn:aws:s3:<Region>:<account-id>:accesspoint/<access-point-name>/object/<key>. For example, arn:aws:s3:us-west-2:9999912999:accesspoint/my-access-point/object/testbucket/test1.json.
                     type: string
                   sourceCustomerAlgorithm:
                     description: Specifies the algorithm to use when decrypting the source object (for example, AES256).
@@ -391,13 +391,13 @@ spec:
               atProvider:
                 properties:
                   etag:
-                    description: The ETag generated for the object (an MD5 sum of the object content). For plaintext objects or objects encrypted with an AWS-managed key, the hash is an MD5 digest of the object data. For objects encrypted with a KMS key or objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5 digest, regardless of the method of encryption. More information on possible values can be found on Common Response Headers.
+                    description: ETag generated for the object (an MD5 sum of the object content). For plaintext objects or objects encrypted with an AWS-managed key, the hash is an MD5 digest of the object data. For objects encrypted with a KMS key or objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5 digest, regardless of the method of encryption. More information on possible values can be found on Common Response Headers.
                     type: string
                   expiration:
                     description: If the object expiration is configured, this attribute will be set.
                     type: string
                   id:
-                    description: The canonical user ID of the grantee. Used only when type is CanonicalUser.
+                    description: Canonical user ID of the grantee. Used only when type is CanonicalUser.
                     type: string
                   lastModified:
                     description: Returns the date that the object was last modified, in RFC3339 format.
@@ -411,7 +411,7 @@ spec:
                   tagsAll:
                     additionalProperties:
                       type: string
-                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                   versionId:
                     description: Version ID of the newly created copy.

@@ -60,6 +60,7 @@ spec:
                     description: The ID of the App Service Environment where the App Service Plan should be located. Changing forces a new resource to be created.
                     type: string
                   isXenon:
+                    description: Whether to create a xenon App Service Plan.
                     type: boolean
                   kind:
                     description: The kind of the App Service Plan to create. Possible values are Windows (also available as App), Linux, elastic (for Premium Consumption), xenon and FunctionApp (for a Consumption Plan). Defaults to Windows. Changing this forces a new resource to be created.

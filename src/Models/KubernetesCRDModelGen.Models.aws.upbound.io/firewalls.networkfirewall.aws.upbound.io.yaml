@@ -150,6 +150,9 @@ spec:
                     description: Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
                     items:
                       properties:
+                        ipAddressType:
+                          description: "The subnet's IP address type. Valida values: \"DUALSTACK\", \"IPV4\"."
+                          type: string
                         subnetId:
                           description: The unique identifier for the subnet.
                           type: string

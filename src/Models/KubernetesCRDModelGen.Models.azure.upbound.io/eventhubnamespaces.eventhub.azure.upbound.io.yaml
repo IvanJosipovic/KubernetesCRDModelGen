@@ -70,6 +70,7 @@ spec:
                     items:
                       properties:
                         identityIds:
+                          description: Specifies a list of User Assigned Managed Identity IDs to be assigned to this EventHub namespace.
                           items:
                             type: string
                           type: array

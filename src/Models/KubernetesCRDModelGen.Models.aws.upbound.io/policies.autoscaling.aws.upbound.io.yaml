@@ -380,7 +380,6 @@ spec:
                                       type: string
                                   required:
                                   - predefinedMetricType
-                                  - resourceLabel
                                   type: object
                                 type: array
                               predefinedMetricPairSpecification:
@@ -395,7 +394,6 @@ spec:
                                       type: string
                                   required:
                                   - predefinedMetricType
-                                  - resourceLabel
                                   type: object
                                 type: array
                               predefinedScalingMetricSpecification:
@@ -410,7 +408,6 @@ spec:
                                       type: string
                                   required:
                                   - predefinedMetricType
-                                  - resourceLabel
                                   type: object
                                 type: array
                               targetValue:

@@ -82,6 +82,17 @@ spec:
                       - time
                       type: object
                     type: array
+                  instantRestoreResourceGroup:
+                    items:
+                      properties:
+                        prefix:
+                          type: string
+                        suffix:
+                          type: string
+                      required:
+                      - prefix
+                      type: object
+                    type: array
                   instantRestoreRetentionDays:
                     description: Specifies the instant restore retention range in days. Possible values are between 1 and 5 when policy_type is V1, and 1 to 30 when policy_type is V2.
                     type: number

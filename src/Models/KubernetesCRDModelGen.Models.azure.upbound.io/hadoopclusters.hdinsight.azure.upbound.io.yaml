@@ -83,6 +83,7 @@ spec:
                       type: object
                     type: array
                   diskEncryption:
+                    description: One or more disk_encryption block as defined below.
                     items:
                       properties:
                         encryptionAlgorithm:
@@ -385,6 +386,7 @@ spec:
                           items:
                             properties:
                               httpsEndpoints:
+                                description: The HTTPS Connectivity Endpoint for this HDInsight Hadoop Cluster.
                                 items:
                                   properties:
                                     accessModes:
@@ -411,13 +413,13 @@ spec:
                                 items:
                                   properties:
                                     name:
-                                      description: The name of the uninstall script action. Changing this forces a new resource to be created.
+                                      description: The name of the uninstall script action.
                                       type: string
                                     parameters:
                                       description: The parameters for the script.
                                       type: string
                                     uri:
-                                      description: The URI pointing to the script to run during the installation of the edge node. Changing this forces a new resource to be created.
+                                      description: The URI pointing to the script to run during the installation of the edge node.
                                       type: string
                                   required:
                                   - name
@@ -428,16 +430,17 @@ spec:
                                 description: The number of instances which should be run for the Worker Nodes.
                                 type: number
                               uninstallScriptActions:
+                                description: A uninstall_script_actions block as defined below. Changing this forces a new resource to be created.
                                 items:
                                   properties:
                                     name:
-                                      description: The name of the uninstall script action. Changing this forces a new resource to be created.
+                                      description: The name of the uninstall script action.
                                       type: string
                                     parameters:
                                       description: The parameters for the script.
                                       type: string
                                     uri:
-                                      description: The URI pointing to the script to run during the installation of the edge node. Changing this forces a new resource to be created.
+                                      description: The URI pointing to the script to run during the installation of the edge node.
                                       type: string
                                   required:
                                   - name
@@ -479,13 +482,13 @@ spec:
                                 items:
                                   properties:
                                     name:
-                                      description: The name of the uninstall script action. Changing this forces a new resource to be created.
+                                      description: The name of the uninstall script action.
                                       type: string
                                     parameters:
                                       description: The parameters for the script.
                                       type: string
                                     uri:
-                                      description: The URI pointing to the script to run during the installation of the edge node. Changing this forces a new resource to be created.
+                                      description: The URI pointing to the script to run during the installation of the edge node.
                                       type: string
                                   required:
                                   - name
@@ -649,13 +652,13 @@ spec:
                                 items:
                                   properties:
                                     name:
-                                      description: The name of the uninstall script action. Changing this forces a new resource to be created.
+                                      description: The name of the uninstall script action.
                                       type: string
                                     parameters:
                                       description: The parameters for the script.
                                       type: string
                                     uri:
-                                      description: The URI pointing to the script to run during the installation of the edge node. Changing this forces a new resource to be created.
+                                      description: The URI pointing to the script to run during the installation of the edge node.
                                       type: string
                                   required:
                                   - name
@@ -769,13 +772,13 @@ spec:
                                 items:
                                   properties:
                                     name:
-                                      description: The name of the uninstall script action. Changing this forces a new resource to be created.
+                                      description: The name of the uninstall script action.
                                       type: string
                                     parameters:
                                       description: The parameters for the script.
                                       type: string
                                     uri:
-                                      description: The URI pointing to the script to run during the installation of the edge node. Changing this forces a new resource to be created.
+                                      description: The URI pointing to the script to run during the installation of the edge node.
                                       type: string
                                   required:
                                   - name
