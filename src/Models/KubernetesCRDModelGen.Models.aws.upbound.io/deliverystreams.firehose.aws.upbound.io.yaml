@@ -693,7 +693,7 @@ spec:
                             type: object
                           type: array
                         dynamicPartitioningConfiguration:
-                          description: The configuration for dynamic partitioning. See Dynamic Partitioning Configuration below for more details.
+                          description: The configuration for dynamic partitioning. See Dynamic Partitioning Configuration below for more details. Required when using dynamic partitioning.
                           items:
                             properties:
                               enabled:

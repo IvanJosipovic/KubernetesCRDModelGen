@@ -69,6 +69,11 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                              excludePrefixes:
+                                description: A set of strings for blob prefixes to be excluded. Maximum of 10 blob prefixes.
+                                items:
+                                  type: string
+                                type: array
                               includeBlobVersions:
                                 description: Includes blob versions in blob inventory or not? Defaults to false.
                                 type: boolean
@@ -79,7 +84,7 @@ spec:
                                 description: Includes blob snapshots in blob inventory or not? Defaults to false.
                                 type: boolean
                               prefixMatch:
-                                description: A set of strings for blob prefixes to be matched.
+                                description: A set of strings for blob prefixes to be matched. Maximum of 10 blob prefixes.
                                 items:
                                   type: string
                                 type: array

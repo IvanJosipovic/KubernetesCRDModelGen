@@ -274,6 +274,7 @@ spec:
                                       items:
                                         properties:
                                           bestEffortEnforced:
+                                            description: Indicates whether this restriction is enforced on a best effort basis. Possible values are true or false. Defaults to false.
                                             type: boolean
                                           controlBits:
                                             description: The restriction control bits. Possible value is integer between 0 and 3 inclusive.

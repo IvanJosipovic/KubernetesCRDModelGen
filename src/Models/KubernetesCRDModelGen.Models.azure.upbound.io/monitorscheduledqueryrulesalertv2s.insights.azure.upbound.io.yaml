@@ -61,7 +61,7 @@ spec:
                     items:
                       properties:
                         actionGroups:
-                          description: List of Action Group resource ids to invoke when the alert fires.
+                          description: List of Action Group resource IDs to invoke when the alert fires.
                           items:
                             type: string
                           type: array
@@ -125,7 +125,7 @@ spec:
                           description: The query to run on logs. The results returned by this query are used to populate the alert.
                           type: string
                         resourceIdColumn:
-                          description: Specifies the column containing the resource id. The content of the column must be an uri formatted as resource id.
+                          description: Specifies the column containing the resource ID. The content of the column must be an uri formatted as resource ID.
                           type: string
                         threshold:
                           description: Specifies the criteria threshold value that activates the alert.
@@ -220,7 +220,7 @@ spec:
                         type: object
                     type: object
                   scopes:
-                    description: Specifies the list of resource ids that this scheduled query rule is scoped to. Changing this forces a new resource to be created.
+                    description: Specifies the list of resource IDs that this scheduled query rule is scoped to. Changing this forces a new resource to be created. Currently, the API supports exactly 1 resource ID in the scopes list.
                     items:
                       type: string
                     type: array
@@ -443,7 +443,7 @@ spec:
                     description: The api-version used when creating this alert rule.
                     type: string
                   id:
-                    description: The id of the Monitor Scheduled Query Rule.
+                    description: The ID of the Monitor Scheduled Query Rule.
                     type: string
                   isALegacyLogAnalyticsRule:
                     description: True if this alert rule is a legacy Log Analytic Rule.

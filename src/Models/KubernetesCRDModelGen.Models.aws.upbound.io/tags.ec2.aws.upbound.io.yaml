@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: 
-  name: policies.organizations.aws.upbound.io
+  name: tags.ec2.aws.upbound.io
 spec:
-  group: organizations.aws.upbound.io
+  group: ec2.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - aws
-    kind: Policy
-    listKind: PolicyList
-    plural: policies
-    singular: policy
+    kind: Tag
+    listKind: TagList
+    plural: tags
+    singular: tag
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Policy is the Schema for the Policys API. Provides a resource to manage an AWS Organizations policy.
+        description: Tag is the Schema for the Tags API. Manages an individual EC2 resource tag
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: PolicySpec defines the desired state of Policy
+            description: TagSpec defines the desired state of Tag
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,33 +56,23 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  content:
-                    description: The policy content to add to the new policy. For example, if you create a service control policy (SCP), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the Service Control Policy Syntax documentation and for more information on the Tag Policy syntax, see the Tag Policy Syntax documentation.
-                    type: string
-                  description:
-                    description: A description to assign to the policy.
-                    type: string
-                  name:
-                    description: The friendly name to assign to the policy.
+                  key:
+                    description: The tag name.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
-                  skipDestroy:
-                    description: If set to true, destroy will not delete the policy and instead just remove the resource from state. This can be useful in situations where the policies (and the associated attachment) must be preserved to meet the AWS minimum requirement of 1 attached policy.
-                    type: boolean
-                  tags:
-                    additionalProperties:
-                      type: string
-                    description: Key-value map of resource tags.
-                    type: object
-                  type:
-                    description: The type of policy to create. Valid values are AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, SERVICE_CONTROL_POLICY (SCP), and TAG_POLICY. Defaults to SERVICE_CONTROL_POLICY.
+                  resourceId:
+                    description: The ID of the EC2 resource to manage the tag for.
+                    type: string
+                  value:
+                    description: The value of the tag.
                     type: string
                 required:
-                - content
-                - name
+                - key
                 - region
+                - resourceId
+                - value
                 type: object
               providerConfigRef:
                 default:
@@ -209,21 +199,13 @@ spec:
             - forProvider
             type: object
           status:
-            description: PolicyStatus defines the observed state of Policy.
+            description: TagStatus defines the observed state of Tag.
             properties:
               atProvider:
                 properties:
-                  arn:
-                    description: Amazon Resource Name (ARN) of the policy.
-                    type: string
                   id:
-                    description: The unique identifier (ID) of the policy.
+                    description: EC2 resource identifier and key, separated by a comma (,)
                     type: string
-                  tagsAll:
-                    additionalProperties:
-                      type: string
-                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
-                    type: object
                 type: object
               conditions:
                 description: Conditions of the resource.

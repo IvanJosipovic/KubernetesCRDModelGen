@@ -57,7 +57,7 @@ spec:
               forProvider:
                 properties:
                   bucket:
-                    description: The name of the bucket this analytics configuration is associated with.
+                    description: Name of the bucket this analytics configuration is associated with.
                     type: string
                   bucketRef:
                     description: Reference to a Bucket in s3 to populate bucket.
@@ -151,10 +151,10 @@ spec:
                                       items:
                                         properties:
                                           bucketAccountId:
-                                            description: The account ID that owns the destination bucket.
+                                            description: Account ID that owns the destination bucket.
                                             type: string
                                           bucketArn:
-                                            description: The ARN of the destination bucket.
+                                            description: ARN of the destination bucket.
                                             type: string
                                           bucketArnRef:
                                             description: Reference to a Bucket in s3 to populate bucketArn.
@@ -212,7 +212,7 @@ spec:
                                                 type: object
                                             type: object
                                           format:
-                                            description: 'The output format of exported analytics data. Allowed values: CSV. Default value: CSV.'
+                                            description: 'Output format of exported analytics data. Allowed values: CSV. Default value: CSV.'
                                             type: string
                                           prefix:
                                             description: Object prefix for filtering.
@@ -224,7 +224,7 @@ spec:
                                   type: object
                                 type: array
                               outputSchemaVersion:
-                                description: 'The schema version of exported analytics data. Allowed values: V_1. Default value: V_1.'
+                                description: 'Schema version of exported analytics data. Allowed values: V_1. Default value: V_1.'
                                 type: string
                             required:
                             - destination
