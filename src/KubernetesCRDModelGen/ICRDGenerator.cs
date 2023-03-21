@@ -30,5 +30,5 @@ public interface ICRDGenerator
     /// <param name="namespace"></param>
     /// <param name="embedSources"></param>
     /// <returns></returns>
-    Task<(Stream, Stream)> GeneratePackageStream(IEnumerable<V1CustomResourceDefinition> crds, string @namespace = CRDGenerator.RootNamespace);
+    Task<(Stream, Stream)> GeneratePackageStream(IEnumerable<V1CustomResourceDefinition> crds, string assemblyName, string @namespace = CRDGenerator.RootNamespace);
 }

@@ -15,7 +15,7 @@ using Yardarm.SystemTextJson;
 namespace KubernetesCRDModelGen;
 
 public class CRDGenerator : ICRDGenerator {
-    public const string RootNamespace = "KubernetesCRDModelGen";
+    public const string RootNamespace = "KubernetesCRDModelGen.Models";
 
     private ILogger<CRDGenerator>? Logger { get; set; }
 
@@ -28,11 +28,11 @@ public class CRDGenerator : ICRDGenerator {
     public CRDGenerator() {
     }
 
-    public async Task<(Stream, Stream)> GeneratePackageStream(IEnumerable<V1CustomResourceDefinition> crds, string @namespace = RootNamespace) {
+    public async Task<(Stream, Stream)> GeneratePackageStream(IEnumerable<V1CustomResourceDefinition> crds, string assemblyName, string @namespace = RootNamespace) {
         var settings = new YardarmGenerationSettings();
         settings.EmbedAllSources = true;
         settings.RootNamespace = @namespace;
-        settings.AssemblyName = @namespace;
+        settings.AssemblyName = assemblyName;
         settings.AddExtension<SystemTextJsonExtension>();
         settings.AddExtension<KubernetesExtension>();
         settings.NuGetOutput = new MemoryStream();
@@ -97,6 +97,11 @@ public class CRDGenerator : ICRDGenerator {
         foreach (var crd in crds) {
             foreach (var version in crd.Spec.Versions) {
                 var schema = version.Schema.OpenAPIV3Schema;
+                var name = version.Name + crd.Spec.Group.Replace(".", "") + crd.Spec.Names.Kind;
+
+                if (schema.Properties == null) {
+                    schema.Properties = new Dictionary<string, V1JSONSchemaProps>();
+                }
 
                 schema.Properties.Add("KubeApiVersion", new V1JSONSchemaProps() { Type = "string", DefaultProperty = version.Name });
                 schema.Properties.Add("KubeKind", new V1JSONSchemaProps() { Type = "string", DefaultProperty = crd.Spec.Names.Kind });
@@ -105,14 +110,19 @@ public class CRDGenerator : ICRDGenerator {
 
                 var yaml = KubernetesYaml.Serialize(schema);
 
-                final = final + $"{(version.Name.CapitalizeFirstLetter() + crd.Spec.Names.Kind).Indent(4)}:" + Environment.NewLine + yaml.Indent(6);
+                final = final + $"{name.Indent(4)}:" + Environment.NewLine + yaml.Indent(6);
 
                 final += Environment.NewLine;
             }
-            final += Environment.NewLine;
         }
 
-        return new OpenApiStringReader().Read(final, out _);
+        var doc = new OpenApiStringReader().Read(final, out var diag);
+
+        if (doc.Components == null) {
+            throw new Exception("Components are null");
+        }
+
+        return doc;
     }
 
     private void GenerateReferences()

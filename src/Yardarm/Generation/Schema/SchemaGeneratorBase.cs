@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Yardarm.Names;
 using Yardarm.Spec;
@@ -26,11 +27,13 @@ namespace Yardarm.Generation.Schema
             {
                 NameSyntax ns = Context.NamespaceProvider.GetNamespace(Element);
 
-                var formatter = Context.NameFormatterSelector.GetFormatter(NameKind);
+                //var formatter = Context.NameFormatterSelector.GetFormatter(NameKind);
+
+                var className = CapitalizeFirstLetter((Schema.Properties["KubeApiVersion"].Default as OpenApiString).Value) + (Schema.Properties["KubeKind"].Default as OpenApiString).Value;
 
                 return new YardarmTypeInfo(
                     SyntaxFactory.QualifiedName(ns,
-                        SyntaxFactory.IdentifierName(formatter.Format(Schema.Reference.Id))),
+                        SyntaxFactory.IdentifierName(className)),
                     NameKind);
             }
 
@@ -52,5 +55,17 @@ namespace Yardarm.Generation.Schema
         public override QualifiedNameSyntax? GetChildName<TChild>(ILocatedOpenApiElement<TChild> child, NameKind nameKind) =>
             QualifiedName((NameSyntax)TypeInfo.Name, IdentifierName(
                 Context.NameFormatterSelector.GetFormatter(nameKind).Format(child.Key + "-Model")));
+
+        public string CapitalizeFirstLetter(string str) {
+            if (str.Length == 0) {
+                return string.Empty;
+            }
+            else if (str.Length == 1) {
+                return char.ToUpper(str[0]).ToString();
+            }
+            else {
+                return char.ToUpper(str[0]) + str.Substring(1);
+            }
+        }
     }
 }

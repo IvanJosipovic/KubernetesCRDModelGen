@@ -20,14 +20,11 @@ namespace Worker {
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            var directories = Directory.GetDirectories("../Models");
-
-            foreach (var item in directories) {
-                var crds = GetCRDS(item);
-
-                var name = Path.GetFileName(item);
-
+            foreach (var path in Directory.GetDirectories("../Models")) {
                 try {
+                    var crds = GetCRDS(path);
+
+                    var name = new DirectoryInfo(path).Name;
                     var stream = await CRDGenerator.GeneratePackageStream(crds, name);
 
                     using (Stream outStream = File.OpenWrite($"{name}.nupkg")) {
@@ -44,7 +41,6 @@ namespace Worker {
 
                     //throw;
                 }
-
             }
 
             hostApplicationLifetime.StopApplication();

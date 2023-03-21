@@ -168,7 +168,7 @@ spec:
 
 ";
         var type = await GetTypeYaml(yaml, "Test");
-
+        type.Name.Should().Be("V1beta1Test");
         type.IsAssignableTo(typeof(IKubernetesObject)).Should().BeTrue();
         type.IsAssignableTo(typeof(IKubernetesObject<V1ObjectMeta>)).Should().BeTrue();
         type.IsAssignableTo(typeof(IMetadata<V1ObjectMeta>)).Should().BeTrue();
