@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.8.0
+    controller-gen.kubebuilder.io/version: v0.11.3
   creationTimestamp: 
   name: transitgatewayroutes.ec2.aws.upbound.io
 spec:
@@ -127,7 +127,7 @@ spec:
                     description: Identifier of EC2 Transit Gateway Route Table.
                     type: string
                   transitGatewayRouteTableIdRef:
-                    description: Reference to a TransitGateway in ec2 to populate transitGatewayRouteTableId.
+                    description: Reference to a TransitGatewayRouteTable to populate transitGatewayRouteTableId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -153,7 +153,7 @@ spec:
                     - name
                     type: object
                   transitGatewayRouteTableIdSelector:
-                    description: Selector for a TransitGateway in ec2 to populate transitGatewayRouteTableId.
+                    description: Selector for a TransitGatewayRouteTable to populate transitGatewayRouteTableId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -354,9 +354,3 @@ spec:
     storage: true
     subresources:
       status: {}
-status:
-  acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: []
-  storedVersions: []

@@ -2,20 +2,20 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.8.0
+    controller-gen.kubebuilder.io/version: v0.11.3
   creationTimestamp: 
-  name: devicefleet.sagemaker.aws.upbound.io
+  name: applications.emrserverless.aws.upbound.io
 spec:
-  group: sagemaker.aws.upbound.io
+  group: emrserverless.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - aws
-    kind: DeviceFleet
-    listKind: DeviceFleetList
-    plural: devicefleet
-    singular: devicefleet
+    kind: Application
+    listKind: ApplicationList
+    plural: applications
+    singular: application
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: DeviceFleet is the Schema for the DeviceFleets API. Provides a SageMaker Device Fleet resource.
+        description: Application is the Schema for the Applications API. Manages an EMR Serverless Application
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: DeviceFleetSpec defines the desired state of DeviceFleet
+            description: ApplicationSpec defines the desired state of Application
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,95 +56,126 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  description:
-                    description: A description of the fleet.
+                  architecture:
+                    description: –  The CPU architecture of an application. Valid values are ARM64 or X86_64. Default value is X86_64.
                     type: string
-                  enableIotRoleAlias:
-                    description: 'Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: "SageMakerEdge-{DeviceFleetName}".'
-                    type: boolean
-                  outputConfig:
-                    description: Specifies details about the repository. see Output Config details below.
+                  autoStartConfiguration:
+                    description: –  The configuration for an application to automatically start on job submission.
                     items:
                       properties:
-                        kmsKeyId:
-                          description: The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role's account.
-                          type: string
-                        s3OutputLocation:
-                          description: The Amazon Simple Storage (S3) bucker URI.
+                        enabled:
+                          description: Enables the application to automatically start on job submission. Defaults to true.
+                          type: boolean
+                      type: object
+                    type: array
+                  autoStopConfiguration:
+                    description: –  The configuration for an application to automatically stop after a certain amount of time being idle.
+                    items:
+                      properties:
+                        enabled:
+                          description: Enables the application to automatically start on job submission. Defaults to true.
+                          type: boolean
+                        idleTimeoutMinutes:
+                          description: The amount of idle time in minutes after which your application will automatically stop. Defaults to 15 minutes.
+                          type: number
+                      type: object
+                    type: array
+                  initialCapacity:
+                    description: –  The capacity to initialize when the application is created.
+                    items:
+                      properties:
+                        initialCapacityConfig:
+                          description: The initial capacity configuration per worker.
+                          items:
+                            properties:
+                              workerConfiguration:
+                                description: The resource configuration of the initial capacity configuration.
+                                items:
+                                  properties:
+                                    cpu:
+                                      description: The maximum allowed CPU for an application.
+                                      type: string
+                                    disk:
+                                      description: The maximum allowed disk for an application.
+                                      type: string
+                                    memory:
+                                      description: The maximum allowed resources for an application.
+                                      type: string
+                                  required:
+                                  - cpu
+                                  - memory
+                                  type: object
+                                type: array
+                              workerCount:
+                                description: The number of workers in the initial capacity configuration.
+                                type: number
+                            required:
+                            - workerCount
+                            type: object
+                          type: array
+                        initialCapacityType:
+                          description: The worker type for an analytics framework. For Spark applications, the key can either be set to Driver or Executor. For Hive applications, it can be set to HiveDriver or TezTask.
                           type: string
                       required:
-                      - s3OutputLocation
+                      - initialCapacityType
+                      type: object
+                    type: array
+                  maximumCapacity:
+                    description: –  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.
+                    items:
+                      properties:
+                        cpu:
+                          description: The maximum allowed CPU for an application.
+                          type: string
+                        disk:
+                          description: The maximum allowed disk for an application.
+                          type: string
+                        memory:
+                          description: The maximum allowed resources for an application.
+                          type: string
+                      required:
+                      - cpu
+                      - memory
+                      type: object
+                    type: array
+                  name:
+                    description: –  The name of the application.
+                    type: string
+                  networkConfiguration:
+                    description: –  The network configuration for customer VPC connectivity.
+                    items:
+                      properties:
+                        securityGroupIds:
+                          description: The array of security group Ids for customer VPC connectivity.
+                          items:
+                            type: string
+                          type: array
+                        subnetIds:
+                          description: The array of subnet Ids for customer VPC connectivity.
+                          items:
+                            type: string
+                          type: array
                       type: object
                     type: array
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
-                  roleArn:
-                    description: The Amazon Resource Name (ARN) that has access to AWS Internet of Things (IoT).
+                  releaseLabel:
+                    description: –  The EMR release version associated with the application.
                     type: string
-                  roleArnRef:
-                    description: Reference to a Role in iam to populate roleArn.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  roleArnSelector:
-                    description: Selector for a Role in iam to populate roleArn.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
                   tags:
                     additionalProperties:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                  type:
+                    description: –  The type of application you want to start, such as spark or hive.
+                    type: string
                 required:
-                - outputConfig
+                - name
                 - region
+                - releaseLabel
+                - type
                 type: object
               providerConfigRef:
                 default:
@@ -271,22 +302,20 @@ spec:
             - forProvider
             type: object
           status:
-            description: DeviceFleetStatus defines the observed state of DeviceFleet.
+            description: ApplicationStatus defines the observed state of Application.
             properties:
               atProvider:
                 properties:
                   arn:
-                    description: The Amazon Resource Name (ARN) assigned by AWS to this Device Fleet.
+                    description: ARN of the cluster.
                     type: string
                   id:
-                    description: The name of the Device Fleet.
-                    type: string
-                  iotRoleAlias:
+                    description: The ID of the cluster.
                     type: string
                   tagsAll:
                     additionalProperties:
                       type: string
-                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                 type: object
               conditions:
@@ -325,9 +354,3 @@ spec:
     storage: true
     subresources:
       status: {}
-status:
-  acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: []
-  storedVersions: []
