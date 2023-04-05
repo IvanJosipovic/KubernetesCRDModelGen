@@ -4,7 +4,7 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.11.3
   creationTimestamp: 
-  name: fleets.appstream.aws.upbound.io
+  name: fleet.appstream.aws.upbound.io
 spec:
   group: appstream.aws.upbound.io
   names:
@@ -14,7 +14,7 @@ spec:
     - aws
     kind: Fleet
     listKind: FleetList
-    plural: fleets
+    plural: fleet
     singular: fleet
   scope: Cluster
   versions:
