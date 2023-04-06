@@ -1,10 +1,8 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using KubernetesCRDModelGen.Enrichment.Schema;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.OpenApi.Models;
-using Yardarm;
-using Yardarm.Enrichment;
-using Yardarm.Enrichment.Schema;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
 namespace KubernetesCRDModelGen.Enrichment;

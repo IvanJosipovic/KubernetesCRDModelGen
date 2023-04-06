@@ -1,0 +1,76 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
+using KubernetesCRDModelGen.Helpers;
+using KubernetesCRDModelGen.Names;
+using KubernetesCRDModelGen.Spec;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.OpenApi.Any;
+using Microsoft.OpenApi.Models;
+using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
+
+namespace KubernetesCRDModelGen.Generation.Schema
+{
+    public class ArraySchemaGenerator : TypeGeneratorBase<OpenApiSchema>
+    {
+        protected OpenApiSchema Schema => Element.Element;
+
+        public ArraySchemaGenerator(ILocatedOpenApiElement<OpenApiSchema> schemaElement, GenerationContext context,
+            ITypeGenerator? parent)
+            : base(schemaElement, context, parent)
+        {
+        }
+
+        protected override YardarmTypeInfo GetTypeInfo()
+        {
+            TypeSyntax itemTypeName = Context.TypeGeneratorRegistry.Get(GetItemSchema()).TypeInfo.Name;
+
+            if (Schema.Items.Extensions.TryGetValue("x-kubernetes-preserve-unknown-fields", out var value) && value is OpenApiBoolean boolValue && boolValue.Value)
+            {
+                itemTypeName = SimpleBaseType(QualifiedName(ParseName("System.Text.Json.Nodes"), IdentifierName("JsonNode"))).Type;
+            }
+
+            return new YardarmTypeInfo(
+                WellKnownTypes.System.Collections.Generic.ListT.Name(itemTypeName),
+                isGenerated: false);
+        }
+
+        public override IEnumerable<MemberDeclarationSyntax> Generate()
+        {
+            ILocatedOpenApiElement<OpenApiSchema> itemSchema = GetItemSchema();
+
+            return itemSchema.Element.Reference is null
+                ? Context.TypeGeneratorRegistry.Get(itemSchema).Generate()
+                : Enumerable.Empty<MemberDeclarationSyntax>();
+        }
+
+        private ILocatedOpenApiElement<OpenApiSchema> GetItemSchema() =>
+            Element.GetItemSchemaOrDefault();
+
+        /// <summary>
+        /// Namespace if the array is rooted.
+        /// </summary>
+        /// <returns></returns>
+        protected override NameSyntax GetNamespace() => GetChildName(GetItemSchema(), NameKind.Enum).Left;
+
+        public override QualifiedNameSyntax GetChildName<TChild>(ILocatedOpenApiElement<TChild> child, NameKind nameKind)
+        {
+            QualifiedNameSyntax? name = Parent?.GetChildName(Element, nameKind);
+
+            INameFormatter formatter = Context.NameFormatterSelector.GetFormatter(nameKind);
+
+            if (name == null)
+            {
+                // At the components root, use the schema namespace
+                return QualifiedName(
+                    Context.NamespaceProvider.GetNamespace(Element),
+                    IdentifierName(formatter.Format(Element.Key + "-Item")));
+
+            }
+
+            return name.WithRight(IdentifierName(
+                formatter.Format(name.Right.Identifier.ValueText + "-Item")));
+        }
+    }
+}

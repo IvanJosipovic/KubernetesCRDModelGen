@@ -19,17 +19,26 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="KubernetesClient.Models" Version="10.0.16" />
-        <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.2" />
+        <PackageReference Include="KubernetesClient.Models" Version="10.1.19" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+        <!--<PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.3" />-->
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
         <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.4.1" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
-    </ItemGroup>
+		<PackageReference Include="System.Net.Primitives" Version="4.3.1" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.2.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.2.0" />
+		<!--<PackageReference Include="Microsoft.OpenApi" Version="1.4.3" />-->
+		<PackageReference Include="Microsoft.OpenApi.Readers" Version="1.4.4" />
+		<PackageReference Include="NuGet.Commands" Version="6.2.1" />
+		<PackageReference Include="System.Linq.Async" Version="6.0.1" />
+		<PackageReference Include="System.Net.Primitives" Version="4.3.1" />
+		<PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
+	</ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\KubernetesCRDModelGen.Models\KubernetesCRDModelGen.Models.csproj" PrivateAssets="All" />
-        <ProjectReference Include="..\Yardarm.SystemTextJson\Yardarm.SystemTextJson.csproj" />
-        <ProjectReference Include="..\Yardarm\Yardarm.csproj" />
     </ItemGroup>
 
     <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
