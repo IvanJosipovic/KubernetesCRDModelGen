@@ -10,7 +10,7 @@ public class KubernetesExtension : YardarmExtension {
             .AddOpenApiSyntaxNodeEnricher<KubernetesClassFieldEnricher>()
             .AddOpenApiSyntaxNodeEnricher<KubernetesClassBaseEnricher>()
             .AddOpenApiSyntaxNodeEnricher<KubernetesMetadataEnricher>()
-            .AddOpenApiSyntaxNodeEnricher<EnumEnricher>()
+            .AddOpenApiSyntaxNodeEnricher<KubernetesEnumEnricher>()
         ;
 
         return services;

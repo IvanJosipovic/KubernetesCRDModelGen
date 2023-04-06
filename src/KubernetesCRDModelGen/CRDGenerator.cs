@@ -1,5 +1,6 @@
 ﻿using k8s;
 using k8s.Models;
+using KubernetesCRDModelGen.SystemTextJson;
 using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
@@ -29,7 +30,7 @@ public class CRDGenerator : ICRDGenerator {
         settings.EmbedAllSources = true;
         settings.RootNamespace = @namespace;
         settings.AssemblyName = assemblyName;
-        //settings.AddExtension<SystemTextJsonExtension>();
+        settings.AddExtension<SystemTextJsonExtension>();
         settings.AddExtension<KubernetesExtension>();
         settings.NuGetOutput = new MemoryStream();
         settings.NuGetSymbolsOutput = new MemoryStream();
@@ -50,7 +51,7 @@ public class CRDGenerator : ICRDGenerator {
         settings.EmbedAllSources = embedSources;
         settings.RootNamespace = @namespace;
         settings.AssemblyName = crd.Metadata.Name;
-        //settings.AddExtension<SystemTextJsonExtension>();
+        settings.AddExtension<SystemTextJsonExtension>();
         settings.AddExtension<KubernetesExtension>();
 
         var openApiDocument = ConvertCRDToOpenAPI(crd);

@@ -7,7 +7,7 @@ using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
 namespace KubernetesCRDModelGen.Enrichment;
 
-public class EnumEnricher : IOpenApiSyntaxNodeEnricher<PropertyDeclarationSyntax, OpenApiSchema>
+public class KubernetesEnumEnricher : IOpenApiSyntaxNodeEnricher<PropertyDeclarationSyntax, OpenApiSchema>
 {
     static NameSyntax Attribute { get; } = QualifiedName(QualifiedName(IdentifierName("KubernetesCRDModelGen"), IdentifierName("Models")), IdentifierName("EnumAttribute"));
 

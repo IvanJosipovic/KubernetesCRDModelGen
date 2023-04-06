@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using NuGet.Frameworks;
+using NuGet.LibraryModel;
+using NuGet.Versioning;
+using KubernetesCRDModelGen.Packaging;
+
+namespace KubernetesCRDModelGen.SystemTextJson
+{
+    public class JsonDependencyGenerator : IDependencyGenerator
+    {
+        public IEnumerable<LibraryDependency> GetDependencies(NuGetFramework targetFramework)
+        {
+            if (targetFramework.Framework != NuGetFrameworkConstants.NetCoreApp || targetFramework.Version < new Version(6, 0))
+            {
+                // Only add System.Text.Json if we're not already targeting .NET 6
+
+                yield return new LibraryDependency
+                {
+                    LibraryRange = new LibraryRange
+                    {
+                        Name = "System.Text.Json",
+                        TypeConstraint = LibraryDependencyTarget.Package,
+                        VersionRange = VersionRange.Parse("7.0.1")
+                    }
+                };
+
+                yield return new LibraryDependency
+                {
+                    LibraryRange = new LibraryRange
+                    {
+                        Name = "System.Net.Http.Json",
+                        TypeConstraint = LibraryDependencyTarget.Package,
+                        VersionRange = VersionRange.Parse("7.0.0")
+                    }
+                };
+            }
+        }
+    }
+}
