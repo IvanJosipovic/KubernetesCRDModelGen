@@ -22,23 +22,16 @@
         <PackageReference Include="KubernetesClient.Models" Version="10.1.19" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
-        <!--<PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.3" />-->
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
         <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.4.1" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
-		<PackageReference Include="System.Net.Primitives" Version="4.3.1" />
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.2.0" />
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.2.0" />
-		<!--<PackageReference Include="Microsoft.OpenApi" Version="1.4.3" />-->
-		<PackageReference Include="Microsoft.OpenApi.Readers" Version="1.4.4" />
-		<PackageReference Include="NuGet.Commands" Version="6.2.1" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" />
+		<PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.3" />
+		<PackageReference Include="NuGet.Commands" Version="6.5.0" />
 		<PackageReference Include="System.Linq.Async" Version="6.0.1" />
-		<PackageReference Include="System.Net.Primitives" Version="4.3.1" />
-		<PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<!-- Collect cs files from Yardarm.Client as resources so we can compile them into generated SDKs -->
+		<!-- Collect cs files from KubernetesCRDModelGen.Models as resources so we can compile them into generated SDKs -->
 		<EmbeddedResource Include="../KubernetesCRDModelGen.Models/**/*.cs" Exclude="../KubernetesCRDModelGen.Models/bin/**;../KubernetesCRDModelGen.Models/obj/**">
 			<Visible>False</Visible>
 			<LogicalName>$([System.String]::Copy('%(RelativeDir)').Substring(3).Replace('/', '.').Replace('\', '.'))%(Filename)%(Extension)</LogicalName>
@@ -51,7 +44,7 @@
 
     <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
         <ItemGroup>
-            <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient.Models' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'KubernetesCRDModelGen.Models')" />
+            <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient.Models' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'KubernetesCRDModelGen.Models' Or '%(ReferencePath.Filename)' =='System.ComponentModel.Annotations')" />
 
             <XmlFilesToEmbed Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).xml'-&gt; Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient.Models')" />
 

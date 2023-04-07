@@ -26,7 +26,8 @@ namespace KubernetesCRDModelGen
         {
             services.AddDefaultEnrichers();
 
-            services.AddTransient<IReferenceGenerator, NuGetReferenceGenerator>();
+            //services.AddTransient<IReferenceGenerator, NuGetReferenceGenerator>();
+            services.AddTransient<IReferenceGenerator, LocalNuGetReferenceGenerator>();
 
             // Generators
             services
