@@ -94,7 +94,7 @@ spec:
                       type: object
                     type: array
                   cluster:
-                    description: ARN of an ECS cluster.
+                    description: Name of an ECS cluster.
                     type: string
                   clusterRef:
                     description: Reference to a Cluster to populate cluster.
