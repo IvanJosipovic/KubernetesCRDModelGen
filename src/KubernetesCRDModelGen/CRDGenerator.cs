@@ -20,7 +20,7 @@ public class CRDGenerator : ICRDGenerator
 
     private MetadataReference[] MetadataReferences { get; set; }
 
-    private static List<string> keywords = new List<string>()
+    private static readonly List<string> keywords = new List<string>()
     {
         "abstract",
         "as",
@@ -101,7 +101,7 @@ public class CRDGenerator : ICRDGenerator
         "while"
     };
 
-    private static List<char> characters = new List<char>
+    private static readonly List<char> characters = new List<char>
     {
         '-',
         '$',
@@ -155,12 +155,12 @@ public class CRDGenerator : ICRDGenerator
             "KubernetesCRDModelGen.Models;",
         };
 
-        FileModel complexNumberFile = new FileModel(crd.Metadata.Name);
+        FileModel complexNumberFile = new(crd.Metadata.Name);
         complexNumberFile.LoadUsingDirectives(usingDirectives);
-        complexNumberFile.Namespace = @namespace;
+        complexNumberFile.Namespace = @namespace + "." + crd.Spec.Group;
         complexNumberFile.Classes.AddRange(types);
 
-        var code = ArrangeUsingRoslyn(complexNumberFile.ToString());
+        var code = complexNumberFile.ToString();
 
         // fix for summary https://github.com/borisdj/CsCodeGenerator/issues/6
         code = code.Replace("    // <summary>", "    /// <summary>");
@@ -185,11 +185,26 @@ public class CRDGenerator : ICRDGenerator
                 GenerateReferences();
             }
 
+            var options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
+                .WithDeterministic(true)
+                .WithOptimizationLevel(OptimizationLevel.Release)
+                .WithNullableContextOptions(NullableContextOptions.Enable)
+                .WithOverflowChecks(false)
+                .WithPlatform(Platform.AnyCpu)
+                .WithConcurrentBuild(true)
+                .WithAssemblyIdentityComparer(DesktopAssemblyIdentityComparer.Default)
+                .WithSpecificDiagnosticOptions(new KeyValuePair<string, ReportDiagnostic>[]
+                {
+                    // Don't warn for binding redirects
+                    new("CS1701", ReportDiagnostic.Suppress),
+                    new("CS1702", ReportDiagnostic.Suppress)
+                });
+
             var compilation = CSharpCompilation.Create(
                 name,
                 syntaxTrees: new[] { syntaxTree },
                 references: MetadataReferences,
-                options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+                options: options);
 
             using var peStream = new MemoryStream();
             using var xmlDocumentationStream = new MemoryStream();
@@ -252,7 +267,7 @@ public class CRDGenerator : ICRDGenerator
         bool isRoot = version != null && kind != null && group != null && plural != null;
 
         var types = new List<ClassModel>();
-        var model = new ClassModel(GetCleanClassName(name));
+        var model = new ClassModel(GetCleanClassName((isRoot ? version : "") + name));
         types.Add(model);
 
         model.Comment = CleanDescription(schema.Description);
@@ -263,28 +278,28 @@ public class CRDGenerator : ICRDGenerator
             {
                 AccessModifier = AccessModifier.Public,
                 KeyWords = new List<KeyWord>() { KeyWord.Const },
-                DefaultValue = "\"" + version + "\""
+                DefaultValue = '"' + version + '"'
             });
 
             model.Fields.Add(new Field(BuiltInDataType.String, "KubeKind")
             {
                 AccessModifier = AccessModifier.Public,
                 KeyWords = new List<KeyWord>() { KeyWord.Const },
-                DefaultValue = "\"" + kind + "\""
+                DefaultValue = '"' + kind + '"'
             });
 
             model.Fields.Add(new Field(BuiltInDataType.String, "KubeGroup")
             {
                 AccessModifier = AccessModifier.Public,
                 KeyWords = new List<KeyWord>() { KeyWord.Const },
-                DefaultValue = "\"" + group + "\""
+                DefaultValue = '"' + group + '"'
             });
 
             model.Fields.Add(new Field(BuiltInDataType.String, "KubePluralName")
             {
                 AccessModifier = AccessModifier.Public,
                 KeyWords = new List<KeyWord>() { KeyWord.Const },
-                DefaultValue = "\"" + plural + "\""
+                DefaultValue = '"' + plural + '"'
             });
 
             model.Attributes.Add(new AttributeModel("KubernetesEntity")
@@ -416,7 +431,7 @@ public class CRDGenerator : ICRDGenerator
                             {
                                 var addProp = ReSerialize(property.Value.AdditionalProperties);
 
-                                model.Properties.Add(new Property($"IDictionary<string, object>" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
+                                model.Properties.Add(new Property("IDictionary<string, object>" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                                 {
                                     Attributes = attribute,
                                     Comment = CleanDescription(property.Value.Description)
@@ -484,7 +499,7 @@ public class CRDGenerator : ICRDGenerator
                                     var attr = new AttributeModel()
                                     {
                                         Name = "EnumAttribute",
-                                        SingleParameter = new Parameter($"new[] {{ {string.Join(",", prop.EnumProperty.Select(x => "\"" + x.ToString() + "\""))} }}")
+                                        SingleParameter = new Parameter($"new[] {{ {string.Join(",", prop.EnumProperty.Select(x => '"' + x.ToString() + '"'))} }}")
                                     };
                                     attribute.Add(attr);
                                 }
@@ -511,7 +526,6 @@ public class CRDGenerator : ICRDGenerator
                                 break;
                             default:
                                 throw new Exception($"Unknown Type2: {type}");
-                                break;
                         }
 
                         model.Properties.Add(new Property($"IList<{combinedPropertyName}>" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
@@ -561,7 +575,7 @@ public class CRDGenerator : ICRDGenerator
                             var attr = new AttributeModel()
                             {
                                 Name = "EnumAttribute",
-                                SingleParameter = new Parameter($"new[] {{ {string.Join(",", property.Value.EnumProperty.Select(x => "\"" + x.ToString() + "\""))} }}")
+                                SingleParameter = new Parameter($"new[] {{ {string.Join(",", property.Value.EnumProperty.Select(x => '"' + x.ToString() + '"'))} }}")
                             };
                             attribute.Add(attr);
                         }

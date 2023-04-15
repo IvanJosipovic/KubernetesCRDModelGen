@@ -1,10 +1,10 @@
 using FluentAssertions;
 using k8s;
 using k8s.Models;
-using KubernetesCRDModelGen.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -42,7 +42,7 @@ public class UnitTest
 
     private static async Task<Type?> GetType(V1CustomResourceDefinition crd, string kind)
     {
-        var assembly = await GetCRDGenerator().GenerateAssembly(crd, Namespace + "." + crd.Spec.Group);
+        var assembly = await GetCRDGenerator().GenerateAssembly(crd, Namespace);
 
         var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
 
@@ -132,6 +132,47 @@ spec:
 
         var plural = attribute.NamedArguments.First(x => x.MemberName == "PluralName");
         plural.TypedValue.Value.Should().Be("tests");
+    }
+
+    [Fact]
+    public async Task TestBaseClasses()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+
+";
+        var type = await GetTypeYaml(yaml, "Test");
+        type.Name.Should().Be("V1beta1Test");
+        type.IsAssignableTo(typeof(IKubernetesObject)).Should().BeTrue();
+        type.IsAssignableTo(typeof(IKubernetesObject<V1ObjectMeta>)).Should().BeTrue();
+        type.IsAssignableTo(typeof(IMetadata<V1ObjectMeta>)).Should().BeTrue();
     }
 
     [Fact]
@@ -390,7 +431,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestUnkownFields()
+    public async Task TestUnknownFields()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -433,7 +474,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestUnkownFields2()
+    public async Task TestUnknownFields2()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -555,7 +596,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayOject()
+    public async Task TestArrayObject()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -607,7 +648,7 @@ spec:
 
         var listType = prop.GenericTypeArguments[0];
 
-        listType.Name.Should().Be("TestSpecConditions");
+        listType.Name.Should().Be("ConditionsModelItem");
         listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<double?>();
         listType.GetProperty("Message").PropertyType.Should().Be<string?>();
     }
@@ -658,7 +699,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayPresreveUnkown()
+    public async Task TestArrayPreserveUnknown()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -692,7 +733,7 @@ spec:
               properties:
                 array:
                   items:
-                    x-kubernetes-preserve-unknown-fields: ""True""
+                    x-kubernetes-preserve-unknown-fields: true
                   type: array
 ";
         var type = await GetTypeYaml(yaml, "Test");
@@ -1037,6 +1078,10 @@ spec:
 
         var itemType = specType.GetProperty("Array").PropertyType.GenericTypeArguments[0];
 
+        var arrayType = typeof(IList<>).MakeGenericType(itemType);
+
+        specType.GetProperty("Array").PropertyType.Should().Be(arrayType);
+
         itemType.GetProperty("NumberProp").PropertyType.Should().Be<double>();
 
         itemType.GetProperty("NumberProp2").PropertyType.Should().Be<double?>();
@@ -1138,7 +1183,6 @@ spec:
         itemType.Should().Be<IntstrIntOrString>();
     }
 
-
     [Fact]
     public async Task TestEnum()
     {
@@ -1185,11 +1229,18 @@ spec:
 
         var itemType = specType.GetProperty("TestEnum");
 
-        var attr = itemType.GetCustomAttribute<EnumAttribute>();
+        var attr = itemType.CustomAttributes.Where(x => x.AttributeType.Name == "EnumAttribute").First();
 
         string[] test = new[] { "Always", "IfNotPresent", "Never" };
 
-        attr.Options.Should().Equal(test);
+        var output = attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>;
+
+        test.Count().Should().Be(output.Count());
+
+        foreach (CustomAttributeTypedArgument item in attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>)
+        {
+            test.Contains(item.Value.ToString()).Should().BeTrue();
+        }
     }
 
     [Fact]
@@ -1240,10 +1291,17 @@ spec:
 
         var itemType = specType.GetProperty("EnumArray");
 
-        var attr = itemType.GetCustomAttribute<EnumAttribute>();
+        var attr = itemType.CustomAttributes.Where(x => x.AttributeType.Name == "EnumAttribute").First();
 
         string[] test = new[] { "Always", "IfNotPresent", "Never" };
 
-        attr.Options.Should().Equal(test);
+        var output = attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>;
+
+        test.Count().Should().Be(output.Count());
+
+        foreach (CustomAttributeTypedArgument item in attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>)
+        {
+            test.Contains(item.Value.ToString()).Should().BeTrue();
+        }
     }
 }
