@@ -9,6 +9,7 @@ using System.Xml;
 using CsCodeGenerator;
 using CsCodeGenerator.Enums;
 using System.Text.Json.Serialization;
+using System.Security;
 
 namespace KubernetesCRDModelGen;
 
@@ -16,7 +17,7 @@ public class CRDGenerator : ICRDGenerator
 {
     public const string ModelNamespace = "KubernetesCRDModelGen.Models";
 
-    private ILogger<CRDGenerator>? Logger { get; set; }
+    private ILogger<CRDGenerator>? Logger { get; }
 
     private MetadataReference[] MetadataReferences { get; set; }
 
@@ -309,22 +310,22 @@ public class CRDGenerator : ICRDGenerator
                     new Parameter()
                     {
                         Name = "ApiVersion",
-                        Value = $"\"{version}\""
+                        Value = '"' + version + '"'
                     },
                     new Parameter()
                     {
                         Name = "Group",
-                        Value = $"\"{group}\""
+                        Value = '"' + group + '"'
                     },
                     new Parameter()
                     {
                         Name = "Kind",
-                        Value = $"\"{kind}\""
+                        Value = '"' + kind + '"'
                     },
                     new Parameter()
                     {
                         Name = "PluralName",
-                        Value = $"\"{plural}\""
+                        Value = '"' + plural + '"'
                     }
                 }
             });
@@ -355,7 +356,7 @@ public class CRDGenerator : ICRDGenerator
                 }
             });
 
-            model.Interfaces.Add($"IKubernetesObject<V1ObjectMeta?>");
+            model.Interfaces.Add("IKubernetesObject<V1ObjectMeta?>");
 
             model.Properties.Add(new Property("V1ObjectMeta", "Metadata")
             {
@@ -404,7 +405,7 @@ public class CRDGenerator : ICRDGenerator
 
                 if (isRoot)
                 {
-                    // Root Model
+                    // Root Model, skip these fields as we are adding the above
 
                     if (property.Key == "apiVersion" || property.Key == "kind" || property.Key == "metadata")
                     {
@@ -685,9 +686,7 @@ public class CRDGenerator : ICRDGenerator
             }
         }
 
-        name = CapitalizeFirstLetter(name);
-
-        return name;
+        return CapitalizeFirstLetter(name);
     }
 
     public static string GetCleanNamespace(string name)
@@ -718,7 +717,7 @@ public class CRDGenerator : ICRDGenerator
             return null;
         }
 
-        return $"<summary>{System.Security.SecurityElement.Escape(description.Replace("\n", "").Replace("\r", ""))}</summary>";
+        return $"<summary>{SecurityElement.Escape(description.Replace("\n", "").Replace("\r", ""))}</summary>";
     }
 
     private static bool IsNullable(IList<string> required, string key)
@@ -751,13 +750,13 @@ public class CRDGenerator : ICRDGenerator
     {
         var references = new List<MetadataReference>();
 
-        var assebly = GetType().Assembly;
+        var assembly = GetType().Assembly;
 
-        var assemblies = assebly.GetManifestResourceNames().Where(x => x.StartsWith("runtime.") && x.EndsWith(".dll")).ToList();
+        var assemblies = assembly.GetManifestResourceNames().Where(x => x.StartsWith("runtime.") && x.EndsWith(".dll")).ToList();
 
         foreach (var item in assemblies)
         {
-            using var stream = assebly.GetManifestResourceStream(item);
+            using var stream = assembly.GetManifestResourceStream(item);
             var ass = MetadataReference.CreateFromStream(stream);
             references.Add(ass);
         }
