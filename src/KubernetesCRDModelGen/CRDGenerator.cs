@@ -140,7 +140,7 @@ public class CRDGenerator : ICRDGenerator
 
         var version = crd.Spec.Versions.First(x => x.Served && x.Storage);
 
-        types.AddRange(GenerateClasses(version.Schema.OpenAPIV3Schema, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural));
+        types.Add(GenerateClass(version.Schema.OpenAPIV3Schema, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural));
 
         var usingDirectives = new List<string>
         {
@@ -263,13 +263,11 @@ public class CRDGenerator : ICRDGenerator
         return root.ToFullString();
     }
 
-    private List<ClassModel> GenerateClasses(V1JSONSchemaProps schema, string name, string? version = null, string? kind = null, string? group = null, string? plural = null)
+    private ClassModel GenerateClass(V1JSONSchemaProps schema, string name, string? version = null, string? kind = null, string? group = null, string? plural = null)
     {
         bool isRoot = version != null && kind != null && group != null && plural != null;
 
-        var types = new List<ClassModel>();
         var model = new ClassModel(GetCleanClassName((isRoot ? version : "") + name));
-        types.Add(model);
 
         model.Comment = CleanDescription(schema.Description);
 
@@ -401,7 +399,7 @@ public class CRDGenerator : ICRDGenerator
 
                 string propertyName = GetCleanPropertyName(property.Key);
 
-                var combinedPropertyName = name + propertyName;
+                var propertyTypeName = propertyName + "Model";
 
                 if (isRoot)
                 {
@@ -418,7 +416,7 @@ public class CRDGenerator : ICRDGenerator
                     case "object":
                         if (property.Value.XKubernetesPreserveUnknownFields == true)
                         {
-                            combinedPropertyName = "JsonNode";
+                            propertyTypeName = "JsonNode";
 
                             model.Properties.Add(new Property("JsonNode" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                             {
@@ -440,9 +438,11 @@ public class CRDGenerator : ICRDGenerator
                             }
                             else
                             {
-                                types.AddRange(GenerateClasses(property.Value, combinedPropertyName));
+                                model.NestedClasses.Add(GenerateClass(property.Value, propertyTypeName));
 
-                                model.Properties.Add(new Property(combinedPropertyName + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
+                                propertyTypeName = model.Name + "." + propertyTypeName;
+
+                                model.Properties.Add(new Property(propertyTypeName + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                                 {
                                     Attributes = attribute,
                                     Comment = CleanDescription(property.Value.Description)
@@ -456,11 +456,11 @@ public class CRDGenerator : ICRDGenerator
 
                             if (property.Key.Equals("status"))
                             {
-                                model.Interfaces.Add($"IStatus<{combinedPropertyName + (IsNullable(schema.Required, property.Key) ? "?" : "")}>");
+                                model.Interfaces.Add($"IStatus<{propertyTypeName + (IsNullable(schema.Required, property.Key) ? "?" : "")}>");
                             }
                             else if (property.Key.Equals("spec"))
                             {
-                                model.Interfaces.Add($"ISpec<{combinedPropertyName + (IsNullable(schema.Required, property.Key) ? "?" : "")}>");
+                                model.Interfaces.Add($"ISpec<{propertyTypeName + (IsNullable(schema.Required, property.Key) ? "?" : "")}>");
                             }
                         }
                         break;
@@ -491,10 +491,14 @@ public class CRDGenerator : ICRDGenerator
                         switch (type)
                         {
                             case "object":
-                                types.AddRange(GenerateClasses(property.Value, combinedPropertyName));
+                                propertyTypeName = propertyName + "Item";
+                                model.NestedClasses.Add(GenerateClass(property.Value, propertyTypeName));
+
+                                propertyTypeName = model.Name + "." + propertyName + "Item";
+
                                 break;
                             case "string":
-                                combinedPropertyName = "string";
+                                propertyTypeName = "string";
                                 if (prop.EnumProperty != null && prop.EnumProperty.Count > 0)
                                 {
                                     var attr = new AttributeModel()
@@ -508,28 +512,28 @@ public class CRDGenerator : ICRDGenerator
                             case "integer":
                                 if (prop.Format != null && prop.Format == "int64")
                                 {
-                                    combinedPropertyName = "long";
+                                    propertyTypeName = "long";
                                 }
                                 else
                                 {
-                                    combinedPropertyName = "int";
+                                    propertyTypeName = "int";
                                 }
                                 break;
                             case "number":
-                                combinedPropertyName = "double";
+                                propertyTypeName = "double";
                                 break;
                             case "JsonNode":
                             case "array":
-                                combinedPropertyName = "JsonNode";
+                                propertyTypeName = "JsonNode";
                                 break;
                             case "IntstrIntOrString":
-                                combinedPropertyName = "IntstrIntOrString";
+                                propertyTypeName = "IntstrIntOrString";
                                 break;
                             default:
                                 throw new Exception($"Unknown Type2: {type}");
                         }
 
-                        model.Properties.Add(new Property($"IList<{combinedPropertyName}>" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
+                        model.Properties.Add(new Property($"IList<{propertyTypeName}>" + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                         {
                             Attributes = attribute,
                             Comment = CleanDescription(property.Value.Description)
@@ -640,16 +644,7 @@ public class CRDGenerator : ICRDGenerator
         {
             var obj = ReSerialize(schema.Items);
 
-            foreach (var @class in GenerateClasses(obj, name))
-            {
-                // temp hack, as we add a class with the same name at the top of the Method
-                if (types.Any(x => x.Name == @class.Name))
-                {
-                    types.RemoveAt(types.FindIndex(x => x.Name == @class.Name));
-                }
-
-                types.Add(@class);
-            }
+            model = GenerateClass(obj, name);
         }
         else if (schema.Type == "object")
         {
@@ -668,7 +663,7 @@ public class CRDGenerator : ICRDGenerator
             }
         }
 
-        return types;
+        return model;
     }
 
     public static string GetCleanClassName(string nane)

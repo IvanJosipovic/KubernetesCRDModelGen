@@ -16,7 +16,7 @@ namespace KubernetesCRDModelGen.Tests;
 
 public class UnitTest
 {
-    private static string Namespace = "KubernetesCRDModelGen.Tests.Models";
+    private static readonly string Namespace = "KubernetesCRDModelGen.Tests.Models";
 
     private static ServiceProvider GetServiceProvider()
     {
@@ -166,7 +166,6 @@ spec:
               type: object
             spec:
               type: object
-
 ";
         var type = await GetTypeYaml(yaml, "Test");
         type.Name.Should().Be("V1beta1Test");
@@ -643,7 +642,7 @@ spec:
 
         var listType = specType.GenericTypeArguments[0];
 
-        listType.Name.Should().Be("TestSpec");
+        listType.Name.Should().Be("SpecItem");
         listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<double?>();
         listType.GetProperty("Message").PropertyType.Should().Be<string?>();
     }
@@ -1298,5 +1297,63 @@ spec:
         {
             test.Contains(item.Value.ToString()).Should().BeTrue();
         }
+    }
+
+    [Fact]
+    public async Task TestObject()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                nested1:
+                  type: object
+                  properties:
+                    nested11:
+                      type: object
+                      properties:
+                        prop1:
+                          type: string
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var nested1 = specType.GetProperty("Nested1").PropertyType;
+
+        nested1.Name.Should().Be("Nested1Model");
+        nested1.IsClass.Should().BeTrue();
+
+        var nested11 = nested1.GetProperty("Nested11").PropertyType;
+
+        nested11.Name.Should().Be("Nested11Model");
+        nested11.IsClass.Should().BeTrue();
+        nested11.GetProperty("Prop1").PropertyType.Should().Be<string>();
     }
 }
