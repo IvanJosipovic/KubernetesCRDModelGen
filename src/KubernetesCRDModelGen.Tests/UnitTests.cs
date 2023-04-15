@@ -626,29 +626,24 @@ spec:
             metadata:
               type: object
             spec:
-              type: object
-              properties:
-                conditions:
-                  items:
-                    properties:
-                      lastTransitionTime:
-                        type: number
-                      message:
-                        type: string
-                    type: object
-                  type: array
+              type: array
+              items:
+                properties:
+                  lastTransitionTime:
+                    type: number
+                  message:
+                    type: string
+                type: object
 ";
         var type = await GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        var prop = specType.GetProperty("Conditions").PropertyType;
+        typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).Should().BeTrue();
 
-        typeof(IList<>).IsAssignableFrom(prop.GetGenericTypeDefinition()).Should().BeTrue();
+        var listType = specType.GenericTypeArguments[0];
 
-        var listType = prop.GenericTypeArguments[0];
-
-        listType.Name.Should().Be("ConditionsModelItem");
+        listType.Name.Should().Be("TestSpec");
         listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<double?>();
         listType.GetProperty("Message").PropertyType.Should().Be<string?>();
     }
