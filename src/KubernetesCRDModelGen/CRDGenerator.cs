@@ -158,7 +158,7 @@ public class CRDGenerator : ICRDGenerator
 
         FileModel complexNumberFile = new(crd.Metadata.Name);
         complexNumberFile.LoadUsingDirectives(usingDirectives);
-        complexNumberFile.Namespace = @namespace + "." + crd.Spec.Group;
+        complexNumberFile.Namespace = GetCleanNamespace(@namespace + "." + crd.Spec.Group);
         complexNumberFile.Classes.AddRange(types);
 
         var code = complexNumberFile.ToString();
@@ -669,7 +669,7 @@ public class CRDGenerator : ICRDGenerator
         {
             if (name.Contains(badChar))
             {
-                name = name.Replace(badChar, '\0');
+                name = name.Replace(badChar.ToString(), string.Empty);
             }
         }
 
@@ -682,7 +682,7 @@ public class CRDGenerator : ICRDGenerator
         {
             if (name.Contains(badChar))
             {
-                name = name.Replace(badChar , '\0');
+                name = name.Replace(badChar.ToString(), string.Empty);
             }
         }
 
