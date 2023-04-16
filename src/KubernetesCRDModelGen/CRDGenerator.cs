@@ -10,6 +10,9 @@ using CsCodeGenerator;
 using CsCodeGenerator.Enums;
 using System.Text.Json.Serialization;
 using System.Security;
+using k8s;
+using System.Buffers.Text;
+using System.Buffers;
 
 namespace KubernetesCRDModelGen;
 
@@ -771,6 +774,32 @@ public class CRDGenerator : ICRDGenerator
             };
     }
 
+    public class LongToStringJsonConverter : JsonConverter<string>
+    {
+        public override string Read(ref Utf8JsonReader reader, Type type, JsonSerializerOptions options)
+        {
+            if (reader.TokenType != JsonTokenType.Number && type == typeof(string))
+                return reader.GetString();
+
+            var span = reader.HasValueSequence ? reader.ValueSequence.ToArray() : reader.ValueSpan;
+
+            if (Utf8Parser.TryParse(span, out long number, out var bytesConsumed) && span.Length == bytesConsumed)
+                return number.ToString();
+
+            var data = reader.GetString();
+
+            throw new InvalidOperationException($"'{data}' is not a correct expected value!")
+            {
+                Source = "LongToStringJsonConverter"
+            };
+        }
+
+        public override void Write(Utf8JsonWriter writer, string value, JsonSerializerOptions options)
+        {
+            writer.WriteStringValue(value);
+        }
+    }
+
     private V1JSONSchemaProps ReSerialize(object schema)
     {
         var options = new JsonSerializerOptions()
@@ -779,7 +808,8 @@ public class CRDGenerator : ICRDGenerator
         };
 
         options.Converters.Add(new BoolConverter());
+        options.Converters.Add(new LongToStringJsonConverter());
 
-        return JsonSerializer.Deserialize<V1JSONSchemaProps>(JsonSerializer.Serialize(schema), options);
+        return KubernetesJson.Deserialize<V1JSONSchemaProps>(JsonSerializer.Serialize(schema), options);
     }
 }

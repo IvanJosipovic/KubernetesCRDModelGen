@@ -67,7 +67,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
                                     "{0}\n{1}",
                                     "KubernetesCRDModelGen",
                                     DiagnosticSeverity.Error,
-                                    true), Location.None, e.Message, e.StackTrace));
+                                    true), Location.None, $"Error converting {file.Path} {key} {e.Message}", e.StackTrace));
                             }
                         }
                     }
