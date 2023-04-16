@@ -4,18 +4,18 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.11.3
   creationTimestamp: 
-  name: securitygrouprules.ec2.aws.upbound.io
+  name: fleet.appstream.aws.upbound.io
 spec:
-  group: ec2.aws.upbound.io
+  group: appstream.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - aws
-    kind: SecurityGroupRule
-    listKind: SecurityGroupRuleList
-    plural: securitygrouprules
-    singular: securitygrouprule
+    kind: Fleet
+    listKind: FleetList
+    plural: fleet
+    singular: fleet
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: SecurityGroupRule is the Schema for the SecurityGroupRules API. Provides an security group rule resource.
+        description: Fleet is the Schema for the Fleets API. Provides an AppStream fleet
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -45,7 +45,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: SecurityGroupRuleSpec defines the desired state of SecurityGroupRule
+            description: FleetSpec defines the desired state of Fleet
             properties:
               deletionPolicy:
                 default: Delete
@@ -56,53 +56,75 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  cidrBlocks:
-                    description: List of CIDR blocks. Cannot be specified with source_security_group_id or self.
+                  computeCapacity:
+                    description: Configuration block for the desired capacity of the fleet. See below.
                     items:
-                      type: string
-                    type: array
-                  description:
-                    description: Description of the rule.
-                    type: string
-                  fromPort:
-                    description: Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
-                    type: number
-                  ipv6CidrBlocks:
-                    description: List of IPv6 CIDR blocks. Cannot be specified with source_security_group_id or self.
-                    items:
-                      type: string
-                    type: array
-                  prefixListIdRefs:
-                    description: References to ManagedPrefixList in ec2 to populate prefixListIds.
-                    items:
-                      description: A Reference to a named object.
                       properties:
-                        name:
-                          description: Name of the referenced object.
-                          type: string
-                        policy:
-                          description: Policies for referencing.
-                          properties:
-                            resolution:
-                              default: Required
-                              description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                              enum:
-                              - Required
-                              - Optional
-                              type: string
-                            resolve:
-                              description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                              enum:
-                              - Always
-                              - IfNotPresent
-                              type: string
-                          type: object
+                        desiredInstances:
+                          description: Desired number of streaming instances.
+                          type: number
                       required:
-                      - name
+                      - desiredInstances
                       type: object
                     type: array
-                  prefixListIdSelector:
-                    description: Selector for a list of ManagedPrefixList in ec2 to populate prefixListIds.
+                  description:
+                    description: Description to display.
+                    type: string
+                  disconnectTimeoutInSeconds:
+                    description: Amount of time that a streaming session remains active after users disconnect.
+                    type: number
+                  displayName:
+                    description: Human-readable friendly name for the AppStream fleet.
+                    type: string
+                  domainJoinInfo:
+                    description: Configuration block for the name of the directory and organizational unit (OU) to use to join the fleet to a Microsoft Active Directory domain. See below.
+                    items:
+                      properties:
+                        directoryName:
+                          description: Fully qualified name of the directory (for example, corp.example.com).
+                          type: string
+                        organizationalUnitDistinguishedName:
+                          description: Distinguished name of the organizational unit for computer accounts.
+                          type: string
+                      type: object
+                    type: array
+                  enableDefaultInternetAccess:
+                    description: Enables or disables default internet access for the fleet.
+                    type: boolean
+                  fleetType:
+                    description: 'Fleet type. Valid values are: ON_DEMAND, ALWAYS_ON'
+                    type: string
+                  iamRoleArn:
+                    description: ARN of the IAM role to apply to the fleet.
+                    type: string
+                  iamRoleArnRef:
+                    description: Reference to a Role in iam to populate iamRoleArn.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  iamRoleArnSelector:
+                    description: Selector for a Role in iam to populate iamRoleArn.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -130,148 +152,114 @@ spec:
                             type: string
                         type: object
                     type: object
-                  prefixListIds:
-                    description: List of Prefix List IDs.
-                    items:
-                      type: string
-                    type: array
-                  protocol:
-                    description: Protocol. If not icmp, icmpv6, tcp, udp, or all use the protocol number
+                  idleDisconnectTimeoutInSeconds:
+                    description: Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect_timeout_in_seconds time interval begins.
+                    type: number
+                  imageArn:
+                    description: ARN of the public, private, or shared image to use.
+                    type: string
+                  imageName:
+                    description: Name of the image used to create the fleet.
+                    type: string
+                  instanceType:
+                    description: Instance type to use when launching fleet instances.
+                    type: string
+                  maxUserDurationInSeconds:
+                    description: Maximum amount of time that a streaming session can remain active, in seconds.
+                    type: number
+                  name:
+                    description: Unique name for the fleet.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
-                  securityGroupId:
-                    description: Security group to apply this rule to.
+                  streamView:
+                    description: AppStream 2.0 view that is displayed to your users when they stream from the fleet. When APP is specified, only the windows of applications opened by users display. When DESKTOP is specified, the standard desktop that is provided by the operating system displays. If not specified, defaults to APP.
                     type: string
-                  securityGroupIdRef:
-                    description: Reference to a SecurityGroup to populate securityGroupId.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
                     type: object
-                  securityGroupIdSelector:
-                    description: Selector for a SecurityGroup to populate securityGroupId.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
+                  vpcConfig:
+                    description: Configuration block for the VPC configuration for the image builder. See below.
+                    items:
+                      properties:
+                        securityGroupIds:
+                          description: Identifiers of the security groups for the fleet or image builder.
+                          items:
                             type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
+                          type: array
+                        subnetIdRefs:
+                          description: References to Subnet in ec2 to populate subnetIds.
+                          items:
+                            description: A Reference to a named object.
+                            properties:
+                              name:
+                                description: Name of the referenced object.
+                                type: string
+                              policy:
+                                description: Policies for referencing.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            required:
+                            - name
+                            type: object
+                          type: array
+                        subnetIdSelector:
+                          description: Selector for a list of Subnet in ec2 to populate subnetIds.
+                          properties:
+                            matchControllerRef:
+                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
+                        subnetIds:
+                          description: Identifiers of the subnets to which a network interface is attached from the fleet instance or image builder instance.
+                          items:
                             type: string
-                        type: object
-                    type: object
-                  self:
-                    description: Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with cidr_blocks, ipv6_cidr_blocks, or source_security_group_id.
-                    type: boolean
-                  sourceSecurityGroupId:
-                    description: Security group id to allow access to/from, depending on the type. Cannot be specified with cidr_blocks, ipv6_cidr_blocks, or self.
-                    type: string
-                  sourceSecurityGroupIdRef:
-                    description: Reference to a SecurityGroup to populate sourceSecurityGroupId.
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                      policy:
-                        description: Policies for referencing.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    required:
-                    - name
-                    type: object
-                  sourceSecurityGroupIdSelector:
-                    description: Selector for a SecurityGroup to populate sourceSecurityGroupId.
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                      policy:
-                        description: Policies for selection.
-                        properties:
-                          resolution:
-                            default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
-                            enum:
-                            - Required
-                            - Optional
-                            type: string
-                          resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
-                            enum:
-                            - Always
-                            - IfNotPresent
-                            type: string
-                        type: object
-                    type: object
-                  toPort:
-                    description: End port (or ICMP code if protocol is "icmp").
-                    type: number
-                  type:
-                    description: Type of rule being created. Valid options are ingress (inbound) or egress (outbound).
-                    type: string
+                          type: array
+                      type: object
+                    type: array
                 required:
-                - fromPort
-                - protocol
+                - computeCapacity
+                - instanceType
+                - name
                 - region
-                - toPort
-                - type
                 type: object
               providerConfigRef:
                 default:
@@ -398,16 +386,41 @@ spec:
             - forProvider
             type: object
           status:
-            description: SecurityGroupRuleStatus defines the observed state of SecurityGroupRule.
+            description: FleetStatus defines the observed state of Fleet.
             properties:
               atProvider:
                 properties:
+                  arn:
+                    description: ARN of the appstream fleet.
+                    type: string
+                  computeCapacity:
+                    description: Configuration block for the desired capacity of the fleet. See below.
+                    items:
+                      properties:
+                        available:
+                          description: Number of currently available instances that can be used to stream sessions.
+                          type: number
+                        inUse:
+                          description: Number of instances in use for streaming.
+                          type: number
+                        running:
+                          description: Total number of simultaneous streaming instances that are running.
+                          type: number
+                      type: object
+                    type: array
+                  createdTime:
+                    description: Date and time, in UTC and extended RFC 3339 format, when the fleet was created.
+                    type: string
                   id:
-                    description: ID of the security group rule.
+                    description: Unique identifier (ID) of the appstream fleet.
                     type: string
-                  securityGroupRuleId:
-                    description: If the aws_security_group_rule resource has a single source or destination then this is the AWS Security Group Rule resource ID. Otherwise it is empty.
+                  state:
+                    description: State of the fleet. Can be STARTING, RUNNING, STOPPING or STOPPED
                     type: string
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    type: object
                 type: object
               conditions:
                 description: Conditions of the resource.
