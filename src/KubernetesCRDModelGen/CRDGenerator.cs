@@ -164,7 +164,7 @@ public class CRDGenerator : ICRDGenerator
         var code = complexNumberFile.ToString();
 
         // fix for summary https://github.com/borisdj/CsCodeGenerator/issues/6
-        code = code.Replace("    // <summary>", "    /// <summary>");
+        code = code.Replace("// <summary>", "/// <summary>");
 
         return code;
     }
@@ -255,14 +255,6 @@ public class CRDGenerator : ICRDGenerator
         return (null, null);
     }
 
-    private static string ArrangeUsingRoslyn(string csCode)
-    {
-        var tree = CSharpSyntaxTree.ParseText(csCode);
-        var root = tree.GetRoot().NormalizeWhitespace();
-
-        return root.ToFullString();
-    }
-
     private ClassModel GenerateClass(V1JSONSchemaProps schema, string name, string? version = null, string? kind = null, string? group = null, string? plural = null)
     {
         bool isRoot = version != null && kind != null && group != null && plural != null;
@@ -330,7 +322,7 @@ public class CRDGenerator : ICRDGenerator
 
             model.Properties.Add(new Property(BuiltInDataType.String, "ApiVersion")
             {
-                Comment = "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+                Comment = CleanDescription("APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources"),
                 Attributes = new List<AttributeModel>()
                 {
                     new AttributeModel()
@@ -343,7 +335,7 @@ public class CRDGenerator : ICRDGenerator
 
             model.Properties.Add(new Property(BuiltInDataType.String, "Kind")
             {
-                Comment = "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+                Comment = CleanDescription("Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"),
                 Attributes = new List<AttributeModel>()
                 {
                     new AttributeModel()
@@ -358,7 +350,7 @@ public class CRDGenerator : ICRDGenerator
 
             model.Properties.Add(new Property("V1ObjectMeta", "Metadata")
             {
-                Comment = "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.",
+                Comment = CleanDescription("ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."),
                 Attributes = new List<AttributeModel>()
                 {
                     new AttributeModel()
@@ -677,26 +669,26 @@ public class CRDGenerator : ICRDGenerator
         {
             if (name.Contains(badChar))
             {
-                name = name.Replace(badChar.ToString(), "");
+                name = name.Replace(badChar, '\0');
             }
         }
 
         return CapitalizeFirstLetter(name);
     }
 
-    public static string GetCleanNamespace(string name)
+    private static string GetCleanNamespace(string name)
     {
         foreach (var badChar in characters)
         {
             if (name.Contains(badChar))
             {
-                name = name.Replace(badChar.ToString(), "");
+                name = name.Replace(badChar , '\0');
             }
         }
 
         foreach (var keyword in keywords)
         {
-            if (name.Contains("." + keyword + ".") || name.StartsWith(keyword + ".") || name.EndsWith("." + keyword))
+            if (name.Contains('.' + keyword + '.') || name.StartsWith(keyword + '.') || name.EndsWith('.' + keyword))
             {
                 name = name.Replace(keyword, "@" + keyword);
             }
