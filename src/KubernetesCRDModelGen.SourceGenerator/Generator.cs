@@ -54,7 +54,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
                             try
                             {
                                 var crd = KubernetesYaml.Deserialize<V1CustomResourceDefinition>(yaml);
-                                var code = crdGen.GenerateCode(crd, "KubernetesCRDModelGen.Models." + crd.Spec.Group);
+                                var code = crdGen.GenerateCode(crd, "KubernetesCRDModelGen.Models");
 
                                 context.AddSource($"{crd.Metadata.Name.Replace(".", "-")}.g.cs", code);
                             }
