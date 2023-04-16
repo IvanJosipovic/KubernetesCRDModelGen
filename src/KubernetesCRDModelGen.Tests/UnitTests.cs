@@ -1356,4 +1356,124 @@ spec:
         nested11.IsClass.Should().BeTrue();
         nested11.GetProperty("Prop1").PropertyType.Should().Be<string>();
     }
+
+    [Fact]
+    public async Task TestObjectSameName()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                nested:
+                  type: object
+                  properties:
+                    nested:
+                      type: object
+                      properties:
+                        prop1:
+                          type: string
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var nested1 = specType.GetProperty("Nested").PropertyType;
+
+        nested1.Name.Should().Be("NestedModel");
+        nested1.IsClass.Should().BeTrue();
+
+        var nested11 = nested1.GetProperty("Nested").PropertyType;
+
+        nested11.Name.Should().Be("NestedModel2");
+        nested11.IsClass.Should().BeTrue();
+        nested11.GetProperty("Prop1").PropertyType.Should().Be<string>();
+    }
+
+    [Fact]
+    public async Task TestArrayObjectSameName()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: array
+              items:
+                type: object
+                properties:
+                  spec:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        prop1:
+                          type: string
+";
+        var type = await GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).Should().BeTrue();
+
+        var listType = specType.GenericTypeArguments[0];
+
+        listType.Name.Should().Be("SpecItem");
+
+        typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).Should().BeTrue();
+
+        var specType2 = listType.GetProperty("Spec").PropertyType;
+
+        var listType2 = specType2.GenericTypeArguments[0];
+
+        listType2.Name.Should().Be("SpecItem2");
+    }
 }

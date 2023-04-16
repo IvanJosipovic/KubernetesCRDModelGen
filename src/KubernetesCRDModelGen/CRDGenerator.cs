@@ -136,8 +136,6 @@ public class CRDGenerator : ICRDGenerator
     {
         var types = new List<ClassModel>();
 
-        @namespace = GetCleanNamespace(@namespace);
-
         var version = crd.Spec.Versions.First(x => x.Served && x.Storage);
 
         types.Add(GenerateClass(version.Schema.OpenAPIV3Schema, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural));
@@ -164,9 +162,7 @@ public class CRDGenerator : ICRDGenerator
         var code = complexNumberFile.ToString();
 
         // fix for summary https://github.com/borisdj/CsCodeGenerator/issues/6
-        code = code.Replace("// <summary>", "/// <summary>");
-
-        return code;
+        return code.Replace("// <summary>", "/// <summary>");
     }
 
     public async Task<(Assembly?, XmlDocument?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
@@ -430,15 +426,20 @@ public class CRDGenerator : ICRDGenerator
                             }
                             else
                             {
-                                model.NestedClasses.Add(GenerateClass(property.Value, propertyTypeName));
+                                if (model.Name == propertyTypeName)
+                                {
+                                    propertyTypeName += "2";
+                                }
 
-                                propertyTypeName = model.Name + "." + propertyTypeName;
+                                model.NestedClasses.Add(GenerateClass(property.Value, propertyTypeName));
 
                                 model.Properties.Add(new Property(propertyTypeName + (IsNullable(schema.Required, property.Key) ? "?" : ""), propertyName)
                                 {
                                     Attributes = attribute,
                                     Comment = CleanDescription(property.Value.Description)
                                 });
+
+                                propertyTypeName = model.Name + "." + propertyTypeName;
                             }
                         }
 
@@ -484,10 +485,11 @@ public class CRDGenerator : ICRDGenerator
                         {
                             case "object":
                                 propertyTypeName = propertyName + "Item";
+                                if (model.Name == propertyTypeName)
+                                {
+                                    propertyTypeName += "2";
+                                }
                                 model.NestedClasses.Add(GenerateClass(property.Value, propertyTypeName));
-
-                                propertyTypeName = model.Name + "." + propertyName + "Item";
-
                                 break;
                             case "string":
                                 propertyTypeName = "string";
