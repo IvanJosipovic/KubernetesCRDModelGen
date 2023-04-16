@@ -44,7 +44,7 @@ jobs:
       - name: Create Pull Request
         if: steps.checkfiles.outputs.createpr == 'True'
         id: cpr
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: sync-charts
