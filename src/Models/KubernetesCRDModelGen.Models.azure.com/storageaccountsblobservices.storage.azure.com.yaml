@@ -2,9 +2,10 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
-    helm.sh/resource-policy: keep
+  labels:
+    serviceoperator.azure.com/version: v2.0.0
   name: storageaccountsblobservices.storage.azure.com
 spec:
   conversion:
@@ -13,10 +14,11 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: default
+          namespace: azureserviceoperator-system
           path: /convert
+          port: 443
       conversionReviewVersions:
-      - v1beta1
+      - v1
   group: storage.azure.com
   names:
     kind: StorageAccountsBlobService
@@ -39,652 +41,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1alpha1api20210401
-    schema:
-      openAPIV3Schema:
-        description: Deprecated version of StorageAccountsBlobService. Use v1beta20210401.StorageAccountsBlobService instead
-        properties:
-          apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
-            type: string
-          kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
-            type: string
-          metadata:
-            type: object
-          spec:
-            properties:
-              automaticSnapshotPolicyEnabled:
-                type: boolean
-              changeFeed:
-                description: Deprecated version of ChangeFeed. Use v1beta20210401.ChangeFeed instead
-                properties:
-                  enabled:
-                    type: boolean
-                  retentionInDays:
-                    maximum: 146000
-                    minimum: 1
-                    type: integer
-                type: object
-              containerDeleteRetentionPolicy:
-                description: Deprecated version of DeleteRetentionPolicy. Use v1beta20210401.DeleteRetentionPolicy instead
-                properties:
-                  days:
-                    maximum: 365
-                    minimum: 1
-                    type: integer
-                  enabled:
-                    type: boolean
-                type: object
-              cors:
-                description: Deprecated version of CorsRules. Use v1beta20210401.CorsRules instead
-                properties:
-                  corsRules:
-                    items:
-                      description: Deprecated version of CorsRule. Use v1beta20210401.CorsRule instead
-                      properties:
-                        allowedHeaders:
-                          items:
-                            type: string
-                          type: array
-                        allowedMethods:
-                          items:
-                            description: Deprecated version of CorsRule_AllowedMethods. Use v1beta20210401.CorsRule_AllowedMethods instead
-                            enum:
-                            - DELETE
-                            - GET
-                            - HEAD
-                            - MERGE
-                            - OPTIONS
-                            - POST
-                            - PUT
-                            type: string
-                          type: array
-                        allowedOrigins:
-                          items:
-                            type: string
-                          type: array
-                        exposedHeaders:
-                          items:
-                            type: string
-                          type: array
-                        maxAgeInSeconds:
-                          type: integer
-                      required:
-                      - allowedHeaders
-                      - allowedMethods
-                      - allowedOrigins
-                      - exposedHeaders
-                      - maxAgeInSeconds
-                      type: object
-                    type: array
-                type: object
-              defaultServiceVersion:
-                type: string
-              deleteRetentionPolicy:
-                description: Deprecated version of DeleteRetentionPolicy. Use v1beta20210401.DeleteRetentionPolicy instead
-                properties:
-                  days:
-                    maximum: 365
-                    minimum: 1
-                    type: integer
-                  enabled:
-                    type: boolean
-                type: object
-              isVersioningEnabled:
-                type: boolean
-              lastAccessTimeTrackingPolicy:
-                description: Deprecated version of LastAccessTimeTrackingPolicy. Use v1beta20210401.LastAccessTimeTrackingPolicy instead
-                properties:
-                  blobType:
-                    items:
-                      type: string
-                    type: array
-                  enable:
-                    type: boolean
-                  name:
-                    description: Deprecated version of LastAccessTimeTrackingPolicy_Name. Use v1beta20210401.LastAccessTimeTrackingPolicy_Name instead
-                    enum:
-                    - AccessTimeTracking
-                    type: string
-                  trackingGranularityInDays:
-                    type: integer
-                required:
-                - enable
-                type: object
-              owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
-                properties:
-                  name:
-                    description: This is the name of the Kubernetes resource to reference.
-                    type: string
-                required:
-                - name
-                type: object
-              restorePolicy:
-                description: Deprecated version of RestorePolicyProperties. Use v1beta20210401.RestorePolicyProperties instead
-                properties:
-                  days:
-                    maximum: 365
-                    minimum: 1
-                    type: integer
-                  enabled:
-                    type: boolean
-                required:
-                - enabled
-                type: object
-            required:
-            - owner
-            type: object
-          status:
-            description: Deprecated version of StorageAccounts_BlobService_STATUS. Use v1beta20210401.StorageAccounts_BlobService_STATUS instead
-            properties:
-              automaticSnapshotPolicyEnabled:
-                type: boolean
-              changeFeed:
-                description: Deprecated version of ChangeFeed_STATUS. Use v1beta20210401.ChangeFeed_STATUS instead
-                properties:
-                  enabled:
-                    type: boolean
-                  retentionInDays:
-                    type: integer
-                type: object
-              conditions:
-                description: 'Conditions: The observed state of the resource'
-                items:
-                  description: Condition defines an extension to status (an observation) of a resource
-                  properties:
-                    lastTransitionTime:
-                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
-                      format: date-time
-                      type: string
-                    message:
-                      description: Message is a human readable message indicating details about the transition. This field may be empty.
-                      type: string
-                    observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
-                      format: int64
-                      type: integer
-                    reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
-                      type: string
-                    severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
-                      type: string
-                    status:
-                      description: Status of the condition, one of True, False, or Unknown.
-                      type: string
-                    type:
-                      description: Type of condition.
-                      type: string
-                  required:
-                  - lastTransitionTime
-                  - reason
-                  - status
-                  - type
-                  type: object
-                type: array
-              containerDeleteRetentionPolicy:
-                description: Deprecated version of DeleteRetentionPolicy_STATUS. Use v1beta20210401.DeleteRetentionPolicy_STATUS instead
-                properties:
-                  days:
-                    type: integer
-                  enabled:
-                    type: boolean
-                type: object
-              cors:
-                description: Deprecated version of CorsRules_STATUS. Use v1beta20210401.CorsRules_STATUS instead
-                properties:
-                  corsRules:
-                    items:
-                      description: Deprecated version of CorsRule_STATUS. Use v1beta20210401.CorsRule_STATUS instead
-                      properties:
-                        allowedHeaders:
-                          items:
-                            type: string
-                          type: array
-                        allowedMethods:
-                          items:
-                            description: Deprecated version of CorsRule_AllowedMethods_STATUS. Use v1beta20210401.CorsRule_AllowedMethods_STATUS instead
-                            type: string
-                          type: array
-                        allowedOrigins:
-                          items:
-                            type: string
-                          type: array
-                        exposedHeaders:
-                          items:
-                            type: string
-                          type: array
-                        maxAgeInSeconds:
-                          type: integer
-                      type: object
-                    type: array
-                type: object
-              defaultServiceVersion:
-                type: string
-              deleteRetentionPolicy:
-                description: Deprecated version of DeleteRetentionPolicy_STATUS. Use v1beta20210401.DeleteRetentionPolicy_STATUS instead
-                properties:
-                  days:
-                    type: integer
-                  enabled:
-                    type: boolean
-                type: object
-              id:
-                type: string
-              isVersioningEnabled:
-                type: boolean
-              lastAccessTimeTrackingPolicy:
-                description: Deprecated version of LastAccessTimeTrackingPolicy_STATUS. Use v1beta20210401.LastAccessTimeTrackingPolicy_STATUS instead
-                properties:
-                  blobType:
-                    items:
-                      type: string
-                    type: array
-                  enable:
-                    type: boolean
-                  name:
-                    description: Deprecated version of LastAccessTimeTrackingPolicy_Name_STATUS. Use v1beta20210401.LastAccessTimeTrackingPolicy_Name_STATUS instead
-                    type: string
-                  trackingGranularityInDays:
-                    type: integer
-                type: object
-              name:
-                type: string
-              restorePolicy:
-                description: Deprecated version of RestorePolicyProperties_STATUS. Use v1beta20210401.RestorePolicyProperties_STATUS instead
-                properties:
-                  days:
-                    type: integer
-                  enabled:
-                    type: boolean
-                  lastEnabledTime:
-                    type: string
-                  minRestoreTime:
-                    type: string
-                type: object
-              sku:
-                description: Deprecated version of Sku_STATUS. Use v1beta20210401.Sku_STATUS instead
-                properties:
-                  name:
-                    description: Deprecated version of SkuName_STATUS. Use v1beta20210401.SkuName_STATUS instead
-                    type: string
-                  tier:
-                    description: Deprecated version of Tier_STATUS. Use v1beta20210401.Tier_STATUS instead
-                    type: string
-                type: object
-              type:
-                type: string
-            type: object
-        type: object
-    served: true
-    storage: false
-    subresources:
-      status: {}
-  - additionalPrinterColumns:
-    - jsonPath: .status.conditions[?(@.type=='Ready')].status
-      name: Ready
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
-      name: Severity
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
-      name: Reason
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].message
-      name: Message
-      type: string
-    name: v1alpha1api20210401storage
-    schema:
-      openAPIV3Schema:
-        description: Storage version of v1alpha1api20210401.StorageAccountsBlobService Deprecated version of StorageAccountsBlobService. Use v1beta20210401.StorageAccountsBlobService instead
-        properties:
-          apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
-            type: string
-          kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
-            type: string
-          metadata:
-            type: object
-          spec:
-            description: Storage version of v1alpha1api20210401.StorageAccounts_BlobService_Spec
-            properties:
-              $propertyBag:
-                additionalProperties:
-                  type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                type: object
-              automaticSnapshotPolicyEnabled:
-                type: boolean
-              changeFeed:
-                description: Storage version of v1alpha1api20210401.ChangeFeed Deprecated version of ChangeFeed. Use v1beta20210401.ChangeFeed instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  enabled:
-                    type: boolean
-                  retentionInDays:
-                    type: integer
-                type: object
-              containerDeleteRetentionPolicy:
-                description: Storage version of v1alpha1api20210401.DeleteRetentionPolicy Deprecated version of DeleteRetentionPolicy. Use v1beta20210401.DeleteRetentionPolicy instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  days:
-                    type: integer
-                  enabled:
-                    type: boolean
-                type: object
-              cors:
-                description: Storage version of v1alpha1api20210401.CorsRules Deprecated version of CorsRules. Use v1beta20210401.CorsRules instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  corsRules:
-                    items:
-                      description: Storage version of v1alpha1api20210401.CorsRule Deprecated version of CorsRule. Use v1beta20210401.CorsRule instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        allowedHeaders:
-                          items:
-                            type: string
-                          type: array
-                        allowedMethods:
-                          items:
-                            type: string
-                          type: array
-                        allowedOrigins:
-                          items:
-                            type: string
-                          type: array
-                        exposedHeaders:
-                          items:
-                            type: string
-                          type: array
-                        maxAgeInSeconds:
-                          type: integer
-                      type: object
-                    type: array
-                type: object
-              defaultServiceVersion:
-                type: string
-              deleteRetentionPolicy:
-                description: Storage version of v1alpha1api20210401.DeleteRetentionPolicy Deprecated version of DeleteRetentionPolicy. Use v1beta20210401.DeleteRetentionPolicy instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  days:
-                    type: integer
-                  enabled:
-                    type: boolean
-                type: object
-              isVersioningEnabled:
-                type: boolean
-              lastAccessTimeTrackingPolicy:
-                description: Storage version of v1alpha1api20210401.LastAccessTimeTrackingPolicy Deprecated version of LastAccessTimeTrackingPolicy. Use v1beta20210401.LastAccessTimeTrackingPolicy instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  blobType:
-                    items:
-                      type: string
-                    type: array
-                  enable:
-                    type: boolean
-                  name:
-                    type: string
-                  trackingGranularityInDays:
-                    type: integer
-                type: object
-              originalVersion:
-                type: string
-              owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
-                properties:
-                  name:
-                    description: This is the name of the Kubernetes resource to reference.
-                    type: string
-                required:
-                - name
-                type: object
-              restorePolicy:
-                description: Storage version of v1alpha1api20210401.RestorePolicyProperties Deprecated version of RestorePolicyProperties. Use v1beta20210401.RestorePolicyProperties instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  days:
-                    type: integer
-                  enabled:
-                    type: boolean
-                type: object
-            required:
-            - owner
-            type: object
-          status:
-            description: Storage version of v1alpha1api20210401.StorageAccounts_BlobService_STATUS Deprecated version of StorageAccounts_BlobService_STATUS. Use v1beta20210401.StorageAccounts_BlobService_STATUS instead
-            properties:
-              $propertyBag:
-                additionalProperties:
-                  type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                type: object
-              automaticSnapshotPolicyEnabled:
-                type: boolean
-              changeFeed:
-                description: Storage version of v1alpha1api20210401.ChangeFeed_STATUS Deprecated version of ChangeFeed_STATUS. Use v1beta20210401.ChangeFeed_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  enabled:
-                    type: boolean
-                  retentionInDays:
-                    type: integer
-                type: object
-              conditions:
-                items:
-                  description: Condition defines an extension to status (an observation) of a resource
-                  properties:
-                    lastTransitionTime:
-                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
-                      format: date-time
-                      type: string
-                    message:
-                      description: Message is a human readable message indicating details about the transition. This field may be empty.
-                      type: string
-                    observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
-                      format: int64
-                      type: integer
-                    reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
-                      type: string
-                    severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
-                      type: string
-                    status:
-                      description: Status of the condition, one of True, False, or Unknown.
-                      type: string
-                    type:
-                      description: Type of condition.
-                      type: string
-                  required:
-                  - lastTransitionTime
-                  - reason
-                  - status
-                  - type
-                  type: object
-                type: array
-              containerDeleteRetentionPolicy:
-                description: Storage version of v1alpha1api20210401.DeleteRetentionPolicy_STATUS Deprecated version of DeleteRetentionPolicy_STATUS. Use v1beta20210401.DeleteRetentionPolicy_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  days:
-                    type: integer
-                  enabled:
-                    type: boolean
-                type: object
-              cors:
-                description: Storage version of v1alpha1api20210401.CorsRules_STATUS Deprecated version of CorsRules_STATUS. Use v1beta20210401.CorsRules_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  corsRules:
-                    items:
-                      description: Storage version of v1alpha1api20210401.CorsRule_STATUS Deprecated version of CorsRule_STATUS. Use v1beta20210401.CorsRule_STATUS instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        allowedHeaders:
-                          items:
-                            type: string
-                          type: array
-                        allowedMethods:
-                          items:
-                            type: string
-                          type: array
-                        allowedOrigins:
-                          items:
-                            type: string
-                          type: array
-                        exposedHeaders:
-                          items:
-                            type: string
-                          type: array
-                        maxAgeInSeconds:
-                          type: integer
-                      type: object
-                    type: array
-                type: object
-              defaultServiceVersion:
-                type: string
-              deleteRetentionPolicy:
-                description: Storage version of v1alpha1api20210401.DeleteRetentionPolicy_STATUS Deprecated version of DeleteRetentionPolicy_STATUS. Use v1beta20210401.DeleteRetentionPolicy_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  days:
-                    type: integer
-                  enabled:
-                    type: boolean
-                type: object
-              id:
-                type: string
-              isVersioningEnabled:
-                type: boolean
-              lastAccessTimeTrackingPolicy:
-                description: Storage version of v1alpha1api20210401.LastAccessTimeTrackingPolicy_STATUS Deprecated version of LastAccessTimeTrackingPolicy_STATUS. Use v1beta20210401.LastAccessTimeTrackingPolicy_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  blobType:
-                    items:
-                      type: string
-                    type: array
-                  enable:
-                    type: boolean
-                  name:
-                    type: string
-                  trackingGranularityInDays:
-                    type: integer
-                type: object
-              name:
-                type: string
-              restorePolicy:
-                description: Storage version of v1alpha1api20210401.RestorePolicyProperties_STATUS Deprecated version of RestorePolicyProperties_STATUS. Use v1beta20210401.RestorePolicyProperties_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  days:
-                    type: integer
-                  enabled:
-                    type: boolean
-                  lastEnabledTime:
-                    type: string
-                  minRestoreTime:
-                    type: string
-                type: object
-              sku:
-                description: Storage version of v1alpha1api20210401.Sku_STATUS Deprecated version of Sku_STATUS. Use v1beta20210401.Sku_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  name:
-                    type: string
-                  tier:
-                    type: string
-                type: object
-              type:
-                type: string
-            type: object
-        type: object
-    served: true
-    storage: false
-    subresources:
-      status: {}
-  - additionalPrinterColumns:
-    - jsonPath: .status.conditions[?(@.type=='Ready')].status
-      name: Ready
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
-      name: Severity
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
-      name: Reason
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].message
-      name: Message
-      type: string
-    name: v1beta20210401
+    name: v1api20210401
     schema:
       openAPIV3Schema:
         description: 'Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default'
@@ -1022,10 +379,10 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1beta20210401storage
+    name: v1api20210401storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210401.StorageAccountsBlobService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default'
+        description: 'Storage version of v1api20210401.StorageAccountsBlobService Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1036,7 +393,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210401.StorageAccounts_BlobService_Spec
+            description: Storage version of v1api20210401.StorageAccounts_BlobService_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1046,7 +403,7 @@ spec:
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: Storage version of v1beta20210401.ChangeFeed The blob service properties for change feed events.
+                description: Storage version of v1api20210401.ChangeFeed The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1059,7 +416,7 @@ spec:
                     type: integer
                 type: object
               containerDeleteRetentionPolicy:
-                description: Storage version of v1beta20210401.DeleteRetentionPolicy The service properties for soft delete.
+                description: Storage version of v1api20210401.DeleteRetentionPolicy The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1072,7 +429,7 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: Storage version of v1beta20210401.CorsRules Sets the CORS rules. You can include up to five CorsRule elements in the request.
+                description: Storage version of v1api20210401.CorsRules Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1081,7 +438,7 @@ spec:
                     type: object
                   corsRules:
                     items:
-                      description: Storage version of v1beta20210401.CorsRule Specifies a CORS rule for the Blob service.
+                      description: Storage version of v1api20210401.CorsRule Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1112,7 +469,7 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: Storage version of v1beta20210401.DeleteRetentionPolicy The service properties for soft delete.
+                description: Storage version of v1api20210401.DeleteRetentionPolicy The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1127,7 +484,7 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: Storage version of v1beta20210401.LastAccessTimeTrackingPolicy The blob service properties for Last access time based tracking policy.
+                description: Storage version of v1api20210401.LastAccessTimeTrackingPolicy The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1157,7 +514,7 @@ spec:
                 - name
                 type: object
               restorePolicy:
-                description: Storage version of v1beta20210401.RestorePolicyProperties The blob service properties for blob restore policy
+                description: Storage version of v1api20210401.RestorePolicyProperties The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1173,7 +530,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401.StorageAccounts_BlobService_STATUS
+            description: Storage version of v1api20210401.StorageAccounts_BlobService_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1183,7 +540,7 @@ spec:
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: Storage version of v1beta20210401.ChangeFeed_STATUS The blob service properties for change feed events.
+                description: Storage version of v1api20210401.ChangeFeed_STATUS The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1230,7 +587,7 @@ spec:
                   type: object
                 type: array
               containerDeleteRetentionPolicy:
-                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS The service properties for soft delete.
+                description: Storage version of v1api20210401.DeleteRetentionPolicy_STATUS The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1243,7 +600,7 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: Storage version of v1beta20210401.CorsRules_STATUS Sets the CORS rules. You can include up to five CorsRule elements in the request.
+                description: Storage version of v1api20210401.CorsRules_STATUS Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1252,7 +609,7 @@ spec:
                     type: object
                   corsRules:
                     items:
-                      description: Storage version of v1beta20210401.CorsRule_STATUS Specifies a CORS rule for the Blob service.
+                      description: Storage version of v1api20210401.CorsRule_STATUS Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1283,7 +640,7 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS The service properties for soft delete.
+                description: Storage version of v1api20210401.DeleteRetentionPolicy_STATUS The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1300,7 +657,7 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: Storage version of v1beta20210401.LastAccessTimeTrackingPolicy_STATUS The blob service properties for Last access time based tracking policy.
+                description: Storage version of v1api20210401.LastAccessTimeTrackingPolicy_STATUS The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1321,7 +678,7 @@ spec:
               name:
                 type: string
               restorePolicy:
-                description: Storage version of v1beta20210401.RestorePolicyProperties_STATUS The blob service properties for blob restore policy
+                description: Storage version of v1api20210401.RestorePolicyProperties_STATUS The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1338,7 +695,7 @@ spec:
                     type: string
                 type: object
               sku:
-                description: Storage version of v1beta20210401.Sku_STATUS The SKU of the storage account.
+                description: Storage version of v1api20210401.Sku_STATUS The SKU of the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1356,5 +713,650 @@ spec:
         type: object
     served: true
     storage: true
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1beta20210401
+    schema:
+      openAPIV3Schema:
+        description: Deprecated version of StorageAccountsBlobService. Use v1api20210401.StorageAccountsBlobService instead
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              automaticSnapshotPolicyEnabled:
+                type: boolean
+              changeFeed:
+                description: Deprecated version of ChangeFeed. Use v1api20210401.ChangeFeed instead
+                properties:
+                  enabled:
+                    type: boolean
+                  retentionInDays:
+                    maximum: 146000
+                    minimum: 1
+                    type: integer
+                type: object
+              containerDeleteRetentionPolicy:
+                description: Deprecated version of DeleteRetentionPolicy. Use v1api20210401.DeleteRetentionPolicy instead
+                properties:
+                  days:
+                    maximum: 365
+                    minimum: 1
+                    type: integer
+                  enabled:
+                    type: boolean
+                type: object
+              cors:
+                description: Deprecated version of CorsRules. Use v1api20210401.CorsRules instead
+                properties:
+                  corsRules:
+                    items:
+                      description: Deprecated version of CorsRule. Use v1api20210401.CorsRule instead
+                      properties:
+                        allowedHeaders:
+                          items:
+                            type: string
+                          type: array
+                        allowedMethods:
+                          items:
+                            description: Deprecated version of CorsRule_AllowedMethods. Use v1api20210401.CorsRule_AllowedMethods instead
+                            enum:
+                            - DELETE
+                            - GET
+                            - HEAD
+                            - MERGE
+                            - OPTIONS
+                            - POST
+                            - PUT
+                            type: string
+                          type: array
+                        allowedOrigins:
+                          items:
+                            type: string
+                          type: array
+                        exposedHeaders:
+                          items:
+                            type: string
+                          type: array
+                        maxAgeInSeconds:
+                          type: integer
+                      required:
+                      - allowedHeaders
+                      - allowedMethods
+                      - allowedOrigins
+                      - exposedHeaders
+                      - maxAgeInSeconds
+                      type: object
+                    type: array
+                type: object
+              defaultServiceVersion:
+                type: string
+              deleteRetentionPolicy:
+                description: Deprecated version of DeleteRetentionPolicy. Use v1api20210401.DeleteRetentionPolicy instead
+                properties:
+                  days:
+                    maximum: 365
+                    minimum: 1
+                    type: integer
+                  enabled:
+                    type: boolean
+                type: object
+              isVersioningEnabled:
+                type: boolean
+              lastAccessTimeTrackingPolicy:
+                description: Deprecated version of LastAccessTimeTrackingPolicy. Use v1api20210401.LastAccessTimeTrackingPolicy instead
+                properties:
+                  blobType:
+                    items:
+                      type: string
+                    type: array
+                  enable:
+                    type: boolean
+                  name:
+                    description: Deprecated version of LastAccessTimeTrackingPolicy_Name. Use v1api20210401.LastAccessTimeTrackingPolicy_Name instead
+                    enum:
+                    - AccessTimeTracking
+                    type: string
+                  trackingGranularityInDays:
+                    type: integer
+                required:
+                - enable
+                type: object
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              restorePolicy:
+                description: Deprecated version of RestorePolicyProperties. Use v1api20210401.RestorePolicyProperties instead
+                properties:
+                  days:
+                    maximum: 365
+                    minimum: 1
+                    type: integer
+                  enabled:
+                    type: boolean
+                required:
+                - enabled
+                type: object
+            required:
+            - owner
+            type: object
+          status:
+            description: Deprecated version of StorageAccounts_BlobService_STATUS. Use v1api20210401.StorageAccounts_BlobService_STATUS instead
+            properties:
+              automaticSnapshotPolicyEnabled:
+                type: boolean
+              changeFeed:
+                description: Deprecated version of ChangeFeed_STATUS. Use v1api20210401.ChangeFeed_STATUS instead
+                properties:
+                  enabled:
+                    type: boolean
+                  retentionInDays:
+                    type: integer
+                type: object
+              conditions:
+                description: 'Conditions: The observed state of the resource'
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              containerDeleteRetentionPolicy:
+                description: Deprecated version of DeleteRetentionPolicy_STATUS. Use v1api20210401.DeleteRetentionPolicy_STATUS instead
+                properties:
+                  days:
+                    type: integer
+                  enabled:
+                    type: boolean
+                type: object
+              cors:
+                description: Deprecated version of CorsRules_STATUS. Use v1api20210401.CorsRules_STATUS instead
+                properties:
+                  corsRules:
+                    items:
+                      description: Deprecated version of CorsRule_STATUS. Use v1api20210401.CorsRule_STATUS instead
+                      properties:
+                        allowedHeaders:
+                          items:
+                            type: string
+                          type: array
+                        allowedMethods:
+                          items:
+                            description: Deprecated version of CorsRule_AllowedMethods_STATUS. Use v1api20210401.CorsRule_AllowedMethods_STATUS instead
+                            type: string
+                          type: array
+                        allowedOrigins:
+                          items:
+                            type: string
+                          type: array
+                        exposedHeaders:
+                          items:
+                            type: string
+                          type: array
+                        maxAgeInSeconds:
+                          type: integer
+                      type: object
+                    type: array
+                type: object
+              defaultServiceVersion:
+                type: string
+              deleteRetentionPolicy:
+                description: Deprecated version of DeleteRetentionPolicy_STATUS. Use v1api20210401.DeleteRetentionPolicy_STATUS instead
+                properties:
+                  days:
+                    type: integer
+                  enabled:
+                    type: boolean
+                type: object
+              id:
+                type: string
+              isVersioningEnabled:
+                type: boolean
+              lastAccessTimeTrackingPolicy:
+                description: Deprecated version of LastAccessTimeTrackingPolicy_STATUS. Use v1api20210401.LastAccessTimeTrackingPolicy_STATUS instead
+                properties:
+                  blobType:
+                    items:
+                      type: string
+                    type: array
+                  enable:
+                    type: boolean
+                  name:
+                    description: Deprecated version of LastAccessTimeTrackingPolicy_Name_STATUS. Use v1api20210401.LastAccessTimeTrackingPolicy_Name_STATUS instead
+                    type: string
+                  trackingGranularityInDays:
+                    type: integer
+                type: object
+              name:
+                type: string
+              restorePolicy:
+                description: Deprecated version of RestorePolicyProperties_STATUS. Use v1api20210401.RestorePolicyProperties_STATUS instead
+                properties:
+                  days:
+                    type: integer
+                  enabled:
+                    type: boolean
+                  lastEnabledTime:
+                    type: string
+                  minRestoreTime:
+                    type: string
+                type: object
+              sku:
+                description: Deprecated version of Sku_STATUS. Use v1api20210401.Sku_STATUS instead
+                properties:
+                  name:
+                    description: Deprecated version of SkuName_STATUS. Use v1api20210401.SkuName_STATUS instead
+                    type: string
+                  tier:
+                    description: Deprecated version of Tier_STATUS. Use v1api20210401.Tier_STATUS instead
+                    type: string
+                type: object
+              type:
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: false
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1beta20210401storage
+    schema:
+      openAPIV3Schema:
+        description: Storage version of v1beta20210401.StorageAccountsBlobService Deprecated version of StorageAccountsBlobService. Use v1api20210401.StorageAccountsBlobService instead
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: Storage version of v1beta20210401.StorageAccounts_BlobService_Spec
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              automaticSnapshotPolicyEnabled:
+                type: boolean
+              changeFeed:
+                description: Storage version of v1beta20210401.ChangeFeed Deprecated version of ChangeFeed. Use v1api20210401.ChangeFeed instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  enabled:
+                    type: boolean
+                  retentionInDays:
+                    type: integer
+                type: object
+              containerDeleteRetentionPolicy:
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy Deprecated version of DeleteRetentionPolicy. Use v1api20210401.DeleteRetentionPolicy instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  days:
+                    type: integer
+                  enabled:
+                    type: boolean
+                type: object
+              cors:
+                description: Storage version of v1beta20210401.CorsRules Deprecated version of CorsRules. Use v1api20210401.CorsRules instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  corsRules:
+                    items:
+                      description: Storage version of v1beta20210401.CorsRule Deprecated version of CorsRule. Use v1api20210401.CorsRule instead
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        allowedHeaders:
+                          items:
+                            type: string
+                          type: array
+                        allowedMethods:
+                          items:
+                            type: string
+                          type: array
+                        allowedOrigins:
+                          items:
+                            type: string
+                          type: array
+                        exposedHeaders:
+                          items:
+                            type: string
+                          type: array
+                        maxAgeInSeconds:
+                          type: integer
+                      type: object
+                    type: array
+                type: object
+              defaultServiceVersion:
+                type: string
+              deleteRetentionPolicy:
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy Deprecated version of DeleteRetentionPolicy. Use v1api20210401.DeleteRetentionPolicy instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  days:
+                    type: integer
+                  enabled:
+                    type: boolean
+                type: object
+              isVersioningEnabled:
+                type: boolean
+              lastAccessTimeTrackingPolicy:
+                description: Storage version of v1beta20210401.LastAccessTimeTrackingPolicy Deprecated version of LastAccessTimeTrackingPolicy. Use v1api20210401.LastAccessTimeTrackingPolicy instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  blobType:
+                    items:
+                      type: string
+                    type: array
+                  enable:
+                    type: boolean
+                  name:
+                    type: string
+                  trackingGranularityInDays:
+                    type: integer
+                type: object
+              originalVersion:
+                type: string
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              restorePolicy:
+                description: Storage version of v1beta20210401.RestorePolicyProperties Deprecated version of RestorePolicyProperties. Use v1api20210401.RestorePolicyProperties instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  days:
+                    type: integer
+                  enabled:
+                    type: boolean
+                type: object
+            required:
+            - owner
+            type: object
+          status:
+            description: Storage version of v1beta20210401.StorageAccounts_BlobService_STATUS Deprecated version of StorageAccounts_BlobService_STATUS. Use v1api20210401.StorageAccounts_BlobService_STATUS instead
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              automaticSnapshotPolicyEnabled:
+                type: boolean
+              changeFeed:
+                description: Storage version of v1beta20210401.ChangeFeed_STATUS Deprecated version of ChangeFeed_STATUS. Use v1api20210401.ChangeFeed_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  enabled:
+                    type: boolean
+                  retentionInDays:
+                    type: integer
+                type: object
+              conditions:
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              containerDeleteRetentionPolicy:
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS Deprecated version of DeleteRetentionPolicy_STATUS. Use v1api20210401.DeleteRetentionPolicy_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  days:
+                    type: integer
+                  enabled:
+                    type: boolean
+                type: object
+              cors:
+                description: Storage version of v1beta20210401.CorsRules_STATUS Deprecated version of CorsRules_STATUS. Use v1api20210401.CorsRules_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  corsRules:
+                    items:
+                      description: Storage version of v1beta20210401.CorsRule_STATUS Deprecated version of CorsRule_STATUS. Use v1api20210401.CorsRule_STATUS instead
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        allowedHeaders:
+                          items:
+                            type: string
+                          type: array
+                        allowedMethods:
+                          items:
+                            type: string
+                          type: array
+                        allowedOrigins:
+                          items:
+                            type: string
+                          type: array
+                        exposedHeaders:
+                          items:
+                            type: string
+                          type: array
+                        maxAgeInSeconds:
+                          type: integer
+                      type: object
+                    type: array
+                type: object
+              defaultServiceVersion:
+                type: string
+              deleteRetentionPolicy:
+                description: Storage version of v1beta20210401.DeleteRetentionPolicy_STATUS Deprecated version of DeleteRetentionPolicy_STATUS. Use v1api20210401.DeleteRetentionPolicy_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  days:
+                    type: integer
+                  enabled:
+                    type: boolean
+                type: object
+              id:
+                type: string
+              isVersioningEnabled:
+                type: boolean
+              lastAccessTimeTrackingPolicy:
+                description: Storage version of v1beta20210401.LastAccessTimeTrackingPolicy_STATUS Deprecated version of LastAccessTimeTrackingPolicy_STATUS. Use v1api20210401.LastAccessTimeTrackingPolicy_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  blobType:
+                    items:
+                      type: string
+                    type: array
+                  enable:
+                    type: boolean
+                  name:
+                    type: string
+                  trackingGranularityInDays:
+                    type: integer
+                type: object
+              name:
+                type: string
+              restorePolicy:
+                description: Storage version of v1beta20210401.RestorePolicyProperties_STATUS Deprecated version of RestorePolicyProperties_STATUS. Use v1api20210401.RestorePolicyProperties_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  days:
+                    type: integer
+                  enabled:
+                    type: boolean
+                  lastEnabledTime:
+                    type: string
+                  minRestoreTime:
+                    type: string
+                type: object
+              sku:
+                description: Storage version of v1beta20210401.Sku_STATUS Deprecated version of Sku_STATUS. Use v1api20210401.Sku_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  name:
+                    type: string
+                  tier:
+                    type: string
+                type: object
+              type:
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: false
     subresources:
       status: {}

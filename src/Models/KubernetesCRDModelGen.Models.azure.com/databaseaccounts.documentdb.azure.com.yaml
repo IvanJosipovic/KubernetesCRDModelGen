@@ -2,9 +2,10 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
-    helm.sh/resource-policy: keep
+  labels:
+    serviceoperator.azure.com/version: v2.0.0
   name: databaseaccounts.documentdb.azure.com
 spec:
   conversion:
@@ -13,10 +14,11 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: default
+          namespace: azureserviceoperator-system
           path: /convert
+          port: 443
       conversionReviewVersions:
-      - v1beta1
+      - v1
   group: documentdb.azure.com
   names:
     kind: DatabaseAccount
@@ -39,1365 +41,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1alpha1api20210515
-    schema:
-      openAPIV3Schema:
-        description: Deprecated version of DatabaseAccount. Use v1beta20210515.DatabaseAccount instead
-        properties:
-          apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
-            type: string
-          kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
-            type: string
-          metadata:
-            type: object
-          spec:
-            properties:
-              analyticalStorageConfiguration:
-                description: Deprecated version of AnalyticalStorageConfiguration. Use v1beta20210515.AnalyticalStorageConfiguration instead
-                properties:
-                  schemaType:
-                    description: Deprecated version of AnalyticalStorageSchemaType. Use v1beta20210515.AnalyticalStorageSchemaType instead
-                    enum:
-                    - FullFidelity
-                    - WellDefined
-                    type: string
-                type: object
-              apiProperties:
-                description: Deprecated version of ApiProperties. Use v1beta20210515.ApiProperties instead
-                properties:
-                  serverVersion:
-                    description: Deprecated version of ApiProperties_ServerVersion. Use v1beta20210515.ApiProperties_ServerVersion instead
-                    enum:
-                    - 3.2
-                    - 3.6
-                    - 4.0
-                    type: string
-                type: object
-              azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                maxLength: 50
-                minLength: 3
-                pattern: ^[a-z0-9]+(-[a-z0-9]+)*
-                type: string
-              backupPolicy:
-                description: Deprecated version of BackupPolicy. Use v1beta20210515.BackupPolicy instead
-                properties:
-                  continuous:
-                    description: Deprecated version of ContinuousModeBackupPolicy. Use v1beta20210515.ContinuousModeBackupPolicy instead
-                    properties:
-                      type:
-                        description: Deprecated version of ContinuousModeBackupPolicy_Type. Use v1beta20210515.ContinuousModeBackupPolicy_Type instead
-                        enum:
-                        - Continuous
-                        type: string
-                    required:
-                    - type
-                    type: object
-                  periodic:
-                    description: Deprecated version of PeriodicModeBackupPolicy. Use v1beta20210515.PeriodicModeBackupPolicy instead
-                    properties:
-                      periodicModeProperties:
-                        description: Deprecated version of PeriodicModeProperties. Use v1beta20210515.PeriodicModeProperties instead
-                        properties:
-                          backupIntervalInMinutes:
-                            minimum: 0
-                            type: integer
-                          backupRetentionIntervalInHours:
-                            minimum: 0
-                            type: integer
-                        type: object
-                      type:
-                        description: Deprecated version of PeriodicModeBackupPolicy_Type. Use v1beta20210515.PeriodicModeBackupPolicy_Type instead
-                        enum:
-                        - Periodic
-                        type: string
-                    required:
-                    - type
-                    type: object
-                type: object
-              capabilities:
-                items:
-                  description: Deprecated version of Capability. Use v1beta20210515.Capability instead
-                  properties:
-                    name:
-                      type: string
-                  type: object
-                type: array
-              connectorOffer:
-                description: Deprecated version of ConnectorOffer. Use v1beta20210515.ConnectorOffer instead
-                enum:
-                - Small
-                type: string
-              consistencyPolicy:
-                description: Deprecated version of ConsistencyPolicy. Use v1beta20210515.ConsistencyPolicy instead
-                properties:
-                  defaultConsistencyLevel:
-                    description: Deprecated version of ConsistencyPolicy_DefaultConsistencyLevel. Use v1beta20210515.ConsistencyPolicy_DefaultConsistencyLevel instead
-                    enum:
-                    - BoundedStaleness
-                    - ConsistentPrefix
-                    - Eventual
-                    - Session
-                    - Strong
-                    type: string
-                  maxIntervalInSeconds:
-                    maximum: 86400
-                    minimum: 5
-                    type: integer
-                  maxStalenessPrefix:
-                    maximum: 2147483647
-                    minimum: 1
-                    type: integer
-                required:
-                - defaultConsistencyLevel
-                type: object
-              cors:
-                items:
-                  description: Deprecated version of CorsPolicy. Use v1beta20210515.CorsPolicy instead
-                  properties:
-                    allowedHeaders:
-                      type: string
-                    allowedMethods:
-                      type: string
-                    allowedOrigins:
-                      type: string
-                    exposedHeaders:
-                      type: string
-                    maxAgeInSeconds:
-                      maximum: 2147483647
-                      minimum: 1
-                      type: integer
-                  required:
-                  - allowedOrigins
-                  type: object
-                type: array
-              databaseAccountOfferType:
-                description: Deprecated version of DatabaseAccountOfferType. Use v1beta20210515.DatabaseAccountOfferType instead
-                enum:
-                - Standard
-                type: string
-              defaultIdentity:
-                type: string
-              disableKeyBasedMetadataWriteAccess:
-                type: boolean
-              enableAnalyticalStorage:
-                type: boolean
-              enableAutomaticFailover:
-                type: boolean
-              enableCassandraConnector:
-                type: boolean
-              enableFreeTier:
-                type: boolean
-              enableMultipleWriteLocations:
-                type: boolean
-              identity:
-                description: Deprecated version of ManagedServiceIdentity. Use v1beta20210515.ManagedServiceIdentity instead
-                properties:
-                  type:
-                    description: Deprecated version of ManagedServiceIdentity_Type. Use v1beta20210515.ManagedServiceIdentity_Type instead
-                    enum:
-                    - None
-                    - SystemAssigned
-                    - SystemAssigned,UserAssigned
-                    - UserAssigned
-                    type: string
-                type: object
-              ipRules:
-                items:
-                  description: Deprecated version of IpAddressOrRange. Use v1beta20210515.IpAddressOrRange instead
-                  properties:
-                    ipAddressOrRange:
-                      type: string
-                  type: object
-                type: array
-              isVirtualNetworkFilterEnabled:
-                type: boolean
-              keyVaultKeyUri:
-                type: string
-              kind:
-                description: Deprecated version of DatabaseAccount_Kind_Spec. Use v1beta20210515.DatabaseAccount_Kind_Spec instead
-                enum:
-                - GlobalDocumentDB
-                - MongoDB
-                - Parse
-                type: string
-              location:
-                type: string
-              locations:
-                items:
-                  description: Deprecated version of Location. Use v1beta20210515.Location instead
-                  properties:
-                    failoverPriority:
-                      minimum: 0
-                      type: integer
-                    isZoneRedundant:
-                      type: boolean
-                    locationName:
-                      type: string
-                  type: object
-                type: array
-              networkAclBypass:
-                description: Deprecated version of NetworkAclBypass. Use v1beta20210515.NetworkAclBypass instead
-                enum:
-                - AzureServices
-                - None
-                type: string
-              networkAclBypassResourceIds:
-                items:
-                  type: string
-                type: array
-              operatorSpec:
-                description: 'OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not passed directly to Azure'
-                properties:
-                  secrets:
-                    description: 'Secrets: configures where to place Azure generated secrets.'
-                    properties:
-                      documentEndpoint:
-                        description: 'DocumentEndpoint: indicates where the DocumentEndpoint secret should be placed. If omitted, the secret will not be retrieved from Azure.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                      primaryMasterKey:
-                        description: 'PrimaryMasterKey: indicates where the PrimaryMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                      primaryReadonlyMasterKey:
-                        description: 'PrimaryReadonlyMasterKey: indicates where the PrimaryReadonlyMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                      secondaryMasterKey:
-                        description: 'SecondaryMasterKey: indicates where the SecondaryMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                      secondaryReadonlyMasterKey:
-                        description: 'SecondaryReadonlyMasterKey: indicates where the SecondaryReadonlyMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                    type: object
-                type: object
-              owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
-                properties:
-                  name:
-                    description: This is the name of the Kubernetes resource to reference.
-                    type: string
-                required:
-                - name
-                type: object
-              publicNetworkAccess:
-                description: Deprecated version of PublicNetworkAccess. Use v1beta20210515.PublicNetworkAccess instead
-                enum:
-                - Disabled
-                - Enabled
-                type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
-              virtualNetworkRules:
-                items:
-                  description: Deprecated version of VirtualNetworkRule. Use v1beta20210515.VirtualNetworkRule instead
-                  properties:
-                    ignoreMissingVNetServiceEndpoint:
-                      type: boolean
-                    reference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-                      properties:
-                        armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                          pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                          type: string
-                        group:
-                          description: Group is the Kubernetes group of the resource.
-                          type: string
-                        kind:
-                          description: Kind is the Kubernetes kind of the resource.
-                          type: string
-                        name:
-                          description: Name is the Kubernetes name of the resource.
-                          type: string
-                      type: object
-                  type: object
-                type: array
-            required:
-            - databaseAccountOfferType
-            - locations
-            - owner
-            type: object
-          status:
-            description: Deprecated version of DatabaseAccount_STATUS. Use v1beta20210515.DatabaseAccount_STATUS instead
-            properties:
-              analyticalStorageConfiguration:
-                description: Deprecated version of AnalyticalStorageConfiguration_STATUS. Use v1beta20210515.AnalyticalStorageConfiguration_STATUS instead
-                properties:
-                  schemaType:
-                    description: Deprecated version of AnalyticalStorageSchemaType_STATUS. Use v1beta20210515.AnalyticalStorageSchemaType_STATUS instead
-                    type: string
-                type: object
-              apiProperties:
-                description: Deprecated version of ApiProperties_STATUS. Use v1beta20210515.ApiProperties_STATUS instead
-                properties:
-                  serverVersion:
-                    description: Deprecated version of ApiProperties_ServerVersion_STATUS. Use v1beta20210515.ApiProperties_ServerVersion_STATUS instead
-                    type: string
-                type: object
-              backupPolicy:
-                description: Deprecated version of BackupPolicy_STATUS. Use v1beta20210515.BackupPolicy_STATUS instead
-                properties:
-                  continuous:
-                    description: Deprecated version of ContinuousModeBackupPolicy_STATUS. Use v1beta20210515.ContinuousModeBackupPolicy_STATUS instead
-                    properties:
-                      type:
-                        description: Deprecated version of ContinuousModeBackupPolicy_Type_STATUS. Use v1beta20210515.ContinuousModeBackupPolicy_Type_STATUS instead
-                        type: string
-                    type: object
-                  periodic:
-                    description: Deprecated version of PeriodicModeBackupPolicy_STATUS. Use v1beta20210515.PeriodicModeBackupPolicy_STATUS instead
-                    properties:
-                      periodicModeProperties:
-                        description: Deprecated version of PeriodicModeProperties_STATUS. Use v1beta20210515.PeriodicModeProperties_STATUS instead
-                        properties:
-                          backupIntervalInMinutes:
-                            type: integer
-                          backupRetentionIntervalInHours:
-                            type: integer
-                        type: object
-                      type:
-                        description: Deprecated version of PeriodicModeBackupPolicy_Type_STATUS. Use v1beta20210515.PeriodicModeBackupPolicy_Type_STATUS instead
-                        type: string
-                    type: object
-                type: object
-              capabilities:
-                items:
-                  description: Deprecated version of Capability_STATUS. Use v1beta20210515.Capability_STATUS instead
-                  properties:
-                    name:
-                      type: string
-                  type: object
-                type: array
-              conditions:
-                description: 'Conditions: The observed state of the resource'
-                items:
-                  description: Condition defines an extension to status (an observation) of a resource
-                  properties:
-                    lastTransitionTime:
-                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
-                      format: date-time
-                      type: string
-                    message:
-                      description: Message is a human readable message indicating details about the transition. This field may be empty.
-                      type: string
-                    observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
-                      format: int64
-                      type: integer
-                    reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
-                      type: string
-                    severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
-                      type: string
-                    status:
-                      description: Status of the condition, one of True, False, or Unknown.
-                      type: string
-                    type:
-                      description: Type of condition.
-                      type: string
-                  required:
-                  - lastTransitionTime
-                  - reason
-                  - status
-                  - type
-                  type: object
-                type: array
-              connectorOffer:
-                description: Deprecated version of ConnectorOffer_STATUS. Use v1beta20210515.ConnectorOffer_STATUS instead
-                type: string
-              consistencyPolicy:
-                description: Deprecated version of ConsistencyPolicy_STATUS. Use v1beta20210515.ConsistencyPolicy_STATUS instead
-                properties:
-                  defaultConsistencyLevel:
-                    description: Deprecated version of ConsistencyPolicy_DefaultConsistencyLevel_STATUS. Use v1beta20210515.ConsistencyPolicy_DefaultConsistencyLevel_STATUS instead
-                    type: string
-                  maxIntervalInSeconds:
-                    type: integer
-                  maxStalenessPrefix:
-                    type: integer
-                type: object
-              cors:
-                items:
-                  description: Deprecated version of CorsPolicy_STATUS. Use v1beta20210515.CorsPolicy_STATUS instead
-                  properties:
-                    allowedHeaders:
-                      type: string
-                    allowedMethods:
-                      type: string
-                    allowedOrigins:
-                      type: string
-                    exposedHeaders:
-                      type: string
-                    maxAgeInSeconds:
-                      type: integer
-                  type: object
-                type: array
-              databaseAccountOfferType:
-                description: Deprecated version of DatabaseAccountOfferType_STATUS. Use v1beta20210515.DatabaseAccountOfferType_STATUS instead
-                type: string
-              defaultIdentity:
-                type: string
-              disableKeyBasedMetadataWriteAccess:
-                type: boolean
-              documentEndpoint:
-                type: string
-              enableAnalyticalStorage:
-                type: boolean
-              enableAutomaticFailover:
-                type: boolean
-              enableCassandraConnector:
-                type: boolean
-              enableFreeTier:
-                type: boolean
-              enableMultipleWriteLocations:
-                type: boolean
-              failoverPolicies:
-                items:
-                  description: Deprecated version of FailoverPolicy_STATUS. Use v1beta20210515.FailoverPolicy_STATUS instead
-                  properties:
-                    failoverPriority:
-                      type: integer
-                    id:
-                      type: string
-                    locationName:
-                      type: string
-                  type: object
-                type: array
-              id:
-                type: string
-              identity:
-                description: Deprecated version of ManagedServiceIdentity_STATUS. Use v1beta20210515.ManagedServiceIdentity_STATUS instead
-                properties:
-                  principalId:
-                    type: string
-                  tenantId:
-                    type: string
-                  type:
-                    description: Deprecated version of ManagedServiceIdentity_Type_STATUS. Use v1beta20210515.ManagedServiceIdentity_Type_STATUS instead
-                    type: string
-                  userAssignedIdentities:
-                    additionalProperties:
-                      description: Deprecated version of ManagedServiceIdentity_UserAssignedIdentities_STATUS. Use v1beta20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS instead
-                      properties:
-                        clientId:
-                          type: string
-                        principalId:
-                          type: string
-                      type: object
-                    type: object
-                type: object
-              ipRules:
-                items:
-                  description: Deprecated version of IpAddressOrRange_STATUS. Use v1beta20210515.IpAddressOrRange_STATUS instead
-                  properties:
-                    ipAddressOrRange:
-                      type: string
-                  type: object
-                type: array
-              isVirtualNetworkFilterEnabled:
-                type: boolean
-              keyVaultKeyUri:
-                type: string
-              kind:
-                description: Deprecated version of DatabaseAccount_Kind_STATUS. Use v1beta20210515.DatabaseAccount_Kind_STATUS instead
-                type: string
-              location:
-                type: string
-              locations:
-                items:
-                  description: Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
-                  properties:
-                    documentEndpoint:
-                      type: string
-                    failoverPriority:
-                      type: integer
-                    id:
-                      type: string
-                    isZoneRedundant:
-                      type: boolean
-                    locationName:
-                      type: string
-                    provisioningState:
-                      type: string
-                  type: object
-                type: array
-              name:
-                type: string
-              networkAclBypass:
-                description: Deprecated version of NetworkAclBypass_STATUS. Use v1beta20210515.NetworkAclBypass_STATUS instead
-                type: string
-              networkAclBypassResourceIds:
-                items:
-                  type: string
-                type: array
-              privateEndpointConnections:
-                items:
-                  description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210515.PrivateEndpointConnection_STATUS instead
-                  properties:
-                    id:
-                      type: string
-                  type: object
-                type: array
-              provisioningState:
-                type: string
-              publicNetworkAccess:
-                description: Deprecated version of PublicNetworkAccess_STATUS. Use v1beta20210515.PublicNetworkAccess_STATUS instead
-                type: string
-              readLocations:
-                items:
-                  description: Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
-                  properties:
-                    documentEndpoint:
-                      type: string
-                    failoverPriority:
-                      type: integer
-                    id:
-                      type: string
-                    isZoneRedundant:
-                      type: boolean
-                    locationName:
-                      type: string
-                    provisioningState:
-                      type: string
-                  type: object
-                type: array
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
-              type:
-                type: string
-              virtualNetworkRules:
-                items:
-                  description: Deprecated version of VirtualNetworkRule_STATUS. Use v1beta20210515.VirtualNetworkRule_STATUS instead
-                  properties:
-                    id:
-                      type: string
-                    ignoreMissingVNetServiceEndpoint:
-                      type: boolean
-                  type: object
-                type: array
-              writeLocations:
-                items:
-                  description: Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
-                  properties:
-                    documentEndpoint:
-                      type: string
-                    failoverPriority:
-                      type: integer
-                    id:
-                      type: string
-                    isZoneRedundant:
-                      type: boolean
-                    locationName:
-                      type: string
-                    provisioningState:
-                      type: string
-                  type: object
-                type: array
-            type: object
-        type: object
-    served: true
-    storage: false
-    subresources:
-      status: {}
-  - additionalPrinterColumns:
-    - jsonPath: .status.conditions[?(@.type=='Ready')].status
-      name: Ready
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
-      name: Severity
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
-      name: Reason
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].message
-      name: Message
-      type: string
-    name: v1alpha1api20210515storage
-    schema:
-      openAPIV3Schema:
-        description: Storage version of v1alpha1api20210515.DatabaseAccount Deprecated version of DatabaseAccount. Use v1beta20210515.DatabaseAccount instead
-        properties:
-          apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
-            type: string
-          kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
-            type: string
-          metadata:
-            type: object
-          spec:
-            description: Storage version of v1alpha1api20210515.DatabaseAccount_Spec
-            properties:
-              $propertyBag:
-                additionalProperties:
-                  type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                type: object
-              analyticalStorageConfiguration:
-                description: Storage version of v1alpha1api20210515.AnalyticalStorageConfiguration Deprecated version of AnalyticalStorageConfiguration. Use v1beta20210515.AnalyticalStorageConfiguration instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  schemaType:
-                    type: string
-                type: object
-              apiProperties:
-                description: Storage version of v1alpha1api20210515.ApiProperties Deprecated version of ApiProperties. Use v1beta20210515.ApiProperties instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  serverVersion:
-                    type: string
-                type: object
-              azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                maxLength: 50
-                minLength: 3
-                pattern: ^[a-z0-9]+(-[a-z0-9]+)*
-                type: string
-              backupPolicy:
-                description: Storage version of v1alpha1api20210515.BackupPolicy Deprecated version of BackupPolicy. Use v1beta20210515.BackupPolicy instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  continuous:
-                    description: Storage version of v1alpha1api20210515.ContinuousModeBackupPolicy Deprecated version of ContinuousModeBackupPolicy. Use v1beta20210515.ContinuousModeBackupPolicy instead
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      type:
-                        type: string
-                    type: object
-                  periodic:
-                    description: Storage version of v1alpha1api20210515.PeriodicModeBackupPolicy Deprecated version of PeriodicModeBackupPolicy. Use v1beta20210515.PeriodicModeBackupPolicy instead
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      periodicModeProperties:
-                        description: Storage version of v1alpha1api20210515.PeriodicModeProperties Deprecated version of PeriodicModeProperties. Use v1beta20210515.PeriodicModeProperties instead
-                        properties:
-                          $propertyBag:
-                            additionalProperties:
-                              type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                            type: object
-                          backupIntervalInMinutes:
-                            type: integer
-                          backupRetentionIntervalInHours:
-                            type: integer
-                        type: object
-                      type:
-                        type: string
-                    type: object
-                type: object
-              capabilities:
-                items:
-                  description: Storage version of v1alpha1api20210515.Capability Deprecated version of Capability. Use v1beta20210515.Capability instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    name:
-                      type: string
-                  type: object
-                type: array
-              connectorOffer:
-                type: string
-              consistencyPolicy:
-                description: Storage version of v1alpha1api20210515.ConsistencyPolicy Deprecated version of ConsistencyPolicy. Use v1beta20210515.ConsistencyPolicy instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  defaultConsistencyLevel:
-                    type: string
-                  maxIntervalInSeconds:
-                    type: integer
-                  maxStalenessPrefix:
-                    type: integer
-                type: object
-              cors:
-                items:
-                  description: Storage version of v1alpha1api20210515.CorsPolicy Deprecated version of CorsPolicy. Use v1beta20210515.CorsPolicy instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    allowedHeaders:
-                      type: string
-                    allowedMethods:
-                      type: string
-                    allowedOrigins:
-                      type: string
-                    exposedHeaders:
-                      type: string
-                    maxAgeInSeconds:
-                      type: integer
-                  type: object
-                type: array
-              databaseAccountOfferType:
-                type: string
-              defaultIdentity:
-                type: string
-              disableKeyBasedMetadataWriteAccess:
-                type: boolean
-              enableAnalyticalStorage:
-                type: boolean
-              enableAutomaticFailover:
-                type: boolean
-              enableCassandraConnector:
-                type: boolean
-              enableFreeTier:
-                type: boolean
-              enableMultipleWriteLocations:
-                type: boolean
-              identity:
-                description: Storage version of v1alpha1api20210515.ManagedServiceIdentity Deprecated version of ManagedServiceIdentity. Use v1beta20210515.ManagedServiceIdentity instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  type:
-                    type: string
-                type: object
-              ipRules:
-                items:
-                  description: Storage version of v1alpha1api20210515.IpAddressOrRange Deprecated version of IpAddressOrRange. Use v1beta20210515.IpAddressOrRange instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    ipAddressOrRange:
-                      type: string
-                  type: object
-                type: array
-              isVirtualNetworkFilterEnabled:
-                type: boolean
-              keyVaultKeyUri:
-                type: string
-              kind:
-                type: string
-              location:
-                type: string
-              locations:
-                items:
-                  description: Storage version of v1alpha1api20210515.Location Deprecated version of Location. Use v1beta20210515.Location instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    failoverPriority:
-                      type: integer
-                    isZoneRedundant:
-                      type: boolean
-                    locationName:
-                      type: string
-                  type: object
-                type: array
-              networkAclBypass:
-                type: string
-              networkAclBypassResourceIds:
-                items:
-                  type: string
-                type: array
-              operatorSpec:
-                description: Storage version of v1alpha1api20210515.DatabaseAccountOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  secrets:
-                    description: Storage version of v1alpha1api20210515.DatabaseAccountOperatorSecrets
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      documentEndpoint:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                      primaryMasterKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                      primaryReadonlyMasterKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                      secondaryMasterKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                      secondaryReadonlyMasterKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
-                        properties:
-                          key:
-                            description: Key is the key in the Kubernetes secret being referenced
-                            type: string
-                          name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
-                            type: string
-                        required:
-                        - key
-                        - name
-                        type: object
-                    type: object
-                type: object
-              originalVersion:
-                type: string
-              owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
-                properties:
-                  name:
-                    description: This is the name of the Kubernetes resource to reference.
-                    type: string
-                required:
-                - name
-                type: object
-              publicNetworkAccess:
-                type: string
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
-              virtualNetworkRules:
-                items:
-                  description: Storage version of v1alpha1api20210515.VirtualNetworkRule Deprecated version of VirtualNetworkRule. Use v1beta20210515.VirtualNetworkRule instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    ignoreMissingVNetServiceEndpoint:
-                      type: boolean
-                    reference:
-                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-                      properties:
-                        armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                          pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                          type: string
-                        group:
-                          description: Group is the Kubernetes group of the resource.
-                          type: string
-                        kind:
-                          description: Kind is the Kubernetes kind of the resource.
-                          type: string
-                        name:
-                          description: Name is the Kubernetes name of the resource.
-                          type: string
-                      type: object
-                  type: object
-                type: array
-            required:
-            - owner
-            type: object
-          status:
-            description: Storage version of v1alpha1api20210515.DatabaseAccount_STATUS Deprecated version of DatabaseAccount_STATUS. Use v1beta20210515.DatabaseAccount_STATUS instead
-            properties:
-              $propertyBag:
-                additionalProperties:
-                  type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                type: object
-              analyticalStorageConfiguration:
-                description: Storage version of v1alpha1api20210515.AnalyticalStorageConfiguration_STATUS Deprecated version of AnalyticalStorageConfiguration_STATUS. Use v1beta20210515.AnalyticalStorageConfiguration_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  schemaType:
-                    type: string
-                type: object
-              apiProperties:
-                description: Storage version of v1alpha1api20210515.ApiProperties_STATUS Deprecated version of ApiProperties_STATUS. Use v1beta20210515.ApiProperties_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  serverVersion:
-                    type: string
-                type: object
-              backupPolicy:
-                description: Storage version of v1alpha1api20210515.BackupPolicy_STATUS Deprecated version of BackupPolicy_STATUS. Use v1beta20210515.BackupPolicy_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  continuous:
-                    description: Storage version of v1alpha1api20210515.ContinuousModeBackupPolicy_STATUS Deprecated version of ContinuousModeBackupPolicy_STATUS. Use v1beta20210515.ContinuousModeBackupPolicy_STATUS instead
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      type:
-                        type: string
-                    type: object
-                  periodic:
-                    description: Storage version of v1alpha1api20210515.PeriodicModeBackupPolicy_STATUS Deprecated version of PeriodicModeBackupPolicy_STATUS. Use v1beta20210515.PeriodicModeBackupPolicy_STATUS instead
-                    properties:
-                      $propertyBag:
-                        additionalProperties:
-                          type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                        type: object
-                      periodicModeProperties:
-                        description: Storage version of v1alpha1api20210515.PeriodicModeProperties_STATUS Deprecated version of PeriodicModeProperties_STATUS. Use v1beta20210515.PeriodicModeProperties_STATUS instead
-                        properties:
-                          $propertyBag:
-                            additionalProperties:
-                              type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                            type: object
-                          backupIntervalInMinutes:
-                            type: integer
-                          backupRetentionIntervalInHours:
-                            type: integer
-                        type: object
-                      type:
-                        type: string
-                    type: object
-                type: object
-              capabilities:
-                items:
-                  description: Storage version of v1alpha1api20210515.Capability_STATUS Deprecated version of Capability_STATUS. Use v1beta20210515.Capability_STATUS instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    name:
-                      type: string
-                  type: object
-                type: array
-              conditions:
-                items:
-                  description: Condition defines an extension to status (an observation) of a resource
-                  properties:
-                    lastTransitionTime:
-                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
-                      format: date-time
-                      type: string
-                    message:
-                      description: Message is a human readable message indicating details about the transition. This field may be empty.
-                      type: string
-                    observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
-                      format: int64
-                      type: integer
-                    reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
-                      type: string
-                    severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
-                      type: string
-                    status:
-                      description: Status of the condition, one of True, False, or Unknown.
-                      type: string
-                    type:
-                      description: Type of condition.
-                      type: string
-                  required:
-                  - lastTransitionTime
-                  - reason
-                  - status
-                  - type
-                  type: object
-                type: array
-              connectorOffer:
-                type: string
-              consistencyPolicy:
-                description: Storage version of v1alpha1api20210515.ConsistencyPolicy_STATUS Deprecated version of ConsistencyPolicy_STATUS. Use v1beta20210515.ConsistencyPolicy_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  defaultConsistencyLevel:
-                    type: string
-                  maxIntervalInSeconds:
-                    type: integer
-                  maxStalenessPrefix:
-                    type: integer
-                type: object
-              cors:
-                items:
-                  description: Storage version of v1alpha1api20210515.CorsPolicy_STATUS Deprecated version of CorsPolicy_STATUS. Use v1beta20210515.CorsPolicy_STATUS instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    allowedHeaders:
-                      type: string
-                    allowedMethods:
-                      type: string
-                    allowedOrigins:
-                      type: string
-                    exposedHeaders:
-                      type: string
-                    maxAgeInSeconds:
-                      type: integer
-                  type: object
-                type: array
-              databaseAccountOfferType:
-                type: string
-              defaultIdentity:
-                type: string
-              disableKeyBasedMetadataWriteAccess:
-                type: boolean
-              documentEndpoint:
-                type: string
-              enableAnalyticalStorage:
-                type: boolean
-              enableAutomaticFailover:
-                type: boolean
-              enableCassandraConnector:
-                type: boolean
-              enableFreeTier:
-                type: boolean
-              enableMultipleWriteLocations:
-                type: boolean
-              failoverPolicies:
-                items:
-                  description: Storage version of v1alpha1api20210515.FailoverPolicy_STATUS Deprecated version of FailoverPolicy_STATUS. Use v1beta20210515.FailoverPolicy_STATUS instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    failoverPriority:
-                      type: integer
-                    id:
-                      type: string
-                    locationName:
-                      type: string
-                  type: object
-                type: array
-              id:
-                type: string
-              identity:
-                description: Storage version of v1alpha1api20210515.ManagedServiceIdentity_STATUS Deprecated version of ManagedServiceIdentity_STATUS. Use v1beta20210515.ManagedServiceIdentity_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  principalId:
-                    type: string
-                  tenantId:
-                    type: string
-                  type:
-                    type: string
-                  userAssignedIdentities:
-                    additionalProperties:
-                      description: Storage version of v1alpha1api20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS Deprecated version of ManagedServiceIdentity_UserAssignedIdentities_STATUS. Use v1beta20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        clientId:
-                          type: string
-                        principalId:
-                          type: string
-                      type: object
-                    type: object
-                type: object
-              ipRules:
-                items:
-                  description: Storage version of v1alpha1api20210515.IpAddressOrRange_STATUS Deprecated version of IpAddressOrRange_STATUS. Use v1beta20210515.IpAddressOrRange_STATUS instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    ipAddressOrRange:
-                      type: string
-                  type: object
-                type: array
-              isVirtualNetworkFilterEnabled:
-                type: boolean
-              keyVaultKeyUri:
-                type: string
-              kind:
-                type: string
-              location:
-                type: string
-              locations:
-                items:
-                  description: Storage version of v1alpha1api20210515.Location_STATUS Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    documentEndpoint:
-                      type: string
-                    failoverPriority:
-                      type: integer
-                    id:
-                      type: string
-                    isZoneRedundant:
-                      type: boolean
-                    locationName:
-                      type: string
-                    provisioningState:
-                      type: string
-                  type: object
-                type: array
-              name:
-                type: string
-              networkAclBypass:
-                type: string
-              networkAclBypassResourceIds:
-                items:
-                  type: string
-                type: array
-              privateEndpointConnections:
-                items:
-                  description: Storage version of v1alpha1api20210515.PrivateEndpointConnection_STATUS Deprecated version of PrivateEndpointConnection_STATUS. Use v1beta20210515.PrivateEndpointConnection_STATUS instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    id:
-                      type: string
-                  type: object
-                type: array
-              provisioningState:
-                type: string
-              publicNetworkAccess:
-                type: string
-              readLocations:
-                items:
-                  description: Storage version of v1alpha1api20210515.Location_STATUS Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    documentEndpoint:
-                      type: string
-                    failoverPriority:
-                      type: integer
-                    id:
-                      type: string
-                    isZoneRedundant:
-                      type: boolean
-                    locationName:
-                      type: string
-                    provisioningState:
-                      type: string
-                  type: object
-                type: array
-              tags:
-                additionalProperties:
-                  type: string
-                type: object
-              type:
-                type: string
-              virtualNetworkRules:
-                items:
-                  description: Storage version of v1alpha1api20210515.VirtualNetworkRule_STATUS Deprecated version of VirtualNetworkRule_STATUS. Use v1beta20210515.VirtualNetworkRule_STATUS instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    id:
-                      type: string
-                    ignoreMissingVNetServiceEndpoint:
-                      type: boolean
-                  type: object
-                type: array
-              writeLocations:
-                items:
-                  description: Storage version of v1alpha1api20210515.Location_STATUS Deprecated version of Location_STATUS. Use v1beta20210515.Location_STATUS instead
-                  properties:
-                    $propertyBag:
-                      additionalProperties:
-                        type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                      type: object
-                    documentEndpoint:
-                      type: string
-                    failoverPriority:
-                      type: integer
-                    id:
-                      type: string
-                    isZoneRedundant:
-                      type: boolean
-                    locationName:
-                      type: string
-                    provisioningState:
-                      type: string
-                  type: object
-                type: array
-            type: object
-        type: object
-    served: true
-    storage: false
-    subresources:
-      status: {}
-  - additionalPrinterColumns:
-    - jsonPath: .status.conditions[?(@.type=='Ready')].status
-      name: Ready
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
-      name: Severity
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
-      name: Reason
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].message
-      name: Message
-      type: string
-    name: v1beta20210515
+    name: v1api20210515
     schema:
       openAPIV3Schema:
         description: 'Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}'
@@ -1578,6 +222,30 @@ spec:
                     - SystemAssigned,UserAssigned
                     - UserAssigned
                     type: string
+                  userAssignedIdentities:
+                    description: "UserAssignedIdentities: The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+                    items:
+                      description: Information about the user assigned identity for the resource
+                      properties:
+                        reference:
+                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          properties:
+                            armId:
+                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                              type: string
+                            group:
+                              description: Group is the Kubernetes group of the resource.
+                              type: string
+                            kind:
+                              description: Kind is the Kubernetes kind of the resource.
+                              type: string
+                            name:
+                              description: Name is the Kubernetes name of the resource.
+                              type: string
+                          type: object
+                      type: object
+                    type: array
                 type: object
               ipRules:
                 description: 'IpRules: List of IpRules.'
@@ -2112,10 +780,10 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1beta20210515storage
+    name: v1api20210515storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210515.DatabaseAccount Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}'
+        description: 'Storage version of v1api20210515.DatabaseAccount Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -2126,7 +794,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210515.DatabaseAccount_Spec
+            description: Storage version of v1api20210515.DatabaseAccount_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2134,7 +802,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               analyticalStorageConfiguration:
-                description: Storage version of v1beta20210515.AnalyticalStorageConfiguration Analytical storage specific properties.
+                description: Storage version of v1api20210515.AnalyticalStorageConfiguration Analytical storage specific properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2145,7 +813,7 @@ spec:
                     type: string
                 type: object
               apiProperties:
-                description: Storage version of v1beta20210515.ApiProperties
+                description: Storage version of v1api20210515.ApiProperties
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2162,7 +830,7 @@ spec:
                 pattern: ^[a-z0-9]+(-[a-z0-9]+)*
                 type: string
               backupPolicy:
-                description: Storage version of v1beta20210515.BackupPolicy
+                description: Storage version of v1api20210515.BackupPolicy
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2170,7 +838,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   continuous:
-                    description: Storage version of v1beta20210515.ContinuousModeBackupPolicy
+                    description: Storage version of v1api20210515.ContinuousModeBackupPolicy
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2181,7 +849,7 @@ spec:
                         type: string
                     type: object
                   periodic:
-                    description: Storage version of v1beta20210515.PeriodicModeBackupPolicy
+                    description: Storage version of v1api20210515.PeriodicModeBackupPolicy
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2189,7 +857,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       periodicModeProperties:
-                        description: Storage version of v1beta20210515.PeriodicModeProperties Configuration values for periodic mode backup
+                        description: Storage version of v1api20210515.PeriodicModeProperties Configuration values for periodic mode backup
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2207,7 +875,7 @@ spec:
                 type: object
               capabilities:
                 items:
-                  description: Storage version of v1beta20210515.Capability Cosmos DB capability object
+                  description: Storage version of v1api20210515.Capability Cosmos DB capability object
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2221,7 +889,7 @@ spec:
               connectorOffer:
                 type: string
               consistencyPolicy:
-                description: Storage version of v1beta20210515.ConsistencyPolicy The consistency policy for the Cosmos DB database account.
+                description: Storage version of v1api20210515.ConsistencyPolicy The consistency policy for the Cosmos DB database account.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2237,7 +905,7 @@ spec:
                 type: object
               cors:
                 items:
-                  description: Storage version of v1beta20210515.CorsPolicy The CORS policy for the Cosmos DB database account.
+                  description: Storage version of v1api20210515.CorsPolicy The CORS policy for the Cosmos DB database account.
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2273,7 +941,7 @@ spec:
               enableMultipleWriteLocations:
                 type: boolean
               identity:
-                description: Storage version of v1beta20210515.ManagedServiceIdentity Identity for the resource.
+                description: Storage version of v1api20210515.ManagedServiceIdentity Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2282,10 +950,38 @@ spec:
                     type: object
                   type:
                     type: string
+                  userAssignedIdentities:
+                    items:
+                      description: Storage version of v1api20210515.UserAssignedIdentityDetails Information about the user assigned identity for the resource
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        reference:
+                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          properties:
+                            armId:
+                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                              type: string
+                            group:
+                              description: Group is the Kubernetes group of the resource.
+                              type: string
+                            kind:
+                              description: Kind is the Kubernetes kind of the resource.
+                              type: string
+                            name:
+                              description: Name is the Kubernetes name of the resource.
+                              type: string
+                          type: object
+                      type: object
+                    type: array
                 type: object
               ipRules:
                 items:
-                  description: Storage version of v1beta20210515.IpAddressOrRange IpAddressOrRange object
+                  description: Storage version of v1api20210515.IpAddressOrRange IpAddressOrRange object
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2306,7 +1002,1416 @@ spec:
                 type: string
               locations:
                 items:
-                  description: Storage version of v1beta20210515.Location A region in which the Azure Cosmos DB database account is deployed.
+                  description: Storage version of v1api20210515.Location A region in which the Azure Cosmos DB database account is deployed.
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    failoverPriority:
+                      type: integer
+                    isZoneRedundant:
+                      type: boolean
+                    locationName:
+                      type: string
+                  type: object
+                type: array
+              networkAclBypass:
+                type: string
+              networkAclBypassResourceIds:
+                items:
+                  type: string
+                type: array
+              operatorSpec:
+                description: Storage version of v1api20210515.DatabaseAccountOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  secrets:
+                    description: Storage version of v1api20210515.DatabaseAccountOperatorSecrets
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      documentEndpoint:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryMasterKey:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryReadonlyMasterKey:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryMasterKey:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryReadonlyMasterKey:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                    type: object
+                type: object
+              originalVersion:
+                type: string
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              publicNetworkAccess:
+                type: string
+              tags:
+                additionalProperties:
+                  type: string
+                type: object
+              virtualNetworkRules:
+                items:
+                  description: Storage version of v1api20210515.VirtualNetworkRule Virtual Network ACL Rule object
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    ignoreMissingVNetServiceEndpoint:
+                      type: boolean
+                    reference:
+                      description: 'Reference: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.'
+                      properties:
+                        armId:
+                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                          type: string
+                        group:
+                          description: Group is the Kubernetes group of the resource.
+                          type: string
+                        kind:
+                          description: Kind is the Kubernetes kind of the resource.
+                          type: string
+                        name:
+                          description: Name is the Kubernetes name of the resource.
+                          type: string
+                      type: object
+                  type: object
+                type: array
+            required:
+            - owner
+            type: object
+          status:
+            description: Storage version of v1api20210515.DatabaseAccount_STATUS
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              analyticalStorageConfiguration:
+                description: Storage version of v1api20210515.AnalyticalStorageConfiguration_STATUS Analytical storage specific properties.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  schemaType:
+                    type: string
+                type: object
+              apiProperties:
+                description: Storage version of v1api20210515.ApiProperties_STATUS
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  serverVersion:
+                    type: string
+                type: object
+              backupPolicy:
+                description: Storage version of v1api20210515.BackupPolicy_STATUS
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  continuous:
+                    description: Storage version of v1api20210515.ContinuousModeBackupPolicy_STATUS
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      type:
+                        type: string
+                    type: object
+                  periodic:
+                    description: Storage version of v1api20210515.PeriodicModeBackupPolicy_STATUS
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      periodicModeProperties:
+                        description: Storage version of v1api20210515.PeriodicModeProperties_STATUS Configuration values for periodic mode backup
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          backupIntervalInMinutes:
+                            type: integer
+                          backupRetentionIntervalInHours:
+                            type: integer
+                        type: object
+                      type:
+                        type: string
+                    type: object
+                type: object
+              capabilities:
+                items:
+                  description: Storage version of v1api20210515.Capability_STATUS Cosmos DB capability object
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    name:
+                      type: string
+                  type: object
+                type: array
+              conditions:
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              connectorOffer:
+                type: string
+              consistencyPolicy:
+                description: Storage version of v1api20210515.ConsistencyPolicy_STATUS The consistency policy for the Cosmos DB database account.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  defaultConsistencyLevel:
+                    type: string
+                  maxIntervalInSeconds:
+                    type: integer
+                  maxStalenessPrefix:
+                    type: integer
+                type: object
+              cors:
+                items:
+                  description: Storage version of v1api20210515.CorsPolicy_STATUS The CORS policy for the Cosmos DB database account.
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    allowedHeaders:
+                      type: string
+                    allowedMethods:
+                      type: string
+                    allowedOrigins:
+                      type: string
+                    exposedHeaders:
+                      type: string
+                    maxAgeInSeconds:
+                      type: integer
+                  type: object
+                type: array
+              databaseAccountOfferType:
+                type: string
+              defaultIdentity:
+                type: string
+              disableKeyBasedMetadataWriteAccess:
+                type: boolean
+              documentEndpoint:
+                type: string
+              enableAnalyticalStorage:
+                type: boolean
+              enableAutomaticFailover:
+                type: boolean
+              enableCassandraConnector:
+                type: boolean
+              enableFreeTier:
+                type: boolean
+              enableMultipleWriteLocations:
+                type: boolean
+              failoverPolicies:
+                items:
+                  description: Storage version of v1api20210515.FailoverPolicy_STATUS The failover policy for a given region of a database account.
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    failoverPriority:
+                      type: integer
+                    id:
+                      type: string
+                    locationName:
+                      type: string
+                  type: object
+                type: array
+              id:
+                type: string
+              identity:
+                description: Storage version of v1api20210515.ManagedServiceIdentity_STATUS Identity for the resource.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  principalId:
+                    type: string
+                  tenantId:
+                    type: string
+                  type:
+                    type: string
+                  userAssignedIdentities:
+                    additionalProperties:
+                      description: Storage version of v1api20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        clientId:
+                          type: string
+                        principalId:
+                          type: string
+                      type: object
+                    type: object
+                type: object
+              ipRules:
+                items:
+                  description: Storage version of v1api20210515.IpAddressOrRange_STATUS IpAddressOrRange object
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    ipAddressOrRange:
+                      type: string
+                  type: object
+                type: array
+              isVirtualNetworkFilterEnabled:
+                type: boolean
+              keyVaultKeyUri:
+                type: string
+              kind:
+                type: string
+              location:
+                type: string
+              locations:
+                items:
+                  description: Storage version of v1api20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    documentEndpoint:
+                      type: string
+                    failoverPriority:
+                      type: integer
+                    id:
+                      type: string
+                    isZoneRedundant:
+                      type: boolean
+                    locationName:
+                      type: string
+                    provisioningState:
+                      type: string
+                  type: object
+                type: array
+              name:
+                type: string
+              networkAclBypass:
+                type: string
+              networkAclBypassResourceIds:
+                items:
+                  type: string
+                type: array
+              privateEndpointConnections:
+                items:
+                  description: Storage version of v1api20210515.PrivateEndpointConnection_STATUS A private endpoint connection
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    id:
+                      type: string
+                  type: object
+                type: array
+              provisioningState:
+                type: string
+              publicNetworkAccess:
+                type: string
+              readLocations:
+                items:
+                  description: Storage version of v1api20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    documentEndpoint:
+                      type: string
+                    failoverPriority:
+                      type: integer
+                    id:
+                      type: string
+                    isZoneRedundant:
+                      type: boolean
+                    locationName:
+                      type: string
+                    provisioningState:
+                      type: string
+                  type: object
+                type: array
+              tags:
+                additionalProperties:
+                  type: string
+                type: object
+              type:
+                type: string
+              virtualNetworkRules:
+                items:
+                  description: Storage version of v1api20210515.VirtualNetworkRule_STATUS Virtual Network ACL Rule object
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    id:
+                      type: string
+                    ignoreMissingVNetServiceEndpoint:
+                      type: boolean
+                  type: object
+                type: array
+              writeLocations:
+                items:
+                  description: Storage version of v1api20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    documentEndpoint:
+                      type: string
+                    failoverPriority:
+                      type: integer
+                    id:
+                      type: string
+                    isZoneRedundant:
+                      type: boolean
+                    locationName:
+                      type: string
+                    provisioningState:
+                      type: string
+                  type: object
+                type: array
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1beta20210515
+    schema:
+      openAPIV3Schema:
+        description: Deprecated version of DatabaseAccount. Use v1api20210515.DatabaseAccount instead
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              analyticalStorageConfiguration:
+                description: Deprecated version of AnalyticalStorageConfiguration. Use v1api20210515.AnalyticalStorageConfiguration instead
+                properties:
+                  schemaType:
+                    description: Deprecated version of AnalyticalStorageSchemaType. Use v1api20210515.AnalyticalStorageSchemaType instead
+                    enum:
+                    - FullFidelity
+                    - WellDefined
+                    type: string
+                type: object
+              apiProperties:
+                description: Deprecated version of ApiProperties. Use v1api20210515.ApiProperties instead
+                properties:
+                  serverVersion:
+                    description: Deprecated version of ApiProperties_ServerVersion. Use v1api20210515.ApiProperties_ServerVersion instead
+                    enum:
+                    - 3.2
+                    - 3.6
+                    - 4.0
+                    type: string
+                type: object
+              azureName:
+                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                maxLength: 50
+                minLength: 3
+                pattern: ^[a-z0-9]+(-[a-z0-9]+)*
+                type: string
+              backupPolicy:
+                description: Deprecated version of BackupPolicy. Use v1api20210515.BackupPolicy instead
+                properties:
+                  continuous:
+                    description: Deprecated version of ContinuousModeBackupPolicy. Use v1api20210515.ContinuousModeBackupPolicy instead
+                    properties:
+                      type:
+                        description: Deprecated version of ContinuousModeBackupPolicy_Type. Use v1api20210515.ContinuousModeBackupPolicy_Type instead
+                        enum:
+                        - Continuous
+                        type: string
+                    required:
+                    - type
+                    type: object
+                  periodic:
+                    description: Deprecated version of PeriodicModeBackupPolicy. Use v1api20210515.PeriodicModeBackupPolicy instead
+                    properties:
+                      periodicModeProperties:
+                        description: Deprecated version of PeriodicModeProperties. Use v1api20210515.PeriodicModeProperties instead
+                        properties:
+                          backupIntervalInMinutes:
+                            minimum: 0
+                            type: integer
+                          backupRetentionIntervalInHours:
+                            minimum: 0
+                            type: integer
+                        type: object
+                      type:
+                        description: Deprecated version of PeriodicModeBackupPolicy_Type. Use v1api20210515.PeriodicModeBackupPolicy_Type instead
+                        enum:
+                        - Periodic
+                        type: string
+                    required:
+                    - type
+                    type: object
+                type: object
+              capabilities:
+                items:
+                  description: Deprecated version of Capability. Use v1api20210515.Capability instead
+                  properties:
+                    name:
+                      type: string
+                  type: object
+                type: array
+              connectorOffer:
+                description: Deprecated version of ConnectorOffer. Use v1api20210515.ConnectorOffer instead
+                enum:
+                - Small
+                type: string
+              consistencyPolicy:
+                description: Deprecated version of ConsistencyPolicy. Use v1api20210515.ConsistencyPolicy instead
+                properties:
+                  defaultConsistencyLevel:
+                    description: Deprecated version of ConsistencyPolicy_DefaultConsistencyLevel. Use v1api20210515.ConsistencyPolicy_DefaultConsistencyLevel instead
+                    enum:
+                    - BoundedStaleness
+                    - ConsistentPrefix
+                    - Eventual
+                    - Session
+                    - Strong
+                    type: string
+                  maxIntervalInSeconds:
+                    maximum: 86400
+                    minimum: 5
+                    type: integer
+                  maxStalenessPrefix:
+                    maximum: 2147483647
+                    minimum: 1
+                    type: integer
+                required:
+                - defaultConsistencyLevel
+                type: object
+              cors:
+                items:
+                  description: Deprecated version of CorsPolicy. Use v1api20210515.CorsPolicy instead
+                  properties:
+                    allowedHeaders:
+                      type: string
+                    allowedMethods:
+                      type: string
+                    allowedOrigins:
+                      type: string
+                    exposedHeaders:
+                      type: string
+                    maxAgeInSeconds:
+                      maximum: 2147483647
+                      minimum: 1
+                      type: integer
+                  required:
+                  - allowedOrigins
+                  type: object
+                type: array
+              databaseAccountOfferType:
+                description: Deprecated version of DatabaseAccountOfferType. Use v1api20210515.DatabaseAccountOfferType instead
+                enum:
+                - Standard
+                type: string
+              defaultIdentity:
+                type: string
+              disableKeyBasedMetadataWriteAccess:
+                type: boolean
+              enableAnalyticalStorage:
+                type: boolean
+              enableAutomaticFailover:
+                type: boolean
+              enableCassandraConnector:
+                type: boolean
+              enableFreeTier:
+                type: boolean
+              enableMultipleWriteLocations:
+                type: boolean
+              identity:
+                description: Deprecated version of ManagedServiceIdentity. Use v1api20210515.ManagedServiceIdentity instead
+                properties:
+                  type:
+                    description: Deprecated version of ManagedServiceIdentity_Type. Use v1api20210515.ManagedServiceIdentity_Type instead
+                    enum:
+                    - None
+                    - SystemAssigned
+                    - SystemAssigned,UserAssigned
+                    - UserAssigned
+                    type: string
+                  userAssignedIdentities:
+                    items:
+                      description: Deprecated version of UserAssignedIdentityDetails. Use v1api20210515.UserAssignedIdentityDetails instead
+                      properties:
+                        reference:
+                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          properties:
+                            armId:
+                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                              type: string
+                            group:
+                              description: Group is the Kubernetes group of the resource.
+                              type: string
+                            kind:
+                              description: Kind is the Kubernetes kind of the resource.
+                              type: string
+                            name:
+                              description: Name is the Kubernetes name of the resource.
+                              type: string
+                          type: object
+                      type: object
+                    type: array
+                type: object
+              ipRules:
+                items:
+                  description: Deprecated version of IpAddressOrRange. Use v1api20210515.IpAddressOrRange instead
+                  properties:
+                    ipAddressOrRange:
+                      type: string
+                  type: object
+                type: array
+              isVirtualNetworkFilterEnabled:
+                type: boolean
+              keyVaultKeyUri:
+                type: string
+              kind:
+                description: Deprecated version of DatabaseAccount_Kind_Spec. Use v1api20210515.DatabaseAccount_Kind_Spec instead
+                enum:
+                - GlobalDocumentDB
+                - MongoDB
+                - Parse
+                type: string
+              location:
+                type: string
+              locations:
+                items:
+                  description: Deprecated version of Location. Use v1api20210515.Location instead
+                  properties:
+                    failoverPriority:
+                      minimum: 0
+                      type: integer
+                    isZoneRedundant:
+                      type: boolean
+                    locationName:
+                      type: string
+                  type: object
+                type: array
+              networkAclBypass:
+                description: Deprecated version of NetworkAclBypass. Use v1api20210515.NetworkAclBypass instead
+                enum:
+                - AzureServices
+                - None
+                type: string
+              networkAclBypassResourceIds:
+                items:
+                  type: string
+                type: array
+              operatorSpec:
+                description: 'OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not passed directly to Azure'
+                properties:
+                  secrets:
+                    description: 'Secrets: configures where to place Azure generated secrets.'
+                    properties:
+                      documentEndpoint:
+                        description: 'DocumentEndpoint: indicates where the DocumentEndpoint secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryMasterKey:
+                        description: 'PrimaryMasterKey: indicates where the PrimaryMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryReadonlyMasterKey:
+                        description: 'PrimaryReadonlyMasterKey: indicates where the PrimaryReadonlyMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryMasterKey:
+                        description: 'SecondaryMasterKey: indicates where the SecondaryMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryReadonlyMasterKey:
+                        description: 'SecondaryReadonlyMasterKey: indicates where the SecondaryReadonlyMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                    type: object
+                type: object
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              publicNetworkAccess:
+                description: Deprecated version of PublicNetworkAccess. Use v1api20210515.PublicNetworkAccess instead
+                enum:
+                - Disabled
+                - Enabled
+                type: string
+              tags:
+                additionalProperties:
+                  type: string
+                type: object
+              virtualNetworkRules:
+                items:
+                  description: Deprecated version of VirtualNetworkRule. Use v1api20210515.VirtualNetworkRule instead
+                  properties:
+                    ignoreMissingVNetServiceEndpoint:
+                      type: boolean
+                    reference:
+                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                      properties:
+                        armId:
+                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                          type: string
+                        group:
+                          description: Group is the Kubernetes group of the resource.
+                          type: string
+                        kind:
+                          description: Kind is the Kubernetes kind of the resource.
+                          type: string
+                        name:
+                          description: Name is the Kubernetes name of the resource.
+                          type: string
+                      type: object
+                  type: object
+                type: array
+            required:
+            - databaseAccountOfferType
+            - locations
+            - owner
+            type: object
+          status:
+            description: Deprecated version of DatabaseAccount_STATUS. Use v1api20210515.DatabaseAccount_STATUS instead
+            properties:
+              analyticalStorageConfiguration:
+                description: Deprecated version of AnalyticalStorageConfiguration_STATUS. Use v1api20210515.AnalyticalStorageConfiguration_STATUS instead
+                properties:
+                  schemaType:
+                    description: Deprecated version of AnalyticalStorageSchemaType_STATUS. Use v1api20210515.AnalyticalStorageSchemaType_STATUS instead
+                    type: string
+                type: object
+              apiProperties:
+                description: Deprecated version of ApiProperties_STATUS. Use v1api20210515.ApiProperties_STATUS instead
+                properties:
+                  serverVersion:
+                    description: Deprecated version of ApiProperties_ServerVersion_STATUS. Use v1api20210515.ApiProperties_ServerVersion_STATUS instead
+                    type: string
+                type: object
+              backupPolicy:
+                description: Deprecated version of BackupPolicy_STATUS. Use v1api20210515.BackupPolicy_STATUS instead
+                properties:
+                  continuous:
+                    description: Deprecated version of ContinuousModeBackupPolicy_STATUS. Use v1api20210515.ContinuousModeBackupPolicy_STATUS instead
+                    properties:
+                      type:
+                        description: Deprecated version of ContinuousModeBackupPolicy_Type_STATUS. Use v1api20210515.ContinuousModeBackupPolicy_Type_STATUS instead
+                        type: string
+                    type: object
+                  periodic:
+                    description: Deprecated version of PeriodicModeBackupPolicy_STATUS. Use v1api20210515.PeriodicModeBackupPolicy_STATUS instead
+                    properties:
+                      periodicModeProperties:
+                        description: Deprecated version of PeriodicModeProperties_STATUS. Use v1api20210515.PeriodicModeProperties_STATUS instead
+                        properties:
+                          backupIntervalInMinutes:
+                            type: integer
+                          backupRetentionIntervalInHours:
+                            type: integer
+                        type: object
+                      type:
+                        description: Deprecated version of PeriodicModeBackupPolicy_Type_STATUS. Use v1api20210515.PeriodicModeBackupPolicy_Type_STATUS instead
+                        type: string
+                    type: object
+                type: object
+              capabilities:
+                items:
+                  description: Deprecated version of Capability_STATUS. Use v1api20210515.Capability_STATUS instead
+                  properties:
+                    name:
+                      type: string
+                  type: object
+                type: array
+              conditions:
+                description: 'Conditions: The observed state of the resource'
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              connectorOffer:
+                description: Deprecated version of ConnectorOffer_STATUS. Use v1api20210515.ConnectorOffer_STATUS instead
+                type: string
+              consistencyPolicy:
+                description: Deprecated version of ConsistencyPolicy_STATUS. Use v1api20210515.ConsistencyPolicy_STATUS instead
+                properties:
+                  defaultConsistencyLevel:
+                    description: Deprecated version of ConsistencyPolicy_DefaultConsistencyLevel_STATUS. Use v1api20210515.ConsistencyPolicy_DefaultConsistencyLevel_STATUS instead
+                    type: string
+                  maxIntervalInSeconds:
+                    type: integer
+                  maxStalenessPrefix:
+                    type: integer
+                type: object
+              cors:
+                items:
+                  description: Deprecated version of CorsPolicy_STATUS. Use v1api20210515.CorsPolicy_STATUS instead
+                  properties:
+                    allowedHeaders:
+                      type: string
+                    allowedMethods:
+                      type: string
+                    allowedOrigins:
+                      type: string
+                    exposedHeaders:
+                      type: string
+                    maxAgeInSeconds:
+                      type: integer
+                  type: object
+                type: array
+              databaseAccountOfferType:
+                description: Deprecated version of DatabaseAccountOfferType_STATUS. Use v1api20210515.DatabaseAccountOfferType_STATUS instead
+                type: string
+              defaultIdentity:
+                type: string
+              disableKeyBasedMetadataWriteAccess:
+                type: boolean
+              documentEndpoint:
+                type: string
+              enableAnalyticalStorage:
+                type: boolean
+              enableAutomaticFailover:
+                type: boolean
+              enableCassandraConnector:
+                type: boolean
+              enableFreeTier:
+                type: boolean
+              enableMultipleWriteLocations:
+                type: boolean
+              failoverPolicies:
+                items:
+                  description: Deprecated version of FailoverPolicy_STATUS. Use v1api20210515.FailoverPolicy_STATUS instead
+                  properties:
+                    failoverPriority:
+                      type: integer
+                    id:
+                      type: string
+                    locationName:
+                      type: string
+                  type: object
+                type: array
+              id:
+                type: string
+              identity:
+                description: Deprecated version of ManagedServiceIdentity_STATUS. Use v1api20210515.ManagedServiceIdentity_STATUS instead
+                properties:
+                  principalId:
+                    type: string
+                  tenantId:
+                    type: string
+                  type:
+                    description: Deprecated version of ManagedServiceIdentity_Type_STATUS. Use v1api20210515.ManagedServiceIdentity_Type_STATUS instead
+                    type: string
+                  userAssignedIdentities:
+                    additionalProperties:
+                      description: Deprecated version of ManagedServiceIdentity_UserAssignedIdentities_STATUS. Use v1api20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS instead
+                      properties:
+                        clientId:
+                          type: string
+                        principalId:
+                          type: string
+                      type: object
+                    type: object
+                type: object
+              ipRules:
+                items:
+                  description: Deprecated version of IpAddressOrRange_STATUS. Use v1api20210515.IpAddressOrRange_STATUS instead
+                  properties:
+                    ipAddressOrRange:
+                      type: string
+                  type: object
+                type: array
+              isVirtualNetworkFilterEnabled:
+                type: boolean
+              keyVaultKeyUri:
+                type: string
+              kind:
+                description: Deprecated version of DatabaseAccount_Kind_STATUS. Use v1api20210515.DatabaseAccount_Kind_STATUS instead
+                type: string
+              location:
+                type: string
+              locations:
+                items:
+                  description: Deprecated version of Location_STATUS. Use v1api20210515.Location_STATUS instead
+                  properties:
+                    documentEndpoint:
+                      type: string
+                    failoverPriority:
+                      type: integer
+                    id:
+                      type: string
+                    isZoneRedundant:
+                      type: boolean
+                    locationName:
+                      type: string
+                    provisioningState:
+                      type: string
+                  type: object
+                type: array
+              name:
+                type: string
+              networkAclBypass:
+                description: Deprecated version of NetworkAclBypass_STATUS. Use v1api20210515.NetworkAclBypass_STATUS instead
+                type: string
+              networkAclBypassResourceIds:
+                items:
+                  type: string
+                type: array
+              privateEndpointConnections:
+                items:
+                  description: Deprecated version of PrivateEndpointConnection_STATUS. Use v1api20210515.PrivateEndpointConnection_STATUS instead
+                  properties:
+                    id:
+                      type: string
+                  type: object
+                type: array
+              provisioningState:
+                type: string
+              publicNetworkAccess:
+                description: Deprecated version of PublicNetworkAccess_STATUS. Use v1api20210515.PublicNetworkAccess_STATUS instead
+                type: string
+              readLocations:
+                items:
+                  description: Deprecated version of Location_STATUS. Use v1api20210515.Location_STATUS instead
+                  properties:
+                    documentEndpoint:
+                      type: string
+                    failoverPriority:
+                      type: integer
+                    id:
+                      type: string
+                    isZoneRedundant:
+                      type: boolean
+                    locationName:
+                      type: string
+                    provisioningState:
+                      type: string
+                  type: object
+                type: array
+              tags:
+                additionalProperties:
+                  type: string
+                type: object
+              type:
+                type: string
+              virtualNetworkRules:
+                items:
+                  description: Deprecated version of VirtualNetworkRule_STATUS. Use v1api20210515.VirtualNetworkRule_STATUS instead
+                  properties:
+                    id:
+                      type: string
+                    ignoreMissingVNetServiceEndpoint:
+                      type: boolean
+                  type: object
+                type: array
+              writeLocations:
+                items:
+                  description: Deprecated version of Location_STATUS. Use v1api20210515.Location_STATUS instead
+                  properties:
+                    documentEndpoint:
+                      type: string
+                    failoverPriority:
+                      type: integer
+                    id:
+                      type: string
+                    isZoneRedundant:
+                      type: boolean
+                    locationName:
+                      type: string
+                    provisioningState:
+                      type: string
+                  type: object
+                type: array
+            type: object
+        type: object
+    served: true
+    storage: false
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1beta20210515storage
+    schema:
+      openAPIV3Schema:
+        description: Storage version of v1beta20210515.DatabaseAccount Deprecated version of DatabaseAccount. Use v1api20210515.DatabaseAccount instead
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: Storage version of v1beta20210515.DatabaseAccount_Spec
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              analyticalStorageConfiguration:
+                description: Storage version of v1beta20210515.AnalyticalStorageConfiguration Deprecated version of AnalyticalStorageConfiguration. Use v1api20210515.AnalyticalStorageConfiguration instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  schemaType:
+                    type: string
+                type: object
+              apiProperties:
+                description: Storage version of v1beta20210515.ApiProperties Deprecated version of ApiProperties. Use v1api20210515.ApiProperties instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  serverVersion:
+                    type: string
+                type: object
+              azureName:
+                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                maxLength: 50
+                minLength: 3
+                pattern: ^[a-z0-9]+(-[a-z0-9]+)*
+                type: string
+              backupPolicy:
+                description: Storage version of v1beta20210515.BackupPolicy Deprecated version of BackupPolicy. Use v1api20210515.BackupPolicy instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  continuous:
+                    description: Storage version of v1beta20210515.ContinuousModeBackupPolicy Deprecated version of ContinuousModeBackupPolicy. Use v1api20210515.ContinuousModeBackupPolicy instead
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      type:
+                        type: string
+                    type: object
+                  periodic:
+                    description: Storage version of v1beta20210515.PeriodicModeBackupPolicy Deprecated version of PeriodicModeBackupPolicy. Use v1api20210515.PeriodicModeBackupPolicy instead
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        type: object
+                      periodicModeProperties:
+                        description: Storage version of v1beta20210515.PeriodicModeProperties Deprecated version of PeriodicModeProperties. Use v1api20210515.PeriodicModeProperties instead
+                        properties:
+                          $propertyBag:
+                            additionalProperties:
+                              type: string
+                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            type: object
+                          backupIntervalInMinutes:
+                            type: integer
+                          backupRetentionIntervalInHours:
+                            type: integer
+                        type: object
+                      type:
+                        type: string
+                    type: object
+                type: object
+              capabilities:
+                items:
+                  description: Storage version of v1beta20210515.Capability Deprecated version of Capability. Use v1api20210515.Capability instead
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    name:
+                      type: string
+                  type: object
+                type: array
+              connectorOffer:
+                type: string
+              consistencyPolicy:
+                description: Storage version of v1beta20210515.ConsistencyPolicy Deprecated version of ConsistencyPolicy. Use v1api20210515.ConsistencyPolicy instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  defaultConsistencyLevel:
+                    type: string
+                  maxIntervalInSeconds:
+                    type: integer
+                  maxStalenessPrefix:
+                    type: integer
+                type: object
+              cors:
+                items:
+                  description: Storage version of v1beta20210515.CorsPolicy Deprecated version of CorsPolicy. Use v1api20210515.CorsPolicy instead
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    allowedHeaders:
+                      type: string
+                    allowedMethods:
+                      type: string
+                    allowedOrigins:
+                      type: string
+                    exposedHeaders:
+                      type: string
+                    maxAgeInSeconds:
+                      type: integer
+                  type: object
+                type: array
+              databaseAccountOfferType:
+                type: string
+              defaultIdentity:
+                type: string
+              disableKeyBasedMetadataWriteAccess:
+                type: boolean
+              enableAnalyticalStorage:
+                type: boolean
+              enableAutomaticFailover:
+                type: boolean
+              enableCassandraConnector:
+                type: boolean
+              enableFreeTier:
+                type: boolean
+              enableMultipleWriteLocations:
+                type: boolean
+              identity:
+                description: Storage version of v1beta20210515.ManagedServiceIdentity Deprecated version of ManagedServiceIdentity. Use v1api20210515.ManagedServiceIdentity instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  type:
+                    type: string
+                  userAssignedIdentities:
+                    items:
+                      description: Storage version of v1beta20210515.UserAssignedIdentityDetails Deprecated version of UserAssignedIdentityDetails. Use v1api20210515.UserAssignedIdentityDetails instead
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        reference:
+                          description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                          properties:
+                            armId:
+                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                              type: string
+                            group:
+                              description: Group is the Kubernetes group of the resource.
+                              type: string
+                            kind:
+                              description: Kind is the Kubernetes kind of the resource.
+                              type: string
+                            name:
+                              description: Name is the Kubernetes name of the resource.
+                              type: string
+                          type: object
+                      type: object
+                    type: array
+                type: object
+              ipRules:
+                items:
+                  description: Storage version of v1beta20210515.IpAddressOrRange Deprecated version of IpAddressOrRange. Use v1api20210515.IpAddressOrRange instead
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      type: object
+                    ipAddressOrRange:
+                      type: string
+                  type: object
+                type: array
+              isVirtualNetworkFilterEnabled:
+                type: boolean
+              keyVaultKeyUri:
+                type: string
+              kind:
+                type: string
+              location:
+                type: string
+              locations:
+                items:
+                  description: Storage version of v1beta20210515.Location Deprecated version of Location. Use v1api20210515.Location instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2429,7 +2534,7 @@ spec:
                 type: object
               virtualNetworkRules:
                 items:
-                  description: Storage version of v1beta20210515.VirtualNetworkRule Virtual Network ACL Rule object
+                  description: Storage version of v1beta20210515.VirtualNetworkRule Deprecated version of VirtualNetworkRule. Use v1api20210515.VirtualNetworkRule instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2439,7 +2544,7 @@ spec:
                     ignoreMissingVNetServiceEndpoint:
                       type: boolean
                     reference:
-                      description: 'Reference: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.'
+                      description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                       properties:
                         armId:
                           description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
@@ -2461,7 +2566,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210515.DatabaseAccount_STATUS
+            description: Storage version of v1beta20210515.DatabaseAccount_STATUS Deprecated version of DatabaseAccount_STATUS. Use v1api20210515.DatabaseAccount_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -2469,7 +2574,7 @@ spec:
                 description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                 type: object
               analyticalStorageConfiguration:
-                description: Storage version of v1beta20210515.AnalyticalStorageConfiguration_STATUS Analytical storage specific properties.
+                description: Storage version of v1beta20210515.AnalyticalStorageConfiguration_STATUS Deprecated version of AnalyticalStorageConfiguration_STATUS. Use v1api20210515.AnalyticalStorageConfiguration_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2480,7 +2585,7 @@ spec:
                     type: string
                 type: object
               apiProperties:
-                description: Storage version of v1beta20210515.ApiProperties_STATUS
+                description: Storage version of v1beta20210515.ApiProperties_STATUS Deprecated version of ApiProperties_STATUS. Use v1api20210515.ApiProperties_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2491,7 +2596,7 @@ spec:
                     type: string
                 type: object
               backupPolicy:
-                description: Storage version of v1beta20210515.BackupPolicy_STATUS
+                description: Storage version of v1beta20210515.BackupPolicy_STATUS Deprecated version of BackupPolicy_STATUS. Use v1api20210515.BackupPolicy_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2499,7 +2604,7 @@ spec:
                     description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                     type: object
                   continuous:
-                    description: Storage version of v1beta20210515.ContinuousModeBackupPolicy_STATUS
+                    description: Storage version of v1beta20210515.ContinuousModeBackupPolicy_STATUS Deprecated version of ContinuousModeBackupPolicy_STATUS. Use v1api20210515.ContinuousModeBackupPolicy_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2510,7 +2615,7 @@ spec:
                         type: string
                     type: object
                   periodic:
-                    description: Storage version of v1beta20210515.PeriodicModeBackupPolicy_STATUS
+                    description: Storage version of v1beta20210515.PeriodicModeBackupPolicy_STATUS Deprecated version of PeriodicModeBackupPolicy_STATUS. Use v1api20210515.PeriodicModeBackupPolicy_STATUS instead
                     properties:
                       $propertyBag:
                         additionalProperties:
@@ -2518,7 +2623,7 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       periodicModeProperties:
-                        description: Storage version of v1beta20210515.PeriodicModeProperties_STATUS Configuration values for periodic mode backup
+                        description: Storage version of v1beta20210515.PeriodicModeProperties_STATUS Deprecated version of PeriodicModeProperties_STATUS. Use v1api20210515.PeriodicModeProperties_STATUS instead
                         properties:
                           $propertyBag:
                             additionalProperties:
@@ -2536,7 +2641,7 @@ spec:
                 type: object
               capabilities:
                 items:
-                  description: Storage version of v1beta20210515.Capability_STATUS Cosmos DB capability object
+                  description: Storage version of v1beta20210515.Capability_STATUS Deprecated version of Capability_STATUS. Use v1api20210515.Capability_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2584,7 +2689,7 @@ spec:
               connectorOffer:
                 type: string
               consistencyPolicy:
-                description: Storage version of v1beta20210515.ConsistencyPolicy_STATUS The consistency policy for the Cosmos DB database account.
+                description: Storage version of v1beta20210515.ConsistencyPolicy_STATUS Deprecated version of ConsistencyPolicy_STATUS. Use v1api20210515.ConsistencyPolicy_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2600,7 +2705,7 @@ spec:
                 type: object
               cors:
                 items:
-                  description: Storage version of v1beta20210515.CorsPolicy_STATUS The CORS policy for the Cosmos DB database account.
+                  description: Storage version of v1beta20210515.CorsPolicy_STATUS Deprecated version of CorsPolicy_STATUS. Use v1api20210515.CorsPolicy_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2639,7 +2744,7 @@ spec:
                 type: boolean
               failoverPolicies:
                 items:
-                  description: Storage version of v1beta20210515.FailoverPolicy_STATUS The failover policy for a given region of a database account.
+                  description: Storage version of v1beta20210515.FailoverPolicy_STATUS Deprecated version of FailoverPolicy_STATUS. Use v1api20210515.FailoverPolicy_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2657,7 +2762,7 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1beta20210515.ManagedServiceIdentity_STATUS Identity for the resource.
+                description: Storage version of v1beta20210515.ManagedServiceIdentity_STATUS Deprecated version of ManagedServiceIdentity_STATUS. Use v1api20210515.ManagedServiceIdentity_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -2672,7 +2777,7 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1beta20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS
+                      description: Storage version of v1beta20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS Deprecated version of ManagedServiceIdentity_UserAssignedIdentities_STATUS. Use v1api20210515.ManagedServiceIdentity_UserAssignedIdentities_STATUS instead
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -2688,7 +2793,7 @@ spec:
                 type: object
               ipRules:
                 items:
-                  description: Storage version of v1beta20210515.IpAddressOrRange_STATUS IpAddressOrRange object
+                  description: Storage version of v1beta20210515.IpAddressOrRange_STATUS Deprecated version of IpAddressOrRange_STATUS. Use v1api20210515.IpAddressOrRange_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2709,7 +2814,7 @@ spec:
                 type: string
               locations:
                 items:
-                  description: Storage version of v1beta20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
+                  description: Storage version of v1beta20210515.Location_STATUS Deprecated version of Location_STATUS. Use v1api20210515.Location_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2740,7 +2845,7 @@ spec:
                 type: array
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1beta20210515.PrivateEndpointConnection_STATUS A private endpoint connection
+                  description: Storage version of v1beta20210515.PrivateEndpointConnection_STATUS Deprecated version of PrivateEndpointConnection_STATUS. Use v1api20210515.PrivateEndpointConnection_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2757,7 +2862,7 @@ spec:
                 type: string
               readLocations:
                 items:
-                  description: Storage version of v1beta20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
+                  description: Storage version of v1beta20210515.Location_STATUS Deprecated version of Location_STATUS. Use v1api20210515.Location_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2786,7 +2891,7 @@ spec:
                 type: string
               virtualNetworkRules:
                 items:
-                  description: Storage version of v1beta20210515.VirtualNetworkRule_STATUS Virtual Network ACL Rule object
+                  description: Storage version of v1beta20210515.VirtualNetworkRule_STATUS Deprecated version of VirtualNetworkRule_STATUS. Use v1api20210515.VirtualNetworkRule_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2801,7 +2906,7 @@ spec:
                 type: array
               writeLocations:
                 items:
-                  description: Storage version of v1beta20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
+                  description: Storage version of v1beta20210515.Location_STATUS Deprecated version of Location_STATUS. Use v1api20210515.Location_STATUS instead
                   properties:
                     $propertyBag:
                       additionalProperties:
@@ -2825,6 +2930,6 @@ spec:
             type: object
         type: object
     served: true
-    storage: true
+    storage: false
     subresources:
       status: {}
