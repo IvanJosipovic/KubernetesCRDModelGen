@@ -139,7 +139,7 @@ public class CRDGenerator : ICRDGenerator
     {
         var types = new List<ClassModel>();
 
-        var version = crd.Spec.Versions.First(x => x.Served && x.Storage);
+        var version = crd.Spec.Versions.First(x => x.Served);
 
         types.Add(GenerateClass(version.Schema.OpenAPIV3Schema, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural));
 
