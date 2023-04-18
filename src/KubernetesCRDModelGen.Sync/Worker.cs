@@ -3,6 +3,7 @@ using ICSharpCode.SharpZipLib.Tar;
 using ICSharpCode.SharpZipLib.Zip;
 using k8s;
 using k8s.Models;
+using System.Net.Http.Json;
 using System.Text;
 using YamlDotNet.Core;
 using YamlDotNet.Serialization;
@@ -39,9 +40,13 @@ namespace KubernetesCRDModelGen.Sync
             {
                 CreateProject(item);
 
-                if (string.IsNullOrEmpty(item.HelmChart))
+                if (item.Urls != null && item.Urls.Count > 0)
                 {
-                    await ProcessDirectUrl(item);
+                    await ProcessDirectUrls(item);
+                }
+                if (!string.IsNullOrEmpty(item.GitHub))
+                {
+                    await ProcessGitHub(item);
                 }
                 else
                 {
@@ -52,58 +57,80 @@ namespace KubernetesCRDModelGen.Sync
             _lifeTime.StopApplication();
         }
 
-        private async Task ProcessDirectUrl(Config config)
+        private async Task ProcessDirectUrls(Config config)
         {
-            using var client = new HttpClient();
 
             foreach (var url in config.Urls)
             {
-                using var httpStream = await client.GetStreamAsync(url);
-                using var stream = new MemoryStream();
-                httpStream.CopyTo(stream);
-                stream.Position = 0;
+                await ProcessDirectUrl(config, url);
+            }
+        }
 
-                var ext = Path.GetExtension(url);
+        private async Task ProcessDirectUrl(Config config, string url)
+        {
+            using var client = new HttpClient();
 
-                if (ext == ".yaml" || ext == ".yml")
+            using var httpStream = await client.GetStreamAsync(url);
+            using var stream = new MemoryStream();
+            httpStream.CopyTo(stream);
+            stream.Position = 0;
+
+            var ext = Path.GetExtension(url);
+
+            if (ext == ".yaml" || ext == ".yml")
+            {
+                await ProcessYamlStream(config, stream);
+            }
+            else if (url.EndsWith(".zip"))
+            {
+                using var zipStream = new ZipFile(stream);
+                foreach (ZipEntry entry in zipStream)
                 {
-                    await ProcessYamlStream(config, stream);
-                }
-                else if (url.EndsWith(".zip"))
-                {
-                    using var zipStream = new ZipFile(stream);
-                    foreach (ZipEntry entry in zipStream)
+                    if (entry.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
                     {
-                        if (entry.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
+                        if (!string.IsNullOrEmpty(config.FilesFilter) && !entry.Name.StartsWith(config.FilesFilter))
                         {
-                            if (!string.IsNullOrEmpty(config.FilesFilter) && !entry.Name.StartsWith(config.FilesFilter))
-                            {
-                                continue;
-                            }
-                            using var fileContents = zipStream.GetInputStream(entry);
-                            await ProcessYamlStream(config, fileContents);
+                            continue;
                         }
+                        using var fileContents = zipStream.GetInputStream(entry);
+                        await ProcessYamlStream(config, fileContents);
                     }
                 }
-                else if (url.EndsWith(".tar.gz"))
+            }
+            else if (url.EndsWith(".tar.gz"))
+            {
+                using var gzipStream = new GZipInputStream(stream);
+                using var tarInputStream = new TarInputStream(gzipStream, Encoding.UTF8);
+                TarEntry entry2;
+                while ((entry2 = tarInputStream.GetNextEntry()) != null)
                 {
-                    using var gzipStream = new GZipInputStream(stream);
-                    using var tarInputStream = new TarInputStream(gzipStream, Encoding.UTF8);
-                    TarEntry entry2;
-                    while ((entry2 = tarInputStream.GetNextEntry()) != null)
+                    if (entry2.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry2.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
                     {
-                        if (entry2.Name.EndsWith(".yaml", StringComparison.InvariantCultureIgnoreCase) || entry2.Name.EndsWith(".yml", StringComparison.InvariantCultureIgnoreCase))
+                        if (!string.IsNullOrEmpty(config.FilesFilter) && !entry2.Name.StartsWith(config.FilesFilter))
                         {
-                            if (!string.IsNullOrEmpty(config.FilesFilter) && !entry2.Name.StartsWith(config.FilesFilter))
-                            {
-                                continue;
-                            }
-                            using var fileContents = new MemoryStream();
-                            await tarInputStream.CopyEntryContentsAsync(fileContents, CancellationToken.None);
-                            fileContents.Position = 0;
-                            await ProcessYamlStream(config, fileContents);
+                            continue;
                         }
+                        using var fileContents = new MemoryStream();
+                        await tarInputStream.CopyEntryContentsAsync(fileContents, CancellationToken.None);
+                        fileContents.Position = 0;
+                        await ProcessYamlStream(config, fileContents);
                     }
+                }
+            }
+        }
+
+        private async Task ProcessGitHub(Config config)
+        {
+            using var client = new HttpClient();
+            client.DefaultRequestHeaders.UserAgent.TryParseAdd("KubernetesCRDModelGen");
+
+            var gitHubRelease = await client.GetFromJsonAsync<GitHubRelease>(config.GitHub);
+
+            foreach (var item in gitHubRelease.assets)
+            {
+                if (!string.IsNullOrEmpty(config.GitHubFilter) && item.name.StartsWith(config.GitHubFilter, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    await ProcessDirectUrl(config, item.browser_download_url);
                 }
             }
         }
