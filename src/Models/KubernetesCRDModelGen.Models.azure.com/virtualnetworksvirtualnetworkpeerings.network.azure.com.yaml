@@ -2,9 +2,10 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
-    helm.sh/resource-policy: keep
+  labels:
+    serviceoperator.azure.com/version: v2.0.0
   name: virtualnetworksvirtualnetworkpeerings.network.azure.com
 spec:
   conversion:
@@ -13,10 +14,11 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: default
+          namespace: azureserviceoperator-system
           path: /convert
+          port: 443
       conversionReviewVersions:
-      - v1beta1
+      - v1
   group: network.azure.com
   names:
     kind: VirtualNetworksVirtualNetworkPeering
@@ -39,418 +41,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1alpha1api20201101
-    schema:
-      openAPIV3Schema:
-        description: Deprecated version of VirtualNetworksVirtualNetworkPeering. Use v1beta20201101.VirtualNetworksVirtualNetworkPeering instead
-        properties:
-          apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
-            type: string
-          kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
-            type: string
-          metadata:
-            type: object
-          spec:
-            properties:
-              allowForwardedTraffic:
-                type: boolean
-              allowGatewayTransit:
-                type: boolean
-              allowVirtualNetworkAccess:
-                type: boolean
-              azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                type: string
-              doNotVerifyRemoteGateways:
-                type: boolean
-              owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource'
-                properties:
-                  name:
-                    description: This is the name of the Kubernetes resource to reference.
-                    type: string
-                required:
-                - name
-                type: object
-              peeringState:
-                description: Deprecated version of VirtualNetworkPeeringPropertiesFormat_PeeringState. Use v1beta20201101.VirtualNetworkPeeringPropertiesFormat_PeeringState instead
-                enum:
-                - Connected
-                - Disconnected
-                - Initiated
-                type: string
-              remoteAddressSpace:
-                description: Deprecated version of AddressSpace. Use v1beta20201101.AddressSpace instead
-                properties:
-                  addressPrefixes:
-                    items:
-                      type: string
-                    type: array
-                type: object
-              remoteBgpCommunities:
-                description: Deprecated version of VirtualNetworkBgpCommunities. Use v1beta20201101.VirtualNetworkBgpCommunities instead
-                properties:
-                  virtualNetworkCommunity:
-                    type: string
-                required:
-                - virtualNetworkCommunity
-                type: object
-              remoteVirtualNetwork:
-                description: Deprecated version of SubResource. Use v1beta20201101.SubResource instead
-                properties:
-                  reference:
-                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-                    properties:
-                      armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                        type: string
-                      group:
-                        description: Group is the Kubernetes group of the resource.
-                        type: string
-                      kind:
-                        description: Kind is the Kubernetes kind of the resource.
-                        type: string
-                      name:
-                        description: Name is the Kubernetes name of the resource.
-                        type: string
-                    type: object
-                type: object
-              useRemoteGateways:
-                type: boolean
-            required:
-            - owner
-            type: object
-          status:
-            description: Deprecated version of VirtualNetworks_VirtualNetworkPeering_STATUS. Use v1beta20201101.VirtualNetworks_VirtualNetworkPeering_STATUS instead
-            properties:
-              allowForwardedTraffic:
-                type: boolean
-              allowGatewayTransit:
-                type: boolean
-              allowVirtualNetworkAccess:
-                type: boolean
-              conditions:
-                description: 'Conditions: The observed state of the resource'
-                items:
-                  description: Condition defines an extension to status (an observation) of a resource
-                  properties:
-                    lastTransitionTime:
-                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
-                      format: date-time
-                      type: string
-                    message:
-                      description: Message is a human readable message indicating details about the transition. This field may be empty.
-                      type: string
-                    observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
-                      format: int64
-                      type: integer
-                    reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
-                      type: string
-                    severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
-                      type: string
-                    status:
-                      description: Status of the condition, one of True, False, or Unknown.
-                      type: string
-                    type:
-                      description: Type of condition.
-                      type: string
-                  required:
-                  - lastTransitionTime
-                  - reason
-                  - status
-                  - type
-                  type: object
-                type: array
-              doNotVerifyRemoteGateways:
-                type: boolean
-              etag:
-                type: string
-              id:
-                type: string
-              name:
-                type: string
-              peeringState:
-                description: Deprecated version of VirtualNetworkPeeringPropertiesFormat_PeeringState_STATUS. Use v1beta20201101.VirtualNetworkPeeringPropertiesFormat_PeeringState_STATUS instead
-                type: string
-              provisioningState:
-                description: Deprecated version of ProvisioningState_STATUS. Use v1beta20201101.ProvisioningState_STATUS instead
-                type: string
-              remoteAddressSpace:
-                description: Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
-                properties:
-                  addressPrefixes:
-                    items:
-                      type: string
-                    type: array
-                type: object
-              remoteBgpCommunities:
-                description: Deprecated version of VirtualNetworkBgpCommunities_STATUS. Use v1beta20201101.VirtualNetworkBgpCommunities_STATUS instead
-                properties:
-                  regionalCommunity:
-                    type: string
-                  virtualNetworkCommunity:
-                    type: string
-                type: object
-              remoteVirtualNetwork:
-                description: Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
-                properties:
-                  id:
-                    type: string
-                type: object
-              resourceGuid:
-                type: string
-              type:
-                type: string
-              useRemoteGateways:
-                type: boolean
-            type: object
-        type: object
-    served: true
-    storage: false
-    subresources:
-      status: {}
-  - additionalPrinterColumns:
-    - jsonPath: .status.conditions[?(@.type=='Ready')].status
-      name: Ready
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
-      name: Severity
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
-      name: Reason
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].message
-      name: Message
-      type: string
-    name: v1alpha1api20201101storage
-    schema:
-      openAPIV3Schema:
-        description: Storage version of v1alpha1api20201101.VirtualNetworksVirtualNetworkPeering Deprecated version of VirtualNetworksVirtualNetworkPeering. Use v1beta20201101.VirtualNetworksVirtualNetworkPeering instead
-        properties:
-          apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
-            type: string
-          kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
-            type: string
-          metadata:
-            type: object
-          spec:
-            description: Storage version of v1alpha1api20201101.VirtualNetworks_VirtualNetworkPeering_Spec
-            properties:
-              $propertyBag:
-                additionalProperties:
-                  type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                type: object
-              allowForwardedTraffic:
-                type: boolean
-              allowGatewayTransit:
-                type: boolean
-              allowVirtualNetworkAccess:
-                type: boolean
-              azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                type: string
-              doNotVerifyRemoteGateways:
-                type: boolean
-              originalVersion:
-                type: string
-              owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource'
-                properties:
-                  name:
-                    description: This is the name of the Kubernetes resource to reference.
-                    type: string
-                required:
-                - name
-                type: object
-              peeringState:
-                type: string
-              remoteAddressSpace:
-                description: Storage version of v1alpha1api20201101.AddressSpace Deprecated version of AddressSpace. Use v1beta20201101.AddressSpace instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  addressPrefixes:
-                    items:
-                      type: string
-                    type: array
-                type: object
-              remoteBgpCommunities:
-                description: Storage version of v1alpha1api20201101.VirtualNetworkBgpCommunities Deprecated version of VirtualNetworkBgpCommunities. Use v1beta20201101.VirtualNetworkBgpCommunities instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  virtualNetworkCommunity:
-                    type: string
-                type: object
-              remoteVirtualNetwork:
-                description: Storage version of v1alpha1api20201101.SubResource Deprecated version of SubResource. Use v1beta20201101.SubResource instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  reference:
-                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
-                    properties:
-                      armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                        type: string
-                      group:
-                        description: Group is the Kubernetes group of the resource.
-                        type: string
-                      kind:
-                        description: Kind is the Kubernetes kind of the resource.
-                        type: string
-                      name:
-                        description: Name is the Kubernetes name of the resource.
-                        type: string
-                    type: object
-                type: object
-              useRemoteGateways:
-                type: boolean
-            required:
-            - owner
-            type: object
-          status:
-            description: Storage version of v1alpha1api20201101.VirtualNetworks_VirtualNetworkPeering_STATUS Deprecated version of VirtualNetworks_VirtualNetworkPeering_STATUS. Use v1beta20201101.VirtualNetworks_VirtualNetworkPeering_STATUS instead
-            properties:
-              $propertyBag:
-                additionalProperties:
-                  type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                type: object
-              allowForwardedTraffic:
-                type: boolean
-              allowGatewayTransit:
-                type: boolean
-              allowVirtualNetworkAccess:
-                type: boolean
-              conditions:
-                items:
-                  description: Condition defines an extension to status (an observation) of a resource
-                  properties:
-                    lastTransitionTime:
-                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
-                      format: date-time
-                      type: string
-                    message:
-                      description: Message is a human readable message indicating details about the transition. This field may be empty.
-                      type: string
-                    observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
-                      format: int64
-                      type: integer
-                    reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
-                      type: string
-                    severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
-                      type: string
-                    status:
-                      description: Status of the condition, one of True, False, or Unknown.
-                      type: string
-                    type:
-                      description: Type of condition.
-                      type: string
-                  required:
-                  - lastTransitionTime
-                  - reason
-                  - status
-                  - type
-                  type: object
-                type: array
-              doNotVerifyRemoteGateways:
-                type: boolean
-              etag:
-                type: string
-              id:
-                type: string
-              name:
-                type: string
-              peeringState:
-                type: string
-              provisioningState:
-                type: string
-              remoteAddressSpace:
-                description: Storage version of v1alpha1api20201101.AddressSpace_STATUS Deprecated version of AddressSpace_STATUS. Use v1beta20201101.AddressSpace_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  addressPrefixes:
-                    items:
-                      type: string
-                    type: array
-                type: object
-              remoteBgpCommunities:
-                description: Storage version of v1alpha1api20201101.VirtualNetworkBgpCommunities_STATUS Deprecated version of VirtualNetworkBgpCommunities_STATUS. Use v1beta20201101.VirtualNetworkBgpCommunities_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  regionalCommunity:
-                    type: string
-                  virtualNetworkCommunity:
-                    type: string
-                type: object
-              remoteVirtualNetwork:
-                description: Storage version of v1alpha1api20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1beta20201101.SubResource_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  id:
-                    type: string
-                type: object
-              resourceGuid:
-                type: string
-              type:
-                type: string
-              useRemoteGateways:
-                type: boolean
-            type: object
-        type: object
-    served: true
-    storage: false
-    subresources:
-      status: {}
-  - additionalPrinterColumns:
-    - jsonPath: .status.conditions[?(@.type=='Ready')].status
-      name: Ready
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
-      name: Severity
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
-      name: Reason
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].message
-      name: Message
-      type: string
-    name: v1beta20201101
+    name: v1api20201101
     schema:
       openAPIV3Schema:
         description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}'
@@ -659,10 +250,10 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1beta20201101storage
+    name: v1api20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20201101.VirtualNetworksVirtualNetworkPeering Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}'
+        description: 'Storage version of v1api20201101.VirtualNetworksVirtualNetworkPeering Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -673,7 +264,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20201101.VirtualNetworks_VirtualNetworkPeering_Spec
+            description: Storage version of v1api20201101.VirtualNetworks_VirtualNetworkPeering_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -705,7 +296,7 @@ spec:
               peeringState:
                 type: string
               remoteAddressSpace:
-                description: Storage version of v1beta20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+                description: Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -718,7 +309,7 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+                description: Storage version of v1api20201101.VirtualNetworkBgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -729,7 +320,7 @@ spec:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: Storage version of v1beta20201101.SubResource Reference to another subresource.
+                description: Storage version of v1api20201101.SubResource Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -760,7 +351,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20201101.VirtualNetworks_VirtualNetworkPeering_STATUS
+            description: Storage version of v1api20201101.VirtualNetworks_VirtualNetworkPeering_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -820,7 +411,7 @@ spec:
               provisioningState:
                 type: string
               remoteAddressSpace:
-                description: Storage version of v1beta20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+                description: Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -833,7 +424,7 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+                description: Storage version of v1api20201101.VirtualNetworkBgpCommunities_STATUS Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -846,7 +437,7 @@ spec:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: Storage version of v1beta20201101.SubResource_STATUS Reference to another subresource.
+                description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -866,5 +457,416 @@ spec:
         type: object
     served: true
     storage: true
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1beta20201101
+    schema:
+      openAPIV3Schema:
+        description: Deprecated version of VirtualNetworksVirtualNetworkPeering. Use v1api20201101.VirtualNetworksVirtualNetworkPeering instead
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              allowForwardedTraffic:
+                type: boolean
+              allowGatewayTransit:
+                type: boolean
+              allowVirtualNetworkAccess:
+                type: boolean
+              azureName:
+                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                type: string
+              doNotVerifyRemoteGateways:
+                type: boolean
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              peeringState:
+                description: Deprecated version of VirtualNetworkPeeringPropertiesFormat_PeeringState. Use v1api20201101.VirtualNetworkPeeringPropertiesFormat_PeeringState instead
+                enum:
+                - Connected
+                - Disconnected
+                - Initiated
+                type: string
+              remoteAddressSpace:
+                description: Deprecated version of AddressSpace. Use v1api20201101.AddressSpace instead
+                properties:
+                  addressPrefixes:
+                    items:
+                      type: string
+                    type: array
+                type: object
+              remoteBgpCommunities:
+                description: Deprecated version of VirtualNetworkBgpCommunities. Use v1api20201101.VirtualNetworkBgpCommunities instead
+                properties:
+                  virtualNetworkCommunity:
+                    type: string
+                required:
+                - virtualNetworkCommunity
+                type: object
+              remoteVirtualNetwork:
+                description: Deprecated version of SubResource. Use v1api20201101.SubResource instead
+                properties:
+                  reference:
+                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
+              useRemoteGateways:
+                type: boolean
+            required:
+            - owner
+            type: object
+          status:
+            description: Deprecated version of VirtualNetworks_VirtualNetworkPeering_STATUS. Use v1api20201101.VirtualNetworks_VirtualNetworkPeering_STATUS instead
+            properties:
+              allowForwardedTraffic:
+                type: boolean
+              allowGatewayTransit:
+                type: boolean
+              allowVirtualNetworkAccess:
+                type: boolean
+              conditions:
+                description: 'Conditions: The observed state of the resource'
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              doNotVerifyRemoteGateways:
+                type: boolean
+              etag:
+                type: string
+              id:
+                type: string
+              name:
+                type: string
+              peeringState:
+                description: Deprecated version of VirtualNetworkPeeringPropertiesFormat_PeeringState_STATUS. Use v1api20201101.VirtualNetworkPeeringPropertiesFormat_PeeringState_STATUS instead
+                type: string
+              provisioningState:
+                description: Deprecated version of ProvisioningState_STATUS. Use v1api20201101.ProvisioningState_STATUS instead
+                type: string
+              remoteAddressSpace:
+                description: Deprecated version of AddressSpace_STATUS. Use v1api20201101.AddressSpace_STATUS instead
+                properties:
+                  addressPrefixes:
+                    items:
+                      type: string
+                    type: array
+                type: object
+              remoteBgpCommunities:
+                description: Deprecated version of VirtualNetworkBgpCommunities_STATUS. Use v1api20201101.VirtualNetworkBgpCommunities_STATUS instead
+                properties:
+                  regionalCommunity:
+                    type: string
+                  virtualNetworkCommunity:
+                    type: string
+                type: object
+              remoteVirtualNetwork:
+                description: Deprecated version of SubResource_STATUS. Use v1api20201101.SubResource_STATUS instead
+                properties:
+                  id:
+                    type: string
+                type: object
+              resourceGuid:
+                type: string
+              type:
+                type: string
+              useRemoteGateways:
+                type: boolean
+            type: object
+        type: object
+    served: true
+    storage: false
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1beta20201101storage
+    schema:
+      openAPIV3Schema:
+        description: Storage version of v1beta20201101.VirtualNetworksVirtualNetworkPeering Deprecated version of VirtualNetworksVirtualNetworkPeering. Use v1api20201101.VirtualNetworksVirtualNetworkPeering instead
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: Storage version of v1beta20201101.VirtualNetworks_VirtualNetworkPeering_Spec
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              allowForwardedTraffic:
+                type: boolean
+              allowGatewayTransit:
+                type: boolean
+              allowVirtualNetworkAccess:
+                type: boolean
+              azureName:
+                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                type: string
+              doNotVerifyRemoteGateways:
+                type: boolean
+              originalVersion:
+                type: string
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/VirtualNetwork resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              peeringState:
+                type: string
+              remoteAddressSpace:
+                description: Storage version of v1beta20201101.AddressSpace Deprecated version of AddressSpace. Use v1api20201101.AddressSpace instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  addressPrefixes:
+                    items:
+                      type: string
+                    type: array
+                type: object
+              remoteBgpCommunities:
+                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities Deprecated version of VirtualNetworkBgpCommunities. Use v1api20201101.VirtualNetworkBgpCommunities instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  virtualNetworkCommunity:
+                    type: string
+                type: object
+              remoteVirtualNetwork:
+                description: Storage version of v1beta20201101.SubResource Deprecated version of SubResource. Use v1api20201101.SubResource instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  reference:
+                    description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                    properties:
+                      armId:
+                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                        type: string
+                      group:
+                        description: Group is the Kubernetes group of the resource.
+                        type: string
+                      kind:
+                        description: Kind is the Kubernetes kind of the resource.
+                        type: string
+                      name:
+                        description: Name is the Kubernetes name of the resource.
+                        type: string
+                    type: object
+                type: object
+              useRemoteGateways:
+                type: boolean
+            required:
+            - owner
+            type: object
+          status:
+            description: Storage version of v1beta20201101.VirtualNetworks_VirtualNetworkPeering_STATUS Deprecated version of VirtualNetworks_VirtualNetworkPeering_STATUS. Use v1api20201101.VirtualNetworks_VirtualNetworkPeering_STATUS instead
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              allowForwardedTraffic:
+                type: boolean
+              allowGatewayTransit:
+                type: boolean
+              allowVirtualNetworkAccess:
+                type: boolean
+              conditions:
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              doNotVerifyRemoteGateways:
+                type: boolean
+              etag:
+                type: string
+              id:
+                type: string
+              name:
+                type: string
+              peeringState:
+                type: string
+              provisioningState:
+                type: string
+              remoteAddressSpace:
+                description: Storage version of v1beta20201101.AddressSpace_STATUS Deprecated version of AddressSpace_STATUS. Use v1api20201101.AddressSpace_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  addressPrefixes:
+                    items:
+                      type: string
+                    type: array
+                type: object
+              remoteBgpCommunities:
+                description: Storage version of v1beta20201101.VirtualNetworkBgpCommunities_STATUS Deprecated version of VirtualNetworkBgpCommunities_STATUS. Use v1api20201101.VirtualNetworkBgpCommunities_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  regionalCommunity:
+                    type: string
+                  virtualNetworkCommunity:
+                    type: string
+                type: object
+              remoteVirtualNetwork:
+                description: Storage version of v1beta20201101.SubResource_STATUS Deprecated version of SubResource_STATUS. Use v1api20201101.SubResource_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  id:
+                    type: string
+                type: object
+              resourceGuid:
+                type: string
+              type:
+                type: string
+              useRemoteGateways:
+                type: boolean
+            type: object
+        type: object
+    served: true
+    storage: false
     subresources:
       status: {}

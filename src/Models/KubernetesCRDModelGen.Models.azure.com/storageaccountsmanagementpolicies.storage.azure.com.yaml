@@ -2,9 +2,10 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
-    helm.sh/resource-policy: keep
+  labels:
+    serviceoperator.azure.com/version: v2.0.0
   name: storageaccountsmanagementpolicies.storage.azure.com
 spec:
   conversion:
@@ -13,10 +14,11 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: default
+          namespace: azureserviceoperator-system
           path: /convert
+          port: 443
       conversionReviewVersions:
-      - v1beta1
+      - v1
   group: storage.azure.com
   names:
     kind: StorageAccountsManagementPolicy
@@ -39,930 +41,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1alpha1api20210401
-    schema:
-      openAPIV3Schema:
-        description: Deprecated version of StorageAccountsManagementPolicy. Use v1beta20210401.StorageAccountsManagementPolicy instead
-        properties:
-          apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
-            type: string
-          kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
-            type: string
-          metadata:
-            type: object
-          spec:
-            properties:
-              owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
-                properties:
-                  name:
-                    description: This is the name of the Kubernetes resource to reference.
-                    type: string
-                required:
-                - name
-                type: object
-              policy:
-                description: Deprecated version of ManagementPolicySchema. Use v1beta20210401.ManagementPolicySchema instead
-                properties:
-                  rules:
-                    items:
-                      description: Deprecated version of ManagementPolicyRule. Use v1beta20210401.ManagementPolicyRule instead
-                      properties:
-                        definition:
-                          description: Deprecated version of ManagementPolicyDefinition. Use v1beta20210401.ManagementPolicyDefinition instead
-                          properties:
-                            actions:
-                              description: Deprecated version of ManagementPolicyAction. Use v1beta20210401.ManagementPolicyAction instead
-                              properties:
-                                baseBlob:
-                                  description: Deprecated version of ManagementPolicyBaseBlob. Use v1beta20210401.ManagementPolicyBaseBlob instead
-                                  properties:
-                                    delete:
-                                      description: Deprecated version of DateAfterModification. Use v1beta20210401.DateAfterModification instead
-                                      properties:
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                        daysAfterModificationGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                      type: object
-                                    enableAutoTierToHotFromCool:
-                                      type: boolean
-                                    tierToArchive:
-                                      description: Deprecated version of DateAfterModification. Use v1beta20210401.DateAfterModification instead
-                                      properties:
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                        daysAfterModificationGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                      type: object
-                                    tierToCool:
-                                      description: Deprecated version of DateAfterModification. Use v1beta20210401.DateAfterModification instead
-                                      properties:
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                        daysAfterModificationGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                      type: object
-                                  type: object
-                                snapshot:
-                                  description: Deprecated version of ManagementPolicySnapShot. Use v1beta20210401.ManagementPolicySnapShot instead
-                                  properties:
-                                    delete:
-                                      description: Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                      required:
-                                      - daysAfterCreationGreaterThan
-                                      type: object
-                                    tierToArchive:
-                                      description: Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                      required:
-                                      - daysAfterCreationGreaterThan
-                                      type: object
-                                    tierToCool:
-                                      description: Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                      required:
-                                      - daysAfterCreationGreaterThan
-                                      type: object
-                                  type: object
-                                version:
-                                  description: Deprecated version of ManagementPolicyVersion. Use v1beta20210401.ManagementPolicyVersion instead
-                                  properties:
-                                    delete:
-                                      description: Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                      required:
-                                      - daysAfterCreationGreaterThan
-                                      type: object
-                                    tierToArchive:
-                                      description: Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                      required:
-                                      - daysAfterCreationGreaterThan
-                                      type: object
-                                    tierToCool:
-                                      description: Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          minimum: 0
-                                          multipleOf: 1
-                                          type: integer
-                                      required:
-                                      - daysAfterCreationGreaterThan
-                                      type: object
-                                  type: object
-                              type: object
-                            filters:
-                              description: Deprecated version of ManagementPolicyFilter. Use v1beta20210401.ManagementPolicyFilter instead
-                              properties:
-                                blobIndexMatch:
-                                  items:
-                                    description: Deprecated version of TagFilter. Use v1beta20210401.TagFilter instead
-                                    properties:
-                                      name:
-                                        maxLength: 128
-                                        minLength: 1
-                                        type: string
-                                      op:
-                                        type: string
-                                      value:
-                                        maxLength: 256
-                                        minLength: 0
-                                        type: string
-                                    required:
-                                    - name
-                                    - op
-                                    - value
-                                    type: object
-                                  type: array
-                                blobTypes:
-                                  items:
-                                    type: string
-                                  type: array
-                                prefixMatch:
-                                  items:
-                                    type: string
-                                  type: array
-                              required:
-                              - blobTypes
-                              type: object
-                          required:
-                          - actions
-                          type: object
-                        enabled:
-                          type: boolean
-                        name:
-                          type: string
-                        type:
-                          description: Deprecated version of ManagementPolicyRule_Type. Use v1beta20210401.ManagementPolicyRule_Type instead
-                          enum:
-                          - Lifecycle
-                          type: string
-                      required:
-                      - definition
-                      - name
-                      - type
-                      type: object
-                    type: array
-                required:
-                - rules
-                type: object
-            required:
-            - owner
-            - policy
-            type: object
-          status:
-            description: Deprecated version of StorageAccounts_ManagementPolicy_STATUS. Use v1beta20210401.StorageAccounts_ManagementPolicy_STATUS instead
-            properties:
-              conditions:
-                description: 'Conditions: The observed state of the resource'
-                items:
-                  description: Condition defines an extension to status (an observation) of a resource
-                  properties:
-                    lastTransitionTime:
-                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
-                      format: date-time
-                      type: string
-                    message:
-                      description: Message is a human readable message indicating details about the transition. This field may be empty.
-                      type: string
-                    observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
-                      format: int64
-                      type: integer
-                    reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
-                      type: string
-                    severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
-                      type: string
-                    status:
-                      description: Status of the condition, one of True, False, or Unknown.
-                      type: string
-                    type:
-                      description: Type of condition.
-                      type: string
-                  required:
-                  - lastTransitionTime
-                  - reason
-                  - status
-                  - type
-                  type: object
-                type: array
-              id:
-                type: string
-              lastModifiedTime:
-                type: string
-              name:
-                type: string
-              policy:
-                description: Deprecated version of ManagementPolicySchema_STATUS. Use v1beta20210401.ManagementPolicySchema_STATUS instead
-                properties:
-                  rules:
-                    items:
-                      description: Deprecated version of ManagementPolicyRule_STATUS. Use v1beta20210401.ManagementPolicyRule_STATUS instead
-                      properties:
-                        definition:
-                          description: Deprecated version of ManagementPolicyDefinition_STATUS. Use v1beta20210401.ManagementPolicyDefinition_STATUS instead
-                          properties:
-                            actions:
-                              description: Deprecated version of ManagementPolicyAction_STATUS. Use v1beta20210401.ManagementPolicyAction_STATUS instead
-                              properties:
-                                baseBlob:
-                                  description: Deprecated version of ManagementPolicyBaseBlob_STATUS. Use v1beta20210401.ManagementPolicyBaseBlob_STATUS instead
-                                  properties:
-                                    delete:
-                                      description: Deprecated version of DateAfterModification_STATUS. Use v1beta20210401.DateAfterModification_STATUS instead
-                                      properties:
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          type: number
-                                        daysAfterModificationGreaterThan:
-                                          type: number
-                                      type: object
-                                    enableAutoTierToHotFromCool:
-                                      type: boolean
-                                    tierToArchive:
-                                      description: Deprecated version of DateAfterModification_STATUS. Use v1beta20210401.DateAfterModification_STATUS instead
-                                      properties:
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          type: number
-                                        daysAfterModificationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToCool:
-                                      description: Deprecated version of DateAfterModification_STATUS. Use v1beta20210401.DateAfterModification_STATUS instead
-                                      properties:
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          type: number
-                                        daysAfterModificationGreaterThan:
-                                          type: number
-                                      type: object
-                                  type: object
-                                snapshot:
-                                  description: Deprecated version of ManagementPolicySnapShot_STATUS. Use v1beta20210401.ManagementPolicySnapShot_STATUS instead
-                                  properties:
-                                    delete:
-                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToArchive:
-                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToCool:
-                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                  type: object
-                                version:
-                                  description: Deprecated version of ManagementPolicyVersion_STATUS. Use v1beta20210401.ManagementPolicyVersion_STATUS instead
-                                  properties:
-                                    delete:
-                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToArchive:
-                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToCool:
-                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                  type: object
-                              type: object
-                            filters:
-                              description: Deprecated version of ManagementPolicyFilter_STATUS. Use v1beta20210401.ManagementPolicyFilter_STATUS instead
-                              properties:
-                                blobIndexMatch:
-                                  items:
-                                    description: Deprecated version of TagFilter_STATUS. Use v1beta20210401.TagFilter_STATUS instead
-                                    properties:
-                                      name:
-                                        type: string
-                                      op:
-                                        type: string
-                                      value:
-                                        type: string
-                                    type: object
-                                  type: array
-                                blobTypes:
-                                  items:
-                                    type: string
-                                  type: array
-                                prefixMatch:
-                                  items:
-                                    type: string
-                                  type: array
-                              type: object
-                          type: object
-                        enabled:
-                          type: boolean
-                        name:
-                          type: string
-                        type:
-                          description: Deprecated version of ManagementPolicyRule_Type_STATUS. Use v1beta20210401.ManagementPolicyRule_Type_STATUS instead
-                          type: string
-                      type: object
-                    type: array
-                type: object
-              type:
-                type: string
-            type: object
-        type: object
-    served: true
-    storage: false
-    subresources:
-      status: {}
-  - additionalPrinterColumns:
-    - jsonPath: .status.conditions[?(@.type=='Ready')].status
-      name: Ready
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
-      name: Severity
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
-      name: Reason
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].message
-      name: Message
-      type: string
-    name: v1alpha1api20210401storage
-    schema:
-      openAPIV3Schema:
-        description: Storage version of v1alpha1api20210401.StorageAccountsManagementPolicy Deprecated version of StorageAccountsManagementPolicy. Use v1beta20210401.StorageAccountsManagementPolicy instead
-        properties:
-          apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
-            type: string
-          kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
-            type: string
-          metadata:
-            type: object
-          spec:
-            description: Storage version of v1alpha1api20210401.StorageAccounts_ManagementPolicy_Spec
-            properties:
-              $propertyBag:
-                additionalProperties:
-                  type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                type: object
-              originalVersion:
-                type: string
-              owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
-                properties:
-                  name:
-                    description: This is the name of the Kubernetes resource to reference.
-                    type: string
-                required:
-                - name
-                type: object
-              policy:
-                description: Storage version of v1alpha1api20210401.ManagementPolicySchema Deprecated version of ManagementPolicySchema. Use v1beta20210401.ManagementPolicySchema instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  rules:
-                    items:
-                      description: Storage version of v1alpha1api20210401.ManagementPolicyRule Deprecated version of ManagementPolicyRule. Use v1beta20210401.ManagementPolicyRule instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        definition:
-                          description: Storage version of v1alpha1api20210401.ManagementPolicyDefinition Deprecated version of ManagementPolicyDefinition. Use v1beta20210401.ManagementPolicyDefinition instead
-                          properties:
-                            $propertyBag:
-                              additionalProperties:
-                                type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                              type: object
-                            actions:
-                              description: Storage version of v1alpha1api20210401.ManagementPolicyAction Deprecated version of ManagementPolicyAction. Use v1beta20210401.ManagementPolicyAction instead
-                              properties:
-                                $propertyBag:
-                                  additionalProperties:
-                                    type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                  type: object
-                                baseBlob:
-                                  description: Storage version of v1alpha1api20210401.ManagementPolicyBaseBlob Deprecated version of ManagementPolicyBaseBlob. Use v1beta20210401.ManagementPolicyBaseBlob instead
-                                  properties:
-                                    $propertyBag:
-                                      additionalProperties:
-                                        type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                      type: object
-                                    delete:
-                                      description: Storage version of v1alpha1api20210401.DateAfterModification Deprecated version of DateAfterModification. Use v1beta20210401.DateAfterModification instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          type: integer
-                                        daysAfterModificationGreaterThan:
-                                          type: integer
-                                      type: object
-                                    enableAutoTierToHotFromCool:
-                                      type: boolean
-                                    tierToArchive:
-                                      description: Storage version of v1alpha1api20210401.DateAfterModification Deprecated version of DateAfterModification. Use v1beta20210401.DateAfterModification instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          type: integer
-                                        daysAfterModificationGreaterThan:
-                                          type: integer
-                                      type: object
-                                    tierToCool:
-                                      description: Storage version of v1alpha1api20210401.DateAfterModification Deprecated version of DateAfterModification. Use v1beta20210401.DateAfterModification instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          type: integer
-                                        daysAfterModificationGreaterThan:
-                                          type: integer
-                                      type: object
-                                  type: object
-                                snapshot:
-                                  description: Storage version of v1alpha1api20210401.ManagementPolicySnapShot Deprecated version of ManagementPolicySnapShot. Use v1beta20210401.ManagementPolicySnapShot instead
-                                  properties:
-                                    $propertyBag:
-                                      additionalProperties:
-                                        type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                      type: object
-                                    delete:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: integer
-                                      type: object
-                                    tierToArchive:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: integer
-                                      type: object
-                                    tierToCool:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: integer
-                                      type: object
-                                  type: object
-                                version:
-                                  description: Storage version of v1alpha1api20210401.ManagementPolicyVersion Deprecated version of ManagementPolicyVersion. Use v1beta20210401.ManagementPolicyVersion instead
-                                  properties:
-                                    $propertyBag:
-                                      additionalProperties:
-                                        type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                      type: object
-                                    delete:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: integer
-                                      type: object
-                                    tierToArchive:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: integer
-                                      type: object
-                                    tierToCool:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1beta20210401.DateAfterCreation instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: integer
-                                      type: object
-                                  type: object
-                              type: object
-                            filters:
-                              description: Storage version of v1alpha1api20210401.ManagementPolicyFilter Deprecated version of ManagementPolicyFilter. Use v1beta20210401.ManagementPolicyFilter instead
-                              properties:
-                                $propertyBag:
-                                  additionalProperties:
-                                    type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                  type: object
-                                blobIndexMatch:
-                                  items:
-                                    description: Storage version of v1alpha1api20210401.TagFilter Deprecated version of TagFilter. Use v1beta20210401.TagFilter instead
-                                    properties:
-                                      $propertyBag:
-                                        additionalProperties:
-                                          type: string
-                                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                        type: object
-                                      name:
-                                        type: string
-                                      op:
-                                        type: string
-                                      value:
-                                        type: string
-                                    type: object
-                                  type: array
-                                blobTypes:
-                                  items:
-                                    type: string
-                                  type: array
-                                prefixMatch:
-                                  items:
-                                    type: string
-                                  type: array
-                              type: object
-                          type: object
-                        enabled:
-                          type: boolean
-                        name:
-                          type: string
-                        type:
-                          type: string
-                      type: object
-                    type: array
-                type: object
-            required:
-            - owner
-            type: object
-          status:
-            description: Storage version of v1alpha1api20210401.StorageAccounts_ManagementPolicy_STATUS Deprecated version of StorageAccounts_ManagementPolicy_STATUS. Use v1beta20210401.StorageAccounts_ManagementPolicy_STATUS instead
-            properties:
-              $propertyBag:
-                additionalProperties:
-                  type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                type: object
-              conditions:
-                items:
-                  description: Condition defines an extension to status (an observation) of a resource
-                  properties:
-                    lastTransitionTime:
-                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
-                      format: date-time
-                      type: string
-                    message:
-                      description: Message is a human readable message indicating details about the transition. This field may be empty.
-                      type: string
-                    observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
-                      format: int64
-                      type: integer
-                    reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
-                      type: string
-                    severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
-                      type: string
-                    status:
-                      description: Status of the condition, one of True, False, or Unknown.
-                      type: string
-                    type:
-                      description: Type of condition.
-                      type: string
-                  required:
-                  - lastTransitionTime
-                  - reason
-                  - status
-                  - type
-                  type: object
-                type: array
-              id:
-                type: string
-              lastModifiedTime:
-                type: string
-              name:
-                type: string
-              policy:
-                description: Storage version of v1alpha1api20210401.ManagementPolicySchema_STATUS Deprecated version of ManagementPolicySchema_STATUS. Use v1beta20210401.ManagementPolicySchema_STATUS instead
-                properties:
-                  $propertyBag:
-                    additionalProperties:
-                      type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                    type: object
-                  rules:
-                    items:
-                      description: Storage version of v1alpha1api20210401.ManagementPolicyRule_STATUS Deprecated version of ManagementPolicyRule_STATUS. Use v1beta20210401.ManagementPolicyRule_STATUS instead
-                      properties:
-                        $propertyBag:
-                          additionalProperties:
-                            type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                          type: object
-                        definition:
-                          description: Storage version of v1alpha1api20210401.ManagementPolicyDefinition_STATUS Deprecated version of ManagementPolicyDefinition_STATUS. Use v1beta20210401.ManagementPolicyDefinition_STATUS instead
-                          properties:
-                            $propertyBag:
-                              additionalProperties:
-                                type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                              type: object
-                            actions:
-                              description: Storage version of v1alpha1api20210401.ManagementPolicyAction_STATUS Deprecated version of ManagementPolicyAction_STATUS. Use v1beta20210401.ManagementPolicyAction_STATUS instead
-                              properties:
-                                $propertyBag:
-                                  additionalProperties:
-                                    type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                  type: object
-                                baseBlob:
-                                  description: Storage version of v1alpha1api20210401.ManagementPolicyBaseBlob_STATUS Deprecated version of ManagementPolicyBaseBlob_STATUS. Use v1beta20210401.ManagementPolicyBaseBlob_STATUS instead
-                                  properties:
-                                    $propertyBag:
-                                      additionalProperties:
-                                        type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                      type: object
-                                    delete:
-                                      description: Storage version of v1alpha1api20210401.DateAfterModification_STATUS Deprecated version of DateAfterModification_STATUS. Use v1beta20210401.DateAfterModification_STATUS instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          type: number
-                                        daysAfterModificationGreaterThan:
-                                          type: number
-                                      type: object
-                                    enableAutoTierToHotFromCool:
-                                      type: boolean
-                                    tierToArchive:
-                                      description: Storage version of v1alpha1api20210401.DateAfterModification_STATUS Deprecated version of DateAfterModification_STATUS. Use v1beta20210401.DateAfterModification_STATUS instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          type: number
-                                        daysAfterModificationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToCool:
-                                      description: Storage version of v1alpha1api20210401.DateAfterModification_STATUS Deprecated version of DateAfterModification_STATUS. Use v1beta20210401.DateAfterModification_STATUS instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterLastAccessTimeGreaterThan:
-                                          type: number
-                                        daysAfterModificationGreaterThan:
-                                          type: number
-                                      type: object
-                                  type: object
-                                snapshot:
-                                  description: Storage version of v1alpha1api20210401.ManagementPolicySnapShot_STATUS Deprecated version of ManagementPolicySnapShot_STATUS. Use v1beta20210401.ManagementPolicySnapShot_STATUS instead
-                                  properties:
-                                    $propertyBag:
-                                      additionalProperties:
-                                        type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                      type: object
-                                    delete:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToArchive:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToCool:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                  type: object
-                                version:
-                                  description: Storage version of v1alpha1api20210401.ManagementPolicyVersion_STATUS Deprecated version of ManagementPolicyVersion_STATUS. Use v1beta20210401.ManagementPolicyVersion_STATUS instead
-                                  properties:
-                                    $propertyBag:
-                                      additionalProperties:
-                                        type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                      type: object
-                                    delete:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToArchive:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                    tierToCool:
-                                      description: Storage version of v1alpha1api20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1beta20210401.DateAfterCreation_STATUS instead
-                                      properties:
-                                        $propertyBag:
-                                          additionalProperties:
-                                            type: string
-                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                          type: object
-                                        daysAfterCreationGreaterThan:
-                                          type: number
-                                      type: object
-                                  type: object
-                              type: object
-                            filters:
-                              description: Storage version of v1alpha1api20210401.ManagementPolicyFilter_STATUS Deprecated version of ManagementPolicyFilter_STATUS. Use v1beta20210401.ManagementPolicyFilter_STATUS instead
-                              properties:
-                                $propertyBag:
-                                  additionalProperties:
-                                    type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                  type: object
-                                blobIndexMatch:
-                                  items:
-                                    description: Storage version of v1alpha1api20210401.TagFilter_STATUS Deprecated version of TagFilter_STATUS. Use v1beta20210401.TagFilter_STATUS instead
-                                    properties:
-                                      $propertyBag:
-                                        additionalProperties:
-                                          type: string
-                                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
-                                        type: object
-                                      name:
-                                        type: string
-                                      op:
-                                        type: string
-                                      value:
-                                        type: string
-                                    type: object
-                                  type: array
-                                blobTypes:
-                                  items:
-                                    type: string
-                                  type: array
-                                prefixMatch:
-                                  items:
-                                    type: string
-                                  type: array
-                              type: object
-                          type: object
-                        enabled:
-                          type: boolean
-                        name:
-                          type: string
-                        type:
-                          type: string
-                      type: object
-                    type: array
-                type: object
-              type:
-                type: string
-            type: object
-        type: object
-    served: true
-    storage: false
-    subresources:
-      status: {}
-  - additionalPrinterColumns:
-    - jsonPath: .status.conditions[?(@.type=='Ready')].status
-      name: Ready
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
-      name: Severity
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
-      name: Reason
-      type: string
-    - jsonPath: .status.conditions[?(@.type=='Ready')].message
-      name: Message
-      type: string
-    name: v1beta20210401
+    name: v1api20210401
     schema:
       openAPIV3Schema:
         description: 'Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/managementPolicies/default'
@@ -1404,10 +483,10 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1beta20210401storage
+    name: v1api20210401storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210401.StorageAccountsManagementPolicy Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/managementPolicies/default'
+        description: 'Storage version of v1api20210401.StorageAccountsManagementPolicy Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/storage.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/managementPolicies/default'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -1418,7 +497,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20210401.StorageAccounts_ManagementPolicy_Spec
+            description: Storage version of v1api20210401.StorageAccounts_ManagementPolicy_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1437,7 +516,7 @@ spec:
                 - name
                 type: object
               policy:
-                description: 'Storage version of v1beta20210401.ManagementPolicySchema The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
+                description: 'Storage version of v1api20210401.ManagementPolicySchema The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1446,7 +525,7 @@ spec:
                     type: object
                   rules:
                     items:
-                      description: Storage version of v1beta20210401.ManagementPolicyRule An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
+                      description: Storage version of v1api20210401.ManagementPolicyRule An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1454,7 +533,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         definition:
-                          description: Storage version of v1beta20210401.ManagementPolicyDefinition An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.
+                          description: Storage version of v1api20210401.ManagementPolicyDefinition An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1462,7 +541,7 @@ spec:
                               description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                               type: object
                             actions:
-                              description: Storage version of v1beta20210401.ManagementPolicyAction Actions are applied to the filtered blobs when the execution condition is met.
+                              description: Storage version of v1api20210401.ManagementPolicyAction Actions are applied to the filtered blobs when the execution condition is met.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1470,7 +549,7 @@ spec:
                                   description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                   type: object
                                 baseBlob:
-                                  description: Storage version of v1beta20210401.ManagementPolicyBaseBlob Management policy action for base blob.
+                                  description: Storage version of v1api20210401.ManagementPolicyBaseBlob Management policy action for base blob.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1478,7 +557,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: Storage version of v1beta20210401.DateAfterModification Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
+                                      description: Storage version of v1api20210401.DateAfterModification Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1493,7 +572,7 @@ spec:
                                     enableAutoTierToHotFromCool:
                                       type: boolean
                                     tierToArchive:
-                                      description: Storage version of v1beta20210401.DateAfterModification Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
+                                      description: Storage version of v1api20210401.DateAfterModification Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1506,7 +585,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToCool:
-                                      description: Storage version of v1beta20210401.DateAfterModification Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
+                                      description: Storage version of v1api20210401.DateAfterModification Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1520,7 +599,7 @@ spec:
                                       type: object
                                   type: object
                                 snapshot:
-                                  description: Storage version of v1beta20210401.ManagementPolicySnapShot Management policy action for snapshot.
+                                  description: Storage version of v1api20210401.ManagementPolicySnapShot Management policy action for snapshot.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1528,7 +607,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1539,7 +618,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToArchive:
-                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1550,7 +629,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToCool:
-                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1562,7 +641,7 @@ spec:
                                       type: object
                                   type: object
                                 version:
-                                  description: Storage version of v1beta20210401.ManagementPolicyVersion Management policy action for blob version.
+                                  description: Storage version of v1api20210401.ManagementPolicyVersion Management policy action for blob version.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1570,7 +649,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1581,7 +660,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToArchive:
-                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1592,7 +671,7 @@ spec:
                                           type: integer
                                       type: object
                                     tierToCool:
-                                      description: Storage version of v1beta20210401.DateAfterCreation Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1605,7 +684,7 @@ spec:
                                   type: object
                               type: object
                             filters:
-                              description: Storage version of v1beta20210401.ManagementPolicyFilter Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.
+                              description: Storage version of v1api20210401.ManagementPolicyFilter Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1614,7 +693,7 @@ spec:
                                   type: object
                                 blobIndexMatch:
                                   items:
-                                    description: Storage version of v1beta20210401.TagFilter Blob index tag based filtering for blob objects
+                                    description: Storage version of v1api20210401.TagFilter Blob index tag based filtering for blob objects
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
@@ -1652,7 +731,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210401.StorageAccounts_ManagementPolicy_STATUS
+            description: Storage version of v1api20210401.StorageAccounts_ManagementPolicy_STATUS
             properties:
               $propertyBag:
                 additionalProperties:
@@ -1700,7 +779,7 @@ spec:
               name:
                 type: string
               policy:
-                description: 'Storage version of v1beta20210401.ManagementPolicySchema_STATUS The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
+                description: 'Storage version of v1api20210401.ManagementPolicySchema_STATUS The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.'
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -1709,7 +788,7 @@ spec:
                     type: object
                   rules:
                     items:
-                      description: Storage version of v1beta20210401.ManagementPolicyRule_STATUS An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
+                      description: Storage version of v1api20210401.ManagementPolicyRule_STATUS An object that wraps the Lifecycle rule. Each rule is uniquely defined by name.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -1717,7 +796,7 @@ spec:
                           description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                           type: object
                         definition:
-                          description: Storage version of v1beta20210401.ManagementPolicyDefinition_STATUS An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.
+                          description: Storage version of v1api20210401.ManagementPolicyDefinition_STATUS An object that defines the Lifecycle rule. Each definition is made up with a filters set and an actions set.
                           properties:
                             $propertyBag:
                               additionalProperties:
@@ -1725,7 +804,7 @@ spec:
                               description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                               type: object
                             actions:
-                              description: Storage version of v1beta20210401.ManagementPolicyAction_STATUS Actions are applied to the filtered blobs when the execution condition is met.
+                              description: Storage version of v1api20210401.ManagementPolicyAction_STATUS Actions are applied to the filtered blobs when the execution condition is met.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1733,7 +812,7 @@ spec:
                                   description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                   type: object
                                 baseBlob:
-                                  description: Storage version of v1beta20210401.ManagementPolicyBaseBlob_STATUS Management policy action for base blob.
+                                  description: Storage version of v1api20210401.ManagementPolicyBaseBlob_STATUS Management policy action for base blob.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1741,7 +820,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
+                                      description: Storage version of v1api20210401.DateAfterModification_STATUS Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1756,7 +835,7 @@ spec:
                                     enableAutoTierToHotFromCool:
                                       type: boolean
                                     tierToArchive:
-                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
+                                      description: Storage version of v1api20210401.DateAfterModification_STATUS Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1769,7 +848,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToCool:
-                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
+                                      description: Storage version of v1api20210401.DateAfterModification_STATUS Object to define the number of days after object last modification Or last access. Properties daysAfterModificationGreaterThan and daysAfterLastAccessTimeGreaterThan are mutually exclusive.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1783,7 +862,7 @@ spec:
                                       type: object
                                   type: object
                                 snapshot:
-                                  description: Storage version of v1beta20210401.ManagementPolicySnapShot_STATUS Management policy action for snapshot.
+                                  description: Storage version of v1api20210401.ManagementPolicySnapShot_STATUS Management policy action for snapshot.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1791,7 +870,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1802,7 +881,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToArchive:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1813,7 +892,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToCool:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1825,7 +904,7 @@ spec:
                                       type: object
                                   type: object
                                 version:
-                                  description: Storage version of v1beta20210401.ManagementPolicyVersion_STATUS Management policy action for blob version.
+                                  description: Storage version of v1api20210401.ManagementPolicyVersion_STATUS Management policy action for blob version.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
@@ -1833,7 +912,7 @@ spec:
                                       description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                                       type: object
                                     delete:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1844,7 +923,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToArchive:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1855,7 +934,7 @@ spec:
                                           type: number
                                       type: object
                                     tierToCool:
-                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
+                                      description: Storage version of v1api20210401.DateAfterCreation_STATUS Object to define the number of days after creation.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
@@ -1868,7 +947,7 @@ spec:
                                   type: object
                               type: object
                             filters:
-                              description: Storage version of v1beta20210401.ManagementPolicyFilter_STATUS Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.
+                              description: Storage version of v1api20210401.ManagementPolicyFilter_STATUS Filters limit rule actions to a subset of blobs within the storage account. If multiple filters are defined, a logical AND is performed on all filters.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
@@ -1877,7 +956,7 @@ spec:
                                   type: object
                                 blobIndexMatch:
                                   items:
-                                    description: Storage version of v1beta20210401.TagFilter_STATUS Blob index tag based filtering for blob objects
+                                    description: Storage version of v1api20210401.TagFilter_STATUS Blob index tag based filtering for blob objects
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
@@ -1917,5 +996,928 @@ spec:
         type: object
     served: true
     storage: true
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1beta20210401
+    schema:
+      openAPIV3Schema:
+        description: Deprecated version of StorageAccountsManagementPolicy. Use v1api20210401.StorageAccountsManagementPolicy instead
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              policy:
+                description: Deprecated version of ManagementPolicySchema. Use v1api20210401.ManagementPolicySchema instead
+                properties:
+                  rules:
+                    items:
+                      description: Deprecated version of ManagementPolicyRule. Use v1api20210401.ManagementPolicyRule instead
+                      properties:
+                        definition:
+                          description: Deprecated version of ManagementPolicyDefinition. Use v1api20210401.ManagementPolicyDefinition instead
+                          properties:
+                            actions:
+                              description: Deprecated version of ManagementPolicyAction. Use v1api20210401.ManagementPolicyAction instead
+                              properties:
+                                baseBlob:
+                                  description: Deprecated version of ManagementPolicyBaseBlob. Use v1api20210401.ManagementPolicyBaseBlob instead
+                                  properties:
+                                    delete:
+                                      description: Deprecated version of DateAfterModification. Use v1api20210401.DateAfterModification instead
+                                      properties:
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                        daysAfterModificationGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                      type: object
+                                    enableAutoTierToHotFromCool:
+                                      type: boolean
+                                    tierToArchive:
+                                      description: Deprecated version of DateAfterModification. Use v1api20210401.DateAfterModification instead
+                                      properties:
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                        daysAfterModificationGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                      type: object
+                                    tierToCool:
+                                      description: Deprecated version of DateAfterModification. Use v1api20210401.DateAfterModification instead
+                                      properties:
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                        daysAfterModificationGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                      type: object
+                                  type: object
+                                snapshot:
+                                  description: Deprecated version of ManagementPolicySnapShot. Use v1api20210401.ManagementPolicySnapShot instead
+                                  properties:
+                                    delete:
+                                      description: Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                      required:
+                                      - daysAfterCreationGreaterThan
+                                      type: object
+                                    tierToArchive:
+                                      description: Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                      required:
+                                      - daysAfterCreationGreaterThan
+                                      type: object
+                                    tierToCool:
+                                      description: Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                      required:
+                                      - daysAfterCreationGreaterThan
+                                      type: object
+                                  type: object
+                                version:
+                                  description: Deprecated version of ManagementPolicyVersion. Use v1api20210401.ManagementPolicyVersion instead
+                                  properties:
+                                    delete:
+                                      description: Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                      required:
+                                      - daysAfterCreationGreaterThan
+                                      type: object
+                                    tierToArchive:
+                                      description: Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                      required:
+                                      - daysAfterCreationGreaterThan
+                                      type: object
+                                    tierToCool:
+                                      description: Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          minimum: 0
+                                          multipleOf: 1
+                                          type: integer
+                                      required:
+                                      - daysAfterCreationGreaterThan
+                                      type: object
+                                  type: object
+                              type: object
+                            filters:
+                              description: Deprecated version of ManagementPolicyFilter. Use v1api20210401.ManagementPolicyFilter instead
+                              properties:
+                                blobIndexMatch:
+                                  items:
+                                    description: Deprecated version of TagFilter. Use v1api20210401.TagFilter instead
+                                    properties:
+                                      name:
+                                        maxLength: 128
+                                        minLength: 1
+                                        type: string
+                                      op:
+                                        type: string
+                                      value:
+                                        maxLength: 256
+                                        minLength: 0
+                                        type: string
+                                    required:
+                                    - name
+                                    - op
+                                    - value
+                                    type: object
+                                  type: array
+                                blobTypes:
+                                  items:
+                                    type: string
+                                  type: array
+                                prefixMatch:
+                                  items:
+                                    type: string
+                                  type: array
+                              required:
+                              - blobTypes
+                              type: object
+                          required:
+                          - actions
+                          type: object
+                        enabled:
+                          type: boolean
+                        name:
+                          type: string
+                        type:
+                          description: Deprecated version of ManagementPolicyRule_Type. Use v1api20210401.ManagementPolicyRule_Type instead
+                          enum:
+                          - Lifecycle
+                          type: string
+                      required:
+                      - definition
+                      - name
+                      - type
+                      type: object
+                    type: array
+                required:
+                - rules
+                type: object
+            required:
+            - owner
+            - policy
+            type: object
+          status:
+            description: Deprecated version of StorageAccounts_ManagementPolicy_STATUS. Use v1api20210401.StorageAccounts_ManagementPolicy_STATUS instead
+            properties:
+              conditions:
+                description: 'Conditions: The observed state of the resource'
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              id:
+                type: string
+              lastModifiedTime:
+                type: string
+              name:
+                type: string
+              policy:
+                description: Deprecated version of ManagementPolicySchema_STATUS. Use v1api20210401.ManagementPolicySchema_STATUS instead
+                properties:
+                  rules:
+                    items:
+                      description: Deprecated version of ManagementPolicyRule_STATUS. Use v1api20210401.ManagementPolicyRule_STATUS instead
+                      properties:
+                        definition:
+                          description: Deprecated version of ManagementPolicyDefinition_STATUS. Use v1api20210401.ManagementPolicyDefinition_STATUS instead
+                          properties:
+                            actions:
+                              description: Deprecated version of ManagementPolicyAction_STATUS. Use v1api20210401.ManagementPolicyAction_STATUS instead
+                              properties:
+                                baseBlob:
+                                  description: Deprecated version of ManagementPolicyBaseBlob_STATUS. Use v1api20210401.ManagementPolicyBaseBlob_STATUS instead
+                                  properties:
+                                    delete:
+                                      description: Deprecated version of DateAfterModification_STATUS. Use v1api20210401.DateAfterModification_STATUS instead
+                                      properties:
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          type: number
+                                        daysAfterModificationGreaterThan:
+                                          type: number
+                                      type: object
+                                    enableAutoTierToHotFromCool:
+                                      type: boolean
+                                    tierToArchive:
+                                      description: Deprecated version of DateAfterModification_STATUS. Use v1api20210401.DateAfterModification_STATUS instead
+                                      properties:
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          type: number
+                                        daysAfterModificationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToCool:
+                                      description: Deprecated version of DateAfterModification_STATUS. Use v1api20210401.DateAfterModification_STATUS instead
+                                      properties:
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          type: number
+                                        daysAfterModificationGreaterThan:
+                                          type: number
+                                      type: object
+                                  type: object
+                                snapshot:
+                                  description: Deprecated version of ManagementPolicySnapShot_STATUS. Use v1api20210401.ManagementPolicySnapShot_STATUS instead
+                                  properties:
+                                    delete:
+                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToArchive:
+                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToCool:
+                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                  type: object
+                                version:
+                                  description: Deprecated version of ManagementPolicyVersion_STATUS. Use v1api20210401.ManagementPolicyVersion_STATUS instead
+                                  properties:
+                                    delete:
+                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToArchive:
+                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToCool:
+                                      description: Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                  type: object
+                              type: object
+                            filters:
+                              description: Deprecated version of ManagementPolicyFilter_STATUS. Use v1api20210401.ManagementPolicyFilter_STATUS instead
+                              properties:
+                                blobIndexMatch:
+                                  items:
+                                    description: Deprecated version of TagFilter_STATUS. Use v1api20210401.TagFilter_STATUS instead
+                                    properties:
+                                      name:
+                                        type: string
+                                      op:
+                                        type: string
+                                      value:
+                                        type: string
+                                    type: object
+                                  type: array
+                                blobTypes:
+                                  items:
+                                    type: string
+                                  type: array
+                                prefixMatch:
+                                  items:
+                                    type: string
+                                  type: array
+                              type: object
+                          type: object
+                        enabled:
+                          type: boolean
+                        name:
+                          type: string
+                        type:
+                          description: Deprecated version of ManagementPolicyRule_Type_STATUS. Use v1api20210401.ManagementPolicyRule_Type_STATUS instead
+                          type: string
+                      type: object
+                    type: array
+                type: object
+              type:
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: false
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1beta20210401storage
+    schema:
+      openAPIV3Schema:
+        description: Storage version of v1beta20210401.StorageAccountsManagementPolicy Deprecated version of StorageAccountsManagementPolicy. Use v1api20210401.StorageAccountsManagementPolicy instead
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: Storage version of v1beta20210401.StorageAccounts_ManagementPolicy_Spec
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              originalVersion:
+                type: string
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccount resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              policy:
+                description: Storage version of v1beta20210401.ManagementPolicySchema Deprecated version of ManagementPolicySchema. Use v1api20210401.ManagementPolicySchema instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  rules:
+                    items:
+                      description: Storage version of v1beta20210401.ManagementPolicyRule Deprecated version of ManagementPolicyRule. Use v1api20210401.ManagementPolicyRule instead
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        definition:
+                          description: Storage version of v1beta20210401.ManagementPolicyDefinition Deprecated version of ManagementPolicyDefinition. Use v1api20210401.ManagementPolicyDefinition instead
+                          properties:
+                            $propertyBag:
+                              additionalProperties:
+                                type: string
+                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              type: object
+                            actions:
+                              description: Storage version of v1beta20210401.ManagementPolicyAction Deprecated version of ManagementPolicyAction. Use v1api20210401.ManagementPolicyAction instead
+                              properties:
+                                $propertyBag:
+                                  additionalProperties:
+                                    type: string
+                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  type: object
+                                baseBlob:
+                                  description: Storage version of v1beta20210401.ManagementPolicyBaseBlob Deprecated version of ManagementPolicyBaseBlob. Use v1api20210401.ManagementPolicyBaseBlob instead
+                                  properties:
+                                    $propertyBag:
+                                      additionalProperties:
+                                        type: string
+                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      type: object
+                                    delete:
+                                      description: Storage version of v1beta20210401.DateAfterModification Deprecated version of DateAfterModification. Use v1api20210401.DateAfterModification instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          type: integer
+                                        daysAfterModificationGreaterThan:
+                                          type: integer
+                                      type: object
+                                    enableAutoTierToHotFromCool:
+                                      type: boolean
+                                    tierToArchive:
+                                      description: Storage version of v1beta20210401.DateAfterModification Deprecated version of DateAfterModification. Use v1api20210401.DateAfterModification instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          type: integer
+                                        daysAfterModificationGreaterThan:
+                                          type: integer
+                                      type: object
+                                    tierToCool:
+                                      description: Storage version of v1beta20210401.DateAfterModification Deprecated version of DateAfterModification. Use v1api20210401.DateAfterModification instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          type: integer
+                                        daysAfterModificationGreaterThan:
+                                          type: integer
+                                      type: object
+                                  type: object
+                                snapshot:
+                                  description: Storage version of v1beta20210401.ManagementPolicySnapShot Deprecated version of ManagementPolicySnapShot. Use v1api20210401.ManagementPolicySnapShot instead
+                                  properties:
+                                    $propertyBag:
+                                      additionalProperties:
+                                        type: string
+                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      type: object
+                                    delete:
+                                      description: Storage version of v1beta20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: integer
+                                      type: object
+                                    tierToArchive:
+                                      description: Storage version of v1beta20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: integer
+                                      type: object
+                                    tierToCool:
+                                      description: Storage version of v1beta20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: integer
+                                      type: object
+                                  type: object
+                                version:
+                                  description: Storage version of v1beta20210401.ManagementPolicyVersion Deprecated version of ManagementPolicyVersion. Use v1api20210401.ManagementPolicyVersion instead
+                                  properties:
+                                    $propertyBag:
+                                      additionalProperties:
+                                        type: string
+                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      type: object
+                                    delete:
+                                      description: Storage version of v1beta20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: integer
+                                      type: object
+                                    tierToArchive:
+                                      description: Storage version of v1beta20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: integer
+                                      type: object
+                                    tierToCool:
+                                      description: Storage version of v1beta20210401.DateAfterCreation Deprecated version of DateAfterCreation. Use v1api20210401.DateAfterCreation instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: integer
+                                      type: object
+                                  type: object
+                              type: object
+                            filters:
+                              description: Storage version of v1beta20210401.ManagementPolicyFilter Deprecated version of ManagementPolicyFilter. Use v1api20210401.ManagementPolicyFilter instead
+                              properties:
+                                $propertyBag:
+                                  additionalProperties:
+                                    type: string
+                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  type: object
+                                blobIndexMatch:
+                                  items:
+                                    description: Storage version of v1beta20210401.TagFilter Deprecated version of TagFilter. Use v1api20210401.TagFilter instead
+                                    properties:
+                                      $propertyBag:
+                                        additionalProperties:
+                                          type: string
+                                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                        type: object
+                                      name:
+                                        type: string
+                                      op:
+                                        type: string
+                                      value:
+                                        type: string
+                                    type: object
+                                  type: array
+                                blobTypes:
+                                  items:
+                                    type: string
+                                  type: array
+                                prefixMatch:
+                                  items:
+                                    type: string
+                                  type: array
+                              type: object
+                          type: object
+                        enabled:
+                          type: boolean
+                        name:
+                          type: string
+                        type:
+                          type: string
+                      type: object
+                    type: array
+                type: object
+            required:
+            - owner
+            type: object
+          status:
+            description: Storage version of v1beta20210401.StorageAccounts_ManagementPolicy_STATUS Deprecated version of StorageAccounts_ManagementPolicy_STATUS. Use v1api20210401.StorageAccounts_ManagementPolicy_STATUS instead
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              conditions:
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              id:
+                type: string
+              lastModifiedTime:
+                type: string
+              name:
+                type: string
+              policy:
+                description: Storage version of v1beta20210401.ManagementPolicySchema_STATUS Deprecated version of ManagementPolicySchema_STATUS. Use v1api20210401.ManagementPolicySchema_STATUS instead
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  rules:
+                    items:
+                      description: Storage version of v1beta20210401.ManagementPolicyRule_STATUS Deprecated version of ManagementPolicyRule_STATUS. Use v1api20210401.ManagementPolicyRule_STATUS instead
+                      properties:
+                        $propertyBag:
+                          additionalProperties:
+                            type: string
+                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          type: object
+                        definition:
+                          description: Storage version of v1beta20210401.ManagementPolicyDefinition_STATUS Deprecated version of ManagementPolicyDefinition_STATUS. Use v1api20210401.ManagementPolicyDefinition_STATUS instead
+                          properties:
+                            $propertyBag:
+                              additionalProperties:
+                                type: string
+                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              type: object
+                            actions:
+                              description: Storage version of v1beta20210401.ManagementPolicyAction_STATUS Deprecated version of ManagementPolicyAction_STATUS. Use v1api20210401.ManagementPolicyAction_STATUS instead
+                              properties:
+                                $propertyBag:
+                                  additionalProperties:
+                                    type: string
+                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  type: object
+                                baseBlob:
+                                  description: Storage version of v1beta20210401.ManagementPolicyBaseBlob_STATUS Deprecated version of ManagementPolicyBaseBlob_STATUS. Use v1api20210401.ManagementPolicyBaseBlob_STATUS instead
+                                  properties:
+                                    $propertyBag:
+                                      additionalProperties:
+                                        type: string
+                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      type: object
+                                    delete:
+                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS Deprecated version of DateAfterModification_STATUS. Use v1api20210401.DateAfterModification_STATUS instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          type: number
+                                        daysAfterModificationGreaterThan:
+                                          type: number
+                                      type: object
+                                    enableAutoTierToHotFromCool:
+                                      type: boolean
+                                    tierToArchive:
+                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS Deprecated version of DateAfterModification_STATUS. Use v1api20210401.DateAfterModification_STATUS instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          type: number
+                                        daysAfterModificationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToCool:
+                                      description: Storage version of v1beta20210401.DateAfterModification_STATUS Deprecated version of DateAfterModification_STATUS. Use v1api20210401.DateAfterModification_STATUS instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterLastAccessTimeGreaterThan:
+                                          type: number
+                                        daysAfterModificationGreaterThan:
+                                          type: number
+                                      type: object
+                                  type: object
+                                snapshot:
+                                  description: Storage version of v1beta20210401.ManagementPolicySnapShot_STATUS Deprecated version of ManagementPolicySnapShot_STATUS. Use v1api20210401.ManagementPolicySnapShot_STATUS instead
+                                  properties:
+                                    $propertyBag:
+                                      additionalProperties:
+                                        type: string
+                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      type: object
+                                    delete:
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToArchive:
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToCool:
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                  type: object
+                                version:
+                                  description: Storage version of v1beta20210401.ManagementPolicyVersion_STATUS Deprecated version of ManagementPolicyVersion_STATUS. Use v1api20210401.ManagementPolicyVersion_STATUS instead
+                                  properties:
+                                    $propertyBag:
+                                      additionalProperties:
+                                        type: string
+                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      type: object
+                                    delete:
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToArchive:
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                    tierToCool:
+                                      description: Storage version of v1beta20210401.DateAfterCreation_STATUS Deprecated version of DateAfterCreation_STATUS. Use v1api20210401.DateAfterCreation_STATUS instead
+                                      properties:
+                                        $propertyBag:
+                                          additionalProperties:
+                                            type: string
+                                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                          type: object
+                                        daysAfterCreationGreaterThan:
+                                          type: number
+                                      type: object
+                                  type: object
+                              type: object
+                            filters:
+                              description: Storage version of v1beta20210401.ManagementPolicyFilter_STATUS Deprecated version of ManagementPolicyFilter_STATUS. Use v1api20210401.ManagementPolicyFilter_STATUS instead
+                              properties:
+                                $propertyBag:
+                                  additionalProperties:
+                                    type: string
+                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  type: object
+                                blobIndexMatch:
+                                  items:
+                                    description: Storage version of v1beta20210401.TagFilter_STATUS Deprecated version of TagFilter_STATUS. Use v1api20210401.TagFilter_STATUS instead
+                                    properties:
+                                      $propertyBag:
+                                        additionalProperties:
+                                          type: string
+                                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                        type: object
+                                      name:
+                                        type: string
+                                      op:
+                                        type: string
+                                      value:
+                                        type: string
+                                    type: object
+                                  type: array
+                                blobTypes:
+                                  items:
+                                    type: string
+                                  type: array
+                                prefixMatch:
+                                  items:
+                                    type: string
+                                  type: array
+                              type: object
+                          type: object
+                        enabled:
+                          type: boolean
+                        name:
+                          type: string
+                        type:
+                          type: string
+                      type: object
+                    type: array
+                type: object
+              type:
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: false
     subresources:
       status: {}

@@ -2,9 +2,10 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from: default/azureserviceoperator-serving-cert
+    cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
     controller-gen.kubebuilder.io/version: v0.9.2
-    helm.sh/resource-policy: keep
+  labels:
+    serviceoperator.azure.com/version: v2.0.0
   name: namespacestopicssubscriptions.servicebus.azure.com
 spec:
   conversion:
@@ -13,10 +14,11 @@ spec:
       clientConfig:
         service:
           name: azureserviceoperator-webhook-service
-          namespace: default
+          namespace: azureserviceoperator-system
           path: /convert
+          port: 443
       conversionReviewVersions:
-      - v1beta1
+      - v1
   group: servicebus.azure.com
   names:
     kind: NamespacesTopicsSubscription
@@ -39,7 +41,7 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1beta20210101preview
+    name: v1api20210101preview
     schema:
       openAPIV3Schema:
         description: 'Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/subscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}'
@@ -258,10 +260,393 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
+    name: v1api20210101previewstorage
+    schema:
+      openAPIV3Schema:
+        description: 'Storage version of v1api20210101preview.NamespacesTopicsSubscription Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/subscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}'
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: Storage version of v1api20210101preview.Namespaces_Topics_Subscription_Spec
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              autoDeleteOnIdle:
+                type: string
+              azureName:
+                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                maxLength: 50
+                minLength: 1
+                type: string
+              deadLetteringOnFilterEvaluationExceptions:
+                type: boolean
+              deadLetteringOnMessageExpiration:
+                type: boolean
+              defaultMessageTimeToLive:
+                type: string
+              duplicateDetectionHistoryTimeWindow:
+                type: string
+              enableBatchedOperations:
+                type: boolean
+              forwardDeadLetteredMessagesTo:
+                type: string
+              forwardTo:
+                type: string
+              lockDuration:
+                type: string
+              maxDeliveryCount:
+                type: integer
+              originalVersion:
+                type: string
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopic resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              requiresSession:
+                type: boolean
+            required:
+            - owner
+            type: object
+          status:
+            description: Storage version of v1api20210101preview.Namespaces_Topics_Subscription_STATUS
+            properties:
+              $propertyBag:
+                additionalProperties:
+                  type: string
+                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                type: object
+              accessedAt:
+                type: string
+              autoDeleteOnIdle:
+                type: string
+              conditions:
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              countDetails:
+                description: Storage version of v1api20210101preview.MessageCountDetails_STATUS Message Count Details.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  activeMessageCount:
+                    type: integer
+                  deadLetterMessageCount:
+                    type: integer
+                  scheduledMessageCount:
+                    type: integer
+                  transferDeadLetterMessageCount:
+                    type: integer
+                  transferMessageCount:
+                    type: integer
+                type: object
+              createdAt:
+                type: string
+              deadLetteringOnFilterEvaluationExceptions:
+                type: boolean
+              deadLetteringOnMessageExpiration:
+                type: boolean
+              defaultMessageTimeToLive:
+                type: string
+              duplicateDetectionHistoryTimeWindow:
+                type: string
+              enableBatchedOperations:
+                type: boolean
+              forwardDeadLetteredMessagesTo:
+                type: string
+              forwardTo:
+                type: string
+              id:
+                type: string
+              lockDuration:
+                type: string
+              maxDeliveryCount:
+                type: integer
+              messageCount:
+                type: integer
+              name:
+                type: string
+              requiresSession:
+                type: boolean
+              status:
+                type: string
+              systemData:
+                description: Storage version of v1api20210101preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    type: object
+                  createdAt:
+                    type: string
+                  createdBy:
+                    type: string
+                  createdByType:
+                    type: string
+                  lastModifiedAt:
+                    type: string
+                  lastModifiedBy:
+                    type: string
+                  lastModifiedByType:
+                    type: string
+                type: object
+              type:
+                type: string
+              updatedAt:
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
+    name: v1beta20210101preview
+    schema:
+      openAPIV3Schema:
+        description: Deprecated version of NamespacesTopicsSubscription. Use v1api20210101preview.NamespacesTopicsSubscription instead
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              autoDeleteOnIdle:
+                type: string
+              azureName:
+                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                maxLength: 50
+                minLength: 1
+                type: string
+              deadLetteringOnFilterEvaluationExceptions:
+                type: boolean
+              deadLetteringOnMessageExpiration:
+                type: boolean
+              defaultMessageTimeToLive:
+                type: string
+              duplicateDetectionHistoryTimeWindow:
+                type: string
+              enableBatchedOperations:
+                type: boolean
+              forwardDeadLetteredMessagesTo:
+                type: string
+              forwardTo:
+                type: string
+              lockDuration:
+                type: string
+              maxDeliveryCount:
+                type: integer
+              owner:
+                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopic resource'
+                properties:
+                  name:
+                    description: This is the name of the Kubernetes resource to reference.
+                    type: string
+                required:
+                - name
+                type: object
+              requiresSession:
+                type: boolean
+            required:
+            - owner
+            type: object
+          status:
+            description: Deprecated version of Namespaces_Topics_Subscription_STATUS. Use v1api20210101preview.Namespaces_Topics_Subscription_STATUS instead
+            properties:
+              accessedAt:
+                type: string
+              autoDeleteOnIdle:
+                type: string
+              conditions:
+                description: 'Conditions: The observed state of the resource'
+                items:
+                  description: Condition defines an extension to status (an observation) of a resource
+                  properties:
+                    lastTransitionTime:
+                      description: LastTransitionTime is the last time the condition transitioned from one status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: Message is a human readable message indicating details about the transition. This field may be empty.
+                      type: string
+                    observedGeneration:
+                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      type: string
+                    severity:
+                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      type: string
+                    status:
+                      description: Status of the condition, one of True, False, or Unknown.
+                      type: string
+                    type:
+                      description: Type of condition.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+              countDetails:
+                description: Deprecated version of MessageCountDetails_STATUS. Use v1api20210101preview.MessageCountDetails_STATUS instead
+                properties:
+                  activeMessageCount:
+                    type: integer
+                  deadLetterMessageCount:
+                    type: integer
+                  scheduledMessageCount:
+                    type: integer
+                  transferDeadLetterMessageCount:
+                    type: integer
+                  transferMessageCount:
+                    type: integer
+                type: object
+              createdAt:
+                type: string
+              deadLetteringOnFilterEvaluationExceptions:
+                type: boolean
+              deadLetteringOnMessageExpiration:
+                type: boolean
+              defaultMessageTimeToLive:
+                type: string
+              duplicateDetectionHistoryTimeWindow:
+                type: string
+              enableBatchedOperations:
+                type: boolean
+              forwardDeadLetteredMessagesTo:
+                type: string
+              forwardTo:
+                type: string
+              id:
+                type: string
+              lockDuration:
+                type: string
+              maxDeliveryCount:
+                type: integer
+              messageCount:
+                type: integer
+              name:
+                type: string
+              requiresSession:
+                type: boolean
+              status:
+                description: Deprecated version of EntityStatus_STATUS. Use v1api20210101preview.EntityStatus_STATUS instead
+                type: string
+              systemData:
+                description: Deprecated version of SystemData_STATUS. Use v1api20210101preview.SystemData_STATUS instead
+                properties:
+                  createdAt:
+                    type: string
+                  createdBy:
+                    type: string
+                  createdByType:
+                    description: Deprecated version of SystemData_CreatedByType_STATUS. Use v1api20210101preview.SystemData_CreatedByType_STATUS instead
+                    type: string
+                  lastModifiedAt:
+                    type: string
+                  lastModifiedBy:
+                    type: string
+                  lastModifiedByType:
+                    description: Deprecated version of SystemData_LastModifiedByType_STATUS. Use v1api20210101preview.SystemData_LastModifiedByType_STATUS instead
+                    type: string
+                type: object
+              type:
+                type: string
+              updatedAt:
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: false
+    subresources:
+      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].severity
+      name: Severity
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].message
+      name: Message
+      type: string
     name: v1beta20210101previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1beta20210101preview.NamespacesTopicsSubscription Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/subscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}'
+        description: Storage version of v1beta20210101preview.NamespacesTopicsSubscription Deprecated version of NamespacesTopicsSubscription. Use v1api20210101preview.NamespacesTopicsSubscription instead
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -321,7 +706,7 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1beta20210101preview.Namespaces_Topics_Subscription_STATUS
+            description: Storage version of v1beta20210101preview.Namespaces_Topics_Subscription_STATUS Deprecated version of Namespaces_Topics_Subscription_STATUS. Use v1api20210101preview.Namespaces_Topics_Subscription_STATUS instead
             properties:
               $propertyBag:
                 additionalProperties:
@@ -367,7 +752,7 @@ spec:
                   type: object
                 type: array
               countDetails:
-                description: Storage version of v1beta20210101preview.MessageCountDetails_STATUS Message Count Details.
+                description: Storage version of v1beta20210101preview.MessageCountDetails_STATUS Deprecated version of MessageCountDetails_STATUS. Use v1api20210101preview.MessageCountDetails_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -416,7 +801,7 @@ spec:
               status:
                 type: string
               systemData:
-                description: Storage version of v1beta20210101preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
+                description: Storage version of v1beta20210101preview.SystemData_STATUS Deprecated version of SystemData_STATUS. Use v1api20210101preview.SystemData_STATUS instead
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -443,6 +828,6 @@ spec:
             type: object
         type: object
     served: true
-    storage: true
+    storage: false
     subresources:
       status: {}
