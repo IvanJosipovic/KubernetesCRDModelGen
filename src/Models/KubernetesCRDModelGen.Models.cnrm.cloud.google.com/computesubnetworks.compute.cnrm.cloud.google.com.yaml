@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.102.0
+    cnrm.cloud.google.com/version: 1.103.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -175,14 +175,15 @@ spec:
                 type: string
               purpose:
                 description: >-
-                  Immutable. The purpose of the resource. A subnetwork with purpose set to
+                  Immutable. The purpose of the resource. This field can be either 'PRIVATE_RFC_1918', 'INTERNAL_HTTPS_LOAD_BALANCER' or 'REGIONAL_MANAGED_PROXY'.
 
-                  INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
+                  A subnetwork with purpose set to 'INTERNAL_HTTPS_LOAD_BALANCER' is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
 
-                  reserved for Internal HTTP(S) Load Balancing.
+                  A subnetwork in a given region with purpose set to 'REGIONAL_MANAGED_PROXY' is a proxy-only subnet and is shared between all the regional Envoy-based load balancers.
 
+                  If unspecified, the purpose defaults to 'PRIVATE_RFC_1918'.
 
-                  If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the 'role' field.
+                  The enableFlowLogs field isn't supported with the purpose field set to 'INTERNAL_HTTPS_LOAD_BALANCER'.
                 type: string
               region:
                 description: Immutable. The GCP region for this subnetwork.
@@ -192,15 +193,16 @@ spec:
                 type: string
               role:
                 description: >-
-                  The role of subnetwork. Currently, this field is only used when
+                  The role of subnetwork.
 
-                  purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
+                  The value can be set to 'ACTIVE' or 'BACKUP'.
 
-                  or BACKUP. An ACTIVE subnetwork is one that is currently being used
+                  An 'ACTIVE' subnetwork is one that is currently being used.
 
-                  for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
+                  A 'BACKUP' subnetwork is one that is ready to be promoted to 'ACTIVE' or is currently draining.
 
-                  is ready to be promoted to ACTIVE or is currently draining. Possible values: ["ACTIVE", "BACKUP"].
+
+                  Subnetwork role must be specified when purpose is set to 'INTERNAL_HTTPS_LOAD_BALANCER' or 'REGIONAL_MANAGED_PROXY'. Possible values: ["ACTIVE", "BACKUP"].
                 type: string
               secondaryIpRange:
                 items:
