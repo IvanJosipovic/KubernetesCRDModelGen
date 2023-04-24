@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.102.0
+    cnrm.cloud.google.com/version: 1.103.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -723,6 +723,9 @@ spec:
                     interface:
                       description: The disk interface used for attaching this disk. One of SCSI or NVME.
                       type: string
+                    size:
+                      description: Immutable. The size of the disk in gigabytes. One of 375 or 3000.
+                      type: integer
                   required:
                   - interface
                   type: object
