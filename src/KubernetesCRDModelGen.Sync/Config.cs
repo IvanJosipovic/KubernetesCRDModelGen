@@ -1,29 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace KubernetesCRDModelGen.Sync;
 
-namespace KubernetesCRDModelGen.Sync
+internal class Config
 {
-    internal class Config
-    {
-        public string Group { get; set; }
+    public string Group { get; set; }
 
+    public HelmConfig? Helm { get; set; }
+
+    public GitHubConfig? GitHub { get; set; }
+
+    public DirectUrlConfig? DirectUrl { get; set; }
+
+    internal class DirectUrlConfig
+    {
         public List<string>? Urls { get; set; }
 
-        public string? HelmRepo { get; set; }
+        public string? Filter { get; set; }
+    }
 
-        public string? HelmChart { get; set; }
+    internal class GitHubConfig
+    {
+        public string Repo { get; set; }
 
-        public string GitHub { get; set; }
+        public string? Filter { get; set; }
+    }
 
-        public string GitHubFilter { get; set; }
+    internal class HelmConfig
+    {
+        public string Repo { get; set; }
 
-        public bool PreRelease { get; set; }
+        public string Chart { get; set; }
 
-        public string? HelmCMD {get;set;}
+        public bool? PreRelease { get; set; }
 
-        public string? FilesFilter { get; set; }
+        public string? CMD { get; set; }
     }
 }
