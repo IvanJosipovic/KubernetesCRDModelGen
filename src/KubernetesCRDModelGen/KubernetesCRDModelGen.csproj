@@ -19,7 +19,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="KubernetesClient.Models" Version="10.1.19" />
+        <PackageReference Include="KubernetesClient.Models" Version="11.0.9" />
         <PackageReference Include="CsCodeGenerator" Version="2.0.0" />
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
         <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.4.1" />
