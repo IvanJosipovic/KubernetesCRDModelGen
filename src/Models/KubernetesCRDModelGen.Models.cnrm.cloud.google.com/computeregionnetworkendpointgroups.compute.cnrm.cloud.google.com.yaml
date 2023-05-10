@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.103.0
+    cnrm.cloud.google.com/version: 1.104.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -61,9 +61,6 @@ spec:
                 properties:
                   functionRef:
                     description: >-
-                      Only `external` field is supported to configure the reference.
-
-
                       Immutable. A user-defined name of the Cloud Function.
 
                       The function name is case-sensitive and must be 1-63 characters long.
@@ -118,9 +115,6 @@ spec:
                 properties:
                   serviceRef:
                     description: >-
-                      Only `external` field is supported to configure the reference.
-
-
                       Immutable. Cloud Run service is the main resource of Cloud Run.
 
                       The service must be 1-63 characters long, and comply with RFC1035.
