@@ -21,7 +21,9 @@ internal class Config
     {
         public string Repo { get; set; }
 
-        public string? Filter { get; set; }
+        public string? AssetFilter { get; set; }
+
+        public string SemVer { get; set; }
     }
 
     internal class HelmConfig

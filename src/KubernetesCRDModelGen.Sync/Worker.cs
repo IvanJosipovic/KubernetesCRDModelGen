@@ -123,11 +123,15 @@ public class Worker : BackgroundService
         using var client = new HttpClient();
         client.DefaultRequestHeaders.UserAgent.TryParseAdd("KubernetesCRDModelGen");
 
-        var gitHubRelease = await client.GetFromJsonAsync<GitHubRelease>(config.GitHub.Repo);
+        var gitHubReleases = await client.GetFromJsonAsync<List<GitHubRelease>>(config.GitHub.Repo);
 
-        foreach (var item in gitHubRelease.assets)
+        var range = new SemanticVersioning.Range(config.GitHub.SemVer);
+
+        var release = gitHubReleases.Where(x => !x.prerelease).First(x => range.IsSatisfied(x.tag_name));
+
+        foreach (var item in release.assets)
         {
-            if (!string.IsNullOrEmpty(config.GitHub.Filter) && item.name.StartsWith(config.GitHub.Filter, StringComparison.InvariantCultureIgnoreCase))
+            if (!string.IsNullOrEmpty(config.GitHub.AssetFilter) && item.name.StartsWith(config.GitHub.AssetFilter, StringComparison.InvariantCultureIgnoreCase))
             {
                 await ProcessDirectUrl(config, item.browser_download_url);
             }
