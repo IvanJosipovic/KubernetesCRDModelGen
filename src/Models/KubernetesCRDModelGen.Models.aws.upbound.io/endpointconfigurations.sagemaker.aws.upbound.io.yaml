@@ -83,11 +83,19 @@ spec:
                                     errorTopic:
                                       description: Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
                                       type: string
+                                    includeInferenceResponseIn:
+                                      description: The Amazon SNS topics where you want the inference response to be included. Valid values are SUCCESS_NOTIFICATION_TOPIC and ERROR_NOTIFICATION_TOPIC.
+                                      items:
+                                        type: string
+                                      type: array
                                     successTopic:
                                       description: Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
                                       type: string
                                   type: object
                                 type: array
+                              s3FailurePath:
+                                description: The Amazon S3 location to upload failure inference responses to.
+                                type: string
                               s3OutputPath:
                                 description: The Amazon S3 location to upload inference responses to.
                                 type: string
@@ -230,6 +238,9 @@ spec:
                             - destinationS3Uri
                             type: object
                           type: array
+                        enableSsmAccess:
+                          description: You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a production variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoints.
+                          type: boolean
                         initialInstanceCount:
                           description: Initial number of instances used for auto-scaling.
                           type: number
@@ -351,6 +362,9 @@ spec:
                             - kmsKeyId
                             type: object
                           type: array
+                        enableSsmAccess:
+                          description: You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a production variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoints.
+                          type: boolean
                         initialInstanceCount:
                           description: Initial number of instances used for auto-scaling.
                           type: number
@@ -569,11 +583,19 @@ spec:
                                     errorTopic:
                                       description: Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
                                       type: string
+                                    includeInferenceResponseIn:
+                                      description: The Amazon SNS topics where you want the inference response to be included. Valid values are SUCCESS_NOTIFICATION_TOPIC and ERROR_NOTIFICATION_TOPIC.
+                                      items:
+                                        type: string
+                                      type: array
                                     successTopic:
                                       description: Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
                                       type: string
                                   type: object
                                 type: array
+                              s3FailurePath:
+                                description: The Amazon S3 location to upload failure inference responses to.
+                                type: string
                               s3OutputPath:
                                 description: The Amazon S3 location to upload inference responses to.
                                 type: string
@@ -651,6 +673,9 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        enableSsmAccess:
+                          description: You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a production variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoints.
+                          type: boolean
                         initialInstanceCount:
                           description: Initial number of instances used for auto-scaling.
                           type: number
@@ -708,6 +733,9 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        enableSsmAccess:
+                          description: You can use this parameter to turn on native Amazon Web Services Systems Manager (SSM) access for a production variant behind an endpoint. By default, SSM access is disabled for all production variants behind an endpoints.
+                          type: boolean
                         initialInstanceCount:
                           description: Initial number of instances used for auto-scaling.
                           type: number

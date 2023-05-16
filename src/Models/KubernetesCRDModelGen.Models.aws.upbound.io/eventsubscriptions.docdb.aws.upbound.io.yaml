@@ -68,7 +68,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   snsTopicArn:
-                    description: The Amazon Resource Name of the DocDB event notification subscription
+                    description: The Amazon Resource Name of the DocumentDB event notification subscription
                     type: string
                   snsTopicArnRef:
                     description: Reference to a Topic in sns to populate snsTopicArn.
@@ -279,10 +279,10 @@ spec:
               atProvider:
                 properties:
                   arn:
-                    description: The Amazon Resource Name of the DocDB event notification subscription
+                    description: The Amazon Resource Name of the DocumentDB event notification subscription
                     type: string
                   customerAwsId:
-                    description: The AWS customer account associated with the DocDB event notification subscription
+                    description: The AWS customer account associated with the DocumentDB event notification subscription
                     type: string
                   enabled:
                     description: A boolean flag to enable/disable the subscription. Defaults to true.
@@ -293,10 +293,10 @@ spec:
                       type: string
                     type: array
                   id:
-                    description: The name of the DocDB event notification subscription
+                    description: The name of the DocumentDB event notification subscription
                     type: string
                   snsTopicArn:
-                    description: The Amazon Resource Name of the DocDB event notification subscription
+                    description: The Amazon Resource Name of the DocumentDB event notification subscription
                     type: string
                   sourceIds:
                     description: A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.

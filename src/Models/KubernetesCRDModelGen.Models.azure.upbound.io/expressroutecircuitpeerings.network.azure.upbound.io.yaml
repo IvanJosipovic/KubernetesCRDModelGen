@@ -128,6 +128,11 @@ spec:
                           description: A microsoft_peering block as defined below.
                           items:
                             properties:
+                              advertisedCommunities:
+                                description: The communities of Bgp Peering specified for microsoft peering.
+                                items:
+                                  type: string
+                                type: array
                               advertisedPublicPrefixes:
                                 description: A list of Advertised Public Prefixes.
                                 items:
@@ -159,6 +164,11 @@ spec:
                     description: A microsoft_peering_config block as defined below. Required when peering_type is set to MicrosoftPeering and config for IPv4.
                     items:
                       properties:
+                        advertisedCommunities:
+                          description: The communities of Bgp Peering specified for microsoft peering.
+                          items:
+                            type: string
+                          type: array
                         advertisedPublicPrefixes:
                           description: A list of Advertised Public Prefixes.
                           items:
@@ -430,6 +440,11 @@ spec:
                           description: A microsoft_peering block as defined below.
                           items:
                             properties:
+                              advertisedCommunities:
+                                description: The communities of Bgp Peering specified for microsoft peering.
+                                items:
+                                  type: string
+                                type: array
                               advertisedPublicPrefixes:
                                 description: A list of Advertised Public Prefixes.
                                 items:
@@ -458,6 +473,11 @@ spec:
                     description: A microsoft_peering_config block as defined below. Required when peering_type is set to MicrosoftPeering and config for IPv4.
                     items:
                       properties:
+                        advertisedCommunities:
+                          description: The communities of Bgp Peering specified for microsoft peering.
+                          items:
+                            type: string
+                          type: array
                         advertisedPublicPrefixes:
                           description: A list of Advertised Public Prefixes.
                           items:

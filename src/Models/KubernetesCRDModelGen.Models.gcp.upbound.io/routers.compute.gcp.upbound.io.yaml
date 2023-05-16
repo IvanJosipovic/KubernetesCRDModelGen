@@ -61,7 +61,7 @@ spec:
                     items:
                       properties:
                         advertiseMode:
-                          description: User-specified flag to indicate which mode to use for advertisement. Default value is DEFAULT. Possible values are DEFAULT and CUSTOM.
+                          description: 'User-specified flag to indicate which mode to use for advertisement. Default value is DEFAULT. Possible values are: DEFAULT, CUSTOM.'
                           type: string
                         advertisedGroups:
                           description: 'User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertiseMode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups. This enum field has the one valid value: ALL_SUBNETS'
@@ -96,7 +96,7 @@ spec:
                     description: An optional description of this resource.
                     type: string
                   encryptedInterconnectRouter:
-                    description: Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature). Not currently available publicly.
+                    description: Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments).
                     type: boolean
                   network:
                     description: A reference to the network to which this router belongs.
@@ -307,7 +307,7 @@ spec:
                     items:
                       properties:
                         advertiseMode:
-                          description: User-specified flag to indicate which mode to use for advertisement. Default value is DEFAULT. Possible values are DEFAULT and CUSTOM.
+                          description: 'User-specified flag to indicate which mode to use for advertisement. Default value is DEFAULT. Possible values are: DEFAULT, CUSTOM.'
                           type: string
                         advertisedGroups:
                           description: 'User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertiseMode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups. This enum field has the one valid value: ALL_SUBNETS'
@@ -341,7 +341,7 @@ spec:
                     description: An optional description of this resource.
                     type: string
                   encryptedInterconnectRouter:
-                    description: Field to indicate if a router is dedicated to use with encrypted Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature). Not currently available publicly.
+                    description: Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments).
                     type: boolean
                   id:
                     description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/routers/{{name}}

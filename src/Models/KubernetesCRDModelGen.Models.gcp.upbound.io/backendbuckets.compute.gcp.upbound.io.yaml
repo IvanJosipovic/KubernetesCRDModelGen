@@ -144,7 +144,7 @@ spec:
                             type: object
                           type: array
                         cacheMode:
-                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, and CACHE_ALL_STATIC.'
+                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, CACHE_ALL_STATIC.'
                           type: string
                         clientTtl:
                           description: Specifies the maximum allowed TTL for cached content served by this origin.
@@ -182,7 +182,7 @@ spec:
                       type: object
                     type: array
                   compressionMode:
-                    description: Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values are AUTOMATIC and DISABLED.
+                    description: "Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values are: AUTOMATIC, DISABLED."
                     type: string
                   customResponseHeaders:
                     description: Headers that the HTTP/S load balancer should add to proxied responses.
@@ -427,7 +427,7 @@ spec:
                             type: object
                           type: array
                         cacheMode:
-                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, and CACHE_ALL_STATIC.'
+                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, CACHE_ALL_STATIC.'
                           type: string
                         clientTtl:
                           description: Specifies the maximum allowed TTL for cached content served by this origin.
@@ -465,7 +465,7 @@ spec:
                       type: object
                     type: array
                   compressionMode:
-                    description: Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values are AUTOMATIC and DISABLED.
+                    description: "Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values are: AUTOMATIC, DISABLED."
                     type: string
                   creationTimestamp:
                     description: Creation timestamp in RFC3339 text format.

@@ -60,7 +60,7 @@ spec:
                     description: The domain to authenticate users with when using App Engine's User API.
                     type: string
                   databaseType:
-                    description: The type of the Cloud Firestore or Cloud Datastore database associated with this application. Can be CLOUD_FIRESTORE or CLOUD_DATASTORE_COMPATIBILITY for new instances.  To support old instances, the value CLOUD_DATASTORE is accepted by the provider, but will be rejected by the API.
+                    description: The type of the Cloud Firestore or Cloud Datastore database associated with this application. Can be CLOUD_FIRESTORE or CLOUD_DATASTORE_COMPATIBILITY for new instances.  To support old instances, the value CLOUD_DATASTORE is accepted by the provider, but will be rejected by the API. To create a Cloud Firestore database without creating an App Engine application, use the google_firestore_database resource instead.
                     type: string
                   featureSettings:
                     description: 'A block of optional settings to configure specific App Engine features:'
@@ -320,7 +320,7 @@ spec:
                     description: The GCS bucket code is being stored in for this app.
                     type: string
                   databaseType:
-                    description: The type of the Cloud Firestore or Cloud Datastore database associated with this application. Can be CLOUD_FIRESTORE or CLOUD_DATASTORE_COMPATIBILITY for new instances.  To support old instances, the value CLOUD_DATASTORE is accepted by the provider, but will be rejected by the API.
+                    description: The type of the Cloud Firestore or Cloud Datastore database associated with this application. Can be CLOUD_FIRESTORE or CLOUD_DATASTORE_COMPATIBILITY for new instances.  To support old instances, the value CLOUD_DATASTORE is accepted by the provider, but will be rejected by the API. To create a Cloud Firestore database without creating an App Engine application, use the google_firestore_database resource instead.
                     type: string
                   defaultBucket:
                     description: The GCS bucket content is being stored in for this app.

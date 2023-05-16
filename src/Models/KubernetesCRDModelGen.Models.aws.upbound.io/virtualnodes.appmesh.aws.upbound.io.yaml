@@ -502,7 +502,7 @@ spec:
                                             description: 'Unit of time. Valid values: ms, s.'
                                             type: string
                                           value:
-                                            description: Number of time units. Minimum value of 0.
+                                            description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                             type: number
                                         required:
                                         - unit
@@ -517,7 +517,7 @@ spec:
                                             description: 'Unit of time. Valid values: ms, s.'
                                             type: string
                                           value:
-                                            description: Number of time units. Minimum value of 0.
+                                            description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                             type: number
                                         required:
                                         - unit
@@ -568,7 +568,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               required:
                                               - unit
@@ -583,7 +583,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               required:
                                               - unit
@@ -604,7 +604,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               required:
                                               - unit
@@ -619,7 +619,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               required:
                                               - unit
@@ -640,7 +640,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               required:
                                               - unit
@@ -655,7 +655,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               required:
                                               - unit
@@ -676,7 +676,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               required:
                                               - unit
@@ -815,6 +815,30 @@ spec:
                                       description: Local file certificate.
                                       items:
                                         properties:
+                                          format:
+                                            description: The specified format for the logs.
+                                            items:
+                                              properties:
+                                                json:
+                                                  description: The logging format for JSON.
+                                                  items:
+                                                    properties:
+                                                      key:
+                                                        description: The specified key for the JSON. Must be between 1 and 100 characters in length.
+                                                        type: string
+                                                      value:
+                                                        description: The specified value for the JSON. Must be between 1 and 100 characters in length.
+                                                        type: string
+                                                    required:
+                                                    - key
+                                                    - value
+                                                    type: object
+                                                  type: array
+                                                text:
+                                                  description: The logging format for text. Must be between 1 and 1000 characters in length.
+                                                  type: string
+                                              type: object
+                                            type: array
                                           path:
                                             description: File path to write access logs to. You can use /dev/stdout to send access logs to standard out. Must be between 1 and 255 characters in length.
                                             type: string
@@ -910,6 +934,12 @@ spec:
                                   properties:
                                     hostname:
                                       description: DNS host name for your virtual node.
+                                      type: string
+                                    ipPreference:
+                                      description: 'The preferred IP version that this virtual node uses. Valid values: IPv6_PREFERRED, IPv4_PREFERRED, IPv4_ONLY, IPv6_ONLY.'
+                                      type: string
+                                    responseType:
+                                      description: 'The DNS response type for the virtual node. Valid values: LOADBALANCER, ENDPOINTS.'
                                       type: string
                                   required:
                                   - hostname
@@ -1416,7 +1446,7 @@ spec:
                                             description: 'Unit of time. Valid values: ms, s.'
                                             type: string
                                           value:
-                                            description: Number of time units. Minimum value of 0.
+                                            description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                             type: number
                                         type: object
                                       type: array
@@ -1428,7 +1458,7 @@ spec:
                                             description: 'Unit of time. Valid values: ms, s.'
                                             type: string
                                           value:
-                                            description: Number of time units. Minimum value of 0.
+                                            description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                             type: number
                                         type: object
                                       type: array
@@ -1468,7 +1498,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               type: object
                                             type: array
@@ -1480,7 +1510,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               type: object
                                             type: array
@@ -1498,7 +1528,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               type: object
                                             type: array
@@ -1510,7 +1540,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               type: object
                                             type: array
@@ -1528,7 +1558,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               type: object
                                             type: array
@@ -1540,7 +1570,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               type: object
                                             type: array
@@ -1558,7 +1588,7 @@ spec:
                                                   description: 'Unit of time. Valid values: ms, s.'
                                                   type: string
                                                 value:
-                                                  description: Number of time units. Minimum value of 0.
+                                                  description: The specified value for the JSON. Must be between 1 and 100 characters in length.
                                                   type: number
                                               type: object
                                             type: array
@@ -1672,6 +1702,27 @@ spec:
                                       description: Local file certificate.
                                       items:
                                         properties:
+                                          format:
+                                            description: The specified format for the logs.
+                                            items:
+                                              properties:
+                                                json:
+                                                  description: The logging format for JSON.
+                                                  items:
+                                                    properties:
+                                                      key:
+                                                        description: The specified key for the JSON. Must be between 1 and 100 characters in length.
+                                                        type: string
+                                                      value:
+                                                        description: The specified value for the JSON. Must be between 1 and 100 characters in length.
+                                                        type: string
+                                                    type: object
+                                                  type: array
+                                                text:
+                                                  description: The logging format for text. Must be between 1 and 1000 characters in length.
+                                                  type: string
+                                              type: object
+                                            type: array
                                           path:
                                             description: File path to write access logs to. You can use /dev/stdout to send access logs to standard out. Must be between 1 and 255 characters in length.
                                             type: string
@@ -1708,6 +1759,12 @@ spec:
                                   properties:
                                     hostname:
                                       description: DNS host name for your virtual node.
+                                      type: string
+                                    ipPreference:
+                                      description: 'The preferred IP version that this virtual node uses. Valid values: IPv6_PREFERRED, IPv4_PREFERRED, IPv4_ONLY, IPv6_ONLY.'
+                                      type: string
+                                    responseType:
+                                      description: 'The DNS response type for the virtual node. Valid values: LOADBALANCER, ENDPOINTS.'
                                       type: string
                                   type: object
                                 type: array

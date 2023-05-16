@@ -61,13 +61,13 @@ spec:
                     items:
                       properties:
                         argumentKind:
-                          description: Defaults to FIXED_TYPE. Default value is FIXED_TYPE. Possible values are FIXED_TYPE and ANY_TYPE.
+                          description: 'Defaults to FIXED_TYPE. Default value is FIXED_TYPE. Possible values are: FIXED_TYPE, ANY_TYPE.'
                           type: string
                         dataType:
                           description: "A JSON schema for the data type. Required unless argumentKind = ANY_TYPE. ~>NOTE: Because this field expects a JSON string, any changes to the string will create a diff, even if the JSON itself hasn't changed. If the API returns a different value for the same schema, e.g. it switched the order of values or replaced STRUCT field type with RECORD field type, we currently cannot suppress the recurring diff this causes. As a workaround, we recommend using the schema as returned by the API."
                           type: string
                         mode:
-                          description: Specifies whether the argument is input or output. Can be set for procedures only. Possible values are IN, OUT, and INOUT.
+                          description: 'Specifies whether the argument is input or output. Can be set for procedures only. Possible values are: IN, OUT, INOUT.'
                           type: string
                         name:
                           description: The name of this argument. Can be absent for function return argument.
@@ -139,7 +139,7 @@ spec:
                     description: The description of the routine if defined.
                     type: string
                   determinismLevel:
-                    description: The determinism level of the JavaScript UDF if defined. Possible values are DETERMINISM_LEVEL_UNSPECIFIED, DETERMINISTIC, and NOT_DETERMINISTIC.
+                    description: 'The determinism level of the JavaScript UDF if defined. Possible values are: DETERMINISM_LEVEL_UNSPECIFIED, DETERMINISTIC, NOT_DETERMINISTIC.'
                     type: string
                   importedLibraries:
                     description: Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.
@@ -147,7 +147,7 @@ spec:
                       type: string
                     type: array
                   language:
-                    description: The language of the routine. Possible values are SQL and JAVASCRIPT.
+                    description: 'The language of the routine. Possible values are: SQL, JAVASCRIPT.'
                     type: string
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
@@ -159,7 +159,7 @@ spec:
                     description: "A JSON schema for the return type. Optional if language = \"SQL\"; required otherwise. If absent, the return type is inferred from definitionBody at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. ~>NOTE: Because this field expects a JSON string, any changes to the string will create a diff, even if the JSON itself hasn't changed. If the API returns a different value for the same schema, e.g. it switche d the order of values or replaced STRUCT field type with RECORD field type, we currently cannot suppress the recurring diff this causes. As a workaround, we recommend using the schema as returned by the API."
                     type: string
                   routineType:
-                    description: The type of routine. Possible values are SCALAR_FUNCTION, PROCEDURE, and TABLE_VALUED_FUNCTION.
+                    description: 'The type of routine. Possible values are: SCALAR_FUNCTION, PROCEDURE, TABLE_VALUED_FUNCTION.'
                     type: string
                 type: object
               managementPolicy:
@@ -307,13 +307,13 @@ spec:
                     items:
                       properties:
                         argumentKind:
-                          description: Defaults to FIXED_TYPE. Default value is FIXED_TYPE. Possible values are FIXED_TYPE and ANY_TYPE.
+                          description: 'Defaults to FIXED_TYPE. Default value is FIXED_TYPE. Possible values are: FIXED_TYPE, ANY_TYPE.'
                           type: string
                         dataType:
                           description: "A JSON schema for the data type. Required unless argumentKind = ANY_TYPE. ~>NOTE: Because this field expects a JSON string, any changes to the string will create a diff, even if the JSON itself hasn't changed. If the API returns a different value for the same schema, e.g. it switched the order of values or replaced STRUCT field type with RECORD field type, we currently cannot suppress the recurring diff this causes. As a workaround, we recommend using the schema as returned by the API."
                           type: string
                         mode:
-                          description: Specifies whether the argument is input or output. Can be set for procedures only. Possible values are IN, OUT, and INOUT.
+                          description: 'Specifies whether the argument is input or output. Can be set for procedures only. Possible values are: IN, OUT, INOUT.'
                           type: string
                         name:
                           description: The name of this argument. Can be absent for function return argument.
@@ -333,7 +333,7 @@ spec:
                     description: The description of the routine if defined.
                     type: string
                   determinismLevel:
-                    description: The determinism level of the JavaScript UDF if defined. Possible values are DETERMINISM_LEVEL_UNSPECIFIED, DETERMINISTIC, and NOT_DETERMINISTIC.
+                    description: 'The determinism level of the JavaScript UDF if defined. Possible values are: DETERMINISM_LEVEL_UNSPECIFIED, DETERMINISTIC, NOT_DETERMINISTIC.'
                     type: string
                   id:
                     description: an identifier for the resource with format projects/{{project}}/datasets/{{dataset_id}}/routines/{{routine_id}}
@@ -344,7 +344,7 @@ spec:
                       type: string
                     type: array
                   language:
-                    description: The language of the routine. Possible values are SQL and JAVASCRIPT.
+                    description: 'The language of the routine. Possible values are: SQL, JAVASCRIPT.'
                     type: string
                   lastModifiedTime:
                     description: The time when this routine was modified, in milliseconds since the epoch.
@@ -359,7 +359,7 @@ spec:
                     description: "A JSON schema for the return type. Optional if language = \"SQL\"; required otherwise. If absent, the return type is inferred from definitionBody at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. ~>NOTE: Because this field expects a JSON string, any changes to the string will create a diff, even if the JSON itself hasn't changed. If the API returns a different value for the same schema, e.g. it switche d the order of values or replaced STRUCT field type with RECORD field type, we currently cannot suppress the recurring diff this causes. As a workaround, we recommend using the schema as returned by the API."
                     type: string
                   routineType:
-                    description: The type of routine. Possible values are SCALAR_FUNCTION, PROCEDURE, and TABLE_VALUED_FUNCTION.
+                    description: 'The type of routine. Possible values are: SCALAR_FUNCTION, PROCEDURE, TABLE_VALUED_FUNCTION.'
                     type: string
                 type: object
               conditions:

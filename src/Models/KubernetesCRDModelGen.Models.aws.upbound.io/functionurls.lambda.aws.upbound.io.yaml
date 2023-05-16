@@ -149,6 +149,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  invokeMode:
+                    description: Determines how the Lambda function responds to an invocation. Valid values are BUFFERED (default) and RESPONSE_STREAM. See more in Configuring a Lambda function to stream responses.
+                    type: string
                   qualifier:
                     description: The alias name or "$LATEST".
                     type: string
@@ -343,6 +346,9 @@ spec:
                     description: The HTTP URL endpoint for the function in the format https://<url_id>.lambda-url.<region>.on.aws.
                     type: string
                   id:
+                    type: string
+                  invokeMode:
+                    description: Determines how the Lambda function responds to an invocation. Valid values are BUFFERED (default) and RESPONSE_STREAM. See more in Configuring a Lambda function to stream responses.
                     type: string
                   qualifier:
                     description: The alias name or "$LATEST".

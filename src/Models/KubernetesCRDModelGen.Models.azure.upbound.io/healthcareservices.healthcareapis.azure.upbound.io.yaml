@@ -89,7 +89,7 @@ spec:
                             type: string
                           type: array
                         allowedMethods:
-                          description: The methods to be allowed via CORS. Possible values are DELETE, GET, HEAD, MERGE, POST, OPTIONS and PUT.
+                          description: The methods to be allowed via CORS. Possible values are DELETE, GET, HEAD, MERGE, POST, OPTIONS, PATCH and PUT.
                           items:
                             type: string
                           type: array
@@ -107,7 +107,7 @@ spec:
                     description: A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
                     type: string
                   cosmosdbThroughput:
-                    description: The provisioned throughput for the backing database. Range of 400-10000. Defaults to 400.
+                    description: The provisioned throughput for the backing database. Range of 400-100000. Defaults to 1000.
                     type: number
                   kind:
                     description: 'The type of the service. Values at time of publication are: fhir, fhir-Stu3 and fhir-R4. Default value is fhir.'
@@ -355,7 +355,7 @@ spec:
                             type: string
                           type: array
                         allowedMethods:
-                          description: The methods to be allowed via CORS. Possible values are DELETE, GET, HEAD, MERGE, POST, OPTIONS and PUT.
+                          description: The methods to be allowed via CORS. Possible values are DELETE, GET, HEAD, MERGE, POST, OPTIONS, PATCH and PUT.
                           items:
                             type: string
                           type: array
@@ -373,7 +373,7 @@ spec:
                     description: A versionless Key Vault Key ID for CMK encryption of the backing database. Changing this forces a new resource to be created.
                     type: string
                   cosmosdbThroughput:
-                    description: The provisioned throughput for the backing database. Range of 400-10000. Defaults to 400.
+                    description: The provisioned throughput for the backing database. Range of 400-100000. Defaults to 1000.
                     type: number
                   id:
                     description: The ID of the Healthcare Service.

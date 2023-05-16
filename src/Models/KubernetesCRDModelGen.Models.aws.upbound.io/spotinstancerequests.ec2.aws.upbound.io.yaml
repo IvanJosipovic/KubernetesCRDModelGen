@@ -84,6 +84,17 @@ spec:
                     type: array
                   cpuCoreCount:
                     type: number
+                  cpuOptions:
+                    items:
+                      properties:
+                        amdSevSnp:
+                          type: string
+                        coreCount:
+                          type: number
+                        threadsPerCore:
+                          type: number
+                      type: object
+                    type: array
                   cpuThreadsPerCore:
                     type: number
                   creditSpecification:
@@ -610,6 +621,17 @@ spec:
                     type: array
                   cpuCoreCount:
                     type: number
+                  cpuOptions:
+                    items:
+                      properties:
+                        amdSevSnp:
+                          type: string
+                        coreCount:
+                          type: number
+                        threadsPerCore:
+                          type: number
+                      type: object
+                    type: array
                   cpuThreadsPerCore:
                     type: number
                   creditSpecification:

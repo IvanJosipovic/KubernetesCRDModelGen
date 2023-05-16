@@ -231,10 +231,10 @@ spec:
                     description: Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes.
                     type: boolean
                   defaultResourceDiscoveryAssociationId:
-                    description: The ID of the IPAM
+                    description: The IPAM's default resource discovery association ID.
                     type: string
                   defaultResourceDiscoveryId:
-                    description: The ID of the IPAM
+                    description: The IPAM's default resource discovery ID.
                     type: string
                   description:
                     description: A description for the IPAM.

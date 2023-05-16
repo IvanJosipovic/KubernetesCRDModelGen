@@ -82,7 +82,7 @@ spec:
                     description: The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
                     type: string
                   logAnalyticsWorkspaceIdRef:
-                    description: Reference to a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.
+                    description: Reference to a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -108,7 +108,7 @@ spec:
                     - name
                     type: object
                   logAnalyticsWorkspaceIdSelector:
-                    description: Selector for a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.
+                    description: Selector for a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.

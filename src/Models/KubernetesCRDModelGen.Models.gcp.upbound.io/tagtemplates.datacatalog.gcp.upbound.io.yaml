@@ -102,7 +102,7 @@ spec:
                                   type: object
                                 type: array
                               primitiveType:
-                                description: Represents primitive types - string, bool etc. Exactly one of primitive_type or enum_type must be set Possible values are DOUBLE, STRING, BOOL, and TIMESTAMP.
+                                description: 'Represents primitive types - string, bool etc. Exactly one of primitive_type or enum_type must be set Possible values are: DOUBLE, STRING, BOOL, TIMESTAMP.'
                                 type: string
                             type: object
                           type: array
@@ -281,7 +281,7 @@ spec:
                           description: Whether this is a required field. Defaults to false.
                           type: boolean
                         name:
-                          description: 'The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}'
+                          description: '(Output) The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}'
                           type: string
                         order:
                           description: The order of this field with respect to other fields in this tag template. A higher value indicates a more important field. The value can be negative. Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
@@ -306,7 +306,7 @@ spec:
                                   type: object
                                 type: array
                               primitiveType:
-                                description: Represents primitive types - string, bool etc. Exactly one of primitive_type or enum_type must be set Possible values are DOUBLE, STRING, BOOL, and TIMESTAMP.
+                                description: 'Represents primitive types - string, bool etc. Exactly one of primitive_type or enum_type must be set Possible values are: DOUBLE, STRING, BOOL, TIMESTAMP.'
                                 type: string
                             type: object
                           type: array

@@ -142,7 +142,7 @@ spec:
                       type: object
                     type: array
                   spaceName:
-                    description: The name of the space. At least on of user_profile_name or space_name required.
+                    description: The name of the space. At least one of user_profile_name or space_name required.
                     type: string
                   tags:
                     additionalProperties:
@@ -150,7 +150,7 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                   userProfileName:
-                    description: The user profile name. At least on of user_profile_name or space_name required.
+                    description: The user profile name. At least one of user_profile_name or space_name required.
                     type: string
                   userProfileNameRef:
                     description: Reference to a UserProfile in sagemaker to populate userProfileName.
@@ -386,7 +386,7 @@ spec:
                       type: object
                     type: array
                   spaceName:
-                    description: The name of the space. At least on of user_profile_name or space_name required.
+                    description: The name of the space. At least one of user_profile_name or space_name required.
                     type: string
                   tags:
                     additionalProperties:
@@ -399,7 +399,7 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                   userProfileName:
-                    description: The user profile name. At least on of user_profile_name or space_name required.
+                    description: The user profile name. At least one of user_profile_name or space_name required.
                     type: string
                 type: object
               conditions:

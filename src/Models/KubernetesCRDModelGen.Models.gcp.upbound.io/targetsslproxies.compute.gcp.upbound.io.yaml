@@ -124,7 +124,7 @@ spec:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
                   proxyHeader:
-                    description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                    description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                     type: string
                   sslCertificates:
                     description: A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At least one SSL certificate must be specified.
@@ -349,7 +349,7 @@ spec:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
                   proxyHeader:
-                    description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                    description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                     type: string
                   proxyId:
                     description: The unique identifier for the resource.

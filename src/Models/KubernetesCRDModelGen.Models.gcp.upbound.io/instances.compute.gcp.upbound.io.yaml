@@ -209,7 +209,7 @@ spec:
                                 description: The size of the image in gigabytes. If not specified, it will inherit the size of its base image.
                                 type: number
                               type:
-                                description: The type of reservation from which this instance can consume resources.
+                                description: The accelerator type resource to expose to this instance. E.g. nvidia-tesla-k80.
                                 type: string
                             type: object
                           type: array
@@ -552,6 +552,9 @@ spec:
                         interface:
                           description: The disk interface to use for attaching this disk; either SCSI or NVME.
                           type: string
+                        size:
+                          description: The size of the image in gigabytes. If not specified, it will inherit the size of its base image.
+                          type: number
                       required:
                       - interface
                       type: object
@@ -561,7 +564,7 @@ spec:
                     items:
                       properties:
                         email:
-                          description: 'The service account e-mail address. If not given, the default Google Compute Engine service account is used. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.'
+                          description: 'The service account e-mail address. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.'
                           type: string
                         emailRef:
                           description: Reference to a ServiceAccount in cloudplatform to populate email.
@@ -865,7 +868,7 @@ spec:
                                 description: The size of the image in gigabytes. If not specified, it will inherit the size of its base image.
                                 type: number
                               type:
-                                description: The type of reservation from which this instance can consume resources.
+                                description: The accelerator type resource to expose to this instance. E.g. nvidia-tesla-k80.
                                 type: string
                             type: object
                           type: array
@@ -1112,6 +1115,9 @@ spec:
                         interface:
                           description: The disk interface to use for attaching this disk; either SCSI or NVME.
                           type: string
+                        size:
+                          description: The size of the image in gigabytes. If not specified, it will inherit the size of its base image.
+                          type: number
                       type: object
                     type: array
                   selfLink:
@@ -1122,7 +1128,7 @@ spec:
                     items:
                       properties:
                         email:
-                          description: 'The service account e-mail address. If not given, the default Google Compute Engine service account is used. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.'
+                          description: 'The service account e-mail address. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.'
                           type: string
                         scopes:
                           description: 'A list of service scopes. Both OAuth2 URLs and gcloud short names are supported. To allow full access to all Cloud APIs, use the cloud-platform scope. See a complete list of scopes here. Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.'

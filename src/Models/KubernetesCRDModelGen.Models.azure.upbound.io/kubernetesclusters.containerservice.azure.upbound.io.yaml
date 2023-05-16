@@ -613,6 +613,9 @@ spec:
                             type: string
                           description: A mapping of tags to assign to the Node Pool.
                           type: object
+                        temporaryNameForRotation:
+                          description: Specifies the name of the temporary node pool used to cycle the default node pool for VM resizing.
+                          type: string
                         type:
                           description: The type of Node Pool which should be created. Possible values are AvailabilitySet and VirtualMachineScaleSets. Defaults to VirtualMachineScaleSets. Changing this forces a new resource to be created.
                           type: string
@@ -631,7 +634,7 @@ spec:
                             type: object
                           type: array
                         vmSize:
-                          description: The size of the Virtual Machine, such as Standard_DS2_v2. Changing this forces a new resource to be created.
+                          description: The size of the Virtual Machine, such as Standard_DS2_v2.
                           type: string
                         vnetSubnetId:
                           description: The ID of a Subnet where the Kubernetes Node Pool should exist. Changing this forces a new resource to be created.
@@ -692,7 +695,7 @@ spec:
                               type: object
                           type: object
                         workloadRuntime:
-                          description: Specifies the workload runtime used by the node pool. Possible values are OCIContainer.
+                          description: Specifies the workload runtime used by the node pool. Possible values are OCIContainer and KataMshvVmIsolation.
                           type: string
                         zones:
                           description: Specifies a list of Availability Zones in which this Kubernetes Cluster should be located. Changing this forces a new Kubernetes Cluster to be created.
@@ -708,7 +711,7 @@ spec:
                     description: The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information can be found in the documentation. Changing this forces a new resource to be created.
                     type: string
                   dnsPrefix:
-                    description: DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
+                    description: DNS prefix specified when creating the managed cluster. Possible values must begin and end with a letter or number, contain only letters, numbers, and hyphens and be between 1 and 54 characters in length. Changing this forces a new resource to be created.
                     type: string
                   dnsPrefixPrivateCluster:
                     description: Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
@@ -869,7 +872,7 @@ spec:
                     items:
                       properties:
                         secretRotationEnabled:
-                          description: Is secret rotation enabled?
+                          description: Should the secret store CSI driver on the AKS cluster be enabled?
                           type: boolean
                         secretRotationInterval:
                           description: The interval to poll for secret rotation. This attribute is only set when secret_rotation is true and defaults to 2m.
@@ -1081,7 +1084,7 @@ spec:
                       type: object
                     type: array
                   nodeResourceGroup:
-                    description: The auto-generated Resource Group which contains the resources for this Managed Kubernetes Cluster. Changing this forces a new resource to be created.
+                    description: The auto-generated Resource Group which contains the resources for this Managed Kubernetes Cluster.
                     type: string
                   oidcIssuerEnabled:
                     description: Enable or Disable the OIDC issuer URL
@@ -1093,6 +1096,9 @@ spec:
                         logAnalyticsWorkspaceId:
                           description: The ID of the Log Analytics Workspace which the OMS Agent should send data to.
                           type: string
+                        msiAuthForMonitoringEnabled:
+                          description: Is managed identity authentication for monitoring enabled?
+                          type: boolean
                       required:
                       - logAnalyticsWorkspaceId
                       type: object
@@ -1231,6 +1237,17 @@ spec:
                   runCommandEnabled:
                     description: Whether to enable run command for the cluster or not. Defaults to true.
                     type: boolean
+                  serviceMeshProfile:
+                    description: A service_mesh_profile block as defined below.
+                    items:
+                      properties:
+                        mode:
+                          description: The mode of the service mesh. Possible value is Istio.
+                          type: string
+                      required:
+                      - mode
+                      type: object
+                    type: array
                   servicePrincipal:
                     description: A service_principal block as documented below. One of either identity or service_principal must be specified.
                     items:
@@ -1261,7 +1278,7 @@ spec:
                       type: object
                     type: array
                   skuTier:
-                    description: The SKU Tier that should be used for this Kubernetes Cluster. Possible values are Free and Paid (which includes the Uptime SLA). Defaults to Free.
+                    description: The SKU Tier that should be used for this Kubernetes Cluster. Possible values are Free, and Standard (which includes the Uptime SLA). Defaults to Free.
                     type: string
                   storageProfile:
                     description: A storage_profile block as defined below.
@@ -1352,6 +1369,9 @@ spec:
                       properties:
                         kedaEnabled:
                           description: Specifies whether KEDA Autoscaler can be used for workloads.
+                          type: boolean
+                        verticalPodAutoscalerEnabled:
+                          description: Specifies whether Vertical Pod Autoscaler should be enabled.
                           type: boolean
                       type: object
                     type: array
@@ -1889,6 +1909,9 @@ spec:
                             type: string
                           description: A mapping of tags to assign to the Node Pool.
                           type: object
+                        temporaryNameForRotation:
+                          description: Specifies the name of the temporary node pool used to cycle the default node pool for VM resizing.
+                          type: string
                         type:
                           description: The type of Node Pool which should be created. Possible values are AvailabilitySet and VirtualMachineScaleSets. Defaults to VirtualMachineScaleSets. Changing this forces a new resource to be created.
                           type: string
@@ -1905,13 +1928,13 @@ spec:
                             type: object
                           type: array
                         vmSize:
-                          description: The size of the Virtual Machine, such as Standard_DS2_v2. Changing this forces a new resource to be created.
+                          description: The size of the Virtual Machine, such as Standard_DS2_v2.
                           type: string
                         vnetSubnetId:
                           description: The ID of a Subnet where the Kubernetes Node Pool should exist. Changing this forces a new resource to be created.
                           type: string
                         workloadRuntime:
-                          description: Specifies the workload runtime used by the node pool. Possible values are OCIContainer.
+                          description: Specifies the workload runtime used by the node pool. Possible values are OCIContainer and KataMshvVmIsolation.
                           type: string
                         zones:
                           description: Specifies a list of Availability Zones in which this Kubernetes Cluster should be located. Changing this forces a new Kubernetes Cluster to be created.
@@ -1924,7 +1947,7 @@ spec:
                     description: The ID of the Disk Encryption Set which should be used for the Nodes and Volumes. More information can be found in the documentation. Changing this forces a new resource to be created.
                     type: string
                   dnsPrefix:
-                    description: DNS prefix specified when creating the managed cluster. Changing this forces a new resource to be created.
+                    description: DNS prefix specified when creating the managed cluster. Possible values must begin and end with a letter or number, contain only letters, numbers, and hyphens and be between 1 and 54 characters in length. Changing this forces a new resource to be created.
                     type: string
                   dnsPrefixPrivateCluster:
                     description: Specifies the DNS prefix to use with private clusters. Changing this forces a new resource to be created.
@@ -2057,7 +2080,7 @@ spec:
                             type: object
                           type: array
                         secretRotationEnabled:
-                          description: Is secret rotation enabled?
+                          description: Should the secret store CSI driver on the AKS cluster be enabled?
                           type: boolean
                         secretRotationInterval:
                           description: The interval to poll for secret rotation. This attribute is only set when secret_rotation is true and defaults to 2m.
@@ -2264,7 +2287,10 @@ spec:
                       type: object
                     type: array
                   nodeResourceGroup:
-                    description: The auto-generated Resource Group which contains the resources for this Managed Kubernetes Cluster. Changing this forces a new resource to be created.
+                    description: The auto-generated Resource Group which contains the resources for this Managed Kubernetes Cluster.
+                    type: string
+                  nodeResourceGroupId:
+                    description: The ID of the Resource Group containing the resources for this Managed Kubernetes Cluster.
                     type: string
                   oidcIssuerEnabled:
                     description: Enable or Disable the OIDC issuer URL
@@ -2279,6 +2305,9 @@ spec:
                         logAnalyticsWorkspaceId:
                           description: The ID of the Log Analytics Workspace which the OMS Agent should send data to.
                           type: string
+                        msiAuthForMonitoringEnabled:
+                          description: Is managed identity authentication for monitoring enabled?
+                          type: boolean
                         omsAgentIdentity:
                           description: An oms_agent_identity block is exported. The exported attributes are defined below.
                           items:
@@ -2326,6 +2355,15 @@ spec:
                   runCommandEnabled:
                     description: Whether to enable run command for the cluster or not. Defaults to true.
                     type: boolean
+                  serviceMeshProfile:
+                    description: A service_mesh_profile block as defined below.
+                    items:
+                      properties:
+                        mode:
+                          description: The mode of the service mesh. Possible value is Istio.
+                          type: string
+                      type: object
+                    type: array
                   servicePrincipal:
                     description: A service_principal block as documented below. One of either identity or service_principal must be specified.
                     items:
@@ -2336,7 +2374,7 @@ spec:
                       type: object
                     type: array
                   skuTier:
-                    description: The SKU Tier that should be used for this Kubernetes Cluster. Possible values are Free and Paid (which includes the Uptime SLA). Defaults to Free.
+                    description: The SKU Tier that should be used for this Kubernetes Cluster. Possible values are Free, and Standard (which includes the Uptime SLA). Defaults to Free.
                     type: string
                   storageProfile:
                     description: A storage_profile block as defined below.
@@ -2404,6 +2442,15 @@ spec:
                         kedaEnabled:
                           description: Specifies whether KEDA Autoscaler can be used for workloads.
                           type: boolean
+                        verticalPodAutoscalerControlledValues:
+                          description: Which resources values should be controlled.
+                          type: string
+                        verticalPodAutoscalerEnabled:
+                          description: Specifies whether Vertical Pod Autoscaler should be enabled.
+                          type: boolean
+                        verticalPodAutoscalerUpdateMode:
+                          description: How the autoscaler applies changes to pod resources.
+                          type: string
                       type: object
                     type: array
                   workloadIdentityEnabled:

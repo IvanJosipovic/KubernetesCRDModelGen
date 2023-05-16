@@ -592,7 +592,7 @@ spec:
                     description: DNS name for the file system, e.g., fs-12345678.corp.example.com (domain name matching the Active Directory domain name)
                     type: string
                   id:
-                    description: Identifier of the file system, e.g., fs-12345678
+                    description: Identifier of the file system (e.g. fs-12345678).
                     type: string
                   kmsKeyId:
                     description: ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS managed KMS Key.

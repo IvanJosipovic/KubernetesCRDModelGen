@@ -57,7 +57,7 @@ spec:
               forProvider:
                 properties:
                   basicService:
-                    description: A well-known service type, defined by its service type and service labels. Valid values are described at https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli Structure is documented below.
+                    description: A well-known service type, defined by its service type and service labels. Valid values of service types and services labels are described at https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli Structure is documented below.
                     items:
                       properties:
                         serviceLabels:
@@ -220,7 +220,7 @@ spec:
               atProvider:
                 properties:
                   basicService:
-                    description: A well-known service type, defined by its service type and service labels. Valid values are described at https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli Structure is documented below.
+                    description: A well-known service type, defined by its service type and service labels. Valid values of service types and services labels are described at https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli Structure is documented below.
                     items:
                       properties:
                         serviceLabels:

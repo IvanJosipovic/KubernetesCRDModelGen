@@ -67,7 +67,7 @@ spec:
                           description: The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
                           type: number
                         collocation:
-                          description: Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network. Specify COLLOCATED to enable collocation. Can only be specified with vm_count. If compute instances are created with a COLLOCATED policy, then exactly vm_count instances must be created at the same time with the resource policy attached. Possible values are COLLOCATED.
+                          description: 'Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network. Specify COLLOCATED to enable collocation. Can only be specified with vm_count. If compute instances are created with a COLLOCATED policy, then exactly vm_count instances must be created at the same time with the resource policy attached. Possible values are: COLLOCATED.'
                           type: string
                         vmCount:
                           description: Number of VMs in this placement group. Google does not recommend that you use this field unless you use a compact policy and you want your policy to work only if it contains this exact number of VMs.
@@ -131,7 +131,7 @@ spec:
                                 description: Maximum age of the snapshot that is allowed to be kept.
                                 type: number
                               onSourceDiskDelete:
-                                description: Specifies the behavior to apply to scheduled snapshots when the source disk is deleted. Default value is KEEP_AUTO_SNAPSHOTS. Possible values are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY.
+                                description: 'Specifies the behavior to apply to scheduled snapshots when the source disk is deleted. Default value is KEEP_AUTO_SNAPSHOTS. Possible values are: KEEP_AUTO_SNAPSHOTS, APPLY_RETENTION_POLICY.'
                                 type: string
                             required:
                             - maxRetentionDays
@@ -180,7 +180,7 @@ spec:
                                       items:
                                         properties:
                                           day:
-                                            description: The day of the week to create the snapshot. e.g. MONDAY Possible values are MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, and SUNDAY.
+                                            description: 'The day of the week to create the snapshot. e.g. MONDAY Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.'
                                             type: string
                                           startTime:
                                             description: 'Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.'
@@ -373,7 +373,7 @@ spec:
                           description: The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
                           type: number
                         collocation:
-                          description: Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network. Specify COLLOCATED to enable collocation. Can only be specified with vm_count. If compute instances are created with a COLLOCATED policy, then exactly vm_count instances must be created at the same time with the resource policy attached. Possible values are COLLOCATED.
+                          description: 'Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network. Specify COLLOCATED to enable collocation. Can only be specified with vm_count. If compute instances are created with a COLLOCATED policy, then exactly vm_count instances must be created at the same time with the resource policy attached. Possible values are: COLLOCATED.'
                           type: string
                         vmCount:
                           description: Number of VMs in this placement group. Google does not recommend that you use this field unless you use a compact policy and you want your policy to work only if it contains this exact number of VMs.
@@ -437,7 +437,7 @@ spec:
                                 description: Maximum age of the snapshot that is allowed to be kept.
                                 type: number
                               onSourceDiskDelete:
-                                description: Specifies the behavior to apply to scheduled snapshots when the source disk is deleted. Default value is KEEP_AUTO_SNAPSHOTS. Possible values are KEEP_AUTO_SNAPSHOTS and APPLY_RETENTION_POLICY.
+                                description: 'Specifies the behavior to apply to scheduled snapshots when the source disk is deleted. Default value is KEEP_AUTO_SNAPSHOTS. Possible values are: KEEP_AUTO_SNAPSHOTS, APPLY_RETENTION_POLICY.'
                                 type: string
                             type: object
                           type: array
@@ -478,7 +478,7 @@ spec:
                                       items:
                                         properties:
                                           day:
-                                            description: The day of the week to create the snapshot. e.g. MONDAY Possible values are MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, and SUNDAY.
+                                            description: 'The day of the week to create the snapshot. e.g. MONDAY Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.'
                                             type: string
                                           startTime:
                                             description: 'Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.'

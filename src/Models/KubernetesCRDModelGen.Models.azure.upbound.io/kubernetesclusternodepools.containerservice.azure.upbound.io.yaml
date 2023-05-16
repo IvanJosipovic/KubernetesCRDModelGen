@@ -411,6 +411,9 @@ spec:
                   scaleDownMode:
                     description: Specifies how the node pool should deal with scaled-down nodes. Allowed values are Delete and Deallocate. Defaults to Delete.
                     type: string
+                  snapshotId:
+                    description: The ID of the Snapshot which should be used to create this Node Pool. Changing this forces a new resource to be created.
+                    type: string
                   spotMaxPrice:
                     description: The maximum price you're willing to pay in USD per Virtual Machine. Valid values are -1 (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
                     type: number
@@ -504,7 +507,7 @@ spec:
                       type: object
                     type: array
                   workloadRuntime:
-                    description: Used to specify the workload runtime. Allowed values are OCIContainer and WasmWasi.
+                    description: Used to specify the workload runtime. Allowed values are OCIContainer, WasmWasi and KataMshvVmIsolation.
                     type: string
                   zones:
                     description: Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this forces a new Kubernetes Cluster Node Pool to be created.
@@ -900,6 +903,9 @@ spec:
                   scaleDownMode:
                     description: Specifies how the node pool should deal with scaled-down nodes. Allowed values are Delete and Deallocate. Defaults to Delete.
                     type: string
+                  snapshotId:
+                    description: The ID of the Snapshot which should be used to create this Node Pool. Changing this forces a new resource to be created.
+                    type: string
                   spotMaxPrice:
                     description: The maximum price you're willing to pay in USD per Virtual Machine. Valid values are -1 (the current on-demand price for a Virtual Machine) or a positive value with up to five decimal places. Changing this forces a new resource to be created.
                     type: number
@@ -936,7 +942,7 @@ spec:
                       type: object
                     type: array
                   workloadRuntime:
-                    description: Used to specify the workload runtime. Allowed values are OCIContainer and WasmWasi.
+                    description: Used to specify the workload runtime. Allowed values are OCIContainer, WasmWasi and KataMshvVmIsolation.
                     type: string
                   zones:
                     description: Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this forces a new Kubernetes Cluster Node Pool to be created.

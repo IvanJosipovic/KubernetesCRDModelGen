@@ -226,6 +226,9 @@ spec:
                       - workspaceId
                       type: object
                     type: array
+                  location:
+                    description: The Azure Region where the Action Group should exist. Changing this forces a new Action Group to be created. Defaults to global.
+                    type: string
                   logicAppReceiver:
                     description: One or more logic_app_receiver blocks as defined below.
                     items:
@@ -672,6 +675,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  location:
+                    description: The Azure Region where the Action Group should exist. Changing this forces a new Action Group to be created. Defaults to global.
+                    type: string
                   logicAppReceiver:
                     description: One or more logic_app_receiver blocks as defined below.
                     items:

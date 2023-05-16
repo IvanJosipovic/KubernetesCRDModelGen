@@ -61,7 +61,7 @@ spec:
                     items:
                       properties:
                         createDisposition:
-                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are CREATE_IF_NEEDED and CREATE_NEVER."
+                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are: CREATE_IF_NEEDED, CREATE_NEVER."
                           type: string
                         destinationEncryptionConfiguration:
                           description: Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.
@@ -270,7 +270,7 @@ spec:
                             type: object
                           type: array
                         writeDisposition:
-                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are WRITE_TRUNCATE, WRITE_APPEND, and WRITE_EMPTY."
+                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are: WRITE_TRUNCATE, WRITE_APPEND, WRITE_EMPTY."
                           type: string
                       required:
                       - sourceTables
@@ -473,7 +473,7 @@ spec:
                           description: Indicates if we should automatically infer the options and schema for CSV and JSON sources.
                           type: boolean
                         createDisposition:
-                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are CREATE_IF_NEEDED and CREATE_NEVER."
+                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are: CREATE_IF_NEEDED, CREATE_NEVER."
                           type: string
                         destinationEncryptionConfiguration:
                           description: Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.
@@ -671,7 +671,7 @@ spec:
                             type: object
                           type: array
                         writeDisposition:
-                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are WRITE_TRUNCATE, WRITE_APPEND, and WRITE_EMPTY."
+                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are: WRITE_TRUNCATE, WRITE_APPEND, WRITE_EMPTY."
                           type: string
                       required:
                       - destinationTable
@@ -692,7 +692,7 @@ spec:
                           description: If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.
                           type: boolean
                         createDisposition:
-                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are CREATE_IF_NEEDED and CREATE_NEVER."
+                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are: CREATE_IF_NEEDED, CREATE_NEVER."
                           type: string
                         defaultDataset:
                           description: Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names. Structure is documented below.
@@ -910,7 +910,7 @@ spec:
                           description: Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
                           type: string
                         priority:
-                          description: Specifies a priority for the query. Default value is INTERACTIVE. Possible values are INTERACTIVE and BATCH.
+                          description: 'Specifies a priority for the query. Default value is INTERACTIVE. Possible values are: INTERACTIVE, BATCH.'
                           type: string
                         query:
                           description: 'SQL query text to execute. The useLegacySql field can be used to indicate whether the query uses legacy SQL or standard SQL. NOTE: queries containing DML language (DELETE, UPDATE, MERGE, INSERT) must specify create_disposition = "" and write_disposition = "".'
@@ -925,7 +925,7 @@ spec:
                           items:
                             properties:
                               keyResultStatement:
-                                description: Determines which statement in the script represents the "key result", used to populate the schema and query results of the script job. Possible values are LAST and FIRST_SELECT.
+                                description: 'Determines which statement in the script represents the "key result", used to populate the schema and query results of the script job. Possible values are: LAST, FIRST_SELECT.'
                                 type: string
                               statementByteBudget:
                                 description: Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
@@ -954,7 +954,7 @@ spec:
                             type: object
                           type: array
                         writeDisposition:
-                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are WRITE_TRUNCATE, WRITE_APPEND, and WRITE_EMPTY."
+                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are: WRITE_TRUNCATE, WRITE_APPEND, WRITE_EMPTY."
                           type: string
                       required:
                       - query
@@ -1106,7 +1106,7 @@ spec:
                     items:
                       properties:
                         createDisposition:
-                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are CREATE_IF_NEEDED and CREATE_NEVER."
+                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are: CREATE_IF_NEEDED, CREATE_NEVER."
                           type: string
                         destinationEncryptionConfiguration:
                           description: Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.
@@ -1116,7 +1116,7 @@ spec:
                                 description: Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
                                 type: string
                               kmsKeyVersion:
-                                description: Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
+                                description: (Output) Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
                                 type: string
                             type: object
                           type: array
@@ -1151,7 +1151,7 @@ spec:
                             type: object
                           type: array
                         writeDisposition:
-                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are WRITE_TRUNCATE, WRITE_APPEND, and WRITE_EMPTY."
+                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are: WRITE_TRUNCATE, WRITE_APPEND, WRITE_EMPTY."
                           type: string
                       type: object
                     type: array
@@ -1221,7 +1221,7 @@ spec:
                     description: Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
                     type: string
                   jobType:
-                    description: The type of the job.
+                    description: (Output) The type of the job.
                     type: string
                   labels:
                     additionalProperties:
@@ -1242,7 +1242,7 @@ spec:
                           description: Indicates if we should automatically infer the options and schema for CSV and JSON sources.
                           type: boolean
                         createDisposition:
-                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are CREATE_IF_NEEDED and CREATE_NEVER."
+                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are: CREATE_IF_NEEDED, CREATE_NEVER."
                           type: string
                         destinationEncryptionConfiguration:
                           description: Custom encryption configuration (e.g., Cloud KMS keys) Structure is documented below.
@@ -1252,7 +1252,7 @@ spec:
                                 description: Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
                                 type: string
                               kmsKeyVersion:
-                                description: Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
+                                description: (Output) Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
                                 type: string
                             type: object
                           type: array
@@ -1329,7 +1329,7 @@ spec:
                             type: object
                           type: array
                         writeDisposition:
-                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are WRITE_TRUNCATE, WRITE_APPEND, and WRITE_EMPTY."
+                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are: WRITE_TRUNCATE, WRITE_APPEND, WRITE_EMPTY."
                           type: string
                       type: object
                     type: array
@@ -1347,7 +1347,7 @@ spec:
                           description: If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.
                           type: boolean
                         createDisposition:
-                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are CREATE_IF_NEEDED and CREATE_NEVER."
+                          description: "Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value is CREATE_IF_NEEDED. Possible values are: CREATE_IF_NEEDED, CREATE_NEVER."
                           type: string
                         defaultDataset:
                           description: Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names. Structure is documented below.
@@ -1369,7 +1369,7 @@ spec:
                                 description: Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.
                                 type: string
                               kmsKeyVersion:
-                                description: Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
+                                description: (Output) Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
                                 type: string
                             type: object
                           type: array
@@ -1401,7 +1401,7 @@ spec:
                           description: Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
                           type: string
                         priority:
-                          description: Specifies a priority for the query. Default value is INTERACTIVE. Possible values are INTERACTIVE and BATCH.
+                          description: 'Specifies a priority for the query. Default value is INTERACTIVE. Possible values are: INTERACTIVE, BATCH.'
                           type: string
                         query:
                           description: 'SQL query text to execute. The useLegacySql field can be used to indicate whether the query uses legacy SQL or standard SQL. NOTE: queries containing DML language (DELETE, UPDATE, MERGE, INSERT) must specify create_disposition = "" and write_disposition = "".'
@@ -1416,7 +1416,7 @@ spec:
                           items:
                             properties:
                               keyResultStatement:
-                                description: Determines which statement in the script represents the "key result", used to populate the schema and query results of the script job. Possible values are LAST and FIRST_SELECT.
+                                description: 'Determines which statement in the script represents the "key result", used to populate the schema and query results of the script job. Possible values are: LAST, FIRST_SELECT.'
                                 type: string
                               statementByteBudget:
                                 description: Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
@@ -1445,7 +1445,7 @@ spec:
                             type: object
                           type: array
                         writeDisposition:
-                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are WRITE_TRUNCATE, WRITE_APPEND, and WRITE_EMPTY."
+                          description: "Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value is WRITE_EMPTY. Possible values are: WRITE_TRUNCATE, WRITE_APPEND, WRITE_EMPTY."
                           type: string
                       type: object
                     type: array
@@ -1454,7 +1454,7 @@ spec:
                     items:
                       properties:
                         errorResult:
-                          description: Final error result of the job. If present, indicates that the job has completed and was unsuccessful. Structure is documented below.
+                          description: (Output) Final error result of the job. If present, indicates that the job has completed and was unsuccessful. Structure is documented below.
                           items:
                             properties:
                               location:
@@ -1469,7 +1469,7 @@ spec:
                             type: object
                           type: array
                         errors:
-                          description: The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has not completed or was unsuccessful. Structure is documented below.
+                          description: (Output) The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has not completed or was unsuccessful. Structure is documented below.
                           items:
                             properties:
                               location:
@@ -1484,7 +1484,7 @@ spec:
                             type: object
                           type: array
                         state:
-                          description: Running state of the job. Valid states include 'PENDING', 'RUNNING', and 'DONE'.
+                          description: (Output) Running state of the job. Valid states include 'PENDING', 'RUNNING', and 'DONE'.
                           type: string
                       type: object
                     type: array

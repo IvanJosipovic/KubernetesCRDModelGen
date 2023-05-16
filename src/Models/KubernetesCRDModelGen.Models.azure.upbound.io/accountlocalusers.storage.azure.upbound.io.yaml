@@ -151,7 +151,7 @@ spec:
                       type: object
                     type: array
                   sshAuthorizedKey:
-                    description: One or more ssh_authorized_key blocks as defined below. Changing this forces a new Storage Account Local User to be created.
+                    description: One or more ssh_authorized_key blocks as defined below.
                     items:
                       properties:
                         description:
@@ -406,7 +406,7 @@ spec:
                       type: object
                     type: array
                   sshAuthorizedKey:
-                    description: One or more ssh_authorized_key blocks as defined below. Changing this forces a new Storage Account Local User to be created.
+                    description: One or more ssh_authorized_key blocks as defined below.
                     items:
                       properties:
                         description:

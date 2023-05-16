@@ -64,7 +64,7 @@ spec:
                     items:
                       properties:
                         balancingMode:
-                          description: Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are UTILIZATION, RATE, and CONNECTION.
+                          description: 'Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION.'
                           type: string
                         capacityScaler:
                           description: A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or CONNECTION). Default value is 1, which means the group will serve up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available Capacity. Valid range is [0.0,1.0].
@@ -157,6 +157,17 @@ spec:
                     description: Cloud CDN configuration for this BackendService. Structure is documented below.
                     items:
                       properties:
+                        bypassCacheOnRequestHeaders:
+                          description: Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. Structure is documented below.
+                          items:
+                            properties:
+                              headerName:
+                                description: The header field name to match on when bypassing cache. Values are case-insensitive.
+                                type: string
+                            required:
+                            - headerName
+                            type: object
+                          type: array
                         cacheKeyPolicy:
                           description: The CacheKeyPolicy for this CdnPolicy. Structure is documented below.
                           items:
@@ -193,7 +204,7 @@ spec:
                             type: object
                           type: array
                         cacheMode:
-                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, and CACHE_ALL_STATIC.'
+                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, CACHE_ALL_STATIC.'
                           type: string
                         clientTtl:
                           description: Specifies the maximum allowed TTL for cached content served by this origin.
@@ -249,7 +260,7 @@ spec:
                       type: object
                     type: array
                   compressionMode:
-                    description: Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values are AUTOMATIC and DISABLED.
+                    description: "Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values are: AUTOMATIC, DISABLED."
                     type: string
                   connectionDrainingTimeoutSec:
                     description: Time for which instance will be drained (not accept new connections, but still work to finish started).
@@ -404,7 +415,7 @@ spec:
                       type: object
                     type: array
                   loadBalancingScheme:
-                    description: Indicates whether the backend service will be used with internal or external load balancing. A backend service created for one type of load balancing cannot be used with the other. For more information, refer to Choosing a load balancer. Default value is EXTERNAL. Possible values are EXTERNAL, INTERNAL_SELF_MANAGED, and EXTERNAL_MANAGED.
+                    description: 'Indicates whether the backend service will be used with internal or external load balancing. A backend service created for one type of load balancing cannot be used with the other. For more information, refer to Choosing a load balancer. Default value is EXTERNAL. Possible values are: EXTERNAL, INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED.'
                     type: string
                   localityLbPolicies:
                     description: A list of locality load balancing policies to be used in order of preference. Either the policy or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field. localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is referenced by a target gRPC proxy that has the validateForProxyless field set to true. Structure is documented below.
@@ -520,7 +531,7 @@ spec:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
                   protocol:
-                    description: 'The protocol this BackendService uses to communicate with backends. The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer types and may result in errors if used with the GA API. Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, and GRPC.'
+                    description: 'The protocol this BackendService uses to communicate with backends. The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer types and may result in errors if used with the GA API. Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC.'
                     type: string
                   securityPolicy:
                     description: The security policy associated with this backend service.
@@ -543,7 +554,7 @@ spec:
                       type: object
                     type: array
                   sessionAffinity:
-                    description: Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, and HTTP_COOKIE.
+                    description: 'Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.'
                     type: string
                   timeoutSec:
                     description: How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is [1, 86400].
@@ -694,7 +705,7 @@ spec:
                     items:
                       properties:
                         balancingMode:
-                          description: Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are UTILIZATION, RATE, and CONNECTION.
+                          description: 'Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION.'
                           type: string
                         capacityScaler:
                           description: A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or CONNECTION). Default value is 1, which means the group will serve up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available Capacity. Valid range is [0.0,1.0].
@@ -732,6 +743,15 @@ spec:
                     description: Cloud CDN configuration for this BackendService. Structure is documented below.
                     items:
                       properties:
+                        bypassCacheOnRequestHeaders:
+                          description: Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. Structure is documented below.
+                          items:
+                            properties:
+                              headerName:
+                                description: The header field name to match on when bypassing cache. Values are case-insensitive.
+                                type: string
+                            type: object
+                          type: array
                         cacheKeyPolicy:
                           description: The CacheKeyPolicy for this CdnPolicy. Structure is documented below.
                           items:
@@ -768,7 +788,7 @@ spec:
                             type: object
                           type: array
                         cacheMode:
-                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, and CACHE_ALL_STATIC.'
+                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, CACHE_ALL_STATIC.'
                           type: string
                         clientTtl:
                           description: Specifies the maximum allowed TTL for cached content served by this origin.
@@ -824,7 +844,7 @@ spec:
                       type: object
                     type: array
                   compressionMode:
-                    description: Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values are AUTOMATIC and DISABLED.
+                    description: "Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values are: AUTOMATIC, DISABLED."
                     type: string
                   connectionDrainingTimeoutSec:
                     description: Time for which instance will be drained (not accept new connections, but still work to finish started).
@@ -911,7 +931,7 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/global/backendServices/{{name}}
                     type: string
                   loadBalancingScheme:
-                    description: Indicates whether the backend service will be used with internal or external load balancing. A backend service created for one type of load balancing cannot be used with the other. For more information, refer to Choosing a load balancer. Default value is EXTERNAL. Possible values are EXTERNAL, INTERNAL_SELF_MANAGED, and EXTERNAL_MANAGED.
+                    description: 'Indicates whether the backend service will be used with internal or external load balancing. A backend service created for one type of load balancing cannot be used with the other. For more information, refer to Choosing a load balancer. Default value is EXTERNAL. Possible values are: EXTERNAL, INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED.'
                     type: string
                   localityLbPolicies:
                     description: A list of locality load balancing policies to be used in order of preference. Either the policy or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field. localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is referenced by a target gRPC proxy that has the validateForProxyless field set to true. Structure is documented below.
@@ -1019,7 +1039,7 @@ spec:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
                   protocol:
-                    description: 'The protocol this BackendService uses to communicate with backends. The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer types and may result in errors if used with the GA API. Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, and GRPC.'
+                    description: 'The protocol this BackendService uses to communicate with backends. The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer types and may result in errors if used with the GA API. Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC.'
                     type: string
                   securityPolicy:
                     description: The security policy associated with this backend service.
@@ -1042,7 +1062,7 @@ spec:
                     description: The URI of the created resource.
                     type: string
                   sessionAffinity:
-                    description: Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, and HTTP_COOKIE.
+                    description: 'Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.'
                     type: string
                   timeoutSec:
                     description: How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is [1, 86400].

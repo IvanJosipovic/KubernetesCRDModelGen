@@ -395,7 +395,7 @@ spec:
                           description: The name of the event to handle.
                           type: string
                         name:
-                          description: The unique identifier of this event handler.
+                          description: (Output) The unique identifier of this event handler.
                           type: string
                         targetFlow:
                           description: 'The target flow to transition to. Format: projects//locations//agents//flows/.'
@@ -416,7 +416,7 @@ spec:
                                       items:
                                         properties:
                                           allowPlaybackInterruption:
-                                            description: Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+                                            description: (Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
                                             type: boolean
                                           text:
                                             description: A collection of text responses.
@@ -483,7 +483,7 @@ spec:
                           description: 'The unique identifier of an Intent. Format: projects//locations//agents//intents/. Indicates that the transition can only happen when the given intent is matched. At least one of intent or condition must be specified. When both intent and condition are specified, the transition can only happen when both are fulfilled.'
                           type: string
                         name:
-                          description: The unique identifier of this transition route.
+                          description: (Output) The unique identifier of this transition route.
                           type: string
                         targetFlow:
                           description: 'The target flow to transition to. Format: projects//locations//agents//flows/.'
@@ -504,7 +504,7 @@ spec:
                                       items:
                                         properties:
                                           allowPlaybackInterruption:
-                                            description: Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+                                            description: (Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
                                             type: boolean
                                           text:
                                             description: A collection of text responses.

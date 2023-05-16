@@ -143,7 +143,7 @@ spec:
                     description: Schema of the entry (e.g. BigQuery, GoogleSQL, Avro schema), as a json string. An entry might not have any schema attached to it. See https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema for what fields this schema can contain.
                     type: string
                   type:
-                    description: The type of the entry. Only used for Entries with types in the EntryType enum. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType. Possible values are FILESET.
+                    description: 'The type of the entry. Only used for Entries with types in the EntryType enum. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType. Possible values are: FILESET.'
                     type: string
                   userSpecifiedSystem:
                     description: This field indicates the entry's source system that Data Catalog does not integrate with. userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
@@ -297,13 +297,13 @@ spec:
                     items:
                       properties:
                         dataset:
-                          description: The Data Catalog resource name of the dataset entry the current table belongs to, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}
+                          description: (Output) The Data Catalog resource name of the dataset entry the current table belongs to, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}
                           type: string
                         shardCount:
-                          description: Total number of shards.
+                          description: (Output) Total number of shards.
                           type: number
                         tablePrefix:
-                          description: The table name prefix of the shards. The name of any given shard is [tablePrefix]YYYYMMDD, for example, for shard MyTable20180101, the tablePrefix is MyTable.
+                          description: (Output) The table name prefix of the shards. The name of any given shard is [tablePrefix]YYYYMMDD, for example, for shard MyTable20180101, the tablePrefix is MyTable.
                           type: string
                       type: object
                     type: array
@@ -312,23 +312,23 @@ spec:
                     items:
                       properties:
                         tableSourceType:
-                          description: The table source type.
+                          description: (Output) The table source type.
                           type: string
                         tableSpec:
-                          description: Spec of a BigQuery table. This field should only be populated if tableSourceType is BIGQUERY_TABLE. Structure is documented below.
+                          description: (Output) Spec of a BigQuery table. This field should only be populated if tableSourceType is BIGQUERY_TABLE. Structure is documented below.
                           items:
                             properties:
                               groupedEntry:
-                                description: If the table is a dated shard, i.e., with name pattern [prefix]YYYYMMDD, groupedEntry is the Data Catalog resource name of the date sharded grouped entry, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}. Otherwise, groupedEntry is empty.
+                                description: (Output) If the table is a dated shard, i.e., with name pattern [prefix]YYYYMMDD, groupedEntry is the Data Catalog resource name of the date sharded grouped entry, for example, projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}. Otherwise, groupedEntry is empty.
                                 type: string
                             type: object
                           type: array
                         viewSpec:
-                          description: Table view specification. This field should only be populated if tableSourceType is BIGQUERY_VIEW. Structure is documented below.
+                          description: (Output) Table view specification. This field should only be populated if tableSourceType is BIGQUERY_VIEW. Structure is documented below.
                           items:
                             properties:
                               viewQuery:
-                                description: The query that defines the table view.
+                                description: (Output) The query that defines the table view.
                                 type: string
                             type: object
                           type: array
@@ -356,14 +356,14 @@ spec:
                             type: string
                           type: array
                         sampleGcsFileSpecs:
-                          description: Sample files contained in this fileset, not all files contained in this fileset are represented here. Structure is documented below.
+                          description: (Output) Sample files contained in this fileset, not all files contained in this fileset are represented here. Structure is documented below.
                           items:
                             properties:
                               filePath:
-                                description: The full file path
+                                description: (Output) The full file path
                                 type: string
                               sizeBytes:
-                                description: The size of the file, in bytes.
+                                description: (Output) The size of the file, in bytes.
                                 type: number
                             type: object
                           type: array
@@ -385,7 +385,7 @@ spec:
                     description: Schema of the entry (e.g. BigQuery, GoogleSQL, Avro schema), as a json string. An entry might not have any schema attached to it. See https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries#schema for what fields this schema can contain.
                     type: string
                   type:
-                    description: The type of the entry. Only used for Entries with types in the EntryType enum. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType. Possible values are FILESET.
+                    description: 'The type of the entry. Only used for Entries with types in the EntryType enum. Currently, only FILESET enum value is allowed. All other entries created through Data Catalog must use userSpecifiedType. Possible values are: FILESET.'
                     type: string
                   userSpecifiedSystem:
                     description: This field indicates the entry's source system that Data Catalog does not integrate with. userSpecifiedSystem strings must begin with a letter or underscore and can only contain letters, numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.

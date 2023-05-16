@@ -75,8 +75,6 @@ spec:
                             - priority
                             type: object
                           type: array
-                      required:
-                      - recoveryMechanism
                       type: object
                     type: array
                   adminCreateUserConfig:

@@ -414,7 +414,7 @@ spec:
                           description: ': (default: 128) The maximum Neptune Capacity Units (NCUs) for this cluster. Must be lower or equal than 128. See AWS Documentation for more details.'
                           type: number
                         minCapacity:
-                          description: ': (default: 2.5) The minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 2.5. See AWS Documentation for more details.'
+                          description: ': (default: 2.5) The minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 1. See AWS Documentation for more details.'
                           type: number
                       type: object
                     type: array
@@ -790,7 +790,7 @@ spec:
                           description: ': (default: 128) The maximum Neptune Capacity Units (NCUs) for this cluster. Must be lower or equal than 128. See AWS Documentation for more details.'
                           type: number
                         minCapacity:
-                          description: ': (default: 2.5) The minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 2.5. See AWS Documentation for more details.'
+                          description: ': (default: 2.5) The minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 1. See AWS Documentation for more details.'
                           type: number
                       type: object
                     type: array
