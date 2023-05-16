@@ -59,9 +59,23 @@ spec:
                   customQuestionAnsweringSearchServiceId:
                     description: If kind is TextAnalytics this specifies the ID of the Search service.
                     type: string
-                  customQuestionAnsweringSearchServiceKey:
+                  customQuestionAnsweringSearchServiceKeySecretRef:
                     description: If kind is TextAnalytics this specifies the key of the Search service.
-                    type: string
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   customSubdomainName:
                     description: The subdomain name used for token-based authentication. Changing this forces a new resource to be created.
                     type: string
@@ -443,9 +457,6 @@ spec:
                 properties:
                   customQuestionAnsweringSearchServiceId:
                     description: If kind is TextAnalytics this specifies the ID of the Search service.
-                    type: string
-                  customQuestionAnsweringSearchServiceKey:
-                    description: If kind is TextAnalytics this specifies the key of the Search service.
                     type: string
                   customSubdomainName:
                     description: The subdomain name used for token-based authentication. Changing this forces a new resource to be created.

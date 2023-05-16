@@ -129,7 +129,7 @@ spec:
                                   type: string
                                 type: array
                               type:
-                                description: By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead. Possible values are DIST and UPGRADE.
+                                description: 'By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead. Possible values are: DIST, UPGRADE.'
                                 type: string
                             type: object
                           type: array
@@ -180,7 +180,7 @@ spec:
                                         type: object
                                       type: array
                                     interpreter:
-                                      description: The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are SHELL and POWERSHELL.
+                                      description: 'The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are: SHELL, POWERSHELL.'
                                       type: string
                                     localPath:
                                       description: An absolute path to the executable on the VM.
@@ -216,7 +216,7 @@ spec:
                                         type: object
                                       type: array
                                     interpreter:
-                                      description: The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are SHELL and POWERSHELL.
+                                      description: 'The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are: SHELL, POWERSHELL.'
                                       type: string
                                     localPath:
                                       description: An absolute path to the executable on the VM.
@@ -258,7 +258,7 @@ spec:
                                         type: object
                                       type: array
                                     interpreter:
-                                      description: The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are SHELL and POWERSHELL.
+                                      description: 'The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are: SHELL, POWERSHELL.'
                                       type: string
                                     localPath:
                                       description: An absolute path to the executable on the VM.
@@ -294,7 +294,7 @@ spec:
                                         type: object
                                       type: array
                                     interpreter:
-                                      description: The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are SHELL and POWERSHELL.
+                                      description: 'The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are: SHELL, POWERSHELL.'
                                       type: string
                                     localPath:
                                       description: An absolute path to the executable on the VM.
@@ -304,14 +304,14 @@ spec:
                             type: object
                           type: array
                         rebootConfig:
-                          description: Post-patch reboot settings. Possible values are DEFAULT, ALWAYS, and NEVER.
+                          description: 'Post-patch reboot settings. Possible values are: DEFAULT, ALWAYS, NEVER.'
                           type: string
                         windowsUpdate:
                           description: Windows update settings. Use this setting to override the default Windows patch rules. Structure is documented below.
                           items:
                             properties:
                               classifications:
-                                description: Only apply updates of these windows update classifications. If empty, all updates are applied. Each value may be one of CRITICAL, SECURITY, DEFINITION, DRIVER, FEATURE_PACK, SERVICE_PACK, TOOL, UPDATE_ROLLUP, and UPDATE.
+                                description: 'Only apply updates of these windows update classifications. If empty, all updates are applied. Each value may be one of: CRITICAL, SECURITY, DEFINITION, DRIVER, FEATURE_PACK, SERVICE_PACK, TOOL, UPDATE_ROLLUP, UPDATE.'
                                 items:
                                   type: string
                                 type: array
@@ -405,7 +405,7 @@ spec:
                                 items:
                                   properties:
                                     dayOfWeek:
-                                      description: IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, and SUNDAY.
+                                      description: 'IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.'
                                       type: string
                                     weekOrdinal:
                                       description: Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
@@ -457,7 +457,7 @@ spec:
                           items:
                             properties:
                               dayOfWeek:
-                                description: IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, and SUNDAY.
+                                description: 'IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.'
                                 type: string
                             required:
                             - dayOfWeek
@@ -485,7 +485,7 @@ spec:
                             type: object
                           type: array
                         mode:
-                          description: Mode of the patch rollout. Possible values are ZONE_BY_ZONE and CONCURRENT_ZONES.
+                          description: 'Mode of the patch rollout. Possible values are: ZONE_BY_ZONE, CONCURRENT_ZONES.'
                           type: string
                       required:
                       - disruptionBudget
@@ -714,7 +714,7 @@ spec:
                                   type: string
                                 type: array
                               type:
-                                description: By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead. Possible values are DIST and UPGRADE.
+                                description: 'By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead. Possible values are: DIST, UPGRADE.'
                                 type: string
                             type: object
                           type: array
@@ -759,7 +759,7 @@ spec:
                                         type: object
                                       type: array
                                     interpreter:
-                                      description: The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are SHELL and POWERSHELL.
+                                      description: 'The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are: SHELL, POWERSHELL.'
                                       type: string
                                     localPath:
                                       description: An absolute path to the executable on the VM.
@@ -791,7 +791,7 @@ spec:
                                         type: object
                                       type: array
                                     interpreter:
-                                      description: The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are SHELL and POWERSHELL.
+                                      description: 'The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are: SHELL, POWERSHELL.'
                                       type: string
                                     localPath:
                                       description: An absolute path to the executable on the VM.
@@ -829,7 +829,7 @@ spec:
                                         type: object
                                       type: array
                                     interpreter:
-                                      description: The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are SHELL and POWERSHELL.
+                                      description: 'The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are: SHELL, POWERSHELL.'
                                       type: string
                                     localPath:
                                       description: An absolute path to the executable on the VM.
@@ -861,7 +861,7 @@ spec:
                                         type: object
                                       type: array
                                     interpreter:
-                                      description: The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are SHELL and POWERSHELL.
+                                      description: 'The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with shebang lines. Possible values are: SHELL, POWERSHELL.'
                                       type: string
                                     localPath:
                                       description: An absolute path to the executable on the VM.
@@ -871,14 +871,14 @@ spec:
                             type: object
                           type: array
                         rebootConfig:
-                          description: Post-patch reboot settings. Possible values are DEFAULT, ALWAYS, and NEVER.
+                          description: 'Post-patch reboot settings. Possible values are: DEFAULT, ALWAYS, NEVER.'
                           type: string
                         windowsUpdate:
                           description: Windows update settings. Use this setting to override the default Windows patch rules. Structure is documented below.
                           items:
                             properties:
                               classifications:
-                                description: Only apply updates of these windows update classifications. If empty, all updates are applied. Each value may be one of CRITICAL, SECURITY, DEFINITION, DRIVER, FEATURE_PACK, SERVICE_PACK, TOOL, UPDATE_ROLLUP, and UPDATE.
+                                description: 'Only apply updates of these windows update classifications. If empty, all updates are applied. Each value may be one of: CRITICAL, SECURITY, DEFINITION, DRIVER, FEATURE_PACK, SERVICE_PACK, TOOL, UPDATE_ROLLUP, UPDATE.'
                                 items:
                                   type: string
                                 type: array
@@ -961,7 +961,7 @@ spec:
                           description: 'The end time at which a recurring patch deployment schedule is no longer active. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".'
                           type: string
                         lastExecuteTime:
-                          description: 'The time the last patch job ran successfully. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".'
+                          description: '(Output) The time the last patch job ran successfully. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".'
                           type: string
                         monthly:
                           description: Schedule with monthly executions. Structure is documented below.
@@ -975,7 +975,7 @@ spec:
                                 items:
                                   properties:
                                     dayOfWeek:
-                                      description: IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, and SUNDAY.
+                                      description: 'IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.'
                                       type: string
                                     weekOrdinal:
                                       description: Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
@@ -985,7 +985,7 @@ spec:
                             type: object
                           type: array
                         nextExecuteTime:
-                          description: 'The time the next patch job is scheduled to run. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".'
+                          description: '(Output) The time the next patch job is scheduled to run. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".'
                           type: string
                         startTime:
                           description: 'The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".'
@@ -1025,7 +1025,7 @@ spec:
                           items:
                             properties:
                               dayOfWeek:
-                                description: IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, and SUNDAY.
+                                description: 'IANA Time Zone Database time zone, e.g. "America/New_York". Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.'
                                 type: string
                             type: object
                           type: array
@@ -1048,7 +1048,7 @@ spec:
                             type: object
                           type: array
                         mode:
-                          description: Mode of the patch rollout. Possible values are ZONE_BY_ZONE and CONCURRENT_ZONES.
+                          description: 'Mode of the patch rollout. Possible values are: ZONE_BY_ZONE, CONCURRENT_ZONES.'
                           type: string
                       type: object
                     type: array

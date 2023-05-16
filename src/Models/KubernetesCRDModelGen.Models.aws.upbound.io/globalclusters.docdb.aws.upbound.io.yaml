@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: GlobalCluster is the Schema for the GlobalClusters API. Manages a DocDB Global Cluster
+        description: GlobalCluster is the Schema for the GlobalClusters API. Manages a DocumentDB Global Cluster
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -312,7 +312,7 @@ spec:
                     description: AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed.
                     type: string
                   id:
-                    description: DocDB Global Cluster.
+                    description: DocumentDB Global Cluster ID.
                     type: string
                   sourceDbClusterIdentifier:
                     description: Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation.

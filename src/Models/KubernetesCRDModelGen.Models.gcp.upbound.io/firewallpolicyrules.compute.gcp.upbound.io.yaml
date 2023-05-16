@@ -133,8 +133,24 @@ spec:
                     description: A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
                     items:
                       properties:
+                        destAddressGroups:
+                          items:
+                            type: string
+                          type: array
+                        destFqdns:
+                          items:
+                            type: string
+                          type: array
                         destIpRanges:
                           description: CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+                          items:
+                            type: string
+                          type: array
+                        destRegionCodes:
+                          items:
+                            type: string
+                          type: array
+                        destThreatIntelligences:
                           items:
                             type: string
                           type: array
@@ -154,8 +170,24 @@ spec:
                             - ipProtocol
                             type: object
                           type: array
+                        srcAddressGroups:
+                          items:
+                            type: string
+                          type: array
+                        srcFqdns:
+                          items:
+                            type: string
+                          type: array
                         srcIpRanges:
                           description: CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+                          items:
+                            type: string
+                          type: array
+                        srcRegionCodes:
+                          items:
+                            type: string
+                          type: array
+                        srcThreatIntelligences:
                           items:
                             type: string
                           type: array
@@ -351,8 +383,24 @@ spec:
                     description: A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.
                     items:
                       properties:
+                        destAddressGroups:
+                          items:
+                            type: string
+                          type: array
+                        destFqdns:
+                          items:
+                            type: string
+                          type: array
                         destIpRanges:
                           description: CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
+                          items:
+                            type: string
+                          type: array
+                        destRegionCodes:
+                          items:
+                            type: string
+                          type: array
+                        destThreatIntelligences:
                           items:
                             type: string
                           type: array
@@ -370,8 +418,24 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        srcAddressGroups:
+                          items:
+                            type: string
+                          type: array
+                        srcFqdns:
+                          items:
+                            type: string
+                          type: array
                         srcIpRanges:
                           description: CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
+                          items:
+                            type: string
+                          type: array
+                        srcRegionCodes:
+                          items:
+                            type: string
+                          type: array
+                        srcThreatIntelligences:
                           items:
                             type: string
                           type: array

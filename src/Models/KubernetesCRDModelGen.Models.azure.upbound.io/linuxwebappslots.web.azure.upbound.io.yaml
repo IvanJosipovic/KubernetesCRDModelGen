@@ -945,7 +945,7 @@ spec:
                                 description: The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, and 18-lts. This property conflicts with java_version.
                                 type: string
                               phpVersion:
-                                description: The version of PHP to run. Possible values are 7.4, 8.0 and 8.1.
+                                description: The version of PHP to run. Possible values are 8.0, 8.1 and 8.2.
                                 type: string
                               pythonVersion:
                                 description: The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10 and 3.11.
@@ -1070,8 +1070,6 @@ spec:
                               supportCredentials:
                                 description: Whether CORS requests with credentials are allowed. Defaults to false Are credentials allowed in CORS requests? Defaults to `false`.
                                 type: boolean
-                            required:
-                            - allowedOrigins
                             type: object
                           type: array
                         defaultDocuments:
@@ -1096,7 +1094,7 @@ spec:
                           items:
                             properties:
                               action:
-                                description: The action to take. Possible values are Allow or Deny.
+                                description: The action to take. Possible values are Allow or Deny. The action to take. Possible values are `Allow` or `Deny`.
                                 type: string
                               headers:
                                 description: A headers block as defined above.
@@ -1125,19 +1123,19 @@ spec:
                                   type: object
                                 type: array
                               ipAddress:
-                                description: 'The CIDR notation of the IP or IP Range to match. For example: 10.0.0.0/24 or 192.168.10.1/32'
+                                description: 'The CIDR notation of the IP or IP Range to match. For example: 10.0.0.0/24 or 192.168.10.1/32 The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`'
                                 type: string
                               name:
-                                description: The name which should be used for this Storage Account.
+                                description: The name which should be used for this Storage Account. The name which should be used for this `ip_restriction`.
                                 type: string
                               priority:
-                                description: The priority value of this ip_restriction. Defaults to 65000.
+                                description: The priority value of this ip_restriction. Defaults to 65000. The priority value of this `ip_restriction`.
                                 type: number
                               serviceTag:
-                                description: The Service Tag used for this IP Restriction.
+                                description: The Service Tag used for this IP Restriction. The Service Tag used for this IP Restriction.
                                 type: string
                               virtualNetworkSubnetId:
-                                description: The subnet id which will be used by this Web App Slot for regional virtual network integration.
+                                description: The subnet id which will be used by this Web App Slot for regional virtual network integration. The Virtual Network Subnet ID used for this IP Restriction.
                                 type: string
                               virtualNetworkSubnetIdRef:
                                 description: Reference to a Subnet in network to populate virtualNetworkSubnetId.
@@ -1219,7 +1217,7 @@ spec:
                           items:
                             properties:
                               action:
-                                description: The action to take. Possible values are Allow or Deny.
+                                description: The action to take. Possible values are Allow or Deny. The action to take. Possible values are `Allow` or `Deny`.
                                 type: string
                               headers:
                                 description: A headers block as defined above.
@@ -1248,19 +1246,19 @@ spec:
                                   type: object
                                 type: array
                               ipAddress:
-                                description: 'The CIDR notation of the IP or IP Range to match. For example: 10.0.0.0/24 or 192.168.10.1/32'
+                                description: 'The CIDR notation of the IP or IP Range to match. For example: 10.0.0.0/24 or 192.168.10.1/32 The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`'
                                 type: string
                               name:
-                                description: The name which should be used for this Storage Account.
+                                description: The name which should be used for this Storage Account. The name which should be used for this `ip_restriction`.
                                 type: string
                               priority:
-                                description: The priority value of this ip_restriction. Defaults to 65000.
+                                description: The priority value of this ip_restriction. Defaults to 65000. The priority value of this `ip_restriction`.
                                 type: number
                               serviceTag:
-                                description: The Service Tag used for this IP Restriction.
+                                description: The Service Tag used for this IP Restriction. The Service Tag used for this IP Restriction.
                                 type: string
                               virtualNetworkSubnetId:
-                                description: The subnet id which will be used by this Web App Slot for regional virtual network integration.
+                                description: The subnet id which will be used by this Web App Slot for regional virtual network integration. The Virtual Network Subnet ID used for this IP Restriction.
                                 type: string
                               virtualNetworkSubnetIdRef:
                                 description: Reference to a Subnet in network to populate virtualNetworkSubnetId.
@@ -2106,6 +2104,9 @@ spec:
                   enabled:
                     description: Should the Linux Web App be enabled? Defaults to true.
                     type: boolean
+                  hostingEnvironmentId:
+                    description: The ID of the App Service Environment used by App Service Slot.
+                    type: string
                   httpsOnly:
                     description: Should the Linux Web App require HTTPS connections.
                     type: boolean
@@ -2268,7 +2269,7 @@ spec:
                                 description: The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, and 18-lts. This property conflicts with java_version.
                                 type: string
                               phpVersion:
-                                description: The version of PHP to run. Possible values are 7.4, 8.0 and 8.1.
+                                description: The version of PHP to run. Possible values are 8.0, 8.1 and 8.2.
                                 type: string
                               pythonVersion:
                                 description: The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10 and 3.11.
@@ -2407,7 +2408,7 @@ spec:
                           items:
                             properties:
                               action:
-                                description: The action to take. Possible values are Allow or Deny.
+                                description: The action to take. Possible values are Allow or Deny. The action to take. Possible values are `Allow` or `Deny`.
                                 type: string
                               headers:
                                 description: A headers block as defined above.
@@ -2436,19 +2437,19 @@ spec:
                                   type: object
                                 type: array
                               ipAddress:
-                                description: 'The CIDR notation of the IP or IP Range to match. For example: 10.0.0.0/24 or 192.168.10.1/32'
+                                description: 'The CIDR notation of the IP or IP Range to match. For example: 10.0.0.0/24 or 192.168.10.1/32 The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`'
                                 type: string
                               name:
-                                description: The name which should be used for this Storage Account.
+                                description: The name which should be used for this Storage Account. The name which should be used for this `ip_restriction`.
                                 type: string
                               priority:
-                                description: The priority value of this ip_restriction. Defaults to 65000.
+                                description: The priority value of this ip_restriction. Defaults to 65000. The priority value of this `ip_restriction`.
                                 type: number
                               serviceTag:
-                                description: The Service Tag used for this IP Restriction.
+                                description: The Service Tag used for this IP Restriction. The Service Tag used for this IP Restriction.
                                 type: string
                               virtualNetworkSubnetId:
-                                description: The subnet id which will be used by this Web App Slot for regional virtual network integration.
+                                description: The subnet id which will be used by this Web App Slot for regional virtual network integration. The Virtual Network Subnet ID used for this IP Restriction.
                                 type: string
                             type: object
                           type: array
@@ -2477,7 +2478,7 @@ spec:
                           items:
                             properties:
                               action:
-                                description: The action to take. Possible values are Allow or Deny.
+                                description: The action to take. Possible values are Allow or Deny. The action to take. Possible values are `Allow` or `Deny`.
                                 type: string
                               headers:
                                 description: A headers block as defined above.
@@ -2506,19 +2507,19 @@ spec:
                                   type: object
                                 type: array
                               ipAddress:
-                                description: 'The CIDR notation of the IP or IP Range to match. For example: 10.0.0.0/24 or 192.168.10.1/32'
+                                description: 'The CIDR notation of the IP or IP Range to match. For example: 10.0.0.0/24 or 192.168.10.1/32 The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`'
                                 type: string
                               name:
-                                description: The name which should be used for this Storage Account.
+                                description: The name which should be used for this Storage Account. The name which should be used for this `ip_restriction`.
                                 type: string
                               priority:
-                                description: The priority value of this ip_restriction. Defaults to 65000.
+                                description: The priority value of this ip_restriction. Defaults to 65000. The priority value of this `ip_restriction`.
                                 type: number
                               serviceTag:
-                                description: The Service Tag used for this IP Restriction.
+                                description: The Service Tag used for this IP Restriction. The Service Tag used for this IP Restriction.
                                 type: string
                               virtualNetworkSubnetId:
-                                description: The subnet id which will be used by this Web App Slot for regional virtual network integration.
+                                description: The subnet id which will be used by this Web App Slot for regional virtual network integration. The Virtual Network Subnet ID used for this IP Restriction.
                                 type: string
                             type: object
                           type: array
@@ -2542,18 +2543,6 @@ spec:
                         workerCount:
                           description: The number of Workers for this Linux App Service Slot.
                           type: number
-                      type: object
-                    type: array
-                  siteCredential:
-                    description: A site_credential block as defined below.
-                    items:
-                      properties:
-                        name:
-                          description: The Site Credentials Username used for publishing.
-                          type: string
-                        password:
-                          description: The Site Credentials Password used for publishing.
-                          type: string
                       type: object
                     type: array
                   storageAccount:

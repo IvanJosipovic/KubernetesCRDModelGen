@@ -60,7 +60,7 @@ spec:
                     description: Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly. Valid values are PublicInternetOnly and VpcOnly.
                     type: string
                   appSecurityGroupManagement:
-                    description: The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Valid values are Service and Customer.* domain_settings -  The domain settings. See Domain Settings below.
+                    description: The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Valid values are Service and Customer.
                     type: string
                   authMode:
                     description: The mode of authentication that members use to access the domain. Valid values are IAM and SSO.
@@ -176,8 +176,20 @@ spec:
                           description: The Canvas app settings. See Canvas App Settings below.
                           items:
                             properties:
+                              modelRegisterSettings:
+                                description: The model registry settings for the SageMaker Canvas application. See Model Register Settings below.
+                                items:
+                                  properties:
+                                    crossAccountModelRegisterRoleArn:
+                                      description: The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set up.
+                                      type: string
+                                    status:
+                                      description: Describes whether the integration to the model registry is enabled or disabled in the Canvas application.. Valid values are ENABLED and DISABLED.
+                                      type: string
+                                  type: object
+                                type: array
                               timeSeriesForecastingSettings:
-                                description: Time series forecast settings for the Canvas app. see Time Series Forecasting Settings below.
+                                description: Time series forecast settings for the Canvas app. See Time Series Forecasting Settings below.
                                 items:
                                   properties:
                                     amazonForecastRoleArn:
@@ -484,6 +496,18 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        rStudioServerProAppSettings:
+                          description: A collection of settings that configure user interaction with the RStudioServerPro app. See RStudioServerProAppSettings below.
+                          items:
+                            properties:
+                              accessStatus:
+                                description: Indicates whether the current user has access to the RStudioServerPro app. Valid values are ENABLED and DISABLED.
+                                type: string
+                              userGroup:
+                                description: The level of permissions that the user has within the RStudioServerPro app. This value defaults to R_STUDIO_USER. The R_STUDIO_ADMIN value allows the user access to the RStudio Administrative Dashboard. Valid values are R_STUDIO_USER and R_STUDIO_ADMIN.
+                                type: string
+                            type: object
+                          type: array
                         securityGroups:
                           description: A list of security group IDs that will be attached to the user.
                           items:
@@ -533,12 +557,47 @@ spec:
                   domainName:
                     type: string
                   domainSettings:
-                    description: The domain's settings.
+                    description: The domain settings. See Domain Settings below.
                     items:
                       properties:
                         executionRoleIdentityConfig:
                           description: The configuration for attaching a SageMaker user profile name to the execution role as a sts:SourceIdentity key AWS Docs. Valid values are USER_PROFILE_NAME and DISABLED.
                           type: string
+                        rStudioServerProDomainSettings:
+                          description: A collection of settings that configure the RStudioServerPro Domain-level app. see RStudioServerProDomainSettings below.
+                          items:
+                            properties:
+                              defaultResourceSpec:
+                                description: The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+                                items:
+                                  properties:
+                                    instanceType:
+                                      description: The instance type that the image version runs on.. For valid values see SageMaker Instance Types.
+                                      type: string
+                                    lifecycleConfigArn:
+                                      description: The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
+                                      type: string
+                                    sagemakerImageArn:
+                                      description: The ARN of the SageMaker image that the image version belongs to.
+                                      type: string
+                                    sagemakerImageVersionArn:
+                                      description: The ARN of the image version created on the instance.
+                                      type: string
+                                  type: object
+                                type: array
+                              domainExecutionRoleArn:
+                                description: The ARN of the execution role for the RStudioServerPro Domain-level app.
+                                type: string
+                              rStudioConnectUrl:
+                                description: A URL pointing to an RStudio Connect server.
+                                type: string
+                              rStudioPackageManagerUrl:
+                                description: A URL pointing to an RStudio Package Manager server.
+                                type: string
+                            required:
+                            - domainExecutionRoleArn
+                            type: object
+                          type: array
                         securityGroupIds:
                           description: The security groups for the Amazon Virtual Private Cloud that the Domain uses for communication between Domain-level apps and user apps.
                           items:
@@ -893,7 +952,7 @@ spec:
                     description: Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly. Valid values are PublicInternetOnly and VpcOnly.
                     type: string
                   appSecurityGroupManagement:
-                    description: The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Valid values are Service and Customer.* domain_settings -  The domain settings. See Domain Settings below.
+                    description: The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Valid values are Service and Customer.
                     type: string
                   arn:
                     description: The Amazon Resource Name (ARN) assigned by AWS to this Domain.
@@ -1005,8 +1064,20 @@ spec:
                           description: The Canvas app settings. See Canvas App Settings below.
                           items:
                             properties:
+                              modelRegisterSettings:
+                                description: The model registry settings for the SageMaker Canvas application. See Model Register Settings below.
+                                items:
+                                  properties:
+                                    crossAccountModelRegisterRoleArn:
+                                      description: The Amazon Resource Name (ARN) of the SageMaker model registry account. Required only to register model versions created by a different SageMaker Canvas AWS account than the AWS account in which SageMaker model registry is set up.
+                                      type: string
+                                    status:
+                                      description: Describes whether the integration to the model registry is enabled or disabled in the Canvas application.. Valid values are ENABLED and DISABLED.
+                                      type: string
+                                  type: object
+                                type: array
                               timeSeriesForecastingSettings:
-                                description: Time series forecast settings for the Canvas app. see Time Series Forecasting Settings below.
+                                description: Time series forecast settings for the Canvas app. See Time Series Forecasting Settings below.
                                 items:
                                   properties:
                                     amazonForecastRoleArn:
@@ -1143,6 +1214,18 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        rStudioServerProAppSettings:
+                          description: A collection of settings that configure user interaction with the RStudioServerPro app. See RStudioServerProAppSettings below.
+                          items:
+                            properties:
+                              accessStatus:
+                                description: Indicates whether the current user has access to the RStudioServerPro app. Valid values are ENABLED and DISABLED.
+                                type: string
+                              userGroup:
+                                description: The level of permissions that the user has within the RStudioServerPro app. This value defaults to R_STUDIO_USER. The R_STUDIO_ADMIN value allows the user access to the RStudio Administrative Dashboard. Valid values are R_STUDIO_USER and R_STUDIO_ADMIN.
+                                type: string
+                            type: object
+                          type: array
                         securityGroups:
                           description: A list of security group IDs that will be attached to the user.
                           items:
@@ -1192,12 +1275,45 @@ spec:
                   domainName:
                     type: string
                   domainSettings:
-                    description: The domain's settings.
+                    description: The domain settings. See Domain Settings below.
                     items:
                       properties:
                         executionRoleIdentityConfig:
                           description: The configuration for attaching a SageMaker user profile name to the execution role as a sts:SourceIdentity key AWS Docs. Valid values are USER_PROFILE_NAME and DISABLED.
                           type: string
+                        rStudioServerProDomainSettings:
+                          description: A collection of settings that configure the RStudioServerPro Domain-level app. see RStudioServerProDomainSettings below.
+                          items:
+                            properties:
+                              defaultResourceSpec:
+                                description: The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+                                items:
+                                  properties:
+                                    instanceType:
+                                      description: The instance type that the image version runs on.. For valid values see SageMaker Instance Types.
+                                      type: string
+                                    lifecycleConfigArn:
+                                      description: The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
+                                      type: string
+                                    sagemakerImageArn:
+                                      description: The ARN of the SageMaker image that the image version belongs to.
+                                      type: string
+                                    sagemakerImageVersionArn:
+                                      description: The ARN of the image version created on the instance.
+                                      type: string
+                                  type: object
+                                type: array
+                              domainExecutionRoleArn:
+                                description: The ARN of the execution role for the RStudioServerPro Domain-level app.
+                                type: string
+                              rStudioConnectUrl:
+                                description: A URL pointing to an RStudio Connect server.
+                                type: string
+                              rStudioPackageManagerUrl:
+                                description: A URL pointing to an RStudio Package Manager server.
+                                type: string
+                            type: object
+                          type: array
                         securityGroupIds:
                           description: The security groups for the Amazon Virtual Private Cloud that the Domain uses for communication between Domain-level apps and user apps.
                           items:

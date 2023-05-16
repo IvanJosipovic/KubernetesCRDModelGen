@@ -64,7 +64,7 @@ spec:
                     items:
                       properties:
                         balancingMode:
-                          description: Specifies the balancing mode for this backend. See the Backend Services Overview for an explanation of load balancing modes. Default value is CONNECTION. Possible values are UTILIZATION, RATE, and CONNECTION.
+                          description: 'Specifies the balancing mode for this backend. See the Backend Services Overview for an explanation of load balancing modes. Default value is CONNECTION. Possible values are: UTILIZATION, RATE, CONNECTION.'
                           type: string
                         capacityScaler:
                           description: "A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or CONNECTION). ~>NOTE: This field cannot be set for INTERNAL region backend services (default loadBalancingScheme), but is required for non-INTERNAL backend service. The total capacity_scaler for all backends must be non-zero. A setting of 0 means the group is completely drained, offering 0% of its available Capacity. Valid range is [0.0,1.0]."
@@ -191,7 +191,7 @@ spec:
                             type: object
                           type: array
                         cacheMode:
-                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, and CACHE_ALL_STATIC.'
+                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, CACHE_ALL_STATIC.'
                           type: string
                         clientTtl:
                           description: Specifies the maximum allowed TTL for cached content served by this origin.
@@ -492,7 +492,7 @@ spec:
                     description: The Region in which the created backend service should reside. If it is not provided, the provider region is used.
                     type: string
                   sessionAffinity:
-                    description: Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, and CLIENT_IP_NO_DESTINATION.
+                    description: 'Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, CLIENT_IP_NO_DESTINATION.'
                     type: string
                   timeoutSec:
                     description: How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is [1, 86400].
@@ -645,7 +645,7 @@ spec:
                     items:
                       properties:
                         balancingMode:
-                          description: Specifies the balancing mode for this backend. See the Backend Services Overview for an explanation of load balancing modes. Default value is CONNECTION. Possible values are UTILIZATION, RATE, and CONNECTION.
+                          description: 'Specifies the balancing mode for this backend. See the Backend Services Overview for an explanation of load balancing modes. Default value is CONNECTION. Possible values are: UTILIZATION, RATE, CONNECTION.'
                           type: string
                         capacityScaler:
                           description: "A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or CONNECTION). ~>NOTE: This field cannot be set for INTERNAL region backend services (default loadBalancingScheme), but is required for non-INTERNAL backend service. The total capacity_scaler for all backends must be non-zero. A setting of 0 means the group is completely drained, offering 0% of its available Capacity. Valid range is [0.0,1.0]."
@@ -717,7 +717,7 @@ spec:
                             type: object
                           type: array
                         cacheMode:
-                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, and CACHE_ALL_STATIC.'
+                          description: 'Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, CACHE_ALL_STATIC.'
                           type: string
                         clientTtl:
                           description: Specifies the maximum allowed TTL for cached content served by this origin.
@@ -946,7 +946,7 @@ spec:
                     description: The URI of the created resource.
                     type: string
                   sessionAffinity:
-                    description: Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, and CLIENT_IP_NO_DESTINATION.
+                    description: 'Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, CLIENT_IP_NO_DESTINATION.'
                     type: string
                   timeoutSec:
                     description: How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is [1, 86400].

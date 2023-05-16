@@ -57,7 +57,7 @@ spec:
               forProvider:
                 properties:
                   action:
-                    description: The action to take if this rule matches. Possible values are UNSPECIFIED_ACTION, ALLOW, and DENY.
+                    description: 'The action to take if this rule matches. Possible values are: UNSPECIFIED_ACTION, ALLOW, DENY.'
                     type: string
                   description:
                     description: An optional string description of this rule.
@@ -270,7 +270,7 @@ spec:
               atProvider:
                 properties:
                   action:
-                    description: The action to take if this rule matches. Possible values are UNSPECIFIED_ACTION, ALLOW, and DENY.
+                    description: 'The action to take if this rule matches. Possible values are: UNSPECIFIED_ACTION, ALLOW, DENY.'
                     type: string
                   description:
                     description: An optional string description of this rule.

@@ -68,7 +68,7 @@ spec:
                           items:
                             properties:
                               matchValues:
-                                description: A list of match values.
+                                description: A list of match values. This is Required when the operator is not Any.
                                 items:
                                   type: string
                                 type: array
@@ -90,7 +90,7 @@ spec:
                                 description: Describes if this is negate condition or not
                                 type: boolean
                               operator:
-                                description: Describes operator to be matched. Possible values are IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith and Regex.
+                                description: Describes operator to be matched. Possible values are Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith and Regex.
                                 type: string
                               transforms:
                                 description: A list of transformations to do before the match is attempted. Possible values are HtmlEntityDecode, Lowercase, RemoveNulls, Trim, UrlDecode and UrlEncode.
@@ -98,7 +98,6 @@ spec:
                                   type: string
                                 type: array
                             required:
-                            - matchValues
                             - matchVariables
                             - operator
                             type: object
@@ -462,7 +461,7 @@ spec:
                           items:
                             properties:
                               matchValues:
-                                description: A list of match values.
+                                description: A list of match values. This is Required when the operator is not Any.
                                 items:
                                   type: string
                                 type: array
@@ -482,7 +481,7 @@ spec:
                                 description: Describes if this is negate condition or not
                                 type: boolean
                               operator:
-                                description: Describes operator to be matched. Possible values are IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith and Regex.
+                                description: Describes operator to be matched. Possible values are Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith and Regex.
                                 type: string
                               transforms:
                                 description: A list of transformations to do before the match is attempted. Possible values are HtmlEntityDecode, Lowercase, RemoveNulls, Trim, UrlDecode and UrlEncode.

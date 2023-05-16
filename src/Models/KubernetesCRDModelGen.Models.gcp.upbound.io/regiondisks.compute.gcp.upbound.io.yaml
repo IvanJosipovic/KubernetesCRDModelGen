@@ -337,7 +337,7 @@ spec:
                           description: The name of the encryption key that is stored in Google Cloud KMS.
                           type: string
                         sha256:
-                          description: The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
+                          description: (Output) The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
                           type: string
                       type: object
                     type: array
@@ -395,7 +395,7 @@ spec:
                           description: Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
                           type: string
                         sha256:
-                          description: The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
+                          description: (Output) The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
                           type: string
                       type: object
                     type: array

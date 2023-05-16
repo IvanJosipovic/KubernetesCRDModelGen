@@ -124,7 +124,7 @@ spec:
                     description: This field only applies when the forwarding rule that references this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
                     type: boolean
                   proxyHeader:
-                    description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                    description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                     type: string
                 type: object
               managementPolicy:
@@ -283,7 +283,7 @@ spec:
                     description: This field only applies when the forwarding rule that references this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
                     type: boolean
                   proxyHeader:
-                    description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                    description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                     type: string
                   proxyId:
                     description: The unique identifier for the resource.

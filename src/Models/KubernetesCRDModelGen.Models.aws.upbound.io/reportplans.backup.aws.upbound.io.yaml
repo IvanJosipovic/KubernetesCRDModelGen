@@ -88,6 +88,11 @@ spec:
                     description: An object that identifies the report template for the report. Reports are built using a report template. Detailed below.
                     items:
                       properties:
+                        accounts:
+                          description: Specifies the list of accounts a report covers.
+                          items:
+                            type: string
+                          type: array
                         frameworkArns:
                           description: Specifies the Amazon Resource Names (ARNs) of the frameworks a report covers.
                           items:
@@ -96,6 +101,16 @@ spec:
                         numberOfFrameworks:
                           description: Specifies the number of frameworks a report covers.
                           type: number
+                        organizationUnits:
+                          description: Specifies the list of Organizational Units a report covers.
+                          items:
+                            type: string
+                          type: array
+                        regions:
+                          description: Specifies the list of regions a report covers.
+                          items:
+                            type: string
+                          type: array
                         reportTemplate:
                           description: 'Identifies the report template for the report. Reports are built using a report template. The report templates are: RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT.'
                           type: string
@@ -294,6 +309,11 @@ spec:
                     description: An object that identifies the report template for the report. Reports are built using a report template. Detailed below.
                     items:
                       properties:
+                        accounts:
+                          description: Specifies the list of accounts a report covers.
+                          items:
+                            type: string
+                          type: array
                         frameworkArns:
                           description: Specifies the Amazon Resource Names (ARNs) of the frameworks a report covers.
                           items:
@@ -302,6 +322,16 @@ spec:
                         numberOfFrameworks:
                           description: Specifies the number of frameworks a report covers.
                           type: number
+                        organizationUnits:
+                          description: Specifies the list of Organizational Units a report covers.
+                          items:
+                            type: string
+                          type: array
+                        regions:
+                          description: Specifies the list of regions a report covers.
+                          items:
+                            type: string
+                          type: array
                         reportTemplate:
                           description: 'Identifies the report template for the report. Reports are built using a report template. The report templates are: RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT.'
                           type: string

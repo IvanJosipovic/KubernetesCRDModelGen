@@ -182,7 +182,7 @@ spec:
                           description: One of the metric namespaces to be monitored.
                           type: string
                         operator:
-                          description: The criteria operator. Possible values are Equals, NotEquals, GreaterThan, GreaterThanOrEqual, LessThan and LessThanOrEqual.
+                          description: The criteria operator. Possible values are Equals, GreaterThan, GreaterThanOrEqual, LessThan and LessThanOrEqual.
                           type: string
                         skipMetricValidation:
                           description: Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to false.
@@ -606,7 +606,7 @@ spec:
                           description: One of the metric namespaces to be monitored.
                           type: string
                         operator:
-                          description: The criteria operator. Possible values are Equals, NotEquals, GreaterThan, GreaterThanOrEqual, LessThan and LessThanOrEqual.
+                          description: The criteria operator. Possible values are Equals, GreaterThan, GreaterThanOrEqual, LessThan and LessThanOrEqual.
                           type: string
                         skipMetricValidation:
                           description: Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to false.

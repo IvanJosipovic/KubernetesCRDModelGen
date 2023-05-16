@@ -74,6 +74,9 @@ spec:
                   enableDns64:
                     description: 'Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic IPv6 addresses for IPv4-only destinations. Default: false.'
                     type: boolean
+                  enableLniAtDeviceIndex:
+                    description: Indicates the device position for local network interfaces in this subnet. For example, 1 indicates local network interfaces in this subnet are the secondary network interface (eth1). A local network interface cannot be the primary network interface (eth0).
+                    type: number
                   enableResourceNameDnsARecordOnLaunch:
                     description: 'Indicates whether to respond to DNS queries for instance hostnames with DNS A records. Default: false.'
                     type: boolean
@@ -325,6 +328,9 @@ spec:
                   enableDns64:
                     description: 'Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic IPv6 addresses for IPv4-only destinations. Default: false.'
                     type: boolean
+                  enableLniAtDeviceIndex:
+                    description: Indicates the device position for local network interfaces in this subnet. For example, 1 indicates local network interfaces in this subnet are the secondary network interface (eth1). A local network interface cannot be the primary network interface (eth0).
+                    type: number
                   enableResourceNameDnsARecordOnLaunch:
                     description: 'Indicates whether to respond to DNS queries for instance hostnames with DNS A records. Default: false.'
                     type: boolean

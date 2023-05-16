@@ -57,7 +57,7 @@ spec:
               forProvider:
                 properties:
                   checkerType:
-                    description: The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS. Possible values are STATIC_IP_CHECKERS and VPC_CHECKERS.
+                    description: 'The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS. Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.'
                     type: string
                   contentMatchers:
                     description: The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required. Structure is documented below.
@@ -71,7 +71,7 @@ spec:
                           items:
                             properties:
                               jsonMatcher:
-                                description: Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are EXACT_MATCH and REGEX_MATCH.
+                                description: 'Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are: EXACT_MATCH, REGEX_MATCH.'
                                 type: string
                               jsonPath:
                                 description: JSONPath within the response output pointing to the expected ContentMatcher::content to match against.
@@ -81,7 +81,7 @@ spec:
                             type: object
                           type: array
                         matcher:
-                          description: The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value is CONTAINS_STRING. Possible values are CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, and NOT_MATCHES_JSON_PATH.
+                          description: 'The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value is CONTAINS_STRING. Possible values are: CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, NOT_MATCHES_JSON_PATH.'
                           type: string
                       required:
                       - content
@@ -99,7 +99,7 @@ spec:
                           items:
                             properties:
                               statusClass:
-                                description: A class of status codes to accept. Possible values are STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, and STATUS_CLASS_ANY.
+                                description: 'A class of status codes to accept. Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.'
                                 type: string
                               statusValue:
                                 description: A status code to accept.
@@ -139,7 +139,7 @@ spec:
                           description: The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
                           type: string
                         contentType:
-                          description: The content type to use for the check. Possible values are TYPE_UNSPECIFIED and URL_ENCODED.
+                          description: 'The content type to use for the check. Possible values are: TYPE_UNSPECIFIED, URL_ENCODED.'
                           type: string
                         headers:
                           additionalProperties:
@@ -156,7 +156,7 @@ spec:
                           description: The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or 443 with SSL).
                           type: number
                         requestMethod:
-                          description: The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value is GET. Possible values are METHOD_UNSPECIFIED, GET, and POST.
+                          description: 'The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value is GET. Possible values are: METHOD_UNSPECIFIED, GET, POST.'
                           type: string
                         useSsl:
                           description: If true, use HTTPS instead of HTTP to run the check.
@@ -252,7 +252,7 @@ spec:
                               type: object
                           type: object
                         resourceType:
-                          description: The resource type of the group members. Possible values are RESOURCE_TYPE_UNSPECIFIED, INSTANCE, and AWS_ELB_LOAD_BALANCER.
+                          description: 'The resource type of the group members. Possible values are: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER.'
                           type: string
                       type: object
                     type: array
@@ -419,7 +419,7 @@ spec:
               atProvider:
                 properties:
                   checkerType:
-                    description: The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS. Possible values are STATIC_IP_CHECKERS and VPC_CHECKERS.
+                    description: 'The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS. Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.'
                     type: string
                   contentMatchers:
                     description: The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required. Structure is documented below.
@@ -433,7 +433,7 @@ spec:
                           items:
                             properties:
                               jsonMatcher:
-                                description: Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are EXACT_MATCH and REGEX_MATCH.
+                                description: 'Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are: EXACT_MATCH, REGEX_MATCH.'
                                 type: string
                               jsonPath:
                                 description: JSONPath within the response output pointing to the expected ContentMatcher::content to match against.
@@ -441,7 +441,7 @@ spec:
                             type: object
                           type: array
                         matcher:
-                          description: The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value is CONTAINS_STRING. Possible values are CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, and NOT_MATCHES_JSON_PATH.
+                          description: 'The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value is CONTAINS_STRING. Possible values are: CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, NOT_MATCHES_JSON_PATH.'
                           type: string
                       type: object
                     type: array
@@ -457,7 +457,7 @@ spec:
                           items:
                             properties:
                               statusClass:
-                                description: A class of status codes to accept. Possible values are STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, and STATUS_CLASS_ANY.
+                                description: 'A class of status codes to accept. Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.'
                                 type: string
                               statusValue:
                                 description: A status code to accept.
@@ -477,7 +477,7 @@ spec:
                           description: The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
                           type: string
                         contentType:
-                          description: The content type to use for the check. Possible values are TYPE_UNSPECIFIED and URL_ENCODED.
+                          description: 'The content type to use for the check. Possible values are: TYPE_UNSPECIFIED, URL_ENCODED.'
                           type: string
                         headers:
                           additionalProperties:
@@ -494,7 +494,7 @@ spec:
                           description: The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or 443 with SSL).
                           type: number
                         requestMethod:
-                          description: The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value is GET. Possible values are METHOD_UNSPECIFIED, GET, and POST.
+                          description: 'The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value is GET. Possible values are: METHOD_UNSPECIFIED, GET, POST.'
                           type: string
                         useSsl:
                           description: If true, use HTTPS instead of HTTP to run the check.
@@ -538,7 +538,7 @@ spec:
                           description: The group of resources being monitored. Should be the name of a group
                           type: string
                         resourceType:
-                          description: The resource type of the group members. Possible values are RESOURCE_TYPE_UNSPECIFIED, INSTANCE, and AWS_ELB_LOAD_BALANCER.
+                          description: 'The resource type of the group members. Possible values are: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER.'
                           type: string
                       type: object
                     type: array

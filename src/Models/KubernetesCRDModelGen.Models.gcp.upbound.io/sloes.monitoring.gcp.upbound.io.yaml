@@ -98,7 +98,7 @@ spec:
                       type: object
                     type: array
                   calendarPeriod:
-                    description: A calendar period, semantically "since the start of the current ". Possible values are DAY, WEEK, FORTNIGHT, and MONTH.
+                    description: 'A calendar period, semantically "since the start of the current ". Possible values are: DAY, WEEK, FORTNIGHT, MONTH.'
                     type: string
                   displayName:
                     description: Name used for UI elements listing this SLO.
@@ -125,10 +125,10 @@ spec:
                                 items:
                                   properties:
                                     max:
-                                      description: max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min"
+                                      description: max value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                     min:
-                                      description: Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max"
+                                      description: Min value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                   type: object
                                 type: array
@@ -291,10 +291,10 @@ spec:
                                             items:
                                               properties:
                                                 max:
-                                                  description: max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min"
+                                                  description: max value for the range (inclusive). If not given, will be set to 0
                                                   type: number
                                                 min:
-                                                  description: Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max"
+                                                  description: Min value for the range (inclusive). If not given, will be set to 0
                                                   type: number
                                               type: object
                                             type: array
@@ -334,10 +334,10 @@ spec:
                                 items:
                                   properties:
                                     max:
-                                      description: max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min"
+                                      description: max value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                     min:
-                                      description: Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max"
+                                      description: Min value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                   type: object
                                 type: array
@@ -358,10 +358,10 @@ spec:
                                 items:
                                   properties:
                                     max:
-                                      description: max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min"
+                                      description: max value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                     min:
-                                      description: Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max"
+                                      description: Min value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                   type: object
                                 type: array
@@ -559,7 +559,7 @@ spec:
                       type: object
                     type: array
                   calendarPeriod:
-                    description: A calendar period, semantically "since the start of the current ". Possible values are DAY, WEEK, FORTNIGHT, and MONTH.
+                    description: 'A calendar period, semantically "since the start of the current ". Possible values are: DAY, WEEK, FORTNIGHT, MONTH.'
                     type: string
                   displayName:
                     description: Name used for UI elements listing this SLO.
@@ -592,10 +592,10 @@ spec:
                                 items:
                                   properties:
                                     max:
-                                      description: max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min"
+                                      description: max value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                     min:
-                                      description: Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max"
+                                      description: Min value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                   type: object
                                 type: array
@@ -698,10 +698,10 @@ spec:
                                             items:
                                               properties:
                                                 max:
-                                                  description: max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min"
+                                                  description: max value for the range (inclusive). If not given, will be set to 0
                                                   type: number
                                                 min:
-                                                  description: Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max"
+                                                  description: Min value for the range (inclusive). If not given, will be set to 0
                                                   type: number
                                               type: object
                                             type: array
@@ -738,10 +738,10 @@ spec:
                                 items:
                                   properties:
                                     max:
-                                      description: max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min"
+                                      description: max value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                     min:
-                                      description: Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max"
+                                      description: Min value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                   type: object
                                 type: array
@@ -759,10 +759,10 @@ spec:
                                 items:
                                   properties:
                                     max:
-                                      description: max value for the range (inclusive). If not given, will be set to "infinity", defining an open range ">= range.min"
+                                      description: max value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                     min:
-                                      description: Min value for the range (inclusive). If not given, will be set to "-infinity", defining an open range "< range.max"
+                                      description: Min value for the range (inclusive). If not given, will be set to 0
                                       type: number
                                   type: object
                                 type: array

@@ -69,7 +69,7 @@ spec:
                     description: S3 bucket name.
                     type: string
                   cannedAclForObjects:
-                    description: Predefined (canned) access control list for objects created in an S3 bucket. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE, AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL. (AWS default is NONE.)
+                    description: Predefined (canned) access control list for objects created in an S3 bucket. Valid values include none, private, public-read, public-read-write, authenticated-read, aws-exec-read, bucket-owner-read, and bucket-owner-full-control. Default is none.
                     type: string
                   cdcInsertsAndUpdates:
                     description: Whether to write insert and update operations to .csv or .parquet output files. Default is false.
@@ -122,6 +122,9 @@ spec:
                   datePartitionTimezone:
                     description: Convert the current UTC time to a timezone. The conversion occurs when a date partition folder is created and a CDC filename is generated. The timezone format is Area/Location (e.g., Europe/Paris). Use this when date_partition_enabled is true. (Ignored for source endpoints.)
                     type: string
+                  detachTargetOnLobLookupFailureParquet:
+                    description: Undocumented argument for use as directed by AWS Support.
+                    type: boolean
                   dictPageSizeLimit:
                     description: Maximum size in bytes of an encoded dictionary page of a column. (AWS default is 1 MiB, i.e., 1048576.)
                     type: number
@@ -519,7 +522,7 @@ spec:
                     description: S3 bucket name.
                     type: string
                   cannedAclForObjects:
-                    description: Predefined (canned) access control list for objects created in an S3 bucket. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE, AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL. (AWS default is NONE.)
+                    description: Predefined (canned) access control list for objects created in an S3 bucket. Valid values include none, private, public-read, public-read-write, authenticated-read, aws-exec-read, bucket-owner-read, and bucket-owner-full-control. Default is none.
                     type: string
                   cdcInsertsAndUpdates:
                     description: Whether to write insert and update operations to .csv or .parquet output files. Default is false.
@@ -572,6 +575,9 @@ spec:
                   datePartitionTimezone:
                     description: Convert the current UTC time to a timezone. The conversion occurs when a date partition folder is created and a CDC filename is generated. The timezone format is Area/Location (e.g., Europe/Paris). Use this when date_partition_enabled is true. (Ignored for source endpoints.)
                     type: string
+                  detachTargetOnLobLookupFailureParquet:
+                    description: Undocumented argument for use as directed by AWS Support.
+                    type: boolean
                   dictPageSizeLimit:
                     description: Maximum size in bytes of an encoded dictionary page of a column. (AWS default is 1 MiB, i.e., 1048576.)
                     type: number

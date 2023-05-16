@@ -416,6 +416,8 @@ spec:
                       properties:
                         interface:
                           type: string
+                        size:
+                          type: number
                       type: object
                     type: array
                   serviceAccount:
@@ -441,7 +443,7 @@ spec:
                       type: object
                     type: array
                   sourceInstanceTemplate:
-                    description: Name or self link of an instance template to create the instance based on.
+                    description: Name or self link of an instance template to create the instance based on. It is recommended to reference instance templates through their unique id (self_link_unique attribute).
                     type: string
                   sourceInstanceTemplateRef:
                     description: Reference to a InstanceTemplate to populate sourceInstanceTemplate.
@@ -889,6 +891,8 @@ spec:
                       properties:
                         interface:
                           type: string
+                        size:
+                          type: number
                       type: object
                     type: array
                   selfLink:
@@ -916,7 +920,7 @@ spec:
                       type: object
                     type: array
                   sourceInstanceTemplate:
-                    description: Name or self link of an instance template to create the instance based on.
+                    description: Name or self link of an instance template to create the instance based on. It is recommended to reference instance templates through their unique id (self_link_unique attribute).
                     type: string
                   tags:
                     items:

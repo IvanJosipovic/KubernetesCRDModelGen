@@ -61,7 +61,6 @@ spec:
                     items:
                       properties:
                         keySource:
-                          description: The source of the encryption key. Possible values are Microsoft.Automation and Microsoft.Keyvault.
                           type: string
                         keyVaultKeyId:
                           description: The ID of the Key Vault Key which should be used to Encrypt the data in this Automation Account.
@@ -315,7 +314,6 @@ spec:
                     items:
                       properties:
                         keySource:
-                          description: The source of the encryption key. Possible values are Microsoft.Automation and Microsoft.Keyvault.
                           type: string
                         keyVaultKeyId:
                           description: The ID of the Key Vault Key which should be used to Encrypt the data in this Automation Account.

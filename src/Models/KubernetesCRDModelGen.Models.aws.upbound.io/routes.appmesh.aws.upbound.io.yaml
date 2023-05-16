@@ -388,17 +388,47 @@ spec:
                                     method:
                                       description: 'Client request header method to match on. Valid values: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH.'
                                       type: string
+                                    path:
+                                      description: Client request path to match on.
+                                      items:
+                                        properties:
+                                          exact:
+                                            description: Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+                                            type: string
+                                          regex:
+                                            description: Value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+                                            type: string
+                                        type: object
+                                      type: array
                                     port:
                                       description: The port number to match from the request.
                                       type: number
                                     prefix:
                                       description: Value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
                                       type: string
+                                    queryParameter:
+                                      description: Client request query parameters to match on.
+                                      items:
+                                        properties:
+                                          match:
+                                            description: Criteria for determining an gRPC request match.
+                                            items:
+                                              properties:
+                                                exact:
+                                                  description: Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                          name:
+                                            description: Name to use for the route. Must be between 1 and 255 characters in length.
+                                            type: string
+                                        required:
+                                        - name
+                                        type: object
+                                      type: array
                                     scheme:
                                       description: 'Client request header scheme to match on. Valid values: http, https.'
                                       type: string
-                                  required:
-                                  - prefix
                                   type: object
                                 type: array
                               retryPolicy:
@@ -617,17 +647,47 @@ spec:
                                     method:
                                       description: 'Client request header method to match on. Valid values: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH.'
                                       type: string
+                                    path:
+                                      description: Client request path to match on.
+                                      items:
+                                        properties:
+                                          exact:
+                                            description: Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+                                            type: string
+                                          regex:
+                                            description: Value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+                                            type: string
+                                        type: object
+                                      type: array
                                     port:
                                       description: The port number to match from the request.
                                       type: number
                                     prefix:
                                       description: Value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
                                       type: string
+                                    queryParameter:
+                                      description: Client request query parameters to match on.
+                                      items:
+                                        properties:
+                                          match:
+                                            description: Criteria for determining an gRPC request match.
+                                            items:
+                                              properties:
+                                                exact:
+                                                  description: Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                          name:
+                                            description: Name to use for the route. Must be between 1 and 255 characters in length.
+                                            type: string
+                                        required:
+                                        - name
+                                        type: object
+                                      type: array
                                     scheme:
                                       description: 'Client request header scheme to match on. Valid values: http, https.'
                                       type: string
-                                  required:
-                                  - prefix
                                   type: object
                                 type: array
                               retryPolicy:
@@ -1294,12 +1354,42 @@ spec:
                                     method:
                                       description: 'Client request header method to match on. Valid values: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH.'
                                       type: string
+                                    path:
+                                      description: Client request path to match on.
+                                      items:
+                                        properties:
+                                          exact:
+                                            description: Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+                                            type: string
+                                          regex:
+                                            description: Value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+                                            type: string
+                                        type: object
+                                      type: array
                                     port:
                                       description: The port number to match from the request.
                                       type: number
                                     prefix:
                                       description: Value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
                                       type: string
+                                    queryParameter:
+                                      description: Client request query parameters to match on.
+                                      items:
+                                        properties:
+                                          match:
+                                            description: Criteria for determining an gRPC request match.
+                                            items:
+                                              properties:
+                                                exact:
+                                                  description: Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                          name:
+                                            description: Name to use for the route. Must be between 1 and 255 characters in length.
+                                            type: string
+                                        type: object
+                                      type: array
                                     scheme:
                                       description: 'Client request header scheme to match on. Valid values: http, https.'
                                       type: string
@@ -1442,12 +1532,42 @@ spec:
                                     method:
                                       description: 'Client request header method to match on. Valid values: GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH.'
                                       type: string
+                                    path:
+                                      description: Client request path to match on.
+                                      items:
+                                        properties:
+                                          exact:
+                                            description: Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+                                            type: string
+                                          regex:
+                                            description: Value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+                                            type: string
+                                        type: object
+                                      type: array
                                     port:
                                       description: The port number to match from the request.
                                       type: number
                                     prefix:
                                       description: Value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
                                       type: string
+                                    queryParameter:
+                                      description: Client request query parameters to match on.
+                                      items:
+                                        properties:
+                                          match:
+                                            description: Criteria for determining an gRPC request match.
+                                            items:
+                                              properties:
+                                                exact:
+                                                  description: Value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                          name:
+                                            description: Name to use for the route. Must be between 1 and 255 characters in length.
+                                            type: string
+                                        type: object
+                                      type: array
                                     scheme:
                                       description: 'Client request header scheme to match on. Valid values: http, https.'
                                       type: string

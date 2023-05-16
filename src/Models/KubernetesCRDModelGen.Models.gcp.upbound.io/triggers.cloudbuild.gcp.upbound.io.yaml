@@ -83,7 +83,7 @@ spec:
                                 description: Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
                                 type: string
                               commentControl:
-                                description: Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values are COMMENTS_DISABLED, COMMENTS_ENABLED, and COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY.
+                                description: 'Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values are: COMMENTS_DISABLED, COMMENTS_ENABLED, COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY.'
                                 type: string
                               invertRegex:
                                 description: Only trigger a build if the revision regex does NOT match the revision regex.
@@ -192,16 +192,16 @@ spec:
                                   type: string
                                 type: array
                               logStreamingOption:
-                                description: Option to define build log streaming behavior to Google Cloud Storage. Possible values are STREAM_DEFAULT, STREAM_ON, and STREAM_OFF.
+                                description: 'Option to define build log streaming behavior to Google Cloud Storage. Possible values are: STREAM_DEFAULT, STREAM_ON, STREAM_OFF.'
                                 type: string
                               logging:
-                                description: Option to specify the logging mode, which determines if and where build logs are stored. Possible values are LOGGING_UNSPECIFIED, LEGACY, GCS_ONLY, STACKDRIVER_ONLY, CLOUD_LOGGING_ONLY, and NONE.
+                                description: 'Option to specify the logging mode, which determines if and where build logs are stored. Possible values are: LOGGING_UNSPECIFIED, LEGACY, GCS_ONLY, STACKDRIVER_ONLY, CLOUD_LOGGING_ONLY, NONE.'
                                 type: string
                               machineType:
-                                description: Compute Engine machine type on which to run the build. Possible values are UNSPECIFIED, N1_HIGHCPU_8, N1_HIGHCPU_32, E2_HIGHCPU_8, and E2_HIGHCPU_32.
+                                description: 'Compute Engine machine type on which to run the build. Possible values are: UNSPECIFIED, N1_HIGHCPU_8, N1_HIGHCPU_32, E2_HIGHCPU_8, E2_HIGHCPU_32.'
                                 type: string
                               requestedVerifyOption:
-                                description: Requested verifiability options. Possible values are NOT_VERIFIED and VERIFIED.
+                                description: 'Requested verifiability options. Possible values are: NOT_VERIFIED, VERIFIED.'
                                 type: string
                               secretEnv:
                                 description: A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's Secret.
@@ -209,12 +209,12 @@ spec:
                                   type: string
                                 type: array
                               sourceProvenanceHash:
-                                description: Requested hash for SourceProvenance. Each value may be one of NONE, SHA256, and MD5.
+                                description: 'Requested hash for SourceProvenance. Each value may be one of: NONE, SHA256, MD5.'
                                 items:
                                   type: string
                                 type: array
                               substitutionOption:
-                                description: Option to specify behavior when there is an error in the substitution checks. NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file. Possible values are MUST_MATCH and ALLOW_LOOSE.
+                                description: 'Option to specify behavior when there is an error in the substitution checks. NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file. Possible values are: MUST_MATCH, ALLOW_LOOSE.'
                                 type: string
                               volumes:
                                 description: List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration. Structure is documented below.
@@ -414,7 +414,7 @@ spec:
                           description: The path of the file, with the repo root as the root of the path.
                           type: string
                         repoType:
-                          description: The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, and BITBUCKET_SERVER.
+                          description: 'The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are: UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER.'
                           type: string
                         revision:
                           description: 'The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename . This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.'
@@ -448,7 +448,7 @@ spec:
                                 description: Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
                                 type: string
                               commentControl:
-                                description: Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values are COMMENTS_DISABLED, COMMENTS_ENABLED, and COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY.
+                                description: 'Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values are: COMMENTS_DISABLED, COMMENTS_ENABLED, COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY.'
                                 type: string
                               invertRegex:
                                 description: Only trigger a build if the revision regex does NOT match the revision regex.
@@ -480,7 +480,7 @@ spec:
                       type: string
                     type: array
                   includeBuildLogs:
-                    description: Build logs will be sent back to GitHub as part of the checkrun result.  Values can be INCLUDE_BUILD_LOGS_UNSPECIFIED or INCLUDE_BUILD_LOGS_WITH_STATUS Possible values are INCLUDE_BUILD_LOGS_UNSPECIFIED and INCLUDE_BUILD_LOGS_WITH_STATUS.
+                    description: 'Build logs will be sent back to GitHub as part of the checkrun result.  Values can be INCLUDE_BUILD_LOGS_UNSPECIFIED or INCLUDE_BUILD_LOGS_WITH_STATUS Possible values are: INCLUDE_BUILD_LOGS_UNSPECIFIED, INCLUDE_BUILD_LOGS_WITH_STATUS.'
                     type: string
                   includedFiles:
                     description: ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for **. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a includedFiles glob. If not, then we do not trigger a build.
@@ -632,7 +632,7 @@ spec:
                           description: The branch or tag to use. Must start with "refs/" .
                           type: string
                         repoType:
-                          description: The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, and BITBUCKET_SERVER.
+                          description: 'The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are: UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER.'
                           type: string
                         uri:
                           description: The URI of the repo .
@@ -909,7 +909,7 @@ spec:
                                 description: Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
                                 type: string
                               commentControl:
-                                description: Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values are COMMENTS_DISABLED, COMMENTS_ENABLED, and COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY.
+                                description: 'Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values are: COMMENTS_DISABLED, COMMENTS_ENABLED, COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY.'
                                 type: string
                               invertRegex:
                                 description: Only trigger a build if the revision regex does NOT match the revision regex.
@@ -1019,16 +1019,16 @@ spec:
                                   type: string
                                 type: array
                               logStreamingOption:
-                                description: Option to define build log streaming behavior to Google Cloud Storage. Possible values are STREAM_DEFAULT, STREAM_ON, and STREAM_OFF.
+                                description: 'Option to define build log streaming behavior to Google Cloud Storage. Possible values are: STREAM_DEFAULT, STREAM_ON, STREAM_OFF.'
                                 type: string
                               logging:
-                                description: Option to specify the logging mode, which determines if and where build logs are stored. Possible values are LOGGING_UNSPECIFIED, LEGACY, GCS_ONLY, STACKDRIVER_ONLY, CLOUD_LOGGING_ONLY, and NONE.
+                                description: 'Option to specify the logging mode, which determines if and where build logs are stored. Possible values are: LOGGING_UNSPECIFIED, LEGACY, GCS_ONLY, STACKDRIVER_ONLY, CLOUD_LOGGING_ONLY, NONE.'
                                 type: string
                               machineType:
-                                description: Compute Engine machine type on which to run the build. Possible values are UNSPECIFIED, N1_HIGHCPU_8, N1_HIGHCPU_32, E2_HIGHCPU_8, and E2_HIGHCPU_32.
+                                description: 'Compute Engine machine type on which to run the build. Possible values are: UNSPECIFIED, N1_HIGHCPU_8, N1_HIGHCPU_32, E2_HIGHCPU_8, E2_HIGHCPU_32.'
                                 type: string
                               requestedVerifyOption:
-                                description: Requested verifiability options. Possible values are NOT_VERIFIED and VERIFIED.
+                                description: 'Requested verifiability options. Possible values are: NOT_VERIFIED, VERIFIED.'
                                 type: string
                               secretEnv:
                                 description: A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's Secret.
@@ -1036,12 +1036,12 @@ spec:
                                   type: string
                                 type: array
                               sourceProvenanceHash:
-                                description: Requested hash for SourceProvenance. Each value may be one of NONE, SHA256, and MD5.
+                                description: 'Requested hash for SourceProvenance. Each value may be one of: NONE, SHA256, MD5.'
                                 items:
                                   type: string
                                 type: array
                               substitutionOption:
-                                description: Option to specify behavior when there is an error in the substitution checks. NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file. Possible values are MUST_MATCH and ALLOW_LOOSE.
+                                description: 'Option to specify behavior when there is an error in the substitution checks. NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden in the build configuration file. Possible values are: MUST_MATCH, ALLOW_LOOSE.'
                                 type: string
                               volumes:
                                 description: List of volumes to mount into the build step. Each volume is created as an empty volume prior to execution of the build step. Upon completion of the build, volumes and their contents are discarded. Using a named volume in only one step is not valid as it is indicative of a build request with an incorrect configuration. Structure is documented below.
@@ -1230,7 +1230,7 @@ spec:
                           description: The path of the file, with the repo root as the root of the path.
                           type: string
                         repoType:
-                          description: The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, and BITBUCKET_SERVER.
+                          description: 'The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are: UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER.'
                           type: string
                         revision:
                           description: 'The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename . This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.'
@@ -1261,7 +1261,7 @@ spec:
                                 description: Regex of branches to match. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
                                 type: string
                               commentControl:
-                                description: Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values are COMMENTS_DISABLED, COMMENTS_ENABLED, and COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY.
+                                description: 'Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values are: COMMENTS_DISABLED, COMMENTS_ENABLED, COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY.'
                                 type: string
                               invertRegex:
                                 description: Only trigger a build if the revision regex does NOT match the revision regex.
@@ -1294,7 +1294,7 @@ spec:
                       type: string
                     type: array
                   includeBuildLogs:
-                    description: Build logs will be sent back to GitHub as part of the checkrun result.  Values can be INCLUDE_BUILD_LOGS_UNSPECIFIED or INCLUDE_BUILD_LOGS_WITH_STATUS Possible values are INCLUDE_BUILD_LOGS_UNSPECIFIED and INCLUDE_BUILD_LOGS_WITH_STATUS.
+                    description: 'Build logs will be sent back to GitHub as part of the checkrun result.  Values can be INCLUDE_BUILD_LOGS_UNSPECIFIED or INCLUDE_BUILD_LOGS_WITH_STATUS Possible values are: INCLUDE_BUILD_LOGS_UNSPECIFIED, INCLUDE_BUILD_LOGS_WITH_STATUS.'
                     type: string
                   includedFiles:
                     description: ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match extended with support for **. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignoredFiles filter and includedFiles is not empty, then we make sure that at least one of those files matches a includedFiles glob. If not, then we do not trigger a build.
@@ -1318,10 +1318,10 @@ spec:
                           description: Service account that will make the push request.
                           type: string
                         state:
-                          description: Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+                          description: (Output) Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
                           type: string
                         subscription:
-                          description: Output only. Name of the subscription.
+                          description: (Output) Output only. Name of the subscription.
                           type: string
                         topic:
                           description: The name of the topic from which this subscription is receiving messages.
@@ -1342,7 +1342,7 @@ spec:
                           description: The branch or tag to use. Must start with "refs/" .
                           type: string
                         repoType:
-                          description: The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, and BITBUCKET_SERVER.
+                          description: 'The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are: UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER.'
                           type: string
                         uri:
                           description: The URI of the repo .
@@ -1397,7 +1397,7 @@ spec:
                           description: Resource name for the secret required as a URL parameter.
                           type: string
                         state:
-                          description: Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+                          description: (Output) Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
                           type: string
                       type: object
                     type: array

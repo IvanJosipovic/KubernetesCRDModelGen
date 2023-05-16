@@ -74,6 +74,9 @@ spec:
                   billingMode:
                     description: Controls how you are charged for read and write throughput and how you manage capacity. The valid values are PROVISIONED and PAY_PER_REQUEST. Defaults to PROVISIONED.
                     type: string
+                  deletionProtectionEnabled:
+                    description: Enables deletion protection for table. Defaults to false.
+                    type: boolean
                   globalSecondaryIndex:
                     description: Describe a GSI for the table; subject to the normal limits on the number of GSIs, projected attributes, etc. See below.
                     items:
@@ -204,7 +207,7 @@ spec:
                     description: When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are KEYS_ONLY, NEW_IMAGE, OLD_IMAGE, NEW_AND_OLD_IMAGES.
                     type: string
                   tableClass:
-                    description: Storage class of the table. Valid values are STANDARD and STANDARD_INFREQUENT_ACCESS.
+                    description: Storage class of the table. Valid values are STANDARD and STANDARD_INFREQUENT_ACCESS. Default value is STANDARD.
                     type: string
                   tags:
                     additionalProperties:
@@ -386,6 +389,9 @@ spec:
                   billingMode:
                     description: Controls how you are charged for read and write throughput and how you manage capacity. The valid values are PROVISIONED and PAY_PER_REQUEST. Defaults to PROVISIONED.
                     type: string
+                  deletionProtectionEnabled:
+                    description: Enables deletion protection for table. Defaults to false.
+                    type: boolean
                   globalSecondaryIndex:
                     description: Describe a GSI for the table; subject to the normal limits on the number of GSIs, projected attributes, etc. See below.
                     items:
@@ -517,7 +523,7 @@ spec:
                     description: When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are KEYS_ONLY, NEW_IMAGE, OLD_IMAGE, NEW_AND_OLD_IMAGES.
                     type: string
                   tableClass:
-                    description: Storage class of the table. Valid values are STANDARD and STANDARD_INFREQUENT_ACCESS.
+                    description: Storage class of the table. Valid values are STANDARD and STANDARD_INFREQUENT_ACCESS. Default value is STANDARD.
                     type: string
                   tags:
                     additionalProperties:

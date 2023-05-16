@@ -189,12 +189,12 @@ spec:
                     items:
                       properties:
                         identityIds:
-                          description: A list of User Assigned Managed Identity IDs to be assigned to this API Management Service. Required if used together with customer_managed_key block.
+                          description: A list of User Assigned Managed Identity IDs to be assigned to this PostgreSQL Flexible Server. Required if used together with customer_managed_key block.
                           items:
                             type: string
                           type: array
                         type:
-                          description: Specifies the type of Managed Service Identity that should be configured on this API Management Service. Should be set to UserAssigned, SystemAssigned, UserAssigned (to enable both).
+                          description: Specifies the type of Managed Service Identity that should be configured on this PostgreSQL Flexible Server. Should be set to UserAssigned, SystemAssigned, UserAssigned (to enable both).
                           type: string
                       required:
                       - type
@@ -566,7 +566,7 @@ spec:
                     items:
                       properties:
                         identityIds:
-                          description: A list of User Assigned Managed Identity IDs to be assigned to this API Management Service. Required if used together with customer_managed_key block.
+                          description: A list of User Assigned Managed Identity IDs to be assigned to this PostgreSQL Flexible Server. Required if used together with customer_managed_key block.
                           items:
                             type: string
                           type: array
@@ -577,7 +577,7 @@ spec:
                           description: The Tenant ID of the Azure Active Directory which is used by the Active Directory authentication. active_directory_auth_enabled must be set to true.
                           type: string
                         type:
-                          description: Specifies the type of Managed Service Identity that should be configured on this API Management Service. Should be set to UserAssigned, SystemAssigned, UserAssigned (to enable both).
+                          description: Specifies the type of Managed Service Identity that should be configured on this PostgreSQL Flexible Server. Should be set to UserAssigned, SystemAssigned, UserAssigned (to enable both).
                           type: string
                       type: object
                     type: array

@@ -57,7 +57,7 @@ spec:
               forProvider:
                 properties:
                   resourceType:
-                    description: The resource type this setting affects. Possible values are AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers and CloudPosture. Defaults to VirtualMachines
+                    description: The resource type this setting affects. Possible values are AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines
                     type: string
                   subplan:
                     description: Resource type pricing subplan. Contact your MSFT representative for possible values.
@@ -210,7 +210,7 @@ spec:
                     description: The subscription pricing ID.
                     type: string
                   resourceType:
-                    description: The resource type this setting affects. Possible values are AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers and CloudPosture. Defaults to VirtualMachines
+                    description: The resource type this setting affects. Possible values are AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines
                     type: string
                   subplan:
                     description: Resource type pricing subplan. Contact your MSFT representative for possible values.

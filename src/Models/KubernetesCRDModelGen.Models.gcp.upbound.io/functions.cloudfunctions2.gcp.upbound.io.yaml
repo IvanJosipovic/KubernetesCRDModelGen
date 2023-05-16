@@ -433,7 +433,7 @@ spec:
                               type: object
                           type: object
                         retryPolicy:
-                          description: Describes the retry policy in case of function's execution failure. Retried execution is charged as any other execution. Possible values are RETRY_POLICY_UNSPECIFIED, RETRY_POLICY_DO_NOT_RETRY, and RETRY_POLICY_RETRY.
+                          description: "Describes the retry policy in case of function's execution failure. Retried execution is charged as any other execution. Possible values are: RETRY_POLICY_UNSPECIFIED, RETRY_POLICY_DO_NOT_RETRY, RETRY_POLICY_RETRY."
                           type: string
                         serviceAccountEmail:
                           description: The email of the service account for this function.
@@ -528,7 +528,7 @@ spec:
                           description: Environment variables that shall be available during function execution.
                           type: object
                         ingressSettings:
-                          description: Available ingress settings. Defaults to "ALLOW_ALL" if unspecified. Default value is ALLOW_ALL. Possible values are ALLOW_ALL, ALLOW_INTERNAL_ONLY, and ALLOW_INTERNAL_AND_GCLB.
+                          description: 'Available ingress settings. Defaults to "ALLOW_ALL" if unspecified. Default value is ALLOW_ALL. Possible values are: ALLOW_ALL, ALLOW_INTERNAL_ONLY, ALLOW_INTERNAL_AND_GCLB.'
                           type: string
                         maxInstanceCount:
                           description: The limit on the maximum number of function instances that may coexist at a given time.
@@ -772,7 +772,7 @@ spec:
                           description: The Serverless VPC Access connector that this cloud function can connect to.
                           type: string
                         vpcConnectorEgressSettings:
-                          description: Available egress settings. Possible values are VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED, PRIVATE_RANGES_ONLY, and ALL_TRAFFIC.
+                          description: 'Available egress settings. Possible values are: VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED, PRIVATE_RANGES_ONLY, ALL_TRAFFIC.'
                           type: string
                       type: object
                     type: array
@@ -919,7 +919,7 @@ spec:
                     items:
                       properties:
                         build:
-                          description: The Cloud Build name of the latest successful deployment of the function.
+                          description: (Output) The Cloud Build name of the latest successful deployment of the function.
                           type: string
                         dockerRepository:
                           description: User managed repository created in Artifact Registry optionally with a customer managed encryption key.
@@ -1020,13 +1020,13 @@ spec:
                           description: The name of a Pub/Sub topic in the same project that will be used as the transport topic for the event delivery.
                           type: string
                         retryPolicy:
-                          description: Describes the retry policy in case of function's execution failure. Retried execution is charged as any other execution. Possible values are RETRY_POLICY_UNSPECIFIED, RETRY_POLICY_DO_NOT_RETRY, and RETRY_POLICY_RETRY.
+                          description: "Describes the retry policy in case of function's execution failure. Retried execution is charged as any other execution. Possible values are: RETRY_POLICY_UNSPECIFIED, RETRY_POLICY_DO_NOT_RETRY, RETRY_POLICY_RETRY."
                           type: string
                         serviceAccountEmail:
                           description: The email of the service account for this function.
                           type: string
                         trigger:
-                          description: Output only. The resource name of the Eventarc trigger.
+                          description: (Output) Output only. The resource name of the Eventarc trigger.
                           type: string
                         triggerRegion:
                           description: The region that the trigger will be in. The trigger will only receive events originating in this region. It can be the same region as the function, a different region or multi-region, or the global region. If not provided, defaults to the same region as the function.
@@ -1066,10 +1066,10 @@ spec:
                           description: Environment variables that shall be available during function execution.
                           type: object
                         gcfUri:
-                          description: URIs of the Service deployed
+                          description: (Output) URIs of the Service deployed
                           type: string
                         ingressSettings:
-                          description: Available ingress settings. Defaults to "ALLOW_ALL" if unspecified. Default value is ALLOW_ALL. Possible values are ALLOW_ALL, ALLOW_INTERNAL_ONLY, and ALLOW_INTERNAL_AND_GCLB.
+                          description: 'Available ingress settings. Defaults to "ALLOW_ALL" if unspecified. Default value is ALLOW_ALL. Possible values are: ALLOW_ALL, ALLOW_INTERNAL_ONLY, ALLOW_INTERNAL_AND_GCLB.'
                           type: string
                         maxInstanceCount:
                           description: The limit on the maximum number of function instances that may coexist at a given time.
@@ -1135,13 +1135,13 @@ spec:
                           description: The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.
                           type: number
                         uri:
-                          description: URI of the Service deployed.
+                          description: (Output) URI of the Service deployed.
                           type: string
                         vpcConnector:
                           description: The Serverless VPC Access connector that this cloud function can connect to.
                           type: string
                         vpcConnectorEgressSettings:
-                          description: Available egress settings. Possible values are VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED, PRIVATE_RANGES_ONLY, and ALL_TRAFFIC.
+                          description: 'Available egress settings. Possible values are: VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED, PRIVATE_RANGES_ONLY, ALL_TRAFFIC.'
                           type: string
                       type: object
                     type: array

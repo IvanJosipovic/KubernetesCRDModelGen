@@ -171,7 +171,7 @@ spec:
                     description: The creation mode for the CosmosDB Account. Possible values are Default and Restore. Changing this forces a new resource to be created.
                     type: string
                   defaultIdentityType:
-                    description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or start with UserAssignedIdentity.
+                    description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or UserAssignedIdentity.
                     type: string
                   enableAutomaticFailover:
                     description: Enable automatic failover for this Cosmos DB account.
@@ -659,7 +659,7 @@ spec:
                     description: The creation mode for the CosmosDB Account. Possible values are Default and Restore. Changing this forces a new resource to be created.
                     type: string
                   defaultIdentityType:
-                    description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or start with UserAssignedIdentity.
+                    description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or UserAssignedIdentity.
                     type: string
                   enableAutomaticFailover:
                     description: Enable automatic failover for this Cosmos DB account.

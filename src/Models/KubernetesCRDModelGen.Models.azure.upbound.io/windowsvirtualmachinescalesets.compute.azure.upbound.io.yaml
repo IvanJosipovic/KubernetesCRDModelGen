@@ -310,7 +310,7 @@ spec:
                     description: Specifies the duration allocated for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. Defaults to 90 minutes (PT1H30M).
                     type: string
                   galleryApplication:
-                    description: A gallery_application block as defined below.
+                    description: One or more gallery_application blocks as defined below.
                     items:
                       properties:
                         configurationBlobUri:
@@ -1181,7 +1181,7 @@ spec:
                     description: Specifies the duration allocated for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. Defaults to 90 minutes (PT1H30M).
                     type: string
                   galleryApplication:
-                    description: A gallery_application block as defined below.
+                    description: One or more gallery_application blocks as defined below.
                     items:
                       properties:
                         configurationBlobUri:

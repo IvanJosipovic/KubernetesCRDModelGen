@@ -100,7 +100,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         requestPath:
                           description: The request path of the HTTP2 health check request. The default value is /.
@@ -127,7 +127,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         requestPath:
                           description: The request path of the HTTP health check request. The default value is /.
@@ -154,7 +154,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         requestPath:
                           description: The request path of the HTTPS health check request. The default value is /.
@@ -193,7 +193,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         request:
                           description: The application data to send once the SSL connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.
@@ -217,7 +217,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         request:
                           description: The application data to send once the TCP connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.
@@ -420,7 +420,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         requestPath:
                           description: The request path of the HTTP2 health check request. The default value is /.
@@ -447,7 +447,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         requestPath:
                           description: The request path of the HTTP health check request. The default value is /.
@@ -474,7 +474,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         requestPath:
                           description: The request path of the HTTPS health check request. The default value is /.
@@ -519,7 +519,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         request:
                           description: The application data to send once the SSL connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.
@@ -543,7 +543,7 @@ spec:
                           description: 'Specifies how port is selected for health checking, can be one of the following values:'
                           type: string
                         proxyHeader:
-                          description: Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are NONE and PROXY_V1.
+                          description: 'Specifies the type of proxy header to append before sending data to the backend. Default value is NONE. Possible values are: NONE, PROXY_V1.'
                           type: string
                         request:
                           description: The application data to send once the TCP connection has been established (default value is empty). If both request and response are empty, the connection establishment alone will indicate health. The request data can only be ASCII.

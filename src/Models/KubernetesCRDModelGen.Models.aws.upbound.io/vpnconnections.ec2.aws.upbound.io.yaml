@@ -210,6 +210,9 @@ spec:
                   tunnel1DpdTimeoutSeconds:
                     description: The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than 30.
                     type: number
+                  tunnel1EnableTunnelLifecycleControl:
+                    description: Turn on or off tunnel endpoint lifecycle control feature for the first VPN tunnel. Valid values are true | false.
+                    type: boolean
                   tunnel1IkeVersions:
                     description: The IKE versions that are permitted for the first VPN tunnel. Valid values are ikev1 | ikev2.
                     items:
@@ -313,6 +316,9 @@ spec:
                   tunnel2DpdTimeoutSeconds:
                     description: The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than 30.
                     type: number
+                  tunnel2EnableTunnelLifecycleControl:
+                    description: Turn on or off tunnel endpoint lifecycle control feature for the second VPN tunnel. Valid values are true | false.
+                    type: boolean
                   tunnel2IkeVersions:
                     description: The IKE versions that are permitted for the second VPN tunnel. Valid values are ikev1 | ikev2.
                     items:
@@ -757,6 +763,9 @@ spec:
                   tunnel1DpdTimeoutSeconds:
                     description: The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than 30.
                     type: number
+                  tunnel1EnableTunnelLifecycleControl:
+                    description: Turn on or off tunnel endpoint lifecycle control feature for the first VPN tunnel. Valid values are true | false.
+                    type: boolean
                   tunnel1IkeVersions:
                     description: The IKE versions that are permitted for the first VPN tunnel. Valid values are ikev1 | ikev2.
                     items:
@@ -858,6 +867,9 @@ spec:
                   tunnel2DpdTimeoutSeconds:
                     description: The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than 30.
                     type: number
+                  tunnel2EnableTunnelLifecycleControl:
+                    description: Turn on or off tunnel endpoint lifecycle control feature for the second VPN tunnel. Valid values are true | false.
+                    type: boolean
                   tunnel2IkeVersions:
                     description: The IKE versions that are permitted for the second VPN tunnel. Valid values are ikev1 | ikev2.
                     items:

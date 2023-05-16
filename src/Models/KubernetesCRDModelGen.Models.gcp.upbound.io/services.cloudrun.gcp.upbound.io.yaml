@@ -34,7 +34,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Service is the Schema for the Services API. Service acts as a top-level container that manages a set of Routes and Configurations which implement a network service.
+        description: Service is the Schema for the Services API. A Cloud Run service has a unique endpoint and autoscales containers.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -69,12 +69,12 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
+                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                           type: object
                         labels:
                           additionalProperties:
                             type: string
-                          description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels'
+                          description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                           type: object
                         namespace:
                           description: In Cloud Run the namespace must be equal to either the project ID or project number. It will default to the resource's project.
@@ -150,12 +150,12 @@ spec:
                               annotations:
                                 additionalProperties:
                                   type: string
-                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
+                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                                 type: object
                               labels:
                                 additionalProperties:
                                   type: string
-                                description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels'
+                                description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                                 type: object
                               name:
                                 description: Volume's name.
@@ -173,16 +173,16 @@ spec:
                                 description: 'ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container of the Revision. Values are:'
                                 type: number
                               containers:
-                                description: 'Container defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of the fields of this Container, including: name, ports, and volumeMounts. The runtime contract is documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md Structure is documented below.'
+                                description: 'Container defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of the fields of this Container, including: name, ports, and volumeMounts. Structure is documented below.'
                                 items:
                                   properties:
                                     args:
-                                      description: "Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+                                      description: Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
                                       items:
                                         type: string
                                       type: array
                                     command:
-                                      description: "Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+                                      description: Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided.
                                       items:
                                         type: string
                                       type: array
@@ -325,10 +325,66 @@ spec:
                                         type: object
                                       type: array
                                     image:
-                                      description: 'Docker image name. This is most often a reference to a container located in the container registry, such as gcr.io/cloudrun/hello More info: https://kubernetes.io/docs/concepts/containers/images'
+                                      description: Docker image name. This is most often a reference to a container located in the container registry, such as gcr.io/cloudrun/hello
                                       type: string
+                                    livenessProbe:
+                                      description: Periodic probe of container liveness. Container will be restarted if the probe fails. Structure is documented below.
+                                      items:
+                                        properties:
+                                          failureThreshold:
+                                            description: Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
+                                            type: number
+                                          grpc:
+                                            description: GRPC specifies an action involving a GRPC port. Structure is documented below.
+                                            items:
+                                              properties:
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                                service:
+                                                  description: The name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the default behavior is defined by gRPC.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                          httpGet:
+                                            description: HttpGet specifies the http request to perform. Structure is documented below.
+                                            items:
+                                              properties:
+                                                httpHeaders:
+                                                  description: Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.
+                                                  items:
+                                                    properties:
+                                                      name:
+                                                        description: Volume's name.
+                                                        type: string
+                                                      value:
+                                                        description: The header field value.
+                                                        type: string
+                                                    required:
+                                                    - name
+                                                    type: object
+                                                  type: array
+                                                path:
+                                                  description: The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.
+                                                  type: string
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                              type: object
+                                            type: array
+                                          initialDelaySeconds:
+                                            description: Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value is 240.
+                                            type: number
+                                          periodSeconds:
+                                            description: How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value is 240.
+                                            type: number
+                                          timeoutSeconds:
+                                            description: Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds.
+                                            type: number
+                                        type: object
+                                      type: array
                                     ports:
-                                      description: 'List of open ports in the container. More Info: https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort Structure is documented below.'
+                                      description: List of open ports in the container. Structure is documented below.
                                       items:
                                         properties:
                                           containerPort:
@@ -343,7 +399,7 @@ spec:
                                         type: object
                                       type: array
                                     resources:
-                                      description: 'Compute Resources required by this container. Used to set values such as max memory More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits Structure is documented below.'
+                                      description: Compute Resources required by this container. Used to set values such as max memory Structure is documented below.
                                       items:
                                         properties:
                                           limits:
@@ -356,6 +412,71 @@ spec:
                                               type: string
                                             description: "Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go"
                                             type: object
+                                        type: object
+                                      type: array
+                                    startupProbe:
+                                      description: Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. Structure is documented below.
+                                      items:
+                                        properties:
+                                          failureThreshold:
+                                            description: Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
+                                            type: number
+                                          grpc:
+                                            description: GRPC specifies an action involving a GRPC port. Structure is documented below.
+                                            items:
+                                              properties:
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                                service:
+                                                  description: The name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the default behavior is defined by gRPC.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                          httpGet:
+                                            description: HttpGet specifies the http request to perform. Structure is documented below.
+                                            items:
+                                              properties:
+                                                httpHeaders:
+                                                  description: Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.
+                                                  items:
+                                                    properties:
+                                                      name:
+                                                        description: Volume's name.
+                                                        type: string
+                                                      value:
+                                                        description: The header field value.
+                                                        type: string
+                                                    required:
+                                                    - name
+                                                    type: object
+                                                  type: array
+                                                path:
+                                                  description: The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.
+                                                  type: string
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                              type: object
+                                            type: array
+                                          initialDelaySeconds:
+                                            description: Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value is 240.
+                                            type: number
+                                          periodSeconds:
+                                            description: How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value is 240.
+                                            type: number
+                                          tcpSocket:
+                                            description: TcpSocket specifies an action involving a TCP port. Structure is documented below.
+                                            items:
+                                              properties:
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                              type: object
+                                            type: array
+                                          timeoutSeconds:
+                                            description: Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds.
+                                            type: number
                                         type: object
                                       type: array
                                     volumeMounts:
@@ -663,27 +784,27 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
+                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                           type: object
                         generation:
-                          description: A sequence number representing a specific generation of the desired state.
+                          description: (Output) A sequence number representing a specific generation of the desired state.
                           type: number
                         labels:
                           additionalProperties:
                             type: string
-                          description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels'
+                          description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                           type: object
                         namespace:
                           description: In Cloud Run the namespace must be equal to either the project ID or project number. It will default to the resource's project.
                           type: string
                         resourceVersion:
-                          description: 'An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. They may only be valid for a particular resource or set of resources. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency'
+                          description: (Output) An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. They may only be valid for a particular resource or set of resources.
                           type: string
                         selfLink:
-                          description: SelfLink is a URL representing this object.
+                          description: (Output) SelfLink is a URL representing this object.
                           type: string
                         uid:
-                          description: 'UID is a unique id generated by the server on successful creation of a resource and is not allowed to change on PUT operations. More info: http://kubernetes.io/docs/user-guide/identifiers#uids'
+                          description: (Output) UID is a unique id generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
                           type: string
                       type: object
                     type: array
@@ -695,34 +816,34 @@ spec:
                     items:
                       properties:
                         conditions:
-                          description: Array of observed Service Conditions, indicating the current ready state of the service. Structure is documented below.
+                          description: (Output) Array of observed Service Conditions, indicating the current ready state of the service. Structure is documented below.
                           items:
                             properties:
                               message:
-                                description: Human readable message indicating details about the current status.
+                                description: (Output) Human readable message indicating details about the current status.
                                 type: string
                               reason:
-                                description: One-word CamelCase reason for the condition's current status.
+                                description: (Output) One-word CamelCase reason for the condition's current status.
                                 type: string
                               status:
                                 description: The current status of the Service. Structure is documented below.
                                 type: string
                               type:
-                                description: Type of domain mapping condition.
+                                description: (Output) Type of domain mapping condition.
                                 type: string
                             type: object
                           type: array
                         latestCreatedRevisionName:
-                          description: From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
+                          description: (Output) From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
                           type: string
                         latestReadyRevisionName:
-                          description: From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service's Configuration that has had its "Ready" condition become "True".
+                          description: (Output) From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service's Configuration that has had its "Ready" condition become "True".
                           type: string
                         observedGeneration:
-                          description: ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
+                          description: (Output) ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
                           type: number
                         url:
-                          description: From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+                          description: (Output) From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
                           type: string
                       type: object
                     type: array
@@ -737,15 +858,15 @@ spec:
                               annotations:
                                 additionalProperties:
                                   type: string
-                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
+                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                                 type: object
                               generation:
-                                description: A sequence number representing a specific generation of the desired state.
+                                description: (Output) A sequence number representing a specific generation of the desired state.
                                 type: number
                               labels:
                                 additionalProperties:
                                   type: string
-                                description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels'
+                                description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                                 type: object
                               name:
                                 description: Volume's name.
@@ -754,13 +875,13 @@ spec:
                                 description: In Cloud Run the namespace must be equal to either the project ID or project number. It will default to the resource's project.
                                 type: string
                               resourceVersion:
-                                description: 'An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. They may only be valid for a particular resource or set of resources. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency'
+                                description: (Output) An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. They may only be valid for a particular resource or set of resources.
                                 type: string
                               selfLink:
-                                description: SelfLink is a URL representing this object.
+                                description: (Output) SelfLink is a URL representing this object.
                                 type: string
                               uid:
-                                description: 'UID is a unique id generated by the server on successful creation of a resource and is not allowed to change on PUT operations. More info: http://kubernetes.io/docs/user-guide/identifiers#uids'
+                                description: (Output) UID is a unique id generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
                                 type: string
                             type: object
                           type: array
@@ -772,16 +893,16 @@ spec:
                                 description: 'ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container of the Revision. Values are:'
                                 type: number
                               containers:
-                                description: 'Container defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of the fields of this Container, including: name, ports, and volumeMounts. The runtime contract is documented here: https://github.com/knative/serving/blob/main/docs/runtime-contract.md Structure is documented below.'
+                                description: 'Container defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of the fields of this Container, including: name, ports, and volumeMounts. Structure is documented below.'
                                 items:
                                   properties:
                                     args:
-                                      description: "Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+                                      description: Arguments to the entrypoint. The docker image's CMD is used if this is not provided.
                                       items:
                                         type: string
                                       type: array
                                     command:
-                                      description: "Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell"
+                                      description: Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided.
                                       items:
                                         type: string
                                       type: array
@@ -861,10 +982,64 @@ spec:
                                         type: object
                                       type: array
                                     image:
-                                      description: 'Docker image name. This is most often a reference to a container located in the container registry, such as gcr.io/cloudrun/hello More info: https://kubernetes.io/docs/concepts/containers/images'
+                                      description: Docker image name. This is most often a reference to a container located in the container registry, such as gcr.io/cloudrun/hello
                                       type: string
+                                    livenessProbe:
+                                      description: Periodic probe of container liveness. Container will be restarted if the probe fails. Structure is documented below.
+                                      items:
+                                        properties:
+                                          failureThreshold:
+                                            description: Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
+                                            type: number
+                                          grpc:
+                                            description: GRPC specifies an action involving a GRPC port. Structure is documented below.
+                                            items:
+                                              properties:
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                                service:
+                                                  description: The name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the default behavior is defined by gRPC.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                          httpGet:
+                                            description: HttpGet specifies the http request to perform. Structure is documented below.
+                                            items:
+                                              properties:
+                                                httpHeaders:
+                                                  description: Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.
+                                                  items:
+                                                    properties:
+                                                      name:
+                                                        description: Volume's name.
+                                                        type: string
+                                                      value:
+                                                        description: The header field value.
+                                                        type: string
+                                                    type: object
+                                                  type: array
+                                                path:
+                                                  description: The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.
+                                                  type: string
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                              type: object
+                                            type: array
+                                          initialDelaySeconds:
+                                            description: Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value is 240.
+                                            type: number
+                                          periodSeconds:
+                                            description: How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value is 240.
+                                            type: number
+                                          timeoutSeconds:
+                                            description: Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds.
+                                            type: number
+                                        type: object
+                                      type: array
                                     ports:
-                                      description: 'List of open ports in the container. More Info: https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort Structure is documented below.'
+                                      description: List of open ports in the container. Structure is documented below.
                                       items:
                                         properties:
                                           containerPort:
@@ -879,7 +1054,7 @@ spec:
                                         type: object
                                       type: array
                                     resources:
-                                      description: 'Compute Resources required by this container. Used to set values such as max memory More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits Structure is documented below.'
+                                      description: Compute Resources required by this container. Used to set values such as max memory Structure is documented below.
                                       items:
                                         properties:
                                           limits:
@@ -892,6 +1067,69 @@ spec:
                                               type: string
                                             description: "Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go"
                                             type: object
+                                        type: object
+                                      type: array
+                                    startupProbe:
+                                      description: Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. Structure is documented below.
+                                      items:
+                                        properties:
+                                          failureThreshold:
+                                            description: Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.
+                                            type: number
+                                          grpc:
+                                            description: GRPC specifies an action involving a GRPC port. Structure is documented below.
+                                            items:
+                                              properties:
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                                service:
+                                                  description: The name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the default behavior is defined by gRPC.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                          httpGet:
+                                            description: HttpGet specifies the http request to perform. Structure is documented below.
+                                            items:
+                                              properties:
+                                                httpHeaders:
+                                                  description: Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.
+                                                  items:
+                                                    properties:
+                                                      name:
+                                                        description: Volume's name.
+                                                        type: string
+                                                      value:
+                                                        description: The header field value.
+                                                        type: string
+                                                    type: object
+                                                  type: array
+                                                path:
+                                                  description: The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.
+                                                  type: string
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                              type: object
+                                            type: array
+                                          initialDelaySeconds:
+                                            description: Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value is 240.
+                                            type: number
+                                          periodSeconds:
+                                            description: How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value is 240.
+                                            type: number
+                                          tcpSocket:
+                                            description: TcpSocket specifies an action involving a TCP port. Structure is documented below.
+                                            items:
+                                              properties:
+                                                port:
+                                                  description: Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.
+                                                  type: number
+                                              type: object
+                                            type: array
+                                          timeoutSeconds:
+                                            description: Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds.
+                                            type: number
                                         type: object
                                       type: array
                                     volumeMounts:
@@ -915,7 +1153,7 @@ spec:
                                 description: Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
                                 type: string
                               servingState:
-                                description: (Deprecated) ServingState holds a value describing the state the resources are in for this Revision. It is expected that the system will manipulate this based on routability and load.
+                                description: (Output, Deprecated) ServingState holds a value describing the state the resources are in for this Revision. It is expected that the system will manipulate this based on routability and load.
                                 type: string
                               timeoutSeconds:
                                 description: Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds.
@@ -977,7 +1215,7 @@ spec:
                           description: Tag is optionally used to expose a dedicated url for referencing this target exclusively.
                           type: string
                         url:
-                          description: URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
+                          description: (Output) URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
                           type: string
                       type: object
                     type: array

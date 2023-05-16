@@ -66,7 +66,7 @@ spec:
                     description: An optional description of this resource.
                     type: string
                   ipVersion:
-                    description: The IP Version that will be used by this address. The default value is IPV4. Possible values are IPV4 and IPV6.
+                    description: 'The IP Version that will be used by this address. The default value is IPV4. Possible values are: IPV4, IPV6.'
                     type: string
                   network:
                     description: The URL of the network in which to reserve the IP range. The IP range must be in RFC1918 space. The network cannot be deleted if there are any reserved IP ranges referring to it. This should only be set when using an Internal address.
@@ -289,7 +289,7 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/global/addresses/{{name}}
                     type: string
                   ipVersion:
-                    description: The IP Version that will be used by this address. The default value is IPV4. Possible values are IPV4 and IPV6.
+                    description: 'The IP Version that will be used by this address. The default value is IPV4. Possible values are: IPV4, IPV6.'
                     type: string
                   network:
                     description: The URL of the network in which to reserve the IP range. The IP range must be in RFC1918 space. The network cannot be deleted if there are any reserved IP ranges referring to it. This should only be set when using an Internal address.

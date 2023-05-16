@@ -57,16 +57,16 @@ spec:
               forProvider:
                 properties:
                   partitionCount:
-                    description: The number of partitions to create in the placement group.  Can only be specified when the strategy is set to "partition".  Valid values are 1 - 7 (default is 2).
+                    description: The number of partitions to create in the placement group.  Can only be specified when the strategy is set to partition.  Valid values are 1 - 7 (default is 2).
                     type: number
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   spreadLevel:
-                    description: Determines how placement groups spread instances. Can only be used when the strategy is set to "spread". Can be "host" or "rack". "host" can only be used for Outpost placement groups.
+                    description: Determines how placement groups spread instances. Can only be used when the strategy is set to spread. Can be host or rack. host can only be used for Outpost placement groups. Defaults to rack.
                     type: string
                   strategy:
-                    description: The placement strategy. Can be "cluster", "partition" or "spread".
+                    description: The placement strategy. Can be cluster, partition or spread.
                     type: string
                   tags:
                     additionalProperties:
@@ -223,16 +223,16 @@ spec:
                     description: The name of the placement group.
                     type: string
                   partitionCount:
-                    description: The number of partitions to create in the placement group.  Can only be specified when the strategy is set to "partition".  Valid values are 1 - 7 (default is 2).
+                    description: The number of partitions to create in the placement group.  Can only be specified when the strategy is set to partition.  Valid values are 1 - 7 (default is 2).
                     type: number
                   placementGroupId:
                     description: The ID of the placement group.
                     type: string
                   spreadLevel:
-                    description: Determines how placement groups spread instances. Can only be used when the strategy is set to "spread". Can be "host" or "rack". "host" can only be used for Outpost placement groups.
+                    description: Determines how placement groups spread instances. Can only be used when the strategy is set to spread. Can be host or rack. host can only be used for Outpost placement groups. Defaults to rack.
                     type: string
                   strategy:
-                    description: The placement strategy. Can be "cluster", "partition" or "spread".
+                    description: The placement strategy. Can be cluster, partition or spread.
                     type: string
                   tags:
                     additionalProperties:

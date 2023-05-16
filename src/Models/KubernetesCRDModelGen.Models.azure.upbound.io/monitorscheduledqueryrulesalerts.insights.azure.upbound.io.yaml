@@ -311,7 +311,6 @@ spec:
                                 description: Result or count threshold based on which rule should be triggered. Values must be between 0 and 10000 inclusive.
                                 type: number
                             required:
-                            - metricColumn
                             - metricTriggerType
                             - operator
                             - threshold

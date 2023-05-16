@@ -68,6 +68,9 @@ spec:
                                 description: A base_blob block as documented below.
                                 items:
                                   properties:
+                                    autoTierToHotFromCoolEnabled:
+                                      description: Whether a blob should automatically be tiered from cool back to hot if it's accessed again after being tiered to cool. Defaults to false.
+                                      type: boolean
                                     deleteAfterDaysSinceCreationGreaterThan:
                                       description: The age in days after creation to delete the blob snapshot. Must be between 0 and 99999. Defaults to -1.
                                       type: number
@@ -398,6 +401,9 @@ spec:
                                 description: A base_blob block as documented below.
                                 items:
                                   properties:
+                                    autoTierToHotFromCoolEnabled:
+                                      description: Whether a blob should automatically be tiered from cool back to hot if it's accessed again after being tiered to cool. Defaults to false.
+                                      type: boolean
                                     deleteAfterDaysSinceCreationGreaterThan:
                                       description: The age in days after creation to delete the blob snapshot. Must be between 0 and 99999. Defaults to -1.
                                       type: number
