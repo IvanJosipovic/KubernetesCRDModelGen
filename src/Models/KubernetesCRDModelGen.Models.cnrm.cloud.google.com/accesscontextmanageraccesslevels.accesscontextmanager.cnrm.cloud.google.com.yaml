@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.104.0
+    cnrm.cloud.google.com/version: 1.105.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -300,7 +300,7 @@ spec:
                 type: object
               custom:
                 description: >-
-                  Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. 
+                  Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
 
                   See CEL spec at: https://github.com/google/cel-spec.
                 properties:
@@ -308,7 +308,7 @@ spec:
                     description: >-
                       Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 
-                      This page details the objects and attributes that are used to the build the CEL expressions for 
+                      This page details the objects and attributes that are used to the build the CEL expressions for
 
                       custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec.
                     properties:

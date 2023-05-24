@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.104.0
+    cnrm.cloud.google.com/version: 1.105.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -55,15 +55,15 @@ spec:
             properties:
               approvalConfig:
                 description: >-
-                  Configuration for manual approval to start a build invocation of this BuildTrigger. 
+                  Configuration for manual approval to start a build invocation of this BuildTrigger.
 
-                  Builds created by this trigger will require approval before they execute. 
+                  Builds created by this trigger will require approval before they execute.
 
                   Any user with a Cloud Build Approver role for the project can approve a build.
                 properties:
                   approvalRequired:
                     description: >-
-                      Whether or not approval is needed. If this is set on a build, it will become pending when run, 
+                      Whether or not approval is needed. If this is set on a build, it will become pending when run,
 
                       and will need to be explicitly approved to start.
                     type: boolean
@@ -434,7 +434,7 @@ spec:
                     type: object
                   queueTtl:
                     description: >-
-                      TTL in queue for this build. If provided and the build is enqueued longer than this value, 
+                      TTL in queue for this build. If provided and the build is enqueued longer than this value,
 
                       the build will expire and the build status will be EXPIRED.
 
@@ -479,9 +479,9 @@ spec:
                           description: >-
                             Map of environment variable name to its encrypted value.
 
-                            Secret environment variables must be unique across all of a build's secrets, 
+                            Secret environment variables must be unique across all of a build's secrets,
 
-                            and must be used by at least one build step. Values can be at most 64 KB in size. 
+                            and must be used by at least one build step. Values can be at most 64 KB in size.
 
                             There can be at most 100 secret values across all of a build's secrets.
                           type: object
@@ -503,7 +503,7 @@ spec:
                             description: >-
                               Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 
-                              The syntax of the regular expressions accepted is the syntax accepted by RE2 and 
+                              The syntax of the regular expressions accepted is the syntax accepted by RE2 and
 
                               described at https://github.com/google/re2/wiki/Syntax.
                             type: string
@@ -514,7 +514,7 @@ spec:
                             description: >-
                               Directory, relative to the source root, in which to run the build.
 
-                              This must be a relative path. If a step's dir is specified and is an absolute path, 
+                              This must be a relative path. If a step's dir is specified and is an absolute path,
 
                               this value is ignored for that step's execution.
                             type: string
@@ -523,7 +523,7 @@ spec:
                             type: boolean
                           projectId:
                             description: >-
-                              ID of the project that owns the Cloud Source Repository. 
+                              ID of the project that owns the Cloud Source Repository.
 
                               If omitted, the project ID requesting the build is assumed.
                             type: string
@@ -566,7 +566,7 @@ spec:
                             description: >-
                               Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 
-                              The syntax of the regular expressions accepted is the syntax accepted by RE2 and 
+                              The syntax of the regular expressions accepted is the syntax accepted by RE2 and
 
                               described at https://github.com/google/re2/wiki/Syntax.
                             type: string
@@ -605,7 +605,7 @@ spec:
                             type: object
                           generation:
                             description: >-
-                              Google Cloud Storage generation for the object. 
+                              Google Cloud Storage generation for the object.
 
                               If the generation is omitted, the latest generation will be used.
                             type: string
@@ -624,6 +624,30 @@ spec:
                     description: The operations to be performed on the workspace.
                     items:
                       properties:
+                        allowExitCodes:
+                          description: >-
+                            Allow this build step to fail without failing the entire build if and
+
+                            only if the exit code is one of the specified codes.
+
+
+                            If 'allowFailure' is also specified, this field will take precedence.
+                          items:
+                            type: integer
+                          type: array
+                        allowFailure:
+                          description: >-
+                            Allow this build step to fail without failing the entire build.
+
+                            If false, the entire build will fail if this step fails. Otherwise, the
+
+                            build will succeed, but this step will still have a failure status.
+
+                            Error information will be reported in the 'failureDetail' field.
+
+
+                            'allowExitCodes' takes precedence over this field.
+                          type: boolean
                         args:
                           description: >-
                             A list of arguments that will be presented to the step when it is started.
@@ -702,7 +726,7 @@ spec:
 
                             The Docker daemon's cache will already have the latest versions of all of
 
-                            the officially supported build steps (see https://github.com/GoogleCloudPlatform/cloud-builders 
+                            the officially supported build steps (see https://github.com/GoogleCloudPlatform/cloud-builders
 
                             for images and examples).
 
@@ -721,7 +745,7 @@ spec:
                           type: string
                         script:
                           description: >-
-                            A shell script to be executed in the step. 
+                            A shell script to be executed in the step.
 
                             When script is provided, the user cannot specify the entrypoint or args.
                           type: string
@@ -845,7 +869,7 @@ spec:
                 type: boolean
               filename:
                 description: >-
-                  Path, from the source root, to a file whose contents is used for the template. 
+                  Path, from the source root, to a file whose contents is used for the template.
 
                   Either a filename or build template must be provided. Set this only when using trigger_template or github.
 
@@ -895,21 +919,54 @@ spec:
                     type: string
                   repoType:
                     description: >-
-                      The type of the repo, since it may not be explicit from the repo field (e.g from a URL). 
+                      The type of the repo, since it may not be explicit from the repo field (e.g from a URL).
 
                       Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: ["UNKNOWN", "CLOUD_SOURCE_REPOSITORIES", "GITHUB", "BITBUCKET_SERVER"].
                     type: string
+                  repositoryRef:
+                    description: >-
+                      Only `external` field is supported to configure the reference.
+
+
+                      The fully qualified resource name of the Repo API repository. The fully qualified resource name of the Repo API repository.
+
+                      If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
+                    oneOf:
+                    - not:
+                        required:
+                        - external
+                      required:
+                      - name
+                    - not:
+                        anyOf:
+                        - required:
+                          - name
+                        - required:
+                          - namespace
+                      required:
+                      - external
+                    properties:
+                      external:
+                        description: 'Allowed value: The `name` field of a `CloudBuildV2Repository` resource.'
+                        type: string
+                      name:
+                        description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                        type: string
+                      namespace:
+                        description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
+                        type: string
+                    type: object
                   revision:
                     description: >-
-                      The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the 
+                      The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the
 
-                      filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions 
+                      filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions
 
                       If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
                     type: string
                   uri:
                     description: >-
-                      The URI of the repo (optional). If unspecified, the repo from which the trigger 
+                      The URI of the repo (optional). If unspecified, the repo from which the trigger
 
                       invocation originated is assumed to be the repo from which to read the specified path.
                     type: string
@@ -1058,7 +1115,7 @@ spec:
                 type: string
               pubsubConfig:
                 description: >-
-                  PubsubConfig describes the configuration of a trigger that creates 
+                  PubsubConfig describes the configuration of a trigger that creates
 
                   a build whenever a Pub/Sub message is published.
 
@@ -1227,11 +1284,11 @@ spec:
                 type: object
               sourceToBuild:
                 description: >-
-                  The repo and ref of the repository from which to build. 
+                  The repo and ref of the repository from which to build.
 
-                  This field is used only for those triggers that do not respond to SCM events. 
+                  This field is used only for those triggers that do not respond to SCM events.
 
-                  Triggers that respond to such events build source at whatever commit caused the event. 
+                  Triggers that respond to such events build source at whatever commit caused the event.
 
                   This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
 
@@ -1280,13 +1337,45 @@ spec:
 
                       Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: ["UNKNOWN", "CLOUD_SOURCE_REPOSITORIES", "GITHUB", "BITBUCKET_SERVER"].
                     type: string
+                  repositoryRef:
+                    description: >-
+                      Only `external` field is supported to configure the reference.
+
+
+                      The qualified resource name of the Repo API repository.
+
+                      Either uri or repository can be specified and is required.
+                    oneOf:
+                    - not:
+                        required:
+                        - external
+                      required:
+                      - name
+                    - not:
+                        anyOf:
+                        - required:
+                          - name
+                        - required:
+                          - namespace
+                      required:
+                      - external
+                    properties:
+                      external:
+                        description: 'Allowed value: The `name` field of a `CloudBuildV2Repository` resource.'
+                        type: string
+                      name:
+                        description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                        type: string
+                      namespace:
+                        description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
+                        type: string
+                    type: object
                   uri:
-                    description: The URI of the repo (required).
+                    description: The URI of the repo.
                     type: string
                 required:
                 - ref
                 - repoType
-                - uri
                 type: object
               substitutions:
                 additionalProperties:
@@ -1374,7 +1463,7 @@ spec:
                 type: object
               webhookConfig:
                 description: >-
-                  WebhookConfig describes the configuration of a trigger that creates 
+                  WebhookConfig describes the configuration of a trigger that creates
 
                   a build whenever a webhook is sent to a trigger's webhook URL.
 
