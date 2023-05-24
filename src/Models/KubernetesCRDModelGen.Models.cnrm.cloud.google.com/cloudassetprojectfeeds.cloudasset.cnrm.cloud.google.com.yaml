@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.104.0
+    cnrm.cloud.google.com/version: 1.105.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -55,7 +55,7 @@ spec:
             properties:
               assetNames:
                 description: >-
-                  A list of the full names of the assets to receive updates. You must specify either or both of 
+                  A list of the full names of the assets to receive updates. You must specify either or both of
 
                   assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 
@@ -83,7 +83,7 @@ spec:
                 description: >-
                   Immutable. The project whose identity will be used when sending messages to the
 
-                  destination pubsub topic. It also specifies the project for API 
+                  destination pubsub topic. It also specifies the project for API
 
                   enablement check, quota, and billing. If not specified, the resource's
 
@@ -112,7 +112,7 @@ spec:
                     type: string
                   location:
                     description: >-
-                      String indicating the location of the expression for error reporting, e.g. a file 
+                      String indicating the location of the expression for error reporting, e.g. a file
 
                       name and a position in the file.
                     type: string

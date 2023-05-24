@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.104.0
+    cnrm.cloud.google.com/version: 1.105.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -55,6 +55,9 @@ spec:
             properties:
               description:
                 description: A human-readable description of the resource.
+                type: string
+              location:
+                description: The Certificate Manager location. If not specified, "global" is used.
                 type: string
               managed:
                 description: >-
@@ -180,7 +183,7 @@ spec:
                 properties:
                   certificatePem:
                     description: >-
-                      DEPRECATED. Deprecated in favor of `pem_certificate`. **Deprecated** The certificate chain in PEM-encoded form.
+                      DEPRECATED. Deprecated in favor of `pem_certificate`. Immutable. **Deprecated** The certificate chain in PEM-encoded form.
 
 
                       Leaf certificate comes first, followed by intermediate ones if any.
@@ -219,13 +222,13 @@ spec:
                     type: object
                   pemCertificate:
                     description: >-
-                      The certificate chain in PEM-encoded form.
+                      Immutable. The certificate chain in PEM-encoded form.
 
 
                       Leaf certificate comes first, followed by intermediate ones if any.
                     type: string
                   pemPrivateKey:
-                    description: The private key of the leaf certificate in PEM-encoded form.
+                    description: Immutable. The private key of the leaf certificate in PEM-encoded form.
                     oneOf:
                     - not:
                         required:
@@ -260,7 +263,7 @@ spec:
                         type: object
                     type: object
                   privateKeyPem:
-                    description: DEPRECATED. Deprecated in favor of `pem_private_key`. **Deprecated** The private key of the leaf certificate in PEM-encoded form.
+                    description: DEPRECATED. Deprecated in favor of `pem_private_key`. Immutable. **Deprecated** The private key of the leaf certificate in PEM-encoded form.
                     oneOf:
                     - not:
                         required:

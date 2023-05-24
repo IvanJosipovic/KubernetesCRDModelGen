@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.104.0
+    cnrm.cloud.google.com/version: 1.105.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -74,7 +74,7 @@ spec:
                 description: >-
                   The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 
-                  the contexts must be present in the active user session for an event to trigger this intent. See the 
+                  the contexts must be present in the active user session for an event to trigger this intent. See the
 
                   [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
                 items:
@@ -205,7 +205,7 @@ spec:
                 type: array
               name:
                 description: >-
-                  The unique identifier of this intent. 
+                  The unique identifier of this intent.
 
                   Format: projects/<Project ID>/agent/intents/<Intent ID>.
                 type: string

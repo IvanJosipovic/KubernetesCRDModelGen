@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.104.0
+    cnrm.cloud.google.com/version: 1.105.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -55,14 +55,14 @@ spec:
             properties:
               pubsubConfigs:
                 description: >-
-                  How this repository publishes a change in the repository through Cloud Pub/Sub. 
+                  How this repository publishes a change in the repository through Cloud Pub/Sub.
 
                   Keyed by the topic names.
                 items:
                   properties:
                     messageFormat:
                       description: >-
-                        The format of the Cloud Pub/Sub messages. 
+                        The format of the Cloud Pub/Sub messages.
 
                         - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
 
