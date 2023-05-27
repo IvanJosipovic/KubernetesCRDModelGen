@@ -735,7 +735,7 @@ spec:
                           description: The proxy address to be used when communicating over HTTPS. Changing this forces a new resource to be created.
                           type: string
                         noProxy:
-                          description: The list of domains that will not use the proxy for communication. Changing this forces a new resource to be created.
+                          description: The list of domains that will not use the proxy for communication.
                           items:
                             type: string
                           type: array
@@ -1977,7 +1977,7 @@ spec:
                           description: The proxy address to be used when communicating over HTTPS. Changing this forces a new resource to be created.
                           type: string
                         noProxy:
-                          description: The list of domains that will not use the proxy for communication. Changing this forces a new resource to be created.
+                          description: The list of domains that will not use the proxy for communication.
                           items:
                             type: string
                           type: array

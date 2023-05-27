@@ -109,7 +109,7 @@ spec:
                           description: KRM-style annotations for the resource.
                           type: object
                         containers:
-                          description: Holds the single container that defines the unit of execution for this task. Structure is documented below.
+                          description: Holds the containers that define the unit of execution for this Service. Structure is documented below.
                           items:
                             properties:
                               args:
@@ -818,7 +818,7 @@ spec:
                           description: KRM-style annotations for the resource.
                           type: object
                         containers:
-                          description: Holds the single container that defines the unit of execution for this task. Structure is documented below.
+                          description: Holds the containers that define the unit of execution for this Service. Structure is documented below.
                           items:
                             properties:
                               args:

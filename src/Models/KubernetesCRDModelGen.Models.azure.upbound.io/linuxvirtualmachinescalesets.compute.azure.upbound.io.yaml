@@ -187,10 +187,10 @@ spec:
                           description: The Type of Storage Account which should back this Data Disk. Possible values include Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS, Premium_LRS, PremiumV2_LRS, Premium_ZRS and UltraSSD_LRS.
                           type: string
                         ultraSsdDiskIopsReadWrite:
-                          description: Specifies the Read-Write IOPS for this Data Disk. Only settable for UltraSSD disks.
+                          description: Specifies the Read-Write IOPS for this Data Disk. Only settable when storage_account_type is PremiumV2_LRS or UltraSSD_LRS.
                           type: number
                         ultraSsdDiskMbpsReadWrite:
-                          description: Specifies the bandwidth in MB per second for this Data Disk. Only settable for UltraSSD disks.
+                          description: Specifies the bandwidth in MB per second for this Data Disk. Only settable when storage_account_type is PremiumV2_LRS or UltraSSD_LRS.
                           type: number
                         writeAcceleratorEnabled:
                           description: Should Write Accelerator be Enabled for this OS Disk? Defaults to false.
@@ -1061,10 +1061,10 @@ spec:
                           description: The Type of Storage Account which should back this Data Disk. Possible values include Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS, Premium_LRS, PremiumV2_LRS, Premium_ZRS and UltraSSD_LRS.
                           type: string
                         ultraSsdDiskIopsReadWrite:
-                          description: Specifies the Read-Write IOPS for this Data Disk. Only settable for UltraSSD disks.
+                          description: Specifies the Read-Write IOPS for this Data Disk. Only settable when storage_account_type is PremiumV2_LRS or UltraSSD_LRS.
                           type: number
                         ultraSsdDiskMbpsReadWrite:
-                          description: Specifies the bandwidth in MB per second for this Data Disk. Only settable for UltraSSD disks.
+                          description: Specifies the bandwidth in MB per second for this Data Disk. Only settable when storage_account_type is PremiumV2_LRS or UltraSSD_LRS.
                           type: number
                         writeAcceleratorEnabled:
                           description: Should Write Accelerator be Enabled for this OS Disk? Defaults to false.

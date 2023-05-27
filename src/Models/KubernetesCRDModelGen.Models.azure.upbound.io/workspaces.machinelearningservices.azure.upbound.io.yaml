@@ -811,6 +811,9 @@ spec:
                   v1LegacyModeEnabled:
                     description: Enable V1 API features, enabling v1_legacy_mode may prevent you from using features provided by the v2 API. Defaults to false.
                     type: boolean
+                  workspaceId:
+                    description: The immutable id associated with this workspace.
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

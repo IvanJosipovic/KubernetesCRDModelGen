@@ -128,7 +128,7 @@ spec:
                           description: A description for this rule. Restricted to 140 characters.
                           type: string
                         destinationAddressPrefix:
-                          description: CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if destination_address_prefixes is not specified.
+                          description: CIDR or destination IP range or * to match any IP. Tags such as VirtualNetwork, AzureLoadBalancer and Internet can also be used. This is required if destination_address_prefixes is not specified.
                           type: string
                         destinationAddressPrefixes:
                           description: List of destination address prefixes. Tags may not be used. This is required if destination_address_prefix is not specified.
@@ -161,7 +161,7 @@ spec:
                           description: Network protocol this rule applies to. Possible values include Tcp, Udp, Icmp, Esp, Ah or * (which matches all).
                           type: string
                         sourceAddressPrefix:
-                          description: CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if source_address_prefixes is not specified.
+                          description: CIDR or source IP range or * to match any IP. Tags such as VirtualNetwork, AzureLoadBalancer and Internet can also be used. This is required if source_address_prefixes is not specified.
                           type: string
                         sourceAddressPrefixes:
                           description: List of source address prefixes. Tags may not be used. This is required if source_address_prefix is not specified.
@@ -349,7 +349,7 @@ spec:
                           description: A description for this rule. Restricted to 140 characters.
                           type: string
                         destinationAddressPrefix:
-                          description: CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if destination_address_prefixes is not specified.
+                          description: CIDR or destination IP range or * to match any IP. Tags such as VirtualNetwork, AzureLoadBalancer and Internet can also be used. This is required if destination_address_prefixes is not specified.
                           type: string
                         destinationAddressPrefixes:
                           description: List of destination address prefixes. Tags may not be used. This is required if destination_address_prefix is not specified.
@@ -382,7 +382,7 @@ spec:
                           description: Network protocol this rule applies to. Possible values include Tcp, Udp, Icmp, Esp, Ah or * (which matches all).
                           type: string
                         sourceAddressPrefix:
-                          description: CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if source_address_prefixes is not specified.
+                          description: CIDR or source IP range or * to match any IP. Tags such as VirtualNetwork, AzureLoadBalancer and Internet can also be used. This is required if source_address_prefixes is not specified.
                           type: string
                         sourceAddressPrefixes:
                           description: List of source address prefixes. Tags may not be used. This is required if source_address_prefix is not specified.

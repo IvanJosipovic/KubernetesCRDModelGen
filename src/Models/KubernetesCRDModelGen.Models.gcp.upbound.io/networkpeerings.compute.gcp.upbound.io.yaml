@@ -184,6 +184,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  stackType:
+                    description: 'Which IP version(s) of traffic and routes are allowed to be imported or exported between peer networks. The default value is IPV4_ONLY. Possible values: ["IPV4_ONLY", "IPV4_IPV6"].'
+                    type: string
                 type: object
               managementPolicy:
                 default: FullControl
@@ -342,6 +345,9 @@ spec:
                     type: string
                   peerNetwork:
                     description: The peer network in the peering. The peer network may belong to a different project.
+                    type: string
+                  stackType:
+                    description: 'Which IP version(s) of traffic and routes are allowed to be imported or exported between peer networks. The default value is IPV4_ONLY. Possible values: ["IPV4_ONLY", "IPV4_IPV6"].'
                     type: string
                   state:
                     description: State for the peering, either ACTIVE or INACTIVE. The peering is ACTIVE when there's a matching configuration in the peer network.

@@ -314,6 +314,14 @@ spec:
                           description: The operations to be performed on the workspace. Structure is documented below.
                           items:
                             properties:
+                              allowExitCodes:
+                                description: Allow this build step to fail without failing the entire build if and only if the exit code is one of the specified codes. If allowFailure is also specified, this field will take precedence.
+                                items:
+                                  type: number
+                                type: array
+                              allowFailure:
+                                description: Allow this build step to fail without failing the entire build. If false, the entire build will fail if this step fails. Otherwise, the build will succeed, but this step will still have a failure status. Error information will be reported in the failureDetail field. allowExitCodes takes precedence over this field.
+                                type: boolean
                               args:
                                 description: A list of arguments that will be presented to the step when it is started. If the image used to run the step's container has an entrypoint, the args are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.
                                 items:
@@ -635,12 +643,11 @@ spec:
                           description: 'The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are: UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER.'
                           type: string
                         uri:
-                          description: The URI of the repo .
+                          description: The URI of the repo.
                           type: string
                       required:
                       - ref
                       - repoType
-                      - uri
                       type: object
                     type: array
                   substitutions:
@@ -1134,6 +1141,14 @@ spec:
                           description: The operations to be performed on the workspace. Structure is documented below.
                           items:
                             properties:
+                              allowExitCodes:
+                                description: Allow this build step to fail without failing the entire build if and only if the exit code is one of the specified codes. If allowFailure is also specified, this field will take precedence.
+                                items:
+                                  type: number
+                                type: array
+                              allowFailure:
+                                description: Allow this build step to fail without failing the entire build. If false, the entire build will fail if this step fails. Otherwise, the build will succeed, but this step will still have a failure status. Error information will be reported in the failureDetail field. allowExitCodes takes precedence over this field.
+                                type: boolean
                               args:
                                 description: A list of arguments that will be presented to the step when it is started. If the image used to run the step's container has an entrypoint, the args are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.
                                 items:
@@ -1345,7 +1360,7 @@ spec:
                           description: 'The type of the repo, since it may not be explicit from the repo field (e.g from a URL). Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values are: UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER.'
                           type: string
                         uri:
-                          description: The URI of the repo .
+                          description: The URI of the repo.
                           type: string
                       type: object
                     type: array
