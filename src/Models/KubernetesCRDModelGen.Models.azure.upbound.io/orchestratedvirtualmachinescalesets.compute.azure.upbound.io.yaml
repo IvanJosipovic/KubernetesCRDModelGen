@@ -114,10 +114,8 @@ spec:
                           description: The Type of Storage Account which should back this Data Disk. Possible values include Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS, Premium_LRS, PremiumV2_LRS, Premium_ZRS and UltraSSD_LRS.
                           type: string
                         ultraSsdDiskIopsReadWrite:
-                          description: Specifies the Read-Write IOPS for this Data Disk. Only settable for UltraSSD disks.
                           type: number
                         ultraSsdDiskMbpsReadWrite:
-                          description: Specifies the bandwidth in MB per second for this Data Disk. Only settable for UltraSSD disks.
                           type: number
                         writeAcceleratorEnabled:
                           description: Specifies if Write Accelerator is enabled on the Data Disk. Defaults to false.
@@ -1008,10 +1006,8 @@ spec:
                           description: The Type of Storage Account which should back this Data Disk. Possible values include Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS, Premium_LRS, PremiumV2_LRS, Premium_ZRS and UltraSSD_LRS.
                           type: string
                         ultraSsdDiskIopsReadWrite:
-                          description: Specifies the Read-Write IOPS for this Data Disk. Only settable for UltraSSD disks.
                           type: number
                         ultraSsdDiskMbpsReadWrite:
-                          description: Specifies the bandwidth in MB per second for this Data Disk. Only settable for UltraSSD disks.
                           type: number
                         writeAcceleratorEnabled:
                           description: Specifies if Write Accelerator is enabled on the Data Disk. Defaults to false.

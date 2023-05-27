@@ -265,7 +265,7 @@ spec:
                         type: object
                     type: object
                   sku:
-                    description: The SKU name of the App Configuration. Possible values are free and standard.
+                    description: The SKU name of the App Configuration. Possible values are free and standard. Defaults to free.
                     type: string
                   softDeleteRetentionDays:
                     description: The number of days that items should be retained for once soft-deleted. This field only works for standard sku. This value can be between 1 and 7 days. Defaults to 7. Changing this forces a new resource to be created.
@@ -530,7 +530,7 @@ spec:
                       type: object
                     type: array
                   sku:
-                    description: The SKU name of the App Configuration. Possible values are free and standard.
+                    description: The SKU name of the App Configuration. Possible values are free and standard. Defaults to free.
                     type: string
                   softDeleteRetentionDays:
                     description: The number of days that items should be retained for once soft-deleted. This field only works for standard sku. This value can be between 1 and 7 days. Defaults to 7. Changing this forces a new resource to be created.

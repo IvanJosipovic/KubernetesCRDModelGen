@@ -359,7 +359,7 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                   throughputCapacity:
-                    description: Sets the throughput capacity (in MBps) for the file system that you're creating. Valid values are 128, 256, 512, 1024, and 2048.
+                    description: Sets the throughput capacity (in MBps) for the file system that you're creating. Valid values are 128, 256, 512, 1024, 2048, and 4096.
                     type: number
                   weeklyMaintenanceStartTime:
                     description: The preferred start time (in d:HH:MM format) to perform weekly maintenance, in the UTC time zone.
@@ -622,7 +622,7 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                   throughputCapacity:
-                    description: Sets the throughput capacity (in MBps) for the file system that you're creating. Valid values are 128, 256, 512, 1024, and 2048.
+                    description: Sets the throughput capacity (in MBps) for the file system that you're creating. Valid values are 128, 256, 512, 1024, 2048, and 4096.
                     type: number
                   vpcId:
                     description: Identifier of the Virtual Private Cloud for the file system.

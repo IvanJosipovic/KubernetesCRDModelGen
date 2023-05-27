@@ -97,7 +97,6 @@ spec:
                                       type: string
                                   required:
                                   - endPointName
-                                  - ipAddress
                                   - port
                                   - protocol
                                   type: object
