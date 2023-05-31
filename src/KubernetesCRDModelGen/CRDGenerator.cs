@@ -168,13 +168,13 @@ public class CRDGenerator : ICRDGenerator
         return code.Replace("// <summary>", "/// <summary>");
     }
 
-    public async Task<(Assembly?, XmlDocument?)> GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
+    public (Assembly?, XmlDocument?) GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
     {
         var code = GenerateCode(crd, @namespace);
-        return await GenerateAssembly(crd.Metadata.Name, code);
+        return GenerateAssembly(crd.Metadata.Name, code);
     }
 
-    private async Task<(Assembly?, XmlDocument?)> GenerateAssembly(string name, string code)
+    private (Assembly?, XmlDocument?) GenerateAssembly(string name, string code)
     {
         try
         {
@@ -496,7 +496,7 @@ public class CRDGenerator : ICRDGenerator
                                 break;
                             case "string":
                                 propertyTypeName = "string";
-                                if (prop.EnumProperty != null && prop.EnumProperty.Count > 0)
+                                if (prop.EnumProperty?.Count > 0)
                                 {
                                     var attr = new AttributeModel()
                                     {
@@ -663,12 +663,12 @@ public class CRDGenerator : ICRDGenerator
         return model;
     }
 
-    public static string GetCleanClassName(string nane)
+    private static string GetCleanClassName(string nane)
     {
         return CapitalizeFirstLetter(nane);
     }
 
-    public static string GetCleanPropertyName(string name)
+    private static string GetCleanPropertyName(string name)
     {
         foreach (var badChar in characters)
         {
