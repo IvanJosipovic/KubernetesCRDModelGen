@@ -1,10 +1,13 @@
-using Worker;
+namespace Worker;
 
-IHost host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices(services =>
+public class Program
+{
+    public static void Main(string[] args)
     {
-        services.AddHostedService<Worker.Worker>();
-    })
-    .Build();
+        var builder = Host.CreateApplicationBuilder(args);
+        builder.Services.AddHostedService<Worker>();
 
-await host.RunAsync();
+        var host = builder.Build();
+        host.Run();
+    }
+}

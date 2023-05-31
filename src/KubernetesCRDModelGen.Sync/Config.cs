@@ -2,7 +2,7 @@
 
 internal class Config
 {
-    public string Group { get; set; }
+    public required string Group { get; set; }
 
     public HelmConfig? Helm { get; set; }
 
@@ -19,18 +19,18 @@ internal class Config
 
     internal class GitHubConfig
     {
-        public string Repo { get; set; }
+        public required string Repo { get; set; }
 
         public string? AssetFilter { get; set; }
 
-        public string SemVer { get; set; }
+        public required string SemVer { get; set; }
     }
 
     internal class HelmConfig
     {
-        public string Repo { get; set; }
+        public required string Repo { get; set; }
 
-        public string Chart { get; set; }
+        public required string Chart { get; set; }
 
         public bool? PreRelease { get; set; }
 

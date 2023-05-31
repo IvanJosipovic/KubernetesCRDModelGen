@@ -19,11 +19,14 @@ public class Worker : BackgroundService
 
     private readonly IHostApplicationLifetime _lifeTime;
 
-    public Worker(ILogger<Worker> logger, IConfiguration configuration, IHostApplicationLifetime lifeTime)
+    private readonly IHttpClientFactory httpClientFactory;
+
+    public Worker(ILogger<Worker> logger, IConfiguration configuration, IHostApplicationLifetime lifeTime, IHttpClientFactory httpClientFactory)
     {
         _logger = logger;
         this.configuration = configuration;
         _lifeTime = lifeTime;
+        this.httpClientFactory = httpClientFactory;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -50,7 +53,7 @@ public class Worker : BackgroundService
             }
             if (item.Helm != null)
             {
-                await ProcessHelmChart(item);
+                ProcessHelmChart(item);
             }
         }
 
@@ -65,9 +68,9 @@ public class Worker : BackgroundService
         }
     }
 
-    private async Task ProcessDirectUrl(Config config, string url, string filter = null)
+    private async Task ProcessDirectUrl(Config config, string url, string? filter = null)
     {
-        using var client = new HttpClient();
+        using var client = httpClientFactory.CreateClient();
 
         using var httpStream = await client.GetStreamAsync(url);
         using var stream = new MemoryStream();
@@ -78,7 +81,7 @@ public class Worker : BackgroundService
 
         if (ext == ".yaml" || ext == ".yml")
         {
-            await ProcessYamlStream(config, stream);
+            ProcessYamlStream(config, stream);
         }
         else if (url.EndsWith(".zip"))
         {
@@ -92,7 +95,7 @@ public class Worker : BackgroundService
                         continue;
                     }
                     using var fileContents = zipStream.GetInputStream(entry);
-                    await ProcessYamlStream(config, fileContents);
+                    ProcessYamlStream(config, fileContents);
                 }
             }
         }
@@ -112,7 +115,7 @@ public class Worker : BackgroundService
                     using var fileContents = new MemoryStream();
                     await tarInputStream.CopyEntryContentsAsync(fileContents, CancellationToken.None);
                     fileContents.Position = 0;
-                    await ProcessYamlStream(config, fileContents);
+                    ProcessYamlStream(config, fileContents);
                 }
             }
         }
@@ -120,7 +123,7 @@ public class Worker : BackgroundService
 
     private async Task ProcessGitHub(Config config)
     {
-        using var client = new HttpClient();
+        using var client = httpClientFactory.CreateClient();
         client.DefaultRequestHeaders.UserAgent.TryParseAdd("KubernetesCRDModelGen");
 
         var gitHubReleases = await client.GetFromJsonAsync<List<GitHubRelease>>(config.GitHub.Repo);
@@ -138,7 +141,7 @@ public class Worker : BackgroundService
         }
     }
 
-    private async Task ProcessHelmChart(Config config)
+    private void ProcessHelmChart(Config config)
     {
         HelmClient.RepoRemove("temp");
         HelmClient.RepoAdd("temp", config.Helm.Repo);
@@ -147,14 +150,14 @@ public class Worker : BackgroundService
         var yaml = HelmClient.Template("temp", config.Helm.Chart, config.Helm.PreRelease.GetValueOrDefault(), config.Helm.CMD);
 
         byte[] byteArray = Encoding.UTF8.GetBytes(yaml);
-        MemoryStream stream = new MemoryStream(byteArray);
+        var stream = new MemoryStream(byteArray);
 
-        await ProcessYamlStream(config, stream);
+        ProcessYamlStream(config, stream);
 
         HelmClient.RepoRemove("temp");
     }
 
-    private async Task ProcessYamlStream(Config config, Stream stream)
+    private void ProcessYamlStream(Config config, Stream stream)
     {
         var serializer = new SerializerBuilder().Build();
         var deserializer = new DeserializerBuilder().Build();
@@ -189,7 +192,7 @@ public class Worker : BackgroundService
         }
     }
 
-    private string GetName(Config config)
+    private static string GetName(Config config)
     {
         return "KubernetesCRDModelGen.Models." + config.Group;
     }
@@ -207,6 +210,6 @@ public class Worker : BackgroundService
 
         Directory.CreateDirectory(projectPath);
 
-        File.WriteAllText(csprojPath, "<Project Sdk=\"Microsoft.NET.Sdk\"></Project>");
+        File.WriteAllText(csprojPath, """<Project Sdk="Microsoft.NET.Sdk"></Project>""");
     }
 }

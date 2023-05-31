@@ -33,16 +33,16 @@ public class UnitTest
         return GetServiceProvider().GetRequiredService<ICRDGenerator>();
     }
 
-    private static async Task<Type?> GetTypeYaml(string yaml, string kind)
+    private static Type? GetTypeYaml(string yaml, string kind)
     {
         var crd = KubernetesYaml.LoadAllFromString(yaml);
 
-        return await GetType((V1CustomResourceDefinition)crd[0], kind);
+        return GetType((V1CustomResourceDefinition)crd[0], kind);
     }
 
-    private static async Task<Type?> GetType(V1CustomResourceDefinition crd, string kind)
+    private static Type? GetType(V1CustomResourceDefinition crd, string kind)
     {
-        var assembly = await GetCRDGenerator().GenerateAssembly(crd, Namespace);
+        var assembly = GetCRDGenerator().GenerateAssembly(crd, Namespace);
 
         var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
 
@@ -50,7 +50,7 @@ public class UnitTest
     }
 
     [Fact]
-    public async Task TestNamespace()
+    public void TestNamespace()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -80,13 +80,13 @@ spec:
             metadata:
               type: object
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         type.Namespace.Should().Be(Namespace + ".kubeui.com");
     }
 
     [Fact]
-    public async Task TestKubernetesEntity()
+    public void TestKubernetesEntity()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -117,7 +117,7 @@ spec:
               type: object
 
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var attribute = type.CustomAttributes.First(x => x.AttributeType == typeof(KubernetesEntityAttribute));
 
@@ -135,7 +135,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestBaseClasses()
+    public void TestBaseClasses()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -167,7 +167,7 @@ spec:
             spec:
               type: object
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
         type.Name.Should().Be("V1beta1Test");
         type.IsAssignableTo(typeof(IKubernetesObject)).Should().BeTrue();
         type.IsAssignableTo(typeof(IKubernetesObject<V1ObjectMeta>)).Should().BeTrue();
@@ -175,7 +175,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestConstants()
+    public void TestConstants()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -205,7 +205,7 @@ spec:
             metadata:
               type: object
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         type.GetField("KubeApiVersion").GetValue(null).Should().Be("v1beta1");
         type.GetField("KubeGroup").GetValue(null).Should().Be("kubeui.com");
@@ -214,7 +214,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestString()
+    public void TestString()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -249,7 +249,7 @@ spec:
                 someString:
                   type: string
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -257,7 +257,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestBool()
+    public void TestBool()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -292,7 +292,7 @@ spec:
                 someBool:
                   type: boolean
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -300,7 +300,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestInt()
+    public void TestInt()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -335,7 +335,7 @@ spec:
                 intProp:
                   type: integer
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -343,7 +343,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestInt64()
+    public void TestInt64()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -379,7 +379,7 @@ spec:
                   type: integer
                   format: int64
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -387,7 +387,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestNumber()
+    public void TestNumber()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -422,7 +422,7 @@ spec:
                 numberProp:
                   type: number
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -430,7 +430,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestUnknownFields()
+    public void TestUnknownFields()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -465,7 +465,7 @@ spec:
             status:
               x-kubernetes-preserve-unknown-fields: true
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         type.GetProperty("Spec").PropertyType.Should().Be<JsonNode>();
 
@@ -473,7 +473,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestUnknownFields2()
+    public void TestUnknownFields2()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -508,7 +508,7 @@ spec:
                 values:
                   x-kubernetes-preserve-unknown-fields: true
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -516,7 +516,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestAssemblyName()
+    public void TestAssemblyName()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -546,13 +546,13 @@ spec:
             metadata:
               type: object
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         type.Assembly.ManifestModule.ScopeName.Should().Be("tests.kubeui.com.dll");
     }
 
     [Fact]
-    public async Task TestSpecialChars()
+    public void TestSpecialChars()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -587,7 +587,7 @@ spec:
                 some~!@#$%^&*()-=_+String:
                   type: string
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -595,7 +595,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayObject()
+    public void TestArrayObject()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -634,7 +634,7 @@ spec:
                     type: string
                 type: object
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -648,7 +648,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArray()
+    public void TestArray()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -685,7 +685,7 @@ spec:
                     type: string
                   type: array
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -693,7 +693,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayPreserveUnknown()
+    public void TestArrayPreserveUnknown()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -730,7 +730,7 @@ spec:
                     x-kubernetes-preserve-unknown-fields: true
                   type: array
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -738,7 +738,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayNumber()
+    public void TestArrayNumber()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -775,7 +775,7 @@ spec:
                     type: number
                   type: array
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -783,7 +783,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayInteger()
+    public void TestArrayInteger()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -820,7 +820,7 @@ spec:
                     type: integer
                   type: array
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -828,7 +828,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayInteger64()
+    public void TestArrayInteger64()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -866,7 +866,7 @@ spec:
                     format: int64
                   type: array
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -874,7 +874,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestDict()
+    public void TestDict()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -911,7 +911,7 @@ spec:
                     type: string
                   type: object
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -919,7 +919,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestRequired()
+    public void TestRequired()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -958,7 +958,7 @@ spec:
               required:
               - numberProp
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -968,7 +968,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestRequiredNested()
+    public void TestRequiredNested()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1010,7 +1010,7 @@ spec:
                   required:
                   - numberProp
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -1022,7 +1022,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestRequiredArray()
+    public void TestRequiredArray()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1066,7 +1066,7 @@ spec:
                     - numberProp
                   type: array
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -1082,7 +1082,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestIntOrString()
+    public void TestIntOrString()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1120,7 +1120,7 @@ spec:
                   - type: string
                   x-kubernetes-int-or-string: true
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -1128,7 +1128,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestIntOrStringArray()
+    public void TestIntOrStringArray()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1168,7 +1168,7 @@ spec:
                     x-kubernetes-int-or-string: true
                   type: array
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -1178,7 +1178,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestEnum()
+    public void TestEnum()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1217,7 +1217,7 @@ spec:
                   - Never
                   type: string
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -1238,7 +1238,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestEnumArray()
+    public void TestEnumArray()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1279,7 +1279,7 @@ spec:
                     - Never
                   type: array
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -1300,7 +1300,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestObject()
+    public void TestObject()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1341,7 +1341,7 @@ spec:
                         prop1:
                           type: string
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -1358,7 +1358,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestObjectSameName()
+    public void TestObjectSameName()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1399,7 +1399,7 @@ spec:
                         prop1:
                           type: string
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
@@ -1416,7 +1416,7 @@ spec:
     }
 
     [Fact]
-    public async Task TestArrayObjectSameName()
+    public void TestArrayObjectSameName()
     {
         var yaml = @"
 apiVersion: apiextensions.k8s.io/v1
@@ -1458,7 +1458,7 @@ spec:
                         prop1:
                           type: string
 ";
-        var type = await GetTypeYaml(yaml, "Test");
+        var type = GetTypeYaml(yaml, "Test");
 
         var specType = type.GetProperty("Spec").PropertyType;
 
