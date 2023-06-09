@@ -1840,9 +1840,23 @@ spec:
                         hecEndpointType:
                           description: The HEC endpoint type. Valid values are Raw or Event. The default value is Raw.
                           type: string
-                        hecToken:
+                        hecTokenSecretRef:
                           description: The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
-                          type: string
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         processingConfiguration:
                           description: The data processing configuration.  More details are given below.
                           items:
@@ -1886,7 +1900,7 @@ spec:
                           type: string
                       required:
                       - hecEndpoint
-                      - hecToken
+                      - hecTokenSecretRef
                       type: object
                     type: array
                   tags:
@@ -2853,9 +2867,6 @@ spec:
                           type: string
                         hecEndpointType:
                           description: The HEC endpoint type. Valid values are Raw or Event. The default value is Raw.
-                          type: string
-                        hecToken:
-                          description: The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
                           type: string
                         processingConfiguration:
                           description: The data processing configuration.  More details are given below.
