@@ -3,9 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.9.2
+    controller-gen.kubebuilder.io/version: v0.11.3
   labels:
-    serviceoperator.azure.com/version: v2.0.0
+    serviceoperator.azure.com/version: v2.1.0
   name: namespaces.servicebus.azure.com
 spec:
   conversion:
@@ -154,6 +154,58 @@ spec:
                     properties:
                       endpoint:
                         description: 'Endpoint: indicates where the Endpoint secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryConnectionString:
+                        description: 'PrimaryConnectionString: indicates where the PrimaryConnectionString secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryKey:
+                        description: 'PrimaryKey: indicates where the PrimaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryConnectionString:
+                        description: 'SecondaryConnectionString: indicates where the SecondaryConnectionString secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryKey:
+                        description: 'SecondaryKey: indicates where the SecondaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
@@ -558,6 +610,58 @@ spec:
                         - key
                         - name
                         type: object
+                      primaryConnectionString:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryKey:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryConnectionString:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryKey:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
                     type: object
                 type: object
               originalVersion:
@@ -920,6 +1024,58 @@ spec:
                         - key
                         - name
                         type: object
+                      primaryConnectionString:
+                        description: 'PrimaryConnectionString: indicates where the PrimaryConnectionString secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryKey:
+                        description: 'PrimaryKey: indicates where the PrimaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryConnectionString:
+                        description: 'SecondaryConnectionString: indicates where the SecondaryConnectionString secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryKey:
+                        description: 'SecondaryKey: indicates where the SecondaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
                     type: object
                 type: object
               owner:
@@ -1270,6 +1426,58 @@ spec:
                         description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
                         type: object
                       endpoint:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryConnectionString:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      primaryKey:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryConnectionString:
+                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        properties:
+                          key:
+                            description: Key is the key in the Kubernetes secret being referenced
+                            type: string
+                          name:
+                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                      secondaryKey:
                         description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
                         properties:
                           key:
