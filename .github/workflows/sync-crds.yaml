@@ -51,7 +51,9 @@ jobs:
           commit-message: "feat: Update CRDs"
           title: "feat: Update CRDs"
           body: "Automated CRD Sync"
+
       - name: Enable Pull Request Automerge
+        if: steps.checkfiles.outputs.createpr == 'True'
         run: gh pr merge --merge --auto "${{ steps.cpr.outputs.pull-request-number }}"
         env:
           GH_TOKEN: ${{ secrets.GHPAT }}
