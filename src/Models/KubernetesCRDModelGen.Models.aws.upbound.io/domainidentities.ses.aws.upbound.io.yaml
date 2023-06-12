@@ -56,9 +56,6 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  domain:
-                    description: The domain name to assign to SES
-                    type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -197,9 +194,6 @@ spec:
             required:
             - forProvider
             type: object
-            x-kubernetes-validations:
-            - message: domain is a required parameter
-              rule: self.managementPolicy == 'ObserveOnly' || has(self.forProvider.domain)
           status:
             description: DomainIdentityStatus defines the observed state of DomainIdentity.
             properties:
@@ -207,9 +201,6 @@ spec:
                 properties:
                   arn:
                     description: The ARN of the domain identity.
-                    type: string
-                  domain:
-                    description: The domain name to assign to SES
                     type: string
                   id:
                     type: string
