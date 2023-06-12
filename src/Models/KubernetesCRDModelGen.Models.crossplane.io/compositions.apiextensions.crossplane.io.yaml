@@ -1000,6 +1000,11 @@ spec:
                         type: object
                       type: array
                     readinessChecks:
+                      default:
+                      - matchCondition:
+                          status: True
+                          type: Ready
+                        type: MatchCondition
                       description: ReadinessChecks allows users to define custom readiness checks. All checks have to return true in order for resource to be considered ready. The default readiness check is to have the "Ready" condition to be "True".
                       items:
                         description: ReadinessCheck is used to indicate how to tell whether a resource is ready for consumption
@@ -1007,6 +1012,21 @@ spec:
                           fieldPath:
                             description: FieldPath shows the path of the field whose value will be used.
                             type: string
+                          matchCondition:
+                            description: MatchCondition specifies the condition you'd like to match if you're using "MatchCondition" type.
+                            properties:
+                              status:
+                                default: True
+                                description: Status is the status of the condition you'd like to match.
+                                type: string
+                              type:
+                                default: Ready
+                                description: Type indicates the type of condition you'd like to use.
+                                type: string
+                            required:
+                            - status
+                            - type
+                            type: object
                           matchInteger:
                             description: MatchInt is the value you'd like to match if you're using "MatchInt" type.
                             format: int64
@@ -1020,6 +1040,7 @@ spec:
                             - MatchString
                             - MatchInteger
                             - NonEmpty
+                            - MatchCondition
                             - None
                             type: string
                         required:
