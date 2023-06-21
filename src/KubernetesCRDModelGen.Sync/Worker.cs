@@ -31,30 +31,38 @@ public class Worker : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-
-        _logger.LogInformation("Model Directory: {dir}", configuration.GetValue<string>("ModelDir"));
-
-        var config = configuration.GetSection("Config").Get<List<Config>>();
-
-        foreach (var item in config)
+        try
         {
-            _logger.LogInformation("Processing: {group}", item.Group);
+            _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
-            CreateProject(item);
+            _logger.LogInformation("Model Directory: {dir}", configuration.GetValue<string>("ModelDir"));
 
-            if (item.DirectUrl != null)
+            var config = configuration.GetSection("Config").Get<List<Config>>();
+
+            foreach (var item in config)
             {
-                await ProcessDirectUrls(item);
+                _logger.LogInformation("Processing: {group}", item.Group);
+
+                CreateProject(item);
+
+                if (item.DirectUrl != null)
+                {
+                    await ProcessDirectUrls(item);
+                }
+                if (item.GitHub != null)
+                {
+                    await ProcessGitHub(item);
+                }
+                if (item.Helm != null)
+                {
+                    await ProcessHelmChart(item);
+                }
             }
-            if (item.GitHub != null)
-            {
-                await ProcessGitHub(item);
-            }
-            if (item.Helm != null)
-            {
-                await ProcessHelmChart(item);
-            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Run Failed");
+            Environment.ExitCode = 1;
         }
 
         _lifeTime.StopApplication();
