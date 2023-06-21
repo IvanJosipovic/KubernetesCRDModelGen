@@ -1,57 +1,44 @@
-﻿using System.Diagnostics;
+﻿using CliWrap;
+using System;
+using System.Diagnostics;
+using System.Text;
+using System.Xml.Linq;
 
 namespace KubernetesCRDModelGen.Sync;
 
 public static class HelmClient
 {
-    public static void RepoAdd(string name, string url)
+    public static async Task RepoAdd(string name, string url)
     {
-        var process = new Process();
-        process.StartInfo.FileName = "helm";
-        process.StartInfo.Arguments = $"repo add {name} {url}";
-        process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-
-        process.Start();
-        process.WaitForExit();
+        await Cli.Wrap("helm")
+            .WithArguments(new[] { "repo", "add", name, url })
+            .ExecuteAsync();
     }
 
-    public static void RepoRemove(string name)
+    public static async Task RepoRemove(string name)
     {
-        var process = new Process();
-        process.StartInfo.FileName = "helm";
-        process.StartInfo.Arguments = $"repo remove {name}";
-        process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-
-        process.Start();
-        process.WaitForExit();
+        await Cli.Wrap("helm")
+            .WithArguments(new[] { "repo", "remove", name })
+            .WithValidation(CommandResultValidation.None)
+            .ExecuteAsync();
     }
 
-    public static void RepoUpdate()
+    public static async Task RepoUpdate()
     {
-        var process = new Process();
-        process.StartInfo.FileName = "helm";
-        process.StartInfo.Arguments = "repo update";
-        process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-
-        process.Start();
-        process.WaitForExit();
+        await Cli.Wrap("helm")
+            .WithArguments(new[] { "repo", "update" })
+            .ExecuteAsync();
     }
 
-    public static string Template(string repo, string name, bool devel, string appendCMD)
+    public static async Task<string> Template(string repo, string name, bool devel, string appendCMD)
     {
-        var process = new Process();
-        process.StartInfo.FileName = "helm";
-        process.StartInfo.Arguments = $"template {repo}/{name} --include-crds{(devel ? " --devel" : "")} {appendCMD}";
-        process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-        process.StartInfo.RedirectStandardOutput = true;
-        process.StartInfo.UseShellExecute = false;
+        var stdOutBuffer = new StringBuilder();
 
-        process.Start();
+        await Cli.Wrap("helm")
+            .WithArguments($"template {repo}/{name} --include-crds{(devel ? " --devel" : "")} {appendCMD}")
+            .WithStandardOutputPipe(PipeTarget.ToStringBuilder(stdOutBuffer))
+            .ExecuteAsync();
 
-        var output =  process.StandardOutput.ReadToEnd();
-
-        process.WaitForExit();
-
-        return output;
+        return stdOutBuffer.ToString();
     }
 }

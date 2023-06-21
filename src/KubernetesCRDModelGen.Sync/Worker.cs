@@ -39,7 +39,7 @@ public class Worker : BackgroundService
 
         foreach (var item in config)
         {
-            _logger.LogInformation("Processng: {group}", item.Group);
+            _logger.LogInformation("Processing: {group}", item.Group);
 
             CreateProject(item);
 
@@ -53,7 +53,7 @@ public class Worker : BackgroundService
             }
             if (item.Helm != null)
             {
-                ProcessHelmChart(item);
+                await ProcessHelmChart(item);
             }
         }
 
@@ -62,7 +62,7 @@ public class Worker : BackgroundService
 
     private async Task ProcessDirectUrls(Config config)
     {
-        foreach (var url in config.DirectUrl.Urls)
+        foreach (var url in config.DirectUrl!.Urls)
         {
             await ProcessDirectUrl(config, url, config.DirectUrl.Filter);
         }
@@ -126,7 +126,7 @@ public class Worker : BackgroundService
         using var client = httpClientFactory.CreateClient();
         client.DefaultRequestHeaders.UserAgent.TryParseAdd("KubernetesCRDModelGen");
 
-        var gitHubReleases = await client.GetFromJsonAsync<List<GitHubRelease>>(config.GitHub.Repo);
+        var gitHubReleases = await client.GetFromJsonAsync<List<GitHubRelease>>(config.GitHub!.Repo);
 
         var range = new SemanticVersioning.Range(config.GitHub.SemVer);
 
@@ -141,20 +141,20 @@ public class Worker : BackgroundService
         }
     }
 
-    private void ProcessHelmChart(Config config)
+    private async Task ProcessHelmChart(Config config)
     {
-        HelmClient.RepoRemove("temp");
-        HelmClient.RepoAdd("temp", config.Helm.Repo);
-        HelmClient.RepoUpdate();
+        await HelmClient.RepoRemove("temp");
+        await HelmClient.RepoAdd("temp", config.Helm!.Repo);
+        await HelmClient.RepoUpdate();
 
-        var yaml = HelmClient.Template("temp", config.Helm.Chart, config.Helm.PreRelease.GetValueOrDefault(), config.Helm.CMD);
+        var yaml = await HelmClient.Template("temp", config.Helm.Chart, config.Helm.PreRelease.GetValueOrDefault(), config.Helm.CMD);
 
         byte[] byteArray = Encoding.UTF8.GetBytes(yaml);
         var stream = new MemoryStream(byteArray);
 
         ProcessYamlStream(config, stream);
 
-        HelmClient.RepoRemove("temp");
+        await HelmClient.RepoRemove("temp");
     }
 
     private void ProcessYamlStream(Config config, Stream stream)
