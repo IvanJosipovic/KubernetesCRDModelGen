@@ -1,8 +1,6 @@
 ﻿using CliWrap;
-using System;
-using System.Diagnostics;
+using CliWrap.Buffered;
 using System.Text;
-using System.Xml.Linq;
 
 namespace KubernetesCRDModelGen.Sync;
 
@@ -12,7 +10,9 @@ public static class HelmClient
     {
         await Cli.Wrap("helm")
             .WithArguments(new[] { "repo", "add", name, url })
-            .ExecuteAsync();
+            .WithStandardOutputPipe(PipeTarget.ToDelegate(Console.WriteLine))
+            .WithStandardErrorPipe(PipeTarget.ToDelegate(Console.WriteLine))
+            .ExecuteBufferedAsync();
     }
 
     public static async Task RepoRemove(string name)
@@ -20,14 +20,18 @@ public static class HelmClient
         await Cli.Wrap("helm")
             .WithArguments(new[] { "repo", "remove", name })
             .WithValidation(CommandResultValidation.None)
-            .ExecuteAsync();
+            .WithStandardOutputPipe(PipeTarget.ToDelegate(Console.WriteLine))
+            .WithStandardErrorPipe(PipeTarget.ToDelegate(Console.WriteLine))
+            .ExecuteBufferedAsync();
     }
 
     public static async Task RepoUpdate()
     {
         await Cli.Wrap("helm")
             .WithArguments(new[] { "repo", "update" })
-            .ExecuteAsync();
+            .WithStandardOutputPipe(PipeTarget.ToDelegate(Console.WriteLine))
+            .WithStandardErrorPipe(PipeTarget.ToDelegate(Console.WriteLine))
+            .ExecuteBufferedAsync();
     }
 
     public static async Task<string> Template(string repo, string name, bool devel, string appendCMD)
@@ -37,7 +41,8 @@ public static class HelmClient
         await Cli.Wrap("helm")
             .WithArguments($"template {repo}/{name} --include-crds{(devel ? " --devel" : "")} {appendCMD}")
             .WithStandardOutputPipe(PipeTarget.ToStringBuilder(stdOutBuffer))
-            .ExecuteAsync();
+            .WithStandardErrorPipe(PipeTarget.ToDelegate(Console.WriteLine))
+            .ExecuteBufferedAsync();
 
         return stdOutBuffer.ToString();
     }
