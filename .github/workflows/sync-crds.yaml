@@ -30,7 +30,7 @@ jobs:
         run: dotnet sln remove ./src/Models/**/*.csproj
 
       - name: Clean Models
-        run: rm -rf ./src/Models/KubernetesCRDModelGen*
+        run: del /s /q .\src\Models\KubernetesCRDModelGen*
 
       - name: Sync CRDs
         run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ../Models
