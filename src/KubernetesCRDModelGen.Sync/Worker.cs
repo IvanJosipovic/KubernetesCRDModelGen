@@ -142,11 +142,17 @@ public class Worker : BackgroundService
         {
             var range = new SemanticVersioning.Range(config.GitHub.SemVer);
 
-            release = gitHubReleases.Where(x => !x.prerelease).OrderByDescending(x => SemanticVersioning.Version.Parse(x.name)).First(x => range.IsSatisfied(x.name));
+            release = gitHubReleases
+                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, false, out var ver))
+                .OrderByDescending(x => SemanticVersioning.Version.Parse(x.name))
+                .First(x => range.IsSatisfied(x.name));
         }
         else
         {
-            release = gitHubReleases.Where(x => !x.prerelease).OrderByDescending(x => SemanticVersioning.Version.Parse(x.name)).First();
+            release = gitHubReleases
+                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, false, out var ver))
+                .OrderByDescending(x => SemanticVersioning.Version.Parse(x.name))
+                .First();
         }
 
         foreach (var item in release.assets)
@@ -177,7 +183,9 @@ public class Worker : BackgroundService
     private void ProcessYamlStream(Config config, Stream stream)
     {
         var serializer = new SerializerBuilder().Build();
-        var deserializer = new DeserializerBuilder().Build();
+        var deserializer = new DeserializerBuilder()
+            .WithNodeTypeResolver(new MapTagsToObject())
+            .Build();
 
         var txt = new StreamReader(stream);
         var parser = new Parser(txt);
@@ -228,5 +236,18 @@ public class Worker : BackgroundService
         Directory.CreateDirectory(projectPath);
 
         File.WriteAllText(csprojPath, """<Project Sdk="Microsoft.NET.Sdk"></Project>""");
+    }
+}
+
+class MapTagsToObject : INodeTypeResolver
+{
+    public bool Resolve(NodeEvent? nodeEvent, ref Type currentType)
+    {
+        if (nodeEvent != null && !nodeEvent.Tag.IsEmpty)
+        {
+            currentType = typeof(object);
+            return true;
+        }
+        return false;
     }
 }
