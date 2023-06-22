@@ -23,7 +23,7 @@ internal class Config
 
         public string? AssetFilter { get; set; }
 
-        public required string SemVer { get; set; }
+        public string? SemVer { get; set; }
     }
 
     internal class HelmConfig

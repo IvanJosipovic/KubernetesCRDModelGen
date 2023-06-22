@@ -136,9 +136,18 @@ public class Worker : BackgroundService
 
         var gitHubReleases = await client.GetFromJsonAsync<List<GitHubRelease>>(config.GitHub!.Repo);
 
-        var range = new SemanticVersioning.Range(config.GitHub.SemVer);
+        GitHubRelease release;
 
-        var release = gitHubReleases.Where(x => !x.prerelease).First(x => range.IsSatisfied(x.tag_name));
+        if (!string.IsNullOrEmpty(config.GitHub.SemVer))
+        {
+            var range = new SemanticVersioning.Range(config.GitHub.SemVer);
+
+            release = gitHubReleases.Where(x => !x.prerelease).OrderByDescending(x => SemanticVersioning.Version.Parse(x.tag_name)).First(x => range.IsSatisfied(x.tag_name));
+        }
+        else
+        {
+            release = gitHubReleases.Where(x => !x.prerelease).OrderByDescending(x => SemanticVersioning.Version.Parse(x.tag_name)).First();
+        }
 
         foreach (var item in release.assets)
         {
