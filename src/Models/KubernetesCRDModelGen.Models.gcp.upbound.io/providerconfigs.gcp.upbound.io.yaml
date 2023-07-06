@@ -108,7 +108,7 @@ spec:
                         description: Federation is the configuration for federated identity.
                         properties:
                           providerID:
-                            description: ProviderID is the fully-qualified identifier for the identity provider on GCP. The format is `project/<project-id>/locations/global/workloadIdentityPools/<identity-pool>/providers/<identity-provider>`.
+                            description: ProviderID is the fully-qualified identifier for the identity provider on GCP. The format is `projects/<project-id>/locations/global/workloadIdentityPools/<identity-pool>/providers/<identity-provider>`.
                             minLength: 1
                             type: string
                           serviceAccount:
