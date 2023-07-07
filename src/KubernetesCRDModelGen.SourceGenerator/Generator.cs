@@ -2,6 +2,7 @@
 using k8s.Models;
 using Microsoft.CodeAnalysis;
 using System;
+using System.Diagnostics;
 using System.IO;
 using YamlDotNet.Core;
 using YamlDotNet.Core.Events;
@@ -15,10 +16,10 @@ namespace KubernetesCRDModelGen.SourceGenerator
         public void Execute(GeneratorExecutionContext context)
         {
 #if DEBUG
-            //if (!Debugger.IsAttached)
-            //{
-            //    Debugger.Launch();
-            //}
+            if (!Debugger.IsAttached)
+            {
+                Debugger.Launch();
+            }
 #endif
 
             var name = context.Compilation.AssemblyName;
@@ -37,7 +38,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
                     using TextReader reader = new StringReader(cont);
 
-                    var parser = new Parser(reader);
+                    var parser = new MergingParser(new Parser(reader));
 
                     parser.Consume<StreamStart>();
 
