@@ -143,14 +143,14 @@ public class Worker : BackgroundService
             var range = new SemanticVersioning.Range(config.GitHub.SemVer);
 
             release = gitHubReleases
-                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, false, out var ver))
+                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, false, out var ver) && x.assets.Any())
                 .OrderByDescending(x => SemanticVersioning.Version.Parse(x.name))
                 .First(x => range.IsSatisfied(x.name));
         }
         else
         {
             release = gitHubReleases
-                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, false, out var ver))
+                .Where(x => !x.prerelease && SemanticVersioning.Version.TryParse(x.name, false, out var ver) && x.assets.Any())
                 .OrderByDescending(x => SemanticVersioning.Version.Parse(x.name))
                 .First();
         }
