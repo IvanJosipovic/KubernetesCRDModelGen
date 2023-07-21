@@ -122,9 +122,6 @@ spec:
                               default: metadata.name
                               description: SortByFieldPath is the path to the field based on which list of EnvironmentConfigs is alphabetically sorted.
                               type: string
-                          required:
-                          - mode
-                          - sortByFieldPath
                           type: object
                         type:
                           default: Reference
@@ -1237,9 +1234,6 @@ spec:
                               default: metadata.name
                               description: SortByFieldPath is the path to the field based on which list of EnvironmentConfigs is alphabetically sorted.
                               type: string
-                          required:
-                          - mode
-                          - sortByFieldPath
                           type: object
                         type:
                           default: Reference
