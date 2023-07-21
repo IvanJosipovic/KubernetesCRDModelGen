@@ -721,6 +721,7 @@ spec:
                       type: object
                     type: array
                   scaleInPolicy:
+                    description: 'Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.'
                     type: string
                   secret:
                     description: One or more secret blocks as defined below.
@@ -1461,6 +1462,7 @@ spec:
                       type: object
                     type: array
                   scaleInPolicy:
+                    description: 'Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.'
                     type: string
                   secret:
                     description: One or more secret blocks as defined below.
