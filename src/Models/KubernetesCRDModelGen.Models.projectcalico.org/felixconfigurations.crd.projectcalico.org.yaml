@@ -333,13 +333,16 @@ spec:
                 description: 'LogPrefix is the log prefix that Felix uses when rendering LOG rules. [Default: calico-packet]'
                 type: string
               logSeverityFile:
-                description: 'LogSeverityFile is the log severity above which logs are sent to the log file. [Default: Info] kubebuilder:validation:Pattern=`^(?i)(Debug|Info|Warning|Error|Fatal)?$`'
+                description: 'LogSeverityFile is the log severity above which logs are sent to the log file. [Default: Info]'
+                pattern: ^(?i)(Debug|Info|Warning|Error|Fatal)?$
                 type: string
               logSeverityScreen:
-                description: 'LogSeverityScreen is the log severity above which logs are sent to the stdout. [Default: Info] kubebuilder:validation:Pattern=`^(?i)(Debug|Info|Warning|Error|Fatal)?$`'
+                description: 'LogSeverityScreen is the log severity above which logs are sent to the stdout. [Default: Info]'
+                pattern: ^(?i)(Debug|Info|Warning|Error|Fatal)?$
                 type: string
               logSeveritySys:
-                description: 'LogSeveritySys is the log severity above which logs are sent to the syslog. Set to None for no logging to syslog. [Default: Info] kubebuilder:validation:Pattern=`^(?i)(Debug|Info|Warning|Error|Fatal)?$`'
+                description: 'LogSeveritySys is the log severity above which logs are sent to the syslog. Set to None for no logging to syslog. [Default: Info]'
+                pattern: ^(?i)(Debug|Info|Warning|Error|Fatal)?$
                 type: string
               maxIpsetSize:
                 type: integer
