@@ -4,14 +4,14 @@ metadata:
   name: domainmappings.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.10.2
+    app.kubernetes.io/version: 1.11.0
     knative.dev/crd-install: true
 spec:
   group: serving.knative.dev
   versions:
   - name: v1beta1
     served: true
-    storage: false
+    storage: true
     subresources:
       status: {}
     additionalPrinterColumns:
@@ -138,7 +138,9 @@ spec:
                 type: string
   - name: v1alpha1
     served: true
-    storage: true
+    storage: false
+    deprecated: true
+    deprecationWarning: The v1alpha1 version of DomainMapping has been deprecated and will be removed in a future release of the API. Please upgrade to v1beta1
     subresources:
       status: {}
     schema:
