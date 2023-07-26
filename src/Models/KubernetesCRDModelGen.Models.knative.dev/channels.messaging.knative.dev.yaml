@@ -6,7 +6,7 @@ metadata:
     knative.dev/crd-install: true
     messaging.knative.dev/subscribable: true
     duck.knative.dev/addressable: true
-    app.kubernetes.io/version: 1.10.2
+    app.kubernetes.io/version: 1.11.0
     app.kubernetes.io/name: knative-eventing
 spec:
   group: messaging.knative.dev
@@ -85,6 +85,9 @@ spec:
                       uri:
                         description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
                         type: string
+                      CACerts:
+                        description: Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
+                        type: string
                   retry:
                     description: Retry is the minimum number of retries the sender should attempt when sending an event before moving it to the dead letter sink.
                     type: integer
@@ -141,8 +144,14 @@ spec:
                     replyUri:
                       description: ReplyURI is the endpoint for the reply
                       type: string
+                    replyCACerts:
+                      description: Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.
+                      type: string
                     subscriberUri:
                       description: SubscriberURI is the endpoint for the subscriber
+                      type: string
+                    subscriberCACerts:
+                      description: Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.
                       type: string
                     uid:
                       description: UID is used to understand the origin of the subscriber.
@@ -152,10 +161,27 @@ spec:
             type: object
             properties:
               address:
+                description: Channel is Addressable. It exposes the endpoint as an URI to get events delivered into the Channel mesh.
                 type: object
                 properties:
+                  name:
+                    type: string
                   url:
                     type: string
+                  CACerts:
+                    type: string
+              addresses:
+                description: Channel is Addressable. It exposes the endpoints as URIs to get events delivered into the Channel mesh.
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    url:
+                      type: string
+                    CACerts:
+                      type: string
               annotations:
                 description: Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.
                 type: object
@@ -221,6 +247,9 @@ spec:
                     type: string
               deadLetterSinkUri:
                 description: DeadLetterSinkURI is the resolved URI of the dead letter sink that will be used as a fallback when not specified by Triggers.
+                type: string
+              deadLetterSinkCACerts:
+                description: Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.
                 type: string
               observedGeneration:
                 description: ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.
