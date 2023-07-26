@@ -6,7 +6,7 @@ metadata:
     eventing.knative.dev/source: true
     duck.knative.dev/source: true
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.10.2
+    app.kubernetes.io/version: 1.11.0
     app.kubernetes.io/name: knative-eventing
   annotations:
     registry.knative.dev/eventTypes: >
@@ -121,6 +121,9 @@ spec:
                   uri:
                     description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
                     type: string
+                  CACerts:
+                    description: CACerts is the Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
+                    type: string
               namespaceSelector:
                 description: NamespaceSelector is a label selector to capture the namespaces that should be watched by the source.
                 type: object
@@ -198,6 +201,9 @@ spec:
                 format: int64
               sinkUri:
                 description: SinkURI is the current active sink URI that has been configured for the Source.
+                type: string
+              sinkCACerts:
+                description: CACerts is the Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
                 type: string
               namespaces:
                 description: Namespaces show the namespaces currently watched by the ApiServerSource

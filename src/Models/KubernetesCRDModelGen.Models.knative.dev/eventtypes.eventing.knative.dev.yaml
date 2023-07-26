@@ -4,12 +4,13 @@ metadata:
   name: eventtypes.eventing.knative.dev
   labels:
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.10.2
+    app.kubernetes.io/version: 1.11.0
     app.kubernetes.io/name: knative-eventing
 spec:
   group: eventing.knative.dev
   versions:
-  - name: v1beta1
+  - &o0
+    name: v1beta1
     served: true
     storage: true
     subresources:
@@ -25,6 +26,22 @@ spec:
             properties:
               broker:
                 type: string
+              reference:
+                description: Reference Broker. For example
+                type: object
+                properties:
+                  apiVersion:
+                    description: API version of the referent.
+                    type: string
+                  kind:
+                    description: 'Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+                    type: string
+                  name:
+                    description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                    type: string
+                  namespace:
+                    description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ This is an optional field, it gets defaulted to the object holding it if left out.'
+                    type: string
               description:
                 description: Description is an optional field used to describe the EventType, in any meaningful way.
                 type: string
@@ -89,9 +106,12 @@ spec:
     - name: Schema
       type: string
       jsonPath: .spec.schema
-    - name: Broker
+    - name: Reference Name
       type: string
-      jsonPath: .spec.broker
+      jsonPath: .spec.reference.name
+    - name: Reference Kind
+      type: string
+      jsonPath: .spec.reference.kind
     - name: Description
       type: string
       jsonPath: .spec.description
@@ -101,6 +121,10 @@ spec:
     - name: Reason
       type: string
       jsonPath: .status.conditions[?(@.type=="Ready")].reason
+  - <<: *o0
+    name: v1beta2
+    served: true
+    storage: false
   names:
     kind: EventType
     plural: eventtypes
@@ -110,3 +134,13 @@ spec:
     - knative
     - eventing
   scope: Namespaced
+  conversion:
+    strategy: Webhook
+    webhook:
+      conversionReviewVersions:
+      - v1
+      - v1beta1
+      clientConfig:
+        service:
+          name: eventing-webhook
+          namespace: knative-eventing

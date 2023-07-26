@@ -4,7 +4,7 @@ metadata:
   name: subscriptions.messaging.knative.dev
   labels:
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.10.2
+    app.kubernetes.io/version: 1.11.0
     app.kubernetes.io/name: knative-eventing
 spec:
   group: messaging.knative.dev
@@ -69,6 +69,9 @@ spec:
                       uri:
                         description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
                         type: string
+                      CACerts:
+                        description: Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
+                        type: string
                   retry:
                     description: Retry is the minimum number of retries the sender should attempt when sending an event before moving it to the dead letter sink.
                     type: integer
@@ -97,6 +100,9 @@ spec:
                   uri:
                     description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
                     type: string
+                  CACerts:
+                    description: Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
+                    type: string
               subscriber:
                 description: Subscriber is reference to (optional) function for processing events. Events from the Channel will be delivered here and replies are sent to a Destination as specified by the Reply.
                 type: object
@@ -120,6 +126,9 @@ spec:
                     x-kubernetes-preserve-unknown-fields: true
                   uri:
                     description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
+                    type: string
+                  CACerts:
+                    description: Certification Authority (CA) certificates in PEM format that the subscription trusts when sending events to the sink.
                     type: string
           status:
             type: object
@@ -166,11 +175,20 @@ spec:
                   deadLetterSinkUri:
                     description: ReplyURI is the fully resolved URI for the spec.delivery.deadLetterSink.
                     type: string
+                  deadLetterSinkCACerts:
+                    description: Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.
+                    type: string
                   replyUri:
                     description: ReplyURI is the fully resolved URI for the spec.reply.
                     type: string
+                  replyCACerts:
+                    description: Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.
+                    type: string
                   subscriberUri:
                     description: SubscriberURI is the fully resolved URI for spec.subscriber.
+                    type: string
+                  subscriberCACerts:
+                    description: Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.
                     type: string
     additionalPrinterColumns:
     - name: Age
