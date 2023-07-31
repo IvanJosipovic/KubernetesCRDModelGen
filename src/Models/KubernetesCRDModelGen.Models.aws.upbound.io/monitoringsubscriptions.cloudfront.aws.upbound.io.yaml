@@ -124,12 +124,8 @@ spec:
                               realtimeMetricsSubscriptionStatus:
                                 description: A flag that indicates whether additional CloudWatch metrics are enabled for a given CloudFront distribution. Valid values are Enabled and Disabled. See below.
                                 type: string
-                            required:
-                            - realtimeMetricsSubscriptionStatus
                             type: object
                           type: array
-                      required:
-                      - realtimeMetricsSubscriptionConfig
                       type: object
                     type: array
                   region:
@@ -137,6 +133,25 @@ spec:
                     type: string
                 required:
                 - region
+                type: object
+              initProvider:
+                description: THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
+                properties:
+                  monitoringSubscription:
+                    description: A monitoring subscription. This structure contains information about whether additional CloudWatch metrics are enabled for a given CloudFront distribution.
+                    items:
+                      properties:
+                        realtimeMetricsSubscriptionConfig:
+                          description: A subscription configuration for additional CloudWatch metrics. See below.
+                          items:
+                            properties:
+                              realtimeMetricsSubscriptionStatus:
+                                description: A flag that indicates whether additional CloudWatch metrics are enabled for a given CloudFront distribution. Valid values are Enabled and Disabled. See below.
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                 type: object
               managementPolicies:
                 default:
@@ -279,7 +294,7 @@ spec:
             type: object
             x-kubernetes-validations:
             - message: monitoringSubscription is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.monitoringSubscription)"
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.monitoringSubscription) || has(self.initProvider.monitoringSubscription)"
           status:
             description: MonitoringSubscriptionStatus defines the observed state of MonitoringSubscription.
             properties:

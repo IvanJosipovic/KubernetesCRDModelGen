@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.1
-  name: botchannelsmses.botservice.azure.upbound.io
+  name: botchannelsms.botservice.azure.upbound.io
 spec:
   group: botservice.azure.upbound.io
   names:
@@ -13,7 +13,7 @@ spec:
     - azure
     kind: BotChannelSMS
     listKind: BotChannelSMSList
-    plural: botchannelsmses
+    plural: botchannelsms
     singular: botchannelsms
   scope: Cluster
   versions:

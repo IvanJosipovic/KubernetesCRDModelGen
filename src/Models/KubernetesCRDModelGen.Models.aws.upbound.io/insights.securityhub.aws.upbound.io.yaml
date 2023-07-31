@@ -69,9 +69,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         companyName:
@@ -84,9 +81,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         complianceStatus:
@@ -99,9 +93,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         confidence:
@@ -133,9 +124,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -171,9 +159,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         findingProviderFieldsConfidence:
@@ -216,9 +201,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         findingProviderFieldsRelatedFindingsProductArn:
@@ -231,9 +213,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         findingProviderFieldsSeverityLabel:
@@ -246,9 +225,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         findingProviderFieldsSeverityOriginal:
@@ -261,9 +237,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         findingProviderFieldsTypes:
@@ -276,9 +249,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         firstObservedAt:
@@ -295,9 +265,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -318,9 +285,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         id:
@@ -333,9 +297,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         keyword:
@@ -345,8 +306,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - value
                             type: object
                           type: array
                         lastObservedAt:
@@ -363,9 +322,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -386,9 +342,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         malwarePath:
@@ -401,9 +354,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         malwareState:
@@ -416,9 +366,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         malwareType:
@@ -431,9 +378,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         networkDestinationDomain:
@@ -446,9 +390,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         networkDestinationIpv4:
@@ -458,8 +399,6 @@ spec:
                               cidr:
                                 description: A finding's CIDR value.
                                 type: string
-                            required:
-                            - cidr
                             type: object
                           type: array
                         networkDestinationIpv6:
@@ -469,8 +408,6 @@ spec:
                               cidr:
                                 description: A finding's CIDR value.
                                 type: string
-                            required:
-                            - cidr
                             type: object
                           type: array
                         networkDestinationPort:
@@ -498,9 +435,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         networkProtocol:
@@ -513,9 +447,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         networkSourceDomain:
@@ -528,9 +459,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         networkSourceIpv4:
@@ -540,8 +468,6 @@ spec:
                               cidr:
                                 description: A finding's CIDR value.
                                 type: string
-                            required:
-                            - cidr
                             type: object
                           type: array
                         networkSourceIpv6:
@@ -551,8 +477,6 @@ spec:
                               cidr:
                                 description: A finding's CIDR value.
                                 type: string
-                            required:
-                            - cidr
                             type: object
                           type: array
                         networkSourceMac:
@@ -565,9 +489,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         networkSourcePort:
@@ -595,9 +516,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         noteUpdatedAt:
@@ -614,9 +532,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -637,9 +552,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         processLaunchedAt:
@@ -656,9 +568,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -679,9 +588,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         processParentPid:
@@ -709,9 +615,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         processPid:
@@ -743,9 +646,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -766,9 +666,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         productFields:
@@ -784,10 +681,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - key
-                            - value
                             type: object
                           type: array
                         productName:
@@ -800,9 +693,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         recommendationText:
@@ -815,9 +705,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         recordState:
@@ -830,9 +717,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         relatedFindingsId:
@@ -845,9 +729,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         relatedFindingsProductArn:
@@ -860,9 +741,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsEc2InstanceIamInstanceProfileArn:
@@ -875,9 +753,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsEc2InstanceImageId:
@@ -890,9 +765,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsEc2InstanceIpv4Addresses:
@@ -902,8 +774,6 @@ spec:
                               cidr:
                                 description: A finding's CIDR value.
                                 type: string
-                            required:
-                            - cidr
                             type: object
                           type: array
                         resourceAwsEc2InstanceIpv6Addresses:
@@ -913,8 +783,6 @@ spec:
                               cidr:
                                 description: A finding's CIDR value.
                                 type: string
-                            required:
-                            - cidr
                             type: object
                           type: array
                         resourceAwsEc2InstanceKeyName:
@@ -927,9 +795,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsEc2InstanceLaunchedAt:
@@ -946,9 +811,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -969,9 +831,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsEc2InstanceType:
@@ -984,9 +843,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsEc2InstanceVpcId:
@@ -999,9 +855,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsIamAccessKeyCreatedAt:
@@ -1018,9 +871,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -1041,9 +891,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsIamAccessKeyUserName:
@@ -1056,9 +903,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsS3BucketOwnerId:
@@ -1071,9 +915,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceAwsS3BucketOwnerName:
@@ -1086,9 +927,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceContainerImageId:
@@ -1101,9 +939,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceContainerImageName:
@@ -1116,9 +951,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceContainerLaunchedAt:
@@ -1135,9 +967,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -1158,9 +987,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceDetailsOther:
@@ -1176,10 +1002,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - key
-                            - value
                             type: object
                           type: array
                         resourceId:
@@ -1192,9 +1014,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourcePartition:
@@ -1207,9 +1026,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceRegion:
@@ -1222,9 +1038,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         resourceTags:
@@ -1240,10 +1053,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - key
-                            - value
                             type: object
                           type: array
                         resourceType:
@@ -1256,9 +1065,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         severityLabel:
@@ -1271,9 +1077,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         sourceUrl:
@@ -1286,9 +1089,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         threatIntelIndicatorCategory:
@@ -1301,9 +1101,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         threatIntelIndicatorLastObservedAt:
@@ -1320,9 +1117,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -1343,9 +1137,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         threatIntelIndicatorSourceUrl:
@@ -1358,9 +1149,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         threatIntelIndicatorType:
@@ -1373,9 +1161,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         threatIntelIndicatorValue:
@@ -1388,9 +1173,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         title:
@@ -1403,9 +1185,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         type:
@@ -1418,9 +1197,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         updatedAt:
@@ -1437,9 +1213,6 @@ spec:
                                     value:
                                       description: A value for the keyword.
                                       type: number
-                                  required:
-                                  - unit
-                                  - value
                                   type: object
                                 type: array
                               end:
@@ -1463,10 +1236,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - key
-                            - value
                             type: object
                           type: array
                         verificationState:
@@ -1479,9 +1248,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                         workflowStatus:
@@ -1494,9 +1260,6 @@ spec:
                               value:
                                 description: A value for the keyword.
                                 type: string
-                            required:
-                            - comparison
-                            - value
                             type: object
                           type: array
                       type: object
@@ -1512,6 +1275,1225 @@ spec:
                     type: string
                 required:
                 - region
+                type: object
+              initProvider:
+                description: THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
+                properties:
+                  filters:
+                    description: A configuration block including one or more (up to 10 distinct) attributes used to filter the findings included in the insight. The insight only includes findings that match criteria defined in the filters. See filters below for more details.
+                    items:
+                      properties:
+                        awsAccountId:
+                          description: AWS account ID that a finding is generated in. See String_Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        companyName:
+                          description: The name of the findings provider (company) that owns the solution (product) that generates findings. See String_Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        complianceStatus:
+                          description: Exclusive to findings that are generated as the result of a check run against a specific rule in a supported standard, such as CIS AWS Foundations. Contains security standard-related finding details. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        confidence:
+                          description: A finding's confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+                          items:
+                            properties:
+                              eq:
+                                description: The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              gte:
+                                description: The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              lte:
+                                description: The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                            type: object
+                          type: array
+                        createdAt:
+                          description: An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security issue that a finding captured. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        criticality:
+                          description: The level of importance assigned to the resources associated with the finding. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+                          items:
+                            properties:
+                              eq:
+                                description: The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              gte:
+                                description: The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              lte:
+                                description: The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                            type: object
+                          type: array
+                        description:
+                          description: A finding's description. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        findingProviderFieldsConfidence:
+                          description: The finding provider value for the finding confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
+                          items:
+                            properties:
+                              eq:
+                                description: The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              gte:
+                                description: The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              lte:
+                                description: The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                            type: object
+                          type: array
+                        findingProviderFieldsCriticality:
+                          description: The finding provider value for the level of importance assigned to the resources associated with the findings. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
+                          items:
+                            properties:
+                              eq:
+                                description: The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              gte:
+                                description: The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              lte:
+                                description: The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                            type: object
+                          type: array
+                        findingProviderFieldsRelatedFindingsId:
+                          description: The finding identifier of a related finding that is identified by the finding provider. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        findingProviderFieldsRelatedFindingsProductArn:
+                          description: The ARN of the solution that generated a related finding that is identified by the finding provider. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        findingProviderFieldsSeverityLabel:
+                          description: The finding provider value for the severity label. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        findingProviderFieldsSeverityOriginal:
+                          description: The finding provider's original value for the severity. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        findingProviderFieldsTypes:
+                          description: 'One or more finding types that the finding provider assigned to the finding. Uses the format of namespace/category/classifier that classify a finding. Valid namespace values include: Software and Configuration Checks, TTPs, Effects, Unusual Behaviors, and Sensitive Data Identifications. See String Filter below for more details.'
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        firstObservedAt:
+                          description: An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential security issue that a finding captured. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        generatorId:
+                          description: The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        id:
+                          description: The security findings provider-specific identifier for a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        keyword:
+                          description: A keyword for a finding. See Keyword Filter below for more details.
+                          items:
+                            properties:
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        lastObservedAt:
+                          description: An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the potential security issue that a finding captured. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        malwareName:
+                          description: The name of the malware that was observed. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        malwarePath:
+                          description: The filesystem path of the malware that was observed. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        malwareState:
+                          description: The state of the malware that was observed. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        malwareType:
+                          description: The type of the malware that was observed. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        networkDestinationDomain:
+                          description: The destination domain of network-related information about a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        networkDestinationIpv4:
+                          description: The destination IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+                          items:
+                            properties:
+                              cidr:
+                                description: A finding's CIDR value.
+                                type: string
+                            type: object
+                          type: array
+                        networkDestinationIpv6:
+                          description: The destination IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+                          items:
+                            properties:
+                              cidr:
+                                description: A finding's CIDR value.
+                                type: string
+                            type: object
+                          type: array
+                        networkDestinationPort:
+                          description: The destination port of network-related information about a finding. See Number Filter below for more details.
+                          items:
+                            properties:
+                              eq:
+                                description: The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              gte:
+                                description: The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              lte:
+                                description: The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                            type: object
+                          type: array
+                        networkDirection:
+                          description: Indicates the direction of network traffic associated with a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        networkProtocol:
+                          description: The protocol of network-related information about a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        networkSourceDomain:
+                          description: The source domain of network-related information about a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        networkSourceIpv4:
+                          description: The source IPv4 address of network-related information about a finding. See Ip Filter below for more details.
+                          items:
+                            properties:
+                              cidr:
+                                description: A finding's CIDR value.
+                                type: string
+                            type: object
+                          type: array
+                        networkSourceIpv6:
+                          description: The source IPv6 address of network-related information about a finding. See Ip Filter below for more details.
+                          items:
+                            properties:
+                              cidr:
+                                description: A finding's CIDR value.
+                                type: string
+                            type: object
+                          type: array
+                        networkSourceMac:
+                          description: The source media access control (MAC) address of network-related information about a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        networkSourcePort:
+                          description: The source port of network-related information about a finding. See Number Filter below for more details.
+                          items:
+                            properties:
+                              eq:
+                                description: The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              gte:
+                                description: The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              lte:
+                                description: The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                            type: object
+                          type: array
+                        noteText:
+                          description: The text of a note. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        noteUpdatedAt:
+                          description: The timestamp of when the note was updated. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        noteUpdatedBy:
+                          description: The principal that created a note. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        processLaunchedAt:
+                          description: The date/time that the process was launched. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        processName:
+                          description: The name of the process. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        processParentPid:
+                          description: The parent process ID. See Number Filter below for more details.
+                          items:
+                            properties:
+                              eq:
+                                description: The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              gte:
+                                description: The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              lte:
+                                description: The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                            type: object
+                          type: array
+                        processPath:
+                          description: The path to the process executable. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        processPid:
+                          description: The process ID. See Number Filter below for more details.
+                          items:
+                            properties:
+                              eq:
+                                description: The equal-to condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              gte:
+                                description: The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                              lte:
+                                description: The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
+                                type: string
+                            type: object
+                          type: array
+                        processTerminatedAt:
+                          description: The date/time that the process was terminated. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        productArn:
+                          description: The ARN generated by Security Hub that uniquely identifies a third-party company (security findings provider) after this provider's product (solution that generates findings) is registered with Security Hub. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        productFields:
+                          description: A data type where security-findings providers can include additional solution-specific details that aren't part of the defined AwsSecurityFinding format. See Map Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              key:
+                                description: The key of the map filter. For example, for ResourceTags, Key identifies the name of the tag. For UserDefinedFields, Key is the name of the field.
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        productName:
+                          description: The name of the solution (product) that generates findings. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        recommendationText:
+                          description: The recommendation of what to do about the issue described in a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        recordState:
+                          description: The updated record state for the finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        relatedFindingsId:
+                          description: The solution-generated identifier for a related finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        relatedFindingsProductArn:
+                          description: The ARN of the solution that generated a related finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsEc2InstanceIamInstanceProfileArn:
+                          description: The IAM profile ARN of the instance. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsEc2InstanceImageId:
+                          description: The Amazon Machine Image (AMI) ID of the instance. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsEc2InstanceIpv4Addresses:
+                          description: The IPv4 addresses associated with the instance. See Ip Filter below for more details.
+                          items:
+                            properties:
+                              cidr:
+                                description: A finding's CIDR value.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsEc2InstanceIpv6Addresses:
+                          description: The IPv6 addresses associated with the instance. See Ip Filter below for more details.
+                          items:
+                            properties:
+                              cidr:
+                                description: A finding's CIDR value.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsEc2InstanceKeyName:
+                          description: The key name associated with the instance. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsEc2InstanceLaunchedAt:
+                          description: The date and time the instance was launched. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsEc2InstanceSubnetId:
+                          description: The identifier of the subnet that the instance was launched in. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsEc2InstanceType:
+                          description: The instance type of the instance. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsEc2InstanceVpcId:
+                          description: The identifier of the VPC that the instance was launched in. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsIamAccessKeyCreatedAt:
+                          description: The creation date/time of the IAM access key related to a finding. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsIamAccessKeyStatus:
+                          description: The status of the IAM access key related to a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsIamAccessKeyUserName:
+                          description: The user associated with the IAM access key related to a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsS3BucketOwnerId:
+                          description: The canonical user ID of the owner of the S3 bucket. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceAwsS3BucketOwnerName:
+                          description: The display name of the owner of the S3 bucket. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceContainerImageId:
+                          description: The identifier of the image related to a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceContainerImageName:
+                          description: The name of the image related to a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceContainerLaunchedAt:
+                          description: The date/time that the container was started. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        resourceContainerName:
+                          description: The name of the container related to a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceDetailsOther:
+                          description: The details of a resource that doesn't have a specific subfield for the resource type defined. See Map Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              key:
+                                description: The key of the map filter. For example, for ResourceTags, Key identifies the name of the tag. For UserDefinedFields, Key is the name of the field.
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceId:
+                          description: The canonical identifier for the given resource type. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourcePartition:
+                          description: The canonical AWS partition name that the Region is assigned to. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceRegion:
+                          description: The canonical AWS external Region name where this resource is located. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceTags:
+                          description: A list of AWS tags associated with a resource at the time the finding was processed. See Map Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              key:
+                                description: The key of the map filter. For example, for ResourceTags, Key identifies the name of the tag. For UserDefinedFields, Key is the name of the field.
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        resourceType:
+                          description: Specifies the type of the resource that details are provided for. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        severityLabel:
+                          description: The label of a finding's severity. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        sourceUrl:
+                          description: A URL that links to a page about the current finding in the security-findings provider's solution. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        threatIntelIndicatorCategory:
+                          description: The category of a threat intelligence indicator. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        threatIntelIndicatorLastObservedAt:
+                          description: The date/time of the last observation of a threat intelligence indicator. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        threatIntelIndicatorSource:
+                          description: The source of the threat intelligence. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        threatIntelIndicatorSourceUrl:
+                          description: The URL for more details from the source of the threat intelligence. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        threatIntelIndicatorType:
+                          description: The type of a threat intelligence indicator. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        threatIntelIndicatorValue:
+                          description: The value of a threat intelligence indicator. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        title:
+                          description: A finding's title. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        type:
+                          description: A finding type in the format of namespace/category/classifier that classifies a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        updatedAt:
+                          description: An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding record. See Date Filter below for more details.
+                          items:
+                            properties:
+                              dateRange:
+                                description: A configuration block of the date range for the date filter. See date_range below for more details.
+                                items:
+                                  properties:
+                                    unit:
+                                      description: 'A date range unit for the date filter. Valid values: DAYS.'
+                                      type: string
+                                    value:
+                                      description: A value for the keyword.
+                                      type: number
+                                  type: object
+                                type: array
+                              end:
+                                description: An end date for the date filter. Required with start if date_range is not specified.
+                                type: string
+                              start:
+                                description: A start date for the date filter. Required with end if date_range is not specified.
+                                type: string
+                            type: object
+                          type: array
+                        userDefinedValues:
+                          description: A list of name/value string pairs associated with the finding. These are custom, user-defined fields added to a finding. See Map Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              key:
+                                description: The key of the map filter. For example, for ResourceTags, Key identifies the name of the tag. For UserDefinedFields, Key is the name of the field.
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        verificationState:
+                          description: The veracity of a finding. See String Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                        workflowStatus:
+                          description: The status of the investigation into a finding. See Workflow Status Filter below for more details.
+                          items:
+                            properties:
+                              comparison:
+                                description: 'The condition to apply to a string value when querying for findings. Valid values include: EQUALS and NOT_EQUALS.'
+                                type: string
+                              value:
+                                description: A value for the keyword.
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
+                  groupByAttribute:
+                    description: The attribute used to group the findings for the insight e.g., if an insight is grouped by ResourceId, then the insight produces a list of resource identifiers.
+                    type: string
+                  name:
+                    description: The name of the custom insight.
+                    type: string
                 type: object
               managementPolicies:
                 default:
@@ -1654,11 +2636,11 @@ spec:
             type: object
             x-kubernetes-validations:
             - message: filters is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.filters)"
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.filters) || has(self.initProvider.filters)"
             - message: groupByAttribute is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.groupByAttribute)"
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.groupByAttribute) || has(self.initProvider.groupByAttribute)"
             - message: name is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.name)"
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.name) || has(self.initProvider.name)"
           status:
             description: InsightStatus defines the observed state of Insight.
             properties:

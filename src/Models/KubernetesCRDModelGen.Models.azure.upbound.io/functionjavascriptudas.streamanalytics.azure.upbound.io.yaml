@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.1
-  name: functionjavascriptuda.streamanalytics.azure.upbound.io
+  name: functionjavascriptudas.streamanalytics.azure.upbound.io
 spec:
   group: streamanalytics.azure.upbound.io
   names:
@@ -13,7 +13,7 @@ spec:
     - azure
     kind: FunctionJavascriptUda
     listKind: FunctionJavascriptUdaList
-    plural: functionjavascriptuda
+    plural: functionjavascriptudas
     singular: functionjavascriptuda
   scope: Cluster
   versions:
