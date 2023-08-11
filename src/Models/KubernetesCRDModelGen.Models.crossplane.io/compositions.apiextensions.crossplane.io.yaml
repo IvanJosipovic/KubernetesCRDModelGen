@@ -1072,6 +1072,8 @@ spec:
                             - MatchInteger
                             - NonEmpty
                             - MatchCondition
+                            - MatchTrue
+                            - MatchFalse
                             - None
                             type: string
                         required:
