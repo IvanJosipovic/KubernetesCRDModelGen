@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.107.0
+    cnrm.cloud.google.com/version: 1.108.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -246,7 +246,7 @@ spec:
                 type: object
               serviceAccountName:
                 description: >-
-                  Immutable. Service account email. If this field is set, transfer config will
+                  Service account email. If this field is set, transfer config will
 
                   be created with this service account credentials. It requires that
 
