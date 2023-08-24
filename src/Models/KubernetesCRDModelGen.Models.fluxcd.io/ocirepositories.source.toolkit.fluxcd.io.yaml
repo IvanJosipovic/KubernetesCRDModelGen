@@ -48,9 +48,10 @@ spec:
             properties:
               certSecretRef:
                 description: >-
-                  CertSecretRef can be given the name of a secret containing either or both of 
-                   - a PEM-encoded client certificate (`certFile`) and private key (`keyFile`); - a PEM-encoded CA certificate (`caFile`) 
-                   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate.
+                  CertSecretRef can be given the name of a Secret containing either or both of 
+                   - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`) 
+                   and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`. 
+                   Note: Support for the `caFile`, `certFile` and `keyFile` keys have been deprecated.
                 properties:
                   name:
                     description: Name of the referent.
@@ -65,7 +66,7 @@ spec:
                 description: Insecure allows connecting to a non-TLS HTTP container registry.
                 type: boolean
               interval:
-                description: The interval at which to check for image updates.
+                description: Interval at which the OCIRepository URL is checked for updates. This interval is approximate and may be subject to jitter to ensure efficient use of resources.
                 pattern: ^([0-9]+(\.[0-9]+)?(ms|s|m|h))+$
                 type: string
               layerSelector:
