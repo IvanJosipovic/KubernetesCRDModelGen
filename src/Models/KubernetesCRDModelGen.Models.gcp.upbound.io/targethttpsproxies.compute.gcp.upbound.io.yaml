@@ -61,6 +61,9 @@ spec:
                   description:
                     description: An optional description of this resource.
                     type: string
+                  httpKeepAliveTimeoutSec:
+                    description: Specifies how long to keep a connection open, after completing a response, while there is no matching traffic (in seconds). If an HTTP keepalive is not specified, a default value (610 seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load balancer (classic), this option is not available publicly.
+                    type: number
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -71,7 +74,7 @@ spec:
                     description: 'Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, Google manages whether QUIC is used. Default value is NONE. Possible values are: NONE, ENABLE, DISABLE.'
                     type: string
                   sslCertificates:
-                    description: A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At least one SSL certificate must be specified.
+                    description: A list of SslCertificate resource URLs or Certificate Manager certificate URLs that are used to authenticate connections between users and the load balancer. At least one resource must be specified.
                     items:
                       type: string
                     type: array
@@ -204,6 +207,9 @@ spec:
                   description:
                     description: An optional description of this resource.
                     type: string
+                  httpKeepAliveTimeoutSec:
+                    description: Specifies how long to keep a connection open, after completing a response, while there is no matching traffic (in seconds). If an HTTP keepalive is not specified, a default value (610 seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load balancer (classic), this option is not available publicly.
+                    type: number
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -370,6 +376,9 @@ spec:
                   description:
                     description: An optional description of this resource.
                     type: string
+                  httpKeepAliveTimeoutSec:
+                    description: Specifies how long to keep a connection open, after completing a response, while there is no matching traffic (in seconds). If an HTTP keepalive is not specified, a default value (610 seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load balancer (classic), this option is not available publicly.
+                    type: number
                   id:
                     description: an identifier for the resource with format projects/{{project}}/global/targetHttpsProxies/{{name}}
                     type: string
@@ -389,7 +398,7 @@ spec:
                     description: The URI of the created resource.
                     type: string
                   sslCertificates:
-                    description: A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At least one SSL certificate must be specified.
+                    description: A list of SslCertificate resource URLs or Certificate Manager certificate URLs that are used to authenticate connections between users and the load balancer. At least one resource must be specified.
                     items:
                       type: string
                     type: array

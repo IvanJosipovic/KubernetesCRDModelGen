@@ -172,11 +172,6 @@ spec:
                           type: array
                       type: object
                     type: array
-                  maintenanceSchedule:
-                    description: Upcoming maintenance schedule. Structure is documented below.
-                    items:
-                      type: object
-                    type: array
                   memorySizeGb:
                     description: Redis memory size in GiB.
                     type: number
@@ -290,11 +285,6 @@ spec:
                                 type: array
                             type: object
                           type: array
-                      type: object
-                    type: array
-                  maintenanceSchedule:
-                    description: Upcoming maintenance schedule. Structure is documented below.
-                    items:
                       type: object
                     type: array
                   memorySizeGb:

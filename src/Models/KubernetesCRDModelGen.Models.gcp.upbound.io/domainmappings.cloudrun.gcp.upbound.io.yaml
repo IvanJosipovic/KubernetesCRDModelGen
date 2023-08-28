@@ -65,12 +65,12 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
+                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
                           type: object
                         labels:
                           additionalProperties:
                             type: string
-                          description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels'
+                          description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels'
                           type: object
                         namespace:
                           description: In Cloud Run the namespace must be equal to either the project ID or project number.
@@ -222,12 +222,12 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
+                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
                           type: object
                         labels:
                           additionalProperties:
                             type: string
-                          description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels'
+                          description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels'
                           type: object
                       type: object
                     type: array
@@ -416,7 +416,7 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
+                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
                           type: object
                         generation:
                           description: (Output) A sequence number representing a specific generation of the desired state.
@@ -424,7 +424,7 @@ spec:
                         labels:
                           additionalProperties:
                             type: string
-                          description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels'
+                          description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels'
                           type: object
                         namespace:
                           description: In Cloud Run the namespace must be equal to either the project ID or project number.
@@ -436,7 +436,7 @@ spec:
                           description: (Output) SelfLink is a URL representing this object.
                           type: string
                         uid:
-                          description: '(Output) UID is a unique id generated by the server on successful creation of a resource and is not allowed to change on PUT operations. More info: http://kubernetes.io/docs/user-guide/identifiers#uids'
+                          description: '(Output) UID is a unique id generated by the server on successful creation of a resource and is not allowed to change on PUT operations. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids'
                           type: string
                       type: object
                     type: array

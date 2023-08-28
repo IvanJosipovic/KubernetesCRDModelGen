@@ -392,6 +392,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        resilienceMode:
+                          description: The resilience mode states whether high resilience is enabled for the environment or not. Values for resilience mode are HIGH_RESILIENCE for high resilience and STANDARD_RESILIENCE for standard resilience.
+                          type: string
                         softwareConfig:
                           description: The configuration settings for software inside the environment.  Structure is documented below.
                           items:
@@ -745,6 +748,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        resilienceMode:
+                          description: The resilience mode states whether high resilience is enabled for the environment or not. Values for resilience mode are HIGH_RESILIENCE for high resilience and STANDARD_RESILIENCE for standard resilience.
+                          type: string
                         softwareConfig:
                           description: The configuration settings for software inside the environment.  Structure is documented below.
                           items:
@@ -1194,6 +1200,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        resilienceMode:
+                          description: The resilience mode states whether high resilience is enabled for the environment or not. Values for resilience mode are HIGH_RESILIENCE for high resilience and STANDARD_RESILIENCE for standard resilience.
+                          type: string
                         softwareConfig:
                           description: The configuration settings for software inside the environment.  Structure is documented below.
                           items:

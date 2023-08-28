@@ -107,6 +107,15 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        gcsFuseCsiDriverConfig:
+                          description: The status of the GCSFuse CSI driver addon, which allows the usage of a gcs bucket as volumes. It is disabled by default; set enabled = true to enable.
+                          items:
+                            properties:
+                              enabled:
+                                description: Enables vertical pod autoscaling
+                                type: boolean
+                            type: object
+                          type: array
                         gkeBackupAgentConfig:
                           description: . The status of the Backup for GKE agent addon. It is disabled by default; Set enabled = true to enable.
                           items:
@@ -145,6 +154,9 @@ spec:
                           type: array
                       type: object
                     type: array
+                  allowNetAdmin:
+                    description: Enable NET_ADMIN for the cluster. Defaults to false. This field should only be enabled for Autopilot clusters (enable_autopilot set to true).
+                    type: boolean
                   authenticatorGroupsConfig:
                     description: Configuration for the Google Groups for GKE feature. Structure is documented below.
                     items:
@@ -316,7 +328,7 @@ spec:
                       type: object
                     type: array
                   datapathProvider:
-                    description: The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+                    description: The desired datapath provider for this cluster. This is set to LEGACY_DATAPATH by default, which uses the IPTables-based kube-proxy implementation. Set to ADVANCED_DATAPATH to enable Dataplane v2.
                     type: string
                   defaultMaxPodsPerNode:
                     description: The default maximum number of pods per node in this cluster. This doesn't work on "routes-based" clusters, clusters that don't have IP Aliasing enabled. See the official documentation for more information.
@@ -357,6 +369,17 @@ spec:
                   enableIntranodeVisibility:
                     description: Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
                     type: boolean
+                  enableK8SBetaApis:
+                    description: Configuration for Kubernetes Beta APIs. Structure is documented below.
+                    items:
+                      properties:
+                        enabledApis:
+                          description: Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.
+                          items:
+                            type: string
+                          type: array
+                      type: object
+                    type: array
                   enableKubernetesAlpha:
                     description: Whether to enable Kubernetes Alpha features for this cluster. Note that when this option is enabled, the cluster cannot be upgraded and will be automatically deleted after 30 days.
                     type: boolean
@@ -668,6 +691,15 @@ spec:
                               count:
                                 description: The number of the guest accelerator cards exposed to this instance.
                                 type: number
+                              gpuDriverInstallationConfig:
+                                description: Configuration for auto installation of GPU driver. Structure is documented below.
+                                items:
+                                  properties:
+                                    gpuDriverVersion:
+                                      description: 'Mode for how the GPU driver is installed. Accepted values are:'
+                                      type: string
+                                  type: object
+                                type: array
                               gpuPartitionSize:
                                 description: Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig user guide.
                                 type: string
@@ -695,6 +727,14 @@ spec:
                               enabled:
                                 description: Enables vertical pod autoscaling
                                 type: boolean
+                            type: object
+                          type: array
+                        hostMaintenancePolicy:
+                          description: The maintenance policy to use for the cluster. Structure is documented below.
+                          items:
+                            properties:
+                              maintenanceInterval:
+                                type: string
                             type: object
                           type: array
                         imageType:
@@ -863,6 +903,28 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        soleTenantConfig:
+                          description: Allows specifying multiple node affinities useful for running workloads on sole tenant nodes. node_affinity structure is documented below.
+                          items:
+                            properties:
+                              nodeAffinity:
+                                items:
+                                  properties:
+                                    key:
+                                      description: Key for taint.
+                                      type: string
+                                    operator:
+                                      description: Specifies affinity or anti-affinity. Accepted values are "IN" or "NOT_IN"
+                                      type: string
+                                    values:
+                                      description: name"
+                                      items:
+                                        type: string
+                                      type: array
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
                         spot:
                           description: A boolean that represents whether the underlying node VMs are spot. See the official documentation for more information. Defaults to false.
                           type: boolean
@@ -1020,6 +1082,18 @@ spec:
                           type: boolean
                       type: object
                     type: array
+                  securityPostureConfig:
+                    description: Enable/Disable Security Posture API features for the cluster. Structure is documented below.
+                    items:
+                      properties:
+                        mode:
+                          description: Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.
+                          type: string
+                        vulnerabilityMode:
+                          description: Sets the mode of the Kubernetes security posture API's workload vulnerability scanning. Available options include VULNERABILITY_DISABLED and VULNERABILITY_BASIC.
+                          type: string
+                      type: object
+                    type: array
                   serviceExternalIpsConfig:
                     description: Structure is documented below.
                     items:
@@ -1163,6 +1237,15 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        gcsFuseCsiDriverConfig:
+                          description: The status of the GCSFuse CSI driver addon, which allows the usage of a gcs bucket as volumes. It is disabled by default; set enabled = true to enable.
+                          items:
+                            properties:
+                              enabled:
+                                description: Enables vertical pod autoscaling
+                                type: boolean
+                            type: object
+                          type: array
                         gkeBackupAgentConfig:
                           description: . The status of the Backup for GKE agent addon. It is disabled by default; Set enabled = true to enable.
                           items:
@@ -1201,6 +1284,9 @@ spec:
                           type: array
                       type: object
                     type: array
+                  allowNetAdmin:
+                    description: Enable NET_ADMIN for the cluster. Defaults to false. This field should only be enabled for Autopilot clusters (enable_autopilot set to true).
+                    type: boolean
                   authenticatorGroupsConfig:
                     description: Configuration for the Google Groups for GKE feature. Structure is documented below.
                     items:
@@ -1372,7 +1458,7 @@ spec:
                       type: object
                     type: array
                   datapathProvider:
-                    description: The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+                    description: The desired datapath provider for this cluster. This is set to LEGACY_DATAPATH by default, which uses the IPTables-based kube-proxy implementation. Set to ADVANCED_DATAPATH to enable Dataplane v2.
                     type: string
                   defaultMaxPodsPerNode:
                     description: The default maximum number of pods per node in this cluster. This doesn't work on "routes-based" clusters, clusters that don't have IP Aliasing enabled. See the official documentation for more information.
@@ -1413,6 +1499,17 @@ spec:
                   enableIntranodeVisibility:
                     description: Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
                     type: boolean
+                  enableK8SBetaApis:
+                    description: Configuration for Kubernetes Beta APIs. Structure is documented below.
+                    items:
+                      properties:
+                        enabledApis:
+                          description: Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.
+                          items:
+                            type: string
+                          type: array
+                      type: object
+                    type: array
                   enableKubernetesAlpha:
                     description: Whether to enable Kubernetes Alpha features for this cluster. Note that when this option is enabled, the cluster cannot be upgraded and will be automatically deleted after 30 days.
                     type: boolean
@@ -1663,6 +1760,15 @@ spec:
                               count:
                                 description: The number of the guest accelerator cards exposed to this instance.
                                 type: number
+                              gpuDriverInstallationConfig:
+                                description: Configuration for auto installation of GPU driver. Structure is documented below.
+                                items:
+                                  properties:
+                                    gpuDriverVersion:
+                                      description: 'Mode for how the GPU driver is installed. Accepted values are:'
+                                      type: string
+                                  type: object
+                                type: array
                               gpuPartitionSize:
                                 description: Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig user guide.
                                 type: string
@@ -1690,6 +1796,14 @@ spec:
                               enabled:
                                 description: Enables vertical pod autoscaling
                                 type: boolean
+                            type: object
+                          type: array
+                        hostMaintenancePolicy:
+                          description: The maintenance policy to use for the cluster. Structure is documented below.
+                          items:
+                            properties:
+                              maintenanceInterval:
+                                type: string
                             type: object
                           type: array
                         imageType:
@@ -1798,6 +1912,28 @@ spec:
                               enableSecureBoot:
                                 description: Defines if the instance has Secure Boot enabled.
                                 type: boolean
+                            type: object
+                          type: array
+                        soleTenantConfig:
+                          description: Allows specifying multiple node affinities useful for running workloads on sole tenant nodes. node_affinity structure is documented below.
+                          items:
+                            properties:
+                              nodeAffinity:
+                                items:
+                                  properties:
+                                    key:
+                                      description: Key for taint.
+                                      type: string
+                                    operator:
+                                      description: Specifies affinity or anti-affinity. Accepted values are "IN" or "NOT_IN"
+                                      type: string
+                                    values:
+                                      description: name"
+                                      items:
+                                        type: string
+                                      type: array
+                                  type: object
+                                type: array
                             type: object
                           type: array
                         spot:
@@ -1955,6 +2091,18 @@ spec:
                         enableResourceConsumptionMetering:
                           description: Whether to enable resource consumption metering on this cluster. When enabled, a table will be created in the resource export BigQuery dataset to store resource consumption data. The resulting table can be joined with the resource usage table or with BigQuery billing export. Defaults to true.
                           type: boolean
+                      type: object
+                    type: array
+                  securityPostureConfig:
+                    description: Enable/Disable Security Posture API features for the cluster. Structure is documented below.
+                    items:
+                      properties:
+                        mode:
+                          description: Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.
+                          type: string
+                        vulnerabilityMode:
+                          description: Sets the mode of the Kubernetes security posture API's workload vulnerability scanning. Available options include VULNERABILITY_DISABLED and VULNERABILITY_BASIC.
+                          type: string
                       type: object
                     type: array
                   serviceExternalIpsConfig:
@@ -2181,6 +2329,15 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        gcsFuseCsiDriverConfig:
+                          description: The status of the GCSFuse CSI driver addon, which allows the usage of a gcs bucket as volumes. It is disabled by default; set enabled = true to enable.
+                          items:
+                            properties:
+                              enabled:
+                                description: Enables vertical pod autoscaling
+                                type: boolean
+                            type: object
+                          type: array
                         gkeBackupAgentConfig:
                           description: . The status of the Backup for GKE agent addon. It is disabled by default; Set enabled = true to enable.
                           items:
@@ -2219,6 +2376,9 @@ spec:
                           type: array
                       type: object
                     type: array
+                  allowNetAdmin:
+                    description: Enable NET_ADMIN for the cluster. Defaults to false. This field should only be enabled for Autopilot clusters (enable_autopilot set to true).
+                    type: boolean
                   authenticatorGroupsConfig:
                     description: Configuration for the Google Groups for GKE feature. Structure is documented below.
                     items:
@@ -2401,7 +2561,7 @@ spec:
                       type: object
                     type: array
                   datapathProvider:
-                    description: The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
+                    description: The desired datapath provider for this cluster. This is set to LEGACY_DATAPATH by default, which uses the IPTables-based kube-proxy implementation. Set to ADVANCED_DATAPATH to enable Dataplane v2.
                     type: string
                   defaultMaxPodsPerNode:
                     description: The default maximum number of pods per node in this cluster. This doesn't work on "routes-based" clusters, clusters that don't have IP Aliasing enabled. See the official documentation for more information.
@@ -2442,6 +2602,17 @@ spec:
                   enableIntranodeVisibility:
                     description: Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
                     type: boolean
+                  enableK8SBetaApis:
+                    description: Configuration for Kubernetes Beta APIs. Structure is documented below.
+                    items:
+                      properties:
+                        enabledApis:
+                          description: Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.
+                          items:
+                            type: string
+                          type: array
+                      type: object
+                    type: array
                   enableKubernetesAlpha:
                     description: Whether to enable Kubernetes Alpha features for this cluster. Note that when this option is enabled, the cluster cannot be upgraded and will be automatically deleted after 30 days.
                     type: boolean
@@ -2719,6 +2890,15 @@ spec:
                               count:
                                 description: The number of the guest accelerator cards exposed to this instance.
                                 type: number
+                              gpuDriverInstallationConfig:
+                                description: Configuration for auto installation of GPU driver. Structure is documented below.
+                                items:
+                                  properties:
+                                    gpuDriverVersion:
+                                      description: 'Mode for how the GPU driver is installed. Accepted values are:'
+                                      type: string
+                                  type: object
+                                type: array
                               gpuPartitionSize:
                                 description: Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig user guide.
                                 type: string
@@ -2746,6 +2926,14 @@ spec:
                               enabled:
                                 description: Enables vertical pod autoscaling
                                 type: boolean
+                            type: object
+                          type: array
+                        hostMaintenancePolicy:
+                          description: The maintenance policy to use for the cluster. Structure is documented below.
+                          items:
+                            properties:
+                              maintenanceInterval:
+                                type: string
                             type: object
                           type: array
                         imageType:
@@ -2857,6 +3045,28 @@ spec:
                               enableSecureBoot:
                                 description: Defines if the instance has Secure Boot enabled.
                                 type: boolean
+                            type: object
+                          type: array
+                        soleTenantConfig:
+                          description: Allows specifying multiple node affinities useful for running workloads on sole tenant nodes. node_affinity structure is documented below.
+                          items:
+                            properties:
+                              nodeAffinity:
+                                items:
+                                  properties:
+                                    key:
+                                      description: Key for taint.
+                                      type: string
+                                    operator:
+                                      description: Specifies affinity or anti-affinity. Accepted values are "IN" or "NOT_IN"
+                                      type: string
+                                    values:
+                                      description: name"
+                                      items:
+                                        type: string
+                                      type: array
+                                  type: object
+                                type: array
                             type: object
                           type: array
                         spot:
@@ -3016,6 +3226,15 @@ spec:
                                     count:
                                       description: The number of the guest accelerator cards exposed to this instance.
                                       type: number
+                                    gpuDriverInstallationConfig:
+                                      description: Configuration for auto installation of GPU driver. Structure is documented below.
+                                      items:
+                                        properties:
+                                          gpuDriverVersion:
+                                            description: 'Mode for how the GPU driver is installed. Accepted values are:'
+                                            type: string
+                                        type: object
+                                      type: array
                                     gpuPartitionSize:
                                       description: Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig user guide.
                                       type: string
@@ -3043,6 +3262,14 @@ spec:
                                     enabled:
                                       description: Enables vertical pod autoscaling
                                       type: boolean
+                                  type: object
+                                type: array
+                              hostMaintenancePolicy:
+                                description: The maintenance policy to use for the cluster. Structure is documented below.
+                                items:
+                                  properties:
+                                    maintenanceInterval:
+                                      type: string
                                   type: object
                                 type: array
                               imageType:
@@ -3156,6 +3383,28 @@ spec:
                                       type: boolean
                                   type: object
                                 type: array
+                              soleTenantConfig:
+                                description: Allows specifying multiple node affinities useful for running workloads on sole tenant nodes. node_affinity structure is documented below.
+                                items:
+                                  properties:
+                                    nodeAffinity:
+                                      items:
+                                        properties:
+                                          key:
+                                            description: Key for taint.
+                                            type: string
+                                          operator:
+                                            description: Specifies affinity or anti-affinity. Accepted values are "IN" or "NOT_IN"
+                                            type: string
+                                          values:
+                                            description: name"
+                                            items:
+                                              type: string
+                                            type: array
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
                               spot:
                                 description: A boolean that represents whether the underlying node VMs are spot. See the official documentation for more information. Defaults to false.
                                 type: boolean
@@ -3200,6 +3449,9 @@ spec:
                         placementPolicy:
                           items:
                             properties:
+                              policyName:
+                                description: The name of the cluster, unique within the project and location.
+                                type: string
                               type:
                                 description: The accelerator type resource to expose to this instance. E.g. nvidia-tesla-k80.
                                 type: string
@@ -3375,6 +3627,18 @@ spec:
                         enableResourceConsumptionMetering:
                           description: Whether to enable resource consumption metering on this cluster. When enabled, a table will be created in the resource export BigQuery dataset to store resource consumption data. The resulting table can be joined with the resource usage table or with BigQuery billing export. Defaults to true.
                           type: boolean
+                      type: object
+                    type: array
+                  securityPostureConfig:
+                    description: Enable/Disable Security Posture API features for the cluster. Structure is documented below.
+                    items:
+                      properties:
+                        mode:
+                          description: Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.
+                          type: string
+                        vulnerabilityMode:
+                          description: Sets the mode of the Kubernetes security posture API's workload vulnerability scanning. Available options include VULNERABILITY_DISABLED and VULNERABILITY_BASIC.
+                          type: string
                       type: object
                     type: array
                   selfLink:

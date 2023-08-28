@@ -136,6 +136,14 @@ spec:
                     items:
                       type: string
                     type: array
+                  instanceLifecyclePolicy:
+                    items:
+                      properties:
+                        forceUpdateOnRepair:
+                          description: "), Specifies whether to apply the group's latest configuration when repairing a VM. Valid options are: YES, NO. If YES and you updated the group's instance template or per-instance configurations after the VM was created, then these changes are applied when VM is repaired. If NO (default), then updates are applied in accordance with the group's update policy type."
+                          type: string
+                      type: object
+                    type: array
                   listManagedInstancesResults:
                     description: "Pagination behavior of the listManagedInstances API method for this managed instance group. Valid values are: PAGELESS, PAGINATED. If PAGELESS (default), Pagination is disabled for the group's listManagedInstances API method. maxResults and pageToken query parameters are ignored and all instances are returned in a single response. If PAGINATED, pagination is enabled, maxResults and pageToken query parameters are respected."
                     type: string
@@ -382,6 +390,14 @@ spec:
                     description: The distribution policy for this managed instance group. You can specify one or more values. For more information, see the official documentation.
                     items:
                       type: string
+                    type: array
+                  instanceLifecyclePolicy:
+                    items:
+                      properties:
+                        forceUpdateOnRepair:
+                          description: "), Specifies whether to apply the group's latest configuration when repairing a VM. Valid options are: YES, NO. If YES and you updated the group's instance template or per-instance configurations after the VM was created, then these changes are applied when VM is repaired. If NO (default), then updates are applied in accordance with the group's update policy type."
+                          type: string
+                      type: object
                     type: array
                   listManagedInstancesResults:
                     description: "Pagination behavior of the listManagedInstances API method for this managed instance group. Valid values are: PAGELESS, PAGINATED. If PAGELESS (default), Pagination is disabled for the group's listManagedInstances API method. maxResults and pageToken query parameters are ignored and all instances are returned in a single response. If PAGINATED, pagination is enabled, maxResults and pageToken query parameters are respected."
@@ -671,6 +687,14 @@ spec:
                   instanceGroup:
                     description: The full URL of the instance group created by the manager.
                     type: string
+                  instanceLifecyclePolicy:
+                    items:
+                      properties:
+                        forceUpdateOnRepair:
+                          description: "), Specifies whether to apply the group's latest configuration when repairing a VM. Valid options are: YES, NO. If YES and you updated the group's instance template or per-instance configurations after the VM was created, then these changes are applied when VM is repaired. If NO (default), then updates are applied in accordance with the group's update policy type."
+                          type: string
+                      type: object
+                    type: array
                   listManagedInstancesResults:
                     description: "Pagination behavior of the listManagedInstances API method for this managed instance group. Valid values are: PAGELESS, PAGINATED. If PAGELESS (default), Pagination is disabled for the group's listManagedInstances API method. maxResults and pageToken query parameters are ignored and all instances are returned in a single response. If PAGINATED, pagination is enabled, maxResults and pageToken query parameters are respected."
                     type: string

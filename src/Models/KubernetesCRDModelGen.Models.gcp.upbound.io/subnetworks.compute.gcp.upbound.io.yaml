@@ -65,7 +65,7 @@ spec:
                     description: "The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path. Possible values are: EXTERNAL, INTERNAL."
                     type: string
                   logConfig:
-                    description: Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver. This field cannot be set if the purpose of this subnetwork is INTERNAL_HTTPS_LOAD_BALANCER Structure is documented below.
+                    description: Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver. This field cannot be set if the purpose of this subnetwork is INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY or GLOBAL_MANAGED_PROXY Structure is documented below.
                     items:
                       properties:
                         aggregationInterval:
@@ -155,7 +155,7 @@ spec:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
                   purpose:
-                    description: The purpose of the resource. This field can be either PRIVATE_RFC_1918, INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. A subnetwork in a given region with purpose set to REGIONAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the regional Envoy-based load balancers. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+                    description: The purpose of the resource. This field can be either PRIVATE_RFC_1918, INTERNAL_HTTPS_LOAD_BALANCER, REGIONAL_MANAGED_PROXY, GLOBAL_MANAGED_PROXY or PRIVATE_SERVICE_CONNECT. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. A subnetwork in a given region with purpose set to REGIONAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the regional Envoy-based load balancers. A subnetwork in a given region with purpose set to GLOBAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the cross-regional Envoy-based load balancers. A subnetwork with purpose set to PRIVATE_SERVICE_CONNECT reserves the subnet for hosting a Private Service Connect published service. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY or GLOBAL_MANAGED_PROXY.
                     type: string
                   region:
                     description: The GCP region for this subnetwork.
@@ -194,7 +194,7 @@ spec:
                     description: "The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path. Possible values are: EXTERNAL, INTERNAL."
                     type: string
                   logConfig:
-                    description: Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver. This field cannot be set if the purpose of this subnetwork is INTERNAL_HTTPS_LOAD_BALANCER Structure is documented below.
+                    description: Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver. This field cannot be set if the purpose of this subnetwork is INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY or GLOBAL_MANAGED_PROXY Structure is documented below.
                     items:
                       properties:
                         aggregationInterval:
@@ -226,7 +226,7 @@ spec:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
                   purpose:
-                    description: The purpose of the resource. This field can be either PRIVATE_RFC_1918, INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. A subnetwork in a given region with purpose set to REGIONAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the regional Envoy-based load balancers. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+                    description: The purpose of the resource. This field can be either PRIVATE_RFC_1918, INTERNAL_HTTPS_LOAD_BALANCER, REGIONAL_MANAGED_PROXY, GLOBAL_MANAGED_PROXY or PRIVATE_SERVICE_CONNECT. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. A subnetwork in a given region with purpose set to REGIONAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the regional Envoy-based load balancers. A subnetwork in a given region with purpose set to GLOBAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the cross-regional Envoy-based load balancers. A subnetwork with purpose set to PRIVATE_SERVICE_CONNECT reserves the subnet for hosting a Private Service Connect published service. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY or GLOBAL_MANAGED_PROXY.
                     type: string
                   role:
                     description: 'The role of subnetwork. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. Subnetwork role must be specified when purpose is set to INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY. Possible values are: ACTIVE, BACKUP.'
@@ -421,7 +421,7 @@ spec:
                     description: The range of internal IPv6 addresses that are owned by this subnetwork.
                     type: string
                   logConfig:
-                    description: Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver. This field cannot be set if the purpose of this subnetwork is INTERNAL_HTTPS_LOAD_BALANCER Structure is documented below.
+                    description: Denotes the logging options for the subnetwork flow logs. If logging is enabled logs will be exported to Stackdriver. This field cannot be set if the purpose of this subnetwork is INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY or GLOBAL_MANAGED_PROXY Structure is documented below.
                     items:
                       properties:
                         aggregationInterval:
@@ -456,7 +456,7 @@ spec:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
                   purpose:
-                    description: The purpose of the resource. This field can be either PRIVATE_RFC_1918, INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. A subnetwork in a given region with purpose set to REGIONAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the regional Envoy-based load balancers. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
+                    description: The purpose of the resource. This field can be either PRIVATE_RFC_1918, INTERNAL_HTTPS_LOAD_BALANCER, REGIONAL_MANAGED_PROXY, GLOBAL_MANAGED_PROXY or PRIVATE_SERVICE_CONNECT. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. A subnetwork in a given region with purpose set to REGIONAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the regional Envoy-based load balancers. A subnetwork in a given region with purpose set to GLOBAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the cross-regional Envoy-based load balancers. A subnetwork with purpose set to PRIVATE_SERVICE_CONNECT reserves the subnet for hosting a Private Service Connect published service. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER or REGIONAL_MANAGED_PROXY or GLOBAL_MANAGED_PROXY.
                     type: string
                   region:
                     description: The GCP region for this subnetwork.

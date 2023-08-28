@@ -58,7 +58,7 @@ spec:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: KRM-style annotations for the resource.
+                    description: Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.
                     type: object
                   binaryAuthorization:
                     description: Settings for the Binary Authorization feature. Structure is documented below.
@@ -87,7 +87,7 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: KRM-style labels for the resource.
+                    description: Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
                     type: object
                   launchStage:
                     description: 'The launch stage as defined by Google Cloud Platform Launch Stages. Cloud Run supports ALPHA, BETA, and GA. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features. For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values are: UNIMPLEMENTED, PRELAUNCH, EARLY_ACCESS, ALPHA, BETA, GA, DEPRECATED.'
@@ -105,7 +105,7 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: KRM-style annotations for the resource.
+                          description: Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.
                           type: object
                         containers:
                           description: Holds the containers that define the unit of execution for this Service. Structure is documented below.
@@ -393,7 +393,7 @@ spec:
                         labels:
                           additionalProperties:
                             type: string
-                          description: KRM-style labels for the resource.
+                          description: Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
                           type: object
                         maxInstanceRequestConcurrency:
                           description: Sets the maximum number of requests that each serving instance can receive.
@@ -563,7 +563,7 @@ spec:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: KRM-style annotations for the resource.
+                    description: Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.
                     type: object
                   binaryAuthorization:
                     description: Settings for the Binary Authorization feature. Structure is documented below.
@@ -592,7 +592,7 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: KRM-style labels for the resource.
+                    description: Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
                     type: object
                   launchStage:
                     description: 'The launch stage as defined by Google Cloud Platform Launch Stages. Cloud Run supports ALPHA, BETA, and GA. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features. For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values are: UNIMPLEMENTED, PRELAUNCH, EARLY_ACCESS, ALPHA, BETA, GA, DEPRECATED.'
@@ -607,7 +607,7 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: KRM-style annotations for the resource.
+                          description: Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.
                           type: object
                         containers:
                           description: Holds the containers that define the unit of execution for this Service. Structure is documented below.
@@ -837,7 +837,7 @@ spec:
                         labels:
                           additionalProperties:
                             type: string
-                          description: KRM-style labels for the resource.
+                          description: Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
                           type: object
                         maxInstanceRequestConcurrency:
                           description: Sets the maximum number of requests that each serving instance can receive.
@@ -1093,7 +1093,7 @@ spec:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: KRM-style annotations for the resource.
+                    description: Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.
                     type: object
                   binaryAuthorization:
                     description: Settings for the Binary Authorization feature. Structure is documented below.
@@ -1161,7 +1161,7 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: KRM-style labels for the resource.
+                    description: Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
                     type: object
                   latestCreatedRevision:
                     description: Name of the last created revision. See comments in reconciling for additional information on reconciliation process in Cloud Run.
@@ -1191,7 +1191,7 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: KRM-style annotations for the resource.
+                          description: Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.
                           type: object
                         containers:
                           description: Holds the containers that define the unit of execution for this Service. Structure is documented below.
@@ -1424,7 +1424,7 @@ spec:
                         labels:
                           additionalProperties:
                             type: string
-                          description: KRM-style labels for the resource.
+                          description: Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
                           type: object
                         maxInstanceRequestConcurrency:
                           description: Sets the maximum number of requests that each serving instance can receive.

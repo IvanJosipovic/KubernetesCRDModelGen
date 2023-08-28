@@ -68,7 +68,7 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
+                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                           type: object
                         labels:
                           additionalProperties:
@@ -149,7 +149,7 @@ spec:
                               annotations:
                                 additionalProperties:
                                   type: string
-                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
+                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                                 type: object
                               labels:
                                 additionalProperties:
@@ -172,7 +172,7 @@ spec:
                                 description: 'ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container of the Revision. Values are:'
                                 type: number
                               containers:
-                                description: 'Container defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of the fields of this Container, including: name, ports, and volumeMounts. Structure is documented below.'
+                                description: Containers defines the unit of execution for this Revision. Structure is documented below.
                                 items:
                                   properties:
                                     args:
@@ -372,6 +372,9 @@ spec:
                                             type: number
                                         type: object
                                       type: array
+                                    name:
+                                      description: Volume's name.
+                                      type: string
                                     ports:
                                       description: List of open ports in the container. Structure is documented below.
                                       items:
@@ -585,7 +588,7 @@ spec:
                       type: object
                     type: array
                   traffic:
-                    description: Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations Structure is documented below.
+                    description: (Output) Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations Structure is documented below.
                     items:
                       properties:
                         latestRevision:
@@ -618,7 +621,7 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
+                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                           type: object
                         labels:
                           additionalProperties:
@@ -641,7 +644,7 @@ spec:
                               annotations:
                                 additionalProperties:
                                   type: string
-                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
+                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                                 type: object
                               labels:
                                 additionalProperties:
@@ -664,7 +667,7 @@ spec:
                                 description: 'ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container of the Revision. Values are:'
                                 type: number
                               containers:
-                                description: 'Container defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of the fields of this Container, including: name, ports, and volumeMounts. Structure is documented below.'
+                                description: Containers defines the unit of execution for this Revision. Structure is documented below.
                                 items:
                                   properties:
                                     args:
@@ -806,6 +809,9 @@ spec:
                                             type: number
                                         type: object
                                       type: array
+                                    name:
+                                      description: Volume's name.
+                                      type: string
                                     ports:
                                       description: List of open ports in the container. Structure is documented below.
                                       items:
@@ -961,7 +967,7 @@ spec:
                       type: object
                     type: array
                   traffic:
-                    description: Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations Structure is documented below.
+                    description: (Output) Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations Structure is documented below.
                     items:
                       properties:
                         latestRevision:
@@ -1139,7 +1145,7 @@ spec:
                         annotations:
                           additionalProperties:
                             type: string
-                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
+                          description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                           type: object
                         generation:
                           description: (Output) A sequence number representing a specific generation of the desired state.
@@ -1197,6 +1203,27 @@ spec:
                         observedGeneration:
                           description: (Output) ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
                           type: number
+                        traffic:
+                          description: (Output) Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations Structure is documented below.
+                          items:
+                            properties:
+                              latestRevision:
+                                description: LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.
+                                type: boolean
+                              percent:
+                                description: Percent specifies percent of the traffic to this Revision or Configuration.
+                                type: number
+                              revisionName:
+                                description: RevisionName of a specific revision to which to send this portion of traffic.
+                                type: string
+                              tag:
+                                description: Tag is optionally used to expose a dedicated url for referencing this target exclusively.
+                                type: string
+                              url:
+                                description: (Output) URL displays the URL for accessing tagged traffic targets. URL is displayed in status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but may not contain anything else (e.g. basic auth, url path, etc.)
+                                type: string
+                            type: object
+                          type: array
                         url:
                           description: (Output) From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
                           type: string
@@ -1213,7 +1240,7 @@ spec:
                               annotations:
                                 additionalProperties:
                                   type: string
-                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: http://kubernetes.io/docs/user-guide/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
+                                description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                                 type: object
                               generation:
                                 description: (Output) A sequence number representing a specific generation of the desired state.
@@ -1248,7 +1275,7 @@ spec:
                                 description: 'ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container of the Revision. Values are:'
                                 type: number
                               containers:
-                                description: 'Container defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of the fields of this Container, including: name, ports, and volumeMounts. Structure is documented below.'
+                                description: Containers defines the unit of execution for this Revision. Structure is documented below.
                                 items:
                                   properties:
                                     args:
@@ -1393,6 +1420,9 @@ spec:
                                             type: number
                                         type: object
                                       type: array
+                                    name:
+                                      description: Volume's name.
+                                      type: string
                                     ports:
                                       description: List of open ports in the container. Structure is documented below.
                                       items:
@@ -1554,7 +1584,7 @@ spec:
                       type: object
                     type: array
                   traffic:
-                    description: Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations Structure is documented below.
+                    description: (Output) Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations Structure is documented below.
                     items:
                       properties:
                         latestRevision:

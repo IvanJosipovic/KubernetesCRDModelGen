@@ -334,6 +334,9 @@ spec:
                     description: The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool. Structure is documented below.
                     items:
                       properties:
+                        encodingFormat:
+                          description: "Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs. If this is omitted, CA certificates and CRLs will be published in PEM. Possible values are: PEM, DER."
+                          type: string
                         publishCaCert:
                           description: When true, publishes each CertificateAuthority's CA certificate and includes its URL in the "Authority Information Access" X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates.
                           type: boolean
@@ -624,6 +627,9 @@ spec:
                     description: The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool. Structure is documented below.
                     items:
                       properties:
+                        encodingFormat:
+                          description: "Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs. If this is omitted, CA certificates and CRLs will be published in PEM. Possible values are: PEM, DER."
+                          type: string
                         publishCaCert:
                           description: When true, publishes each CertificateAuthority's CA certificate and includes its URL in the "Authority Information Access" X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates.
                           type: boolean
@@ -1065,6 +1071,9 @@ spec:
                     description: The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool. Structure is documented below.
                     items:
                       properties:
+                        encodingFormat:
+                          description: "Specifies the encoding format of each CertificateAuthority's CA certificate and CRLs. If this is omitted, CA certificates and CRLs will be published in PEM. Possible values are: PEM, DER."
+                          type: string
                         publishCaCert:
                           description: When true, publishes each CertificateAuthority's CA certificate and includes its URL in the "Authority Information Access" X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates.
                           type: boolean

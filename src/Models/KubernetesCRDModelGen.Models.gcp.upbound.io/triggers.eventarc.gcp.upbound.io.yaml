@@ -163,6 +163,8 @@ spec:
                           type: string
                       type: object
                     type: array
+                  eventDataContentType:
+                    type: string
                   labels:
                     additionalProperties:
                       type: string
@@ -258,6 +260,8 @@ spec:
                           type: string
                       type: object
                     type: array
+                  eventDataContentType:
+                    type: string
                   labels:
                     additionalProperties:
                       type: string
@@ -510,6 +514,8 @@ spec:
                     type: array
                   etag:
                     description: Output only. This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
+                    type: string
+                  eventDataContentType:
                     type: string
                   id:
                     description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/triggers/{{name}}

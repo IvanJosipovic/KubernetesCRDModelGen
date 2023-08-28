@@ -55,6 +55,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  changeStreamRetention:
+                    description: Duration to retain change stream data for the table. Set to 0 to disable. Must be between 1 and 7 days.
+                    type: string
                   columnFamily:
                     description: A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
                     items:
@@ -137,6 +140,9 @@ spec:
               initProvider:
                 description: THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
                 properties:
+                  changeStreamRetention:
+                    description: Duration to retain change stream data for the table. Set to 0 to disable. Must be between 1 and 7 days.
+                    type: string
                   columnFamily:
                     description: A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
                     items:
@@ -302,6 +308,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  changeStreamRetention:
+                    description: Duration to retain change stream data for the table. Set to 0 to disable. Must be between 1 and 7 days.
+                    type: string
                   columnFamily:
                     description: A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
                     items:
