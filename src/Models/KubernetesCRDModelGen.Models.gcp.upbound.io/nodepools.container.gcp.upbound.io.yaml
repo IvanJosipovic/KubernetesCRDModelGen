@@ -216,6 +216,14 @@ spec:
                             properties:
                               count:
                                 type: number
+                              gpuDriverInstallationConfig:
+                                items:
+                                  properties:
+                                    gpuDriverVersion:
+                                      description: The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged.
+                                      type: string
+                                  type: object
+                                type: array
                               gpuPartitionSize:
                                 type: string
                               gpuSharingConfig:
@@ -237,6 +245,13 @@ spec:
                             properties:
                               enabled:
                                 type: boolean
+                            type: object
+                          type: array
+                        hostMaintenancePolicy:
+                          items:
+                            properties:
+                              maintenanceInterval:
+                                type: string
                             type: object
                           type: array
                         imageType:
@@ -378,6 +393,24 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        soleTenantConfig:
+                          items:
+                            properties:
+                              nodeAffinity:
+                                items:
+                                  properties:
+                                    key:
+                                      type: string
+                                    operator:
+                                      type: string
+                                    values:
+                                      items:
+                                        type: string
+                                      type: array
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
                         spot:
                           type: boolean
                         tags:
@@ -416,6 +449,9 @@ spec:
                     description: Specifies a custom placement policy for the nodes.
                     items:
                       properties:
+                        policyName:
+                          description: If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.
+                          type: string
                         type:
                           description: "The type of the policy. Supports a single value: COMPACT. Specifying COMPACT placement policy type places node pool's nodes in a closer physical proximity in order to reduce network latency between nodes."
                           type: string
@@ -570,6 +606,14 @@ spec:
                             properties:
                               count:
                                 type: number
+                              gpuDriverInstallationConfig:
+                                items:
+                                  properties:
+                                    gpuDriverVersion:
+                                      description: The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged.
+                                      type: string
+                                  type: object
+                                type: array
                               gpuPartitionSize:
                                 type: string
                               gpuSharingConfig:
@@ -591,6 +635,13 @@ spec:
                             properties:
                               enabled:
                                 type: boolean
+                            type: object
+                          type: array
+                        hostMaintenancePolicy:
+                          items:
+                            properties:
+                              maintenanceInterval:
+                                type: string
                             type: object
                           type: array
                         imageType:
@@ -675,6 +726,24 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        soleTenantConfig:
+                          items:
+                            properties:
+                              nodeAffinity:
+                                items:
+                                  properties:
+                                    key:
+                                      type: string
+                                    operator:
+                                      type: string
+                                    values:
+                                      items:
+                                        type: string
+                                      type: array
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
                         spot:
                           type: boolean
                         tags:
@@ -713,6 +782,9 @@ spec:
                     description: Specifies a custom placement policy for the nodes.
                     items:
                       properties:
+                        policyName:
+                          description: If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.
+                          type: string
                         type:
                           description: "The type of the policy. Supports a single value: COMPACT. Specifying COMPACT placement policy type places node pool's nodes in a closer physical proximity in order to reduce network latency between nodes."
                           type: string
@@ -1027,6 +1099,14 @@ spec:
                             properties:
                               count:
                                 type: number
+                              gpuDriverInstallationConfig:
+                                items:
+                                  properties:
+                                    gpuDriverVersion:
+                                      description: The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged.
+                                      type: string
+                                  type: object
+                                type: array
                               gpuPartitionSize:
                                 type: string
                               gpuSharingConfig:
@@ -1048,6 +1128,13 @@ spec:
                             properties:
                               enabled:
                                 type: boolean
+                            type: object
+                          type: array
+                        hostMaintenancePolicy:
+                          items:
+                            properties:
+                              maintenanceInterval:
+                                type: string
                             type: object
                           type: array
                         imageType:
@@ -1134,6 +1221,24 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        soleTenantConfig:
+                          items:
+                            properties:
+                              nodeAffinity:
+                                items:
+                                  properties:
+                                    key:
+                                      type: string
+                                    operator:
+                                      type: string
+                                    values:
+                                      items:
+                                        type: string
+                                      type: array
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
                         spot:
                           type: boolean
                         tags:
@@ -1174,6 +1279,9 @@ spec:
                     description: Specifies a custom placement policy for the nodes.
                     items:
                       properties:
+                        policyName:
+                          description: If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned.
+                          type: string
                         type:
                           description: "The type of the policy. Supports a single value: COMPACT. Specifying COMPACT placement policy type places node pool's nodes in a closer physical proximity in order to reduce network latency between nodes."
                           type: string

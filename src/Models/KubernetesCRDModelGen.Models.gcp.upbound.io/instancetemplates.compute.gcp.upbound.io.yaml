@@ -435,6 +435,15 @@ spec:
                           type: object
                       type: object
                     type: array
+                  networkPerformanceConfig:
+                    description: os-features, and network_interface.0.nic-type must be GVNIC in order for this setting to take effect.
+                    items:
+                      properties:
+                        totalEgressBandwidthTier:
+                          description: 'The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT'
+                          type: string
+                      type: object
+                    type: array
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -479,6 +488,18 @@ spec:
                         instanceTerminationAction:
                           description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
                           type: string
+                        localSsdRecoveryTimeout:
+                          description: 'io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below. The local_ssd_recovery_timeout block supports:'
+                          items:
+                            properties:
+                              nanos:
+                                description: Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+                                type: number
+                              seconds:
+                                description: 'Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.'
+                                type: number
+                            type: object
+                          type: array
                         minNodeCpus:
                           type: number
                         nodeAffinities:
@@ -808,6 +829,15 @@ spec:
                           type: string
                       type: object
                     type: array
+                  networkPerformanceConfig:
+                    description: os-features, and network_interface.0.nic-type must be GVNIC in order for this setting to take effect.
+                    items:
+                      properties:
+                        totalEgressBandwidthTier:
+                          description: 'The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT'
+                          type: string
+                      type: object
+                    type: array
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -852,6 +882,18 @@ spec:
                         instanceTerminationAction:
                           description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
                           type: string
+                        localSsdRecoveryTimeout:
+                          description: 'io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below. The local_ssd_recovery_timeout block supports:'
+                          items:
+                            properties:
+                              nanos:
+                                description: Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+                                type: number
+                              seconds:
+                                description: 'Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.'
+                                type: number
+                            type: object
+                          type: array
                         minNodeCpus:
                           type: number
                         nodeAffinities:
@@ -1263,6 +1305,9 @@ spec:
                                 type: string
                               externalIpv6PrefixLength:
                                 type: string
+                              name:
+                                description: The name of the instance template.
+                                type: string
                               networkTier:
                                 description: The service-level to be provided for IPv6 traffic when the subnet has an external subnet. Only PREMIUM and STANDARD tier is valid for IPv6.
                                 type: string
@@ -1296,6 +1341,15 @@ spec:
                           type: string
                         subnetworkProject:
                           description: The ID of the project in which the subnetwork belongs. If it is not provided, the provider project is used.
+                          type: string
+                      type: object
+                    type: array
+                  networkPerformanceConfig:
+                    description: os-features, and network_interface.0.nic-type must be GVNIC in order for this setting to take effect.
+                    items:
+                      properties:
+                        totalEgressBandwidthTier:
+                          description: 'The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT'
                           type: string
                       type: object
                     type: array
@@ -1343,6 +1397,18 @@ spec:
                         instanceTerminationAction:
                           description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
                           type: string
+                        localSsdRecoveryTimeout:
+                          description: 'io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below. The local_ssd_recovery_timeout block supports:'
+                          items:
+                            properties:
+                              nanos:
+                                description: Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
+                                type: number
+                              seconds:
+                                description: 'Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.'
+                                type: number
+                            type: object
+                          type: array
                         minNodeCpus:
                           type: number
                         nodeAffinities:

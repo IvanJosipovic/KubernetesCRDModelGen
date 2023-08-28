@@ -61,6 +61,9 @@ spec:
                   allowGlobalAccess:
                     description: This field is used along with the backend_service field for internal load balancing or with the target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB from all regions. Otherwise only allows access from clients in the same region as the internal load balancer.
                     type: boolean
+                  allowPscGlobalAccess:
+                    description: This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region.
+                    type: boolean
                   backendService:
                     description: Identifies the backend service to which the forwarding rule sends traffic. Required for Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load balancer types.
                     type: string
@@ -255,6 +258,9 @@ spec:
                   networkTier:
                     description: 'This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal to the networkTier of the Address. Possible values are: PREMIUM, STANDARD.'
                     type: string
+                  noAutomateDnsZone:
+                    description: This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
+                    type: boolean
                   portRange:
                     description: 'This field can only be used:'
                     type: string
@@ -417,6 +423,9 @@ spec:
                   allowGlobalAccess:
                     description: This field is used along with the backend_service field for internal load balancing or with the target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB from all regions. Otherwise only allows access from clients in the same region as the internal load balancer.
                     type: boolean
+                  allowPscGlobalAccess:
+                    description: This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region.
+                    type: boolean
                   description:
                     description: An optional description of this resource. Provide this property when you create the resource.
                     type: string
@@ -437,6 +446,9 @@ spec:
                   networkTier:
                     description: 'This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal to the networkTier of the Address. Possible values are: PREMIUM, STANDARD.'
                     type: string
+                  noAutomateDnsZone:
+                    description: This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
+                    type: boolean
                   portRange:
                     description: 'This field can only be used:'
                     type: string
@@ -619,6 +631,9 @@ spec:
                   allowGlobalAccess:
                     description: This field is used along with the backend_service field for internal load balancing or with the target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB from all regions. Otherwise only allows access from clients in the same region as the internal load balancer.
                     type: boolean
+                  allowPscGlobalAccess:
+                    description: This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region.
+                    type: boolean
                   backendService:
                     description: Identifies the backend service to which the forwarding rule sends traffic. Required for Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load balancer types.
                     type: string
@@ -660,6 +675,9 @@ spec:
                   networkTier:
                     description: 'This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal to the networkTier of the Address. Possible values are: PREMIUM, STANDARD.'
                     type: string
+                  noAutomateDnsZone:
+                    description: This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
+                    type: boolean
                   portRange:
                     description: 'This field can only be used:'
                     type: string

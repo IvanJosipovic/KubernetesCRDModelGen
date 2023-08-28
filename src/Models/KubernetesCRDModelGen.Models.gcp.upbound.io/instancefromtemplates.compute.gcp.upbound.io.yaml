@@ -122,6 +122,10 @@ spec:
                                 additionalProperties:
                                   type: string
                                 type: object
+                              resourceManagerTags:
+                                additionalProperties:
+                                  type: string
+                                type: object
                               size:
                                 type: number
                               type:
@@ -210,6 +214,13 @@ spec:
                         ipv6AccessConfig:
                           items:
                             properties:
+                              externalIpv6:
+                                type: string
+                              externalIpv6PrefixLength:
+                                type: string
+                              name:
+                                description: A unique name for the resource, required by GCE. Changing this forces a new resource to be created.
+                                type: string
                               networkTier:
                                 type: string
                               publicPtrDomainName:
@@ -343,6 +354,22 @@ spec:
                           type: object
                       type: object
                     type: array
+                  networkPerformanceConfig:
+                    items:
+                      properties:
+                        totalEgressBandwidthTier:
+                          type: string
+                      type: object
+                    type: array
+                  params:
+                    items:
+                      properties:
+                        resourceManagerTags:
+                          additionalProperties:
+                            type: string
+                          type: object
+                      type: object
+                    type: array
                   project:
                     type: string
                   reservationAffinity:
@@ -374,6 +401,15 @@ spec:
                           type: boolean
                         instanceTerminationAction:
                           type: string
+                        localSsdRecoveryTimeout:
+                          items:
+                            properties:
+                              nanos:
+                                type: number
+                              seconds:
+                                type: number
+                            type: object
+                          type: array
                         minNodeCpus:
                           type: number
                         nodeAffinities:
@@ -547,6 +583,10 @@ spec:
                                 additionalProperties:
                                   type: string
                                 type: object
+                              resourceManagerTags:
+                                additionalProperties:
+                                  type: string
+                                type: object
                               size:
                                 type: number
                               type:
@@ -635,6 +675,13 @@ spec:
                         ipv6AccessConfig:
                           items:
                             properties:
+                              externalIpv6:
+                                type: string
+                              externalIpv6PrefixLength:
+                                type: string
+                              name:
+                                description: A unique name for the resource, required by GCE. Changing this forces a new resource to be created.
+                                type: string
                               networkTier:
                                 type: string
                               publicPtrDomainName:
@@ -652,6 +699,22 @@ spec:
                           type: string
                         subnetworkProject:
                           type: string
+                      type: object
+                    type: array
+                  networkPerformanceConfig:
+                    items:
+                      properties:
+                        totalEgressBandwidthTier:
+                          type: string
+                      type: object
+                    type: array
+                  params:
+                    items:
+                      properties:
+                        resourceManagerTags:
+                          additionalProperties:
+                            type: string
+                          type: object
                       type: object
                     type: array
                   project:
@@ -685,6 +748,15 @@ spec:
                           type: boolean
                         instanceTerminationAction:
                           type: string
+                        localSsdRecoveryTimeout:
+                          items:
+                            properties:
+                              nanos:
+                                type: number
+                              seconds:
+                                type: number
+                            type: object
+                          type: array
                         minNodeCpus:
                           type: number
                         nodeAffinities:
@@ -946,6 +1018,10 @@ spec:
                                 additionalProperties:
                                   type: string
                                 type: object
+                              resourceManagerTags:
+                                additionalProperties:
+                                  type: string
+                                type: object
                               size:
                                 type: number
                               type:
@@ -1050,6 +1126,9 @@ spec:
                                 type: string
                               externalIpv6PrefixLength:
                                 type: string
+                              name:
+                                description: A unique name for the resource, required by GCE. Changing this forces a new resource to be created.
+                                type: string
                               networkTier:
                                 type: string
                               publicPtrDomainName:
@@ -1076,6 +1155,22 @@ spec:
                           type: string
                         subnetworkProject:
                           type: string
+                      type: object
+                    type: array
+                  networkPerformanceConfig:
+                    items:
+                      properties:
+                        totalEgressBandwidthTier:
+                          type: string
+                      type: object
+                    type: array
+                  params:
+                    items:
+                      properties:
+                        resourceManagerTags:
+                          additionalProperties:
+                            type: string
+                          type: object
                       type: object
                     type: array
                   project:
@@ -1109,6 +1204,15 @@ spec:
                           type: boolean
                         instanceTerminationAction:
                           type: string
+                        localSsdRecoveryTimeout:
+                          items:
+                            properties:
+                              nanos:
+                                type: number
+                              seconds:
+                                type: number
+                            type: object
+                          type: array
                         minNodeCpus:
                           type: number
                         nodeAffinities:
