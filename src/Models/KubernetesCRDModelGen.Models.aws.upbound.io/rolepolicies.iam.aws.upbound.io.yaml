@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.12.1
-  name: roles.iam.aws.upbound.io
+  name: rolepolicies.iam.aws.upbound.io
 spec:
   group: iam.aws.upbound.io
   names:
@@ -11,10 +11,10 @@ spec:
     - crossplane
     - managed
     - aws
-    kind: Role
-    listKind: RoleList
-    plural: roles
-    singular: role
+    kind: RolePolicy
+    listKind: RolePolicyList
+    plural: rolepolicies
+    singular: rolepolicy
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Role is the Schema for the Roles API. Provides an IAM role.
+        description: RolePolicy is the Schema for the RolePolicys API. Provides an IAM role policy.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -44,7 +44,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: RoleSpec defines the desired state of Role
+            description: RolePolicySpec defines the desired state of RolePolicy
             properties:
               deletionPolicy:
                 default: Delete
@@ -55,90 +55,74 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  assumeRolePolicy:
-                    description: Policy that grants an entity permission to assume the role.
+                  policy:
+                    description: The inline policy document. This is a JSON formatted string
                     type: string
-                  description:
-                    description: Description of the role.
+                  role:
+                    description: The name of the IAM role to attach to the policy.
                     type: string
-                  forceDetachPolicies:
-                    description: Whether to force detaching any policies the role has before destroying it. Defaults to false.
-                    type: boolean
-                  inlinePolicy:
-                    description: Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, Crossplane will not manage any inline policies in this resource. Configuring one empty block (i.e., inline_policy {}) will cause Crossplane to remove all inline policies added out of band on apply.
-                    items:
-                      properties:
-                        name:
-                          description: Friendly name of the role. See IAM Identifiers for more information.
+                  roleRef:
+                    description: Reference to a Role in iam to populate role.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  roleSelector:
+                    description: Selector for a Role in iam to populate role.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
                           type: string
-                        policy:
-                          description: Policy document as a JSON formatted string.
-                          type: string
-                      type: object
-                    type: array
-                  managedPolicyArns:
-                    description: Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, Crossplane will ignore policy attachments to this resource. When configured, Crossplane will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., managed_policy_arns = []) will cause Crossplane to remove all managed policy attachments.
-                    items:
-                      type: string
-                    type: array
-                  maxSessionDuration:
-                    description: Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
-                    type: number
-                  path:
-                    description: Path to the role. See IAM Identifiers for more information.
-                    type: string
-                  permissionsBoundary:
-                    description: ARN of the policy that is used to set the permissions boundary for the role.
-                    type: string
-                  tags:
-                    additionalProperties:
-                      type: string
-                    description: Key-value map of resource tags.
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
                     type: object
                 type: object
               initProvider:
                 description: THIS IS AN ALPHA FIELD. Do not use it in production. It is not honored unless the relevant Crossplane feature flag is enabled, and may be changed or removed without notice. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
                 properties:
-                  assumeRolePolicy:
-                    description: Policy that grants an entity permission to assume the role.
+                  policy:
+                    description: The inline policy document. This is a JSON formatted string
                     type: string
-                  description:
-                    description: Description of the role.
-                    type: string
-                  forceDetachPolicies:
-                    description: Whether to force detaching any policies the role has before destroying it. Defaults to false.
-                    type: boolean
-                  inlinePolicy:
-                    description: Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, Crossplane will not manage any inline policies in this resource. Configuring one empty block (i.e., inline_policy {}) will cause Crossplane to remove all inline policies added out of band on apply.
-                    items:
-                      properties:
-                        name:
-                          description: Friendly name of the role. See IAM Identifiers for more information.
-                          type: string
-                        policy:
-                          description: Policy document as a JSON formatted string.
-                          type: string
-                      type: object
-                    type: array
-                  managedPolicyArns:
-                    description: Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, Crossplane will ignore policy attachments to this resource. When configured, Crossplane will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., managed_policy_arns = []) will cause Crossplane to remove all managed policy attachments.
-                    items:
-                      type: string
-                    type: array
-                  maxSessionDuration:
-                    description: Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
-                    type: number
-                  path:
-                    description: Path to the role. See IAM Identifiers for more information.
-                    type: string
-                  permissionsBoundary:
-                    description: ARN of the policy that is used to set the permissions boundary for the role.
-                    type: string
-                  tags:
-                    additionalProperties:
-                      type: string
-                    description: Key-value map of resource tags.
-                    type: object
                 type: object
               managementPolicies:
                 default:
@@ -280,80 +264,21 @@ spec:
             - forProvider
             type: object
             x-kubernetes-validations:
-            - message: assumeRolePolicy is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.assumeRolePolicy) || has(self.initProvider.assumeRolePolicy)"
+            - message: policy is a required parameter
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.policy) || has(self.initProvider.policy)"
           status:
-            description: RoleStatus defines the observed state of Role.
+            description: RolePolicyStatus defines the observed state of RolePolicy.
             properties:
               atProvider:
                 properties:
-                  arn:
-                    description: Amazon Resource Name (ARN) specifying the role.
-                    type: string
-                  assumeRolePolicy:
-                    description: Policy that grants an entity permission to assume the role.
-                    type: string
-                  createDate:
-                    description: Creation date of the IAM role.
-                    type: string
-                  description:
-                    description: Description of the role.
-                    type: string
-                  forceDetachPolicies:
-                    description: Whether to force detaching any policies the role has before destroying it. Defaults to false.
-                    type: boolean
                   id:
-                    description: Name of the role.
+                    description: The role policy ID, in the form of role_name:role_policy_name.
                     type: string
-                  inlinePolicy:
-                    description: Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, Crossplane will not manage any inline policies in this resource. Configuring one empty block (i.e., inline_policy {}) will cause Crossplane to remove all inline policies added out of band on apply.
-                    items:
-                      properties:
-                        name:
-                          description: Friendly name of the role. See IAM Identifiers for more information.
-                          type: string
-                        policy:
-                          description: Policy document as a JSON formatted string.
-                          type: string
-                      type: object
-                    type: array
-                  managedPolicyArns:
-                    description: Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, Crossplane will ignore policy attachments to this resource. When configured, Crossplane will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., managed_policy_arns = []) will cause Crossplane to remove all managed policy attachments.
-                    items:
-                      type: string
-                    type: array
-                  maxSessionDuration:
-                    description: Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
-                    type: number
-                  path:
-                    description: Path to the role. See IAM Identifiers for more information.
+                  policy:
+                    description: The inline policy document. This is a JSON formatted string
                     type: string
-                  permissionsBoundary:
-                    description: ARN of the policy that is used to set the permissions boundary for the role.
-                    type: string
-                  roleLastUsed:
-                    description: Contains information about the last time that an IAM role was used. See role_last_used for details.
-                    items:
-                      properties:
-                        lastUsedDate:
-                          type: string
-                        region:
-                          description: The name of the AWS Region in which the role was last used.
-                          type: string
-                      type: object
-                    type: array
-                  tags:
-                    additionalProperties:
-                      type: string
-                    description: Key-value map of resource tags.
-                    type: object
-                  tagsAll:
-                    additionalProperties:
-                      type: string
-                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
-                    type: object
-                  uniqueId:
-                    description: Stable and unique string identifying the role.
+                  role:
+                    description: The name of the IAM role to attach to the policy.
                     type: string
                 type: object
               conditions:
