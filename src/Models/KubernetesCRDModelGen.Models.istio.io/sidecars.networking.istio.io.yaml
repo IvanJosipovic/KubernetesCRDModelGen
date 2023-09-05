@@ -92,7 +92,7 @@ spec:
                     tls:
                       properties:
                         caCertificates:
-                          description: REQUIRED if mode is `MUTUAL`.
+                          description: REQUIRED if mode is `MUTUAL` or `OPTIONAL_MUTUAL`.
                           type: string
                         cipherSuites:
                           description: 'Optional: If specified, only support the specified cipher list.'
@@ -128,6 +128,7 @@ spec:
                           - MUTUAL
                           - AUTO_PASSTHROUGH
                           - ISTIO_MUTUAL
+                          - OPTIONAL_MUTUAL
                           type: string
                         privateKey:
                           description: REQUIRED if mode is `SIMPLE` or `MUTUAL`.
@@ -261,7 +262,7 @@ spec:
                     tls:
                       properties:
                         caCertificates:
-                          description: REQUIRED if mode is `MUTUAL`.
+                          description: REQUIRED if mode is `MUTUAL` or `OPTIONAL_MUTUAL`.
                           type: string
                         cipherSuites:
                           description: 'Optional: If specified, only support the specified cipher list.'
@@ -297,6 +298,7 @@ spec:
                           - MUTUAL
                           - AUTO_PASSTHROUGH
                           - ISTIO_MUTUAL
+                          - OPTIONAL_MUTUAL
                           type: string
                         privateKey:
                           description: REQUIRED if mode is `SIMPLE` or `MUTUAL`.
