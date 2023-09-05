@@ -3,9 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.11.3
+    controller-gen.kubebuilder.io/version: v0.13.0
   labels:
-    serviceoperator.azure.com/version: v2.2.0
+    app.kubernetes.io/name: azure-service-operator
+    app.kubernetes.io/version: v2.3.0
   name: roleassignments.authorization.azure.com
 spec:
   conversion:
@@ -74,6 +75,10 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
                 properties:
+                  armId:
+                    description: Ownership across namespaces is not supported.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   group:
                     description: Group is the Kubernetes group of the resource.
                     type: string
@@ -83,10 +88,6 @@ spec:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - group
-                - kind
-                - name
                 type: object
               principalId:
                 description: 'PrincipalId: The principal ID.'
@@ -272,6 +273,10 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
                 properties:
+                  armId:
+                    description: Ownership across namespaces is not supported.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   group:
                     description: Group is the Kubernetes group of the resource.
                     type: string
@@ -281,10 +286,6 @@ spec:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - group
-                - kind
-                - name
                 type: object
               principalId:
                 type: string
@@ -444,6 +445,10 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
                 properties:
+                  armId:
+                    description: Ownership across namespaces is not supported.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   group:
                     description: Group is the Kubernetes group of the resource.
                     type: string
@@ -453,10 +458,6 @@ spec:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - group
-                - kind
-                - name
                 type: object
               principalId:
                 type: string
@@ -627,6 +628,10 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
                 properties:
+                  armId:
+                    description: Ownership across namespaces is not supported.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   group:
                     description: Group is the Kubernetes group of the resource.
                     type: string
@@ -636,10 +641,6 @@ spec:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - group
-                - kind
-                - name
                 type: object
               principalId:
                 type: string

@@ -3,9 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.11.3
+    controller-gen.kubebuilder.io/version: v0.13.0
   labels:
-    serviceoperator.azure.com/version: v2.2.0
+    app.kubernetes.io/name: azure-service-operator
+    app.kubernetes.io/version: v2.3.0
   name: eventsubscriptions.eventgrid.azure.com
 spec:
   conversion:
@@ -571,6 +572,10 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
                 properties:
+                  armId:
+                    description: Ownership across namespaces is not supported.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   group:
                     description: Group is the Kubernetes group of the resource.
                     type: string
@@ -580,10 +585,6 @@ spec:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - group
-                - kind
-                - name
                 type: object
               retryPolicy:
                 description: 'RetryPolicy: The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.'
@@ -1534,6 +1535,10 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
                 properties:
+                  armId:
+                    description: Ownership across namespaces is not supported.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   group:
                     description: Group is the Kubernetes group of the resource.
                     type: string
@@ -1543,10 +1548,6 @@ spec:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - group
-                - kind
-                - name
                 type: object
               retryPolicy:
                 description: Storage version of v1api20200601.RetryPolicy Information about the retry policy for an event subscription.
@@ -2531,6 +2532,10 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
                 properties:
+                  armId:
+                    description: Ownership across namespaces is not supported.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   group:
                     description: Group is the Kubernetes group of the resource.
                     type: string
@@ -2540,10 +2545,6 @@ spec:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - group
-                - kind
-                - name
                 type: object
               retryPolicy:
                 description: Deprecated version of RetryPolicy. Use v1api20200601.RetryPolicy instead
@@ -3436,6 +3437,10 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
                 properties:
+                  armId:
+                    description: Ownership across namespaces is not supported.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   group:
                     description: Group is the Kubernetes group of the resource.
                     type: string
@@ -3445,10 +3450,6 @@ spec:
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - group
-                - kind
-                - name
                 type: object
               retryPolicy:
                 description: Storage version of v1beta20200601.RetryPolicy Deprecated version of RetryPolicy. Use v1api20200601.RetryPolicy instead

@@ -3,9 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.11.3
+    controller-gen.kubebuilder.io/version: v0.13.0
   labels:
-    serviceoperator.azure.com/version: v2.2.0
+    app.kubernetes.io/name: azure-service-operator
+    app.kubernetes.io/version: v2.3.0
   name: snapshots.compute.azure.com
 spec:
   conversion:
@@ -336,11 +337,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               purchasePlan:
                 description: 'PurchasePlan: Purchase plan information for the image from which the source disk for the snapshot was originally created.'
@@ -924,11 +926,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               purchasePlan:
                 description: Storage version of v1api20200930.PurchasePlan Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
@@ -1515,11 +1518,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               purchasePlan:
                 description: Deprecated version of PurchasePlan. Use v1api20200930.PurchasePlan instead
@@ -2061,11 +2065,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               purchasePlan:
                 description: Storage version of v1beta20200930.PurchasePlan Deprecated version of PurchasePlan. Use v1api20200930.PurchasePlan instead
