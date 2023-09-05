@@ -3,9 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.11.3
+    controller-gen.kubebuilder.io/version: v0.13.0
   labels:
-    serviceoperator.azure.com/version: v2.2.0
+    app.kubernetes.io/name: azure-service-operator
+    app.kubernetes.io/version: v2.3.0
   name: storageaccountsblobservicescontainers.storage.azure.com
 spec:
   conversion:
@@ -82,11 +83,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsBlobService resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               publicAccess:
                 description: 'PublicAccess: Specifies whether data in the container may be accessed publicly and the level of access.'
@@ -343,11 +345,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsBlobService resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               publicAccess:
                 type: string
@@ -587,11 +590,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsBlobService resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               publicAccess:
                 description: 'PublicAccess: Specifies whether data in the container may be accessed publicly and the level of access.'
@@ -877,11 +881,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsBlobService resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               publicAccess:
                 type: string
@@ -1134,11 +1139,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsBlobService resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               publicAccess:
                 description: Deprecated version of ContainerProperties_PublicAccess. Use v1api20210401.ContainerProperties_PublicAccess instead
@@ -1364,11 +1370,12 @@ spec:
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a storage.azure.com/StorageAccountsBlobService resource'
                 properties:
+                  armId:
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
                   name:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
-                required:
-                - name
                 type: object
               publicAccess:
                 type: string
