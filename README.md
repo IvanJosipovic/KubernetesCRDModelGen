@@ -61,3 +61,26 @@ We publish the following premade packages
 | 'string' with format=date | ~~timestamp (google.protobuf.Timestamp)~~ |
 | 'string' with format=date-time | ~~timestamp (google.protobuf.Timestamp)~~ |
 | 'string' with format=duration | ~~duration (google.protobuf.Duration)~~ |
+
+
+## How to use the Source Generator
+Create a C# Class Library Project and add some CRD yaml files to the project.
+Update the .csproj with the following settings. The Models will be generated in the "KubernetesCRDModelGen.Models.{CRD Group Name}" namespace.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-*" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <AdditionalFiles Include="*.yaml" />
+  </ItemGroup>
+
+</Project>
+```
