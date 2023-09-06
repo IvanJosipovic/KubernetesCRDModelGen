@@ -9,18 +9,18 @@ metadata:
     cnrm.cloud.google.com/stability-level: alpha
     cnrm.cloud.google.com/system: true
     cnrm.cloud.google.com/tf2crd: true
-  name: firebasedatabaseinstances.firebasedatabase.cnrm.cloud.google.com
+  name: vertexaiindexendpoints.vertexai.cnrm.cloud.google.com
 spec:
-  group: firebasedatabase.cnrm.cloud.google.com
+  group: vertexai.cnrm.cloud.google.com
   names:
     categories:
     - gcp
-    kind: FirebaseDatabaseInstance
-    plural: firebasedatabaseinstances
+    kind: VertexAIIndexEndpoint
+    plural: vertexaiindexendpoints
     shortNames:
-    - gcpfirebasedatabaseinstance
-    - gcpfirebasedatabaseinstances
-    singular: firebasedatabaseinstance
+    - gcpvertexaiindexendpoint
+    - gcpvertexaiindexendpoints
+    singular: vertexaiindexendpoint
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
@@ -53,8 +53,21 @@ spec:
             type: object
           spec:
             properties:
-              desiredState:
-                description: The intended database state.
+              description:
+                description: The description of the Index.
+                type: string
+              displayName:
+                description: The display name of the Index. The name can be up to 128 characters long and can consist of any UTF-8 characters.
+                type: string
+              network:
+                description: >-
+                  Immutable. The full name of the Google Compute Engine [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks) to which the index endpoint should be peered.
+
+                  Private services access must already be configured for the network. If left unspecified, the index endpoint is not peered with any network.
+
+                  [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert): 'projects/{project}/global/networks/{network}'.
+
+                  Where '{project}' is a project number, as in '12345', and '{network}' is network name.
                 type: string
               projectRef:
                 description: The project that this resource belongs to.
@@ -84,25 +97,13 @@ spec:
                     type: string
                 type: object
               region:
-                description: >-
-                  Immutable. A reference to the region where the Firebase Realtime database resides.
-
-                  Check all [available regions](https://firebase.google.com/docs/projects/locations#rtdb-locations).
+                description: Immutable. The region of the index endpoint. eg us-central1.
                 type: string
               resourceID:
-                description: Immutable. Optional. The instanceId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
-                type: string
-              type:
-                description: >-
-                  Immutable. The database type.
-
-                  Each project can create one default Firebase Realtime Database, which cannot be deleted once created.
-
-                  Creating user Databases is only available for projects on the Blaze plan.
-
-                  Projects can be upgraded using the Cloud Billing API https://cloud.google.com/billing/reference/rest/v1/projects/updateBillingInfo. Default value: "USER_DATABASE" Possible values: ["DEFAULT_DATABASE", "USER_DATABASE"].
+                description: Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.
                 type: string
             required:
+            - displayName
             - projectRef
             - region
             type: object
@@ -129,27 +130,20 @@ spec:
                       type: string
                   type: object
                 type: array
-              databaseUrl:
-                description: >-
-                  The database URL in the form of https://{instance-id}.firebaseio.com for us-central1 instances
-
-                  or https://{instance-id}.{region}.firebasedatabase.app in other regions.
+              createTime:
+                description: The timestamp of when the Index was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
+                type: string
+              etag:
+                description: Used to perform consistent read-modify-write updates.
                 type: string
               name:
-                description: >-
-                  The fully-qualified resource name of the Firebase Realtime Database, in the
-
-                  format: projects/PROJECT_NUMBER/locations/REGION_IDENTIFIER/instances/INSTANCE_ID
-
-                  PROJECT_NUMBER: The Firebase project's ['ProjectNumber'](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number)
-
-                  Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
+                description: The resource name of the Index.
                 type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
-              state:
-                description: The current database state. Set desired_state to :DISABLED to disable the database and :ACTIVE to reenable the database.
+              updateTime:
+                description: The timestamp of when the Index was last updated in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.
                 type: string
             type: object
         required:

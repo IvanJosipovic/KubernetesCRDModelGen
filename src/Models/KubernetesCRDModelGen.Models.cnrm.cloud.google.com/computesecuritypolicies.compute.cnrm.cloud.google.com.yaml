@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.108.0
+    cnrm.cloud.google.com/version: 1.109.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -103,6 +103,11 @@ spec:
                   logLevel:
                     description: 'Logging level. Supported values include: "NORMAL", "VERBOSE".'
                     type: string
+                  userIpRequestHeaders:
+                    description: An optional list of case-insensitive request header names to use for resolving the callers client IP address.
+                    items:
+                      type: string
+                    type: array
                 type: object
               description:
                 description: An optional description of this security policy. Max size is 2048.
@@ -319,7 +324,7 @@ spec:
                           description: Determines the key to enforce the rateLimitThreshold on.
                           type: string
                         enforceOnKeyConfigs:
-                          description: Immutable. Enforce On Key Config of this security policy.
+                          description: Enforce On Key Config of this security policy.
                           items:
                             properties:
                               enforceOnKeyName:
