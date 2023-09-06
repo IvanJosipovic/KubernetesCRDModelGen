@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.108.0
+    cnrm.cloud.google.com/version: 1.109.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -55,11 +55,9 @@ spec:
             properties:
               address:
                 description: >-
-                  Immutable. The static external IP address represented by this resource. Only
+                  Immutable. The static external IP address represented by this resource.
 
-                  IPv4 is supported. An address may only be specified for INTERNAL
-
-                  address types. The IP address must be inside the specified subnetwork,
+                  The IP address must be inside the specified subnetwork,
 
                   if any. Set by the API if undefined.
                 type: string
@@ -73,7 +71,15 @@ spec:
                 description: Immutable. An optional description of this resource.
                 type: string
               ipVersion:
-                description: "Immutable. The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: [\"IPV4\", \"IPV6\"]. This field can only be specified for a global address."
+                description: "Immutable. The IP Version that will be used by this address. The default value is 'IPV4'. Possible values: [\"IPV4\", \"IPV6\"]."
+                type: string
+              ipv6EndpointType:
+                description: >-
+                  Immutable. The endpoint type of this address, which should be VM or NETLB. This is
+
+                  used for deciding which type of endpoint this address can be used after
+
+                  the external IPv6 address reservation. Possible values: ["VM", "NETLB"].
                 type: string
               location:
                 description: 'Location represents the geographical location of the ComputeAddress. Specify a region name or "global" for global resources. Reference: GCP definition of regions/zones (https://cloud.google.com/compute/docs/regions-zones/)'

@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.108.0
+    cnrm.cloud.google.com/version: 1.109.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -222,6 +222,12 @@ spec:
                       region. If not provided, defaults to the same region as the function.
                     type: string
                 type: object
+              kmsKeyName:
+                description: >-
+                  Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
+
+                  It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
+                type: string
               location:
                 description: Immutable. The location of this cloud function.
                 type: string

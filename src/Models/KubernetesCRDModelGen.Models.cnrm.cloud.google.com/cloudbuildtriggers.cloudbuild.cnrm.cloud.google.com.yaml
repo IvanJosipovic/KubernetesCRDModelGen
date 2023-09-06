@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.108.0
+    cnrm.cloud.google.com/version: 1.109.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -358,7 +358,7 @@ spec:
                         description: 'Option to specify the logging mode, which determines if and where build logs are stored. Possible values: ["LOGGING_UNSPECIFIED", "LEGACY", "GCS_ONLY", "STACKDRIVER_ONLY", "CLOUD_LOGGING_ONLY", "NONE"].'
                         type: string
                       machineType:
-                        description: 'Compute Engine machine type on which to run the build. Possible values: ["UNSPECIFIED", "N1_HIGHCPU_8", "N1_HIGHCPU_32", "E2_HIGHCPU_8", "E2_HIGHCPU_32"].'
+                        description: Compute Engine machine type on which to run the build.
                         type: string
                       requestedVerifyOption:
                         description: 'Requested verifiability options. Possible values: ["NOT_VERIFIED", "VERIFIED"].'
@@ -881,6 +881,39 @@ spec:
               gitFileSource:
                 description: The file source describing the local or remote Build template.
                 properties:
+                  bitbucketServerConfigRef:
+                    description: >-
+                      Only `external` field is supported to configure the reference.
+
+
+                      The full resource name of the bitbucket server config. Format:
+
+                      projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.
+                    oneOf:
+                    - not:
+                        required:
+                        - external
+                      required:
+                      - name
+                    - not:
+                        anyOf:
+                        - required:
+                          - name
+                        - required:
+                          - namespace
+                      required:
+                      - external
+                    properties:
+                      external:
+                        description: 'Allowed value: The `name` field of a `CloudBuildBitbucketServerConfig` resource.'
+                        type: string
+                      name:
+                        description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                        type: string
+                      namespace:
+                        description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
+                        type: string
+                    type: object
                   githubEnterpriseConfigRef:
                     description: >-
                       Only `external` field is supported to configure the reference.
@@ -1295,6 +1328,39 @@ spec:
 
                   One of 'trigger_template', 'github', 'pubsub_config' 'webhook_config' or 'source_to_build' must be provided.
                 properties:
+                  bitbucketServerConfigRef:
+                    description: >-
+                      Only `external` field is supported to configure the reference.
+
+
+                      The full resource name of the bitbucket server config. Format:
+
+                      projects/{project}/locations/{location}/bitbucketServerConfigs/{id}.
+                    oneOf:
+                    - not:
+                        required:
+                        - external
+                      required:
+                      - name
+                    - not:
+                        anyOf:
+                        - required:
+                          - name
+                        - required:
+                          - namespace
+                      required:
+                      - external
+                    properties:
+                      external:
+                        description: 'Allowed value: The `name` field of a `CloudBuildBitbucketServerConfig` resource.'
+                        type: string
+                      name:
+                        description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                        type: string
+                      namespace:
+                        description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
+                        type: string
+                    type: object
                   githubEnterpriseConfigRef:
                     description: >-
                       Only `external` field is supported to configure the reference.
@@ -1488,7 +1554,7 @@ spec:
                       - external
                     properties:
                       external:
-                        description: 'Allowed value: The `name` field of a `SecretManagerSecret` resource.'
+                        description: 'Allowed value: The `name` field of a `SecretManagerSecretVersion` resource.'
                         type: string
                       name:
                         description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'

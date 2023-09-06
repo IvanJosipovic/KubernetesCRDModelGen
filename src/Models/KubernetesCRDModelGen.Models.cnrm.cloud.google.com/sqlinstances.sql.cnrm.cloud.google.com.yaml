@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.108.0
+    cnrm.cloud.google.com/version: 1.109.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -137,7 +137,7 @@ spec:
                     description: Immutable. Path to a SQL file in Google Cloud Storage from which replica instances are created. Format is gs://bucket/filename.
                     type: string
                   failoverTarget:
-                    description: Immutable. Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance.
+                    description: Immutable. Specifies if the replica is the failover target. If the field is set to true the replica will be designated as a failover replica. If the master instance fails, the replica instance will be promoted as the new master instance. Not supported for Postgres.
                     type: boolean
                   masterHeartbeatPeriod:
                     description: Immutable. Time in ms between replication heartbeats.
@@ -296,7 +296,7 @@ spec:
                         description: HH:MM format time indicating when backup configuration starts.
                         type: string
                       transactionLogRetentionDays:
-                        description: The number of days of transaction logs we retain for point in time restore, from 1-7.
+                        description: The number of days of transaction logs we retain for point in time restore, from 1-7. (For PostgreSQL Enterprise Plus instances, from 1 to 35.).
                         type: integer
                     type: object
                   collation:
@@ -435,6 +435,20 @@ spec:
                             description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
                             type: string
                         type: object
+                      pscConfig:
+                        description: PSC settings for a Cloud SQL instance.
+                        items:
+                          properties:
+                            allowedConsumerProjects:
+                              description: List of consumer projects that are allow-listed for PSC connections to this instance. This instance can be connected to with PSC from any network in these projects. Each consumer project in this list may be represented by a project number (numeric) or by a project id (alphanumeric).
+                              items:
+                                type: string
+                              type: array
+                            pscEnabled:
+                              description: Whether PSC connectivity is enabled for this instance.
+                              type: boolean
+                          type: object
+                        type: array
                       requireSsl:
                         type: boolean
                     type: object
@@ -574,6 +588,9 @@ spec:
               connectionName:
                 description: The connection name of the instance to be used in connection strings. For example, when connecting with Cloud SQL Proxy.
                 type: string
+              dnsName:
+                description: The dns name of the instance.
+                type: string
               firstIpAddress:
                 type: string
               instanceType:
@@ -594,6 +611,9 @@ spec:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
               privateIpAddress:
+                type: string
+              pscServiceAttachmentLink:
+                description: The link to service attachment of PSC instance.
                 type: string
               publicIpAddress:
                 type: string
