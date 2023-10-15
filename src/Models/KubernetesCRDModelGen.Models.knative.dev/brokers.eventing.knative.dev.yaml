@@ -5,7 +5,7 @@ metadata:
   labels:
     knative.dev/crd-install: true
     duck.knative.dev/addressable: true
-    app.kubernetes.io/version: 1.11.4
+    app.kubernetes.io/version: 1.11.3
     app.kubernetes.io/name: knative-eventing
 spec:
   group: eventing.knative.dev
