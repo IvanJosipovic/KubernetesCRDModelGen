@@ -4,7 +4,7 @@ metadata:
   name: routes.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.11.2
+    app.kubernetes.io/version: 1.12.0
     knative.dev/crd-install: true
     duck.knative.dev/addressable: true
 spec:
@@ -89,6 +89,9 @@ spec:
                 properties:
                   CACerts:
                     description: CACerts is the Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.
+                    type: string
+                  audience:
+                    description: Audience is the OIDC audience for this address.
                     type: string
                   name:
                     description: Name is the name of the address.
