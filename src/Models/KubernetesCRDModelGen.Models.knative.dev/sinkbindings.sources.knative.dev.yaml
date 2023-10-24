@@ -6,7 +6,7 @@ metadata:
     duck.knative.dev/source: true
     duck.knative.dev/binding: true
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.11.5
+    app.kubernetes.io/version: 1.12.0
     app.kubernetes.io/name: knative-eventing
   name: sinkbindings.sources.knative.dev
 spec:
@@ -59,6 +59,9 @@ spec:
                   CACerts:
                     description: CACerts is the Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
                     type: string
+                  audience:
+                    description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the Addressable itself. If the target is an Addressable and specifies an Audience, the target's Audience takes precedence.
+                    type: string
               subject:
                 description: Subject references the resource(s) whose "runtime contract" should be augmented by Binding implementations.
                 type: object
@@ -107,6 +110,13 @@ spec:
                 description: Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.
                 type: object
                 x-kubernetes-preserve-unknown-fields: true
+              auth:
+                description: Auth provides the relevant information for OIDC authentication.
+                type: object
+                properties:
+                  serviceAccountName:
+                    description: ServiceAccountName is the name of the generated service account used for this components OIDC authentication.
+                    type: string
               ceAttributes:
                 description: CloudEventAttributes are the specific attributes that the Source uses as part of its CloudEvents.
                 type: array
