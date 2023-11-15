@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.3.0
+    app.kubernetes.io/version: v2.4.0
   name: roleassignments.authorization.azure.com
 spec:
   conversion:
@@ -400,7 +400,7 @@ spec:
             type: object
         type: object
     served: true
-    storage: true
+    storage: false
     subresources:
       status: {}
   - additionalPrinterColumns:
@@ -416,10 +416,10 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1beta20200801preview
+    name: v1api20220401
     schema:
       openAPIV3Schema:
-        description: Deprecated version of RoleAssignment. Use v1api20200801preview.RoleAssignment instead
+        description: 'Generator information: - Generated from: /authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleAssignmentsCalls.json - ARM URI: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -435,12 +435,16 @@ spec:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
               condition:
+                description: "Condition: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'"
                 type: string
               conditionVersion:
+                description: "ConditionVersion: Version of the condition. Currently the only accepted value is '2.0'"
                 type: string
               delegatedManagedIdentityResourceId:
+                description: 'DelegatedManagedIdentityResourceId: Id of the delegated managed identity resource'
                 type: string
               description:
+                description: 'Description: Description of role assignment'
                 type: string
               owner:
                 description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
@@ -460,9 +464,10 @@ spec:
                     type: string
                 type: object
               principalId:
+                description: 'PrincipalId: The principal ID.'
                 type: string
               principalIdFromConfig:
-                description: ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.
+                description: 'PrincipalIdFromConfig: The principal ID.'
                 properties:
                   key:
                     description: Key is the key in the Kubernetes configmap being referenced
@@ -475,15 +480,16 @@ spec:
                 - name
                 type: object
               principalType:
-                description: Deprecated version of RoleAssignmentProperties_PrincipalType. Use v1api20200801preview.RoleAssignmentProperties_PrincipalType instead
+                description: 'PrincipalType: The principal type of the assigned principal ID.'
                 enum:
+                - Device
                 - ForeignGroup
                 - Group
                 - ServicePrincipal
                 - User
                 type: string
               roleDefinitionReference:
-                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                description: 'RoleDefinitionReference: The role definition ID.'
                 properties:
                   armId:
                     description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
@@ -504,11 +510,13 @@ spec:
             - roleDefinitionReference
             type: object
           status:
-            description: Deprecated version of RoleAssignment_STATUS. Use v1api20200801preview.RoleAssignment_STATUS instead
+            description: Role Assignments
             properties:
               condition:
+                description: "Condition: The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'"
                 type: string
               conditionVersion:
+                description: "ConditionVersion: Version of the condition. Currently the only accepted value is '2.0'"
                 type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -546,31 +554,43 @@ spec:
                   type: object
                 type: array
               createdBy:
+                description: 'CreatedBy: Id of the user who created the assignment'
                 type: string
               createdOn:
+                description: 'CreatedOn: Time it was created'
                 type: string
               delegatedManagedIdentityResourceId:
+                description: 'DelegatedManagedIdentityResourceId: Id of the delegated managed identity resource'
                 type: string
               description:
+                description: 'Description: Description of role assignment'
                 type: string
               id:
+                description: 'Id: The role assignment ID.'
                 type: string
               name:
+                description: 'Name: The role assignment name.'
                 type: string
               principalId:
+                description: 'PrincipalId: The principal ID.'
                 type: string
               principalType:
-                description: Deprecated version of RoleAssignmentProperties_PrincipalType_STATUS. Use v1api20200801preview.RoleAssignmentProperties_PrincipalType_STATUS instead
+                description: 'PrincipalType: The principal type of the assigned principal ID.'
                 type: string
               roleDefinitionId:
+                description: 'RoleDefinitionId: The role definition ID.'
                 type: string
               scope:
+                description: 'Scope: The role assignment scope.'
                 type: string
               type:
+                description: 'Type: The role assignment type.'
                 type: string
               updatedBy:
+                description: 'UpdatedBy: Id of the user who updated the assignment'
                 type: string
               updatedOn:
+                description: 'UpdatedOn: Time it was updated'
                 type: string
             type: object
         type: object
@@ -591,10 +611,10 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1beta20200801previewstorage
+    name: v1api20220401storage
     schema:
       openAPIV3Schema:
-        description: Storage version of v1beta20200801preview.RoleAssignment Deprecated version of RoleAssignment. Use v1api20200801preview.RoleAssignment instead
+        description: 'Storage version of v1api20220401.RoleAssignment Generator information: - Generated from: /authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleAssignmentsCalls.json - ARM URI: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}'
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -605,7 +625,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1beta20200801preview.RoleAssignment_Spec
+            description: Storage version of v1api20220401.RoleAssignment_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -660,7 +680,7 @@ spec:
               principalType:
                 type: string
               roleDefinitionReference:
-                description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
+                description: 'RoleDefinitionReference: The role definition ID.'
                 properties:
                   armId:
                     description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
@@ -681,7 +701,7 @@ spec:
             - roleDefinitionReference
             type: object
           status:
-            description: Storage version of v1beta20200801preview.RoleAssignment_STATUS Deprecated version of RoleAssignment_STATUS. Use v1api20200801preview.RoleAssignment_STATUS instead
+            description: Storage version of v1api20220401.RoleAssignment_STATUS Role Assignments
             properties:
               $propertyBag:
                 additionalProperties:
@@ -755,6 +775,6 @@ spec:
             type: object
         type: object
     served: true
-    storage: false
+    storage: true
     subresources:
       status: {}

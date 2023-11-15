@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.3.0
+    app.kubernetes.io/version: v2.4.0
   name: workspaces.synapse.azure.com
 spec:
   conversion:
@@ -292,7 +292,7 @@ spec:
                     description: 'CollaborationBranch: Collaboration branch'
                     type: string
                   hostName:
-                    description: 'HostName: GitHub Enterprise host name. For example: https://github.mydomain.com'
+                    description: 'HostName: GitHub Enterprise host name. For example: `https://github.mydomain.com`'
                     type: string
                   lastCommitId:
                     description: 'LastCommitId: The last commit ID'
@@ -544,7 +544,7 @@ spec:
                     description: 'CollaborationBranch: Collaboration branch'
                     type: string
                   hostName:
-                    description: 'HostName: GitHub Enterprise host name. For example: https://github.mydomain.com'
+                    description: 'HostName: GitHub Enterprise host name. For example: `https://github.mydomain.com`'
                     type: string
                   lastCommitId:
                     description: 'LastCommitId: The last commit ID'
