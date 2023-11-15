@@ -105,7 +105,7 @@ public class CRDGenerator : ICRDGenerator
         "while"
     };
 
-    private static readonly List<char> characters = new List<char>
+    private static readonly List<char> propertyNameBadChars = new List<char>
     {
         '-',
         '$',
@@ -125,6 +125,27 @@ public class CRDGenerator : ICRDGenerator
         '_',
         '=',
         '.'
+    };
+
+    private static readonly List<char> namspaceBadChars = new List<char>
+    {
+        '-',
+        '$',
+        '`',
+        '!',
+        '@',
+        '#',
+        '%',
+        '^',
+        '&',
+        '*',
+        '(',
+        ')',
+        '-',
+        '+',
+        '~',
+        '_',
+        '='
     };
 
     public CRDGenerator(ILogger<CRDGenerator> logger)
@@ -671,7 +692,7 @@ public class CRDGenerator : ICRDGenerator
 
     private static string GetCleanPropertyName(string name)
     {
-        foreach (var badChar in characters)
+        foreach (var badChar in propertyNameBadChars)
         {
             if (name.Contains(badChar))
             {
@@ -684,7 +705,7 @@ public class CRDGenerator : ICRDGenerator
 
     private static string GetCleanNamespace(string name)
     {
-        foreach (var badChar in characters)
+        foreach (var badChar in namspaceBadChars)
         {
             if (name.Contains(badChar))
             {
