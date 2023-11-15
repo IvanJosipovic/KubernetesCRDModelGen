@@ -49,7 +49,7 @@
         <PackageReference Include="System.Text.Encodings.Web" Version="7.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Text_Encodings_Web)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="System.Text.Json" Version="7.0.3" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="System.Text.Json" Version="7.0.4" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Text_Json)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="YamlDotNet" Version="13.7.1" GeneratePathProperty="true" PrivateAssets="all" />
