@@ -123,7 +123,8 @@ public class CRDGenerator : ICRDGenerator
         '+',
         '~',
         '_',
-        '='
+        '=',
+        '.'
     };
 
     public CRDGenerator(ILogger<CRDGenerator> logger)
