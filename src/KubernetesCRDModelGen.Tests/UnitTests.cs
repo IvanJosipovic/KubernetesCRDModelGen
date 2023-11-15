@@ -584,7 +584,7 @@ spec:
             spec:
               type: object
               properties:
-                some~!@#$%^&*()-=_+String:
+                some~!@#$%^&*()-=_+.String:
                   type: string
 ";
         var type = GetTypeYaml(yaml, "Test");
