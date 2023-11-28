@@ -4,7 +4,7 @@ metadata:
   name: metrics.autoscaling.internal.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.12.1
+    app.kubernetes.io/version: 1.12.2
     knative.dev/crd-install: true
 spec:
   group: autoscaling.internal.knative.dev
