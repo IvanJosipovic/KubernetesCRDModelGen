@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.4.0
+    app.kubernetes.io/version: v2.5.0
   name: policyfragments.apimanagement.azure.com
 spec:
   conversion:
@@ -188,9 +188,6 @@ spec:
                 type: object
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                maxLength: 80
-                minLength: 1
-                pattern: (^[\w]+$)|(^[\w][\w\-]+[\w]$)
                 type: string
               description:
                 type: string

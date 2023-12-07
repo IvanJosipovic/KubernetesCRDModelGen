@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.4.0
+    app.kubernetes.io/version: v2.5.0
   name: namespaceseventhubsconsumergroups.eventhub.azure.com
 spec:
   conversion:
@@ -200,8 +200,6 @@ spec:
                 type: object
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                maxLength: 50
-                minLength: 1
                 type: string
               originalVersion:
                 type: string

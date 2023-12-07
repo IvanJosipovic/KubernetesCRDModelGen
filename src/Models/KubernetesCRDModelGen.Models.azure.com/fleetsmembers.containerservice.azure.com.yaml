@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.4.0
+    app.kubernetes.io/version: v2.5.0
   name: fleetsmembers.containerservice.azure.com
 spec:
   conversion:
@@ -222,9 +222,6 @@ spec:
                 type: object
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                maxLength: 50
-                minLength: 1
-                pattern: ^[a-z0-9]([-a-z0-9]*[a-z0-9])?$
                 type: string
               clusterResourceReference:
                 description: "ClusterResourceReference: The ARM resource id of the cluster that joins the Fleet. Must be a valid Azure resource id. e.g.: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{clusterName}'."
