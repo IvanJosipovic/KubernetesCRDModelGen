@@ -3,18 +3,18 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.13.0
-  name: accountassignments.ssoadmin.aws.upbound.io
+  name: groupmemberships.identitystore.aws.upbound.io
 spec:
-  group: ssoadmin.aws.upbound.io
+  group: identitystore.aws.upbound.io
   names:
     categories:
     - crossplane
     - managed
     - aws
-    kind: AccountAssignment
-    listKind: AccountAssignmentList
-    plural: accountassignments
-    singular: accountassignment
+    kind: GroupMembership
+    listKind: GroupMembershipList
+    plural: groupmemberships
+    singular: groupmembership
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: AccountAssignment is the Schema for the AccountAssignments API. Manages a Single Sign-On (SSO) Account Assignment
+        description: GroupMembership is the Schema for the GroupMemberships API.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -44,7 +44,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: AccountAssignmentSpec defines the desired state of AccountAssignment
+            description: GroupMembershipSpec defines the desired state of GroupMembership
             properties:
               deletionPolicy:
                 default: Delete
@@ -55,14 +55,11 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  instanceArn:
-                    description: The Amazon Resource Name (ARN) of the SSO Instance.
+                  groupId:
+                    description: The identifier for a group in the Identity Store.
                     type: string
-                  permissionSetArn:
-                    description: The Amazon Resource Name (ARN) of the Permission Set that the admin wants to grant the principal access to.
-                    type: string
-                  permissionSetArnRef:
-                    description: Reference to a PermissionSet in ssoadmin to populate permissionSetArn.
+                  groupIdRef:
+                    description: Reference to a Group in identitystore to populate groupId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -87,8 +84,8 @@ spec:
                     required:
                     - name
                     type: object
-                  permissionSetArnSelector:
-                    description: Selector for a PermissionSet in ssoadmin to populate permissionSetArn.
+                  groupIdSelector:
+                    description: Selector for a Group in identitystore to populate groupId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -116,11 +113,14 @@ spec:
                             type: string
                         type: object
                     type: object
-                  principalId:
-                    description: An identifier for an object in SSO, such as a user or group. PrincipalIds are GUIDs (For example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). This can be set to the crossplane external-name of either a Group or User in the identitystore api group, but the Ref and Selector fields will only work with a Group.
+                  identityStoreId:
+                    description: Identity Store ID associated with the Single Sign-On Instance.
                     type: string
-                  principalIdFromGroupRef:
-                    description: Reference to a Group in identitystore to populate principalId.
+                  memberId:
+                    description: The identifier for a user in the Identity Store.
+                    type: string
+                  memberIdRef:
+                    description: Reference to a User in identitystore to populate memberId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -145,8 +145,8 @@ spec:
                     required:
                     - name
                     type: object
-                  principalIdFromGroupSelector:
-                    description: Selector for a Group in identitystore to populate principalId.
+                  memberIdSelector:
+                    description: Selector for a User in identitystore to populate memberId.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -174,23 +174,12 @@ spec:
                             type: string
                         type: object
                     type: object
-                  principalType:
-                    description: 'The entity type for which the assignment will be created. Valid values: USER, GROUP.'
-                    type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
-                  targetId:
-                    description: An AWS account identifier, typically a 10-12 digit string.
-                    type: string
-                  targetType:
-                    description: 'The entity type for which the assignment will be created. Valid values: AWS_ACCOUNT.'
-                    type: string
                 required:
-                - instanceArn
-                - principalType
+                - identityStoreId
                 - region
-                - targetId
                 type: object
               initProvider:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
@@ -309,30 +298,23 @@ spec:
             - forProvider
             type: object
           status:
-            description: AccountAssignmentStatus defines the observed state of AccountAssignment.
+            description: GroupMembershipStatus defines the observed state of GroupMembership.
             properties:
               atProvider:
                 properties:
+                  groupId:
+                    description: The identifier for a group in the Identity Store.
+                    type: string
                   id:
-                    description: The identifier of the Account Assignment i.e., principal_id, principal_type, target_id, target_type, permission_set_arn, instance_arn separated by commas (,).
                     type: string
-                  instanceArn:
-                    description: The Amazon Resource Name (ARN) of the SSO Instance.
+                  identityStoreId:
+                    description: Identity Store ID associated with the Single Sign-On Instance.
                     type: string
-                  permissionSetArn:
-                    description: The Amazon Resource Name (ARN) of the Permission Set that the admin wants to grant the principal access to.
+                  memberId:
+                    description: The identifier for a user in the Identity Store.
                     type: string
-                  principalId:
-                    description: An identifier for an object in SSO, such as a user or group. PrincipalIds are GUIDs (For example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). This can be set to the crossplane external-name of either a Group or User in the identitystore api group, but the Ref and Selector fields will only work with a Group.
-                    type: string
-                  principalType:
-                    description: 'The entity type for which the assignment will be created. Valid values: USER, GROUP.'
-                    type: string
-                  targetId:
-                    description: An AWS account identifier, typically a 10-12 digit string.
-                    type: string
-                  targetType:
-                    description: 'The entity type for which the assignment will be created. Valid values: AWS_ACCOUNT.'
+                  membershipId:
+                    description: The identifier of the newly created group membership in the Identity Store.
                     type: string
                 type: object
               conditions:
