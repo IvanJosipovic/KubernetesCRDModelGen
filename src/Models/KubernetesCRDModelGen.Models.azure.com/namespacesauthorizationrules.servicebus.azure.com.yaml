@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.4.0
+    app.kubernetes.io/version: v2.5.0
   name: namespacesauthorizationrules.servicebus.azure.com
 spec:
   conversion:
@@ -260,8 +260,6 @@ spec:
                 type: object
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                maxLength: 50
-                minLength: 1
                 type: string
               operatorSpec:
                 description: Storage version of v1api20210101preview.NamespacesAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
@@ -665,8 +663,6 @@ spec:
                 type: object
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                maxLength: 50
-                minLength: 1
                 type: string
               operatorSpec:
                 description: Storage version of v1api20211101.NamespacesAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
@@ -1072,8 +1068,6 @@ spec:
                 type: object
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                maxLength: 50
-                minLength: 1
                 type: string
               operatorSpec:
                 description: Storage version of v1api20221001preview.NamespacesAuthorizationRuleOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure

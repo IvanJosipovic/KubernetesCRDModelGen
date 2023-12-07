@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.4.0
+    app.kubernetes.io/version: v2.5.0
   name: batchaccounts.batch.azure.com
 spec:
   conversion:
@@ -433,9 +433,6 @@ spec:
                 type: object
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
-                maxLength: 24
-                minLength: 3
-                pattern: ^[a-z0-9]+$
                 type: string
               encryption:
                 description: Storage version of v1api20210101.EncryptionProperties Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
