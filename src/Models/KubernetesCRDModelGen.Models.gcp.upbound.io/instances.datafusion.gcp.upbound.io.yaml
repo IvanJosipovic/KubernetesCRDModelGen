@@ -221,6 +221,7 @@ spec:
                       type: string
                     description: The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
                     type: object
+                    x-kubernetes-map-type: granular
                   networkConfig:
                     description: Network configuration options. These are required when a private Data Fusion instance is to be created. Structure is documented below.
                     items:
@@ -238,6 +239,7 @@ spec:
                       type: string
                     description: Map of additional options used to configure the behavior of Data Fusion instance.
                     type: object
+                    x-kubernetes-map-type: granular
                   privateInstance:
                     description: Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP addresses and will not be able to access the public internet.
                     type: boolean
@@ -309,6 +311,7 @@ spec:
                       type: string
                     description: The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
                     type: object
+                    x-kubernetes-map-type: granular
                   networkConfig:
                     description: Network configuration options. These are required when a private Data Fusion instance is to be created. Structure is documented below.
                     items:
@@ -326,6 +329,7 @@ spec:
                       type: string
                     description: Map of additional options used to configure the behavior of Data Fusion instance.
                     type: object
+                    x-kubernetes-map-type: granular
                   privateInstance:
                     description: Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP addresses and will not be able to access the public internet.
                     type: boolean
@@ -531,6 +535,7 @@ spec:
                       type: string
                     description: The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
                     type: object
+                    x-kubernetes-map-type: granular
                   networkConfig:
                     description: Network configuration options. These are required when a private Data Fusion instance is to be created. Structure is documented below.
                     items:
@@ -548,6 +553,7 @@ spec:
                       type: string
                     description: Map of additional options used to configure the behavior of Data Fusion instance.
                     type: object
+                    x-kubernetes-map-type: granular
                   p4ServiceAccount:
                     description: P4 service account for the customer project.
                     type: string

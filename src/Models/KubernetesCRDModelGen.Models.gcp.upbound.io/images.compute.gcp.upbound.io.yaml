@@ -90,6 +90,7 @@ spec:
                       type: string
                     description: Labels to apply to this Image.
                     type: object
+                    x-kubernetes-map-type: granular
                   licenses:
                     description: Any applicable license URI.
                     items:
@@ -166,6 +167,7 @@ spec:
                       type: string
                     description: Labels to apply to this Image.
                     type: object
+                    x-kubernetes-map-type: granular
                   licenses:
                     description: Any applicable license URI.
                     items:
@@ -369,6 +371,7 @@ spec:
                       type: string
                     description: Labels to apply to this Image.
                     type: object
+                    x-kubernetes-map-type: granular
                   licenses:
                     description: Any applicable license URI.
                     items:

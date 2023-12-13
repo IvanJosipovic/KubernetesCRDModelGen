@@ -66,6 +66,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to this Workflow.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: Name of the Workflow.
                     type: string
@@ -154,6 +155,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to this Workflow.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: Name of the Workflow.
                     type: string
@@ -305,6 +307,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to this Workflow.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: Name of the Workflow.
                     type: string

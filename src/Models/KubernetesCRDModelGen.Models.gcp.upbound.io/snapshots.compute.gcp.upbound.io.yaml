@@ -66,6 +66,7 @@ spec:
                       type: string
                     description: Labels to apply to this Snapshot.
                     type: object
+                    x-kubernetes-map-type: granular
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -205,6 +206,7 @@ spec:
                       type: string
                     description: Labels to apply to this Snapshot.
                     type: object
+                    x-kubernetes-map-type: granular
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -379,6 +381,7 @@ spec:
                       type: string
                     description: Labels to apply to this Snapshot.
                     type: object
+                    x-kubernetes-map-type: granular
                   licenses:
                     description: A list of public visible licenses that apply to this snapshot. This can be because the original image had licenses attached (such as a Windows image).  snapshotEncryptionKey nested object Encrypts the snapshot using a customer-supplied encryption key.
                     items:

@@ -193,11 +193,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               queryStringWhitelist:
                                 description: Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         cacheMode:
@@ -303,11 +305,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   customResponseHeaders:
                     description: Headers that the HTTP/S load balancer should add to proxied responses.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: An optional description of this resource.
                     type: string
@@ -322,6 +326,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   healthChecksRefs:
                     description: References to HealthCheck to populate healthChecks.
                     items:
@@ -626,11 +631,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               queryStringWhitelist:
                                 description: Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         cacheMode:
@@ -736,11 +743,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   customResponseHeaders:
                     description: Headers that the HTTP/S load balancer should add to proxied responses.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: An optional description of this resource.
                     type: string
@@ -1095,11 +1104,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               queryStringWhitelist:
                                 description: Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         cacheMode:
@@ -1208,11 +1219,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   customResponseHeaders:
                     description: Headers that the HTTP/S load balancer should add to proxied responses.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: An optional description of this resource.
                     type: string
@@ -1233,6 +1246,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   iap:
                     description: Settings for enabling Cloud Identity Aware Proxy Structure is documented below.
                     items:

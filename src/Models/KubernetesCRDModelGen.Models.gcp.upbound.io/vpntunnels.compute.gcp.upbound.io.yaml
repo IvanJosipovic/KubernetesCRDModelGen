@@ -66,6 +66,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   peerExternalGateway:
                     description: URL of the peer side external VPN gateway to which this VPN tunnel is connected.
                     type: string
@@ -144,6 +145,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   router:
                     description: URL of router resource to be used for dynamic routing.
                     type: string
@@ -355,6 +357,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   peerExternalGatewayInterface:
                     description: The interface ID of the external VPN gateway to which this VPN tunnel is connected.
                     type: number
@@ -372,6 +375,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vpnGatewayInterface:
                     description: The interface ID of the VPN gateway with which this VPN tunnel is associated.
                     type: number
@@ -517,6 +521,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   peerExternalGateway:
                     description: URL of the peer side external VPN gateway to which this VPN tunnel is connected.
                     type: string
@@ -540,6 +545,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   router:
                     description: URL of router resource to be used for dynamic routing.
                     type: string

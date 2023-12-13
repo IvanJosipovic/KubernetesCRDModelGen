@@ -81,6 +81,7 @@ spec:
                             type: string
                           description: The HTTP request headers to send together with webhook requests.
                           type: object
+                          x-kubernetes-map-type: granular
                         uri:
                           description: Whether to use speech adaptation for speech recognition.
                           type: string
@@ -165,6 +166,7 @@ spec:
                                   type: string
                                 description: The HTTP request headers to send together with webhook requests.
                                 type: object
+                                x-kubernetes-map-type: granular
                               uri:
                                 description: Whether to use speech adaptation for speech recognition.
                                 type: string
@@ -208,6 +210,7 @@ spec:
                             type: string
                           description: The HTTP request headers to send together with webhook requests.
                           type: object
+                          x-kubernetes-map-type: granular
                         uri:
                           description: Whether to use speech adaptation for speech recognition.
                           type: string
@@ -234,6 +237,7 @@ spec:
                                   type: string
                                 description: The HTTP request headers to send together with webhook requests.
                                 type: object
+                                x-kubernetes-map-type: granular
                               uri:
                                 description: Whether to use speech adaptation for speech recognition.
                                 type: string
@@ -395,6 +399,7 @@ spec:
                             type: string
                           description: The HTTP request headers to send together with webhook requests.
                           type: object
+                          x-kubernetes-map-type: granular
                         uri:
                           description: Whether to use speech adaptation for speech recognition.
                           type: string
@@ -430,6 +435,7 @@ spec:
                                   type: string
                                 description: The HTTP request headers to send together with webhook requests.
                                 type: object
+                                x-kubernetes-map-type: granular
                               uri:
                                 description: Whether to use speech adaptation for speech recognition.
                                 type: string

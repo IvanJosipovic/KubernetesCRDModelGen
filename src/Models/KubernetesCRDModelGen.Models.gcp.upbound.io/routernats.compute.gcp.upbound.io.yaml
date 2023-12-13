@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   enableDynamicPortAllocation:
                     description: Enable Dynamic Port Allocation. If minPortsPerVm is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config. If maxPortsPerVm is set, maxPortsPerVm must be set to a power of two greater than minPortsPerVm. If maxPortsPerVm is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config. Mutually exclusive with enableEndpointIndependentMapping.
                     type: boolean
@@ -95,6 +96,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -172,11 +174,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               sourceNatDrainIps:
                                 description: A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         description:
@@ -260,11 +264,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         sourceIpRangesToNat:
                           description: 'List of options for which source IPs in the subnetwork should have NAT enabled. Supported values include: ALL_IP_RANGES, LIST_OF_SECONDARY_IP_RANGES, PRIMARY_IP_RANGE.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   tcpEstablishedIdleTimeoutSec:
@@ -290,6 +296,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   enableDynamicPortAllocation:
                     description: Enable Dynamic Port Allocation. If minPortsPerVm is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config. If maxPortsPerVm is set, maxPortsPerVm must be set to a power of two greater than minPortsPerVm. If maxPortsPerVm is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config. Mutually exclusive with enableEndpointIndependentMapping.
                     type: boolean
@@ -325,6 +332,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -341,11 +349,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               sourceNatDrainIps:
                                 description: A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         description:
@@ -371,11 +381,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         sourceIpRangesToNat:
                           description: 'List of options for which source IPs in the subnetwork should have NAT enabled. Supported values include: ALL_IP_RANGES, LIST_OF_SECONDARY_IP_RANGES, PRIMARY_IP_RANGE.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   tcpEstablishedIdleTimeoutSec:
@@ -519,6 +531,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   enableDynamicPortAllocation:
                     description: Enable Dynamic Port Allocation. If minPortsPerVm is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config. If maxPortsPerVm is set, maxPortsPerVm must be set to a power of two greater than minPortsPerVm. If maxPortsPerVm is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config. Mutually exclusive with enableEndpointIndependentMapping.
                     type: boolean
@@ -557,6 +570,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -579,11 +593,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               sourceNatDrainIps:
                                 description: A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         description:
@@ -612,11 +628,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         sourceIpRangesToNat:
                           description: 'List of options for which source IPs in the subnetwork should have NAT enabled. Supported values include: ALL_IP_RANGES, LIST_OF_SECONDARY_IP_RANGES, PRIMARY_IP_RANGE.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   tcpEstablishedIdleTimeoutSec:

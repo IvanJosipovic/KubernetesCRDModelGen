@@ -121,6 +121,7 @@ spec:
                       type: string
                     description: Resource labels to represent user-provided metadata.
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
                     type: string
@@ -141,6 +142,7 @@ spec:
                       type: string
                     description: Resource labels to represent user-provided metadata.
                     type: object
+                    x-kubernetes-map-type: granular
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -283,6 +285,7 @@ spec:
                       type: string
                     description: Resource labels to represent user-provided metadata.
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
                     type: string

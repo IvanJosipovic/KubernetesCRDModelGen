@@ -131,6 +131,7 @@ spec:
                             type: string
                           description: A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden)
                           type: object
+                          x-kubernetes-map-type: granular
                         kerberosConfig:
                           description: Information used to configure the Hive metastore service as a service principal in a Kerberos realm. Structure is documented below.
                           items:
@@ -162,6 +163,7 @@ spec:
                       type: string
                     description: User-defined labels for the metastore service.
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: The location where the metastore service should reside. The default value is global.
                     type: string
@@ -292,6 +294,7 @@ spec:
                             type: string
                           description: A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden)
                           type: object
+                          x-kubernetes-map-type: granular
                         kerberosConfig:
                           description: Information used to configure the Hive metastore service as a service principal in a Kerberos realm. Structure is documented below.
                           items:
@@ -323,6 +326,7 @@ spec:
                       type: string
                     description: User-defined labels for the metastore service.
                     type: object
+                    x-kubernetes-map-type: granular
                   maintenanceWindow:
                     description: The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type. Structure is documented below.
                     items:
@@ -516,6 +520,7 @@ spec:
                             type: string
                           description: A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden)
                           type: object
+                          x-kubernetes-map-type: granular
                         kerberosConfig:
                           description: Information used to configure the Hive metastore service as a service principal in a Kerberos realm. Structure is documented below.
                           items:
@@ -550,6 +555,7 @@ spec:
                       type: string
                     description: User-defined labels for the metastore service.
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: The location where the metastore service should reside. The default value is global.
                     type: string

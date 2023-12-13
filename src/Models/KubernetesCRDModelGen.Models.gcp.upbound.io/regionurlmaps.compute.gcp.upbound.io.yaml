@@ -464,6 +464,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         pathMatcher:
                           description: The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.
                           type: string
@@ -570,6 +571,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               routeAction:
                                 description: In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set. Structure is documented below.
                                 items:
@@ -1722,6 +1724,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         pathMatcher:
                           description: The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.
                           type: string
@@ -1770,6 +1773,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               routeAction:
                                 description: In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set. Structure is documented below.
                                 items:
@@ -2757,6 +2761,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         pathMatcher:
                           description: The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.
                           type: string
@@ -2814,6 +2819,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               routeAction:
                                 description: In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set. Structure is documented below.
                                 items:

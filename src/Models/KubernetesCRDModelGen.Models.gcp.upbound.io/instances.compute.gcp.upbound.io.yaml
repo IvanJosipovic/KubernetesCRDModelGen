@@ -207,6 +207,7 @@ spec:
                                   type: string
                                 description: A tag is a key-value pair that can be attached to a Google Cloud resource. You can use tags to conditionally allow or deny policies based on whether a resource has a specific tag. This value is not returned by the API.
                                 type: object
+                                x-kubernetes-map-type: granular
                               size:
                                 description: The size of the image in gigabytes. If not specified, it will inherit the size of its base image.
                                 type: number
@@ -270,6 +271,7 @@ spec:
                       type: string
                     description: A map of key/value label pairs to assign to the instance.
                     type: object
+                    x-kubernetes-map-type: granular
                   machineType:
                     description: The machine type to create.
                     type: string
@@ -278,6 +280,7 @@ spec:
                       type: string
                     description: Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of default metadata values (e.g. ssh-keys) can be found here
                     type: object
+                    x-kubernetes-map-type: granular
                   metadataStartupScript:
                     description: An alternative to using the startup-script metadata key, except this one forces the instance to be recreated (thus re-running the script) if it is changed. This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously.  Users are free to use either mechanism - the only distinction is that this separate attribute will cause a recreate on modification.  On import, metadata_startup_script will not be set - if you choose to specify it you will see a diff immediately after import causing a destroy/recreate operation.
                     type: string
@@ -487,6 +490,7 @@ spec:
                             type: string
                           description: A tag is a key-value pair that can be attached to a Google Cloud resource. You can use tags to conditionally allow or deny policies based on whether a resource has a specific tag. This value is not returned by the API.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   project:
@@ -560,6 +564,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         onHostMaintenance:
@@ -652,6 +657,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   shieldedInstanceConfig:
@@ -674,6 +680,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   zone:
                     description: The zone that the machine should be created in. If it is not provided, the provider zone is used.
                     type: string
@@ -743,6 +750,7 @@ spec:
                                   type: string
                                 description: A tag is a key-value pair that can be attached to a Google Cloud resource. You can use tags to conditionally allow or deny policies based on whether a resource has a specific tag. This value is not returned by the API.
                                 type: object
+                                x-kubernetes-map-type: granular
                               size:
                                 description: The size of the image in gigabytes. If not specified, it will inherit the size of its base image.
                                 type: number
@@ -806,6 +814,7 @@ spec:
                       type: string
                     description: A map of key/value label pairs to assign to the instance.
                     type: object
+                    x-kubernetes-map-type: granular
                   machineType:
                     description: The machine type to create.
                     type: string
@@ -814,6 +823,7 @@ spec:
                       type: string
                     description: Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of default metadata values (e.g. ssh-keys) can be found here
                     type: object
+                    x-kubernetes-map-type: granular
                   metadataStartupScript:
                     description: An alternative to using the startup-script metadata key, except this one forces the instance to be recreated (thus re-running the script) if it is changed. This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously.  Users are free to use either mechanism - the only distinction is that this separate attribute will cause a recreate on modification.  On import, metadata_startup_script will not be set - if you choose to specify it you will see a diff immediately after import causing a destroy/recreate operation.
                     type: string
@@ -907,6 +917,7 @@ spec:
                             type: string
                           description: A tag is a key-value pair that can be attached to a Google Cloud resource. You can use tags to conditionally allow or deny policies based on whether a resource has a specific tag. This value is not returned by the API.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   project:
@@ -980,6 +991,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         onHostMaintenance:
@@ -1014,6 +1026,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   shieldedInstanceConfig:
@@ -1036,6 +1049,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               managementPolicies:
                 default:
@@ -1231,6 +1245,7 @@ spec:
                                   type: string
                                 description: A tag is a key-value pair that can be attached to a Google Cloud resource. You can use tags to conditionally allow or deny policies based on whether a resource has a specific tag. This value is not returned by the API.
                                 type: object
+                                x-kubernetes-map-type: granular
                               size:
                                 description: The size of the image in gigabytes. If not specified, it will inherit the size of its base image.
                                 type: number
@@ -1309,6 +1324,7 @@ spec:
                       type: string
                     description: A map of key/value label pairs to assign to the instance.
                     type: object
+                    x-kubernetes-map-type: granular
                   machineType:
                     description: The machine type to create.
                     type: string
@@ -1317,6 +1333,7 @@ spec:
                       type: string
                     description: Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of default metadata values (e.g. ssh-keys) can be found here
                     type: object
+                    x-kubernetes-map-type: granular
                   metadataFingerprint:
                     description: The unique fingerprint of the metadata.
                     type: string
@@ -1425,6 +1442,7 @@ spec:
                             type: string
                           description: A tag is a key-value pair that can be attached to a Google Cloud resource. You can use tags to conditionally allow or deny policies based on whether a resource has a specific tag. This value is not returned by the API.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   project:
@@ -1498,6 +1516,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         onHostMaintenance:
@@ -1538,6 +1557,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   shieldedInstanceConfig:
@@ -1560,6 +1580,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tagsFingerprint:
                     description: The unique fingerprint of the tags.
                     type: string

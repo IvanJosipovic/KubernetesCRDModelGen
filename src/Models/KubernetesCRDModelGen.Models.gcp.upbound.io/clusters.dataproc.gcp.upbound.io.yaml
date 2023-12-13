@@ -81,6 +81,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     metricSource:
                                       description: A source for the collection of Dataproc OSS metrics (see available OSS metrics).
                                       type: string
@@ -118,6 +119,7 @@ spec:
                                   type: string
                                 description: A map of the Compute Engine metadata entries to add to all instances (see Project and instance metadata).
                                 type: object
+                                x-kubernetes-map-type: granular
                               network:
                                 description: The name or self_link of the Google Compute Engine network to the cluster will be part of. Conflicts with subnetwork. If neither is specified, this defaults to the "default" network.
                                 type: string
@@ -145,6 +147,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               serviceAccount:
@@ -181,6 +184,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               serviceAccountSelector:
                                 description: Selector for a ServiceAccount in cloudplatform to populate serviceAccount.
                                 properties:
@@ -233,6 +237,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               zone:
                                 description: "The GCP zone where your data is stored and used (i.e. where the master and the worker nodes will be created in). If region is set to 'global' (default) then zone is mandatory, otherwise GCP is able to make use of Auto Zone Placement to determine this automatically for you. Note: This setting additionally determines and restricts which computing resources are available for use with other configs such as cluster_config.master_config.machine_type and cluster_config.worker_config.machine_type."
                                 type: string
@@ -412,11 +417,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               overrideProperties:
                                 additionalProperties:
                                   type: string
                                 description: A list of override and additional properties (key/value pairs) used to modify various aspects of the common configuration files used when creating a cluster. For a list of valid properties please see Cluster properties
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         stagingBucket:
@@ -480,6 +487,7 @@ spec:
                       type: string
                     description: The list of labels (key/value pairs) to be applied to instances in the cluster. GCP generates some itself including goog-dataproc-cluster-name which is the name of the cluster.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: The name of the cluster, unique within the project and zone.
                     type: string
@@ -577,6 +585,7 @@ spec:
                                                   items:
                                                     type: string
                                                   type: array
+                                                  x-kubernetes-list-type: set
                                               type: object
                                             type: array
                                           roles:
@@ -584,6 +593,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -600,11 +610,13 @@ spec:
                                         type: string
                                       description: The components that should be installed in this Dataproc cluster. The key must be a string from the KubernetesComponent enumeration. The value is the version of the software to be installed. At least one entry must be specified.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                     properties:
                                       additionalProperties:
                                         type: string
                                       description: The properties to set on daemon config files. Property keys are specified in prefix:property format, for example spark:spark.kubernetes.container.image.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                             type: object
@@ -644,6 +656,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     metricSource:
                                       description: A source for the collection of Dataproc OSS metrics (see available OSS metrics).
                                       type: string
@@ -681,6 +694,7 @@ spec:
                                   type: string
                                 description: A map of the Compute Engine metadata entries to add to all instances (see Project and instance metadata).
                                 type: object
+                                x-kubernetes-map-type: granular
                               network:
                                 description: The name or self_link of the Google Compute Engine network to the cluster will be part of. Conflicts with subnetwork. If neither is specified, this defaults to the "default" network.
                                 type: string
@@ -708,6 +722,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               serviceAccountScopes:
@@ -715,6 +730,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               shieldedInstanceConfig:
                                 description: Shielded Instance Config for clusters using Compute Engine Shielded VMs.
                                 items:
@@ -738,6 +754,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               zone:
                                 description: "The GCP zone where your data is stored and used (i.e. where the master and the worker nodes will be created in). If region is set to 'global' (default) then zone is mandatory, otherwise GCP is able to make use of Auto Zone Placement to determine this automatically for you. Note: This setting additionally determines and restricts which computing resources are available for use with other configs such as cluster_config.master_config.machine_type and cluster_config.worker_config.machine_type."
                                 type: string
@@ -917,11 +934,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               overrideProperties:
                                 additionalProperties:
                                   type: string
                                 description: A list of override and additional properties (key/value pairs) used to modify various aspects of the common configuration files used when creating a cluster. For a list of valid properties please see Cluster properties
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         stagingBucket:
@@ -985,6 +1004,7 @@ spec:
                       type: string
                     description: The list of labels (key/value pairs) to be applied to instances in the cluster. GCP generates some itself including goog-dataproc-cluster-name which is the name of the cluster.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: The name of the cluster, unique within the project and zone.
                     type: string
@@ -1082,6 +1102,7 @@ spec:
                                                   items:
                                                     type: string
                                                   type: array
+                                                  x-kubernetes-list-type: set
                                               type: object
                                             type: array
                                           roles:
@@ -1089,6 +1110,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -1105,11 +1127,13 @@ spec:
                                         type: string
                                       description: The components that should be installed in this Dataproc cluster. The key must be a string from the KubernetesComponent enumeration. The value is the version of the software to be installed. At least one entry must be specified.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                     properties:
                                       additionalProperties:
                                         type: string
                                       description: The properties to set on daemon config files. Property keys are specified in prefix:property format, for example spark:spark.kubernetes.container.image.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                             type: object
@@ -1270,6 +1294,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     metricSource:
                                       description: A source for the collection of Dataproc OSS metrics (see available OSS metrics).
                                       type: string
@@ -1298,6 +1323,7 @@ spec:
                                   type: string
                                 description: The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         gceClusterConfig:
@@ -1312,6 +1338,7 @@ spec:
                                   type: string
                                 description: A map of the Compute Engine metadata entries to add to all instances (see Project and instance metadata).
                                 type: object
+                                x-kubernetes-map-type: granular
                               network:
                                 description: The name or self_link of the Google Compute Engine network to the cluster will be part of. Conflicts with subnetwork. If neither is specified, this defaults to the "default" network.
                                 type: string
@@ -1339,6 +1366,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               serviceAccount:
@@ -1349,6 +1377,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               shieldedInstanceConfig:
                                 description: Shielded Instance Config for clusters using Compute Engine Shielded VMs.
                                 items:
@@ -1372,6 +1401,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               zone:
                                 description: "The GCP zone where your data is stored and used (i.e. where the master and the worker nodes will be created in). If region is set to 'global' (default) then zone is mandatory, otherwise GCP is able to make use of Auto Zone Placement to determine this automatically for you. Note: This setting additionally determines and restricts which computing resources are available for use with other configs such as cluster_config.master_config.machine_type and cluster_config.worker_config.machine_type."
                                 type: string
@@ -1564,11 +1594,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               overrideProperties:
                                 additionalProperties:
                                   type: string
                                 description: A list of override and additional properties (key/value pairs) used to modify various aspects of the common configuration files used when creating a cluster. For a list of valid properties please see Cluster properties
                                 type: object
+                                x-kubernetes-map-type: granular
                               properties:
                                 additionalProperties:
                                   type: string
@@ -1644,6 +1676,7 @@ spec:
                       type: string
                     description: The list of labels (key/value pairs) to be applied to instances in the cluster. GCP generates some itself including goog-dataproc-cluster-name which is the name of the cluster.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: The name of the cluster, unique within the project and zone.
                     type: string
@@ -1741,6 +1774,7 @@ spec:
                                                   items:
                                                     type: string
                                                   type: array
+                                                  x-kubernetes-list-type: set
                                               type: object
                                             type: array
                                           roles:
@@ -1748,6 +1782,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -1764,11 +1799,13 @@ spec:
                                         type: string
                                       description: The components that should be installed in this Dataproc cluster. The key must be a string from the KubernetesComponent enumeration. The value is the version of the software to be installed. At least one entry must be specified.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                     properties:
                                       additionalProperties:
                                         type: string
                                       description: The properties to set on daemon config files. Property keys are specified in prefix:property format, for example spark:spark.kubernetes.container.image.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                             type: object

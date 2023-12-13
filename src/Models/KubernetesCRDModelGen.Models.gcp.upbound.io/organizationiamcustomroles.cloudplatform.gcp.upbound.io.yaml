@@ -66,6 +66,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   roleId:
                     description: The role id to use for this role.
                     type: string
@@ -90,6 +91,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   roleId:
                     description: The role id to use for this role.
                     type: string
@@ -247,6 +249,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   roleId:
                     description: The role id to use for this role.
                     type: string

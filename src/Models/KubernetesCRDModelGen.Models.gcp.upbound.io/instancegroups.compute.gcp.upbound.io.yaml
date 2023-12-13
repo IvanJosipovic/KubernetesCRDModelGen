@@ -63,6 +63,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   namedPort:
                     description: The named port configuration. See the section below for details on configuration. Structure is documented below.
                     items:
@@ -153,6 +154,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   namedPort:
                     description: The named port configuration. See the section below for details on configuration. Structure is documented below.
                     items:
@@ -298,6 +300,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   namedPort:
                     description: The named port configuration. See the section below for details on configuration. Structure is documented below.
                     items:

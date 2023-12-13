@@ -200,11 +200,13 @@ spec:
                                   type: string
                                 description: A set of key-value pairs.
                                 type: object
+                                x-kubernetes-map-type: granular
                               storageLocations:
                                 description: Cloud Storage bucket location to store the auto snapshot (regional or multi-regional)
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -357,11 +359,13 @@ spec:
                                   type: string
                                 description: A set of key-value pairs.
                                 type: object
+                                x-kubernetes-map-type: granular
                               storageLocations:
                                 description: Cloud Storage bucket location to store the auto snapshot (regional or multi-regional)
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -636,11 +640,13 @@ spec:
                                   type: string
                                 description: A set of key-value pairs.
                                 type: object
+                                x-kubernetes-map-type: granular
                               storageLocations:
                                 description: Cloud Storage bucket location to store the auto snapshot (regional or multi-regional)
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object

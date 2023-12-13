@@ -121,6 +121,7 @@ spec:
                       type: string
                     description: Optional labels in key:value format. For more information about labels, see Requirements for labels.
                     type: object
+                    x-kubernetes-map-type: granular
                   linkedInterconnectAttachments:
                     description: A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
                     items:
@@ -246,6 +247,7 @@ spec:
                       type: string
                     description: Optional labels in key:value format. For more information about labels, see Requirements for labels.
                     type: object
+                    x-kubernetes-map-type: granular
                   linkedInterconnectAttachments:
                     description: A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
                     items:
@@ -442,6 +444,7 @@ spec:
                       type: string
                     description: Optional labels in key:value format. For more information about labels, see Requirements for labels.
                     type: object
+                    x-kubernetes-map-type: granular
                   linkedInterconnectAttachments:
                     description: A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
                     items:

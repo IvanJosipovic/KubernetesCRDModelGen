@@ -124,6 +124,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to the project.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: The display name of the project.
                     type: string
@@ -150,6 +151,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to the project.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: The display name of the project.
                     type: string
@@ -302,6 +304,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to the project.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: The display name of the project.
                     type: string

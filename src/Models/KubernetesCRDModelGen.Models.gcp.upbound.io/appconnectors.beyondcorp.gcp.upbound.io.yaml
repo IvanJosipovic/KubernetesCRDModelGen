@@ -63,6 +63,7 @@ spec:
                       type: string
                     description: Resource labels to represent user provided metadata.
                     type: object
+                    x-kubernetes-map-type: granular
                   principalInfo:
                     description: Principal information about the Identity of the AppConnector. Structure is documented below.
                     items:
@@ -153,6 +154,7 @@ spec:
                       type: string
                     description: Resource labels to represent user provided metadata.
                     type: object
+                    x-kubernetes-map-type: granular
                   principalInfo:
                     description: Principal information about the Identity of the AppConnector. Structure is documented below.
                     items:
@@ -300,6 +302,7 @@ spec:
                       type: string
                     description: Resource labels to represent user provided metadata.
                     type: object
+                    x-kubernetes-map-type: granular
                   principalInfo:
                     description: Principal information about the Identity of the AppConnector. Structure is documented below.
                     items:

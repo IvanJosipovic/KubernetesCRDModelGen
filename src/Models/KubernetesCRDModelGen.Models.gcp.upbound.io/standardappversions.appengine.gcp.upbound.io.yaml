@@ -159,6 +159,7 @@ spec:
                       type: string
                     description: Environment variables available to the application.
                     type: object
+                    x-kubernetes-map-type: granular
                   handlers:
                     description: An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted. Structure is documented below.
                     items:
@@ -199,6 +200,7 @@ spec:
                                   type: string
                                 description: HTTP headers to use for all responses from these URLs. An object containing a list of "key:value" value pairs.".
                                 type: object
+                                x-kubernetes-map-type: granular
                               mimeType:
                                 description: MIME type used to serve all files served by this handler. Defaults to file-specific MIME types, which are derived from each file's filename extension.
                                 type: string
@@ -223,6 +225,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   instanceClass:
                     description: 'Instance class that is used to run this version. Valid values are AutomaticScaling: F1, F2, F4, F4_1G BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8 Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.'
                     type: string
@@ -445,6 +448,7 @@ spec:
                       type: string
                     description: Environment variables available to the application.
                     type: object
+                    x-kubernetes-map-type: granular
                   handlers:
                     description: An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted. Structure is documented below.
                     items:
@@ -485,6 +489,7 @@ spec:
                                   type: string
                                 description: HTTP headers to use for all responses from these URLs. An object containing a list of "key:value" value pairs.".
                                 type: object
+                                x-kubernetes-map-type: granular
                               mimeType:
                                 description: MIME type used to serve all files served by this handler. Defaults to file-specific MIME types, which are derived from each file's filename extension.
                                 type: string
@@ -509,6 +514,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   instanceClass:
                     description: 'Instance class that is used to run this version. Valid values are AutomaticScaling: F1, F2, F4, F4_1G BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8 Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.'
                     type: string
@@ -790,6 +796,7 @@ spec:
                       type: string
                     description: Environment variables available to the application.
                     type: object
+                    x-kubernetes-map-type: granular
                   handlers:
                     description: An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted. Structure is documented below.
                     items:
@@ -830,6 +837,7 @@ spec:
                                   type: string
                                 description: HTTP headers to use for all responses from these URLs. An object containing a list of "key:value" value pairs.".
                                 type: object
+                                x-kubernetes-map-type: granular
                               mimeType:
                                 description: MIME type used to serve all files served by this handler. Defaults to file-specific MIME types, which are derived from each file's filename extension.
                                 type: string
@@ -857,6 +865,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   instanceClass:
                     description: 'Instance class that is used to run this version. Valid values are AutomaticScaling: F1, F2, F4, F4_1G BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8 Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.'
                     type: string

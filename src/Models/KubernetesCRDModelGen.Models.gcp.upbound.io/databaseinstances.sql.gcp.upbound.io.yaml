@@ -486,6 +486,7 @@ spec:
                             type: string
                           description: A set of key/value user label pairs to assign to the instance.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                 type: object
@@ -831,6 +832,7 @@ spec:
                             type: string
                           description: A set of key/value user label pairs to assign to the instance.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                 type: object
@@ -1360,6 +1362,7 @@ spec:
                             type: string
                           description: A set of key/value user label pairs to assign to the instance.
                           type: object
+                          x-kubernetes-map-type: granular
                         version:
                           description: Used to make sure changes to the settings block are atomic.
                           type: number

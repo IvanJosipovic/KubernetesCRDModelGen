@@ -273,6 +273,7 @@ spec:
                           additionalProperties:
                             type: string
                           type: object
+                          x-kubernetes-map-type: granular
                         linuxNodeConfig:
                           description: Parameters used in creating the node pool. See google_container_cluster for schema.
                           items:
@@ -281,6 +282,7 @@ spec:
                                 additionalProperties:
                                   type: string
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         localNvmeSsdBlockConfig:
@@ -300,6 +302,7 @@ spec:
                           additionalProperties:
                             type: string
                           type: object
+                          x-kubernetes-map-type: granular
                         minCpuPlatform:
                           type: string
                         nodeGroup:
@@ -308,6 +311,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         preemptible:
                           type: boolean
                         reservationAffinity:
@@ -321,12 +325,14 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         resourceLabels:
                           additionalProperties:
                             type: string
                           type: object
+                          x-kubernetes-map-type: granular
                         serviceAccount:
                           type: string
                         serviceAccountRef:
@@ -445,6 +451,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   placementPolicy:
                     description: Specifies a custom placement policy for the nodes.
                     items:
@@ -663,6 +670,7 @@ spec:
                           additionalProperties:
                             type: string
                           type: object
+                          x-kubernetes-map-type: granular
                         linuxNodeConfig:
                           description: Parameters used in creating the node pool. See google_container_cluster for schema.
                           items:
@@ -671,6 +679,7 @@ spec:
                                 additionalProperties:
                                   type: string
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         localNvmeSsdBlockConfig:
@@ -690,6 +699,7 @@ spec:
                           additionalProperties:
                             type: string
                           type: object
+                          x-kubernetes-map-type: granular
                         minCpuPlatform:
                           type: string
                         nodeGroup:
@@ -698,6 +708,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         preemptible:
                           type: boolean
                         reservationAffinity:
@@ -711,12 +722,14 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         resourceLabels:
                           additionalProperties:
                             type: string
                           type: object
+                          x-kubernetes-map-type: granular
                         shieldedInstanceConfig:
                           items:
                             properties:
@@ -778,6 +791,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   placementPolicy:
                     description: Specifies a custom placement policy for the nodes.
                     items:
@@ -1130,6 +1144,7 @@ spec:
                           additionalProperties:
                             type: string
                           type: object
+                          x-kubernetes-map-type: granular
                         linuxNodeConfig:
                           description: Parameters used in creating the node pool. See google_container_cluster for schema.
                           items:
@@ -1138,6 +1153,7 @@ spec:
                                 additionalProperties:
                                   type: string
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         localNvmeSsdBlockConfig:
@@ -1157,6 +1173,7 @@ spec:
                           additionalProperties:
                             type: string
                           type: object
+                          x-kubernetes-map-type: granular
                         minCpuPlatform:
                           type: string
                         nodeGroup:
@@ -1165,6 +1182,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         preemptible:
                           type: boolean
                         reservationAffinity:
@@ -1178,12 +1196,14 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         resourceLabels:
                           additionalProperties:
                             type: string
                           type: object
+                          x-kubernetes-map-type: granular
                         serviceAccount:
                           type: string
                         shieldedInstanceConfig:
@@ -1247,6 +1267,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   operation:
                     type: string
                   placementPolicy:

@@ -113,6 +113,7 @@ spec:
                       type: string
                     description: 'Labels to apply to this instance. These can be later modified by the setLabels method. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: A reference to the zone where the machine resides.
                     type: string
@@ -124,6 +125,7 @@ spec:
                       type: string
                     description: 'Custom metadata to apply to this instance. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
                     type: object
+                    x-kubernetes-map-type: granular
                   network:
                     description: 'The name of the VPC that this instance is in. Format: projects/{project_id}/global/networks/{network_id}'
                     type: string
@@ -272,6 +274,7 @@ spec:
                       type: string
                     description: 'Labels to apply to this instance. These can be later modified by the setLabels method. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
                     type: object
+                    x-kubernetes-map-type: granular
                   machineType:
                     description: A reference to a machine type which defines VM kind.
                     type: string
@@ -280,6 +283,7 @@ spec:
                       type: string
                     description: 'Custom metadata to apply to this instance. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
                     type: object
+                    x-kubernetes-map-type: granular
                   network:
                     description: 'The name of the VPC that this instance is in. Format: projects/{project_id}/global/networks/{network_id}'
                     type: string
@@ -550,6 +554,7 @@ spec:
                       type: string
                     description: 'Labels to apply to this instance. These can be later modified by the setLabels method. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: A reference to the zone where the machine resides.
                     type: string
@@ -561,6 +566,7 @@ spec:
                       type: string
                     description: 'Custom metadata to apply to this instance. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
                     type: object
+                    x-kubernetes-map-type: granular
                   network:
                     description: 'The name of the VPC that this instance is in. Format: projects/{project_id}/global/networks/{network_id}'
                     type: string

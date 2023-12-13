@@ -166,6 +166,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to this Subscription.
                     type: object
+                    x-kubernetes-map-type: granular
                   messageRetentionDuration:
                     description: "How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If retain_acked_messages is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days (\"604800s\") or less than 10 minutes (\"600s\"). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"600.5s\"."
                     type: string
@@ -181,6 +182,7 @@ spec:
                             type: string
                           description: 'Endpoint configuration attributes. Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. The currently supported attribute is x-goog-version, which you can use to change the format of the pushed message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. If not present during the subscriptions.create call, it will default to the version of the API used to make such call. If not present during a subscriptions.modifyPushConfig call, its value will not be changed. subscriptions.get calls will always return a valid version, even if the subscription was created without this attribute. The possible values for this attribute are:'
                           type: object
+                          x-kubernetes-map-type: granular
                         noWrapper:
                           description: When set, the payload to the push endpoint is not wrapped.Sets the data field as the HTTP body for delivery. Structure is documented below.
                           items:
@@ -337,6 +339,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to this Subscription.
                     type: object
+                    x-kubernetes-map-type: granular
                   messageRetentionDuration:
                     description: "How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If retain_acked_messages is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days (\"604800s\") or less than 10 minutes (\"600s\"). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"600.5s\"."
                     type: string
@@ -352,6 +355,7 @@ spec:
                             type: string
                           description: 'Endpoint configuration attributes. Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. The currently supported attribute is x-goog-version, which you can use to change the format of the pushed message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. If not present during the subscriptions.create call, it will default to the version of the API used to make such call. If not present during a subscriptions.modifyPushConfig call, its value will not be changed. subscriptions.get calls will always return a valid version, even if the subscription was created without this attribute. The possible values for this attribute are:'
                           type: object
+                          x-kubernetes-map-type: granular
                         noWrapper:
                           description: When set, the payload to the push endpoint is not wrapped.Sets the data field as the HTTP body for delivery. Structure is documented below.
                           items:
@@ -571,6 +575,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to this Subscription.
                     type: object
+                    x-kubernetes-map-type: granular
                   messageRetentionDuration:
                     description: "How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If retain_acked_messages is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days (\"604800s\") or less than 10 minutes (\"600s\"). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"600.5s\"."
                     type: string
@@ -586,6 +591,7 @@ spec:
                             type: string
                           description: 'Endpoint configuration attributes. Every endpoint has a set of API supported attributes that can be used to control different aspects of the message delivery. The currently supported attribute is x-goog-version, which you can use to change the format of the pushed message. This attribute indicates the version of the data expected by the endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the Pub/Sub API. If not present during the subscriptions.create call, it will default to the version of the API used to make such call. If not present during a subscriptions.modifyPushConfig call, its value will not be changed. subscriptions.get calls will always return a valid version, even if the subscription was created without this attribute. The possible values for this attribute are:'
                           type: object
+                          x-kubernetes-map-type: granular
                         noWrapper:
                           description: When set, the payload to the push endpoint is not wrapped.Sets the data field as the HTTP body for delivery. Structure is documented below.
                           items:

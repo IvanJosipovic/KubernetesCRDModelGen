@@ -84,6 +84,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   relatedUrl:
                     description: URLs associated with this note and related metadata. Structure is documented below.
                     items:
@@ -132,6 +133,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   relatedUrl:
                     description: URLs associated with this note and related metadata. Structure is documented below.
                     items:
@@ -307,6 +309,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   relatedUrl:
                     description: URLs associated with this note and related metadata. Structure is documented below.
                     items:
