@@ -236,6 +236,7 @@ spec:
                                   type: string
                                 description: A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's Secret.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         source:
@@ -269,6 +270,7 @@ spec:
                                         type: string
                                       description: Substitutions data for Build resource.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                     tagName:
                                       description: Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided. This field is a regular expression.
                                       type: string
@@ -363,6 +365,7 @@ spec:
                             type: string
                           description: Substitutions data for Build resource.
                           type: object
+                          x-kubernetes-map-type: granular
                         tags:
                           description: Tags for annotation of a Build. These are not docker tags.
                           items:
@@ -666,6 +669,7 @@ spec:
                       type: string
                     description: Substitutions data for Build resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   tags:
                     description: Tags for annotation of a BuildTrigger
                     items:
@@ -947,6 +951,7 @@ spec:
                                   type: string
                                 description: A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's Secret.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         source:
@@ -980,6 +985,7 @@ spec:
                                         type: string
                                       description: Substitutions data for Build resource.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                     tagName:
                                       description: Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided. This field is a regular expression.
                                       type: string
@@ -1074,6 +1080,7 @@ spec:
                             type: string
                           description: Substitutions data for Build resource.
                           type: object
+                          x-kubernetes-map-type: granular
                         tags:
                           description: Tags for annotation of a Build. These are not docker tags.
                           items:
@@ -1261,6 +1268,7 @@ spec:
                       type: string
                     description: Substitutions data for Build resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   tags:
                     description: Tags for annotation of a BuildTrigger
                     items:
@@ -1610,6 +1618,7 @@ spec:
                                   type: string
                                 description: A list of environment variables which are encrypted using a Cloud Key Management Service crypto key. These values must be specified in the build's Secret.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         source:
@@ -1643,6 +1652,7 @@ spec:
                                         type: string
                                       description: Substitutions data for Build resource.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                     tagName:
                                       description: Name of the tag to build. Exactly one of a branch name, tag, or commit SHA must be provided. This field is a regular expression.
                                       type: string
@@ -1737,6 +1747,7 @@ spec:
                             type: string
                           description: Substitutions data for Build resource.
                           type: object
+                          x-kubernetes-map-type: granular
                         tags:
                           description: Tags for annotation of a Build. These are not docker tags.
                           items:
@@ -1942,6 +1953,7 @@ spec:
                       type: string
                     description: Substitutions data for Build resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   tags:
                     description: Tags for annotation of a BuildTrigger
                     items:

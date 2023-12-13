@@ -172,6 +172,7 @@ spec:
                                               type: string
                                             description: The labels to associate with this runtime. Label keys must contain 1 to 63 characters, and must conform to [RFC 1035] (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035. No more than 32 labels can be associated with a cluster.
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     interface:
@@ -205,6 +206,7 @@ spec:
                                   type: string
                                 description: The labels to associate with this runtime. Label keys must contain 1 to 63 characters, and must conform to [RFC 1035] (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035. No more than 32 labels can be associated with a cluster.
                                 type: object
+                                x-kubernetes-map-type: granular
                               machineType:
                                 description: The Compute Engine machine type used for runtimes.
                                 type: string
@@ -213,6 +215,7 @@ spec:
                                   type: string
                                 description: The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com /compute/docs/storing-retrieving-metadata#project_and_instance _metadata)).
                                 type: object
+                                x-kubernetes-map-type: granular
                               network:
                                 description: 'The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither network nor subnet is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples:'
                                 type: string
@@ -369,6 +372,7 @@ spec:
                                               type: string
                                             description: The labels to associate with this runtime. Label keys must contain 1 to 63 characters, and must conform to [RFC 1035] (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035. No more than 32 labels can be associated with a cluster.
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     interface:
@@ -402,6 +406,7 @@ spec:
                                   type: string
                                 description: The labels to associate with this runtime. Label keys must contain 1 to 63 characters, and must conform to [RFC 1035] (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035. No more than 32 labels can be associated with a cluster.
                                 type: object
+                                x-kubernetes-map-type: granular
                               machineType:
                                 description: The Compute Engine machine type used for runtimes.
                                 type: string
@@ -410,6 +415,7 @@ spec:
                                   type: string
                                 description: The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com /compute/docs/storing-retrieving-metadata#project_and_instance _metadata)).
                                 type: object
+                                x-kubernetes-map-type: granular
                               network:
                                 description: 'The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither network nor subnet is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples:'
                                 type: string
@@ -598,6 +604,7 @@ spec:
                             type: string
                           description: (Output) Contains runtime daemon metrics, such as OS and kernels and sessions stats.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   project:
@@ -731,6 +738,7 @@ spec:
                                               type: string
                                             description: The labels to associate with this runtime. Label keys must contain 1 to 63 characters, and must conform to [RFC 1035] (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035. No more than 32 labels can be associated with a cluster.
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     interface:
@@ -769,6 +777,7 @@ spec:
                                   type: string
                                 description: (Output) The Compute Engine guest attributes. (see [Project and instance guest attributes](https://cloud.google.com/compute/docs/ storing-retrieving-metadata#guest_attributes)).
                                 type: object
+                                x-kubernetes-map-type: granular
                               internalIpOnly:
                                 description: If true, runtime will only have internal IP addresses. By default, runtimes are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each vm. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all dependencies must be configured to be accessible without external IP addresses.
                                 type: boolean
@@ -777,6 +786,7 @@ spec:
                                   type: string
                                 description: The labels to associate with this runtime. Label keys must contain 1 to 63 characters, and must conform to [RFC 1035] (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035. No more than 32 labels can be associated with a cluster.
                                 type: object
+                                x-kubernetes-map-type: granular
                               machineType:
                                 description: The Compute Engine machine type used for runtimes.
                                 type: string
@@ -785,6 +795,7 @@ spec:
                                   type: string
                                 description: The Compute Engine metadata entries to add to virtual machine. (see [Project and instance metadata](https://cloud.google.com /compute/docs/storing-retrieving-metadata#project_and_instance _metadata)).
                                 type: object
+                                x-kubernetes-map-type: granular
                               network:
                                 description: 'The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork. If neither network nor subnet is specified, the "default" network of the project is used, if it exists. A full URL or partial URI. Examples:'
                                 type: string

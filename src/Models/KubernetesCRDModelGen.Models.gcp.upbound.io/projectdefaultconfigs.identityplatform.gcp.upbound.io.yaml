@@ -98,6 +98,7 @@ spec:
                                   type: string
                                 description: A map of <test phone number, fake code> that can be used for phone auth testing.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                       type: object
@@ -149,6 +150,7 @@ spec:
                                   type: string
                                 description: A map of <test phone number, fake code> that can be used for phone auth testing.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                       type: object
@@ -342,6 +344,7 @@ spec:
                                   type: string
                                 description: A map of <test phone number, fake code> that can be used for phone auth testing.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                       type: object

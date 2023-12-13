@@ -67,11 +67,13 @@ spec:
                             type: string
                           description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
                           type: object
+                          x-kubernetes-map-type: granular
                         labels:
                           additionalProperties:
                             type: string
                           description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels'
                           type: object
+                          x-kubernetes-map-type: granular
                         namespace:
                           description: In Cloud Run the namespace must be equal to either the project ID or project number.
                           type: string
@@ -224,11 +226,13 @@ spec:
                             type: string
                           description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
                           type: object
+                          x-kubernetes-map-type: granular
                         labels:
                           additionalProperties:
                             type: string
                           description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   name:
@@ -392,6 +396,7 @@ spec:
                             type: string
                           description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field.'
                           type: object
+                          x-kubernetes-map-type: granular
                         generation:
                           description: (Output) A sequence number representing a specific generation of the desired state.
                           type: number
@@ -400,6 +405,7 @@ spec:
                             type: string
                           description: 'Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels'
                           type: object
+                          x-kubernetes-map-type: granular
                         namespace:
                           description: In Cloud Run the namespace must be equal to either the project ID or project number.
                           type: string

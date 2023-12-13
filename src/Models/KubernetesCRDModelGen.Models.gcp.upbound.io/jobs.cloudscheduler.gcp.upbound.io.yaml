@@ -82,6 +82,7 @@ spec:
                             type: string
                           description: HTTP request headers. This map contains the header field names and values. Headers can be set when the job is created.
                           type: object
+                          x-kubernetes-map-type: granular
                         httpMethod:
                           description: Which HTTP method to use for the request.
                           type: string
@@ -108,6 +109,7 @@ spec:
                             type: string
                           description: This map contains the header field names and values. Repeated headers are not supported, but a header value can contain commas.
                           type: object
+                          x-kubernetes-map-type: granular
                         httpMethod:
                           description: Which HTTP method to use for the request.
                           type: string
@@ -155,6 +157,7 @@ spec:
                             type: string
                           description: Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
                           type: object
+                          x-kubernetes-map-type: granular
                         data:
                           description: The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute. A base64-encoded string.
                           type: string
@@ -281,6 +284,7 @@ spec:
                             type: string
                           description: HTTP request headers. This map contains the header field names and values. Headers can be set when the job is created.
                           type: object
+                          x-kubernetes-map-type: granular
                         httpMethod:
                           description: Which HTTP method to use for the request.
                           type: string
@@ -307,6 +311,7 @@ spec:
                             type: string
                           description: This map contains the header field names and values. Repeated headers are not supported, but a header value can contain commas.
                           type: object
+                          x-kubernetes-map-type: granular
                         httpMethod:
                           description: Which HTTP method to use for the request.
                           type: string
@@ -354,6 +359,7 @@ spec:
                             type: string
                           description: Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
                           type: object
+                          x-kubernetes-map-type: granular
                         data:
                           description: The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute. A base64-encoded string.
                           type: string
@@ -532,6 +538,7 @@ spec:
                             type: string
                           description: HTTP request headers. This map contains the header field names and values. Headers can be set when the job is created.
                           type: object
+                          x-kubernetes-map-type: granular
                         httpMethod:
                           description: Which HTTP method to use for the request.
                           type: string
@@ -558,6 +565,7 @@ spec:
                             type: string
                           description: This map contains the header field names and values. Repeated headers are not supported, but a header value can contain commas.
                           type: object
+                          x-kubernetes-map-type: granular
                         httpMethod:
                           description: Which HTTP method to use for the request.
                           type: string
@@ -608,6 +616,7 @@ spec:
                             type: string
                           description: Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
                           type: object
+                          x-kubernetes-map-type: granular
                         data:
                           description: The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute. A base64-encoded string.
                           type: string

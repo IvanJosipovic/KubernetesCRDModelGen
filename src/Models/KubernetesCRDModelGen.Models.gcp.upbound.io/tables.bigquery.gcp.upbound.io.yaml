@@ -265,6 +265,7 @@ spec:
                       type: string
                     description: A mapping of labels to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   materializedView:
                     description: If specified, configures this table as a materialized view. Structure is documented below.
                     items:
@@ -496,6 +497,7 @@ spec:
                       type: string
                     description: A mapping of labels to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   materializedView:
                     description: If specified, configures this table as a materialized view. Structure is documented below.
                     items:
@@ -854,6 +856,7 @@ spec:
                       type: string
                     description: A mapping of labels to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   lastModifiedTime:
                     description: The time when this table was last modified, in milliseconds since the epoch.
                     type: number

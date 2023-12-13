@@ -456,6 +456,7 @@ spec:
                       type: string
                     description: Labels with user-defined metadata to apply to this resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   lifetime:
                     description: "The desired lifetime of the CA certificate. Used to create the \"notBeforeTime\" and \"notAfterTime\" fields inside an X.509 certificate. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"3.5s\"."
                     type: string
@@ -800,6 +801,7 @@ spec:
                       type: string
                     description: Labels with user-defined metadata to apply to this resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   lifetime:
                     description: "The desired lifetime of the CA certificate. Used to create the \"notBeforeTime\" and \"notAfterTime\" fields inside an X.509 certificate. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"3.5s\"."
                     type: string
@@ -1635,6 +1637,7 @@ spec:
                       type: string
                     description: Labels with user-defined metadata to apply to this resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   lifetime:
                     description: "The desired lifetime of the CA certificate. Used to create the \"notBeforeTime\" and \"notAfterTime\" fields inside an X.509 certificate. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: \"3.5s\"."
                     type: string

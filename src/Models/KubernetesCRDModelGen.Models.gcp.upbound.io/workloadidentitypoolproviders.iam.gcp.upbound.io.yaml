@@ -63,6 +63,7 @@ spec:
                       type: string
                     description: 'Maps attributes from authentication credentials issued by an external identity provider to Google Cloud attributes, such as subject and segment. Each key must be a string specifying the Google Cloud IAM attribute to map to. The following keys are supported:'
                     type: object
+                    x-kubernetes-map-type: granular
                   aws:
                     description: An Amazon Web Services identity provider. Not compatible with the property oidc. Structure is documented below.
                     items:
@@ -171,6 +172,7 @@ spec:
                       type: string
                     description: 'Maps attributes from authentication credentials issued by an external identity provider to Google Cloud attributes, such as subject and segment. Each key must be a string specifying the Google Cloud IAM attribute to map to. The following keys are supported:'
                     type: object
+                    x-kubernetes-map-type: granular
                   aws:
                     description: An Amazon Web Services identity provider. Not compatible with the property oidc. Structure is documented below.
                     items:
@@ -336,6 +338,7 @@ spec:
                       type: string
                     description: 'Maps attributes from authentication credentials issued by an external identity provider to Google Cloud attributes, such as subject and segment. Each key must be a string specifying the Google Cloud IAM attribute to map to. The following keys are supported:'
                     type: object
+                    x-kubernetes-map-type: granular
                   aws:
                     description: An Amazon Web Services identity provider. Not compatible with the property oidc. Structure is documented below.
                     items:

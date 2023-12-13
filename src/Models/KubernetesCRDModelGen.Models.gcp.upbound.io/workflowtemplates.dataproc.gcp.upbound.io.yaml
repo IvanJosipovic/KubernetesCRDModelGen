@@ -95,6 +95,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainClass:
@@ -108,6 +109,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         hiveJob:
@@ -127,6 +129,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -146,6 +149,7 @@ spec:
                                   type: string
                                 description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         labels:
@@ -153,6 +157,7 @@ spec:
                             type: string
                           description: 'The labels to associate with this job. Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: {0,63} No more than 32 labels can be associated with a given job.'
                           type: object
+                          x-kubernetes-map-type: granular
                         pigJob:
                           description: Job is a Pig job.
                           items:
@@ -174,6 +179,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               properties:
@@ -181,6 +187,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -200,6 +207,7 @@ spec:
                                   type: string
                                 description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         prerequisiteStepIds:
@@ -228,6 +236,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               outputFormat:
@@ -238,6 +247,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -287,6 +297,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainPythonFileUri:
@@ -297,6 +308,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               pythonFileUris:
                                 description: 'HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.'
                                 items:
@@ -349,6 +361,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainClass:
@@ -362,6 +375,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         sparkRJob:
@@ -392,6 +406,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainRFileUri:
@@ -402,6 +417,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         sparkSqlJob:
@@ -422,6 +438,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               properties:
@@ -429,6 +446,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -448,6 +466,7 @@ spec:
                                   type: string
                                 description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         stepId:
@@ -460,6 +479,7 @@ spec:
                       type: string
                     description: 'The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.'
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: The location for the resource
                     type: string
@@ -521,6 +541,7 @@ spec:
                                   type: string
                                 description: Required. The cluster labels. Cluster must have all labels to match.
                                 type: object
+                                x-kubernetes-map-type: granular
                               zone:
                                 description: 'The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * https://www.googleapis.com/compute/v1/projects/ * us-central1-f'
                                 type: string
@@ -576,6 +597,7 @@ spec:
                                               type: string
                                             description: The Compute Engine metadata entries to add to all instances (see (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
                                             type: object
+                                            x-kubernetes-map-type: granular
                                           network:
                                             description: The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see /regions/global/default*default`
                                             type: string
@@ -639,6 +661,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           zone:
                                             description: 'The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * https://www.googleapis.com/compute/v1/projects/ * us-central1-f'
                                             type: string
@@ -841,6 +864,7 @@ spec:
                                               type: string
                                             description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     stagingBucket:
@@ -904,6 +928,7 @@ spec:
                                   type: string
                                 description: 'The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                       type: object
@@ -960,6 +985,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainClass:
@@ -973,6 +999,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         hiveJob:
@@ -992,6 +1019,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -1011,6 +1039,7 @@ spec:
                                   type: string
                                 description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         labels:
@@ -1018,6 +1047,7 @@ spec:
                             type: string
                           description: 'The labels to associate with this job. Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: {0,63} No more than 32 labels can be associated with a given job.'
                           type: object
+                          x-kubernetes-map-type: granular
                         pigJob:
                           description: Job is a Pig job.
                           items:
@@ -1039,6 +1069,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               properties:
@@ -1046,6 +1077,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -1065,6 +1097,7 @@ spec:
                                   type: string
                                 description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         prerequisiteStepIds:
@@ -1093,6 +1126,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               outputFormat:
@@ -1103,6 +1137,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -1152,6 +1187,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainPythonFileUri:
@@ -1162,6 +1198,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               pythonFileUris:
                                 description: 'HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.'
                                 items:
@@ -1214,6 +1251,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainClass:
@@ -1227,6 +1265,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         sparkRJob:
@@ -1257,6 +1296,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainRFileUri:
@@ -1267,6 +1307,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         sparkSqlJob:
@@ -1287,6 +1328,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               properties:
@@ -1294,6 +1336,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -1313,6 +1356,7 @@ spec:
                                   type: string
                                 description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         stepId:
@@ -1325,6 +1369,7 @@ spec:
                       type: string
                     description: 'The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.'
                     type: object
+                    x-kubernetes-map-type: granular
                   parameters:
                     description: Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
                     items:
@@ -1383,6 +1428,7 @@ spec:
                                   type: string
                                 description: Required. The cluster labels. Cluster must have all labels to match.
                                 type: object
+                                x-kubernetes-map-type: granular
                               zone:
                                 description: 'The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * https://www.googleapis.com/compute/v1/projects/ * us-central1-f'
                                 type: string
@@ -1438,6 +1484,7 @@ spec:
                                               type: string
                                             description: The Compute Engine metadata entries to add to all instances (see (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
                                             type: object
+                                            x-kubernetes-map-type: granular
                                           network:
                                             description: The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see /regions/global/default*default`
                                             type: string
@@ -1501,6 +1548,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           zone:
                                             description: 'The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * https://www.googleapis.com/compute/v1/projects/ * us-central1-f'
                                             type: string
@@ -1703,6 +1751,7 @@ spec:
                                               type: string
                                             description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     stagingBucket:
@@ -1766,6 +1815,7 @@ spec:
                                   type: string
                                 description: 'The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                       type: object
@@ -1946,6 +1996,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainClass:
@@ -1959,6 +2010,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         hiveJob:
@@ -1978,6 +2030,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -1997,6 +2050,7 @@ spec:
                                   type: string
                                 description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         labels:
@@ -2004,6 +2058,7 @@ spec:
                             type: string
                           description: 'The labels to associate with this job. Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: {0,63} No more than 32 labels can be associated with a given job.'
                           type: object
+                          x-kubernetes-map-type: granular
                         pigJob:
                           description: Job is a Pig job.
                           items:
@@ -2025,6 +2080,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               properties:
@@ -2032,6 +2088,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -2051,6 +2108,7 @@ spec:
                                   type: string
                                 description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         prerequisiteStepIds:
@@ -2079,6 +2137,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               outputFormat:
@@ -2089,6 +2148,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -2138,6 +2198,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainPythonFileUri:
@@ -2148,6 +2209,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               pythonFileUris:
                                 description: 'HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.'
                                 items:
@@ -2200,6 +2262,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainClass:
@@ -2213,6 +2276,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         sparkRJob:
@@ -2243,6 +2307,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               mainRFileUri:
@@ -2253,6 +2318,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         sparkSqlJob:
@@ -2273,6 +2339,7 @@ spec:
                                         type: string
                                       description: "The per-package log levels for the driver. This may include \"root\" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               properties:
@@ -2280,6 +2347,7 @@ spec:
                                   type: string
                                 description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                 type: object
+                                x-kubernetes-map-type: granular
                               queryFileUri:
                                 description: The HCFS URI of the script that contains SQL queries.
                                 type: string
@@ -2299,6 +2367,7 @@ spec:
                                   type: string
                                 description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         stepId:
@@ -2311,6 +2380,7 @@ spec:
                       type: string
                     description: 'The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.'
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: The location for the resource
                     type: string
@@ -2372,6 +2442,7 @@ spec:
                                   type: string
                                 description: Required. The cluster labels. Cluster must have all labels to match.
                                 type: object
+                                x-kubernetes-map-type: granular
                               zone:
                                 description: 'The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * https://www.googleapis.com/compute/v1/projects/ * us-central1-f'
                                 type: string
@@ -2418,6 +2489,7 @@ spec:
                                               type: string
                                             description: Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     gceClusterConfig:
@@ -2432,6 +2504,7 @@ spec:
                                               type: string
                                             description: The Compute Engine metadata entries to add to all instances (see (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
                                             type: object
+                                            x-kubernetes-map-type: granular
                                           network:
                                             description: The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see /regions/global/default*default`
                                             type: string
@@ -2495,6 +2568,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           zone:
                                             description: 'The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * https://www.googleapis.com/compute/v1/projects/ * us-central1-f'
                                             type: string
@@ -2740,6 +2814,7 @@ spec:
                                               type: string
                                             description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     stagingBucket:
@@ -2823,6 +2898,7 @@ spec:
                                   type: string
                                 description: 'The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.'
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                       type: object

@@ -70,11 +70,13 @@ spec:
                             type: string
                           description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                           type: object
+                          x-kubernetes-map-type: granular
                         labels:
                           additionalProperties:
                             type: string
                           description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                           type: object
+                          x-kubernetes-map-type: granular
                         namespace:
                           description: In Cloud Run the namespace must be equal to either the project ID or project number. It will default to the resource's project.
                           type: string
@@ -151,11 +153,13 @@ spec:
                                   type: string
                                 description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                                 type: object
+                                x-kubernetes-map-type: granular
                               labels:
                                 additionalProperties:
                                   type: string
                                 description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                                 type: object
+                                x-kubernetes-map-type: granular
                               name:
                                 description: Volume's name.
                                 type: string
@@ -399,11 +403,13 @@ spec:
                                               type: string
                                             description: "Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go"
                                             type: object
+                                            x-kubernetes-map-type: granular
                                           requests:
                                             additionalProperties:
                                               type: string
                                             description: "Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go"
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     startupProbe:
@@ -623,11 +629,13 @@ spec:
                             type: string
                           description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                           type: object
+                          x-kubernetes-map-type: granular
                         labels:
                           additionalProperties:
                             type: string
                           description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   project:
@@ -646,11 +654,13 @@ spec:
                                   type: string
                                 description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                                 type: object
+                                x-kubernetes-map-type: granular
                               labels:
                                 additionalProperties:
                                   type: string
                                 description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                                 type: object
+                                x-kubernetes-map-type: granular
                               name:
                                 description: Volume's name.
                                 type: string
@@ -836,11 +846,13 @@ spec:
                                               type: string
                                             description: "Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go"
                                             type: object
+                                            x-kubernetes-map-type: granular
                                           requests:
                                             additionalProperties:
                                               type: string
                                             description: "Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go"
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     startupProbe:
@@ -1121,6 +1133,7 @@ spec:
                             type: string
                           description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                           type: object
+                          x-kubernetes-map-type: granular
                         generation:
                           description: (Output) A sequence number representing a specific generation of the desired state.
                           type: number
@@ -1129,6 +1142,7 @@ spec:
                             type: string
                           description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                           type: object
+                          x-kubernetes-map-type: granular
                         namespace:
                           description: In Cloud Run the namespace must be equal to either the project ID or project number. It will default to the resource's project.
                           type: string
@@ -1216,6 +1230,7 @@ spec:
                                   type: string
                                 description: 'Annotations is a key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations Note: The Cloud Run API may add additional annotations that were not provided in your config.ignore_changes rule to the metadata.0.annotations field. Annotations with run.googleapis.com/ and autoscaling.knative.dev are restricted. Use the following annotation keys to configure features on a Revision template:'
                                 type: object
+                                x-kubernetes-map-type: granular
                               generation:
                                 description: (Output) A sequence number representing a specific generation of the desired state.
                                 type: number
@@ -1224,6 +1239,7 @@ spec:
                                   type: string
                                 description: Map of string keys and values that can be used to organize and categorize (scope and select) objects.
                                 type: object
+                                x-kubernetes-map-type: granular
                               name:
                                 description: Volume's name.
                                 type: string
@@ -1421,11 +1437,13 @@ spec:
                                               type: string
                                             description: "Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go"
                                             type: object
+                                            x-kubernetes-map-type: granular
                                           requests:
                                             additionalProperties:
                                               type: string
                                             description: "Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go"
                                             type: object
+                                            x-kubernetes-map-type: granular
                                         type: object
                                       type: array
                                     startupProbe:

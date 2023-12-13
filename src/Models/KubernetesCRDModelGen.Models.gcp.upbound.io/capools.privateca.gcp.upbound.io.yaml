@@ -324,6 +324,7 @@ spec:
                       type: string
                     description: 'Labels with user-defined metadata. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: Location of the CaPool. A full list of valid locations can be found by running gcloud privateca locations list.
                     type: string
@@ -620,6 +621,7 @@ spec:
                       type: string
                     description: 'Labels with user-defined metadata. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
                     type: object
+                    x-kubernetes-map-type: granular
                   project:
                     description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
                     type: string
@@ -1035,6 +1037,7 @@ spec:
                       type: string
                     description: 'Labels with user-defined metadata. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.'
                     type: object
+                    x-kubernetes-map-type: granular
                   location:
                     description: Location of the CaPool. A full list of valid locations can be found by running gcloud privateca locations list.
                     type: string

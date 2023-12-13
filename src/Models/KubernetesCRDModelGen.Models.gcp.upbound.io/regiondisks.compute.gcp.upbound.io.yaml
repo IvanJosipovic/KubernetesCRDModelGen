@@ -162,6 +162,7 @@ spec:
                       type: string
                     description: Labels to apply to this disk.  A list of key->value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   licenses:
                     description: Any applicable license URI.
                     items:
@@ -294,6 +295,7 @@ spec:
                       type: string
                     description: Labels to apply to this disk.  A list of key->value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   licenses:
                     description: Any applicable license URI.
                     items:
@@ -497,6 +499,7 @@ spec:
                       type: string
                     description: Labels to apply to this disk.  A list of key->value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   lastAttachTimestamp:
                     description: Last attach timestamp in RFC3339 text format.
                     type: string

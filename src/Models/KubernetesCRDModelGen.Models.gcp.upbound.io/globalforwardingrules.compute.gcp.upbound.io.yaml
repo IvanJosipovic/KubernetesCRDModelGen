@@ -127,6 +127,7 @@ spec:
                       type: string
                     description: Labels to apply to this forwarding rule.  A list of key->value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   loadBalancingScheme:
                     description: 'Specifies the forwarding rule type. For more information about forwarding rules, refer to Forwarding rule concepts. Default value is EXTERNAL. Possible values are: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_SELF_MANAGED.'
                     type: string
@@ -354,6 +355,7 @@ spec:
                       type: string
                     description: Labels to apply to this forwarding rule.  A list of key->value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   loadBalancingScheme:
                     description: 'Specifies the forwarding rule type. For more information about forwarding rules, refer to Forwarding rule concepts. Default value is EXTERNAL. Possible values are: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_SELF_MANAGED.'
                     type: string
@@ -534,6 +536,7 @@ spec:
                       type: string
                     description: Labels to apply to this forwarding rule.  A list of key->value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   loadBalancingScheme:
                     description: 'Specifies the forwarding rule type. For more information about forwarding rules, refer to Forwarding rule concepts. Default value is EXTERNAL. Possible values are: EXTERNAL, EXTERNAL_MANAGED, INTERNAL_SELF_MANAGED.'
                     type: string

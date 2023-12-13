@@ -97,6 +97,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   defaultEventBasedHold:
@@ -119,6 +120,7 @@ spec:
                       type: string
                     description: A map of key/value label pairs to assign to the bucket.
                     type: object
+                    x-kubernetes-map-type: granular
                   lifecycleRule:
                     description: The bucket's Lifecycle Rules configuration. Multiple blocks of this type are permitted. Structure is documented below.
                     items:
@@ -291,6 +293,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   defaultEventBasedHold:
@@ -313,6 +316,7 @@ spec:
                       type: string
                     description: A map of key/value label pairs to assign to the bucket.
                     type: object
+                    x-kubernetes-map-type: granular
                   lifecycleRule:
                     description: The bucket's Lifecycle Rules configuration. Multiple blocks of this type are permitted. Structure is documented below.
                     items:
@@ -603,6 +607,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   defaultEventBasedHold:
@@ -627,6 +632,7 @@ spec:
                       type: string
                     description: A map of key/value label pairs to assign to the bucket.
                     type: object
+                    x-kubernetes-map-type: granular
                   lifecycleRule:
                     description: The bucket's Lifecycle Rules configuration. Multiple blocks of this type are permitted. Structure is documented below.
                     items:

@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: An optional description of this resource.
                     type: string
@@ -81,6 +82,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: An optional description of this resource.
                     type: string
@@ -220,6 +222,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: An optional description of this resource.
                     type: string
@@ -228,6 +231,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   fingerprint:
                     description: Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
                     type: string

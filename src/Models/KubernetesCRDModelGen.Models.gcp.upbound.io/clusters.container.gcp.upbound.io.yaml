@@ -378,6 +378,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   enableKubernetesAlpha:
@@ -763,6 +764,7 @@ spec:
                             type: string
                           description: The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are reserved by Kubernetes Core components and cannot be specified.
                           type: object
+                          x-kubernetes-map-type: granular
                         linuxNodeConfig:
                           description: Linux node configuration, currently supported attributes can be found here. Note that validations happen all server side. All attributes are optional. Structure is documented below.
                           items:
@@ -772,6 +774,7 @@ spec:
                                   type: string
                                 description: The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. Specified as a map from the key, such as net.core.wmem_max, to a string value.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         localNvmeSsdBlockConfig:
@@ -797,6 +800,7 @@ spec:
                             type: string
                           description: The metadata key/value pairs assigned to instances in the cluster. From GKE 1. To avoid this, set the value in your config.
                           type: object
+                          x-kubernetes-map-type: granular
                         minCpuPlatform:
                           description: Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as Intel Haswell. See the official documentation for more information.
                           type: string
@@ -808,6 +812,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         preemptible:
                           description: A boolean that represents whether or not the underlying node VMs are preemptible. See the official documentation for more information. Defaults to false.
                           type: boolean
@@ -826,6 +831,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         resourceLabels:
@@ -833,6 +839,7 @@ spec:
                             type: string
                           description: The GCP labels (key/value pairs) to be applied to each node. Refer here for how these labels are applied to clusters, node pools and nodes.
                           type: object
+                          x-kubernetes-map-type: granular
                         serviceAccount:
                           description: The service account to be used by the Node VMs. If not specified, the "default" service account is used.
                           type: string
@@ -964,6 +971,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   nodePoolDefaults:
                     description: Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object. Structure is documented below.
                     items:
@@ -1061,6 +1069,7 @@ spec:
                       type: string
                     description: The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceUsageExportConfig:
                     description: Configuration for the ResourceUsageExportConfig feature. Structure is documented below.
                     items:
@@ -1508,6 +1517,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   enableKubernetesAlpha:
@@ -1832,6 +1842,7 @@ spec:
                             type: string
                           description: The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are reserved by Kubernetes Core components and cannot be specified.
                           type: object
+                          x-kubernetes-map-type: granular
                         linuxNodeConfig:
                           description: Linux node configuration, currently supported attributes can be found here. Note that validations happen all server side. All attributes are optional. Structure is documented below.
                           items:
@@ -1841,6 +1852,7 @@ spec:
                                   type: string
                                 description: The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. Specified as a map from the key, such as net.core.wmem_max, to a string value.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         localNvmeSsdBlockConfig:
@@ -1866,6 +1878,7 @@ spec:
                             type: string
                           description: The metadata key/value pairs assigned to instances in the cluster. From GKE 1. To avoid this, set the value in your config.
                           type: object
+                          x-kubernetes-map-type: granular
                         minCpuPlatform:
                           description: Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as Intel Haswell. See the official documentation for more information.
                           type: string
@@ -1877,6 +1890,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         preemptible:
                           description: A boolean that represents whether or not the underlying node VMs are preemptible. See the official documentation for more information. Defaults to false.
                           type: boolean
@@ -1895,6 +1909,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         resourceLabels:
@@ -1902,6 +1917,7 @@ spec:
                             type: string
                           description: The GCP labels (key/value pairs) to be applied to each node. Refer here for how these labels are applied to clusters, node pools and nodes.
                           type: object
+                          x-kubernetes-map-type: granular
                         shieldedInstanceConfig:
                           description: Shielded Instance options. Structure is documented below.
                           items:
@@ -1975,6 +1991,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   nodePoolDefaults:
                     description: Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object. Structure is documented below.
                     items:
@@ -2072,6 +2089,7 @@ spec:
                       type: string
                     description: The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceUsageExportConfig:
                     description: Configuration for the ResourceUsageExportConfig feature. Structure is documented below.
                     items:
@@ -2585,6 +2603,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   enableKubernetesAlpha:
@@ -2936,6 +2955,7 @@ spec:
                             type: string
                           description: The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are reserved by Kubernetes Core components and cannot be specified.
                           type: object
+                          x-kubernetes-map-type: granular
                         linuxNodeConfig:
                           description: Linux node configuration, currently supported attributes can be found here. Note that validations happen all server side. All attributes are optional. Structure is documented below.
                           items:
@@ -2945,6 +2965,7 @@ spec:
                                   type: string
                                 description: The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. Specified as a map from the key, such as net.core.wmem_max, to a string value.
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         localNvmeSsdBlockConfig:
@@ -2970,6 +2991,7 @@ spec:
                             type: string
                           description: The metadata key/value pairs assigned to instances in the cluster. From GKE 1. To avoid this, set the value in your config.
                           type: object
+                          x-kubernetes-map-type: granular
                         minCpuPlatform:
                           description: Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as Intel Haswell. See the official documentation for more information.
                           type: string
@@ -2981,6 +3003,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         preemptible:
                           description: A boolean that represents whether or not the underlying node VMs are preemptible. See the official documentation for more information. Defaults to false.
                           type: boolean
@@ -2999,6 +3022,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         resourceLabels:
@@ -3006,6 +3030,7 @@ spec:
                             type: string
                           description: The GCP labels (key/value pairs) to be applied to each node. Refer here for how these labels are applied to clusters, node pools and nodes.
                           type: object
+                          x-kubernetes-map-type: granular
                         serviceAccount:
                           description: The service account to be used by the Node VMs. If not specified, the "default" service account is used.
                           type: string
@@ -3082,6 +3107,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   nodePool:
                     description: "List of node pools associated with this cluster. See google_container_node_pool for schema. Warning: node pools defined inside a cluster can't be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster. Unless you absolutely need the ability to say \"these are the only node pools associated with this cluster\", use the google_container_node_pool resource instead of this property."
                     items:
@@ -3272,6 +3298,7 @@ spec:
                                   type: string
                                 description: The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are reserved by Kubernetes Core components and cannot be specified.
                                 type: object
+                                x-kubernetes-map-type: granular
                               linuxNodeConfig:
                                 description: Linux node configuration, currently supported attributes can be found here. Note that validations happen all server side. All attributes are optional. Structure is documented below.
                                 items:
@@ -3281,6 +3308,7 @@ spec:
                                         type: string
                                       description: The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. Specified as a map from the key, such as net.core.wmem_max, to a string value.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               localNvmeSsdBlockConfig:
@@ -3306,6 +3334,7 @@ spec:
                                   type: string
                                 description: The metadata key/value pairs assigned to instances in the cluster. From GKE 1. To avoid this, set the value in your config.
                                 type: object
+                                x-kubernetes-map-type: granular
                               minCpuPlatform:
                                 description: Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as Intel Haswell. See the official documentation for more information.
                                 type: string
@@ -3317,6 +3346,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               preemptible:
                                 description: A boolean that represents whether or not the underlying node VMs are preemptible. See the official documentation for more information. Defaults to false.
                                 type: boolean
@@ -3335,6 +3365,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               resourceLabels:
@@ -3342,6 +3373,7 @@ spec:
                                   type: string
                                 description: The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
                                 type: object
+                                x-kubernetes-map-type: granular
                               serviceAccount:
                                 description: The service account to be used by the Node VMs. If not specified, the "default" service account is used.
                                 type: string
@@ -3420,6 +3452,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         placementPolicy:
                           items:
                             properties:
@@ -3582,6 +3615,7 @@ spec:
                       type: string
                     description: The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceUsageExportConfig:
                     description: Configuration for the ResourceUsageExportConfig feature. Structure is documented below.
                     items:

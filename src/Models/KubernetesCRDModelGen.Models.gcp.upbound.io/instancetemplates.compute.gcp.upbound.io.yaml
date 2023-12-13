@@ -124,6 +124,7 @@ spec:
                             type: string
                           description: A set of ket/value label pairs to assign to disk created from this template
                           type: object
+                          x-kubernetes-map-type: granular
                         mode:
                           description: The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If you are attaching or creating a boot disk, this must read-write mode.
                           type: string
@@ -245,6 +246,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to instances created from this template.
                     type: object
+                    x-kubernetes-map-type: granular
                   machineType:
                     description: The machine type to create.
                     type: string
@@ -517,6 +519,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         onHostMaintenance:
@@ -597,6 +600,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   shieldedInstanceConfig:
@@ -619,6 +623,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               initProvider:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
@@ -692,6 +697,7 @@ spec:
                             type: string
                           description: A set of ket/value label pairs to assign to disk created from this template
                           type: object
+                          x-kubernetes-map-type: granular
                         mode:
                           description: The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If you are attaching or creating a boot disk, this must read-write mode.
                           type: string
@@ -755,6 +761,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to instances created from this template.
                     type: object
+                    x-kubernetes-map-type: granular
                   machineType:
                     description: The machine type to create.
                     type: string
@@ -911,6 +918,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         onHostMaintenance:
@@ -933,6 +941,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   shieldedInstanceConfig:
@@ -955,6 +964,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               managementPolicies:
                 default:
@@ -1148,6 +1158,7 @@ spec:
                             type: string
                           description: A set of ket/value label pairs to assign to disk created from this template
                           type: object
+                          x-kubernetes-map-type: granular
                         mode:
                           description: The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If you are attaching or creating a boot disk, this must read-write mode.
                           type: string
@@ -1217,6 +1228,7 @@ spec:
                       type: string
                     description: A set of key/value label pairs to assign to instances created from this template.
                     type: object
+                    x-kubernetes-map-type: granular
                   machineType:
                     description: The machine type to create.
                     type: string
@@ -1400,6 +1412,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         onHostMaintenance:
@@ -1431,6 +1444,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   shieldedInstanceConfig:
@@ -1453,6 +1467,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tagsFingerprint:
                     description: The unique fingerprint of the tags.
                     type: string

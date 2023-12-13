@@ -304,6 +304,7 @@ spec:
                       type: string
                     description: Resource labels to represent user-provided metadata.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: Unique name for the connectivity test.
                     type: string
@@ -583,6 +584,7 @@ spec:
                       type: string
                     description: Resource labels to represent user-provided metadata.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: Unique name for the connectivity test.
                     type: string
@@ -767,6 +769,7 @@ spec:
                       type: string
                     description: Resource labels to represent user-provided metadata.
                     type: object
+                    x-kubernetes-map-type: granular
                   name:
                     description: Unique name for the connectivity test.
                     type: string

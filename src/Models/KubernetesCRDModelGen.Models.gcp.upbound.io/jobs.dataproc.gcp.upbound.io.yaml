@@ -89,6 +89,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         mainClass:
@@ -102,6 +103,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code..
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   hiveConfig:
@@ -120,6 +122,7 @@ spec:
                             type: string
                           description: A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code..
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
                           type: string
@@ -133,6 +136,7 @@ spec:
                             type: string
                           description: 'Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   labels:
@@ -140,6 +144,7 @@ spec:
                       type: string
                     description: The list of labels (key/value pairs) to add to the job.
                     type: object
+                    x-kubernetes-map-type: granular
                   pigConfig:
                     items:
                       properties:
@@ -159,6 +164,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         properties:
@@ -166,6 +172,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
                           type: string
@@ -179,6 +186,7 @@ spec:
                             type: string
                           description: 'Mapping of query variable names to values (equivalent to the Pig command: name=[value]).'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   placement:
@@ -263,6 +271,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         outputFormat:
@@ -273,6 +282,7 @@ spec:
                             type: string
                           description: A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: The HCFS URI of the script that contains SQL queries. Conflicts with query_list
                           type: string
@@ -317,6 +327,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         mainPythonFileUri:
@@ -327,6 +338,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
                           type: object
+                          x-kubernetes-map-type: granular
                         pythonFileUris:
                           description: 'HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.'
                           items:
@@ -441,6 +453,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         mainClass:
@@ -454,6 +467,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   sparksqlConfig:
@@ -472,6 +486,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         properties:
@@ -479,6 +494,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: The HCFS URI of the script that contains SQL queries. Conflicts with query_list
                           type: string
@@ -492,6 +508,7 @@ spec:
                             type: string
                           description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                 type: object
@@ -532,6 +549,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         mainClass:
@@ -545,6 +563,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code..
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   hiveConfig:
@@ -563,6 +582,7 @@ spec:
                             type: string
                           description: A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code..
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
                           type: string
@@ -576,6 +596,7 @@ spec:
                             type: string
                           description: 'Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   labels:
@@ -583,6 +604,7 @@ spec:
                       type: string
                     description: The list of labels (key/value pairs) to add to the job.
                     type: object
+                    x-kubernetes-map-type: granular
                   pigConfig:
                     items:
                       properties:
@@ -602,6 +624,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         properties:
@@ -609,6 +632,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
                           type: string
@@ -622,6 +646,7 @@ spec:
                             type: string
                           description: 'Mapping of query variable names to values (equivalent to the Pig command: name=[value]).'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   placement:
@@ -647,6 +672,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         outputFormat:
@@ -657,6 +683,7 @@ spec:
                             type: string
                           description: A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: The HCFS URI of the script that contains SQL queries. Conflicts with query_list
                           type: string
@@ -701,6 +728,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         mainPythonFileUri:
@@ -711,6 +739,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
                           type: object
+                          x-kubernetes-map-type: granular
                         pythonFileUris:
                           description: 'HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.'
                           items:
@@ -767,6 +796,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         mainClass:
@@ -780,6 +810,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   sparksqlConfig:
@@ -798,6 +829,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         properties:
@@ -805,6 +837,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: The HCFS URI of the script that contains SQL queries. Conflicts with query_list
                           type: string
@@ -818,6 +851,7 @@ spec:
                             type: string
                           description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                 type: object
@@ -982,6 +1016,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         mainClass:
@@ -995,6 +1030,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code..
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   hiveConfig:
@@ -1013,6 +1049,7 @@ spec:
                             type: string
                           description: A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code..
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
                           type: string
@@ -1026,6 +1063,7 @@ spec:
                             type: string
                           description: 'Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   id:
@@ -1035,6 +1073,7 @@ spec:
                       type: string
                     description: The list of labels (key/value pairs) to add to the job.
                     type: object
+                    x-kubernetes-map-type: granular
                   pigConfig:
                     items:
                       properties:
@@ -1054,6 +1093,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         properties:
@@ -1061,6 +1101,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list
                           type: string
@@ -1074,6 +1115,7 @@ spec:
                             type: string
                           description: 'Mapping of query variable names to values (equivalent to the Pig command: name=[value]).'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   placement:
@@ -1106,6 +1148,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         outputFormat:
@@ -1116,6 +1159,7 @@ spec:
                             type: string
                           description: A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: The HCFS URI of the script that contains SQL queries. Conflicts with query_list
                           type: string
@@ -1160,6 +1204,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         mainPythonFileUri:
@@ -1170,6 +1215,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
                           type: object
+                          x-kubernetes-map-type: granular
                         pythonFileUris:
                           description: 'HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.'
                           items:
@@ -1229,6 +1275,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         mainClass:
@@ -1242,6 +1289,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   sparksqlConfig:
@@ -1260,6 +1308,7 @@ spec:
                                   type: string
                                 description: "The per-package log levels for the driver. This may include 'root' package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'"
                                 type: object
+                                x-kubernetes-map-type: granular
                             type: object
                           type: array
                         properties:
@@ -1267,6 +1316,7 @@ spec:
                             type: string
                           description: A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
                           type: object
+                          x-kubernetes-map-type: granular
                         queryFileUri:
                           description: The HCFS URI of the script that contains SQL queries. Conflicts with query_list
                           type: string
@@ -1280,6 +1330,7 @@ spec:
                             type: string
                           description: 'Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).'
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   status:
