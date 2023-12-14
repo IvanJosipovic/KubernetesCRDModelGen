@@ -599,7 +599,7 @@ public class CRDGenerator : ICRDGenerator
                             var attr = new AttributeModel()
                             {
                                 Name = "EnumAttribute",
-                                SingleParameter = new Parameter($"new[] {{ {string.Join(",", property.Value.EnumProperty.Select(x => '"' + x.ToString() + '"'))} }}")
+                                SingleParameter = new Parameter($"new[] {{ {string.Join(",", property.Value.EnumProperty.Where(x => x != null).Select(x => '"' + x.ToString() + '"'))} }}")
                             };
                             attribute.Add(attr);
                         }
