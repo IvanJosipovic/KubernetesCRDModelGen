@@ -1215,6 +1215,8 @@ spec:
                   - Always
                   - IfNotPresent
                   - Never
+                  - ""null""
+                  - null
                   type: string
 ";
         var type = GetTypeYaml(yaml, "Test");
@@ -1225,7 +1227,7 @@ spec:
 
         var attr = itemType.CustomAttributes.Where(x => x.AttributeType.Name == "EnumAttribute").First();
 
-        string[] test = new[] { "Always", "IfNotPresent", "Never" };
+        string[] test = new[] { "Always", "IfNotPresent", "Never", "null" };
 
         var output = attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>;
 
