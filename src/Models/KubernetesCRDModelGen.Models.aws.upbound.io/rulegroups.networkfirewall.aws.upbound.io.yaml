@@ -178,6 +178,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                     key:
@@ -201,6 +202,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -223,11 +225,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     targets:
                                       description: Set of domains that you want to inspect for in your traffic flows.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               rulesString:
@@ -276,6 +280,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -330,6 +335,7 @@ spec:
                                                   items:
                                                     type: string
                                                   type: array
+                                                  x-kubernetes-list-type: set
                                                 matchAttributes:
                                                   description: A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
                                                   items:
@@ -360,6 +366,7 @@ spec:
                                                         items:
                                                           type: number
                                                         type: array
+                                                        x-kubernetes-list-type: set
                                                       source:
                                                         description: Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
                                                         items:
@@ -390,11 +397,13 @@ spec:
                                                               items:
                                                                 type: string
                                                               type: array
+                                                              x-kubernetes-list-type: set
                                                             masks:
                                                               description: 'Set of flags to consider in the inspection. To inspect all flags, leave this empty. Valid values: FIN, SYN, RST, PSH, ACK, URG, ECE, CWR.'
                                                               items:
                                                                 type: string
                                                               type: array
+                                                              x-kubernetes-list-type: set
                                                           type: object
                                                         type: array
                                                     type: object
@@ -426,6 +435,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: 'Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: STATEFUL or STATELESS.'
                     type: string
@@ -496,6 +506,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                     key:
@@ -519,6 +530,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -541,11 +553,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     targets:
                                       description: Set of domains that you want to inspect for in your traffic flows.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               rulesString:
@@ -594,6 +608,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -648,6 +663,7 @@ spec:
                                                   items:
                                                     type: string
                                                   type: array
+                                                  x-kubernetes-list-type: set
                                                 matchAttributes:
                                                   description: A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
                                                   items:
@@ -678,6 +694,7 @@ spec:
                                                         items:
                                                           type: number
                                                         type: array
+                                                        x-kubernetes-list-type: set
                                                       source:
                                                         description: Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
                                                         items:
@@ -708,11 +725,13 @@ spec:
                                                               items:
                                                                 type: string
                                                               type: array
+                                                              x-kubernetes-list-type: set
                                                             masks:
                                                               description: 'Set of flags to consider in the inspection. To inspect all flags, leave this empty. Valid values: FIN, SYN, RST, PSH, ACK, URG, ECE, CWR.'
                                                               items:
                                                                 type: string
                                                               type: array
+                                                              x-kubernetes-list-type: set
                                                           type: object
                                                         type: array
                                                     type: object
@@ -744,6 +763,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: 'Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: STATEFUL or STATELESS.'
                     type: string
@@ -944,6 +964,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                     key:
@@ -967,6 +988,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -989,11 +1011,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     targets:
                                       description: Set of domains that you want to inspect for in your traffic flows.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               rulesString:
@@ -1042,6 +1066,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -1096,6 +1121,7 @@ spec:
                                                   items:
                                                     type: string
                                                   type: array
+                                                  x-kubernetes-list-type: set
                                                 matchAttributes:
                                                   description: A configuration block containing criteria for AWS Network Firewall to use to inspect an individual packet in stateless rule inspection. See Match Attributes below for details.
                                                   items:
@@ -1126,6 +1152,7 @@ spec:
                                                         items:
                                                           type: number
                                                         type: array
+                                                        x-kubernetes-list-type: set
                                                       source:
                                                         description: Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
                                                         items:
@@ -1156,11 +1183,13 @@ spec:
                                                               items:
                                                                 type: string
                                                               type: array
+                                                              x-kubernetes-list-type: set
                                                             masks:
                                                               description: 'Set of flags to consider in the inspection. To inspect all flags, leave this empty. Valid values: FIN, SYN, RST, PSH, ACK, URG, ECE, CWR.'
                                                               items:
                                                                 type: string
                                                               type: array
+                                                              x-kubernetes-list-type: set
                                                           type: object
                                                         type: array
                                                     type: object
@@ -1192,11 +1221,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: 'Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: STATEFUL or STATELESS.'
                     type: string

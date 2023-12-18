@@ -64,6 +64,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         signingProfileVersionArnsRefs:
                           description: References to SigningProfile in signer to populate signingProfileVersionArns.
                           items:
@@ -293,6 +294,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   arn:

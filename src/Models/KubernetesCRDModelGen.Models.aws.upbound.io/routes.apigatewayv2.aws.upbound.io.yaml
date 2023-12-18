@@ -121,6 +121,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   authorizationType:
                     description: Authorization type for the route. For WebSocket APIs, valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer. For HTTP APIs, valid values are NONE for open access, JWT for using JSON Web Tokens, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer. Defaults to NONE.
                     type: string
@@ -196,6 +197,7 @@ spec:
                       type: string
                     description: Request models for the route. Supported only for WebSocket APIs.
                     type: object
+                    x-kubernetes-map-type: granular
                   requestParameter:
                     description: Request parameters for the route. Supported only for WebSocket APIs.
                     items:
@@ -286,6 +288,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   authorizationType:
                     description: Authorization type for the route. For WebSocket APIs, valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer. For HTTP APIs, valid values are NONE for open access, JWT for using JSON Web Tokens, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer. Defaults to NONE.
                     type: string
@@ -300,6 +303,7 @@ spec:
                       type: string
                     description: Request models for the route. Supported only for WebSocket APIs.
                     type: object
+                    x-kubernetes-map-type: granular
                   requestParameter:
                     description: Request parameters for the route. Supported only for WebSocket APIs.
                     items:
@@ -451,6 +455,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   authorizationType:
                     description: Authorization type for the route. For WebSocket APIs, valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer. For HTTP APIs, valid values are NONE for open access, JWT for using JSON Web Tokens, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer. Defaults to NONE.
                     type: string
@@ -471,6 +476,7 @@ spec:
                       type: string
                     description: Request models for the route. Supported only for WebSocket APIs.
                     type: object
+                    x-kubernetes-map-type: granular
                   requestParameter:
                     description: Request parameters for the route. Supported only for WebSocket APIs.
                     items:

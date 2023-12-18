@@ -72,6 +72,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   targetArn:
                     description: The Amazon Resource Name (ARN) for Amazon Connect instances that phone numbers are claimed to.
                     type: string
@@ -153,6 +154,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: 'The type of phone number. Valid Values: TOLL_FREE | DID.'
                     type: string
@@ -315,11 +317,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   targetArn:
                     description: The Amazon Resource Name (ARN) for Amazon Connect instances that phone numbers are claimed to.
                     type: string

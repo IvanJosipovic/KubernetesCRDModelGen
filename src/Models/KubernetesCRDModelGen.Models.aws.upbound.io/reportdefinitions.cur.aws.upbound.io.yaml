@@ -60,11 +60,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   additionalSchemaElements:
                     description: 'A list of schema elements. Valid values are: RESOURCES.'
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   compression:
                     description: 'Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.'
                     type: string
@@ -158,11 +160,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   additionalSchemaElements:
                     description: 'A list of schema elements. Valid values are: RESOURCES.'
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   compression:
                     description: 'Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.'
                     type: string
@@ -319,11 +323,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   additionalSchemaElements:
                     description: 'A list of schema elements. Valid values are: RESOURCES.'
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   arn:
                     description: The Amazon Resource Name (ARN) specifying the cur report.
                     type: string

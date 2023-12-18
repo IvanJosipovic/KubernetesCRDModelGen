@@ -145,6 +145,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   throughput:
                     description: The throughput that the volume supports, in MiB/s. Only valid for type of gp3.
                     type: number
@@ -186,6 +187,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   throughput:
                     description: The throughput that the volume supports, in MiB/s. Only valid for type of gp3.
                     type: number
@@ -352,11 +354,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   throughput:
                     description: The throughput that the volume supports, in MiB/s. Only valid for type of gp3.
                     type: number

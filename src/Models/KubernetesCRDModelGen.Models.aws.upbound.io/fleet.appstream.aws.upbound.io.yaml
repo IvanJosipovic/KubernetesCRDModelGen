@@ -178,6 +178,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcConfig:
                     description: Configuration block for the VPC configuration for the image builder. See below.
                     items:
@@ -320,6 +321,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcConfig:
                     description: Configuration block for the VPC configuration for the image builder. See below.
                     items:
@@ -543,10 +545,12 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcConfig:
                     description: Configuration block for the VPC configuration for the image builder. See below.
                     items:

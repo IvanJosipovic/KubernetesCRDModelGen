@@ -63,6 +63,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   whitelistRules:
                     description: Whitelist rules. See Whitelist Rules for more details.
                     items:
@@ -83,6 +84,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   whitelistRules:
                     description: Whitelist rules. See Whitelist Rules for more details.
                     items:
@@ -230,10 +232,12 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     type: object
+                    x-kubernetes-map-type: granular
                   whitelistRules:
                     description: Whitelist rules. See Whitelist Rules for more details.
                     items:

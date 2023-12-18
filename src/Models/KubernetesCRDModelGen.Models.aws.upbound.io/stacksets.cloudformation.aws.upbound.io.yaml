@@ -133,6 +133,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: Description of the StackSet.
                     type: string
@@ -170,6 +171,7 @@ spec:
                       type: string
                     description: Key-value map of input parameters for the StackSet template. All template parameters, including those with a Default, must be configured or ignored with lifecycle configuration block ignore_changes argument. All NoEcho template parameters must be ignored with the lifecycle configuration block ignore_changes argument.
                     type: object
+                    x-kubernetes-map-type: granular
                   permissionModel:
                     description: 'Describes how the IAM roles required for your StackSet are created. Valid values: SELF_MANAGED (default), SERVICE_MANAGED.'
                     type: string
@@ -181,6 +183,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   templateBody:
                     description: 'String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with template_url.'
                     type: string
@@ -213,6 +216,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: Description of the StackSet.
                     type: string
@@ -250,6 +254,7 @@ spec:
                       type: string
                     description: Key-value map of input parameters for the StackSet template. All template parameters, including those with a Default, must be configured or ignored with lifecycle configuration block ignore_changes argument. All NoEcho template parameters must be ignored with the lifecycle configuration block ignore_changes argument.
                     type: object
+                    x-kubernetes-map-type: granular
                   permissionModel:
                     description: 'Describes how the IAM roles required for your StackSet are created. Valid values: SELF_MANAGED (default), SERVICE_MANAGED.'
                     type: string
@@ -258,6 +263,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   templateBody:
                     description: 'String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with template_url.'
                     type: string
@@ -409,6 +415,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: Description of the StackSet.
                     type: string
@@ -449,6 +456,7 @@ spec:
                       type: string
                     description: Key-value map of input parameters for the StackSet template. All template parameters, including those with a Default, must be configured or ignored with lifecycle configuration block ignore_changes argument. All NoEcho template parameters must be ignored with the lifecycle configuration block ignore_changes argument.
                     type: object
+                    x-kubernetes-map-type: granular
                   permissionModel:
                     description: 'Describes how the IAM roles required for your StackSet are created. Valid values: SELF_MANAGED (default), SERVICE_MANAGED.'
                     type: string
@@ -460,11 +468,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   templateBody:
                     description: 'String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with template_url.'
                     type: string

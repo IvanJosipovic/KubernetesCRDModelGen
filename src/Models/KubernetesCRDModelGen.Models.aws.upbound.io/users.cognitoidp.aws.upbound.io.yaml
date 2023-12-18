@@ -60,16 +60,19 @@ spec:
                       type: string
                     description: A map that contains user attributes and attribute values to be set for the user.
                     type: object
+                    x-kubernetes-map-type: granular
                   clientMetadata:
                     additionalProperties:
                       type: string
                     description: A map of custom key-value pairs that you can provide as input for any custom workflows that user creation triggers. Amazon Cognito does not store the client_metadata value. This data is available only to Lambda triggers that are assigned to a user pool to support custom workflows. If your user pool configuration does not include triggers, the ClientMetadata parameter serves no purpose. For more information, see Customizing User Pool Workflows with Lambda Triggers.
                     type: object
+                    x-kubernetes-map-type: granular
                   desiredDeliveryMediums:
                     description: A list of mediums to the welcome message will be sent through. Allowed values are EMAIL and SMS. If it's provided, make sure you have also specified email attribute for the EMAIL medium and phone_number for the SMS. More than one value can be specified. Amazon Cognito does not store the desired_delivery_mediums value. Defaults to ["SMS"].
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   enabled:
                     description: Specifies whether the user should be enabled after creation. The welcome message will be sent regardless of the enabled value. The behavior can be changed with message_action argument. Defaults to true.
                     type: boolean
@@ -179,6 +182,7 @@ spec:
                       type: string
                     description: The user's validation data. This is an array of name-value pairs that contain user attributes and attribute values that you can use for custom validation, such as restricting the types of user accounts that can be registered. Amazon Cognito does not store the validation_data value. For more information, see Customizing User Pool Workflows with Lambda Triggers.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -190,16 +194,19 @@ spec:
                       type: string
                     description: A map that contains user attributes and attribute values to be set for the user.
                     type: object
+                    x-kubernetes-map-type: granular
                   clientMetadata:
                     additionalProperties:
                       type: string
                     description: A map of custom key-value pairs that you can provide as input for any custom workflows that user creation triggers. Amazon Cognito does not store the client_metadata value. This data is available only to Lambda triggers that are assigned to a user pool to support custom workflows. If your user pool configuration does not include triggers, the ClientMetadata parameter serves no purpose. For more information, see Customizing User Pool Workflows with Lambda Triggers.
                     type: object
+                    x-kubernetes-map-type: granular
                   desiredDeliveryMediums:
                     description: A list of mediums to the welcome message will be sent through. Allowed values are EMAIL and SMS. If it's provided, make sure you have also specified email attribute for the EMAIL medium and phone_number for the SMS. More than one value can be specified. Amazon Cognito does not store the desired_delivery_mediums value. Defaults to ["SMS"].
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   enabled:
                     description: Specifies whether the user should be enabled after creation. The welcome message will be sent regardless of the enabled value. The behavior can be changed with message_action argument. Defaults to true.
                     type: boolean
@@ -214,6 +221,7 @@ spec:
                       type: string
                     description: The user's validation data. This is an array of name-value pairs that contain user attributes and attribute values that you can use for custom validation, such as restricting the types of user accounts that can be registered. Amazon Cognito does not store the validation_data value. For more information, see Customizing User Pool Workflows with Lambda Triggers.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -338,11 +346,13 @@ spec:
                       type: string
                     description: A map that contains user attributes and attribute values to be set for the user.
                     type: object
+                    x-kubernetes-map-type: granular
                   clientMetadata:
                     additionalProperties:
                       type: string
                     description: A map of custom key-value pairs that you can provide as input for any custom workflows that user creation triggers. Amazon Cognito does not store the client_metadata value. This data is available only to Lambda triggers that are assigned to a user pool to support custom workflows. If your user pool configuration does not include triggers, the ClientMetadata parameter serves no purpose. For more information, see Customizing User Pool Workflows with Lambda Triggers.
                     type: object
+                    x-kubernetes-map-type: granular
                   creationDate:
                     type: string
                   desiredDeliveryMediums:
@@ -350,6 +360,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   enabled:
                     description: Specifies whether the user should be enabled after creation. The welcome message will be sent regardless of the enabled value. The behavior can be changed with message_action argument. Defaults to true.
                     type: boolean
@@ -367,6 +378,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   preferredMfaSetting:
                     type: string
                   status:
@@ -383,6 +395,7 @@ spec:
                       type: string
                     description: The user's validation data. This is an array of name-value pairs that contain user attributes and attribute values that you can use for custom validation, such as restricting the types of user accounts that can be registered. Amazon Cognito does not store the validation_data value. For more information, see Customizing User Pool Workflows with Lambda Triggers.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

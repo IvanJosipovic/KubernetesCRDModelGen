@@ -184,6 +184,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   region:
@@ -198,11 +199,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         skippedIpRangeList:
                           description: Risk detection isn't performed on the IP addresses in this range list. The IP range is in CIDR notation. Can contain a maximum of 200 items.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   userPoolId:
@@ -398,6 +401,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   riskExceptionConfiguration:
@@ -409,11 +413,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         skippedIpRangeList:
                           description: Risk detection isn't performed on the IP addresses in this range list. The IP range is in CIDR notation. Can contain a maximum of 200 items.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                 type: object
@@ -664,6 +670,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   id:
@@ -678,11 +685,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         skippedIpRangeList:
                           description: Risk detection isn't performed on the IP addresses in this range list. The IP range is in CIDR notation. Can contain a maximum of 200 items.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   userPoolId:

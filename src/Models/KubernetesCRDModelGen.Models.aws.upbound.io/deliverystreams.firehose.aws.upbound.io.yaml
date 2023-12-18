@@ -319,11 +319,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               subnetIds:
                                 description: A list of subnet IDs to associate with Kinesis Firehose.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -452,6 +454,7 @@ spec:
                                                     type: string
                                                   description: A map of column names to JSON keys that aren't identical to the column names. This is useful when the JSON contains keys that are Hive keywords. For example, timestamp is a Hive keyword. If you have a JSON key named timestamp, set this parameter to { ts = "timestamp" } to map this key to a column named ts.
                                                   type: object
+                                                  x-kubernetes-map-type: granular
                                                 convertDotsInJsonKeysToUnderscores:
                                                   description: When set to true, specifies that the names of the keys include dots and that you want Kinesis Data Firehose to replace them with underscores. This is useful because Apache Hive does not allow dots in column names. For example, if the JSON contains a key whose name is "a.b", you can define the column name to be "a_b" when using this option. Defaults to false.
                                                   type: boolean
@@ -1266,11 +1269,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               subnetIds:
                                 description: A list of subnet IDs to associate with Kinesis Firehose.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -1842,6 +1847,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   versionId:
                     description: Specifies the table version for the output data schema. Defaults to LATEST.
                     type: string
@@ -1941,11 +1947,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               subnetIds:
                                 description: A list of subnet IDs to associate with Kinesis Firehose.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -2016,6 +2024,7 @@ spec:
                                                     type: string
                                                   description: A map of column names to JSON keys that aren't identical to the column names. This is useful when the JSON contains keys that are Hive keywords. For example, timestamp is a Hive keyword. If you have a JSON key named timestamp, set this parameter to { ts = "timestamp" } to map this key to a column named ts.
                                                   type: object
+                                                  x-kubernetes-map-type: granular
                                                 convertDotsInJsonKeysToUnderscores:
                                                   description: When set to true, specifies that the names of the keys include dots and that you want Kinesis Data Firehose to replace them with underscores. This is useful because Apache Hive does not allow dots in column names. For example, if the JSON contains a key whose name is "a.b", you can define the column name to be "a_b" when using this option. Defaults to false.
                                                   type: boolean
@@ -2404,11 +2413,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               subnetIds:
                                 description: A list of subnet IDs to associate with Kinesis Firehose.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -2649,6 +2660,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   versionId:
                     description: Specifies the table version for the output data schema. Defaults to LATEST.
                     type: string
@@ -2875,11 +2887,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               subnetIds:
                                 description: A list of subnet IDs to associate with Kinesis Firehose.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               vpcId:
                                 type: string
                             type: object
@@ -2955,6 +2969,7 @@ spec:
                                                     type: string
                                                   description: A map of column names to JSON keys that aren't identical to the column names. This is useful when the JSON contains keys that are Hive keywords. For example, timestamp is a Hive keyword. If you have a JSON key named timestamp, set this parameter to { ts = "timestamp" } to map this key to a column named ts.
                                                   type: object
+                                                  x-kubernetes-map-type: granular
                                                 convertDotsInJsonKeysToUnderscores:
                                                   description: When set to true, specifies that the names of the keys include dots and that you want Kinesis Data Firehose to replace them with underscores. This is useful because Apache Hive does not allow dots in column names. For example, if the JSON contains a key whose name is "a.b", you can define the column name to be "a_b" when using this option. Defaults to false.
                                                   type: boolean
@@ -3369,11 +3384,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               subnetIds:
                                 description: A list of subnet IDs to associate with Kinesis Firehose.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               vpcId:
                                 type: string
                             type: object
@@ -3631,11 +3648,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   versionId:
                     description: Specifies the table version for the output data schema. Defaults to LATEST.
                     type: string

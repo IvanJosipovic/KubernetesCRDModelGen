@@ -79,6 +79,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         statefulEngineOptions:
                           description: A configuration block that defines options on how the policy handles stateful rules. See Stateful Engine Options below for details.
                           items:
@@ -199,11 +200,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         statelessFragmentDefaultActions:
                           description: 'Set of actions to take on a fragmented packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: aws:drop, aws:pass, or aws:forward_to_sfe. In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify aws:forward_to_sfe.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         statelessRuleGroupReference:
                           description: Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
                           items:
@@ -281,6 +284,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -311,6 +315,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         statefulEngineOptions:
                           description: A configuration block that defines options on how the policy handles stateful rules. See Stateful Engine Options below for details.
                           items:
@@ -373,11 +378,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         statelessFragmentDefaultActions:
                           description: 'Set of actions to take on a fragmented packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: aws:drop, aws:pass, or aws:forward_to_sfe. In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify aws:forward_to_sfe.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         statelessRuleGroupReference:
                           description: Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
                           items:
@@ -394,6 +401,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -543,6 +551,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         statefulEngineOptions:
                           description: A configuration block that defines options on how the policy handles stateful rules. See Stateful Engine Options below for details.
                           items:
@@ -608,11 +617,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         statelessFragmentDefaultActions:
                           description: 'Set of actions to take on a fragmented packet if it does not match any of the stateless rules in the policy. You must specify one of the standard actions including: aws:drop, aws:pass, or aws:forward_to_sfe. In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify aws:forward_to_sfe.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         statelessRuleGroupReference:
                           description: Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
                           items:
@@ -635,11 +646,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   updateToken:
                     description: A string token used when updating a firewall policy.
                     type: string

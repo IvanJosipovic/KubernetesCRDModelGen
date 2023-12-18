@@ -133,6 +133,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   keyPair:
                     description: Name of EC2 Key Pair.
                     type: string
@@ -275,6 +276,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags to assign to infrastructure created by the configuration.
                     type: object
+                    x-kubernetes-map-type: granular
                   securityGroupIdRefs:
                     description: References to SecurityGroup in ec2 to populate securityGroupIds.
                     items:
@@ -338,6 +340,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   snsTopicArn:
                     description: Amazon Resource Name (ARN) of SNS Topic.
                     type: string
@@ -459,6 +462,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   terminateInstanceOnFailure:
                     description: Enable if the instance should be terminated when the pipeline fails. Defaults to false.
                     type: boolean
@@ -488,6 +492,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   logging:
                     description: Configuration block with logging settings. Detailed below.
                     items:
@@ -511,11 +516,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags to assign to infrastructure created by the configuration.
                     type: object
+                    x-kubernetes-map-type: granular
                   tags:
                     additionalProperties:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   terminateInstanceOnFailure:
                     description: Enable if the instance should be terminated when the pipeline fails. Defaults to false.
                     type: boolean
@@ -676,6 +683,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   keyPair:
                     description: Name of EC2 Key Pair.
                     type: string
@@ -705,11 +713,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags to assign to infrastructure created by the configuration.
                     type: object
+                    x-kubernetes-map-type: granular
                   securityGroupIds:
                     description: Set of EC2 Security Group identifiers.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   snsTopicArn:
                     description: Amazon Resource Name (ARN) of SNS Topic.
                     type: string
@@ -721,11 +731,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   terminateInstanceOnFailure:
                     description: Enable if the instance should be terminated when the pipeline fails. Defaults to false.
                     type: boolean

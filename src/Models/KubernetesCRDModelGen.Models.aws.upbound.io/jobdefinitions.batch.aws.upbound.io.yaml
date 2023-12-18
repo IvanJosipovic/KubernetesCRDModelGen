@@ -66,11 +66,13 @@ spec:
                       type: string
                     description: Specifies the parameter substitution placeholders to set in the job definition.
                     type: object
+                    x-kubernetes-map-type: granular
                   platformCapabilities:
                     description: The platform capabilities required by the job definition. If no value is specified, it defaults to EC2. To run the job on Fargate resources, specify FARGATE.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   propagateTags:
                     description: Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is false.
                     type: boolean
@@ -109,6 +111,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeout:
                     description: Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of timeout is 1. Defined below.
                     items:
@@ -138,11 +141,13 @@ spec:
                       type: string
                     description: Specifies the parameter substitution placeholders to set in the job definition.
                     type: object
+                    x-kubernetes-map-type: granular
                   platformCapabilities:
                     description: The platform capabilities required by the job definition. If no value is specified, it defaults to EC2. To run the job on Fargate resources, specify FARGATE.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   propagateTags:
                     description: Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is false.
                     type: boolean
@@ -178,6 +183,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeout:
                     description: Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of timeout is 1. Defined below.
                     items:
@@ -330,11 +336,13 @@ spec:
                       type: string
                     description: Specifies the parameter substitution placeholders to set in the job definition.
                     type: object
+                    x-kubernetes-map-type: granular
                   platformCapabilities:
                     description: The platform capabilities required by the job definition. If no value is specified, it defaults to EC2. To run the job on Fargate resources, specify FARGATE.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   propagateTags:
                     description: Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is false.
                     type: boolean
@@ -373,11 +381,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeout:
                     description: Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of timeout is 1. Defined below.
                     items:

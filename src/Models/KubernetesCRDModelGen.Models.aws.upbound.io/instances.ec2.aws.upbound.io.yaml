@@ -203,6 +203,7 @@ spec:
                             type: string
                           description: Map of tags to assign to the device.
                           type: object
+                          x-kubernetes-map-type: granular
                         throughput:
                           description: Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for volume_type of gp3.
                           type: number
@@ -494,6 +495,7 @@ spec:
                             type: string
                           description: Map of tags to assign to the device.
                           type: object
+                          x-kubernetes-map-type: granular
                         throughput:
                           description: Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for volume_type of gp3.
                           type: number
@@ -510,6 +512,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceDestCheck:
                     description: Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
                     type: boolean
@@ -576,6 +579,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tenancy:
                     description: Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command. Valid values are default, dedicated, and host.
                     type: string
@@ -593,6 +597,7 @@ spec:
                       type: string
                     description: Map of tags to assign, at instance-creation time, to root and EBS volumes.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcSecurityGroupIdRefs:
                     description: References to SecurityGroup to populate vpcSecurityGroupIds.
                     items:
@@ -656,6 +661,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 required:
                 - region
                 type: object
@@ -752,6 +758,7 @@ spec:
                             type: string
                           description: Map of tags to assign to the device.
                           type: object
+                          x-kubernetes-map-type: granular
                         throughput:
                           description: Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for volume_type of gp3.
                           type: number
@@ -924,6 +931,7 @@ spec:
                             type: string
                           description: Map of tags to assign to the device.
                           type: object
+                          x-kubernetes-map-type: granular
                         throughput:
                           description: Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for volume_type of gp3.
                           type: number
@@ -940,6 +948,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceDestCheck:
                     description: Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
                     type: boolean
@@ -948,6 +957,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tenancy:
                     description: Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command. Valid values are default, dedicated, and host.
                     type: string
@@ -965,6 +975,7 @@ spec:
                       type: string
                     description: Map of tags to assign, at instance-creation time, to root and EBS volumes.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -1180,6 +1191,7 @@ spec:
                             type: string
                           description: Map of tags to assign to the device.
                           type: object
+                          x-kubernetes-map-type: granular
                         throughput:
                           description: Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for volume_type of gp3.
                           type: number
@@ -1388,6 +1400,7 @@ spec:
                             type: string
                           description: Map of tags to assign to the device.
                           type: object
+                          x-kubernetes-map-type: granular
                         throughput:
                           description: Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for volume_type of gp3.
                           type: number
@@ -1407,11 +1420,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   securityGroups:
                     description: List of security group names to associate with.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceDestCheck:
                     description: Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
                     type: boolean
@@ -1423,11 +1438,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   tenancy:
                     description: Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command. Valid values are default, dedicated, and host.
                     type: string
@@ -1445,11 +1462,13 @@ spec:
                       type: string
                     description: Map of tags to assign, at instance-creation time, to root and EBS volumes.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcSecurityGroupIds:
                     description: List of security group IDs to associate with.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               conditions:
                 description: Conditions of the resource.

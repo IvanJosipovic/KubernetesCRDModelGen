@@ -64,6 +64,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         enable:
                           description: Determines whether to use the CloudWatch alarm option in the service deployment process.
                           type: boolean
@@ -391,6 +392,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnetRefs:
                           description: References to Subnet in ec2 to populate subnets.
                           items:
@@ -454,6 +456,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   orderedPlacementStrategy:
@@ -511,6 +514,7 @@ spec:
                                   type: string
                                 description: The configuration options to send to the log driver.
                                 type: object
+                                x-kubernetes-map-type: granular
                               secretOption:
                                 description: The secrets to pass to the log configuration. See below.
                                 items:
@@ -580,6 +584,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   taskDefinition:
                     description: Family and revision (family:revision) or full ARN of the task definition that you want to run in your service. Required unless using the EXTERNAL deployment controller. If a revision is not specified, the latest ACTIVE revision is used.
                     type: string
@@ -643,6 +648,7 @@ spec:
                       type: string
                     description: Map of arbitrary keys and values that, when changed, will trigger an in-place update (redeployment). Useful with timestamp(). See example above.
                     type: object
+                    x-kubernetes-map-type: granular
                   waitForSteadyState:
                     description: Default false.
                     type: boolean
@@ -661,6 +667,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         enable:
                           description: Determines whether to use the CloudWatch alarm option in the service deployment process.
                           type: boolean
@@ -805,6 +812,7 @@ spec:
                                   type: string
                                 description: The configuration options to send to the log driver.
                                 type: object
+                                x-kubernetes-map-type: granular
                               secretOption:
                                 description: The secrets to pass to the log configuration. See below.
                                 items:
@@ -874,11 +882,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   triggers:
                     additionalProperties:
                       type: string
                     description: Map of arbitrary keys and values that, when changed, will trigger an in-place update (redeployment). Useful with timestamp(). See example above.
                     type: object
+                    x-kubernetes-map-type: granular
                   waitForSteadyState:
                     description: Default false.
                     type: boolean
@@ -1010,6 +1020,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         enable:
                           description: Determines whether to use the CloudWatch alarm option in the service deployment process.
                           type: boolean
@@ -1117,11 +1128,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnets:
                           description: Subnets associated with the task or service.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   orderedPlacementStrategy:
@@ -1176,6 +1189,7 @@ spec:
                                   type: string
                                 description: The configuration options to send to the log driver.
                                 type: object
+                                x-kubernetes-map-type: granular
                               secretOption:
                                 description: The secrets to pass to the log configuration. See below.
                                 items:
@@ -1245,11 +1259,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   taskDefinition:
                     description: Family and revision (family:revision) or full ARN of the task definition that you want to run in your service. Required unless using the EXTERNAL deployment controller. If a revision is not specified, the latest ACTIVE revision is used.
                     type: string
@@ -1258,6 +1274,7 @@ spec:
                       type: string
                     description: Map of arbitrary keys and values that, when changed, will trigger an in-place update (redeployment). Useful with timestamp(). See example above.
                     type: object
+                    x-kubernetes-map-type: granular
                   waitForSteadyState:
                     description: Default false.
                     type: boolean

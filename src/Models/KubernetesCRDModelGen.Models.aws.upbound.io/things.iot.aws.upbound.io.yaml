@@ -60,6 +60,7 @@ spec:
                       type: string
                     description: Map of attributes of the thing.
                     type: object
+                    x-kubernetes-map-type: granular
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -77,6 +78,7 @@ spec:
                       type: string
                     description: Map of attributes of the thing.
                     type: object
+                    x-kubernetes-map-type: granular
                   thingTypeName:
                     description: The thing type name.
                     type: string
@@ -207,6 +209,7 @@ spec:
                       type: string
                     description: Map of attributes of the thing.
                     type: object
+                    x-kubernetes-map-type: granular
                   defaultClientId:
                     description: The default client ID.
                     type: string

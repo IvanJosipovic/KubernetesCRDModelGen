@@ -68,6 +68,7 @@ spec:
                                   type: string
                                 description: 'The query parameters to include in the redirect request to the authorization endpoint. Max: 10.'
                                 type: object
+                                x-kubernetes-map-type: granular
                               onUnauthenticatedRequest:
                                 description: 'The behavior if the user is not authenticated. Valid values: deny, allow and authenticate'
                                 type: string
@@ -265,6 +266,7 @@ spec:
                                   type: string
                                 description: 'The query parameters to include in the redirect request to the authorization endpoint. Max: 10.'
                                 type: object
+                                x-kubernetes-map-type: granular
                               authorizationEndpoint:
                                 description: The authorization endpoint of the IdP.
                                 type: string
@@ -515,6 +517,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         httpHeader:
@@ -529,6 +532,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         httpRequestMethod:
@@ -540,6 +544,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         pathPattern:
@@ -551,6 +556,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         queryString:
@@ -574,6 +580,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -647,6 +654,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -666,6 +674,7 @@ spec:
                                   type: string
                                 description: 'The query parameters to include in the redirect request to the authorization endpoint. Max: 10.'
                                 type: object
+                                x-kubernetes-map-type: granular
                               onUnauthenticatedRequest:
                                 description: 'The behavior if the user is not authenticated. Valid values: deny, allow and authenticate'
                                 type: string
@@ -689,6 +698,7 @@ spec:
                                   type: string
                                 description: 'The query parameters to include in the redirect request to the authorization endpoint. Max: 10.'
                                 type: object
+                                x-kubernetes-map-type: granular
                               authorizationEndpoint:
                                 description: The authorization endpoint of the IdP.
                                 type: string
@@ -804,6 +814,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         httpHeader:
@@ -818,6 +829,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         httpRequestMethod:
@@ -829,6 +841,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         pathPattern:
@@ -840,6 +853,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         queryString:
@@ -863,6 +877,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -875,6 +890,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -1012,6 +1028,7 @@ spec:
                                   type: string
                                 description: 'The query parameters to include in the redirect request to the authorization endpoint. Max: 10.'
                                 type: object
+                                x-kubernetes-map-type: granular
                               onUnauthenticatedRequest:
                                 description: 'The behavior if the user is not authenticated. Valid values: deny, allow and authenticate'
                                 type: string
@@ -1044,6 +1061,7 @@ spec:
                                   type: string
                                 description: 'The query parameters to include in the redirect request to the authorization endpoint. Max: 10.'
                                 type: object
+                                x-kubernetes-map-type: granular
                               authorizationEndpoint:
                                 description: The authorization endpoint of the IdP.
                                 type: string
@@ -1168,6 +1186,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         httpHeader:
@@ -1182,6 +1201,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         httpRequestMethod:
@@ -1193,6 +1213,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         pathPattern:
@@ -1204,6 +1225,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         queryString:
@@ -1227,6 +1249,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -1245,11 +1268,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

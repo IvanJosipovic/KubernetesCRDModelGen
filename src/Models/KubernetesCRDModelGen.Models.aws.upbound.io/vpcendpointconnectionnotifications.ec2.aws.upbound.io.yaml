@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   connectionNotificationArn:
                     description: The ARN of the SNS topic for the notifications.
                     type: string
@@ -193,6 +194,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vpcEndpointId:
                     description: The ID of the VPC Endpoint to receive notifications for.
                     type: string
@@ -323,6 +325,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   connectionNotificationArn:
                     description: The ARN of the SNS topic for the notifications.
                     type: string

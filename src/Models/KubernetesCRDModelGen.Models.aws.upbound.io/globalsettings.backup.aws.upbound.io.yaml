@@ -60,6 +60,7 @@ spec:
                       type: string
                     description: A list of resources along with the opt-in preferences for the account.
                     type: object
+                    x-kubernetes-map-type: granular
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -74,6 +75,7 @@ spec:
                       type: string
                     description: A list of resources along with the opt-in preferences for the account.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -201,6 +203,7 @@ spec:
                       type: string
                     description: A list of resources along with the opt-in preferences for the account.
                     type: object
+                    x-kubernetes-map-type: granular
                   id:
                     description: The AWS Account ID.
                     type: string

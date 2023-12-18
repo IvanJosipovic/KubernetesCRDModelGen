@@ -191,6 +191,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   name:
                     description: The unique name to identify this real-time log configuration.
                     type: string
@@ -225,6 +226,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   name:
                     description: The unique name to identify this real-time log configuration.
                     type: string
@@ -388,6 +390,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   id:
                     description: The ID of the CloudFront real-time log configuration.
                     type: string

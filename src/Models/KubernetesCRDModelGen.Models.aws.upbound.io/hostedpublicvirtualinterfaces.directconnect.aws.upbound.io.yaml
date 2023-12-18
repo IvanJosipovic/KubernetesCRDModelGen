@@ -142,6 +142,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vlan:
                     description: The VLAN ID.
                     type: number
@@ -177,6 +178,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vlan:
                     description: The VLAN ID.
                     type: number
@@ -352,6 +354,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vlan:
                     description: The VLAN ID.
                     type: number

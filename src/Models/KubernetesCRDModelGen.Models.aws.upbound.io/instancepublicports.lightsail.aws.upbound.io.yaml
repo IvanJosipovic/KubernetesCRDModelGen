@@ -122,11 +122,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         cidrs:
                           description: Set of CIDR blocks.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         fromPort:
                           description: First port in a range of open ports on an instance.
                           type: number
@@ -134,6 +136,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         protocol:
                           description: IP protocol name. Valid values are tcp, all, udp, and icmp.
                           type: string
@@ -160,11 +163,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         cidrs:
                           description: Set of CIDR blocks.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         fromPort:
                           description: First port in a range of open ports on an instance.
                           type: number
@@ -172,6 +177,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         protocol:
                           description: IP protocol name. Valid values are tcp, all, udp, and icmp.
                           type: string
@@ -317,11 +323,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         cidrs:
                           description: Set of CIDR blocks.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         fromPort:
                           description: First port in a range of open ports on an instance.
                           type: number
@@ -329,6 +337,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         protocol:
                           description: IP protocol name. Valid values are tcp, all, udp, and icmp.
                           type: string

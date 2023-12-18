@@ -60,11 +60,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   compatibleRuntimes:
                     description: List of Runtimes this layer is compatible with. Up to 5 runtimes can be specified.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: Description of what your Lambda Layer does.
                     type: string
@@ -106,11 +108,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   compatibleRuntimes:
                     description: List of Runtimes this layer is compatible with. Up to 5 runtimes can be specified.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: Description of what your Lambda Layer does.
                     type: string
@@ -268,11 +272,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   compatibleRuntimes:
                     description: List of Runtimes this layer is compatible with. Up to 5 runtimes can be specified.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   createdDate:
                     description: Date this resource was created.
                     type: string

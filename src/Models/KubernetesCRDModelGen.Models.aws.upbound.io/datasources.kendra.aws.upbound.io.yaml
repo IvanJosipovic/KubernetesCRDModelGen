@@ -144,16 +144,19 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               inclusionPatterns:
                                 description: A list of glob patterns for documents that should be indexed. If a document that matches an inclusion pattern also matches an exclusion pattern, the document is not indexed. Refer to Inclusion Patterns for more examples.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               inclusionPrefixes:
                                 description: A list of S3 prefixes for the documents that should be included in the index.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         webCrawlerConfiguration:
@@ -323,11 +326,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               urlInclusionPatterns:
                                 description: "A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are included in the index. URLs that don't match the patterns are excluded from the index. If a URL matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index. Array Members: Minimum number of 0 items. Maximum number of 100 items. Length Constraints: Minimum length of 1. Maximum length of 150."
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               urls:
                                 description: A block that specifies the seed or starting point URLs of the websites or the sitemap URLs of the websites you want to crawl. You can include website subdomains. You can list up to 100 seed URLs and up to 3 sitemap URLs. You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from crawling. When selecting websites to index, you must adhere to the Amazon Acceptable Use Policy and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler to index your own webpages, or webpages that you have authorization to index. Detailed below.
                                 items:
@@ -341,6 +346,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           webCrawlerMode:
                                             description: 'The default mode is set to HOST_ONLY. You can choose one of the following modes:'
                                             type: string
@@ -355,6 +361,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -393,6 +400,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -427,6 +435,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -464,6 +473,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -507,6 +517,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -665,6 +676,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The type of data source repository. For an updated list of values, refer to Valid Values for Type.
                     type: string
@@ -705,16 +717,19 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               inclusionPatterns:
                                 description: A list of glob patterns for documents that should be indexed. If a document that matches an inclusion pattern also matches an exclusion pattern, the document is not indexed. Refer to Inclusion Patterns for more examples.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               inclusionPrefixes:
                                 description: A list of S3 prefixes for the documents that should be included in the index.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         webCrawlerConfiguration:
@@ -768,11 +783,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               urlInclusionPatterns:
                                 description: "A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are included in the index. URLs that don't match the patterns are excluded from the index. If a URL matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index. Array Members: Minimum number of 0 items. Maximum number of 100 items. Length Constraints: Minimum length of 1. Maximum length of 150."
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               urls:
                                 description: A block that specifies the seed or starting point URLs of the websites or the sitemap URLs of the websites you want to crawl. You can include website subdomains. You can list up to 100 seed URLs and up to 3 sitemap URLs. You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from crawling. When selecting websites to index, you must adhere to the Amazon Acceptable Use Policy and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler to index your own webpages, or webpages that you have authorization to index. Detailed below.
                                 items:
@@ -786,6 +803,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           webCrawlerMode:
                                             description: 'The default mode is set to HOST_ONLY. You can choose one of the following modes:'
                                             type: string
@@ -800,6 +818,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -838,6 +857,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -872,6 +892,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -909,6 +930,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -952,6 +974,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -991,6 +1014,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The type of data source repository. For an updated list of values, refer to Valid Values for Type.
                     type: string
@@ -1155,16 +1179,19 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               inclusionPatterns:
                                 description: A list of glob patterns for documents that should be indexed. If a document that matches an inclusion pattern also matches an exclusion pattern, the document is not indexed. Refer to Inclusion Patterns for more examples.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               inclusionPrefixes:
                                 description: A list of S3 prefixes for the documents that should be included in the index.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         webCrawlerConfiguration:
@@ -1224,11 +1251,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               urlInclusionPatterns:
                                 description: "A list of regular expression patterns to include certain URLs to crawl. URLs that match the patterns are included in the index. URLs that don't match the patterns are excluded from the index. If a URL matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the URL file isn't included in the index. Array Members: Minimum number of 0 items. Maximum number of 100 items. Length Constraints: Minimum length of 1. Maximum length of 150."
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               urls:
                                 description: A block that specifies the seed or starting point URLs of the websites or the sitemap URLs of the websites you want to crawl. You can include website subdomains. You can list up to 100 seed URLs and up to 3 sitemap URLs. You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from crawling. When selecting websites to index, you must adhere to the Amazon Acceptable Use Policy and all other Amazon terms. Remember that you must only use Amazon Kendra Web Crawler to index your own webpages, or webpages that you have authorization to index. Detailed below.
                                 items:
@@ -1242,6 +1271,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           webCrawlerMode:
                                             description: 'The default mode is set to HOST_ONLY. You can choose one of the following modes:'
                                             type: string
@@ -1256,6 +1286,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                         type: object
                                       type: array
                                   type: object
@@ -1297,6 +1328,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -1331,6 +1363,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -1368,6 +1401,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -1411,6 +1445,7 @@ spec:
                                             items:
                                               type: string
                                             type: array
+                                            x-kubernetes-list-type: set
                                           stringValue:
                                             type: string
                                         type: object
@@ -1468,11 +1503,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The type of data source repository. For an updated list of values, refer to Valid Values for Type.
                     type: string

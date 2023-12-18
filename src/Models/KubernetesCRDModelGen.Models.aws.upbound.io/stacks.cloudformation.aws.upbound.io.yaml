@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   disableRollback:
                     description: Set to true to disable rollback of the stack if stack creation failed. Conflicts with on_failure.
                     type: boolean
@@ -129,6 +130,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   onFailure:
                     description: 'Action to be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK, or DELETE. Conflicts with disable_rollback.'
                     type: string
@@ -137,6 +139,7 @@ spec:
                       type: string
                     description: A map of Parameter structures that specify input parameters for the stack.
                     type: object
+                    x-kubernetes-map-type: granular
                   policyBody:
                     description: Structure containing the stack policy body. Conflicts w/ policy_url.
                     type: string
@@ -151,6 +154,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   templateBody:
                     description: 'Structure containing the template body (max size: 51,200 bytes).'
                     type: string
@@ -172,6 +176,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   disableRollback:
                     description: Set to true to disable rollback of the stack if stack creation failed. Conflicts with on_failure.
                     type: boolean
@@ -180,6 +185,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   onFailure:
                     description: 'Action to be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK, or DELETE. Conflicts with disable_rollback.'
                     type: string
@@ -188,6 +194,7 @@ spec:
                       type: string
                     description: A map of Parameter structures that specify input parameters for the stack.
                     type: object
+                    x-kubernetes-map-type: granular
                   policyBody:
                     description: Structure containing the stack policy body. Conflicts w/ policy_url.
                     type: string
@@ -199,6 +206,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   templateBody:
                     description: 'Structure containing the template body (max size: 51,200 bytes).'
                     type: string
@@ -332,6 +340,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   disableRollback:
                     description: Set to true to disable rollback of the stack if stack creation failed. Conflicts with on_failure.
                     type: boolean
@@ -349,6 +358,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   onFailure:
                     description: 'Action to be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK, or DELETE. Conflicts with disable_rollback.'
                     type: string
@@ -357,11 +367,13 @@ spec:
                       type: string
                     description: A map of outputs from the stack.
                     type: object
+                    x-kubernetes-map-type: granular
                   parameters:
                     additionalProperties:
                       type: string
                     description: A map of Parameter structures that specify input parameters for the stack.
                     type: object
+                    x-kubernetes-map-type: granular
                   policyBody:
                     description: Structure containing the stack policy body. Conflicts w/ policy_url.
                     type: string
@@ -373,11 +385,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   templateBody:
                     description: 'Structure containing the template body (max size: 51,200 bytes).'
                     type: string

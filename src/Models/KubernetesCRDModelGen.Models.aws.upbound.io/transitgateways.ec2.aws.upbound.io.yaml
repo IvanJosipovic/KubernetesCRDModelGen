@@ -84,11 +84,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   transitGatewayCidrBlocks:
                     description: One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vpnEcmpSupport:
                     description: 'Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: disable, enable. Default value: enable.'
                     type: string
@@ -124,11 +126,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   transitGatewayCidrBlocks:
                     description: One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vpnEcmpSupport:
                     description: 'Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: disable, enable. Default value: enable.'
                     type: string
@@ -292,16 +296,19 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   transitGatewayCidrBlocks:
                     description: One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vpnEcmpSupport:
                     description: 'Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: disable, enable. Default value: enable.'
                     type: string

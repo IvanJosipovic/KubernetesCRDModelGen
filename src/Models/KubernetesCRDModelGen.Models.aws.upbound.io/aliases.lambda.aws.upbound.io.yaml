@@ -131,6 +131,7 @@ spec:
                             type: number
                           description: A map that defines the proportion of events that should be sent to different versions of a lambda function.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                 required:
@@ -154,6 +155,7 @@ spec:
                             type: number
                           description: A map that defines the proportion of events that should be sent to different versions of a lambda function.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                 type: object
@@ -304,6 +306,7 @@ spec:
                             type: number
                           description: A map that defines the proportion of events that should be sent to different versions of a lambda function.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                 type: object

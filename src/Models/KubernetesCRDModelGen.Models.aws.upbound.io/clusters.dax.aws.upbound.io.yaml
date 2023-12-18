@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   clusterEndpointEncryptionType:
                     description: "–  The type of encryption the cluster's endpoint should support. Valid values are: NONE and TLS. Default value is NONE."
                     type: string
@@ -205,6 +206,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   serverSideEncryption:
                     description: Encrypt at rest options
                     items:
@@ -222,6 +224,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -233,6 +236,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   clusterEndpointEncryptionType:
                     description: "–  The type of encryption the cluster's endpoint should support. Valid values are: NONE and TLS. Default value is NONE."
                     type: string
@@ -271,6 +275,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -403,6 +408,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   clusterAddress:
                     description: The DNS name of the DAX cluster without the port appended
                     type: string
@@ -458,6 +464,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   serverSideEncryption:
                     description: Encrypt at rest options
                     items:
@@ -475,11 +482,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

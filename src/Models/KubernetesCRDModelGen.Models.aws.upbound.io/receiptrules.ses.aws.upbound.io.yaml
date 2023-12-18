@@ -126,6 +126,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -281,6 +282,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   ruleSetName:
                     description: The name of the rule set
                     type: string
@@ -557,6 +559,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   ruleSetName:
                     description: The name of the rule set
                     type: string
