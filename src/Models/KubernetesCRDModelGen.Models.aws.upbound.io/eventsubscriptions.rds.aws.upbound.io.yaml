@@ -63,6 +63,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -129,6 +130,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceType:
                     description: The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot. If not set, all sources will be subscribed to.
                     type: string
@@ -137,6 +139,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -151,11 +154,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceIds:
                     description: A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceType:
                     description: The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot. If not set, all sources will be subscribed to.
                     type: string
@@ -164,6 +169,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -297,6 +303,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   id:
                     description: The name of the RDS event notification subscription
                     type: string
@@ -308,6 +315,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceType:
                     description: The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot. If not set, all sources will be subscribed to.
                     type: string
@@ -316,11 +324,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

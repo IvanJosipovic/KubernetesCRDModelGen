@@ -86,6 +86,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               initProvider:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
@@ -104,6 +105,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -251,11 +253,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   uploadDate:
                     description: Date and time in RFC3339 format when the server certificate was uploaded.
                     type: string

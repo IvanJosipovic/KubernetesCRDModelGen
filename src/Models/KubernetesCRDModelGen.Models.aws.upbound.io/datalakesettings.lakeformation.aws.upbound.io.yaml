@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   allowExternalDataFiltering:
                     description: Whether to allow Amazon EMR clusters to access data managed by Lake Formation.
                     type: boolean
@@ -80,6 +81,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         principal:
                           description: Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set principal to IAM_ALLOWED_PRINCIPALS and permissions to ["ALL"].
                           type: string
@@ -94,6 +96,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         principal:
                           description: Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set principal to IAM_ALLOWED_PRINCIPALS and permissions to ["ALL"].
                           type: string
@@ -104,6 +107,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -123,6 +127,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   allowExternalDataFiltering:
                     description: Whether to allow Amazon EMR clusters to access data managed by Lake Formation.
                     type: boolean
@@ -143,6 +148,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         principal:
                           description: Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set principal to IAM_ALLOWED_PRINCIPALS and permissions to ["ALL"].
                           type: string
@@ -157,6 +163,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         principal:
                           description: Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set principal to IAM_ALLOWED_PRINCIPALS and permissions to ["ALL"].
                           type: string
@@ -167,6 +174,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   trustedResourceOwners:
                     description: owning account IDs that the caller's account can use to share their user access details (user ARNs).
                     items:
@@ -296,6 +304,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   allowExternalDataFiltering:
                     description: Whether to allow Amazon EMR clusters to access data managed by Lake Formation.
                     type: boolean
@@ -316,6 +325,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         principal:
                           description: Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set principal to IAM_ALLOWED_PRINCIPALS and permissions to ["ALL"].
                           type: string
@@ -330,6 +340,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         principal:
                           description: Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set principal to IAM_ALLOWED_PRINCIPALS and permissions to ["ALL"].
                           type: string
@@ -340,6 +351,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   id:
                     type: string
                   trustedResourceOwners:

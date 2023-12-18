@@ -176,6 +176,7 @@ spec:
                       type: string
                     description: String to string map of variables.
                     type: object
+                    x-kubernetes-map-type: granular
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -193,6 +194,7 @@ spec:
                       type: string
                     description: String to string map of variables.
                     type: object
+                    x-kubernetes-map-type: granular
                   useDefaults:
                     description: ':  use default (username and clientID) attribute mappings.'
                     type: boolean
@@ -328,6 +330,7 @@ spec:
                       type: string
                     description: String to string map of variables.
                     type: object
+                    x-kubernetes-map-type: granular
                   useDefaults:
                     description: ':  use default (username and clientID) attribute mappings.'
                     type: boolean

@@ -130,6 +130,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   targetIp:
                     description: Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below). This argument should only be specified for FORWARD type rules.
                     items:
@@ -162,6 +163,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   targetIp:
                     description: Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below). This argument should only be specified for FORWARD type rules.
                     items:
@@ -327,11 +329,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   targetIp:
                     description: Configuration block(s) indicating the IPs that you want Resolver to forward DNS queries to (documented below). This argument should only be specified for FORWARD type rules.
                     items:

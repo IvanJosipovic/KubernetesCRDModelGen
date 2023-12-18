@@ -127,6 +127,7 @@ spec:
                       type: string
                     description: Properties associated with this table, as a list of key-value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   partitionIndex:
                     description: Configuration block for a maximum of 3 partition indexes. See partition_index below.
                     items:
@@ -186,6 +187,7 @@ spec:
                                   type: string
                                 description: Key-value pairs defining properties associated with the column.
                                 type: object
+                                x-kubernetes-map-type: granular
                               type:
                                 description: Datatype of data in the Column.
                                 type: string
@@ -211,6 +213,7 @@ spec:
                             type: string
                           description: User-supplied properties in key-value form.
                           type: object
+                          x-kubernetes-map-type: granular
                         schemaReference:
                           description: Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
                           items:
@@ -250,6 +253,7 @@ spec:
                                   type: string
                                 description: Map of initialization parameters for the SerDe, in key-value form.
                                 type: object
+                                x-kubernetes-map-type: granular
                               serializationLibrary:
                                 description: Usually the class that implements the SerDe. An example is org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
                                 type: string
@@ -269,6 +273,7 @@ spec:
                                   type: string
                                 description: List of values that appear so frequently as to be considered skewed.
                                 type: object
+                                x-kubernetes-map-type: granular
                               skewedColumnValues:
                                 description: Map of skewed values to the columns that contain them.
                                 items:
@@ -338,6 +343,7 @@ spec:
                       type: string
                     description: Properties associated with this table, as a list of key-value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   partitionIndex:
                     description: Configuration block for a maximum of 3 partition indexes. See partition_index below.
                     items:
@@ -394,6 +400,7 @@ spec:
                                   type: string
                                 description: Key-value pairs defining properties associated with the column.
                                 type: object
+                                x-kubernetes-map-type: granular
                               type:
                                 description: Datatype of data in the Column.
                                 type: string
@@ -419,6 +426,7 @@ spec:
                             type: string
                           description: User-supplied properties in key-value form.
                           type: object
+                          x-kubernetes-map-type: granular
                         schemaReference:
                           description: Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
                           items:
@@ -458,6 +466,7 @@ spec:
                                   type: string
                                 description: Map of initialization parameters for the SerDe, in key-value form.
                                 type: object
+                                x-kubernetes-map-type: granular
                               serializationLibrary:
                                 description: Usually the class that implements the SerDe. An example is org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
                                 type: string
@@ -477,6 +486,7 @@ spec:
                                   type: string
                                 description: List of values that appear so frequently as to be considered skewed.
                                 type: object
+                                x-kubernetes-map-type: granular
                               skewedColumnValues:
                                 description: Map of skewed values to the columns that contain them.
                                 items:
@@ -661,6 +671,7 @@ spec:
                       type: string
                     description: Properties associated with this table, as a list of key-value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   partitionIndex:
                     description: Configuration block for a maximum of 3 partition indexes. See partition_index below.
                     items:
@@ -719,6 +730,7 @@ spec:
                                   type: string
                                 description: Key-value pairs defining properties associated with the column.
                                 type: object
+                                x-kubernetes-map-type: granular
                               type:
                                 description: Datatype of data in the Column.
                                 type: string
@@ -744,6 +756,7 @@ spec:
                             type: string
                           description: User-supplied properties in key-value form.
                           type: object
+                          x-kubernetes-map-type: granular
                         schemaReference:
                           description: Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
                           items:
@@ -783,6 +796,7 @@ spec:
                                   type: string
                                 description: Map of initialization parameters for the SerDe, in key-value form.
                                 type: object
+                                x-kubernetes-map-type: granular
                               serializationLibrary:
                                 description: Usually the class that implements the SerDe. An example is org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
                                 type: string
@@ -802,6 +816,7 @@ spec:
                                   type: string
                                 description: List of values that appear so frequently as to be considered skewed.
                                 type: object
+                                x-kubernetes-map-type: granular
                               skewedColumnValues:
                                 description: Map of skewed values to the columns that contain them.
                                 items:

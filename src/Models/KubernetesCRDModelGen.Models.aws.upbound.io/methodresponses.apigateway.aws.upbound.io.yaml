@@ -179,11 +179,13 @@ spec:
                       type: string
                     description: Map of the API models used for the response's content type
                     type: object
+                    x-kubernetes-map-type: granular
                   responseParameters:
                     additionalProperties:
                       type: boolean
                     description: 'Map of response parameters that can be sent to the caller. For example: response_parameters = { "method.response.header.X-Some-Header" = true } would define that the header X-Some-Header can be provided on the response.'
                     type: object
+                    x-kubernetes-map-type: granular
                   restApiId:
                     description: ID of the associated REST API
                     type: string
@@ -256,11 +258,13 @@ spec:
                       type: string
                     description: Map of the API models used for the response's content type
                     type: object
+                    x-kubernetes-map-type: granular
                   responseParameters:
                     additionalProperties:
                       type: boolean
                     description: 'Map of response parameters that can be sent to the caller. For example: response_parameters = { "method.response.header.X-Some-Header" = true } would define that the header X-Some-Header can be provided on the response.'
                     type: object
+                    x-kubernetes-map-type: granular
                   statusCode:
                     description: HTTP status code
                     type: string
@@ -399,11 +403,13 @@ spec:
                       type: string
                     description: Map of the API models used for the response's content type
                     type: object
+                    x-kubernetes-map-type: granular
                   responseParameters:
                     additionalProperties:
                       type: boolean
                     description: 'Map of response parameters that can be sent to the caller. For example: response_parameters = { "method.response.header.X-Some-Header" = true } would define that the header X-Some-Header can be provided on the response.'
                     type: object
+                    x-kubernetes-map-type: granular
                   restApiId:
                     description: ID of the associated REST API
                     type: string

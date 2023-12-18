@@ -84,6 +84,7 @@ spec:
                             type: string
                           description: Map of environment variables that are accessible from the function code during execution. If provided at least one key must be present.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   ephemeralStorage:
@@ -328,6 +329,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   reservedConcurrentExecutions:
                     description: Amount of reserved concurrent executions for this lambda function. A value of 0 disables lambda from being triggered and -1 removes any concurrency limitations. Defaults to Unreserved Concurrency Limits -1. See Managing Concurrency
                     type: number
@@ -475,6 +477,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeout:
                     description: Amount of time your Lambda Function has to run in seconds. Defaults to 3. See Limits.
                     type: number
@@ -554,6 +557,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnetIdRefs:
                           description: References to Subnet in ec2 to populate subnetIds.
                           items:
@@ -617,6 +621,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                 required:
@@ -654,6 +659,7 @@ spec:
                             type: string
                           description: Map of environment variables that are accessible from the function code during execution. If provided at least one key must be present.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   ephemeralStorage:
@@ -747,6 +753,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeout:
                     description: Amount of time your Lambda Function has to run in seconds. Defaults to 3. See Limits.
                     type: number
@@ -915,6 +922,7 @@ spec:
                             type: string
                           description: Map of environment variables that are accessible from the function code during execution. If provided at least one key must be present.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   ephemeralStorage:
@@ -1002,6 +1010,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   reservedConcurrentExecutions:
                     description: Amount of reserved concurrent executions for this lambda function. A value of 0 disables lambda from being triggered and -1 removes any concurrency limitations. Defaults to Unreserved Concurrency Limits -1. See Managing Concurrency
                     type: number
@@ -1051,11 +1060,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeout:
                     description: Amount of time your Lambda Function has to run in seconds. Defaults to 3. See Limits.
                     type: number
@@ -1080,11 +1091,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnetIds:
                           description: List of subnet IDs associated with the Lambda function.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         vpcId:
                           description: ID of the VPC.
                           type: string

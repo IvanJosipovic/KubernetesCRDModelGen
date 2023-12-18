@@ -193,6 +193,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         includeManagementEvents:
                           description: Whether to include management events for your trail. Defaults to true.
                           type: boolean
@@ -349,6 +350,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -435,6 +437,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         includeManagementEvents:
                           description: Whether to include management events for your trail. Defaults to true.
                           type: boolean
@@ -472,6 +475,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -677,6 +681,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         includeManagementEvents:
                           description: Whether to include management events for your trail. Defaults to true.
                           type: boolean
@@ -726,11 +731,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

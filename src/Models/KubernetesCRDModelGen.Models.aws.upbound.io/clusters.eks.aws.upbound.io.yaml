@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   encryptionConfig:
                     description: Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
                     items:
@@ -78,6 +79,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   kubernetesNetworkConfig:
@@ -113,6 +115,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   region:
@@ -181,6 +184,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   version:
                     description: –  Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.
                     type: string
@@ -199,6 +203,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         securityGroupIdRefs:
                           description: References to SecurityGroup in ec2 to populate securityGroupIds.
                           items:
@@ -262,6 +267,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnetIdRefs:
                           description: References to Subnet in ec2 to populate subnetIds.
                           items:
@@ -325,6 +331,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                 required:
@@ -338,6 +345,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   encryptionConfig:
                     description: Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
                     items:
@@ -356,6 +364,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   kubernetesNetworkConfig:
@@ -391,6 +400,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   tags:
@@ -398,6 +408,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   version:
                     description: –  Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.
                     type: string
@@ -416,6 +427,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                 type: object
@@ -563,6 +575,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   encryptionConfig:
                     description: Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
                     items:
@@ -581,6 +594,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   endpoint:
@@ -640,6 +654,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   platformVersion:
@@ -656,11 +671,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   version:
                     description: –  Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.
                     type: string
@@ -682,16 +699,19 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         securityGroupIds:
                           description: account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnetIds:
                           description: account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         vpcId:
                           description: ID of the VPC associated with your cluster.
                           type: string

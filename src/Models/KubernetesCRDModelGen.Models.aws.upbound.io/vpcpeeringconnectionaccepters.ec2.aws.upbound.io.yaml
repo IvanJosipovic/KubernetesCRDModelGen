@@ -96,6 +96,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcPeeringConnectionId:
                     description: The VPC Peering Connection ID to manage.
                     type: string
@@ -198,6 +199,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -370,11 +372,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcId:
                     description: The ID of the accepter VPC.
                     type: string

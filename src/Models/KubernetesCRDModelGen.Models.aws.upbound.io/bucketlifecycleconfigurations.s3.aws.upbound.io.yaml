@@ -169,6 +169,7 @@ spec:
                                         type: string
                                       description: Key-value map of resource tags. All of these tags must exist in the object's tag set in order for the rule to apply.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               objectSizeGreaterThan:
@@ -306,6 +307,7 @@ spec:
                                         type: string
                                       description: Key-value map of resource tags. All of these tags must exist in the object's tag set in order for the rule to apply.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               objectSizeGreaterThan:
@@ -565,6 +567,7 @@ spec:
                                         type: string
                                       description: Key-value map of resource tags. All of these tags must exist in the object's tag set in order for the rule to apply.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               objectSizeGreaterThan:

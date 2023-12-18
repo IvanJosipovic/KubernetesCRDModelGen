@@ -64,11 +64,13 @@ spec:
                             type: string
                           description: A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with encryption_context_subset.
                           type: object
+                          x-kubernetes-map-type: granular
                         encryptionContextSubset:
                           additionalProperties:
                             type: string
                           description: A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with encryption_context_equals.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   grantCreationTokens:
@@ -76,6 +78,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   granteePrincipal:
                     description: The principal that is given permission to perform the operations that the grant permits in ARN format.
                     type: string
@@ -200,6 +203,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -224,11 +228,13 @@ spec:
                             type: string
                           description: A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with encryption_context_subset.
                           type: object
+                          x-kubernetes-map-type: granular
                         encryptionContextSubset:
                           additionalProperties:
                             type: string
                           description: A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with encryption_context_equals.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   grantCreationTokens:
@@ -236,6 +242,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   name:
                     description: A friendly name for identifying the grant.
                     type: string
@@ -244,6 +251,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   retireOnDelete:
                     description: (Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants. See RetireGrant for more information.
                     type: boolean
@@ -381,11 +389,13 @@ spec:
                             type: string
                           description: A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with encryption_context_subset.
                           type: object
+                          x-kubernetes-map-type: granular
                         encryptionContextSubset:
                           additionalProperties:
                             type: string
                           description: A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with encryption_context_equals.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   grantCreationTokens:
@@ -393,6 +403,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   grantId:
                     description: The unique identifier for the grant.
                     type: string
@@ -415,6 +426,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   retireOnDelete:
                     description: (Defaults to false, Forces new resources) If set to false (the default) the grants will be revoked upon deletion, and if set to true the grants will try to be retired upon deletion. Note that retiring grants requires special permissions, hence why we default to revoking grants. See RetireGrant for more information.
                     type: boolean

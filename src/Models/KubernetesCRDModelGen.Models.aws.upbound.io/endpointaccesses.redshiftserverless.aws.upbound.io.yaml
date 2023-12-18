@@ -121,6 +121,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vpcSecurityGroupIdRefs:
                     description: References to SecurityGroup in ec2 to populate vpcSecurityGroupIds.
                     items:
@@ -184,6 +185,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   workgroupName:
                     description: The name of the workgroup.
                     type: string
@@ -335,6 +337,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   vpcEndpoint:
                     description: The VPC endpoint or the Redshift Serverless workgroup. See VPC Endpoint below.
                     items:
@@ -370,6 +373,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   workgroupName:
                     description: The name of the workgroup.
                     type: string

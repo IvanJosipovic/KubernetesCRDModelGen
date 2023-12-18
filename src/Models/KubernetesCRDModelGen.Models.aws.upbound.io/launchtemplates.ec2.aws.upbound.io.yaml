@@ -430,11 +430,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         acceleratorNames:
                           description: List of accelerator names. Default is any acclerator.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         acceleratorTotalMemoryMib:
                           description: Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.
                           items:
@@ -452,11 +454,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         allowedInstanceTypes:
                           description: 'List of instance types to apply your specified attributes against. All other instance types are ignored, even if they match your specified attributes. You can use strings with one or more wild cards, represented by an asterisk (*), to allow an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are allowing the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are allowing all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is all instance types.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         bareMetal:
                           description: Indicate whether bare metal instace types should be included, excluded, or required. Default is excluded.
                           type: string
@@ -480,16 +484,19 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         excludedInstanceTypes:
                           description: 'List of instance types to exclude. You can use strings with one or more wild cards, represented by an asterisk (*), to exclude an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are excluding the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are excluding all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is no excluded instance types.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         instanceGenerations:
                           description: List of instance generation names. Default is any generation.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         localStorage:
                           description: Indicate whether instance types with local storage volumes are included, excluded, or required. Default is included.
                           type: string
@@ -498,6 +505,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         memoryGibPerVcpu:
                           description: Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.
                           items:
@@ -671,6 +679,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         ipv4PrefixCount:
                           description: The number of IPv4 prefixes to be automatically assigned to the network interface. Conflicts with ipv4_prefixes
                           type: number
@@ -679,6 +688,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         ipv6AddressCount:
                           description: The number of IPv6 addresses to assign to a network interface. Conflicts with ipv6_addresses
                           type: number
@@ -687,6 +697,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         ipv6PrefixCount:
                           description: The number of IPv6 prefixes to be automatically assigned to the network interface. Conflicts with ipv6_prefixes
                           type: number
@@ -695,6 +706,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         networkCardIndex:
                           description: The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
                           type: number
@@ -822,6 +834,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnetId:
                           description: The VPC Subnet ID to associate.
                           type: string
@@ -996,6 +1009,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tagSpecifications:
                     description: The tags to apply to the resources during launch. See Tag Specifications below for more details.
                     items:
@@ -1008,6 +1022,7 @@ spec:
                             type: string
                           description: A map of tags to assign to the resource.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   tags:
@@ -1015,6 +1030,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   updateDefaultVersion:
                     description: Whether to update Default Version each update. Conflicts with default_version.
                     type: boolean
@@ -1084,6 +1100,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 required:
                 - region
                 type: object
@@ -1290,11 +1307,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         acceleratorNames:
                           description: List of accelerator names. Default is any acclerator.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         acceleratorTotalMemoryMib:
                           description: Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.
                           items:
@@ -1312,11 +1331,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         allowedInstanceTypes:
                           description: 'List of instance types to apply your specified attributes against. All other instance types are ignored, even if they match your specified attributes. You can use strings with one or more wild cards, represented by an asterisk (*), to allow an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are allowing the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are allowing all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is all instance types.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         bareMetal:
                           description: Indicate whether bare metal instace types should be included, excluded, or required. Default is excluded.
                           type: string
@@ -1340,16 +1361,19 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         excludedInstanceTypes:
                           description: 'List of instance types to exclude. You can use strings with one or more wild cards, represented by an asterisk (*), to exclude an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are excluding the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are excluding all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is no excluded instance types.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         instanceGenerations:
                           description: List of instance generation names. Default is any generation.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         localStorage:
                           description: Indicate whether instance types with local storage volumes are included, excluded, or required. Default is included.
                           type: string
@@ -1358,6 +1382,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         memoryGibPerVcpu:
                           description: Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.
                           items:
@@ -1531,6 +1556,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         ipv4PrefixCount:
                           description: The number of IPv4 prefixes to be automatically assigned to the network interface. Conflicts with ipv4_prefixes
                           type: number
@@ -1539,6 +1565,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         ipv6AddressCount:
                           description: The number of IPv6 addresses to assign to a network interface. Conflicts with ipv6_addresses
                           type: number
@@ -1547,6 +1574,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         ipv6PrefixCount:
                           description: The number of IPv6 prefixes to be automatically assigned to the network interface. Conflicts with ipv6_prefixes
                           type: number
@@ -1555,6 +1583,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         networkCardIndex:
                           description: The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
                           type: number
@@ -1623,6 +1652,7 @@ spec:
                             type: string
                           description: A map of tags to assign to the resource.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   tags:
@@ -1630,6 +1660,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   updateDefaultVersion:
                     description: Whether to update Default Version each update. Conflicts with default_version.
                     type: boolean
@@ -1971,11 +2002,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         acceleratorNames:
                           description: List of accelerator names. Default is any acclerator.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         acceleratorTotalMemoryMib:
                           description: Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.
                           items:
@@ -1993,11 +2026,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         allowedInstanceTypes:
                           description: 'List of instance types to apply your specified attributes against. All other instance types are ignored, even if they match your specified attributes. You can use strings with one or more wild cards, represented by an asterisk (*), to allow an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are allowing the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are allowing all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is all instance types.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         bareMetal:
                           description: Indicate whether bare metal instace types should be included, excluded, or required. Default is excluded.
                           type: string
@@ -2021,16 +2056,19 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         excludedInstanceTypes:
                           description: 'List of instance types to exclude. You can use strings with one or more wild cards, represented by an asterisk (*), to exclude an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are excluding the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are excluding all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is no excluded instance types.'
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         instanceGenerations:
                           description: List of instance generation names. Default is any generation.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         localStorage:
                           description: Indicate whether instance types with local storage volumes are included, excluded, or required. Default is included.
                           type: string
@@ -2039,6 +2077,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         memoryGibPerVcpu:
                           description: Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.
                           items:
@@ -2215,6 +2254,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         ipv4PrefixCount:
                           description: The number of IPv4 prefixes to be automatically assigned to the network interface. Conflicts with ipv4_prefixes
                           type: number
@@ -2223,6 +2263,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         ipv6AddressCount:
                           description: The number of IPv6 addresses to assign to a network interface. Conflicts with ipv6_addresses
                           type: number
@@ -2231,6 +2272,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         ipv6PrefixCount:
                           description: The number of IPv6 prefixes to be automatically assigned to the network interface. Conflicts with ipv6_prefixes
                           type: number
@@ -2239,6 +2281,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         networkCardIndex:
                           description: The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
                           type: number
@@ -2253,6 +2296,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnetId:
                           description: The VPC Subnet ID to associate.
                           type: string
@@ -2311,6 +2355,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tagSpecifications:
                     description: The tags to apply to the resources during launch. See Tag Specifications below for more details.
                     items:
@@ -2323,6 +2368,7 @@ spec:
                             type: string
                           description: A map of tags to assign to the resource.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   tags:
@@ -2330,11 +2376,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   updateDefaultVersion:
                     description: Whether to update Default Version each update. Conflicts with default_version.
                     type: boolean
@@ -2346,6 +2394,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               conditions:
                 description: Conditions of the resource.

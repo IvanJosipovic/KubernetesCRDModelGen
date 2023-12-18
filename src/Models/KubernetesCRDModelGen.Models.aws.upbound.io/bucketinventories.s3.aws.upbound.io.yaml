@@ -235,6 +235,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -317,6 +318,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   schedule:
                     description: Specifies the schedule for generating inventory results (documented below).
                     items:
@@ -526,6 +528,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   schedule:
                     description: Specifies the schedule for generating inventory results (documented below).
                     items:

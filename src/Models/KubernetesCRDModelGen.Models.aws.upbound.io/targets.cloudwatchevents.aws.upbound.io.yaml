@@ -128,11 +128,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               subnets:
                                 description: The subnets associated with the task or service.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         orderedPlacementStrategy:
@@ -170,6 +172,7 @@ spec:
                             type: string
                           description: A map of tags to assign to ecs resources.
                           type: object
+                          x-kubernetes-map-type: granular
                         taskCount:
                           description: The number of tasks to create based on the TaskDefinition. Defaults to 1.
                           type: number
@@ -300,6 +303,7 @@ spec:
                             type: string
                           description: Enables you to specify HTTP headers to add to the request.
                           type: object
+                          x-kubernetes-map-type: granular
                         pathParameterValues:
                           description: The list of values that correspond sequentially to any path variables in your endpoint ARN (for example arn:aws:execute-api:us-east-1:123456:myapi/*/POST/pets/*).
                           items:
@@ -310,6 +314,7 @@ spec:
                             type: string
                           description: Represents keys/values of query string parameters that are appended to the invoked endpoint.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   input:
@@ -327,6 +332,7 @@ spec:
                             type: string
                           description: Key value pairs specified in the form of JSONPath (for example, time = $.time)
                           type: object
+                          x-kubernetes-map-type: granular
                         inputTemplate:
                           description: Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes.g., "\"Your string goes here.\\nA new line.\""
                           type: string
@@ -601,11 +607,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               subnets:
                                 description: The subnets associated with the task or service.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         orderedPlacementStrategy:
@@ -643,6 +651,7 @@ spec:
                             type: string
                           description: A map of tags to assign to ecs resources.
                           type: object
+                          x-kubernetes-map-type: granular
                         taskCount:
                           description: The number of tasks to create based on the TaskDefinition. Defaults to 1.
                           type: number
@@ -657,6 +666,7 @@ spec:
                             type: string
                           description: Enables you to specify HTTP headers to add to the request.
                           type: object
+                          x-kubernetes-map-type: granular
                         pathParameterValues:
                           description: The list of values that correspond sequentially to any path variables in your endpoint ARN (for example arn:aws:execute-api:us-east-1:123456:myapi/*/POST/pets/*).
                           items:
@@ -667,6 +677,7 @@ spec:
                             type: string
                           description: Represents keys/values of query string parameters that are appended to the invoked endpoint.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   input:
@@ -684,6 +695,7 @@ spec:
                             type: string
                           description: Key value pairs specified in the form of JSONPath (for example, time = $.time)
                           type: object
+                          x-kubernetes-map-type: granular
                         inputTemplate:
                           description: Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes.g., "\"Your string goes here.\\nA new line.\""
                           type: string
@@ -955,11 +967,13 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               subnets:
                                 description: The subnets associated with the task or service.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         orderedPlacementStrategy:
@@ -997,6 +1011,7 @@ spec:
                             type: string
                           description: A map of tags to assign to ecs resources.
                           type: object
+                          x-kubernetes-map-type: granular
                         taskCount:
                           description: The number of tasks to create based on the TaskDefinition. Defaults to 1.
                           type: number
@@ -1017,6 +1032,7 @@ spec:
                             type: string
                           description: Enables you to specify HTTP headers to add to the request.
                           type: object
+                          x-kubernetes-map-type: granular
                         pathParameterValues:
                           description: The list of values that correspond sequentially to any path variables in your endpoint ARN (for example arn:aws:execute-api:us-east-1:123456:myapi/*/POST/pets/*).
                           items:
@@ -1027,6 +1043,7 @@ spec:
                             type: string
                           description: Represents keys/values of query string parameters that are appended to the invoked endpoint.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   id:
@@ -1046,6 +1063,7 @@ spec:
                             type: string
                           description: Key value pairs specified in the form of JSONPath (for example, time = $.time)
                           type: object
+                          x-kubernetes-map-type: granular
                         inputTemplate:
                           description: Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes.g., "\"Your string goes here.\\nA new line.\""
                           type: string

@@ -60,6 +60,7 @@ spec:
                       type: string
                     description: An optional mapping that makes up the encryption context.
                     type: object
+                    x-kubernetes-map-type: granular
                   keyId:
                     description: Globally unique key ID for the customer master key.
                     type: string
@@ -149,6 +150,7 @@ spec:
                       type: string
                     description: An optional mapping that makes up the encryption context.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -279,6 +281,7 @@ spec:
                       type: string
                     description: An optional mapping that makes up the encryption context.
                     type: object
+                    x-kubernetes-map-type: granular
                   id:
                     type: string
                   keyId:

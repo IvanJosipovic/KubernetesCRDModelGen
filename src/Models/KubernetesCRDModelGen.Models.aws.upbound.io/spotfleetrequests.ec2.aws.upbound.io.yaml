@@ -229,12 +229,14 @@ spec:
                             type: string
                           description: Key-value map of resource tags.
                           type: object
+                          x-kubernetes-map-type: granular
                         userData:
                           type: string
                         vpcSecurityGroupIds:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         weightedCapacity:
                           description: The capacity added to the fleet by a fulfilled request.
                           type: string
@@ -397,11 +399,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     acceleratorNames:
                                       description: List of accelerator names. Default is any acclerator.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     acceleratorTotalMemoryMib:
                                       description: Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.
                                       items:
@@ -419,11 +423,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     allowedInstanceTypes:
                                       description: 'List of instance types to apply your specified attributes against. All other instance types are ignored, even if they match your specified attributes. You can use strings with one or more wild cards, represented by an asterisk (*), to allow an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are allowing the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are allowing all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is all instance types.'
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     bareMetal:
                                       description: Indicate whether bare metal instace types should be included, excluded, or required. Default is excluded.
                                       type: string
@@ -447,16 +453,19 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     excludedInstanceTypes:
                                       description: 'List of instance types to exclude. You can use strings with one or more wild cards, represented by an asterisk (*), to exclude an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are excluding the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are excluding all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is no excluded instance types.'
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     instanceGenerations:
                                       description: List of instance generation names. Default is any generation.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     localStorage:
                                       description: Indicate whether instance types with local storage volumes are included, excluded, or required. Default is included.
                                       type: string
@@ -465,6 +474,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     memoryGibPerVcpu:
                                       description: Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.
                                       items:
@@ -572,6 +582,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   onDemandAllocationStrategy:
                     description: 'The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: lowestPrice and prioritized. the default is lowestPrice.'
                     type: string
@@ -610,6 +621,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   targetCapacity:
                     description: The number of units to request. You can choose to set the target capacity in terms of instances or a performance characteristic that is important to your application workload, such as vCPUs, memory, or I/O.
                     type: number
@@ -621,6 +633,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   terminateInstancesOnDelete:
                     description: Indicates whether running Spot instances should be terminated when the resource is deleted (and the Spot fleet request cancelled). If no value is specified, the value of the terminate_instances_with_expiration argument is used.
                     type: string
@@ -757,12 +770,14 @@ spec:
                             type: string
                           description: Key-value map of resource tags.
                           type: object
+                          x-kubernetes-map-type: granular
                         userData:
                           type: string
                         vpcSecurityGroupIds:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         weightedCapacity:
                           description: The capacity added to the fleet by a fulfilled request.
                           type: string
@@ -809,11 +824,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     acceleratorNames:
                                       description: List of accelerator names. Default is any acclerator.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     acceleratorTotalMemoryMib:
                                       description: Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.
                                       items:
@@ -831,11 +848,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     allowedInstanceTypes:
                                       description: 'List of instance types to apply your specified attributes against. All other instance types are ignored, even if they match your specified attributes. You can use strings with one or more wild cards, represented by an asterisk (*), to allow an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are allowing the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are allowing all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is all instance types.'
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     bareMetal:
                                       description: Indicate whether bare metal instace types should be included, excluded, or required. Default is excluded.
                                       type: string
@@ -859,16 +878,19 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     excludedInstanceTypes:
                                       description: 'List of instance types to exclude. You can use strings with one or more wild cards, represented by an asterisk (*), to exclude an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are excluding the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are excluding all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is no excluded instance types.'
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     instanceGenerations:
                                       description: List of instance generation names. Default is any generation.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     localStorage:
                                       description: Indicate whether instance types with local storage volumes are included, excluded, or required. Default is included.
                                       type: string
@@ -877,6 +899,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     memoryGibPerVcpu:
                                       description: Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.
                                       items:
@@ -984,6 +1007,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   onDemandAllocationStrategy:
                     description: 'The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: lowestPrice and prioritized. the default is lowestPrice.'
                     type: string
@@ -1019,6 +1043,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   targetCapacity:
                     description: The number of units to request. You can choose to set the target capacity in terms of instances or a performance characteristic that is important to your application workload, such as vCPUs, memory, or I/O.
                     type: number
@@ -1030,6 +1055,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   terminateInstancesOnDelete:
                     description: Indicates whether running Spot instances should be terminated when the resource is deleted (and the Spot fleet request cancelled). If no value is specified, the value of the terminate_instances_with_expiration argument is used.
                     type: string
@@ -1292,12 +1318,14 @@ spec:
                             type: string
                           description: Key-value map of resource tags.
                           type: object
+                          x-kubernetes-map-type: granular
                         userData:
                           type: string
                         vpcSecurityGroupIds:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         weightedCapacity:
                           description: The capacity added to the fleet by a fulfilled request.
                           type: string
@@ -1350,11 +1378,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     acceleratorNames:
                                       description: List of accelerator names. Default is any acclerator.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     acceleratorTotalMemoryMib:
                                       description: Block describing the minimum and maximum total memory of the accelerators. Default is no minimum or maximum.
                                       items:
@@ -1372,11 +1402,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     allowedInstanceTypes:
                                       description: 'List of instance types to apply your specified attributes against. All other instance types are ignored, even if they match your specified attributes. You can use strings with one or more wild cards, represented by an asterisk (*), to allow an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are allowing the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are allowing all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is all instance types.'
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     bareMetal:
                                       description: Indicate whether bare metal instace types should be included, excluded, or required. Default is excluded.
                                       type: string
@@ -1400,16 +1432,19 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     excludedInstanceTypes:
                                       description: 'List of instance types to exclude. You can use strings with one or more wild cards, represented by an asterisk (*), to exclude an instance type, size, or generation. The following are examples: m5.8xlarge, c5*.*, m5a.*, r*, *3*. For example, if you specify c5*, you are excluding the entire C5 instance family, which includes all C5a and C5n instance types. If you specify m5a.*, you are excluding all the M5a instance types, but not the M5n instance types. Maximum of 400 entries in the list; each entry is limited to 30 characters. Default is no excluded instance types.'
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     instanceGenerations:
                                       description: List of instance generation names. Default is any generation.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     localStorage:
                                       description: Indicate whether instance types with local storage volumes are included, excluded, or required. Default is included.
                                       type: string
@@ -1418,6 +1453,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     memoryGibPerVcpu:
                                       description: Block describing the minimum and maximum amount of memory (GiB) per vCPU. Default is no minimum or maximum.
                                       items:
@@ -1525,6 +1561,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   onDemandAllocationStrategy:
                     description: 'The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: lowestPrice and prioritized. the default is lowestPrice.'
                     type: string
@@ -1563,11 +1600,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   targetCapacity:
                     description: The number of units to request. You can choose to set the target capacity in terms of instances or a performance characteristic that is important to your application workload, such as vCPUs, memory, or I/O.
                     type: number
@@ -1579,6 +1618,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   terminateInstancesOnDelete:
                     description: Indicates whether running Spot instances should be terminated when the resource is deleted (and the Spot fleet request cancelled). If no value is specified, the value of the terminate_instances_with_expiration argument is used.
                     type: string

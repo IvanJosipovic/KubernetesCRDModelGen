@@ -66,6 +66,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   name:
                     description: The name of the Profile.
                     type: string
@@ -80,6 +81,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   roleArnsRefs:
                     description: References to Role in iam to populate roleArns.
                     items:
@@ -146,6 +148,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -163,6 +166,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   name:
                     description: The name of the Profile.
                     type: string
@@ -177,6 +181,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -316,6 +321,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   name:
                     description: The name of the Profile.
                     type: string
@@ -327,6 +333,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sessionPolicy:
                     description: A session policy that applies to the trust boundary of the vended session credentials.
                     type: string
@@ -335,11 +342,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

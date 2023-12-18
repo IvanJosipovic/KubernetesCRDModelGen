@@ -70,11 +70,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         favoritePages:
                           description: A list of pages in the CloudWatch RUM console that are to be displayed with a "favorite" icon.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         guestRoleArn:
                           description: The ARN of the guest IAM role that is attached to the Amazon Cognito identity pool that is used to authorize the sending of data to RUM.
                           type: string
@@ -86,6 +88,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         sessionSampleRate:
                           description: Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. Default value is 0.1.
                           type: number
@@ -94,6 +97,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   customEvents:
@@ -119,6 +123,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -140,11 +145,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         favoritePages:
                           description: A list of pages in the CloudWatch RUM console that are to be displayed with a "favorite" icon.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         guestRoleArn:
                           description: The ARN of the guest IAM role that is attached to the Amazon Cognito identity pool that is used to authorize the sending of data to RUM.
                           type: string
@@ -156,6 +163,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         sessionSampleRate:
                           description: Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. Default value is 0.1.
                           type: number
@@ -164,6 +172,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   customEvents:
@@ -186,6 +195,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -323,11 +333,13 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         favoritePages:
                           description: A list of pages in the CloudWatch RUM console that are to be displayed with a "favorite" icon.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         guestRoleArn:
                           description: The ARN of the guest IAM role that is attached to the Amazon Cognito identity pool that is used to authorize the sending of data to RUM.
                           type: string
@@ -339,6 +351,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         sessionSampleRate:
                           description: Specifies the percentage of user sessions to use for RUM data collection. Choosing a higher percentage gives you more data but also incurs more costs. The number you specify is the percentage of user sessions that will be used. Default value is 0.1.
                           type: number
@@ -347,6 +360,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   appMonitorId:
@@ -381,11 +395,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

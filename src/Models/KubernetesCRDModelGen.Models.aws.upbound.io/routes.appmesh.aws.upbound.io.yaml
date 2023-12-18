@@ -220,11 +220,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     httpRetryEvents:
                                       description: 'List of HTTP retry events. Valid values: client-error (HTTP status code 409), gateway-error (HTTP status codes 502, 503, and 504), server-error (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), stream-error (retry on refused stream).'
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     maxRetries:
                                       description: Maximum number of retries.
                                       type: number
@@ -245,6 +247,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               timeout:
@@ -403,6 +406,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     maxRetries:
                                       description: Maximum number of retries.
                                       type: number
@@ -423,6 +427,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               timeout:
@@ -636,6 +641,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     maxRetries:
                                       description: Maximum number of retries.
                                       type: number
@@ -656,6 +662,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               timeout:
@@ -809,6 +816,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   virtualRouterName:
                     description: Name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
                     type: string
@@ -977,11 +985,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     httpRetryEvents:
                                       description: 'List of HTTP retry events. Valid values: client-error (HTTP status code 409), gateway-error (HTTP status codes 502, 503, and 504), server-error (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), stream-error (retry on refused stream).'
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     maxRetries:
                                       description: Maximum number of retries.
                                       type: number
@@ -1002,6 +1012,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               timeout:
@@ -1160,6 +1171,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     maxRetries:
                                       description: Maximum number of retries.
                                       type: number
@@ -1180,6 +1192,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               timeout:
@@ -1335,6 +1348,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     maxRetries:
                                       description: Maximum number of retries.
                                       type: number
@@ -1355,6 +1369,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               timeout:
@@ -1450,6 +1465,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -1696,11 +1712,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     httpRetryEvents:
                                       description: 'List of HTTP retry events. Valid values: client-error (HTTP status code 409), gateway-error (HTTP status codes 502, 503, and 504), server-error (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), stream-error (retry on refused stream).'
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     maxRetries:
                                       description: Maximum number of retries.
                                       type: number
@@ -1721,6 +1739,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               timeout:
@@ -1879,6 +1898,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     maxRetries:
                                       description: Maximum number of retries.
                                       type: number
@@ -1899,6 +1919,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               timeout:
@@ -2057,6 +2078,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     maxRetries:
                                       description: Maximum number of retries.
                                       type: number
@@ -2077,6 +2099,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               timeout:
@@ -2175,11 +2198,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   virtualRouterName:
                     description: Name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
                     type: string

@@ -73,6 +73,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               providerId:
@@ -170,6 +171,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               providerId:
@@ -327,6 +329,7 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                   type: object
                                 type: array
                               providerId:

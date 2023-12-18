@@ -122,21 +122,25 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         allowedMethods:
                           description: Set of HTTP methods that you allow the origin to execute. Valid values are GET, PUT, HEAD, POST, and DELETE.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         allowedOrigins:
                           description: Set of origins you want customers to be able to access the bucket from.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         exposeHeaders:
                           description: Set of headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         id:
                           description: Unique identifier for the rule. The value cannot be longer than 255 characters.
                           type: string
@@ -166,21 +170,25 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         allowedMethods:
                           description: Set of HTTP methods that you allow the origin to execute. Valid values are GET, PUT, HEAD, POST, and DELETE.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         allowedOrigins:
                           description: Set of origins you want customers to be able to access the bucket from.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         exposeHeaders:
                           description: Set of headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         id:
                           description: Unique identifier for the rule. The value cannot be longer than 255 characters.
                           type: string
@@ -326,21 +334,25 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         allowedMethods:
                           description: Set of HTTP methods that you allow the origin to execute. Valid values are GET, PUT, HEAD, POST, and DELETE.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         allowedOrigins:
                           description: Set of origins you want customers to be able to access the bucket from.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         exposeHeaders:
                           description: Set of headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         id:
                           description: Unique identifier for the rule. The value cannot be longer than 255 characters.
                           type: string

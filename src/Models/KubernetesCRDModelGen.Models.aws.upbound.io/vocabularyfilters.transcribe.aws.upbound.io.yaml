@@ -66,6 +66,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vocabularyFilterFileUri:
                     description: The Amazon S3 location (URI) of the text file that contains your custom VocabularyFilter. Conflicts with words argument.
                     type: string
@@ -88,6 +89,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vocabularyFilterFileUri:
                     description: The Amazon S3 location (URI) of the text file that contains your custom VocabularyFilter. Conflicts with words argument.
                     type: string
@@ -235,10 +237,12 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     type: object
+                    x-kubernetes-map-type: granular
                   vocabularyFilterFileUri:
                     description: The Amazon S3 location (URI) of the text file that contains your custom VocabularyFilter. Conflicts with words argument.
                     type: string

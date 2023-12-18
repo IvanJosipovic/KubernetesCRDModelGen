@@ -121,6 +121,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -129,6 +130,7 @@ spec:
                       type: string
                     description: Map of arbitrary keys and values that, when changed, will trigger an update.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -143,11 +145,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   triggers:
                     additionalProperties:
                       type: string
                     description: Map of arbitrary keys and values that, when changed, will trigger an update.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -284,11 +288,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   triggers:
                     additionalProperties:
                       type: string
                     description: Map of arbitrary keys and values that, when changed, will trigger an update.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

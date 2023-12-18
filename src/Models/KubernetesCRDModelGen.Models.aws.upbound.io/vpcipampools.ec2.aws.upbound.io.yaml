@@ -72,6 +72,7 @@ spec:
                       type: string
                     description: Tags that are required for resources that use CIDRs from this IPAM pool. Resources that do not have these tags will not be allowed to allocate space from the pool. If the resources have their tags changed after they have allocated space or if the allocation tagging requirements are changed on the pool, the resource may be marked as noncompliant.
                     type: object
+                    x-kubernetes-map-type: granular
                   autoImport:
                     description: If you include this argument, IPAM automatically imports any VPCs you have in your scope that fall within the CIDR range in the pool.
                     type: boolean
@@ -214,6 +215,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -237,6 +239,7 @@ spec:
                       type: string
                     description: Tags that are required for resources that use CIDRs from this IPAM pool. Resources that do not have these tags will not be allowed to allocate space from the pool. If the resources have their tags changed after they have allocated space or if the allocation tagging requirements are changed on the pool, the resource may be marked as noncompliant.
                     type: object
+                    x-kubernetes-map-type: granular
                   autoImport:
                     description: If you include this argument, IPAM automatically imports any VPCs you have in your scope that fall within the CIDR range in the pool.
                     type: boolean
@@ -260,6 +263,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -399,6 +403,7 @@ spec:
                       type: string
                     description: Tags that are required for resources that use CIDRs from this IPAM pool. Resources that do not have these tags will not be allowed to allocate space from the pool. If the resources have their tags changed after they have allocated space or if the allocation tagging requirements are changed on the pool, the resource may be marked as noncompliant.
                     type: object
+                    x-kubernetes-map-type: granular
                   arn:
                     description: Amazon Resource Name (ARN) of IPAM
                     type: string
@@ -441,11 +446,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

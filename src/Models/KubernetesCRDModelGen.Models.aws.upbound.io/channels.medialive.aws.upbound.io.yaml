@@ -874,11 +874,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     captionDescriptionNames:
                                       description: The names of the caption descriptions used as caption sources for the output.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     outputName:
                                       description: The name used to identify an output.
                                       type: string
@@ -2215,6 +2217,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpc:
                     description: Settings for the VPC outputs.
                     items:
@@ -3058,11 +3061,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     captionDescriptionNames:
                                       description: The names of the caption descriptions used as caption sources for the output.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     outputName:
                                       description: The name used to identify an output.
                                       type: string
@@ -4280,6 +4285,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpc:
                     description: Settings for the VPC outputs.
                     items:
@@ -5255,11 +5261,13 @@ spec:
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     captionDescriptionNames:
                                       description: The names of the caption descriptions used as caption sources for the output.
                                       items:
                                         type: string
                                       type: array
+                                      x-kubernetes-list-type: set
                                     outputName:
                                       description: The name used to identify an output.
                                       type: string
@@ -6486,10 +6494,12 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     type: object
+                    x-kubernetes-map-type: granular
                   vpc:
                     description: Settings for the VPC outputs.
                     items:

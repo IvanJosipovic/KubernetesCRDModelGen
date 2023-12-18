@@ -63,6 +63,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -129,6 +130,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceType:
                     description: 'Type of source for events. Valid values: replication-instance or replication-task'
                     type: string
@@ -137,6 +139,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -151,11 +154,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceIds:
                     description: Ids of sources to listen to.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceType:
                     description: 'Type of source for events. Valid values: replication-instance or replication-task'
                     type: string
@@ -164,6 +169,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -297,6 +303,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   id:
                     type: string
                   snsTopicArn:
@@ -307,6 +314,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   sourceType:
                     description: 'Type of source for events. Valid values: replication-instance or replication-task'
                     type: string
@@ -315,11 +323,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

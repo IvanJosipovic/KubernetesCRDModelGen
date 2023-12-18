@@ -65,6 +65,7 @@ spec:
                       A map of services along with the management preferences for the Region. 
                        WARNING: All parameters are required to be given: EFS, DynamoDB
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceTypeOptInPreference:
                     additionalProperties:
                       type: boolean
@@ -72,6 +73,7 @@ spec:
                       A map of services along with the opt-in preferences for the Region. 
                        WARNING: All parameters are required to be given: EFS, DynamoDB, EBS, EC2, FSx, S3, Aurora, RDS, Storage Gateway, VirtualMachine
                     type: object
+                    x-kubernetes-map-type: granular
                 required:
                 - region
                 type: object
@@ -85,6 +87,7 @@ spec:
                       A map of services along with the management preferences for the Region. 
                        WARNING: All parameters are required to be given: EFS, DynamoDB
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceTypeOptInPreference:
                     additionalProperties:
                       type: boolean
@@ -92,6 +95,7 @@ spec:
                       A map of services along with the opt-in preferences for the Region. 
                        WARNING: All parameters are required to be given: EFS, DynamoDB, EBS, EC2, FSx, S3, Aurora, RDS, Storage Gateway, VirtualMachine
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -224,6 +228,7 @@ spec:
                       A map of services along with the management preferences for the Region. 
                        WARNING: All parameters are required to be given: EFS, DynamoDB
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceTypeOptInPreference:
                     additionalProperties:
                       type: boolean
@@ -231,6 +236,7 @@ spec:
                       A map of services along with the opt-in preferences for the Region. 
                        WARNING: All parameters are required to be given: EFS, DynamoDB, EBS, EC2, FSx, S3, Aurora, RDS, Storage Gateway, VirtualMachine
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

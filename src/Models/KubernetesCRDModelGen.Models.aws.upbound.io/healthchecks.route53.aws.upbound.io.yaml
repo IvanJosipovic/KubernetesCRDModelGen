@@ -63,6 +63,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   cloudwatchAlarmName:
                     description: The name of the CloudWatch alarm.
                     type: string
@@ -162,6 +163,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   requestInterval:
                     description: The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
                     type: number
@@ -179,6 +181,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The protocol to use when performing health checks. Valid values are HTTP, HTTPS, HTTP_STR_MATCH, HTTPS_STR_MATCH, TCP, CALCULATED, CLOUDWATCH_METRIC and RECOVERY_CONTROL.
                     type: string
@@ -196,6 +199,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   cloudwatchAlarmRegion:
                     description: The CloudWatchRegion that the CloudWatch alarm was created in.
                     type: string
@@ -234,6 +238,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   requestInterval:
                     description: The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
                     type: number
@@ -251,6 +256,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The protocol to use when performing health checks. Valid values are HTTP, HTTPS, HTTP_STR_MATCH, HTTPS_STR_MATCH, TCP, CALCULATED, CLOUDWATCH_METRIC and RECOVERY_CONTROL.
                     type: string
@@ -387,6 +393,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   cloudwatchAlarmName:
                     description: The name of the CloudWatch alarm.
                     type: string
@@ -431,6 +438,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   requestInterval:
                     description: The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
                     type: number
@@ -448,11 +456,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The protocol to use when performing health checks. Valid values are HTTP, HTTPS, HTTP_STR_MATCH, HTTPS_STR_MATCH, TCP, CALCULATED, CLOUDWATCH_METRIC and RECOVERY_CONTROL.
                     type: string

@@ -139,6 +139,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The type of network profile to create. Valid values are listed are PRIVATE and CURATED.
                     type: string
@@ -183,6 +184,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The type of network profile to create. Valid values are listed are PRIVATE and CURATED.
                     type: string
@@ -351,11 +353,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The type of network profile to create. Valid values are listed are PRIVATE and CURATED.
                     type: string

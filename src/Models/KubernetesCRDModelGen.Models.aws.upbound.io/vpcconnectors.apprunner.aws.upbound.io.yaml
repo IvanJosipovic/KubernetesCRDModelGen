@@ -121,6 +121,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   subnetRefs:
                     description: References to Subnet in ec2 to populate subnets.
                     items:
@@ -184,11 +185,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tags:
                     additionalProperties:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcConnectorName:
                     description: Name for the VPC connector.
                     type: string
@@ -203,6 +206,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcConnectorName:
                     description: Name for the VPC connector.
                     type: string
@@ -338,6 +342,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   status:
                     description: Current state of the VPC connector. If the status of a connector revision is INACTIVE, it was deleted and can't be used. Inactive connector revisions are permanently removed some time after they are deleted.
                     type: string
@@ -346,16 +351,19 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tags:
                     additionalProperties:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcConnectorName:
                     description: Name for the VPC connector.
                     type: string

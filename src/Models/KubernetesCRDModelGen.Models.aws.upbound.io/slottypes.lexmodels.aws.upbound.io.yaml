@@ -70,6 +70,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         value:
                           description: The value of the slot type. Must be less than or equal to 140 characters in length.
                           type: string
@@ -102,6 +103,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         value:
                           description: The value of the slot type. Must be less than or equal to 140 characters in length.
                           type: string
@@ -253,6 +255,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         value:
                           description: The value of the slot type. Must be less than or equal to 140 characters in length.
                           type: string

@@ -141,6 +141,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeoutInSeconds:
                     description: Maximum time a game session request can remain in the queue.
                     type: number
@@ -175,6 +176,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeoutInSeconds:
                     description: Maximum time a game session request can remain in the queue.
                     type: number
@@ -330,11 +332,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeoutInSeconds:
                     description: Maximum time a game session request can remain in the queue.
                     type: number

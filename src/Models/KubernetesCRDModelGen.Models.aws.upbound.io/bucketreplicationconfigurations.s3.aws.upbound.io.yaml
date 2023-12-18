@@ -336,6 +336,7 @@ spec:
                                         type: string
                                       description: Map of tags (key and value pairs) that identifies a subset of objects to which the rule applies. The rule applies only to objects having all the tags in its tagset.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               prefix:
@@ -520,6 +521,7 @@ spec:
                                         type: string
                                       description: Map of tags (key and value pairs) that identifies a subset of objects to which the rule applies. The rule applies only to objects having all the tags in its tagset.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               prefix:
@@ -815,6 +817,7 @@ spec:
                                         type: string
                                       description: Map of tags (key and value pairs) that identifies a subset of objects to which the rule applies. The rule applies only to objects having all the tags in its tagset.
                                       type: object
+                                      x-kubernetes-map-type: granular
                                   type: object
                                 type: array
                               prefix:

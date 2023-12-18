@@ -63,6 +63,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   allowedOauthFlowsUserPoolClient:
                     description: Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
                     type: boolean
@@ -71,6 +72,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   analyticsConfiguration:
                     description: Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
                     items:
@@ -210,6 +212,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   defaultRedirectUri:
                     description: Default redirect URI. Must be in the list of callback URLs.
                     type: string
@@ -224,6 +227,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   generateSecret:
                     description: Should an application secret be generated.
                     type: boolean
@@ -235,6 +239,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   name:
                     description: Name of the application client.
                     type: string
@@ -246,6 +251,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   refreshTokenValidity:
                     description: Time limit, between 60 minutes and 10 years, after which the refresh token is no longer valid and cannot be used. By default, the unit is days. The unit can be overridden by a value in token_validity_units.refresh_token.
                     type: number
@@ -257,6 +263,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tokenValidityUnits:
                     description: Configuration block for units in which the validity times are represented in. Detailed below.
                     items:
@@ -335,6 +342,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 required:
                 - region
                 type: object
@@ -349,6 +357,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   allowedOauthFlowsUserPoolClient:
                     description: Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
                     type: boolean
@@ -357,6 +366,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   analyticsConfiguration:
                     description: Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
                     items:
@@ -380,6 +390,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   defaultRedirectUri:
                     description: Default redirect URI. Must be in the list of callback URLs.
                     type: string
@@ -394,6 +405,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   generateSecret:
                     description: Should an application secret be generated.
                     type: boolean
@@ -405,6 +417,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   name:
                     description: Name of the application client.
                     type: string
@@ -416,6 +429,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   refreshTokenValidity:
                     description: Time limit, between 60 minutes and 10 years, after which the refresh token is no longer valid and cannot be used. By default, the unit is days. The unit can be overridden by a value in token_validity_units.refresh_token.
                     type: number
@@ -424,6 +438,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tokenValidityUnits:
                     description: Configuration block for units in which the validity times are represented in. Detailed below.
                     items:
@@ -444,6 +459,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               managementPolicies:
                 default:
@@ -574,6 +590,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   allowedOauthFlowsUserPoolClient:
                     description: Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
                     type: boolean
@@ -582,6 +599,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   analyticsConfiguration:
                     description: Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
                     items:
@@ -611,6 +629,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   defaultRedirectUri:
                     description: Default redirect URI. Must be in the list of callback URLs.
                     type: string
@@ -625,6 +644,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   generateSecret:
                     description: Should an application secret be generated.
                     type: boolean
@@ -639,6 +659,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   name:
                     description: Name of the application client.
                     type: string
@@ -650,6 +671,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   refreshTokenValidity:
                     description: Time limit, between 60 minutes and 10 years, after which the refresh token is no longer valid and cannot be used. By default, the unit is days. The unit can be overridden by a value in token_validity_units.refresh_token.
                     type: number
@@ -658,6 +680,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tokenValidityUnits:
                     description: Configuration block for units in which the validity times are represented in. Detailed below.
                     items:
@@ -681,6 +704,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               conditions:
                 description: Conditions of the resource.

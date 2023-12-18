@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   loadBalancer:
                     description: The load balancer to which the policy should be attached.
                     type: string
@@ -132,6 +133,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               managementPolicies:
                 default:
@@ -262,6 +264,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   loadBalancer:
                     description: The load balancer to which the policy should be attached.
                     type: string

@@ -80,6 +80,7 @@ spec:
                       type: string
                     description: execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.
                     type: object
+                    x-kubernetes-map-type: granular
                   description:
                     description: –  Description of the job.
                     type: string
@@ -109,6 +110,7 @@ spec:
                       type: string
                     description: overridable arguments for this job, specified as name-value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   notificationProperty:
                     description: Notification property of the job. Defined below.
                     items:
@@ -190,6 +192,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeout:
                     description: –  The job timeout in minutes. The default is 2880 minutes (48 hours) for glueetl and pythonshell jobs, and null (unlimited) for gluestreaming jobs.
                     type: number
@@ -227,6 +230,7 @@ spec:
                       type: string
                     description: execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.
                     type: object
+                    x-kubernetes-map-type: granular
                   description:
                     description: –  Description of the job.
                     type: string
@@ -256,6 +260,7 @@ spec:
                       type: string
                     description: overridable arguments for this job, specified as name-value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   notificationProperty:
                     description: Notification property of the job. Defined below.
                     items:
@@ -276,6 +281,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeout:
                     description: –  The job timeout in minutes. The default is 2880 minutes (48 hours) for glueetl and pythonshell jobs, and null (unlimited) for gluestreaming jobs.
                     type: number
@@ -432,6 +438,7 @@ spec:
                       type: string
                     description: execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.
                     type: object
+                    x-kubernetes-map-type: granular
                   description:
                     description: –  Description of the job.
                     type: string
@@ -464,6 +471,7 @@ spec:
                       type: string
                     description: overridable arguments for this job, specified as name-value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   notificationProperty:
                     description: Notification property of the job. Defined below.
                     items:
@@ -487,11 +495,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   timeout:
                     description: –  The job timeout in minutes. The default is 2880 minutes (48 hours) for glueetl and pythonshell jobs, and null (unlimited) for gluestreaming jobs.
                     type: number

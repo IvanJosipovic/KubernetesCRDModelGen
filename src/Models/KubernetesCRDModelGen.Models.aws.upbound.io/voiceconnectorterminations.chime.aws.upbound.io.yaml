@@ -60,11 +60,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   cidrAllowList:
                     description: The IP addresses allowed to make calls, in CIDR format.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   cpsLimit:
                     description: The limit on calls per second. Max value based on account service quota. Default value of 1.
                     type: number
@@ -146,11 +148,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   cidrAllowList:
                     description: The IP addresses allowed to make calls, in CIDR format.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   cpsLimit:
                     description: The limit on calls per second. Max value based on account service quota. Default value of 1.
                     type: number
@@ -289,11 +293,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   cidrAllowList:
                     description: The IP addresses allowed to make calls, in CIDR format.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   cpsLimit:
                     description: The limit on calls per second. Max value based on account service quota. Default value of 1.
                     type: number

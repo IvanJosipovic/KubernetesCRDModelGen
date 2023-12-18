@@ -67,6 +67,7 @@ spec:
                             type: string
                           description: Environment variables for the Docker container. A list of key value pairs.
                           type: object
+                          x-kubernetes-map-type: granular
                         image:
                           description: The registry path where the inference code image is stored in Amazon ECR.
                           type: string
@@ -178,6 +179,7 @@ spec:
                             type: string
                           description: Environment variables for the Docker container. A list of key value pairs.
                           type: object
+                          x-kubernetes-map-type: granular
                         image:
                           description: The registry path where the inference code image is stored in Amazon ECR.
                           type: string
@@ -215,6 +217,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcConfig:
                     description: Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
                     items:
@@ -223,10 +226,12 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnets:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                 required:
@@ -247,6 +252,7 @@ spec:
                             type: string
                           description: Environment variables for the Docker container. A list of key value pairs.
                           type: object
+                          x-kubernetes-map-type: granular
                         image:
                           description: The registry path where the inference code image is stored in Amazon ECR.
                           type: string
@@ -300,6 +306,7 @@ spec:
                             type: string
                           description: Environment variables for the Docker container. A list of key value pairs.
                           type: object
+                          x-kubernetes-map-type: granular
                         image:
                           description: The registry path where the inference code image is stored in Amazon ECR.
                           type: string
@@ -334,6 +341,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcConfig:
                     description: Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
                     items:
@@ -342,10 +350,12 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnets:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                 type: object
@@ -482,6 +492,7 @@ spec:
                             type: string
                           description: Environment variables for the Docker container. A list of key value pairs.
                           type: object
+                          x-kubernetes-map-type: granular
                         image:
                           description: The registry path where the inference code image is stored in Amazon ECR.
                           type: string
@@ -540,6 +551,7 @@ spec:
                             type: string
                           description: Environment variables for the Docker container. A list of key value pairs.
                           type: object
+                          x-kubernetes-map-type: granular
                         image:
                           description: The registry path where the inference code image is stored in Amazon ECR.
                           type: string
@@ -574,11 +586,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   vpcConfig:
                     description: Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
                     items:
@@ -587,10 +601,12 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         subnets:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                 type: object

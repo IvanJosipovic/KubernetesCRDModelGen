@@ -252,6 +252,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   toPort:
                     description: The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code.
                     type: number
@@ -281,6 +282,7 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   toPort:
                     description: The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code.
                     type: number
@@ -443,11 +445,13 @@ spec:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
+                    x-kubernetes-map-type: granular
                   tagsAll:
                     additionalProperties:
                       type: string
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
+                    x-kubernetes-map-type: granular
                   toPort:
                     description: The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code.
                     type: number
