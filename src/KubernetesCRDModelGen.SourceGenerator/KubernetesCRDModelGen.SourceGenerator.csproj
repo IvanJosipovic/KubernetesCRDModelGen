@@ -37,8 +37,8 @@
         <PackageReference Include="Fractions" Version="7.3.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGFractions)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="KubernetesClient.Models" Version="12.0.16" GeneratePathProperty="true" PrivateAssets="all" />
-        <None Include="$(PKGKubernetesClient_Models)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+        <PackageReference Include="KubernetesClient.Classic" Version="12.1.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGKubernetesClient_Classic)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
@@ -64,7 +64,7 @@
         <ItemGroup>
             <TargetPathWithTargetPlatformMoniker Include="$(PKGCsCodeGenerator)\lib\netstandard2.0\CsCodeGenerator.dll" IncludeRuntimeDependency="false" />
             <TargetPathWithTargetPlatformMoniker Include="$(PKGFractions)\lib\netstandard2.0\Fractions.dll" IncludeRuntimeDependency="false" />
-            <TargetPathWithTargetPlatformMoniker Include="$(PKGKubernetesClient_Models)\lib\netstandard2.0\KubernetesClient.Models.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGKubernetesClient_Classic)\lib\netstandard2.0\KubernetesClient.Classic.dll" IncludeRuntimeDependency="false" />
             <TargetPathWithTargetPlatformMoniker Include="$(PKGMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll" IncludeRuntimeDependency="false" />
             <TargetPathWithTargetPlatformMoniker Include="$(PKGMicrosoft_Extensions_Logging_Abstractions)\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll" IncludeRuntimeDependency="false" />
             <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Text_Encodings_Web)\lib\netstandard2.0\System.Text.Encodings.Web.dll" IncludeRuntimeDependency="false" />
