@@ -30,6 +30,19 @@
         <ProjectReference Include="..\KubernetesCRDModelGen.Models\KubernetesCRDModelGen.Models.csproj" PrivateAssets="All" />
     </ItemGroup>
 
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
+        <ItemGroup>
+            <PackageReference Include="KubernetesClient.Classic" Version="12.1.1" />
+        </ItemGroup>
+    </When>
+    <Otherwise>
+        <ItemGroup>
+            <PackageReference Include="KubernetesClient" Version="12.1.1" />
+        </ItemGroup>
+    </Otherwise>
+  </Choose>
+
     <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
         <ItemGroup>
             <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient'  Or '%(ReferencePath.Filename)' == 'KubernetesClient.Classic' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'KubernetesCRDModelGen.Models')" />
