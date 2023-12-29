@@ -60,6 +60,7 @@ spec:
                       type: string
                     description: A map of additional properties to associate with the Data Factory Binary Dataset.
                     type: object
+                    x-kubernetes-map-type: granular
                   annotations:
                     description: List of tags that can be used for describing the Data Factory Binary Dataset.
                     items:
@@ -249,6 +250,7 @@ spec:
                       type: string
                     description: Specifies a list of parameters to associate with the Data Factory Binary Dataset.
                     type: object
+                    x-kubernetes-map-type: granular
                   sftpServerLocation:
                     description: A sftp_server_location block as defined below.
                     items:
@@ -276,6 +278,7 @@ spec:
                       type: string
                     description: A map of additional properties to associate with the Data Factory Binary Dataset.
                     type: object
+                    x-kubernetes-map-type: granular
                   annotations:
                     description: List of tags that can be used for describing the Data Factory Binary Dataset.
                     items:
@@ -344,11 +347,70 @@ spec:
                           type: string
                       type: object
                     type: array
+                  linkedServiceName:
+                    description: The Data Factory Linked Service name in which to associate the Binary Dataset with.
+                    type: string
+                  linkedServiceNameRef:
+                    description: Reference to a LinkedServiceSFTP in datafactory to populate linkedServiceName.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  linkedServiceNameSelector:
+                    description: Selector for a LinkedServiceSFTP in datafactory to populate linkedServiceName.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   parameters:
                     additionalProperties:
                       type: string
                     description: Specifies a list of parameters to associate with the Data Factory Binary Dataset.
                     type: object
+                    x-kubernetes-map-type: granular
                   sftpServerLocation:
                     description: A sftp_server_location block as defined below.
                     items:
@@ -491,6 +553,7 @@ spec:
                       type: string
                     description: A map of additional properties to associate with the Data Factory Binary Dataset.
                     type: object
+                    x-kubernetes-map-type: granular
                   annotations:
                     description: List of tags that can be used for describing the Data Factory Binary Dataset.
                     items:
@@ -573,6 +636,7 @@ spec:
                       type: string
                     description: Specifies a list of parameters to associate with the Data Factory Binary Dataset.
                     type: object
+                    x-kubernetes-map-type: granular
                   sftpServerLocation:
                     description: A sftp_server_location block as defined below.
                     items:

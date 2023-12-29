@@ -139,6 +139,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the Attestation Provider.
                     type: object
+                    x-kubernetes-map-type: granular
                   tpmPolicyBase64:
                     description: Specifies the base64 URI Encoded RFC 7519 JWT that should be used for the TPM Policy.
                     type: string
@@ -172,6 +173,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the Attestation Provider.
                     type: object
+                    x-kubernetes-map-type: granular
                   tpmPolicyBase64:
                     description: Specifies the base64 URI Encoded RFC 7519 JWT that should be used for the TPM Policy.
                     type: string
@@ -332,6 +334,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the Attestation Provider.
                     type: object
+                    x-kubernetes-map-type: granular
                   tpmPolicyBase64:
                     description: Specifies the base64 URI Encoded RFC 7519 JWT that should be used for the TPM Policy.
                     type: string

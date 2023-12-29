@@ -124,6 +124,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the SAS Definition. Changing this forces a new resource to be created.
                     type: object
+                    x-kubernetes-map-type: granular
                   validityPeriod:
                     description: Validity period of SAS token. Value needs to be in ISO 8601 duration format.
                     type: string
@@ -142,6 +143,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the SAS Definition. Changing this forces a new resource to be created.
                     type: object
+                    x-kubernetes-map-type: granular
                   validityPeriod:
                     description: Validity period of SAS token. Value needs to be in ISO 8601 duration format.
                     type: string
@@ -291,6 +293,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the SAS Definition. Changing this forces a new resource to be created.
                     type: object
+                    x-kubernetes-map-type: granular
                   validityPeriod:
                     description: Validity period of SAS token. Value needs to be in ISO 8601 duration format.
                     type: string

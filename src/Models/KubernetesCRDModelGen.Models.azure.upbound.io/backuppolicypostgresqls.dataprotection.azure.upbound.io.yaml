@@ -137,21 +137,25 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               monthsOfYear:
                                 description: Possible values are January, February, March, April, May, June, July, August, September, October, November and December. Changing this forces a new Backup Policy PostgreSQL to be created.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               scheduledBackupTimes:
                                 description: Specifies a list of backup times for backup in the RFC3339 format. Changing this forces a new Backup Policy PostgreSQL to be created.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               weeksOfMonth:
                                 description: Possible values are First, Second, Third, Fourth and Last. Changing this forces a new Backup Policy PostgreSQL to be created.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         duration:
@@ -251,21 +255,25 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               monthsOfYear:
                                 description: Possible values are January, February, March, April, May, June, July, August, September, October, November and December. Changing this forces a new Backup Policy PostgreSQL to be created.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               scheduledBackupTimes:
                                 description: Specifies a list of backup times for backup in the RFC3339 format. Changing this forces a new Backup Policy PostgreSQL to be created.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               weeksOfMonth:
                                 description: Possible values are First, Second, Third, Fourth and Last. Changing this forces a new Backup Policy PostgreSQL to be created.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         duration:
@@ -433,21 +441,25 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               monthsOfYear:
                                 description: Possible values are January, February, March, April, May, June, July, August, September, October, November and December. Changing this forces a new Backup Policy PostgreSQL to be created.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               scheduledBackupTimes:
                                 description: Specifies a list of backup times for backup in the RFC3339 format. Changing this forces a new Backup Policy PostgreSQL to be created.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               weeksOfMonth:
                                 description: Possible values are First, Second, Third, Fourth and Last. Changing this forces a new Backup Policy PostgreSQL to be created.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         duration:

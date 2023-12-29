@@ -117,6 +117,7 @@ spec:
                       type: string
                     description: A mapping of properties to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceGroupName:
                     description: The name of the Resource Group where the Maintenance Configuration should exist. Changing this forces a new resource to be created.
                     type: string
@@ -183,6 +184,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource. The key could not contain upper case letter.
                     type: object
+                    x-kubernetes-map-type: granular
                   visibility:
                     description: The visibility of the Maintenance Configuration. The only allowable value is Custom.
                     type: string
@@ -273,6 +275,7 @@ spec:
                       type: string
                     description: A mapping of properties to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   scope:
                     description: The scope of the Maintenance Configuration. Possible values are Extension, Host, InGuestPatch, OSImage, SQLDB or SQLManagedInstance.
                     type: string
@@ -281,6 +284,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource. The key could not contain upper case letter.
                     type: object
+                    x-kubernetes-map-type: granular
                   visibility:
                     description: The visibility of the Maintenance Configuration. The only allowable value is Custom.
                     type: string
@@ -494,6 +498,7 @@ spec:
                       type: string
                     description: A mapping of properties to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceGroupName:
                     description: The name of the Resource Group where the Maintenance Configuration should exist. Changing this forces a new resource to be created.
                     type: string
@@ -505,6 +510,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource. The key could not contain upper case letter.
                     type: object
+                    x-kubernetes-map-type: granular
                   visibility:
                     description: The visibility of the Maintenance Configuration. The only allowable value is Custom.
                     type: string

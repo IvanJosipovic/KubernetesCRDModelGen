@@ -130,6 +130,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   ttl:
                     description: The Time To Live (TTL) of the DNS record in seconds.
                     type: number
@@ -212,6 +213,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   ttl:
                     description: The Time To Live (TTL) of the DNS record in seconds.
                     type: number
@@ -365,6 +367,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   ttl:
                     description: The Time To Live (TTL) of the DNS record in seconds.
                     type: number

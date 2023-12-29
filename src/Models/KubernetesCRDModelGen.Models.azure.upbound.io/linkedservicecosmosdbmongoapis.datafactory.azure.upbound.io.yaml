@@ -60,6 +60,7 @@ spec:
                       type: string
                     description: A map of additional properties to associate with the Data Factory Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   annotations:
                     description: List of tags that can be used for describing the Data Factory Linked Service.
                     items:
@@ -154,6 +155,7 @@ spec:
                       type: string
                     description: A map of parameters to associate with the Data Factory Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   serverVersionIs32OrHigher:
                     description: Whether API server version is 3.2 or higher. Defaults to false.
                     type: boolean
@@ -166,6 +168,7 @@ spec:
                       type: string
                     description: A map of additional properties to associate with the Data Factory Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   annotations:
                     description: List of tags that can be used for describing the Data Factory Linked Service.
                     items:
@@ -185,6 +188,7 @@ spec:
                       type: string
                     description: A map of parameters to associate with the Data Factory Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   serverVersionIs32OrHigher:
                     description: Whether API server version is 3.2 or higher. Defaults to false.
                     type: boolean
@@ -312,6 +316,7 @@ spec:
                       type: string
                     description: A map of additional properties to associate with the Data Factory Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   annotations:
                     description: List of tags that can be used for describing the Data Factory Linked Service.
                     items:
@@ -337,6 +342,7 @@ spec:
                       type: string
                     description: A map of parameters to associate with the Data Factory Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   serverVersionIs32OrHigher:
                     description: Whether API server version is 3.2 or higher. Defaults to false.
                     type: boolean

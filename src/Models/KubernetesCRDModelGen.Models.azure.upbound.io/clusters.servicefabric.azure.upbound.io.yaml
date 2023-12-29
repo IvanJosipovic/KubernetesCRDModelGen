@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   azureActiveDirectory:
                     description: An azure_active_directory block as defined below.
                     items:
@@ -174,6 +175,7 @@ spec:
                             type: string
                           description: A map containing settings for the specified Fabric Setting.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   location:
@@ -203,6 +205,7 @@ spec:
                             type: string
                           description: The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
                           type: object
+                          x-kubernetes-map-type: granular
                         clientEndpointPort:
                           description: The Port used for the Client Endpoint for this Node Type.
                           type: number
@@ -244,6 +247,7 @@ spec:
                             type: string
                           description: The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
                           type: object
+                          x-kubernetes-map-type: granular
                         reverseProxyEndpointPort:
                           description: The Port used for the Reverse Proxy Endpoint for this Node Type. Changing this will upgrade the cluster.
                           type: number
@@ -354,6 +358,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   upgradeMode:
                     description: Specifies the Upgrade Mode of the cluster. Possible values are Automatic or Manual.
                     type: string
@@ -426,6 +431,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   azureActiveDirectory:
                     description: An azure_active_directory block as defined below.
                     items:
@@ -540,6 +546,7 @@ spec:
                             type: string
                           description: A map containing settings for the specified Fabric Setting.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   location:
@@ -569,6 +576,7 @@ spec:
                             type: string
                           description: The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
                           type: object
+                          x-kubernetes-map-type: granular
                         clientEndpointPort:
                           description: The Port used for the Client Endpoint for this Node Type.
                           type: number
@@ -610,6 +618,7 @@ spec:
                             type: string
                           description: The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
                           type: object
+                          x-kubernetes-map-type: granular
                         reverseProxyEndpointPort:
                           description: The Port used for the Reverse Proxy Endpoint for this Node Type. Changing this will upgrade the cluster.
                           type: number
@@ -662,6 +671,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   upgradeMode:
                     description: Specifies the Upgrade Mode of the cluster. Possible values are Automatic or Manual.
                     type: string
@@ -862,6 +872,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   azureActiveDirectory:
                     description: An azure_active_directory block as defined below.
                     items:
@@ -979,6 +990,7 @@ spec:
                             type: string
                           description: A map containing settings for the specified Fabric Setting.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   id:
@@ -1011,6 +1023,7 @@ spec:
                             type: string
                           description: The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
                           type: object
+                          x-kubernetes-map-type: granular
                         clientEndpointPort:
                           description: The Port used for the Client Endpoint for this Node Type.
                           type: number
@@ -1052,6 +1065,7 @@ spec:
                             type: string
                           description: The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
                           type: object
+                          x-kubernetes-map-type: granular
                         reverseProxyEndpointPort:
                           description: The Port used for the Reverse Proxy Endpoint for this Node Type. Changing this will upgrade the cluster.
                           type: number
@@ -1107,6 +1121,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   upgradeMode:
                     description: Specifies the Upgrade Mode of the cluster. Possible values are Automatic or Manual.
                     type: string

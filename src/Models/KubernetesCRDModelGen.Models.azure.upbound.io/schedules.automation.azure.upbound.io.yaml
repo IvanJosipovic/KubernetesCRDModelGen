@@ -130,6 +130,7 @@ spec:
                     items:
                       type: number
                     type: array
+                    x-kubernetes-list-type: set
                   monthlyOccurrence:
                     description: List of monthly_occurrence blocks as defined below to specifies occurrences of days within a month. Only valid when frequency is Month. The monthly_occurrence block supports fields documented below.
                     items:
@@ -211,6 +212,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               initProvider:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
@@ -232,6 +234,7 @@ spec:
                     items:
                       type: number
                     type: array
+                    x-kubernetes-list-type: set
                   monthlyOccurrence:
                     description: List of monthly_occurrence blocks as defined below to specifies occurrences of days within a month. Only valid when frequency is Month. The monthly_occurrence block supports fields documented below.
                     items:
@@ -255,6 +258,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               managementPolicies:
                 default:
@@ -400,6 +404,7 @@ spec:
                     items:
                       type: number
                     type: array
+                    x-kubernetes-list-type: set
                   monthlyOccurrence:
                     description: List of monthly_occurrence blocks as defined below to specifies occurrences of days within a month. Only valid when frequency is Month. The monthly_occurrence block supports fields documented below.
                     items:
@@ -426,6 +431,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               conditions:
                 description: Conditions of the resource.

@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
@@ -150,6 +151,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
                     type: object
+                    x-kubernetes-map-type: granular
                   tenantId:
                     description: The Azure Active Directory Tenant ID that should be used for authenticating requests to the key vault Managed Hardware Security Module. Changing this forces a new resource to be created.
                     type: string
@@ -162,6 +164,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
@@ -194,6 +197,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
                     type: object
+                    x-kubernetes-map-type: granular
                   tenantId:
                     description: The Azure Active Directory Tenant ID that should be used for authenticating requests to the key vault Managed Hardware Security Module. Changing this forces a new resource to be created.
                     type: string
@@ -330,6 +334,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   hsmUri:
                     description: The URI of the Key Vault Managed Hardware Security Module, used for performing operations on keys.
                     type: string
@@ -371,6 +376,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
                     type: object
+                    x-kubernetes-map-type: granular
                   tenantId:
                     description: The Azure Active Directory Tenant ID that should be used for authenticating requests to the key vault Managed Hardware Security Module. Changing this forces a new resource to be created.
                     type: string

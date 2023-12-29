@@ -63,6 +63,7 @@ spec:
                       type: string
                     description: Specifies a Map of Key-Value Pairs that should be sent to the uri when this HTTP Action is triggered.
                     type: object
+                    x-kubernetes-map-type: granular
                   logicAppId:
                     description: Specifies the ID of the Logic App Workflow. Changing this forces a new resource to be created.
                     type: string
@@ -129,6 +130,7 @@ spec:
                       type: string
                     description: Specifies a Map of Key-Value Pairs that should be sent to the uri when this HTTP Action is triggered.
                     type: object
+                    x-kubernetes-map-type: granular
                   runAfter:
                     description: Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A run_after block is as defined below.
                     items:
@@ -156,6 +158,7 @@ spec:
                       type: string
                     description: Specifies a Map of Key-Value Pairs that should be sent to the uri when this HTTP Action is triggered.
                     type: object
+                    x-kubernetes-map-type: granular
                   method:
                     description: Specifies the HTTP Method which should be used for this HTTP Action. Possible values include DELETE, GET, PATCH, POST and PUT.
                     type: string
@@ -164,6 +167,7 @@ spec:
                       type: string
                     description: Specifies a Map of Key-Value Pairs that should be sent to the uri when this HTTP Action is triggered.
                     type: object
+                    x-kubernetes-map-type: granular
                   runAfter:
                     description: Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A run_after block is as defined below.
                     items:
@@ -311,6 +315,7 @@ spec:
                       type: string
                     description: Specifies a Map of Key-Value Pairs that should be sent to the uri when this HTTP Action is triggered.
                     type: object
+                    x-kubernetes-map-type: granular
                   id:
                     description: The ID of the HTTP Action within the Logic App Workflow.
                     type: string
@@ -325,6 +330,7 @@ spec:
                       type: string
                     description: Specifies a Map of Key-Value Pairs that should be sent to the uri when this HTTP Action is triggered.
                     type: object
+                    x-kubernetes-map-type: granular
                   runAfter:
                     description: Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A run_after block is as defined below.
                     items:

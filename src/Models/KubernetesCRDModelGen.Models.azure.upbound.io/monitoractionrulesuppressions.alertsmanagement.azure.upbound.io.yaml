@@ -71,6 +71,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         alertRuleId:
@@ -85,6 +86,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         description:
@@ -99,6 +101,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         monitor:
@@ -113,6 +116,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         monitorService:
@@ -127,6 +131,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         severity:
@@ -141,6 +146,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         targetResourceType:
@@ -155,6 +161,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -232,6 +239,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         type:
                           description: Specifies the type of target scope. Possible values are ResourceGroup and Resource.
                           type: string
@@ -256,11 +264,13 @@ spec:
                                 items:
                                   type: number
                                 type: array
+                                x-kubernetes-list-type: set
                               recurrenceWeekly:
                                 description: specifies the list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               startDateUtc:
                                 description: specifies the recurrence UTC start datetime (Y-m-d'T'H:M:S'Z').
                                 type: string
@@ -273,6 +283,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               initProvider:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
@@ -293,6 +304,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         alertRuleId:
@@ -307,6 +319,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         description:
@@ -321,6 +334,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         monitor:
@@ -335,6 +349,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         monitorService:
@@ -349,6 +364,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         severity:
@@ -363,6 +379,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         targetResourceType:
@@ -377,6 +394,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -396,6 +414,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         type:
                           description: Specifies the type of target scope. Possible values are ResourceGroup and Resource.
                           type: string
@@ -420,11 +439,13 @@ spec:
                                 items:
                                   type: number
                                 type: array
+                                x-kubernetes-list-type: set
                               recurrenceWeekly:
                                 description: specifies the list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               startDateUtc:
                                 description: specifies the recurrence UTC start datetime (Y-m-d'T'H:M:S'Z').
                                 type: string
@@ -437,6 +458,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -575,6 +597,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         alertRuleId:
@@ -589,6 +612,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         description:
@@ -603,6 +627,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         monitor:
@@ -617,6 +642,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         monitorService:
@@ -631,6 +657,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         severity:
@@ -645,6 +672,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         targetResourceType:
@@ -659,6 +687,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -684,6 +713,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         type:
                           description: Specifies the type of target scope. Possible values are ResourceGroup and Resource.
                           type: string
@@ -708,11 +738,13 @@ spec:
                                 items:
                                   type: number
                                 type: array
+                                x-kubernetes-list-type: set
                               recurrenceWeekly:
                                 description: specifies the list of dayOfWeek to recurrence. Possible values are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday.
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               startDateUtc:
                                 description: specifies the recurrence UTC start datetime (Y-m-d'T'H:M:S'Z').
                                 type: string
@@ -725,6 +757,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

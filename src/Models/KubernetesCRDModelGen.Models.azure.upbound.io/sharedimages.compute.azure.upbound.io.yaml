@@ -75,6 +75,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   endOfLifeDate:
                     description: The end of life date in RFC3339 format of the Image.
                     type: string
@@ -262,6 +263,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the Shared Image.
                     type: object
+                    x-kubernetes-map-type: granular
                   trustedLaunchEnabled:
                     description: Specifies if Trusted Launch has to be enabled for the Virtual Machine created from the Shared Image. Changing this forces a new resource to be created.
                     type: boolean
@@ -289,6 +291,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   endOfLifeDate:
                     description: The end of life date in RFC3339 format of the Image.
                     type: string
@@ -360,6 +363,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the Shared Image.
                     type: object
+                    x-kubernetes-map-type: granular
                   trustedLaunchEnabled:
                     description: Specifies if Trusted Launch has to be enabled for the Virtual Machine created from the Shared Image. Changing this forces a new resource to be created.
                     type: boolean
@@ -509,6 +513,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   endOfLifeDate:
                     description: The end of life date in RFC3339 format of the Image.
                     type: string
@@ -589,6 +594,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the Shared Image.
                     type: object
+                    x-kubernetes-map-type: granular
                   trustedLaunchEnabled:
                     description: Specifies if Trusted Launch has to be enabled for the Virtual Machine created from the Shared Image. Changing this forces a new resource to be created.
                     type: boolean

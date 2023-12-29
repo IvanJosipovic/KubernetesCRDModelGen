@@ -63,6 +63,7 @@ spec:
                       type: string
                     description: A mapping of MetaData for this Container. All metadata keys should be lowercase.
                     type: object
+                    x-kubernetes-map-type: granular
                   storageAccountName:
                     description: The name of the Storage Account where the Container should be created. Changing this forces a new resource to be created.
                     type: string
@@ -133,6 +134,7 @@ spec:
                       type: string
                     description: A mapping of MetaData for this Container. All metadata keys should be lowercase.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -269,6 +271,7 @@ spec:
                       type: string
                     description: A mapping of MetaData for this Container. All metadata keys should be lowercase.
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceManagerId:
                     description: The Resource Manager ID of this Storage Container.
                     type: string

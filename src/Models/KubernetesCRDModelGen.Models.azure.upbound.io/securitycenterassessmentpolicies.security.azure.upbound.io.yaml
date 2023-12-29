@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: The description of the Security Center Assessment.
                     type: string
@@ -80,6 +81,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   userImpact:
                     description: The user impact of the Security Center Assessment. Possible values are Low, Moderate and High.
                     type: string
@@ -92,6 +94,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: The description of the Security Center Assessment.
                     type: string
@@ -112,6 +115,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   userImpact:
                     description: The user impact of the Security Center Assessment. Possible values are Low, Moderate and High.
                     type: string
@@ -244,6 +248,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   description:
                     description: The description of the Security Center Assessment.
                     type: string
@@ -270,6 +275,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   userImpact:
                     description: The user impact of the Security Center Assessment. Possible values are Low, Moderate and High.
                     type: string

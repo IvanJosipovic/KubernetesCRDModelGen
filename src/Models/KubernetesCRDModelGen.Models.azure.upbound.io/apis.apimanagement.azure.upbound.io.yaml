@@ -194,6 +194,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         openidProviderName:
                           description: OpenID Connect provider identifier. The name of an OpenID Connect Provider.
                           type: string
@@ -207,6 +208,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   resourceGroupName:
                     description: The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
                     type: string
@@ -392,6 +394,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         openidProviderName:
                           description: OpenID Connect provider identifier. The name of an OpenID Connect Provider.
                           type: string
@@ -405,6 +408,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   revision:
                     description: The Revision which used for this API. Changing this forces a new resource to be created.
                     type: string
@@ -662,6 +666,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         openidProviderName:
                           description: OpenID Connect provider identifier. The name of an OpenID Connect Provider.
                           type: string
@@ -675,6 +680,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   resourceGroupName:
                     description: The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
                     type: string
