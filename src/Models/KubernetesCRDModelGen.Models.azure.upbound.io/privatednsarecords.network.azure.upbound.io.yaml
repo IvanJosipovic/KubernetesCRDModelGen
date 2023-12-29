@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   resourceGroupName:
                     description: Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
                     type: string
@@ -123,6 +124,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   ttl:
                     description: The Time To Live (TTL) of the DNS record in seconds.
                     type: number
@@ -193,11 +195,13 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   tags:
                     additionalProperties:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   ttl:
                     description: The Time To Live (TTL) of the DNS record in seconds.
                     type: number
@@ -336,6 +340,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   resourceGroupName:
                     description: Specifies the resource group where the Private DNS Zone exists. Changing this forces a new resource to be created.
                     type: string
@@ -344,6 +349,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   ttl:
                     description: The Time To Live (TTL) of the DNS record in seconds.
                     type: number

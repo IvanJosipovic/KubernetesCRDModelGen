@@ -124,6 +124,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the Shared Image Gallery.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               initProvider:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
@@ -139,6 +140,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the Shared Image Gallery.
                     type: object
+                    x-kubernetes-map-type: granular
                 type: object
               managementPolicies:
                 default:
@@ -278,6 +280,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the Shared Image Gallery.
                     type: object
+                    x-kubernetes-map-type: granular
                   uniqueName:
                     description: The Unique Name for this Shared Image Gallery.
                     type: string

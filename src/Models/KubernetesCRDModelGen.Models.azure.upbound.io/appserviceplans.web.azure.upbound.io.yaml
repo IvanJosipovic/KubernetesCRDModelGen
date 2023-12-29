@@ -154,6 +154,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   zoneRedundant:
                     description: Specifies if the App Service Plan should be Zone Redundant. Changing this forces a new resource to be created.
                     type: boolean
@@ -202,6 +203,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   zoneRedundant:
                     description: Specifies if the App Service Plan should be Zone Redundant. Changing this forces a new resource to be created.
                     type: boolean
@@ -379,6 +381,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   zoneRedundant:
                     description: Specifies if the App Service Plan should be Zone Redundant. Changing this forces a new resource to be created.
                     type: boolean

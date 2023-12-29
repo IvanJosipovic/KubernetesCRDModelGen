@@ -78,6 +78,7 @@ spec:
                       type: string
                     description: A mapping of IP tags to assign to the public IP. Changing this forces a new resource to be created.
                     type: object
+                    x-kubernetes-map-type: granular
                   ipVersion:
                     description: The IP Version to use, IPv6 or IPv4. Changing this forces a new resource to be created.
                     type: string
@@ -159,11 +160,13 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   zones:
                     description: A collection containing the availability zone to allocate the Public IP in. Changing this forces a new resource to be created.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               initProvider:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
@@ -191,6 +194,7 @@ spec:
                       type: string
                     description: A mapping of IP tags to assign to the public IP. Changing this forces a new resource to be created.
                     type: object
+                    x-kubernetes-map-type: granular
                   ipVersion:
                     description: The IP Version to use, IPv6 or IPv4. Changing this forces a new resource to be created.
                     type: string
@@ -214,11 +218,13 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   zones:
                     description: A collection containing the availability zone to allocate the Public IP in. Changing this forces a new resource to be created.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               managementPolicies:
                 default:
@@ -375,6 +381,7 @@ spec:
                       type: string
                     description: A mapping of IP tags to assign to the public IP. Changing this forces a new resource to be created.
                     type: object
+                    x-kubernetes-map-type: granular
                   ipVersion:
                     description: The IP Version to use, IPv6 or IPv4. Changing this forces a new resource to be created.
                     type: string
@@ -401,11 +408,13 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   zones:
                     description: A collection containing the availability zone to allocate the Public IP in. Changing this forces a new resource to be created.
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                 type: object
               conditions:
                 description: Conditions of the resource.

@@ -263,6 +263,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   threatDetectionPolicy:
                     description: Threat detection policy configuration. The threat_detection_policy block supports fields documented below.
                     items:
@@ -272,6 +273,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         emailAccountAdmins:
                           description: Should the account administrators be emailed when this alert is triggered? Possible values are Disabled and Enabled.
                           type: string
@@ -280,6 +282,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         retentionDays:
                           description: Specifies the number of days to keep in the Threat Detection audit logs.
                           type: number
@@ -431,6 +434,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   threatDetectionPolicy:
                     description: Threat detection policy configuration. The threat_detection_policy block supports fields documented below.
                     items:
@@ -440,6 +444,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         emailAccountAdmins:
                           description: Should the account administrators be emailed when this alert is triggered? Possible values are Disabled and Enabled.
                           type: string
@@ -448,6 +453,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         retentionDays:
                           description: Specifies the number of days to keep in the Threat Detection audit logs.
                           type: number
@@ -703,6 +709,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   threatDetectionPolicy:
                     description: Threat detection policy configuration. The threat_detection_policy block supports fields documented below.
                     items:
@@ -712,6 +719,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         emailAccountAdmins:
                           description: Should the account administrators be emailed when this alert is triggered? Possible values are Disabled and Enabled.
                           type: string
@@ -720,6 +728,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         retentionDays:
                           description: Specifies the number of days to keep in the Threat Detection audit logs.
                           type: number

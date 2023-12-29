@@ -60,6 +60,7 @@ spec:
                       type: string
                     description: A map of additional properties to associate with the Synapse Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   annotations:
                     description: List of tags that can be used for describing the Synapse Linked Service.
                     items:
@@ -135,6 +136,7 @@ spec:
                             type: string
                           description: A map of parameters to associate with the integration runtime.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   parameters:
@@ -142,6 +144,7 @@ spec:
                       type: string
                     description: A map of parameters to associate with the Synapse Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   synapseWorkspaceId:
                     description: The Synapse Workspace ID in which to associate the Linked Service with. Changing this forces a new Synapse Linked Service to be created.
                     type: string
@@ -215,6 +218,7 @@ spec:
                       type: string
                     description: A map of additional properties to associate with the Synapse Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   annotations:
                     description: List of tags that can be used for describing the Synapse Linked Service.
                     items:
@@ -227,11 +231,70 @@ spec:
                     description: A integration_runtime block as defined below.
                     items:
                       properties:
+                        name:
+                          description: The integration runtime reference to associate with the Synapse Linked Service.
+                          type: string
+                        nameRef:
+                          description: Reference to a IntegrationRuntimeAzure in synapse to populate name.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        nameSelector:
+                          description: Selector for a IntegrationRuntimeAzure in synapse to populate name.
+                          properties:
+                            matchControllerRef:
+                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
                         parameters:
                           additionalProperties:
                             type: string
                           description: A map of parameters to associate with the integration runtime.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   parameters:
@@ -239,6 +302,7 @@ spec:
                       type: string
                     description: A map of parameters to associate with the Synapse Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: The type of data stores that will be connected to Synapse. Valid Values include AmazonMWS, AmazonRdsForOracle, AmazonRdsForSqlServer, AmazonRedshift, AmazonS3, AzureBatch. Changing this forces a new resource to be created. AzureBlobFS, AzureBlobStorage, AzureDataExplorer, AzureDataLakeAnalytics, AzureDataLakeStore, AzureDatabricks, AzureDatabricksDeltaLake, AzureFileStorage, AzureFunction, AzureKeyVault, AzureML, AzureMLService, AzureMariaDB, AzureMySql, AzurePostgreSql, AzureSqlDW, AzureSqlDatabase, AzureSqlMI, AzureSearch, AzureStorage, AzureTableStorage, Cassandra, CommonDataServiceForApps, Concur, CosmosDb, CosmosDbMongoDbApi, Couchbase, CustomDataSource, Db2, Drill, Dynamics, DynamicsAX, DynamicsCrm, Eloqua, FileServer, FtpServer, GoogleAdWords, GoogleBigQuery, GoogleCloudStorage, Greenplum, HBase, HDInsight, HDInsightOnDemand, HttpServer, Hdfs, Hive, Hubspot, Impala, Informix, Jira, LinkedService, Magento, MariaDB, Marketo, MicrosoftAccess, MongoDb, MongoDbAtlas, MongoDbV2, MySql, Netezza, OData, Odbc, Office365, Oracle, OracleServiceCloud, Paypal, Phoenix, PostgreSql, Presto, QuickBooks, Responsys, RestService, SqlServer, Salesforce, SalesforceMarketingCloud, SalesforceServiceCloud, SapBW, SapCloudForCustomer, SapEcc, SapHana, SapOpenHub, SapTable, ServiceNow, Sftp, SharePointOnlineList, Shopify, Snowflake, Spark, Square, Sybase, Teradata, Vertica, Web, Xero, Zoho.
                     type: string
@@ -374,6 +438,7 @@ spec:
                       type: string
                     description: A map of additional properties to associate with the Synapse Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   annotations:
                     description: List of tags that can be used for describing the Synapse Linked Service.
                     items:
@@ -397,6 +462,7 @@ spec:
                             type: string
                           description: A map of parameters to associate with the integration runtime.
                           type: object
+                          x-kubernetes-map-type: granular
                       type: object
                     type: array
                   parameters:
@@ -404,6 +470,7 @@ spec:
                       type: string
                     description: A map of parameters to associate with the Synapse Linked Service.
                     type: object
+                    x-kubernetes-map-type: granular
                   synapseWorkspaceId:
                     description: The Synapse Workspace ID in which to associate the Linked Service with. Changing this forces a new Synapse Linked Service to be created.
                     type: string

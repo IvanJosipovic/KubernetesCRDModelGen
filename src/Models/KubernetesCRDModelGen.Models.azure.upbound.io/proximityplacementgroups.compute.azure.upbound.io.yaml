@@ -60,6 +60,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
@@ -126,6 +127,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   zone:
                     description: Specifies the supported zone of the Proximity Placement Group. Changing this forces a new resource to be created.
                     type: string
@@ -138,6 +140,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
@@ -146,6 +149,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   zone:
                     description: Specifies the supported zone of the Proximity Placement Group. Changing this forces a new resource to be created.
                     type: string
@@ -276,6 +280,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   id:
                     description: The ID of the Proximity Placement Group.
                     type: string
@@ -290,6 +295,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   zone:
                     description: Specifies the supported zone of the Proximity Placement Group. Changing this forces a new resource to be created.
                     type: string

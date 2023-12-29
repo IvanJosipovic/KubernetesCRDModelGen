@@ -66,6 +66,7 @@ spec:
                       type: string
                     description: Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   instanceCount:
                     description: Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between 1 and 500. Defaults to 1 if not specified.
                     type: number
@@ -154,6 +155,7 @@ spec:
                       type: string
                     description: Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   instanceCount:
                     description: Specifies the required instance count of the Spring Cloud Deployment. Possible Values are between 1 and 500. Defaults to 1 if not specified.
                     type: number
@@ -302,6 +304,7 @@ spec:
                       type: string
                     description: Specifies the environment variables of the Spring Cloud Deployment as a map of key-value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   id:
                     description: The ID of the Spring Cloud Build Deployment.
                     type: string

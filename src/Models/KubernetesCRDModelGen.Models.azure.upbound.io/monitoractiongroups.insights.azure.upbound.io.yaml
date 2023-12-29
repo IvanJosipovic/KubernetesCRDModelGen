@@ -298,6 +298,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   voiceReceiver:
                     description: One or more voice_receiver blocks as defined below.
                     items:
@@ -532,6 +533,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   voiceReceiver:
                     description: One or more voice_receiver blocks as defined below.
                     items:
@@ -890,6 +892,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   voiceReceiver:
                     description: One or more voice_receiver blocks as defined below.
                     items:

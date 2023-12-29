@@ -68,6 +68,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         content:
@@ -79,6 +80,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         trigger:
@@ -90,6 +92,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               openAuthenticationPolicy:
                                 description: A open_authentication_policy block as defined below.
                                 items:
@@ -122,6 +125,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -138,6 +142,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         type:
                           description: Specifies the type of Managed Service Identity that should be configured on this Logic App Workflow. Possible values are SystemAssigned, UserAssigned.
                           type: string
@@ -157,6 +162,7 @@ spec:
                       type: string
                     description: A map of Key-Value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceGroupName:
                     description: The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
                     type: string
@@ -220,11 +226,13 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   workflowParameters:
                     additionalProperties:
                       type: string
                     description: 'Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a JSON encoded string of the parameter definition (see: https://docs.microsoft.com/azure/logic-apps/logic-apps-workflow-definition-language#parameters).'
                     type: object
+                    x-kubernetes-map-type: granular
                   workflowSchema:
                     description: Specifies the Schema to use for this Logic App Workflow. Defaults to https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#. Changing this forces a new resource to be created.
                     type: string
@@ -248,6 +256,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         content:
@@ -259,6 +268,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         trigger:
@@ -270,6 +280,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               openAuthenticationPolicy:
                                 description: A open_authentication_policy block as defined below.
                                 items:
@@ -302,6 +313,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -318,6 +330,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         type:
                           description: Specifies the type of Managed Service Identity that should be configured on this Logic App Workflow. Possible values are SystemAssigned, UserAssigned.
                           type: string
@@ -337,16 +350,19 @@ spec:
                       type: string
                     description: A map of Key-Value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   tags:
                     additionalProperties:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   workflowParameters:
                     additionalProperties:
                       type: string
                     description: 'Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a JSON encoded string of the parameter definition (see: https://docs.microsoft.com/azure/logic-apps/logic-apps-workflow-definition-language#parameters).'
                     type: object
+                    x-kubernetes-map-type: granular
                   workflowSchema:
                     description: Specifies the Schema to use for this Logic App Workflow. Defaults to https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#. Changing this forces a new resource to be created.
                     type: string
@@ -488,6 +504,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         content:
@@ -499,6 +516,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                         trigger:
@@ -510,6 +528,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               openAuthenticationPolicy:
                                 description: A open_authentication_policy block as defined below.
                                 items:
@@ -542,6 +561,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                             type: object
                           type: array
                       type: object
@@ -574,6 +594,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         principalId:
                           description: The Principal ID for the Service Principal associated with the Managed Service Identity of this Logic App Workflow.
                           type: string
@@ -599,6 +620,7 @@ spec:
                       type: string
                     description: A map of Key-Value pairs.
                     type: object
+                    x-kubernetes-map-type: granular
                   resourceGroupName:
                     description: The name of the Resource Group in which the Logic App Workflow should be created. Changing this forces a new resource to be created.
                     type: string
@@ -607,6 +629,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   workflowEndpointIpAddresses:
                     description: The list of access endpoint IP addresses of workflow.
                     items:
@@ -622,6 +645,7 @@ spec:
                       type: string
                     description: 'Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a JSON encoded string of the parameter definition (see: https://docs.microsoft.com/azure/logic-apps/logic-apps-workflow-definition-language#parameters).'
                     type: object
+                    x-kubernetes-map-type: granular
                   workflowSchema:
                     description: Specifies the Schema to use for this Logic App Workflow. Defaults to https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#. Changing this forces a new resource to be created.
                     type: string

@@ -283,6 +283,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the Live Event.
                     type: object
+                    x-kubernetes-map-type: granular
                   transcriptionLanguages:
                     description: 'Specifies a list of languages (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: en-US). See the Microsoft Documentation for more information about the live transcription feature and the list of supported languages.'
                     items:
@@ -407,6 +408,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the Live Event.
                     type: object
+                    x-kubernetes-map-type: granular
                   transcriptionLanguages:
                     description: 'Specifies a list of languages (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: en-US). See the Microsoft Documentation for more information about the live transcription feature and the list of supported languages.'
                     items:
@@ -678,6 +680,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the Live Event.
                     type: object
+                    x-kubernetes-map-type: granular
                   transcriptionLanguages:
                     description: 'Specifies a list of languages (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: en-US). See the Microsoft Documentation for more information about the live transcription feature and the list of supported languages.'
                     items:

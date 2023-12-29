@@ -128,16 +128,19 @@ spec:
                           items:
                             type: number
                           type: array
+                          x-kubernetes-list-type: set
                         atTheseMinutes:
                           description: Specifies a list of minutes when the trigger should run. Valid values are between 0 and 59.
                           items:
                             type: number
                           type: array
+                          x-kubernetes-list-type: set
                         onTheseDays:
                           description: Specifies a list of days when the trigger should run. Valid values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   startTime:
@@ -165,16 +168,19 @@ spec:
                           items:
                             type: number
                           type: array
+                          x-kubernetes-list-type: set
                         atTheseMinutes:
                           description: Specifies a list of minutes when the trigger should run. Valid values are between 0 and 59.
                           items:
                             type: number
                           type: array
+                          x-kubernetes-list-type: set
                         onTheseDays:
                           description: Specifies a list of days when the trigger should run. Valid values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   startTime:
@@ -328,16 +334,19 @@ spec:
                           items:
                             type: number
                           type: array
+                          x-kubernetes-list-type: set
                         atTheseMinutes:
                           description: Specifies a list of minutes when the trigger should run. Valid values are between 0 and 59.
                           items:
                             type: number
                           type: array
+                          x-kubernetes-list-type: set
                         onTheseDays:
                           description: Specifies a list of days when the trigger should run. Valid values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   startTime:

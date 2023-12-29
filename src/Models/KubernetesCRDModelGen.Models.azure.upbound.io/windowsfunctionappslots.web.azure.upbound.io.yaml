@@ -60,6 +60,7 @@ spec:
                       type: string
                     description: A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
                     type: object
+                    x-kubernetes-map-type: granular
                   authSettings:
                     description: an auth_settings block as detailed below.
                     items:
@@ -103,6 +104,7 @@ spec:
                             type: string
                           description: Specifies a map of login Parameters to send to the OpenID Connect authorization endpoint when a user logs in. Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
                           type: object
+                          x-kubernetes-map-type: granular
                         allowedExternalRedirectUrls:
                           description: an allowed_external_redirect_urls block as detailed below. Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
                           items:
@@ -348,6 +350,7 @@ spec:
                                   type: string
                                 description: A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
                                 type: object
+                                x-kubernetes-map-type: granular
                               tenantAuthEndpoint:
                                 description: The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
                                 type: string
@@ -751,6 +754,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         type:
                           description: Specifies the type of Managed Service Identity that should be configured on this Windows Function App Slot. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).
                           type: string
@@ -863,6 +867,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               supportCredentials:
                                 description: Are credentials allowed in CORS requests? Defaults to false. Are credentials allowed in CORS requests? Defaults to `false`.
                                 type: boolean
@@ -1265,6 +1270,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the Windows Function App Slot.
                     type: object
+                    x-kubernetes-map-type: granular
                   virtualNetworkSubnetId:
                     description: The subnet id which will be used by this Function App Slot for regional virtual network integration.
                     type: string
@@ -1332,6 +1338,7 @@ spec:
                       type: string
                     description: A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
                     type: object
+                    x-kubernetes-map-type: granular
                   authSettings:
                     description: an auth_settings block as detailed below.
                     items:
@@ -1358,6 +1365,7 @@ spec:
                             type: string
                           description: Specifies a map of login Parameters to send to the OpenID Connect authorization endpoint when a user logs in. Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
                           type: object
+                          x-kubernetes-map-type: granular
                         allowedExternalRedirectUrls:
                           description: an allowed_external_redirect_urls block as detailed below. Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
                           items:
@@ -1518,6 +1526,7 @@ spec:
                                   type: string
                                 description: A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
                                 type: object
+                                x-kubernetes-map-type: granular
                               tenantAuthEndpoint:
                                 description: The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
                                 type: string
@@ -1825,6 +1834,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         type:
                           description: Specifies the type of Managed Service Identity that should be configured on this Windows Function App Slot. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).
                           type: string
@@ -1903,6 +1913,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               supportCredentials:
                                 description: Are credentials allowed in CORS requests? Defaults to false. Are credentials allowed in CORS requests? Defaults to `false`.
                                 type: boolean
@@ -1973,6 +1984,64 @@ spec:
                               serviceTag:
                                 description: The Service Tag used for this IP Restriction. The Service Tag used for this IP Restriction.
                                 type: string
+                              virtualNetworkSubnetId:
+                                description: The subnet id which will be used by this Function App Slot for regional virtual network integration. The Virtual Network Subnet ID used for this IP Restriction.
+                                type: string
+                              virtualNetworkSubnetIdRef:
+                                description: Reference to a Subnet in network to populate virtualNetworkSubnetId.
+                                properties:
+                                  name:
+                                    description: Name of the referenced object.
+                                    type: string
+                                  policy:
+                                    description: Policies for referencing.
+                                    properties:
+                                      resolution:
+                                        default: Required
+                                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                        enum:
+                                        - Required
+                                        - Optional
+                                        type: string
+                                      resolve:
+                                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                        enum:
+                                        - Always
+                                        - IfNotPresent
+                                        type: string
+                                    type: object
+                                required:
+                                - name
+                                type: object
+                              virtualNetworkSubnetIdSelector:
+                                description: Selector for a Subnet in network to populate virtualNetworkSubnetId.
+                                properties:
+                                  matchControllerRef:
+                                    description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                                    type: boolean
+                                  matchLabels:
+                                    additionalProperties:
+                                      type: string
+                                    description: MatchLabels ensures an object with matching labels is selected.
+                                    type: object
+                                  policy:
+                                    description: Policies for selection.
+                                    properties:
+                                      resolution:
+                                        default: Required
+                                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                        enum:
+                                        - Required
+                                        - Optional
+                                        type: string
+                                      resolve:
+                                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                        enum:
+                                        - Always
+                                        - IfNotPresent
+                                        type: string
+                                    type: object
+                                type: object
                             type: object
                           type: array
                         loadBalancingMode:
@@ -2041,6 +2110,64 @@ spec:
                               serviceTag:
                                 description: The Service Tag used for this IP Restriction. The Service Tag used for this IP Restriction.
                                 type: string
+                              virtualNetworkSubnetId:
+                                description: The subnet id which will be used by this Function App Slot for regional virtual network integration. The Virtual Network Subnet ID used for this IP Restriction.
+                                type: string
+                              virtualNetworkSubnetIdRef:
+                                description: Reference to a Subnet in network to populate virtualNetworkSubnetId.
+                                properties:
+                                  name:
+                                    description: Name of the referenced object.
+                                    type: string
+                                  policy:
+                                    description: Policies for referencing.
+                                    properties:
+                                      resolution:
+                                        default: Required
+                                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                        enum:
+                                        - Required
+                                        - Optional
+                                        type: string
+                                      resolve:
+                                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                        enum:
+                                        - Always
+                                        - IfNotPresent
+                                        type: string
+                                    type: object
+                                required:
+                                - name
+                                type: object
+                              virtualNetworkSubnetIdSelector:
+                                description: Selector for a Subnet in network to populate virtualNetworkSubnetId.
+                                properties:
+                                  matchControllerRef:
+                                    description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                                    type: boolean
+                                  matchLabels:
+                                    additionalProperties:
+                                      type: string
+                                    description: MatchLabels ensures an object with matching labels is selected.
+                                    type: object
+                                  policy:
+                                    description: Policies for selection.
+                                    properties:
+                                      resolution:
+                                        default: Required
+                                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                        enum:
+                                        - Required
+                                        - Optional
+                                        type: string
+                                      resolve:
+                                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                        enum:
+                                        - Always
+                                        - IfNotPresent
+                                        type: string
+                                    type: object
+                                type: object
                             type: object
                           type: array
                         scmMinimumTlsVersion:
@@ -2084,6 +2211,64 @@ spec:
                           type: string
                       type: object
                     type: array
+                  storageAccountName:
+                    description: The backend storage account name which will be used by this Function App Slot. The backend storage account name which will be used by this Function App Slot.
+                    type: string
+                  storageAccountNameRef:
+                    description: Reference to a Account in storage to populate storageAccountName.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  storageAccountNameSelector:
+                    description: Selector for a Account in storage to populate storageAccountName.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   storageKeyVaultSecretId:
                     description: The Key Vault Secret ID, optionally including version, that contains the Connection String to connect to the storage account for this Function App Slot. The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App.
                     type: string
@@ -2094,6 +2279,65 @@ spec:
                     additionalProperties:
                       type: string
                     description: A mapping of tags which should be assigned to the Windows Function App Slot.
+                    type: object
+                    x-kubernetes-map-type: granular
+                  virtualNetworkSubnetId:
+                    description: The subnet id which will be used by this Function App Slot for regional virtual network integration.
+                    type: string
+                  virtualNetworkSubnetIdRef:
+                    description: Reference to a Subnet in network to populate virtualNetworkSubnetId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  virtualNetworkSubnetIdSelector:
+                    description: Selector for a Subnet in network to populate virtualNetworkSubnetId.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
                     type: object
                 type: object
               managementPolicies:
@@ -2222,6 +2466,7 @@ spec:
                       type: string
                     description: A map of key-value pairs for App Settings and custom values. A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
                     type: object
+                    x-kubernetes-map-type: granular
                   authSettings:
                     description: an auth_settings block as detailed below.
                     items:
@@ -2248,6 +2493,7 @@ spec:
                             type: string
                           description: Specifies a map of login Parameters to send to the OpenID Connect authorization endpoint when a user logs in. Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
                           type: object
+                          x-kubernetes-map-type: granular
                         allowedExternalRedirectUrls:
                           description: an allowed_external_redirect_urls block as detailed below. Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
                           items:
@@ -2408,6 +2654,7 @@ spec:
                                   type: string
                                 description: A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
                                 type: object
+                                x-kubernetes-map-type: granular
                               tenantAuthEndpoint:
                                 description: The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
                                 type: string
@@ -2753,6 +3000,7 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         principalId:
                           description: The Principal ID associated with this Managed Service Identity.
                           type: string
@@ -2856,6 +3104,7 @@ spec:
                                 items:
                                   type: string
                                 type: array
+                                x-kubernetes-list-type: set
                               supportCredentials:
                                 description: Are credentials allowed in CORS requests? Defaults to false. Are credentials allowed in CORS requests? Defaults to `false`.
                                 type: boolean
@@ -3066,6 +3315,7 @@ spec:
                       type: string
                     description: A mapping of tags which should be assigned to the Windows Function App Slot.
                     type: object
+                    x-kubernetes-map-type: granular
                   virtualNetworkSubnetId:
                     description: The subnet id which will be used by this Function App Slot for regional virtual network integration.
                     type: string

@@ -136,6 +136,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   validityInYears:
                     description: Duration in years (must be between 1 and 3). Defaults to 1.
                     type: number
@@ -166,6 +167,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   validityInYears:
                     description: Duration in years (must be between 1 and 3). Defaults to 1.
                     type: number
@@ -364,6 +366,7 @@ spec:
                       type: string
                     description: A mapping of tags to assign to the resource.
                     type: object
+                    x-kubernetes-map-type: granular
                   validityInYears:
                     description: Duration in years (must be between 1 and 3). Defaults to 1.
                     type: number

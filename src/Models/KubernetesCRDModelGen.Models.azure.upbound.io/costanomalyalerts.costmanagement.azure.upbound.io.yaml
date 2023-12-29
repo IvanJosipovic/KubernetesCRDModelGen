@@ -63,6 +63,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   emailSubject:
                     description: The email subject of the Cost Anomaly Alerts. Maximum length of the subject is 70.
                     type: string
@@ -81,6 +82,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   emailSubject:
                     description: The email subject of the Cost Anomaly Alerts. Maximum length of the subject is 70.
                     type: string
@@ -221,6 +223,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: set
                   emailSubject:
                     description: The email subject of the Cost Anomaly Alerts. Maximum length of the subject is 70.
                     type: string
