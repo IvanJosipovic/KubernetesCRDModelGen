@@ -44,7 +44,7 @@
         <None Include="$(PKGIdentityModel_OidcClient)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <PackageReference Include="IdentityModel" Version="6.2.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGIdentityModel)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-        <PackageReference Include="System.Text.Json" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="System.Text.Json" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Text_Json)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
@@ -68,7 +68,7 @@
         <None Include="$(PKGMicrosoft_Extensions_DependencyInjection)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_Extensions_Logging_Abstractions)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-        <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_Extensions_Options)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <PackageReference Include="Microsoft.Extensions.Primitives" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_Extensions_Primitives)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
