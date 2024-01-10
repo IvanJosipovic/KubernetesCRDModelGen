@@ -28,17 +28,17 @@
         <ProjectReference Include="..\..\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <ProjectReference Include="..\..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <AdditionalFiles Include="*.yaml" />
-          <Choose>
-            <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
-                <ItemGroup>
-                    <PackageReference Include="KubernetesClient.Classic" Version="13.0.1" />
-                </ItemGroup>
-            </When>
-            <Otherwise>
-                <ItemGroup>
-                    <PackageReference Include="KubernetesClient" Version="13.0.1" />
-                </ItemGroup>
-            </Otherwise>
-          </Choose>
     </ItemGroup>
+    <Choose>
+        <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
+            <ItemGroup>
+                <PackageReference Include="KubernetesClient.Classic" Version="13.0.1" />
+            </ItemGroup>
+        </When>
+        <Otherwise>
+            <ItemGroup>
+                <PackageReference Include="KubernetesClient" Version="13.0.1" />
+            </ItemGroup>
+        </Otherwise>
+    </Choose>
 </Project>
