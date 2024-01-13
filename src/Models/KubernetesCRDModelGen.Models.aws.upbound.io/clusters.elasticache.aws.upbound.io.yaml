@@ -71,7 +71,7 @@ spec:
                     description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.
                     type: string
                   engineVersion:
-                    description: –  Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 6 or higher, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attributes Reference below.
+                    description: –  Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 7 or higher, the major and minor version should be set, e.g., 7.2. When the version is 6, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below. Cannot be provided with replication_group_id.
                     type: string
                   finalSnapshotIdentifier:
                     description: Name of your final cluster snapshot. If omitted, no final snapshot will be made.
@@ -304,13 +304,7 @@ spec:
                         type: object
                     type: object
                   securityGroupIds:
-                    description: –  One or more VPC security groups associated with the cache cluster
-                    items:
-                      type: string
-                    type: array
-                    x-kubernetes-list-type: set
-                  securityGroupNames:
-                    description: create the resource.
+                    description: –  One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.
                     items:
                       type: string
                     type: array
@@ -330,7 +324,7 @@ spec:
                     description: 'Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00'
                     type: string
                   subnetGroupName:
-                    description: create the resource.
+                    description: create the resource. Cannot be provided with replication_group_id.
                     type: string
                   subnetGroupNameRef:
                     description: Reference to a SubnetGroup in elasticache to populate subnetGroupName.
@@ -393,6 +387,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  transitEncryptionEnabled:
+                    description: Enable encryption in-transit. Supported only with Memcached versions 1.6.12 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.
+                    type: boolean
                 required:
                 - region
                 type: object
@@ -415,7 +412,7 @@ spec:
                     description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.
                     type: string
                   engineVersion:
-                    description: –  Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 6 or higher, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attributes Reference below.
+                    description: –  Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 7 or higher, the major and minor version should be set, e.g., 7.2. When the version is 6, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below. Cannot be provided with replication_group_id.
                     type: string
                   finalSnapshotIdentifier:
                     description: Name of your final cluster snapshot. If omitted, no final snapshot will be made.
@@ -645,13 +642,7 @@ spec:
                         type: object
                     type: object
                   securityGroupIds:
-                    description: –  One or more VPC security groups associated with the cache cluster
-                    items:
-                      type: string
-                    type: array
-                    x-kubernetes-list-type: set
-                  securityGroupNames:
-                    description: create the resource.
+                    description: –  One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.
                     items:
                       type: string
                     type: array
@@ -671,7 +662,7 @@ spec:
                     description: 'Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00'
                     type: string
                   subnetGroupName:
-                    description: create the resource.
+                    description: create the resource. Cannot be provided with replication_group_id.
                     type: string
                   subnetGroupNameRef:
                     description: Reference to a SubnetGroup in elasticache to populate subnetGroupName.
@@ -734,6 +725,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  transitEncryptionEnabled:
+                    description: Enable encryption in-transit. Supported only with Memcached versions 1.6.12 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.
+                    type: boolean
                 type: object
               managementPolicies:
                 default:
@@ -897,7 +891,7 @@ spec:
                     description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached or redis.
                     type: string
                   engineVersion:
-                    description: –  Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 6 or higher, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attributes Reference below.
+                    description: –  Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 7 or higher, the major and minor version should be set, e.g., 7.2. When the version is 6, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below. Cannot be provided with replication_group_id.
                     type: string
                   engineVersionActual:
                     description: Because ElastiCache pulls the latest minor or patch for a version, this attribute returns the running version of the cache engine.
@@ -964,13 +958,7 @@ spec:
                     description: ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
                     type: string
                   securityGroupIds:
-                    description: –  One or more VPC security groups associated with the cache cluster
-                    items:
-                      type: string
-                    type: array
-                    x-kubernetes-list-type: set
-                  securityGroupNames:
-                    description: create the resource.
+                    description: –  One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.
                     items:
                       type: string
                     type: array
@@ -990,7 +978,7 @@ spec:
                     description: 'Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00'
                     type: string
                   subnetGroupName:
-                    description: create the resource.
+                    description: create the resource. Cannot be provided with replication_group_id.
                     type: string
                   tags:
                     additionalProperties:
@@ -1004,6 +992,9 @@ spec:
                     description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  transitEncryptionEnabled:
+                    description: Enable encryption in-transit. Supported only with Memcached versions 1.6.12 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.
+                    type: boolean
                 type: object
               conditions:
                 description: Conditions of the resource.

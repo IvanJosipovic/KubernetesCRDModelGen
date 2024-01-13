@@ -129,7 +129,13 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   resolveConflicts:
-                    description: Define how to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on or when applying version updates to the add-on. Valid values are NONE, OVERWRITE and PRESERVE. For more details check UpdateAddon API Docs.
+                    description: (Deprecated use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead) Define how to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on or when applying version updates to the add-on. Valid values are NONE, OVERWRITE and PRESERVE. Note that PRESERVE is only valid on addon update, not for initial addon creation. If you need to set this to PRESERVE, use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead. For more details check UpdateAddon API Docs.
+                    type: string
+                  resolveConflictsOnCreate:
+                    description: How to resolve field value conflicts when migrating a self-managed add-on to an Amazon EKS add-on. Valid values are NONE and OVERWRITE. For more details see the CreateAddon API Docs.
+                    type: string
+                  resolveConflictsOnUpdate:
+                    description: How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Valid values are NONE, OVERWRITE, and PRESERVE. For more details see the UpdateAddon API Docs.
                     type: string
                   serviceAccountRoleArn:
                     description: The Amazon Resource Name (ARN) of an existing IAM role to bind to the add-on's service account. The role must be assigned the IAM permissions required by the add-on. If you don't specify an existing IAM role, then the add-on uses the permissions assigned to the node IAM role. For more information, see Amazon EKS node IAM role in the Amazon EKS User Guide.
@@ -272,7 +278,13 @@ spec:
                     description: Indicates if you want to preserve the created resources when deleting the EKS add-on.
                     type: boolean
                   resolveConflicts:
-                    description: Define how to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on or when applying version updates to the add-on. Valid values are NONE, OVERWRITE and PRESERVE. For more details check UpdateAddon API Docs.
+                    description: (Deprecated use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead) Define how to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on or when applying version updates to the add-on. Valid values are NONE, OVERWRITE and PRESERVE. Note that PRESERVE is only valid on addon update, not for initial addon creation. If you need to set this to PRESERVE, use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead. For more details check UpdateAddon API Docs.
+                    type: string
+                  resolveConflictsOnCreate:
+                    description: How to resolve field value conflicts when migrating a self-managed add-on to an Amazon EKS add-on. Valid values are NONE and OVERWRITE. For more details see the CreateAddon API Docs.
+                    type: string
+                  resolveConflictsOnUpdate:
+                    description: How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Valid values are NONE, OVERWRITE, and PRESERVE. For more details see the UpdateAddon API Docs.
                     type: string
                   serviceAccountRoleArn:
                     description: The Amazon Resource Name (ARN) of an existing IAM role to bind to the add-on's service account. The role must be assigned the IAM permissions required by the add-on. If you don't specify an existing IAM role, then the add-on uses the permissions assigned to the node IAM role. For more information, see Amazon EKS node IAM role in the Amazon EKS User Guide.
@@ -488,7 +500,13 @@ spec:
                     description: Indicates if you want to preserve the created resources when deleting the EKS add-on.
                     type: boolean
                   resolveConflicts:
-                    description: Define how to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on or when applying version updates to the add-on. Valid values are NONE, OVERWRITE and PRESERVE. For more details check UpdateAddon API Docs.
+                    description: (Deprecated use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead) Define how to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on or when applying version updates to the add-on. Valid values are NONE, OVERWRITE and PRESERVE. Note that PRESERVE is only valid on addon update, not for initial addon creation. If you need to set this to PRESERVE, use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead. For more details check UpdateAddon API Docs.
+                    type: string
+                  resolveConflictsOnCreate:
+                    description: How to resolve field value conflicts when migrating a self-managed add-on to an Amazon EKS add-on. Valid values are NONE and OVERWRITE. For more details see the CreateAddon API Docs.
+                    type: string
+                  resolveConflictsOnUpdate:
+                    description: How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Valid values are NONE, OVERWRITE, and PRESERVE. For more details see the UpdateAddon API Docs.
                     type: string
                   serviceAccountRoleArn:
                     description: The Amazon Resource Name (ARN) of an existing IAM role to bind to the add-on's service account. The role must be assigned the IAM permissions required by the add-on. If you don't specify an existing IAM role, then the add-on uses the permissions assigned to the node IAM role. For more information, see Amazon EKS node IAM role in the Amazon EKS User Guide.

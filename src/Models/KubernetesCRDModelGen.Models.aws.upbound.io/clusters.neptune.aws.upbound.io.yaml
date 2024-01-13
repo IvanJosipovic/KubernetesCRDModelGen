@@ -77,7 +77,7 @@ spec:
                     description: A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
                     type: boolean
                   enableCloudwatchLogsExports:
-                    description: A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit.
+                    description: A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit and slowquery.
                     items:
                       type: string
                     type: array
@@ -424,7 +424,7 @@ spec:
                     description: Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from final_snapshot_identifier. Default is false.
                     type: boolean
                   snapshotIdentifier:
-                    description: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.
+                    description: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot. Automated snapshots should not be used for this attribute, unless from a different cluster. Automated snapshots are deleted as part of cluster destruction when the resource is replaced.
                     type: string
                   snapshotIdentifierRef:
                     description: Reference to a ClusterSnapshot to populate snapshotIdentifier.
@@ -582,7 +582,7 @@ spec:
                     description: A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
                     type: boolean
                   enableCloudwatchLogsExports:
-                    description: A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit.
+                    description: A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit and slowquery.
                     items:
                       type: string
                     type: array
@@ -926,7 +926,7 @@ spec:
                     description: Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from final_snapshot_identifier. Default is false.
                     type: boolean
                   snapshotIdentifier:
-                    description: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.
+                    description: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot. Automated snapshots should not be used for this attribute, unless from a different cluster. Automated snapshots are deleted as part of cluster destruction when the resource is replaced.
                     type: string
                   snapshotIdentifierRef:
                     description: Reference to a ClusterSnapshot to populate snapshotIdentifier.
@@ -1209,7 +1209,7 @@ spec:
                     description: A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
                     type: boolean
                   enableCloudwatchLogsExports:
-                    description: A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit.
+                    description: A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit and slowquery.
                     items:
                       type: string
                     type: array
@@ -1287,7 +1287,7 @@ spec:
                     description: Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from final_snapshot_identifier. Default is false.
                     type: boolean
                   snapshotIdentifier:
-                    description: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.
+                    description: Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot. Automated snapshots should not be used for this attribute, unless from a different cluster. Automated snapshots are deleted as part of cluster destruction when the resource is replaced.
                     type: string
                   storageEncrypted:
                     description: Specifies whether the Neptune cluster is encrypted. The default is false if not specified.

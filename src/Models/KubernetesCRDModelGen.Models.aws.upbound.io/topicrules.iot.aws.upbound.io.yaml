@@ -392,8 +392,20 @@ spec:
                                 type: object
                                 x-kubernetes-map-type: granular
                               destinationArn:
-                                description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination .
+                                description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination.
                                 type: string
+                              header:
+                                description: The list of Kafka headers that you specify. Nested arguments below.
+                                items:
+                                  properties:
+                                    key:
+                                      description: The name of the HTTP header.
+                                      type: string
+                                    value:
+                                      description: The value of the HTTP header.
+                                      type: string
+                                  type: object
+                                type: array
                               key:
                                 description: The name of the HTTP header.
                                 type: string
@@ -731,8 +743,20 @@ spec:
                           type: object
                           x-kubernetes-map-type: granular
                         destinationArn:
-                          description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination .
+                          description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination.
                           type: string
+                        header:
+                          description: The list of Kafka headers that you specify. Nested arguments below.
+                          items:
+                            properties:
+                              key:
+                                description: The name of the HTTP header.
+                                type: string
+                              value:
+                                description: The value of the HTTP header.
+                                type: string
+                            type: object
+                          type: array
                         key:
                           description: The name of the HTTP header.
                           type: string
@@ -1345,8 +1369,20 @@ spec:
                                 type: object
                                 x-kubernetes-map-type: granular
                               destinationArn:
-                                description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination .
+                                description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination.
                                 type: string
+                              header:
+                                description: The list of Kafka headers that you specify. Nested arguments below.
+                                items:
+                                  properties:
+                                    key:
+                                      description: The name of the HTTP header.
+                                      type: string
+                                    value:
+                                      description: The value of the HTTP header.
+                                      type: string
+                                  type: object
+                                type: array
                               key:
                                 description: The name of the HTTP header.
                                 type: string
@@ -1684,8 +1720,20 @@ spec:
                           type: object
                           x-kubernetes-map-type: granular
                         destinationArn:
-                          description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination .
+                          description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination.
                           type: string
+                        header:
+                          description: The list of Kafka headers that you specify. Nested arguments below.
+                          items:
+                            properties:
+                              key:
+                                description: The name of the HTTP header.
+                                type: string
+                              value:
+                                description: The value of the HTTP header.
+                                type: string
+                            type: object
+                          type: array
                         key:
                           description: The name of the HTTP header.
                           type: string
@@ -2418,8 +2466,20 @@ spec:
                                 type: object
                                 x-kubernetes-map-type: granular
                               destinationArn:
-                                description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination .
+                                description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination.
                                 type: string
+                              header:
+                                description: The list of Kafka headers that you specify. Nested arguments below.
+                                items:
+                                  properties:
+                                    key:
+                                      description: The name of the HTTP header.
+                                      type: string
+                                    value:
+                                      description: The value of the HTTP header.
+                                      type: string
+                                  type: object
+                                type: array
                               key:
                                 description: The name of the HTTP header.
                                 type: string
@@ -2650,8 +2710,20 @@ spec:
                           type: object
                           x-kubernetes-map-type: granular
                         destinationArn:
-                          description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination .
+                          description: The ARN of Kafka action's VPC aws_iot_topic_rule_destination.
                           type: string
+                        header:
+                          description: The list of Kafka headers that you specify. Nested arguments below.
+                          items:
+                            properties:
+                              key:
+                                description: The name of the HTTP header.
+                                type: string
+                              value:
+                                description: The value of the HTTP header.
+                                type: string
+                            type: object
+                          type: array
                         key:
                           description: The name of the HTTP header.
                           type: string

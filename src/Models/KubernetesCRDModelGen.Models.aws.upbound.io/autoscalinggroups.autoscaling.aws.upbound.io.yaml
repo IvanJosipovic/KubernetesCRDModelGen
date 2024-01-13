@@ -56,7 +56,7 @@ spec:
               forProvider:
                 properties:
                   availabilityZones:
-                    description: List of one or more availability zones for the group. Used for EC2-Classic, attaching a network interface via id from a launch template and default subnets when not specified with vpc_zone_identifier argument. Conflicts with vpc_zone_identifier.
+                    description: A list of Availability Zones where instances in the Auto Scaling group can be created. Used for launching into the default VPC subnet in each Availability Zone when not using the vpc_zone_identifier attribute, or for attaching a network interface when an existing network interface ID is specified in a launch template. Conflicts with vpc_zone_identifier.
                     items:
                       type: string
                     type: array
@@ -86,10 +86,10 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   forceDelete:
-                    description: Allows deleting the Auto Scaling Group without waiting for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete even if it's in the process of scaling a resource.  This bypasses that behavior and potentially leaves resources dangling.
+                    description: Allows deleting the Auto Scaling Group without waiting for all instances in the pool to terminate. You can force an Auto Scaling Group to delete even if it's in the process of scaling a resource. This bypasses that behavior and potentially leaves resources dangling.
                     type: boolean
                   forceDeleteWarmPool:
-                    description: If this block is configured, add a Warm Pool to the specified Auto Scaling group. Defined below
+                    description: Allows deleting the Auto Scaling Group without waiting for all instances in the warm pool to terminate.
                     type: boolean
                   healthCheckGracePeriod:
                     description: Time (in seconds) after instance comes into service before checking health.
@@ -97,6 +97,9 @@ spec:
                   healthCheckType:
                     description: '"EC2" or "ELB". Controls how health checking is done.'
                     type: string
+                  ignoreFailedScalingActivities:
+                    description: Whether to ignore failed Auto Scaling scaling activities while waiting for capacity. The default is false -- failed scaling activities cause errors to be returned.
+                    type: boolean
                   initialLifecycleHook:
                     description: One or more Lifecycle Hooks to attach to the Auto Scaling Group before instances are launched. The syntax is exactly the same as the separate aws_autoscaling_lifecycle_hook resource, without the autoscaling_group_name attribute. Please note that this will only work when creating a new Auto Scaling Group. For all other use-cases, please use aws_autoscaling_lifecycle_hook resource.
                     items:
@@ -120,6 +123,18 @@ spec:
                           type: string
                       type: object
                     type: array
+                  instanceMaintenancePolicy:
+                    description: If this block is configured, add a instance maintenance policy to the specified Auto Scaling group. Defined below.
+                    items:
+                      properties:
+                        maxHealthyPercentage:
+                          description: Specifies the upper limit on the number of instances that are in the InService or Pending state with a healthy status during an instance replacement activity.
+                          type: number
+                        minHealthyPercentage:
+                          description: Amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to 90.
+                          type: number
+                      type: object
+                    type: array
                   instanceRefresh:
                     description: If this block is configured, start an Instance Refresh when this Auto Scaling Group is updated. Defined below.
                     items:
@@ -129,7 +144,7 @@ spec:
                           items:
                             properties:
                               autoRollback:
-                                description: Automatically rollback if instance refresh fails. Defaults to false.
+                                description: Automatically rollback if instance refresh fails. Defaults to false. This option may only be set to true when specifying a launch_template or mixed_instances_policy.
                                 type: boolean
                               checkpointDelay:
                                 description: Number of seconds to wait after a checkpoint. Defaults to 3600.
@@ -145,9 +160,15 @@ spec:
                               minHealthyPercentage:
                                 description: Amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to 90.
                                 type: number
+                              scaleInProtectedInstances:
+                                description: Behavior when encountering instances protected from scale in are found. Available behaviors are Refresh, Ignore, and Wait. Default is Ignore.
+                                type: string
                               skipMatching:
                                 description: Replace instances that already have your desired configuration. Defaults to false.
                                 type: boolean
+                              standbyInstances:
+                                description: Behavior when encountering instances in the Standby state in are found. Available behaviors are Terminate, Ignore, and Wait. Default is Ignore.
+                                type: string
                             type: object
                           type: array
                         strategy:
@@ -731,13 +752,13 @@ spec:
                         type: object
                     type: object
                   protectFromScaleIn:
-                    description: in protection in the Amazon EC2 Auto Scaling User Guide.
+                    description: Whether newly launched instances are automatically protected from termination by Amazon EC2 Auto Scaling when scaling in. For more information about preventing instances from terminating on scale in, see Using instance scale-in protection in the Amazon EC2 Auto Scaling User Guide.
                     type: boolean
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   serviceLinkedRoleArn:
-                    description: linked role that the ASG will use to call other AWS services
+                    description: ARN of the service-linked role that the ASG will use to call other AWS services
                     type: string
                   serviceLinkedRoleArnRef:
                     description: Reference to a Role in iam to populate serviceLinkedRoleArn.
@@ -801,7 +822,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   tag:
-                    description: Configuration block(s) containing resource tags. Conflicts with tags. See Tag below for more details.
+                    description: Configuration block(s) containing resource tags. See Tag below for more details.
                     items:
                       properties:
                         key:
@@ -815,17 +836,22 @@ spec:
                           type: string
                       type: object
                     type: array
-                  tags:
-                    description: Key-value map of resource tags.
-                    items:
-                      additionalProperties:
-                        type: string
-                      type: object
-                    type: array
                   terminationPolicies:
                     description: List of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are OldestInstance, NewestInstance, OldestLaunchConfiguration, ClosestToNextInstanceHour, OldestLaunchTemplate, AllocationStrategy, Default. Additionally, the ARN of a Lambda function can be specified for custom termination policies.
                     items:
                       type: string
+                    type: array
+                  trafficSource:
+                    description: Attaches one or more traffic sources to the specified Auto Scaling group.
+                    items:
+                      properties:
+                        identifier:
+                          description: Identifies the traffic source. For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this account and Region.
+                          type: string
+                        type:
+                          description: 'Provides additional context for the value of Identifier. The following lists the valid values: elb if identifier is the name of a Classic Load Balancer. elbv2 if identifier is the ARN of an Application Load Balancer, Gateway Load Balancer, or Network Load Balancer target group. vpc-lattice if identifier is the ARN of a VPC Lattice target group.'
+                          type: string
+                      type: object
                     type: array
                   vpcZoneIdentifier:
                     description: List of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with availability_zones.
@@ -928,7 +954,7 @@ spec:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
                 properties:
                   availabilityZones:
-                    description: List of one or more availability zones for the group. Used for EC2-Classic, attaching a network interface via id from a launch template and default subnets when not specified with vpc_zone_identifier argument. Conflicts with vpc_zone_identifier.
+                    description: A list of Availability Zones where instances in the Auto Scaling group can be created. Used for launching into the default VPC subnet in each Availability Zone when not using the vpc_zone_identifier attribute, or for attaching a network interface when an existing network interface ID is specified in a launch template. Conflicts with vpc_zone_identifier.
                     items:
                       type: string
                     type: array
@@ -958,10 +984,10 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   forceDelete:
-                    description: Allows deleting the Auto Scaling Group without waiting for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete even if it's in the process of scaling a resource.  This bypasses that behavior and potentially leaves resources dangling.
+                    description: Allows deleting the Auto Scaling Group without waiting for all instances in the pool to terminate. You can force an Auto Scaling Group to delete even if it's in the process of scaling a resource. This bypasses that behavior and potentially leaves resources dangling.
                     type: boolean
                   forceDeleteWarmPool:
-                    description: If this block is configured, add a Warm Pool to the specified Auto Scaling group. Defined below
+                    description: Allows deleting the Auto Scaling Group without waiting for all instances in the warm pool to terminate.
                     type: boolean
                   healthCheckGracePeriod:
                     description: Time (in seconds) after instance comes into service before checking health.
@@ -969,6 +995,9 @@ spec:
                   healthCheckType:
                     description: '"EC2" or "ELB". Controls how health checking is done.'
                     type: string
+                  ignoreFailedScalingActivities:
+                    description: Whether to ignore failed Auto Scaling scaling activities while waiting for capacity. The default is false -- failed scaling activities cause errors to be returned.
+                    type: boolean
                   initialLifecycleHook:
                     description: One or more Lifecycle Hooks to attach to the Auto Scaling Group before instances are launched. The syntax is exactly the same as the separate aws_autoscaling_lifecycle_hook resource, without the autoscaling_group_name attribute. Please note that this will only work when creating a new Auto Scaling Group. For all other use-cases, please use aws_autoscaling_lifecycle_hook resource.
                     items:
@@ -992,6 +1021,18 @@ spec:
                           type: string
                       type: object
                     type: array
+                  instanceMaintenancePolicy:
+                    description: If this block is configured, add a instance maintenance policy to the specified Auto Scaling group. Defined below.
+                    items:
+                      properties:
+                        maxHealthyPercentage:
+                          description: Specifies the upper limit on the number of instances that are in the InService or Pending state with a healthy status during an instance replacement activity.
+                          type: number
+                        minHealthyPercentage:
+                          description: Amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to 90.
+                          type: number
+                      type: object
+                    type: array
                   instanceRefresh:
                     description: If this block is configured, start an Instance Refresh when this Auto Scaling Group is updated. Defined below.
                     items:
@@ -1001,7 +1042,7 @@ spec:
                           items:
                             properties:
                               autoRollback:
-                                description: Automatically rollback if instance refresh fails. Defaults to false.
+                                description: Automatically rollback if instance refresh fails. Defaults to false. This option may only be set to true when specifying a launch_template or mixed_instances_policy.
                                 type: boolean
                               checkpointDelay:
                                 description: Number of seconds to wait after a checkpoint. Defaults to 3600.
@@ -1017,9 +1058,15 @@ spec:
                               minHealthyPercentage:
                                 description: Amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to 90.
                                 type: number
+                              scaleInProtectedInstances:
+                                description: Behavior when encountering instances protected from scale in are found. Available behaviors are Refresh, Ignore, and Wait. Default is Ignore.
+                                type: string
                               skipMatching:
                                 description: Replace instances that already have your desired configuration. Defaults to false.
                                 type: boolean
+                              standbyInstances:
+                                description: Behavior when encountering instances in the Standby state in are found. Available behaviors are Terminate, Ignore, and Wait. Default is Ignore.
+                                type: string
                             type: object
                           type: array
                         strategy:
@@ -1603,10 +1650,10 @@ spec:
                         type: object
                     type: object
                   protectFromScaleIn:
-                    description: in protection in the Amazon EC2 Auto Scaling User Guide.
+                    description: Whether newly launched instances are automatically protected from termination by Amazon EC2 Auto Scaling when scaling in. For more information about preventing instances from terminating on scale in, see Using instance scale-in protection in the Amazon EC2 Auto Scaling User Guide.
                     type: boolean
                   serviceLinkedRoleArn:
-                    description: linked role that the ASG will use to call other AWS services
+                    description: ARN of the service-linked role that the ASG will use to call other AWS services
                     type: string
                   serviceLinkedRoleArnRef:
                     description: Reference to a Role in iam to populate serviceLinkedRoleArn.
@@ -1670,7 +1717,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   tag:
-                    description: Configuration block(s) containing resource tags. Conflicts with tags. See Tag below for more details.
+                    description: Configuration block(s) containing resource tags. See Tag below for more details.
                     items:
                       properties:
                         key:
@@ -1684,17 +1731,22 @@ spec:
                           type: string
                       type: object
                     type: array
-                  tags:
-                    description: Key-value map of resource tags.
-                    items:
-                      additionalProperties:
-                        type: string
-                      type: object
-                    type: array
                   terminationPolicies:
                     description: List of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are OldestInstance, NewestInstance, OldestLaunchConfiguration, ClosestToNextInstanceHour, OldestLaunchTemplate, AllocationStrategy, Default. Additionally, the ARN of a Lambda function can be specified for custom termination policies.
                     items:
                       type: string
+                    type: array
+                  trafficSource:
+                    description: Attaches one or more traffic sources to the specified Auto Scaling group.
+                    items:
+                      properties:
+                        identifier:
+                          description: Identifies the traffic source. For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this account and Region.
+                          type: string
+                        type:
+                          description: 'Provides additional context for the value of Identifier. The following lists the valid values: elb if identifier is the name of a Classic Load Balancer. elbv2 if identifier is the ARN of an Application Load Balancer, Gateway Load Balancer, or Network Load Balancer target group. vpc-lattice if identifier is the ARN of a VPC Lattice target group.'
+                          type: string
+                      type: object
                     type: array
                   vpcZoneIdentifier:
                     description: List of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with availability_zones.
@@ -1918,7 +1970,7 @@ spec:
                     description: ARN for this Auto Scaling Group
                     type: string
                   availabilityZones:
-                    description: List of one or more availability zones for the group. Used for EC2-Classic, attaching a network interface via id from a launch template and default subnets when not specified with vpc_zone_identifier argument. Conflicts with vpc_zone_identifier.
+                    description: A list of Availability Zones where instances in the Auto Scaling group can be created. Used for launching into the default VPC subnet in each Availability Zone when not using the vpc_zone_identifier attribute, or for attaching a network interface when an existing network interface ID is specified in a launch template. Conflicts with vpc_zone_identifier.
                     items:
                       type: string
                     type: array
@@ -1948,10 +2000,10 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   forceDelete:
-                    description: Allows deleting the Auto Scaling Group without waiting for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete even if it's in the process of scaling a resource.  This bypasses that behavior and potentially leaves resources dangling.
+                    description: Allows deleting the Auto Scaling Group without waiting for all instances in the pool to terminate. You can force an Auto Scaling Group to delete even if it's in the process of scaling a resource. This bypasses that behavior and potentially leaves resources dangling.
                     type: boolean
                   forceDeleteWarmPool:
-                    description: If this block is configured, add a Warm Pool to the specified Auto Scaling group. Defined below
+                    description: Allows deleting the Auto Scaling Group without waiting for all instances in the warm pool to terminate.
                     type: boolean
                   healthCheckGracePeriod:
                     description: Time (in seconds) after instance comes into service before checking health.
@@ -1962,6 +2014,9 @@ spec:
                   id:
                     description: Auto Scaling Group id.
                     type: string
+                  ignoreFailedScalingActivities:
+                    description: Whether to ignore failed Auto Scaling scaling activities while waiting for capacity. The default is false -- failed scaling activities cause errors to be returned.
+                    type: boolean
                   initialLifecycleHook:
                     description: One or more Lifecycle Hooks to attach to the Auto Scaling Group before instances are launched. The syntax is exactly the same as the separate aws_autoscaling_lifecycle_hook resource, without the autoscaling_group_name attribute. Please note that this will only work when creating a new Auto Scaling Group. For all other use-cases, please use aws_autoscaling_lifecycle_hook resource.
                     items:
@@ -1985,6 +2040,18 @@ spec:
                           type: string
                       type: object
                     type: array
+                  instanceMaintenancePolicy:
+                    description: If this block is configured, add a instance maintenance policy to the specified Auto Scaling group. Defined below.
+                    items:
+                      properties:
+                        maxHealthyPercentage:
+                          description: Specifies the upper limit on the number of instances that are in the InService or Pending state with a healthy status during an instance replacement activity.
+                          type: number
+                        minHealthyPercentage:
+                          description: Amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to 90.
+                          type: number
+                      type: object
+                    type: array
                   instanceRefresh:
                     description: If this block is configured, start an Instance Refresh when this Auto Scaling Group is updated. Defined below.
                     items:
@@ -1994,7 +2061,7 @@ spec:
                           items:
                             properties:
                               autoRollback:
-                                description: Automatically rollback if instance refresh fails. Defaults to false.
+                                description: Automatically rollback if instance refresh fails. Defaults to false. This option may only be set to true when specifying a launch_template or mixed_instances_policy.
                                 type: boolean
                               checkpointDelay:
                                 description: Number of seconds to wait after a checkpoint. Defaults to 3600.
@@ -2010,9 +2077,15 @@ spec:
                               minHealthyPercentage:
                                 description: Amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to 90.
                                 type: number
+                              scaleInProtectedInstances:
+                                description: Behavior when encountering instances protected from scale in are found. Available behaviors are Refresh, Ignore, and Wait. Default is Ignore.
+                                type: string
                               skipMatching:
                                 description: Replace instances that already have your desired configuration. Defaults to false.
                                 type: boolean
+                              standbyInstances:
+                                description: Behavior when encountering instances in the Standby state in are found. Available behaviors are Terminate, Ignore, and Wait. Default is Ignore.
+                                type: string
                             type: object
                           type: array
                         strategy:
@@ -2045,7 +2118,7 @@ spec:
                       type: object
                     type: array
                   loadBalancers:
-                    description: List of elastic load balancer names to add to the autoscaling group names. Only valid for classic load balancers. For ALBs, use target_group_arns instead.
+                    description: List of elastic load balancer names to add to the autoscaling group names. Only valid for classic load balancers. For ALBs, use target_group_arns instead. To remove all load balancer attachments an empty list should be specified.
                     items:
                       type: string
                     type: array
@@ -2330,10 +2403,10 @@ spec:
                     description: Predicted capacity of the group.
                     type: number
                   protectFromScaleIn:
-                    description: in protection in the Amazon EC2 Auto Scaling User Guide.
+                    description: Whether newly launched instances are automatically protected from termination by Amazon EC2 Auto Scaling when scaling in. For more information about preventing instances from terminating on scale in, see Using instance scale-in protection in the Amazon EC2 Auto Scaling User Guide.
                     type: boolean
                   serviceLinkedRoleArn:
-                    description: linked role that the ASG will use to call other AWS services
+                    description: ARN of the service-linked role that the ASG will use to call other AWS services
                     type: string
                   suspendedProcesses:
                     description: List of processes to suspend for the Auto Scaling Group. The allowed values are Launch, Terminate, HealthCheck, ReplaceUnhealthy, AZRebalance, AlarmNotification, ScheduledActions, AddToLoadBalancer, InstanceRefresh. Note that if you suspend either the Launch or Terminate process types, it can prevent your Auto Scaling Group from functioning properly.
@@ -2342,7 +2415,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   tag:
-                    description: Configuration block(s) containing resource tags. Conflicts with tags. See Tag below for more details.
+                    description: Configuration block(s) containing resource tags. See Tag below for more details.
                     items:
                       properties:
                         key:
@@ -2356,15 +2429,8 @@ spec:
                           type: string
                       type: object
                     type: array
-                  tags:
-                    description: Key-value map of resource tags.
-                    items:
-                      additionalProperties:
-                        type: string
-                      type: object
-                    type: array
                   targetGroupArns:
-                    description: Set of aws_alb_target_group ARNs, for use with Application or Network Load Balancing.
+                    description: Set of aws_alb_target_group ARNs, for use with Application or Network Load Balancing. To remove all target group attachments an empty list should be specified.
                     items:
                       type: string
                     type: array
@@ -2373,6 +2439,18 @@ spec:
                     description: List of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are OldestInstance, NewestInstance, OldestLaunchConfiguration, ClosestToNextInstanceHour, OldestLaunchTemplate, AllocationStrategy, Default. Additionally, the ARN of a Lambda function can be specified for custom termination policies.
                     items:
                       type: string
+                    type: array
+                  trafficSource:
+                    description: Attaches one or more traffic sources to the specified Auto Scaling group.
+                    items:
+                      properties:
+                        identifier:
+                          description: Identifies the traffic source. For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this account and Region.
+                          type: string
+                        type:
+                          description: 'Provides additional context for the value of Identifier. The following lists the valid values: elb if identifier is the name of a Classic Load Balancer. elbv2 if identifier is the ARN of an Application Load Balancer, Gateway Load Balancer, or Network Load Balancer target group. vpc-lattice if identifier is the ARN of a VPC Lattice target group.'
+                          type: string
+                      type: object
                     type: array
                   vpcZoneIdentifier:
                     description: List of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with availability_zones.

@@ -215,6 +215,7 @@ spec:
                     description: when destroying this user, destroy even if it has non-provider-managed iam access keys, login profile or mfa devices. without force_destroy a user with non-provider-managed access keys and login profile will fail to be destroyed. delete user even if it has non-provider-managed iam access keys, login profile or mfa devices
                     type: boolean
                   id:
+                    description: The user's name.
                     type: string
                   path:
                     description: Path in which to create the user.

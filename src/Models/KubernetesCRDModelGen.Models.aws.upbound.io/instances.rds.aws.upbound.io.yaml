@@ -76,15 +76,18 @@ spec:
                   backupRetentionPeriod:
                     description: The days to retain backups for. Must be between 0 and 35. Default is 0. Must be greater than 0 if the database is used as a source for a Read Replica, uses low-downtime updates, or will use RDS Blue/Green deployments.
                     type: number
+                  backupTarget:
+                    description: Specifies where automated backups and manual snapshots are stored. Possible values are region (default) and outposts. See Working with Amazon RDS on AWS Outposts for more information.
+                    type: string
                   backupWindow:
                     description: 'The daily time range (in UTC) during which automated backups are created if they are enabled. Example: "09:46-10:16". Must not overlap with maintenance_window.'
                     type: string
                   blueGreenUpdate:
-                    description: Enables low-downtime updates using RDS Blue/Green deployments. See blue_green_update below
+                    description: Enables low-downtime updates using RDS Blue/Green deployments. See blue_green_update below.
                     items:
                       properties:
                         enabled:
-                          description: Enables [low-downtime updates](#Low-Downtime Updates) when true. Default is false.
+                          description: Enables low-downtime updates when true. Default is false.
                           type: boolean
                       type: object
                     type: array
@@ -107,7 +110,7 @@ spec:
                     description: The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the AWS documentation for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
                     type: string
                   dbSubnetGroupName:
-                    description: Name of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. If unspecified, will be created in the default VPC, or in EC2 Classic, if available. When working with read replicas, it should be specified only if the source database specifies an instance in another AWS Region. See DBSubnetGroupName in API action CreateDBInstanceReadReplica for additional read replica contraints.
+                    description: Name of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. If unspecified, will be created in the default VPC, or in EC2 Classic, if available. When working with read replicas, it should be specified only if the source database specifies an instance in another AWS Region. See DBSubnetGroupName in API action CreateDBInstanceReadReplica for additional read replica constraints.
                     type: string
                   dbSubnetGroupNameRef:
                     description: Reference to a SubnetGroup to populate dbSubnetGroupName.
@@ -194,6 +197,12 @@ spec:
                   iamDatabaseAuthenticationEnabled:
                     description: Specifies whether mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
                     type: boolean
+                  identifier:
+                    description: Required if restore_to_point_in_time is specified.
+                    type: string
+                  identifierPrefix:
+                    description: Creates a unique identifier beginning with the specified prefix. Conflicts with identifier.
+                    type: string
                   instanceClass:
                     description: The instance type of the RDS instance.
                     type: string
@@ -259,7 +268,7 @@ spec:
                         type: object
                     type: object
                   licenseModel:
-                    description: License model information for this DB instance.
+                    description: 'License model information for this DB instance. Valid values for this field are as follows:'
                     type: string
                   maintenanceWindow:
                     description: 'The window to perform maintenance in. Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00". See RDS Maintenance Window docs for more information.'
@@ -392,9 +401,6 @@ spec:
                   multiAz:
                     description: Specifies if the RDS instance is multi-AZ
                     type: boolean
-                  name:
-                    description: The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the AWS documentation for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
-                    type: string
                   ncharCharacterSetName:
                     description: The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See Oracle Character Sets Supported in Amazon RDS.
                     type: string
@@ -407,6 +413,61 @@ spec:
                   parameterGroupName:
                     description: Name of the DB parameter group to associate.
                     type: string
+                  parameterGroupNameRef:
+                    description: Reference to a ParameterGroup in rds to populate parameterGroupName.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  parameterGroupNameSelector:
+                    description: Selector for a ParameterGroup in rds to populate parameterGroupName.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   passwordSecretRef:
                     description: Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Cannot be set if manage_master_user_password is set to true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.
                     properties:
@@ -545,12 +606,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  securityGroupNames:
-                    description: List of DB Security Groups to associate. Only used for DB Instances on the .
-                    items:
-                      type: string
-                    type: array
-                    x-kubernetes-list-type: set
                   skipFinalSnapshot:
                     description: Determines whether a final DB snapshot is created before the DB instance is deleted. If true is specified, no DBSnapshot is created. If false is specified, a DB snapshot is created before the DB instance is deleted, using the value from final_snapshot_identifier. Default is false.
                     type: boolean
@@ -666,15 +721,18 @@ spec:
                   backupRetentionPeriod:
                     description: The days to retain backups for. Must be between 0 and 35. Default is 0. Must be greater than 0 if the database is used as a source for a Read Replica, uses low-downtime updates, or will use RDS Blue/Green deployments.
                     type: number
+                  backupTarget:
+                    description: Specifies where automated backups and manual snapshots are stored. Possible values are region (default) and outposts. See Working with Amazon RDS on AWS Outposts for more information.
+                    type: string
                   backupWindow:
                     description: 'The daily time range (in UTC) during which automated backups are created if they are enabled. Example: "09:46-10:16". Must not overlap with maintenance_window.'
                     type: string
                   blueGreenUpdate:
-                    description: Enables low-downtime updates using RDS Blue/Green deployments. See blue_green_update below
+                    description: Enables low-downtime updates using RDS Blue/Green deployments. See blue_green_update below.
                     items:
                       properties:
                         enabled:
-                          description: Enables [low-downtime updates](#Low-Downtime Updates) when true. Default is false.
+                          description: Enables low-downtime updates when true. Default is false.
                           type: boolean
                       type: object
                     type: array
@@ -697,7 +755,7 @@ spec:
                     description: The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the AWS documentation for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
                     type: string
                   dbSubnetGroupName:
-                    description: Name of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. If unspecified, will be created in the default VPC, or in EC2 Classic, if available. When working with read replicas, it should be specified only if the source database specifies an instance in another AWS Region. See DBSubnetGroupName in API action CreateDBInstanceReadReplica for additional read replica contraints.
+                    description: Name of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. If unspecified, will be created in the default VPC, or in EC2 Classic, if available. When working with read replicas, it should be specified only if the source database specifies an instance in another AWS Region. See DBSubnetGroupName in API action CreateDBInstanceReadReplica for additional read replica constraints.
                     type: string
                   dbSubnetGroupNameRef:
                     description: Reference to a SubnetGroup to populate dbSubnetGroupName.
@@ -784,6 +842,12 @@ spec:
                   iamDatabaseAuthenticationEnabled:
                     description: Specifies whether mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
                     type: boolean
+                  identifier:
+                    description: Required if restore_to_point_in_time is specified.
+                    type: string
+                  identifierPrefix:
+                    description: Creates a unique identifier beginning with the specified prefix. Conflicts with identifier.
+                    type: string
                   instanceClass:
                     description: The instance type of the RDS instance.
                     type: string
@@ -849,7 +913,7 @@ spec:
                         type: object
                     type: object
                   licenseModel:
-                    description: License model information for this DB instance.
+                    description: 'License model information for this DB instance. Valid values for this field are as follows:'
                     type: string
                   maintenanceWindow:
                     description: 'The window to perform maintenance in. Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00". See RDS Maintenance Window docs for more information.'
@@ -982,9 +1046,6 @@ spec:
                   multiAz:
                     description: Specifies if the RDS instance is multi-AZ
                     type: boolean
-                  name:
-                    description: The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the AWS documentation for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
-                    type: string
                   ncharCharacterSetName:
                     description: The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See Oracle Character Sets Supported in Amazon RDS.
                     type: string
@@ -997,6 +1058,61 @@ spec:
                   parameterGroupName:
                     description: Name of the DB parameter group to associate.
                     type: string
+                  parameterGroupNameRef:
+                    description: Reference to a ParameterGroup in rds to populate parameterGroupName.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  parameterGroupNameSelector:
+                    description: Selector for a ParameterGroup in rds to populate parameterGroupName.
+                    properties:
+                      matchControllerRef:
+                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   performanceInsightsEnabled:
                     description: Specifies whether Performance Insights are enabled. Defaults to false.
                     type: boolean
@@ -1115,12 +1231,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  securityGroupNames:
-                    description: List of DB Security Groups to associate. Only used for DB Instances on the .
-                    items:
-                      type: string
-                    type: array
-                    x-kubernetes-list-type: set
                   skipFinalSnapshot:
                     description: Determines whether a final DB snapshot is created before the DB instance is deleted. If true is specified, no DBSnapshot is created. If false is specified, a DB snapshot is created before the DB instance is deleted, using the value from final_snapshot_identifier. Default is false.
                     type: boolean
@@ -1358,15 +1468,18 @@ spec:
                   backupRetentionPeriod:
                     description: The days to retain backups for. Must be between 0 and 35. Default is 0. Must be greater than 0 if the database is used as a source for a Read Replica, uses low-downtime updates, or will use RDS Blue/Green deployments.
                     type: number
+                  backupTarget:
+                    description: Specifies where automated backups and manual snapshots are stored. Possible values are region (default) and outposts. See Working with Amazon RDS on AWS Outposts for more information.
+                    type: string
                   backupWindow:
                     description: 'The daily time range (in UTC) during which automated backups are created if they are enabled. Example: "09:46-10:16". Must not overlap with maintenance_window.'
                     type: string
                   blueGreenUpdate:
-                    description: Enables low-downtime updates using RDS Blue/Green deployments. See blue_green_update below
+                    description: Enables low-downtime updates using RDS Blue/Green deployments. See blue_green_update below.
                     items:
                       properties:
                         enabled:
-                          description: Enables [low-downtime updates](#Low-Downtime Updates) when true. Default is false.
+                          description: Enables low-downtime updates when true. Default is false.
                           type: boolean
                       type: object
                     type: array
@@ -1389,7 +1502,7 @@ spec:
                     description: The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the AWS documentation for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
                     type: string
                   dbSubnetGroupName:
-                    description: Name of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. If unspecified, will be created in the default VPC, or in EC2 Classic, if available. When working with read replicas, it should be specified only if the source database specifies an instance in another AWS Region. See DBSubnetGroupName in API action CreateDBInstanceReadReplica for additional read replica contraints.
+                    description: Name of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. If unspecified, will be created in the default VPC, or in EC2 Classic, if available. When working with read replicas, it should be specified only if the source database specifies an instance in another AWS Region. See DBSubnetGroupName in API action CreateDBInstanceReadReplica for additional read replica constraints.
                     type: string
                   deleteAutomatedBackups:
                     description: Specifies whether to remove automated backups immediately after the DB instance is deleted. Default is true.
@@ -1431,7 +1544,13 @@ spec:
                     description: Specifies whether mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
                     type: boolean
                   id:
-                    description: The RDS instance ID.
+                    description: RDS DBI resource ID.
+                    type: string
+                  identifier:
+                    description: Required if restore_to_point_in_time is specified.
+                    type: string
+                  identifierPrefix:
+                    description: Creates a unique identifier beginning with the specified prefix. Conflicts with identifier.
                     type: string
                   instanceClass:
                     description: The instance type of the RDS instance.
@@ -1446,7 +1565,7 @@ spec:
                     description: The latest time, in UTC RFC3339 format, to which a database can be restored with point-in-time restore.
                     type: string
                   licenseModel:
-                    description: License model information for this DB instance.
+                    description: 'License model information for this DB instance. Valid values for this field are as follows:'
                     type: string
                   listenerEndpoint:
                     description: Specifies the listener connection endpoint for SQL Server Always On. See endpoint below.
@@ -1499,9 +1618,6 @@ spec:
                   multiAz:
                     description: Specifies if the RDS instance is multi-AZ
                     type: boolean
-                  name:
-                    description: The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the AWS documentation for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.
-                    type: string
                   ncharCharacterSetName:
                     description: The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See Oracle Character Sets Supported in Amazon RDS.
                     type: string
@@ -1584,12 +1700,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  securityGroupNames:
-                    description: List of DB Security Groups to associate. Only used for DB Instances on the .
-                    items:
-                      type: string
-                    type: array
-                    x-kubernetes-list-type: set
                   skipFinalSnapshot:
                     description: Determines whether a final DB snapshot is created before the DB instance is deleted. If true is specified, no DBSnapshot is created. If false is specified, a DB snapshot is created before the DB instance is deleted, using the value from final_snapshot_identifier. Default is false.
                     type: boolean

@@ -102,6 +102,9 @@ spec:
                               kmsKeyId:
                                 description: The AWS Key Management Service (KMS) key ID of the key used to encrypt any objects written into the OfflineStore S3 location.
                                 type: string
+                              resolvedOutputS3Uri:
+                                description: The S3 path where offline records are written.
+                                type: string
                               s3Uri:
                                 description: The S3 URI, or location in Amazon S3, of OfflineStore.
                                 type: string
@@ -126,6 +129,21 @@ spec:
                               kmsKeyId:
                                 description: The AWS Key Management Service (KMS) key ID of the key used to encrypt any objects written into the OfflineStore S3 location.
                                 type: string
+                            type: object
+                          type: array
+                        storageType:
+                          description: Option for different tiers of low latency storage for real-time data retrieval. Valid values are Standard, or InMemory.
+                          type: string
+                        ttlDuration:
+                          description: Time to live duration, where the record is hard deleted after the expiration time is reached; ExpiresAt = EventTime + TtlDuration.. See TTl Duration Below.
+                          items:
+                            properties:
+                              unit:
+                                description: TtlDuration time unit. Valid values are Seconds, Minutes, Hours, Days, or Weeks.
+                                type: string
+                              value:
+                                description: TtlDuration time value.
+                                type: number
                             type: object
                           type: array
                       type: object
@@ -253,6 +271,9 @@ spec:
                               kmsKeyId:
                                 description: The AWS Key Management Service (KMS) key ID of the key used to encrypt any objects written into the OfflineStore S3 location.
                                 type: string
+                              resolvedOutputS3Uri:
+                                description: The S3 path where offline records are written.
+                                type: string
                               s3Uri:
                                 description: The S3 URI, or location in Amazon S3, of OfflineStore.
                                 type: string
@@ -277,6 +298,21 @@ spec:
                               kmsKeyId:
                                 description: The AWS Key Management Service (KMS) key ID of the key used to encrypt any objects written into the OfflineStore S3 location.
                                 type: string
+                            type: object
+                          type: array
+                        storageType:
+                          description: Option for different tiers of low latency storage for real-time data retrieval. Valid values are Standard, or InMemory.
+                          type: string
+                        ttlDuration:
+                          description: Time to live duration, where the record is hard deleted after the expiration time is reached; ExpiresAt = EventTime + TtlDuration.. See TTl Duration Below.
+                          items:
+                            properties:
+                              unit:
+                                description: TtlDuration time unit. Valid values are Seconds, Minutes, Hours, Days, or Weeks.
+                                type: string
+                              value:
+                                description: TtlDuration time value.
+                                type: number
                             type: object
                           type: array
                       type: object
@@ -526,6 +562,9 @@ spec:
                               kmsKeyId:
                                 description: The AWS Key Management Service (KMS) key ID of the key used to encrypt any objects written into the OfflineStore S3 location.
                                 type: string
+                              resolvedOutputS3Uri:
+                                description: The S3 path where offline records are written.
+                                type: string
                               s3Uri:
                                 description: The S3 URI, or location in Amazon S3, of OfflineStore.
                                 type: string
@@ -550,6 +589,21 @@ spec:
                               kmsKeyId:
                                 description: The AWS Key Management Service (KMS) key ID of the key used to encrypt any objects written into the OfflineStore S3 location.
                                 type: string
+                            type: object
+                          type: array
+                        storageType:
+                          description: Option for different tiers of low latency storage for real-time data retrieval. Valid values are Standard, or InMemory.
+                          type: string
+                        ttlDuration:
+                          description: Time to live duration, where the record is hard deleted after the expiration time is reached; ExpiresAt = EventTime + TtlDuration.. See TTl Duration Below.
+                          items:
+                            properties:
+                              unit:
+                                description: TtlDuration time unit. Valid values are Seconds, Minutes, Hours, Days, or Weeks.
+                                type: string
+                              value:
+                                description: TtlDuration time value.
+                                type: number
                             type: object
                           type: array
                       type: object

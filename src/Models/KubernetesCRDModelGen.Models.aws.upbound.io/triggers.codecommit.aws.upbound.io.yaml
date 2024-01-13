@@ -117,10 +117,11 @@ spec:
                         type: object
                     type: object
                   trigger:
+                    description: The name of the trigger.
                     items:
                       properties:
                         branches:
-                          description: The branches that will be included in the trigger configuration. If no branches are specified, the trigger will apply to all branches.
+                          description: The branches that will be included in the trigger configuration. If no branches   are specified, the trigger will apply to all branches.
                           items:
                             type: string
                           type: array
@@ -260,10 +261,11 @@ spec:
                         type: object
                     type: object
                   trigger:
+                    description: The name of the trigger.
                     items:
                       properties:
                         branches:
-                          description: The branches that will be included in the trigger configuration. If no branches are specified, the trigger will apply to all branches.
+                          description: The branches that will be included in the trigger configuration. If no branches   are specified, the trigger will apply to all branches.
                           items:
                             type: string
                           type: array
@@ -469,10 +471,11 @@ spec:
                     description: The name for the repository. This needs to be less than 100 characters.
                     type: string
                   trigger:
+                    description: The name of the trigger.
                     items:
                       properties:
                         branches:
-                          description: The branches that will be included in the trigger configuration. If no branches are specified, the trigger will apply to all branches.
+                          description: The branches that will be included in the trigger configuration. If no branches   are specified, the trigger will apply to all branches.
                           items:
                             type: string
                           type: array

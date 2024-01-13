@@ -56,7 +56,7 @@ spec:
               forProvider:
                 properties:
                   availabilityZone:
-                    description: The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
+                    description: The Availability Zone where the IP address of the target is to be registered. If the private IP address is outside of the VPC scope, this value must be set to all.
                     type: string
                   port:
                     description: The port on which targets receive traffic.
@@ -65,7 +65,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   targetGroupArn:
-                    description: The ARN of the target group with which to register targets
+                    description: The ARN of the target group with which to register targets.
                     type: string
                   targetGroupArnRef:
                     description: Reference to a LBTargetGroup to populate targetGroupArn.
@@ -123,7 +123,7 @@ spec:
                         type: object
                     type: object
                   targetId:
-                    description: The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda. If the target type is alb, specify the arn of alb.
+                    description: The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the Lambda function ARN. If the target type is alb, specify the ALB ARN.
                     type: string
                 required:
                 - region
@@ -132,13 +132,13 @@ spec:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
                 properties:
                   availabilityZone:
-                    description: The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
+                    description: The Availability Zone where the IP address of the target is to be registered. If the private IP address is outside of the VPC scope, this value must be set to all.
                     type: string
                   port:
                     description: The port on which targets receive traffic.
                     type: number
                   targetGroupArn:
-                    description: The ARN of the target group with which to register targets
+                    description: The ARN of the target group with which to register targets.
                     type: string
                   targetGroupArnRef:
                     description: Reference to a LBTargetGroup to populate targetGroupArn.
@@ -196,7 +196,7 @@ spec:
                         type: object
                     type: object
                   targetId:
-                    description: The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda. If the target type is alb, specify the arn of alb.
+                    description: The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the Lambda function ARN. If the target type is alb, specify the ALB ARN.
                     type: string
                 type: object
               managementPolicies:
@@ -321,19 +321,19 @@ spec:
               atProvider:
                 properties:
                   availabilityZone:
-                    description: The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
+                    description: The Availability Zone where the IP address of the target is to be registered. If the private IP address is outside of the VPC scope, this value must be set to all.
                     type: string
                   id:
-                    description: A unique identifier for the attachment
+                    description: A unique identifier for the attachment.
                     type: string
                   port:
                     description: The port on which targets receive traffic.
                     type: number
                   targetGroupArn:
-                    description: The ARN of the target group with which to register targets
+                    description: The ARN of the target group with which to register targets.
                     type: string
                   targetId:
-                    description: The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda. If the target type is alb, specify the arn of alb.
+                    description: The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the Lambda function ARN. If the target type is alb, specify the ALB ARN.
                     type: string
                 type: object
               conditions:

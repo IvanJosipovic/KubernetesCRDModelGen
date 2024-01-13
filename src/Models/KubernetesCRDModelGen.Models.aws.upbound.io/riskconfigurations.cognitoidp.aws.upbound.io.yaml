@@ -732,7 +732,7 @@ spec:
                       type: object
                     type: array
                   id:
-                    description: 'The user pool ID. or The user pool ID and Client Id separated by a : if the configuration is client specific.'
+                    description: 'The user pool ID or the user pool ID and Client Id separated by a : if the configuration is client specific.'
                     type: string
                   riskExceptionConfiguration:
                     description: The configuration to override the risk decision. See details below.

@@ -217,6 +217,9 @@ spec:
                         mtime:
                           description: 'A file metadata that indicates the last time a file was modified (written to) before the sync PREPARING phase. Value values: NONE, PRESERVE. Default: PRESERVE.'
                           type: string
+                        objectTags:
+                          description: 'Specifies whether object tags are maintained when transferring between object storage systems. If you want your DataSync task to ignore object tags, specify the NONE value. Valid values: PRESERVE, NONE. Default value: PRESERVE.'
+                          type: string
                         overwriteMode:
                           description: 'Determines whether files at the destination should be overwritten or preserved when copying files. Valid values: ALWAYS, NEVER. Default: ALWAYS.'
                           type: string
@@ -230,7 +233,7 @@ spec:
                           description: 'Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: NONE, PRESERVE. Default: NONE (ignore special devices).'
                           type: string
                         securityDescriptorCopyFlags:
-                          description: 'Determines which components of the SMB security descriptor are copied from source to destination objects. This value is only used for transfers between SMB and Amazon FSx for Windows File Server locations, or between two Amazon FSx for Windows File Server locations. Valid values: NONE, OWNER_DACL, OWNER_DACL_SACL.'
+                          description: 'Determines which components of the SMB security descriptor are copied from source to destination objects. This value is only used for transfers between SMB and Amazon FSx for Windows File Server locations, or between two Amazon FSx for Windows File Server locations. Valid values: NONE, OWNER_DACL, OWNER_DACL_SACL. Default: OWNER_DACL.'
                           type: string
                         taskQueueing:
                           description: 'Determines whether tasks should be queued before executing the tasks. Valid values: ENABLED, DISABLED. Default ENABLED.'
@@ -322,6 +325,54 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  taskReportConfig:
+                    description: Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.
+                    items:
+                      properties:
+                        outputType:
+                          description: "Specifies the type of task report you'd like. Valid values: SUMMARY_ONLY and STANDARD."
+                          type: string
+                        reportLevel:
+                          description: "Specifies whether you want your task report to include only what went wrong with your transfer or a list of what succeeded and didn't. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS."
+                          type: string
+                        reportOverrides:
+                          description: Configuration block containing the configuration of the reporting level for aspects of your task report. See report_overrides below.
+                          items:
+                            properties:
+                              deletedOverride:
+                                description: "Specifies the level of reporting for the files, objects, and directories that DataSync attempted to delete in your destination location. This only applies if you configure your task to delete data in the destination that isn't in the source. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS."
+                                type: string
+                              skippedOverride:
+                                description: 'Specifies the level of reporting for the files, objects, and directories that DataSync attempted to skip during your transfer. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.'
+                                type: string
+                              transferredOverride:
+                                description: 'Specifies the level of reporting for the files, objects, and directories that DataSync attempted to transfer. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.'
+                                type: string
+                              verifiedOverride:
+                                description: 'Specifies the level of reporting for the files, objects, and directories that DataSync attempted to verify at the end of your transfer. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.'
+                                type: string
+                            type: object
+                          type: array
+                        s3Destination:
+                          description: Configuration block containing the configuration for the Amazon S3 bucket where DataSync uploads your task report. See s3_destination below.
+                          items:
+                            properties:
+                              bucketAccessRoleArn:
+                                description: Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your S3 bucket.
+                                type: string
+                              s3BucketArn:
+                                description: Specifies the ARN of the S3 bucket where DataSync uploads your report.
+                                type: string
+                              subdirectory:
+                                description: Specifies a bucket prefix for your report.
+                                type: string
+                            type: object
+                          type: array
+                        s3ObjectVersioning:
+                          description: 'Specifies whether your task report includes the new version of each object transferred into an S3 bucket. This only applies if you enable versioning on your bucket. Keep in mind that setting this to INCLUDE can increase the duration of your task execution. Valid values: INCLUDE and NONE.'
+                          type: string
+                      type: object
+                    type: array
                 required:
                 - region
                 type: object
@@ -490,6 +541,9 @@ spec:
                         mtime:
                           description: 'A file metadata that indicates the last time a file was modified (written to) before the sync PREPARING phase. Value values: NONE, PRESERVE. Default: PRESERVE.'
                           type: string
+                        objectTags:
+                          description: 'Specifies whether object tags are maintained when transferring between object storage systems. If you want your DataSync task to ignore object tags, specify the NONE value. Valid values: PRESERVE, NONE. Default value: PRESERVE.'
+                          type: string
                         overwriteMode:
                           description: 'Determines whether files at the destination should be overwritten or preserved when copying files. Valid values: ALWAYS, NEVER. Default: ALWAYS.'
                           type: string
@@ -503,7 +557,7 @@ spec:
                           description: 'Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: NONE, PRESERVE. Default: NONE (ignore special devices).'
                           type: string
                         securityDescriptorCopyFlags:
-                          description: 'Determines which components of the SMB security descriptor are copied from source to destination objects. This value is only used for transfers between SMB and Amazon FSx for Windows File Server locations, or between two Amazon FSx for Windows File Server locations. Valid values: NONE, OWNER_DACL, OWNER_DACL_SACL.'
+                          description: 'Determines which components of the SMB security descriptor are copied from source to destination objects. This value is only used for transfers between SMB and Amazon FSx for Windows File Server locations, or between two Amazon FSx for Windows File Server locations. Valid values: NONE, OWNER_DACL, OWNER_DACL_SACL. Default: OWNER_DACL.'
                           type: string
                         taskQueueing:
                           description: 'Determines whether tasks should be queued before executing the tasks. Valid values: ENABLED, DISABLED. Default ENABLED.'
@@ -592,6 +646,54 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  taskReportConfig:
+                    description: Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.
+                    items:
+                      properties:
+                        outputType:
+                          description: "Specifies the type of task report you'd like. Valid values: SUMMARY_ONLY and STANDARD."
+                          type: string
+                        reportLevel:
+                          description: "Specifies whether you want your task report to include only what went wrong with your transfer or a list of what succeeded and didn't. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS."
+                          type: string
+                        reportOverrides:
+                          description: Configuration block containing the configuration of the reporting level for aspects of your task report. See report_overrides below.
+                          items:
+                            properties:
+                              deletedOverride:
+                                description: "Specifies the level of reporting for the files, objects, and directories that DataSync attempted to delete in your destination location. This only applies if you configure your task to delete data in the destination that isn't in the source. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS."
+                                type: string
+                              skippedOverride:
+                                description: 'Specifies the level of reporting for the files, objects, and directories that DataSync attempted to skip during your transfer. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.'
+                                type: string
+                              transferredOverride:
+                                description: 'Specifies the level of reporting for the files, objects, and directories that DataSync attempted to transfer. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.'
+                                type: string
+                              verifiedOverride:
+                                description: 'Specifies the level of reporting for the files, objects, and directories that DataSync attempted to verify at the end of your transfer. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.'
+                                type: string
+                            type: object
+                          type: array
+                        s3Destination:
+                          description: Configuration block containing the configuration for the Amazon S3 bucket where DataSync uploads your task report. See s3_destination below.
+                          items:
+                            properties:
+                              bucketAccessRoleArn:
+                                description: Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your S3 bucket.
+                                type: string
+                              s3BucketArn:
+                                description: Specifies the ARN of the S3 bucket where DataSync uploads your report.
+                                type: string
+                              subdirectory:
+                                description: Specifies a bucket prefix for your report.
+                                type: string
+                            type: object
+                          type: array
+                        s3ObjectVersioning:
+                          description: 'Specifies whether your task report includes the new version of each object transferred into an S3 bucket. This only applies if you enable versioning on your bucket. Keep in mind that setting this to INCLUDE can increase the duration of your task execution. Valid values: INCLUDE and NONE.'
+                          type: string
+                      type: object
+                    type: array
                 type: object
               managementPolicies:
                 default:
@@ -769,6 +871,9 @@ spec:
                         mtime:
                           description: 'A file metadata that indicates the last time a file was modified (written to) before the sync PREPARING phase. Value values: NONE, PRESERVE. Default: PRESERVE.'
                           type: string
+                        objectTags:
+                          description: 'Specifies whether object tags are maintained when transferring between object storage systems. If you want your DataSync task to ignore object tags, specify the NONE value. Valid values: PRESERVE, NONE. Default value: PRESERVE.'
+                          type: string
                         overwriteMode:
                           description: 'Determines whether files at the destination should be overwritten or preserved when copying files. Valid values: ALWAYS, NEVER. Default: ALWAYS.'
                           type: string
@@ -782,7 +887,7 @@ spec:
                           description: 'Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: NONE, PRESERVE. Default: NONE (ignore special devices).'
                           type: string
                         securityDescriptorCopyFlags:
-                          description: 'Determines which components of the SMB security descriptor are copied from source to destination objects. This value is only used for transfers between SMB and Amazon FSx for Windows File Server locations, or between two Amazon FSx for Windows File Server locations. Valid values: NONE, OWNER_DACL, OWNER_DACL_SACL.'
+                          description: 'Determines which components of the SMB security descriptor are copied from source to destination objects. This value is only used for transfers between SMB and Amazon FSx for Windows File Server locations, or between two Amazon FSx for Windows File Server locations. Valid values: NONE, OWNER_DACL, OWNER_DACL_SACL. Default: OWNER_DACL.'
                           type: string
                         taskQueueing:
                           description: 'Determines whether tasks should be queued before executing the tasks. Valid values: ENABLED, DISABLED. Default ENABLED.'
@@ -822,6 +927,54 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  taskReportConfig:
+                    description: Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.
+                    items:
+                      properties:
+                        outputType:
+                          description: "Specifies the type of task report you'd like. Valid values: SUMMARY_ONLY and STANDARD."
+                          type: string
+                        reportLevel:
+                          description: "Specifies whether you want your task report to include only what went wrong with your transfer or a list of what succeeded and didn't. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS."
+                          type: string
+                        reportOverrides:
+                          description: Configuration block containing the configuration of the reporting level for aspects of your task report. See report_overrides below.
+                          items:
+                            properties:
+                              deletedOverride:
+                                description: "Specifies the level of reporting for the files, objects, and directories that DataSync attempted to delete in your destination location. This only applies if you configure your task to delete data in the destination that isn't in the source. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS."
+                                type: string
+                              skippedOverride:
+                                description: 'Specifies the level of reporting for the files, objects, and directories that DataSync attempted to skip during your transfer. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.'
+                                type: string
+                              transferredOverride:
+                                description: 'Specifies the level of reporting for the files, objects, and directories that DataSync attempted to transfer. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.'
+                                type: string
+                              verifiedOverride:
+                                description: 'Specifies the level of reporting for the files, objects, and directories that DataSync attempted to verify at the end of your transfer. Valid values: ERRORS_ONLY and SUCCESSES_AND_ERRORS.'
+                                type: string
+                            type: object
+                          type: array
+                        s3Destination:
+                          description: Configuration block containing the configuration for the Amazon S3 bucket where DataSync uploads your task report. See s3_destination below.
+                          items:
+                            properties:
+                              bucketAccessRoleArn:
+                                description: Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a task report to your S3 bucket.
+                                type: string
+                              s3BucketArn:
+                                description: Specifies the ARN of the S3 bucket where DataSync uploads your report.
+                                type: string
+                              subdirectory:
+                                description: Specifies a bucket prefix for your report.
+                                type: string
+                            type: object
+                          type: array
+                        s3ObjectVersioning:
+                          description: 'Specifies whether your task report includes the new version of each object transferred into an S3 bucket. This only applies if you enable versioning on your bucket. Keep in mind that setting this to INCLUDE can increase the duration of your task execution. Valid values: INCLUDE and NONE.'
+                          type: string
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.

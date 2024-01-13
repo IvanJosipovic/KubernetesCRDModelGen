@@ -172,10 +172,11 @@ spec:
                         type: object
                     type: object
                   options:
-                    description: Options for creating an attachment.
+                    description: Options block. See options for more information.
                     items:
                       properties:
                         protocol:
+                          description: The protocol used for the attachment connection. Possible values are GRE and NO_ENCAP.
                           type: string
                       type: object
                     type: array
@@ -369,10 +370,11 @@ spec:
                         type: object
                     type: object
                   options:
-                    description: Options for creating an attachment.
+                    description: Options block. See options for more information.
                     items:
                       properties:
                         protocol:
+                          description: The protocol used for the attachment connection. Possible values are GRE and NO_ENCAP.
                           type: string
                       type: object
                     type: array
@@ -587,10 +589,11 @@ spec:
                     description: The ID of the attachment.
                     type: string
                   options:
-                    description: Options for creating an attachment.
+                    description: Options block. See options for more information.
                     items:
                       properties:
                         protocol:
+                          description: The protocol used for the attachment connection. Possible values are GRE and NO_ENCAP.
                           type: string
                       type: object
                     type: array

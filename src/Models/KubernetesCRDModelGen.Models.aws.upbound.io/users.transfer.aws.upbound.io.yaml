@@ -98,7 +98,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   role:
-                    description: Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
+                    description: Amazon Resource Name (ARN) of an IAM role that allows the service to control your user’s access to your Amazon S3 bucket.
                     type: string
                   roleRef:
                     description: Reference to a Role in iam to populate role.
@@ -265,7 +265,7 @@ spec:
                       type: object
                     type: array
                   role:
-                    description: Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
+                    description: Amazon Resource Name (ARN) of an IAM role that allows the service to control your user’s access to your Amazon S3 bucket.
                     type: string
                   roleRef:
                     description: Reference to a Role in iam to populate role.
@@ -550,7 +550,7 @@ spec:
                       type: object
                     type: array
                   role:
-                    description: Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
+                    description: Amazon Resource Name (ARN) of an IAM role that allows the service to control your user’s access to your Amazon S3 bucket.
                     type: string
                   serverId:
                     description: The Server ID of the Transfer Server (e.g., s-12345678)

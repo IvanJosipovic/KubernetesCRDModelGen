@@ -59,7 +59,7 @@ spec:
                     description: Authentication strategy associated with the configuration. Valid values are simple and ldap. ldap is not supported for engine_type RabbitMQ.
                     type: string
                   data:
-                    description: Broker configuration in XML format. See official docs for supported parameters and format of the XML.
+                    description: Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ. See official docs for supported parameters and format of the XML.
                     type: string
                   description:
                     description: Description of the configuration.
@@ -92,7 +92,7 @@ spec:
                     description: Authentication strategy associated with the configuration. Valid values are simple and ldap. ldap is not supported for engine_type RabbitMQ.
                     type: string
                   data:
-                    description: Broker configuration in XML format. See official docs for supported parameters and format of the XML.
+                    description: Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ. See official docs for supported parameters and format of the XML.
                     type: string
                   description:
                     description: Description of the configuration.
@@ -247,7 +247,7 @@ spec:
                     description: Authentication strategy associated with the configuration. Valid values are simple and ldap. ldap is not supported for engine_type RabbitMQ.
                     type: string
                   data:
-                    description: Broker configuration in XML format. See official docs for supported parameters and format of the XML.
+                    description: Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ. See official docs for supported parameters and format of the XML.
                     type: string
                   description:
                     description: Description of the configuration.

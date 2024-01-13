@@ -68,7 +68,7 @@ spec:
                     description: The start of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 type.
                     type: number
                   ipProtocol:
-                    description: The IP protocol name or number. Use -1 to specify all protocols.
+                    description: The IP protocol name or number. Use -1 to specify all protocols. Note that if ip_protocol is set to -1, it translates to all protocols, all port ranges, and from_port and to_port values should not be defined.
                     type: string
                   prefixListId:
                     description: The ID of the source prefix list.
@@ -275,7 +275,7 @@ spec:
                     description: The start of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 type.
                     type: number
                   ipProtocol:
-                    description: The IP protocol name or number. Use -1 to specify all protocols.
+                    description: The IP protocol name or number. Use -1 to specify all protocols. Note that if ip_protocol is set to -1, it translates to all protocols, all port ranges, and from_port and to_port values should not be defined.
                     type: string
                   prefixListId:
                     description: The ID of the source prefix list.
@@ -600,7 +600,7 @@ spec:
                   id:
                     type: string
                   ipProtocol:
-                    description: The IP protocol name or number. Use -1 to specify all protocols.
+                    description: The IP protocol name or number. Use -1 to specify all protocols. Note that if ip_protocol is set to -1, it translates to all protocols, all port ranges, and from_port and to_port values should not be defined.
                     type: string
                   prefixListId:
                     description: The ID of the source prefix list.

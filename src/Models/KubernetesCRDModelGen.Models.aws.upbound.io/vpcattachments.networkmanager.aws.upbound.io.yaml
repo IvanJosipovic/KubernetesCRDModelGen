@@ -118,10 +118,10 @@ spec:
                     items:
                       properties:
                         applianceModeSupport:
-                          description: Indicates whether appliance mode is supported. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow.
+                          description: Indicates whether appliance mode is supported. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow. If the VPC attachment is pending acceptance, changing this value will recreate the resource.
                           type: boolean
                         ipv6Support:
-                          description: Indicates whether IPv6 is supported.
+                          description: Indicates whether IPv6 is supported. If the VPC attachment is pending acceptance, changing this value will recreate the resource.
                           type: boolean
                       type: object
                     type: array
@@ -325,10 +325,10 @@ spec:
                     items:
                       properties:
                         applianceModeSupport:
-                          description: Indicates whether appliance mode is supported. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow.
+                          description: Indicates whether appliance mode is supported. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow. If the VPC attachment is pending acceptance, changing this value will recreate the resource.
                           type: boolean
                         ipv6Support:
-                          description: Indicates whether IPv6 is supported.
+                          description: Indicates whether IPv6 is supported. If the VPC attachment is pending acceptance, changing this value will recreate the resource.
                           type: boolean
                       type: object
                     type: array
@@ -605,10 +605,10 @@ spec:
                     items:
                       properties:
                         applianceModeSupport:
-                          description: Indicates whether appliance mode is supported. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow.
+                          description: Indicates whether appliance mode is supported. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow. If the VPC attachment is pending acceptance, changing this value will recreate the resource.
                           type: boolean
                         ipv6Support:
-                          description: Indicates whether IPv6 is supported.
+                          description: Indicates whether IPv6 is supported. If the VPC attachment is pending acceptance, changing this value will recreate the resource.
                           type: boolean
                       type: object
                     type: array

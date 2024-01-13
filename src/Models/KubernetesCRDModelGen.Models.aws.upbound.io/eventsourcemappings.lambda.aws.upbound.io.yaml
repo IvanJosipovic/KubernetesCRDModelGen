@@ -198,11 +198,10 @@ spec:
                     description: The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
                     type: number
                   queues:
-                    description: The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+                    description: The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.
                     items:
                       type: string
                     type: array
-                    x-kubernetes-list-type: set
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -412,11 +411,10 @@ spec:
                     description: The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
                     type: number
                   queues:
-                    description: The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+                    description: The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.
                     items:
                       type: string
                     type: array
-                    x-kubernetes-list-type: set
                   scalingConfig:
                     description: Scaling configuration of the event source. Only available for SQS queues. Detailed below.
                     items:
@@ -692,11 +690,10 @@ spec:
                     description: The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
                     type: number
                   queues:
-                    description: The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. A single queue name must be specified.
+                    description: The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.
                     items:
                       type: string
                     type: array
-                    x-kubernetes-list-type: set
                   scalingConfig:
                     description: Scaling configuration of the event source. Only available for SQS queues. Detailed below.
                     items:

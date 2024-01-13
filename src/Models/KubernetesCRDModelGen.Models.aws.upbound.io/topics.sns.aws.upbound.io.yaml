@@ -174,11 +174,14 @@ spec:
                   applicationSuccessFeedbackSampleRate:
                     description: Percentage of success to sample
                     type: number
+                  archivePolicy:
+                    description: The message archive policy for FIFO topics. More details in the AWS documentation.
+                    type: string
                   contentBasedDeduplication:
                     description: Enables content-based deduplication for FIFO topics. For more information, see the related documentation
                     type: boolean
                   deliveryPolicy:
-                    description: The SNS delivery policy. More on AWS documentation
+                    description: The SNS delivery policy. More details in the AWS documentation.
                     type: string
                   displayName:
                     description: The display name for the topic
@@ -808,11 +811,14 @@ spec:
                   applicationSuccessFeedbackSampleRate:
                     description: Percentage of success to sample
                     type: number
+                  archivePolicy:
+                    description: The message archive policy for FIFO topics. More details in the AWS documentation.
+                    type: string
                   contentBasedDeduplication:
                     description: Enables content-based deduplication for FIFO topics. For more information, see the related documentation
                     type: boolean
                   deliveryPolicy:
-                    description: The SNS delivery policy. More on AWS documentation
+                    description: The SNS delivery policy. More details in the AWS documentation.
                     type: string
                   displayName:
                     description: The display name for the topic
@@ -1442,14 +1448,20 @@ spec:
                   applicationSuccessFeedbackSampleRate:
                     description: Percentage of success to sample
                     type: number
+                  archivePolicy:
+                    description: The message archive policy for FIFO topics. More details in the AWS documentation.
+                    type: string
                   arn:
                     description: The ARN of the SNS topic, as a more obvious property (clone of id)
+                    type: string
+                  beginningArchiveTime:
+                    description: The oldest timestamp at which a FIFO topic subscriber can start a replay.
                     type: string
                   contentBasedDeduplication:
                     description: Enables content-based deduplication for FIFO topics. For more information, see the related documentation
                     type: boolean
                   deliveryPolicy:
-                    description: The SNS delivery policy. More on AWS documentation
+                    description: The SNS delivery policy. More details in the AWS documentation.
                     type: string
                   displayName:
                     description: The display name for the topic

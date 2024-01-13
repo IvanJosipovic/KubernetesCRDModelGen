@@ -135,7 +135,7 @@ spec:
                     description: The number of consecutive health checks that an endpoint must pass or fail.
                     type: number
                   fqdn:
-                    description: The fully qualified domain name of the endpoint to be checked.
+                    description: The fully qualified domain name of the endpoint to be checked. If a value is set for ip_address, the value set for fqdn will be passed in the Host header.
                     type: string
                   insufficientDataHealthStatus:
                     description: The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are Healthy , Unhealthy and LastKnownStatus.
@@ -271,7 +271,7 @@ spec:
                     description: The number of consecutive health checks that an endpoint must pass or fail.
                     type: number
                   fqdn:
-                    description: The fully qualified domain name of the endpoint to be checked.
+                    description: The fully qualified domain name of the endpoint to be checked. If a value is set for ip_address, the value set for fqdn will be passed in the Host header.
                     type: string
                   insufficientDataHealthStatus:
                     description: The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are Healthy , Unhealthy and LastKnownStatus.
@@ -468,7 +468,7 @@ spec:
                     description: The number of consecutive health checks that an endpoint must pass or fail.
                     type: number
                   fqdn:
-                    description: The fully qualified domain name of the endpoint to be checked.
+                    description: The fully qualified domain name of the endpoint to be checked. If a value is set for ip_address, the value set for fqdn will be passed in the Host header.
                     type: string
                   id:
                     description: The id of the health check

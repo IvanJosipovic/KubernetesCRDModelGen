@@ -233,7 +233,7 @@ spec:
                               type: object
                           type: object
                         subnetIds:
-                          description: Identifiers of the subnets to which a network interface is attached from the image builder instance or image builder instance.
+                          description: Identifier of the subnet to which a network interface is attached from the image builder instance.
                           items:
                             type: string
                           type: array
@@ -421,7 +421,7 @@ spec:
                               type: object
                           type: object
                         subnetIds:
-                          description: Identifiers of the subnets to which a network interface is attached from the image builder instance or image builder instance.
+                          description: Identifier of the subnet to which a network interface is attached from the image builder instance.
                           items:
                             type: string
                           type: array
@@ -633,7 +633,7 @@ spec:
                           type: array
                           x-kubernetes-list-type: set
                         subnetIds:
-                          description: Identifiers of the subnets to which a network interface is attached from the image builder instance or image builder instance.
+                          description: Identifier of the subnet to which a network interface is attached from the image builder instance.
                           items:
                             type: string
                           type: array
