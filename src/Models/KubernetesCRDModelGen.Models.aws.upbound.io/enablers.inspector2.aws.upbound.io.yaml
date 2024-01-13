@@ -65,7 +65,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   resourceTypes:
-                    description: Type of resources to scan. Valid values are EC2, ECR, and LAMBDA. At least one item is required.
+                    description: Type of resources to scan. Valid values are EC2, ECR, LAMBDA and LAMBDA_CODE. At least one item is required.
                     items:
                       type: string
                     type: array
@@ -83,7 +83,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   resourceTypes:
-                    description: Type of resources to scan. Valid values are EC2, ECR, and LAMBDA. At least one item is required.
+                    description: Type of resources to scan. Valid values are EC2, ECR, LAMBDA and LAMBDA_CODE. At least one item is required.
                     items:
                       type: string
                     type: array
@@ -221,7 +221,7 @@ spec:
                   id:
                     type: string
                   resourceTypes:
-                    description: Type of resources to scan. Valid values are EC2, ECR, and LAMBDA. At least one item is required.
+                    description: Type of resources to scan. Valid values are EC2, ECR, LAMBDA and LAMBDA_CODE. At least one item is required.
                     items:
                       type: string
                     type: array

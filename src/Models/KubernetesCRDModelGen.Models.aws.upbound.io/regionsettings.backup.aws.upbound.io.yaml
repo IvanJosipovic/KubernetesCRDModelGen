@@ -62,7 +62,7 @@ spec:
                     additionalProperties:
                       type: boolean
                     description: >-
-                      A map of services along with the management preferences for the Region. 
+                      A map of services along with the management preferences for the Region. For more information, see the AWS Documentation. 
                        WARNING: All parameters are required to be given: EFS, DynamoDB
                     type: object
                     x-kubernetes-map-type: granular
@@ -84,7 +84,7 @@ spec:
                     additionalProperties:
                       type: boolean
                     description: >-
-                      A map of services along with the management preferences for the Region. 
+                      A map of services along with the management preferences for the Region. For more information, see the AWS Documentation. 
                        WARNING: All parameters are required to be given: EFS, DynamoDB
                     type: object
                     x-kubernetes-map-type: granular
@@ -225,7 +225,7 @@ spec:
                     additionalProperties:
                       type: boolean
                     description: >-
-                      A map of services along with the management preferences for the Region. 
+                      A map of services along with the management preferences for the Region. For more information, see the AWS Documentation. 
                        WARNING: All parameters are required to be given: EFS, DynamoDB
                     type: object
                     x-kubernetes-map-type: granular

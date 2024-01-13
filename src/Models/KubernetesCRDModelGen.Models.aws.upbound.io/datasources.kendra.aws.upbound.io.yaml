@@ -56,7 +56,7 @@ spec:
               forProvider:
                 properties:
                   configuration:
-                    description: A block with the configuration information to connect to your Data Source repository. You can't specify the configuration argument when the type parameter is set to CUSTOM. Detailed below.
+                    description: A block with the configuration information to connect to your Data Source repository. You can't specify the configuration block when the type parameter is set to CUSTOM. Detailed below.
                     items:
                       properties:
                         s3Configuration:
@@ -379,14 +379,14 @@ spec:
                           items:
                             properties:
                               condition:
-                                description: Configuration of the condition used for the target document attribute or metadata field when ingesting documents into Amazon Kendra. See Document Attribute Condition.
+                                description: Configuration of the condition used for the target document attribute or metadata field when ingesting documents into Amazon Kendra. See condition.
                                 items:
                                   properties:
                                     conditionDocumentAttributeKey:
                                       description: The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.
                                       type: string
                                     conditionOnValue:
-                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See Document Attribute Value.
+                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See condition_on_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -421,7 +421,7 @@ spec:
                                       description: The identifier of the target document attribute or metadata field. For example, 'Department' could be an identifier for the target attribute or metadata field that includes the department names associated with the documents.
                                       type: string
                                     targetDocumentAttributeValue:
-                                      description: The target value you want to create for the target attribute. For example, 'Finance' could be the target value for the target attribute key 'Department'. See Document Attribute Value.
+                                      description: The target value you want to create for the target attribute. For example, 'Finance' could be the target value for the target attribute key 'Department'. See target_document_attribute_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -452,14 +452,14 @@ spec:
                           items:
                             properties:
                               invocationCondition:
-                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See Document Attribute Condition.
+                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.
                                 items:
                                   properties:
                                     conditionDocumentAttributeKey:
                                       description: The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.
                                       type: string
                                     conditionOnValue:
-                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See Document Attribute Value.
+                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See condition_on_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -496,14 +496,14 @@ spec:
                           items:
                             properties:
                               invocationCondition:
-                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See Document Attribute Condition.
+                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.
                                 items:
                                   properties:
                                     conditionDocumentAttributeKey:
                                       description: The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.
                                       type: string
                                     conditionOnValue:
-                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See Document Attribute Value.
+                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See condition_on_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -544,7 +544,7 @@ spec:
                     description: A description for the Data Source connector.
                     type: string
                   indexId:
-                    description: The identifier of the index for your Amazon Kendra data_source.
+                    description: The identifier of the index for your Amazon Kendra data source.
                     type: string
                   indexIdRef:
                     description: Reference to a Index in kendra to populate indexId.
@@ -605,7 +605,7 @@ spec:
                     description: The code for a language. This allows you to support a language for all documents when creating the Data Source connector. English is supported by default. For more information on supported languages, including their codes, see Adding documents in languages other than English.
                     type: string
                   name:
-                    description: A name for your Data Source connector.
+                    description: A name for your data source connector.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
@@ -687,7 +687,7 @@ spec:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
                 properties:
                   configuration:
-                    description: A block with the configuration information to connect to your Data Source repository. You can't specify the configuration argument when the type parameter is set to CUSTOM. Detailed below.
+                    description: A block with the configuration information to connect to your Data Source repository. You can't specify the configuration block when the type parameter is set to CUSTOM. Detailed below.
                     items:
                       properties:
                         s3Configuration:
@@ -1010,14 +1010,14 @@ spec:
                           items:
                             properties:
                               condition:
-                                description: Configuration of the condition used for the target document attribute or metadata field when ingesting documents into Amazon Kendra. See Document Attribute Condition.
+                                description: Configuration of the condition used for the target document attribute or metadata field when ingesting documents into Amazon Kendra. See condition.
                                 items:
                                   properties:
                                     conditionDocumentAttributeKey:
                                       description: The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.
                                       type: string
                                     conditionOnValue:
-                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See Document Attribute Value.
+                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See condition_on_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -1052,7 +1052,7 @@ spec:
                                       description: The identifier of the target document attribute or metadata field. For example, 'Department' could be an identifier for the target attribute or metadata field that includes the department names associated with the documents.
                                       type: string
                                     targetDocumentAttributeValue:
-                                      description: The target value you want to create for the target attribute. For example, 'Finance' could be the target value for the target attribute key 'Department'. See Document Attribute Value.
+                                      description: The target value you want to create for the target attribute. For example, 'Finance' could be the target value for the target attribute key 'Department'. See target_document_attribute_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -1083,14 +1083,14 @@ spec:
                           items:
                             properties:
                               invocationCondition:
-                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See Document Attribute Condition.
+                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.
                                 items:
                                   properties:
                                     conditionDocumentAttributeKey:
                                       description: The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.
                                       type: string
                                     conditionOnValue:
-                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See Document Attribute Value.
+                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See condition_on_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -1127,14 +1127,14 @@ spec:
                           items:
                             properties:
                               invocationCondition:
-                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See Document Attribute Condition.
+                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.
                                 items:
                                   properties:
                                     conditionDocumentAttributeKey:
                                       description: The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.
                                       type: string
                                     conditionOnValue:
-                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See Document Attribute Value.
+                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See condition_on_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -1175,7 +1175,7 @@ spec:
                     description: A description for the Data Source connector.
                     type: string
                   indexId:
-                    description: The identifier of the index for your Amazon Kendra data_source.
+                    description: The identifier of the index for your Amazon Kendra data source.
                     type: string
                   indexIdRef:
                     description: Reference to a Index in kendra to populate indexId.
@@ -1236,7 +1236,7 @@ spec:
                     description: The code for a language. This allows you to support a language for all documents when creating the Data Source connector. English is supported by default. For more information on supported languages, including their codes, see Adding documents in languages other than English.
                     type: string
                   name:
-                    description: A name for your Data Source connector.
+                    description: A name for your data source connector.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more information, see IAM roles for Amazon Kendra. You can't specify the role_arn parameter when the type parameter is set to CUSTOM. The role_arn parameter is required for all other data sources.
@@ -1436,7 +1436,7 @@ spec:
                     description: ARN of the Data Source.
                     type: string
                   configuration:
-                    description: A block with the configuration information to connect to your Data Source repository. You can't specify the configuration argument when the type parameter is set to CUSTOM. Detailed below.
+                    description: A block with the configuration information to connect to your Data Source repository. You can't specify the configuration block when the type parameter is set to CUSTOM. Detailed below.
                     items:
                       properties:
                         s3Configuration:
@@ -1597,14 +1597,14 @@ spec:
                           items:
                             properties:
                               condition:
-                                description: Configuration of the condition used for the target document attribute or metadata field when ingesting documents into Amazon Kendra. See Document Attribute Condition.
+                                description: Configuration of the condition used for the target document attribute or metadata field when ingesting documents into Amazon Kendra. See condition.
                                 items:
                                   properties:
                                     conditionDocumentAttributeKey:
                                       description: The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.
                                       type: string
                                     conditionOnValue:
-                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See Document Attribute Value.
+                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See condition_on_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -1639,7 +1639,7 @@ spec:
                                       description: The identifier of the target document attribute or metadata field. For example, 'Department' could be an identifier for the target attribute or metadata field that includes the department names associated with the documents.
                                       type: string
                                     targetDocumentAttributeValue:
-                                      description: The target value you want to create for the target attribute. For example, 'Finance' could be the target value for the target attribute key 'Department'. See Document Attribute Value.
+                                      description: The target value you want to create for the target attribute. For example, 'Finance' could be the target value for the target attribute key 'Department'. See target_document_attribute_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -1670,14 +1670,14 @@ spec:
                           items:
                             properties:
                               invocationCondition:
-                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See Document Attribute Condition.
+                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.
                                 items:
                                   properties:
                                     conditionDocumentAttributeKey:
                                       description: The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.
                                       type: string
                                     conditionOnValue:
-                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See Document Attribute Value.
+                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See condition_on_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -1714,14 +1714,14 @@ spec:
                           items:
                             properties:
                               invocationCondition:
-                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See Document Attribute Condition.
+                                description: A block that specifies the condition used for when a Lambda function should be invoked. For example, you can specify a condition that if there are empty date-time values, then Amazon Kendra should invoke a function that inserts the current date-time. See invocation_condition.
                                 items:
                                   properties:
                                     conditionDocumentAttributeKey:
                                       description: The identifier of the document attribute used for the condition. For example, _source_uri could be an identifier for the attribute or metadata field that contains source URIs associated with the documents. Amazon Kendra currently does not support _document_body as an attribute key used for the condition.
                                       type: string
                                     conditionOnValue:
-                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See Document Attribute Value.
+                                      description: The value used by the operator. For example, you can specify the value 'financial' for strings in the _source_uri field that partially match or contain this value. See condition_on_value.
                                       items:
                                         properties:
                                           dateValue:
@@ -1771,13 +1771,13 @@ spec:
                     description: The unique identifiers of the Data Source and index separated by a slash (/).
                     type: string
                   indexId:
-                    description: The identifier of the index for your Amazon Kendra data_source.
+                    description: The identifier of the index for your Amazon Kendra data source.
                     type: string
                   languageCode:
                     description: The code for a language. This allows you to support a language for all documents when creating the Data Source connector. English is supported by default. For more information on supported languages, including their codes, see Adding documents in languages other than English.
                     type: string
                   name:
-                    description: A name for your Data Source connector.
+                    description: A name for your data source connector.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more information, see IAM roles for Amazon Kendra. You can't specify the role_arn parameter when the type parameter is set to CUSTOM. The role_arn parameter is required for all other data sources.

@@ -132,7 +132,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: 'The type of the schema. Valid values: OpenApi3.'
+                    description: 'The type of the schema. Valid values: OpenApi3 or JSONSchemaDraft4.'
                     type: string
                 required:
                 - region
@@ -214,7 +214,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: 'The type of the schema. Valid values: OpenApi3.'
+                    description: 'The type of the schema. Valid values: OpenApi3 or JSONSchemaDraft4.'
                     type: string
                 type: object
               managementPolicies:
@@ -375,7 +375,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: 'The type of the schema. Valid values: OpenApi3.'
+                    description: 'The type of the schema. Valid values: OpenApi3 or JSONSchemaDraft4.'
                     type: string
                   version:
                     description: The version of the schema.

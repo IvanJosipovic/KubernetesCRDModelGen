@@ -137,7 +137,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   launchTemplate:
-                    description: Configuration block with Launch Template settings. Detailed below.
+                    description: Configuration block with Launch Template settings. See launch_template below for details.
                     items:
                       properties:
                         id:
@@ -216,7 +216,7 @@ spec:
                     description: –  AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
                     type: string
                   remoteAccess:
-                    description: Configuration block with remote access settings. Detailed below.
+                    description: Configuration block with remote access settings. See remote_access below for details.
                     items:
                       properties:
                         ec2SshKey:
@@ -289,7 +289,7 @@ spec:
                       type: object
                     type: array
                   scalingConfig:
-                    description: Configuration block with scaling settings. Detailed below.
+                    description: Configuration block with scaling settings. See scaling_config below for details.
                     items:
                       properties:
                         desiredSize:
@@ -374,7 +374,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   taint:
-                    description: The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
+                    description: The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. See taint below for details.
                     items:
                       properties:
                         effect:
@@ -389,6 +389,7 @@ spec:
                       type: object
                     type: array
                   updateConfig:
+                    description: Configuration block with update settings. See update_config below for details.
                     items:
                       properties:
                         maxUnavailable:
@@ -487,7 +488,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   launchTemplate:
-                    description: Configuration block with Launch Template settings. Detailed below.
+                    description: Configuration block with Launch Template settings. See launch_template below for details.
                     items:
                       properties:
                         id:
@@ -563,7 +564,7 @@ spec:
                     description: –  AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
                     type: string
                   remoteAccess:
-                    description: Configuration block with remote access settings. Detailed below.
+                    description: Configuration block with remote access settings. See remote_access below for details.
                     items:
                       properties:
                         ec2SshKey:
@@ -636,7 +637,7 @@ spec:
                       type: object
                     type: array
                   scalingConfig:
-                    description: Configuration block with scaling settings. Detailed below.
+                    description: Configuration block with scaling settings. See scaling_config below for details.
                     items:
                       properties:
                         desiredSize:
@@ -721,7 +722,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   taint:
-                    description: The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
+                    description: The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. See taint below for details.
                     items:
                       properties:
                         effect:
@@ -736,6 +737,7 @@ spec:
                       type: object
                     type: array
                   updateConfig:
+                    description: Configuration block with update settings. See update_config below for details.
                     items:
                       properties:
                         maxUnavailable:
@@ -959,7 +961,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   launchTemplate:
-                    description: Configuration block with Launch Template settings. Detailed below.
+                    description: Configuration block with Launch Template settings. See launch_template below for details.
                     items:
                       properties:
                         id:
@@ -980,7 +982,7 @@ spec:
                     description: –  AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
                     type: string
                   remoteAccess:
-                    description: Configuration block with remote access settings. Detailed below.
+                    description: Configuration block with remote access settings. See remote_access below for details.
                     items:
                       properties:
                         ec2SshKey:
@@ -1013,7 +1015,7 @@ spec:
                       type: object
                     type: array
                   scalingConfig:
-                    description: Configuration block with scaling settings. Detailed below.
+                    description: Configuration block with scaling settings. See scaling_config below for details.
                     items:
                       properties:
                         desiredSize:
@@ -1049,7 +1051,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   taint:
-                    description: The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
+                    description: The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. See taint below for details.
                     items:
                       properties:
                         effect:
@@ -1064,6 +1066,7 @@ spec:
                       type: object
                     type: array
                   updateConfig:
+                    description: Configuration block with update settings. See update_config below for details.
                     items:
                       properties:
                         maxUnavailable:

@@ -134,6 +134,9 @@ spec:
                   multiAz:
                     description: Specifies if the replication instance is a multi-az deployment. You cannot set the availability_zone parameter if the multi_az parameter is set to true.
                     type: boolean
+                  networkType:
+                    description: 'The type of IP address protocol used by a replication instance. Valid values: IPV4, DUAL.'
+                    type: string
                   preferredMaintenanceWindow:
                     description: The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
                     type: string
@@ -359,6 +362,9 @@ spec:
                   multiAz:
                     description: Specifies if the replication instance is a multi-az deployment. You cannot set the availability_zone parameter if the multi_az parameter is set to true.
                     type: boolean
+                  networkType:
+                    description: 'The type of IP address protocol used by a replication instance. Valid values: IPV4, DUAL.'
+                    type: string
                   preferredMaintenanceWindow:
                     description: The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
                     type: string
@@ -644,6 +650,9 @@ spec:
                   multiAz:
                     description: Specifies if the replication instance is a multi-az deployment. You cannot set the availability_zone parameter if the multi_az parameter is set to true.
                     type: boolean
+                  networkType:
+                    description: 'The type of IP address protocol used by a replication instance. Valid values: IPV4, DUAL.'
+                    type: string
                   preferredMaintenanceWindow:
                     description: The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
                     type: string

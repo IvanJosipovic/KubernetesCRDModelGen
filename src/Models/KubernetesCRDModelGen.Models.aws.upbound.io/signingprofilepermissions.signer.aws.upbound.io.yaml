@@ -56,7 +56,7 @@ spec:
               forProvider:
                 properties:
                   action:
-                    description: 'An AWS Signer action permitted as part of cross-account permissions. Valid values: signer:StartSigningJob, signer:GetSigningProfile, or signer:RevokeSignature.'
+                    description: 'An AWS Signer action permitted as part of cross-account permissions. Valid values: signer:StartSigningJob, signer:GetSigningProfile, signer:RevokeSignature, or signer:SignPayload.'
                     type: string
                   principal:
                     description: The AWS principal to be granted a cross-account permission.
@@ -193,7 +193,7 @@ spec:
                 description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
                 properties:
                   action:
-                    description: 'An AWS Signer action permitted as part of cross-account permissions. Valid values: signer:StartSigningJob, signer:GetSigningProfile, or signer:RevokeSignature.'
+                    description: 'An AWS Signer action permitted as part of cross-account permissions. Valid values: signer:StartSigningJob, signer:GetSigningProfile, signer:RevokeSignature, or signer:SignPayload.'
                     type: string
                   principal:
                     description: The AWS principal to be granted a cross-account permission.
@@ -384,7 +384,7 @@ spec:
               atProvider:
                 properties:
                   action:
-                    description: 'An AWS Signer action permitted as part of cross-account permissions. Valid values: signer:StartSigningJob, signer:GetSigningProfile, or signer:RevokeSignature.'
+                    description: 'An AWS Signer action permitted as part of cross-account permissions. Valid values: signer:StartSigningJob, signer:GetSigningProfile, signer:RevokeSignature, or signer:SignPayload.'
                     type: string
                   id:
                     type: string

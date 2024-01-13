@@ -145,6 +145,9 @@ spec:
                   externalTableDefinition:
                     description: JSON document that describes how AWS DMS should interpret the data.
                     type: string
+                  glueCatalogGeneration:
+                    description: Whether to integrate AWS Glue Data Catalog with an Amazon S3 target. See Using AWS Glue Data Catalog with an Amazon S3 target for AWS DMS for more information. Default is false.
+                    type: boolean
                   ignoreHeaderRows:
                     description: When this value is set to 1, DMS ignores the first row header in a .csv file. (AWS default is 0.)
                     type: number
@@ -460,6 +463,9 @@ spec:
                   externalTableDefinition:
                     description: JSON document that describes how AWS DMS should interpret the data.
                     type: string
+                  glueCatalogGeneration:
+                    description: Whether to integrate AWS Glue Data Catalog with an Amazon S3 target. See Using AWS Glue Data Catalog with an Amazon S3 target for AWS DMS for more information. Default is false.
+                    type: boolean
                   ignoreHeaderRows:
                     description: When this value is set to 1, DMS ignores the first row header in a .csv file. (AWS default is 0.)
                     type: number
@@ -899,6 +905,9 @@ spec:
                   externalTableDefinition:
                     description: JSON document that describes how AWS DMS should interpret the data.
                     type: string
+                  glueCatalogGeneration:
+                    description: Whether to integrate AWS Glue Data Catalog with an Amazon S3 target. See Using AWS Glue Data Catalog with an Amazon S3 target for AWS DMS for more information. Default is false.
+                    type: boolean
                   id:
                     type: string
                   ignoreHeaderRows:

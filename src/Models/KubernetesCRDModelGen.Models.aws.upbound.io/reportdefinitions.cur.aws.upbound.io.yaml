@@ -62,7 +62,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   additionalSchemaElements:
-                    description: 'A list of schema elements. Valid values are: RESOURCES.'
+                    description: 'A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA.'
                     items:
                       type: string
                     type: array
@@ -162,7 +162,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   additionalSchemaElements:
-                    description: 'A list of schema elements. Valid values are: RESOURCES.'
+                    description: 'A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA.'
                     items:
                       type: string
                     type: array
@@ -383,7 +383,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   additionalSchemaElements:
-                    description: 'A list of schema elements. Valid values are: RESOURCES.'
+                    description: 'A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA.'
                     items:
                       type: string
                     type: array

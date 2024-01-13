@@ -868,7 +868,7 @@ spec:
                     description: Region in which the trail was created.
                     type: string
                   id:
-                    description: Name of the trail.
+                    description: ARN of the trail.
                     type: string
                   includeGlobalServiceEvents:
                     description: Whether the trail is publishing events from global services such as IAM to the log files. Defaults to true.

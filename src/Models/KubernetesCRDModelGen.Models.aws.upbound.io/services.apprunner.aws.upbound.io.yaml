@@ -68,7 +68,7 @@ spec:
                       type: object
                     type: array
                   healthCheckConfiguration:
-                    description: (Forces new resource) Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
+                    description: Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
                     items:
                       properties:
                         healthyThreshold:
@@ -115,10 +115,10 @@ spec:
                           items:
                             properties:
                               egressType:
-                                description: Type of egress configuration.Set to DEFAULT for access to resources hosted on public networks.Set to VPC to associate your service to a custom VPC specified by VpcConnectorArn.
+                                description: 'The type of egress configuration. Valid values are: DEFAULT and VPC.'
                                 type: string
                               vpcConnectorArn:
-                                description: ARN of the App Runner VPC connector that you want to associate with your App Runner service. Only valid when EgressType = VPC.
+                                description: The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to associate with your App Runner service. Only valid when EgressType = VPC.
                                 type: string
                               vpcConnectorArnRef:
                                 description: Reference to a VPCConnector in apprunner to populate vpcConnectorArn.
@@ -186,6 +186,9 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        ipAddressType:
+                          description: 'App Runner provides you with the option to choose between Internet Protocol version 4 (IPv4) and dual stack (IPv4 and IPv6) for your incoming public network configuration. Valid values: IPV4, DUAL_STACK. Default: IPV4.'
+                          type: string
                       type: object
                     type: array
                   observabilityConfiguration:
@@ -393,6 +396,9 @@ spec:
                                       type: string
                                   type: object
                                 type: array
+                              sourceDirectory:
+                                description: The path of the directory that stores source code and configuration files. The build and start commands also execute from here. The path is absolute from root and, if not specified, defaults to the repository root.
+                                type: string
                             type: object
                           type: array
                         imageRepository:
@@ -458,7 +464,7 @@ spec:
                       type: object
                     type: array
                   healthCheckConfiguration:
-                    description: (Forces new resource) Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
+                    description: Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
                     items:
                       properties:
                         healthyThreshold:
@@ -505,10 +511,10 @@ spec:
                           items:
                             properties:
                               egressType:
-                                description: Type of egress configuration.Set to DEFAULT for access to resources hosted on public networks.Set to VPC to associate your service to a custom VPC specified by VpcConnectorArn.
+                                description: 'The type of egress configuration. Valid values are: DEFAULT and VPC.'
                                 type: string
                               vpcConnectorArn:
-                                description: ARN of the App Runner VPC connector that you want to associate with your App Runner service. Only valid when EgressType = VPC.
+                                description: The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to associate with your App Runner service. Only valid when EgressType = VPC.
                                 type: string
                               vpcConnectorArnRef:
                                 description: Reference to a VPCConnector in apprunner to populate vpcConnectorArn.
@@ -576,6 +582,9 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        ipAddressType:
+                          description: 'App Runner provides you with the option to choose between Internet Protocol version 4 (IPv4) and dual stack (IPv4 and IPv6) for your incoming public network configuration. Valid values: IPV4, DUAL_STACK. Default: IPV4.'
+                          type: string
                       type: object
                     type: array
                   observabilityConfiguration:
@@ -780,6 +789,9 @@ spec:
                                       type: string
                                   type: object
                                 type: array
+                              sourceDirectory:
+                                description: The path of the directory that stores source code and configuration files. The build and start commands also execute from here. The path is absolute from root and, if not specified, defaults to the repository root.
+                                type: string
                             type: object
                           type: array
                         imageRepository:
@@ -966,7 +978,7 @@ spec:
                       type: object
                     type: array
                   healthCheckConfiguration:
-                    description: (Forces new resource) Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
+                    description: Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
                     items:
                       properties:
                         healthyThreshold:
@@ -1015,10 +1027,10 @@ spec:
                           items:
                             properties:
                               egressType:
-                                description: Type of egress configuration.Set to DEFAULT for access to resources hosted on public networks.Set to VPC to associate your service to a custom VPC specified by VpcConnectorArn.
+                                description: 'The type of egress configuration. Valid values are: DEFAULT and VPC.'
                                 type: string
                               vpcConnectorArn:
-                                description: ARN of the App Runner VPC connector that you want to associate with your App Runner service. Only valid when EgressType = VPC.
+                                description: The Amazon Resource Name (ARN) of the App Runner VPC connector that you want to associate with your App Runner service. Only valid when EgressType = VPC.
                                 type: string
                             type: object
                           type: array
@@ -1031,6 +1043,9 @@ spec:
                                 type: boolean
                             type: object
                           type: array
+                        ipAddressType:
+                          description: 'App Runner provides you with the option to choose between Internet Protocol version 4 (IPv4) and dual stack (IPv4 and IPv6) for your incoming public network configuration. Valid values: IPV4, DUAL_STACK. Default: IPV4.'
+                          type: string
                       type: object
                     type: array
                   observabilityConfiguration:
@@ -1131,6 +1146,9 @@ spec:
                                       type: string
                                   type: object
                                 type: array
+                              sourceDirectory:
+                                description: The path of the directory that stores source code and configuration files. The build and start commands also execute from here. The path is absolute from root and, if not specified, defaults to the repository root.
+                                type: string
                             type: object
                           type: array
                         imageRepository:

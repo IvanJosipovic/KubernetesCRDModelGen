@@ -59,7 +59,7 @@ spec:
                     description: Name of the build
                     type: string
                   operatingSystem:
-                    description: Operating system that the game server binaries are built to run onE.g., WINDOWS_2012, AMAZON_LINUX or AMAZON_LINUX_2.
+                    description: 'Operating system that the game server binaries are built to run on. Valid values: WINDOWS_2012, AMAZON_LINUX, AMAZON_LINUX_2, WINDOWS_2016, AMAZON_LINUX_2023.'
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
@@ -266,7 +266,7 @@ spec:
                     description: Name of the build
                     type: string
                   operatingSystem:
-                    description: Operating system that the game server binaries are built to run onE.g., WINDOWS_2012, AMAZON_LINUX or AMAZON_LINUX_2.
+                    description: 'Operating system that the game server binaries are built to run on. Valid values: WINDOWS_2012, AMAZON_LINUX, AMAZON_LINUX_2, WINDOWS_2016, AMAZON_LINUX_2023.'
                     type: string
                   storageLocation:
                     description: Information indicating where your game build files are stored. See below.
@@ -596,7 +596,7 @@ spec:
                     description: Name of the build
                     type: string
                   operatingSystem:
-                    description: Operating system that the game server binaries are built to run onE.g., WINDOWS_2012, AMAZON_LINUX or AMAZON_LINUX_2.
+                    description: 'Operating system that the game server binaries are built to run on. Valid values: WINDOWS_2012, AMAZON_LINUX, AMAZON_LINUX_2, WINDOWS_2016, AMAZON_LINUX_2023.'
                     type: string
                   storageLocation:
                     description: Information indicating where your game build files are stored. See below.

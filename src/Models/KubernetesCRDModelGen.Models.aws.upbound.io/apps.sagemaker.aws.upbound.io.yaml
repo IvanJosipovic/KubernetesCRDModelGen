@@ -135,6 +135,9 @@ spec:
                         sagemakerImageArn:
                           description: The ARN of the SageMaker image that the image version belongs to.
                           type: string
+                        sagemakerImageVersionAlias:
+                          description: The SageMaker Image Version Alias.
+                          type: string
                         sagemakerImageVersionArn:
                           description: The ARN of the image version created on the instance.
                           type: string
@@ -289,6 +292,9 @@ spec:
                           type: string
                         sagemakerImageArn:
                           description: The ARN of the SageMaker image that the image version belongs to.
+                          type: string
+                        sagemakerImageVersionAlias:
+                          description: The SageMaker Image Version Alias.
                           type: string
                         sagemakerImageVersionArn:
                           description: The ARN of the image version created on the instance.
@@ -513,6 +519,9 @@ spec:
                           type: string
                         sagemakerImageArn:
                           description: The ARN of the SageMaker image that the image version belongs to.
+                          type: string
+                        sagemakerImageVersionAlias:
+                          description: The SageMaker Image Version Alias.
                           type: string
                         sagemakerImageVersionArn:
                           description: The ARN of the image version created on the instance.

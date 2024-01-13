@@ -65,7 +65,7 @@ spec:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
                   regularExpression:
-                    description: One or more blocks of regular expression patterns that you want AWS WAF to search for, such as B[a@]dB[o0]t. See Regular Expression below for details.
+                    description: One or more blocks of regular expression patterns that you want AWS WAF to search for, such as B[a@]dB[o0]t. See Regular Expression below for details. A maximum of 10 regular_expression blocks may be specified.
                     items:
                       properties:
                         regexString:
@@ -95,7 +95,7 @@ spec:
                     description: A friendly name of the regular expression pattern set.
                     type: string
                   regularExpression:
-                    description: One or more blocks of regular expression patterns that you want AWS WAF to search for, such as B[a@]dB[o0]t. See Regular Expression below for details.
+                    description: One or more blocks of regular expression patterns that you want AWS WAF to search for, such as B[a@]dB[o0]t. See Regular Expression below for details. A maximum of 10 regular_expression blocks may be specified.
                     items:
                       properties:
                         regexString:
@@ -251,7 +251,7 @@ spec:
                     description: A friendly name of the regular expression pattern set.
                     type: string
                   regularExpression:
-                    description: One or more blocks of regular expression patterns that you want AWS WAF to search for, such as B[a@]dB[o0]t. See Regular Expression below for details.
+                    description: One or more blocks of regular expression patterns that you want AWS WAF to search for, such as B[a@]dB[o0]t. See Regular Expression below for details. A maximum of 10 regular_expression blocks may be specified.
                     items:
                       properties:
                         regexString:

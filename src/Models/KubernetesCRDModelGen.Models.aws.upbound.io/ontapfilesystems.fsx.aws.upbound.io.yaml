@@ -65,7 +65,7 @@ spec:
                     description: '- The filesystem deployment type. Supports MULTI_AZ_1 and SINGLE_AZ_1.'
                     type: string
                   diskIopsConfiguration:
-                    description: The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system. See Disk Iops Configuration Below.
+                    description: The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system. See Disk Iops Configuration below.
                     items:
                       properties:
                         iops:
@@ -382,7 +382,7 @@ spec:
                     description: '- The filesystem deployment type. Supports MULTI_AZ_1 and SINGLE_AZ_1.'
                     type: string
                   diskIopsConfiguration:
-                    description: The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system. See Disk Iops Configuration Below.
+                    description: The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system. See Disk Iops Configuration below.
                     items:
                       properties:
                         iops:
@@ -800,7 +800,7 @@ spec:
                     description: '- The filesystem deployment type. Supports MULTI_AZ_1 and SINGLE_AZ_1.'
                     type: string
                   diskIopsConfiguration:
-                    description: The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system. See Disk Iops Configuration Below.
+                    description: The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system. See Disk Iops Configuration below.
                     items:
                       properties:
                         iops:

@@ -139,7 +139,7 @@ spec:
                           description: Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
                           type: boolean
                         events:
-                          description: The event type or types that trigger a rollback. Supported types are DEPLOYMENT_FAILURE and DEPLOYMENT_STOP_ON_ALARM.
+                          description: The event type or types that trigger a rollback. Supported types are DEPLOYMENT_FAILURE, DEPLOYMENT_STOP_ON_ALARM and DEPLOYMENT_STOP_ON_REQUEST.
                           items:
                             type: string
                           type: array
@@ -552,6 +552,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  outdatedInstancesStrategy:
+                    description: Configuration block of Indicates what happens when new Amazon EC2 instances are launched mid-deployment and do not receive the deployed application revision. Valid values are UPDATE and IGNORE. Defaults to UPDATE.
+                    type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
                     type: string
@@ -724,7 +727,7 @@ spec:
                           description: Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
                           type: boolean
                         events:
-                          description: The event type or types that trigger a rollback. Supported types are DEPLOYMENT_FAILURE and DEPLOYMENT_STOP_ON_ALARM.
+                          description: The event type or types that trigger a rollback. Supported types are DEPLOYMENT_FAILURE, DEPLOYMENT_STOP_ON_ALARM and DEPLOYMENT_STOP_ON_REQUEST.
                           items:
                             type: string
                           type: array
@@ -1137,6 +1140,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  outdatedInstancesStrategy:
+                    description: Configuration block of Indicates what happens when new Amazon EC2 instances are launched mid-deployment and do not receive the deployed application revision. Valid values are UPDATE and IGNORE. Defaults to UPDATE.
+                    type: string
                   serviceRoleArn:
                     description: The service role ARN that allows deployments.
                     type: string
@@ -1425,7 +1431,7 @@ spec:
                           description: Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
                           type: boolean
                         events:
-                          description: The event type or types that trigger a rollback. Supported types are DEPLOYMENT_FAILURE and DEPLOYMENT_STOP_ON_ALARM.
+                          description: The event type or types that trigger a rollback. Supported types are DEPLOYMENT_FAILURE, DEPLOYMENT_STOP_ON_ALARM and DEPLOYMENT_STOP_ON_REQUEST.
                           items:
                             type: string
                           type: array
@@ -1627,6 +1633,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  outdatedInstancesStrategy:
+                    description: Configuration block of Indicates what happens when new Amazon EC2 instances are launched mid-deployment and do not receive the deployed application revision. Valid values are UPDATE and IGNORE. Defaults to UPDATE.
+                    type: string
                   serviceRoleArn:
                     description: The service role ARN that allows deployments.
                     type: string
