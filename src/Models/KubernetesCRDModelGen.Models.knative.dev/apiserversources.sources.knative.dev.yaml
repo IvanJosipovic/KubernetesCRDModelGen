@@ -6,7 +6,7 @@ metadata:
     eventing.knative.dev/source: true
     duck.knative.dev/source: true
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.12.3
+    app.kubernetes.io/version: 1.13.0
     app.kubernetes.io/name: knative-eventing
   annotations:
     registry.knative.dev/eventTypes: >
@@ -143,7 +143,7 @@ spec:
                     description: CACerts is the Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
                     type: string
                   audience:
-                    description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the Addressable itself. If the target is an Addressable and specifies an Audience, the target's Audience takes precedence.
+                    description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                     type: string
               namespaceSelector:
                 description: NamespaceSelector is a label selector to capture the namespaces that should be watched by the source.
@@ -232,6 +232,9 @@ spec:
                 type: string
               sinkCACerts:
                 description: CACerts is the Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
+                type: string
+              sinkAudience:
+                description: Audience is the OIDC audience of the sink. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the Addressable itself. If the target is an Addressable and specifies an Audience, the target's Audience takes precedence.
                 type: string
               namespaces:
                 description: Namespaces show the namespaces currently watched by the ApiServerSource

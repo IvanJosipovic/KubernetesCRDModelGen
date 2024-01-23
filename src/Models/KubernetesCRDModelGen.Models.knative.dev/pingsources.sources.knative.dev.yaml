@@ -5,7 +5,7 @@ metadata:
     eventing.knative.dev/source: true
     duck.knative.dev/source: true
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.12.3
+    app.kubernetes.io/version: 1.13.0
     app.kubernetes.io/name: knative-eventing
   annotations:
     registry.knative.dev/eventTypes: >
@@ -20,9 +20,9 @@ spec:
   group: sources.knative.dev
   versions:
   - &o0
-    name: v1beta2
+    name: v1
     served: true
-    storage: false
+    storage: true
     subresources:
       status: {}
     schema:
@@ -83,7 +83,7 @@ spec:
                     description: CACerts is the Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
                     type: string
                   audience:
-                    description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the Addressable itself. If the target is an Addressable and specifies an Audience, the target's Audience takes precedence.
+                    description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                     type: string
               timezone:
                 description: 'Timezone modifies the actual time relative to the specified timezone. Defaults to the system time zone. More general information about time zones: https://www.iana.org/time-zones List of valid timezone values: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'
@@ -152,6 +152,9 @@ spec:
               sinkCACerts:
                 description: CACerts is the Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
                 type: string
+              sinkAudience:
+                description: sinkAudience is the OIDC audience of the sink.
+                type: string
     additionalPrinterColumns:
     - name: Sink
       type: string
@@ -169,9 +172,11 @@ spec:
       type: string
       jsonPath: .status.conditions[?(@.type=='Ready')].reason
   - <<: *o0
-    name: v1
+    name: v1beta2
     served: true
-    storage: true
+    storage: false
+    deprecated: true
+    deprecationWarning: sources.knative.dev/v1beta2 PingSource is deprecated; see https://knative.dev/docs/eventing/sources/ping-source/ for instructions to migrate to sources.knative.dev/v1 PingSource
   names:
     categories:
     - all
