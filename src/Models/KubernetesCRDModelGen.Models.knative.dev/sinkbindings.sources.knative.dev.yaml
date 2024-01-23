@@ -6,7 +6,7 @@ metadata:
     duck.knative.dev/source: true
     duck.knative.dev/binding: true
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.12.3
+    app.kubernetes.io/version: 1.13.0
     app.kubernetes.io/name: knative-eventing
   name: sinkbindings.sources.knative.dev
 spec:
@@ -60,7 +60,7 @@ spec:
                     description: CACerts is the Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
                     type: string
                   audience:
-                    description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the Addressable itself. If the target is an Addressable and specifies an Audience, the target's Audience takes precedence.
+                    description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                     type: string
               subject:
                 description: Subject references the resource(s) whose "runtime contract" should be augmented by Binding implementations.
@@ -165,6 +165,12 @@ spec:
                 type: string
               sinkCACerts:
                 description: CACerts is the Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
+                type: string
+              sinkAudience:
+                description: Audience is the OIDC audience of the sink.
+                type: string
+              oidcTokenSecretName:
+                description: Name of the secret with the OIDC token for the sink.
                 type: string
     additionalPrinterColumns:
     - name: Sink

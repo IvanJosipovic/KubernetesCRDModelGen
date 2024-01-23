@@ -4,13 +4,13 @@ metadata:
   name: eventtypes.eventing.knative.dev
   labels:
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.12.3
+    app.kubernetes.io/version: 1.13.0
     app.kubernetes.io/name: knative-eventing
 spec:
   group: eventing.knative.dev
   versions:
   - &o0
-    name: v1beta1
+    name: v1beta2
     served: true
     storage: true
     subresources:
@@ -122,9 +122,11 @@ spec:
       type: string
       jsonPath: .status.conditions[?(@.type=="Ready")].reason
   - <<: *o0
-    name: v1beta2
+    name: v1beta1
     served: true
     storage: false
+    deprecated: true
+    deprecationWarning: eventing.knative.dev/v1beta1 EventType is deprecated; see https://knative.dev/docs/eventing/event-registry/ for instructions to migrate to eventing.knative.dev/v1beta2 EventType
   names:
     kind: EventType
     plural: eventtypes

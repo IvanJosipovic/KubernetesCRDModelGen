@@ -6,7 +6,7 @@ metadata:
     knative.dev/crd-install: true
     messaging.knative.dev/subscribable: true
     duck.knative.dev/addressable: true
-    app.kubernetes.io/version: 1.12.3
+    app.kubernetes.io/version: 1.13.0
     app.kubernetes.io/name: knative-eventing
 spec:
   group: messaging.knative.dev
@@ -89,7 +89,7 @@ spec:
                         description: Certification Authority (CA) certificates in PEM format that the source trusts when sending events to the sink.
                         type: string
                       audience:
-                        description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the Addressable itself. If the target is an Addressable and specifies an Audience, the target's Audience takes precedence.
+                        description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                         type: string
                   retry:
                     description: Retry is the minimum number of retries the sender should attempt when sending an event before moving it to the dead letter sink.
@@ -165,6 +165,13 @@ spec:
                     uid:
                       description: UID is used to understand the origin of the subscriber.
                       type: string
+                    auth:
+                      description: Auth provides the relevant information for OIDC authentication.
+                      type: object
+                      properties:
+                        serviceAccountName:
+                          description: ServiceAccountName is the name of the generated service account used for this components OIDC authentication.
+                          type: string
           status:
             description: Status represents the current state of the Channel. This data may be out of date.
             type: object
@@ -263,6 +270,9 @@ spec:
                 type: string
               deadLetterSinkCACerts:
                 description: Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.
+                type: string
+              deadLetterSinkAudience:
+                description: OIDC audience of the dead letter sink.
                 type: string
               observedGeneration:
                 description: ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.
