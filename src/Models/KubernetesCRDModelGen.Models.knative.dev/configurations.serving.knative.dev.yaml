@@ -4,7 +4,7 @@ metadata:
   name: configurations.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.12.3
+    app.kubernetes.io/version: 1.13.0
     knative.dev/crd-install: true
     duck.knative.dev/podspecable: true
 spec:
@@ -517,7 +517,7 @@ spec:
                                   - type
                                   properties:
                                     localhostProfile:
-                                      description: localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".
+                                      description: localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must be set if type is "Localhost". Must NOT be set for any other type.
                                       type: string
                                     type:
                                       description: >-
