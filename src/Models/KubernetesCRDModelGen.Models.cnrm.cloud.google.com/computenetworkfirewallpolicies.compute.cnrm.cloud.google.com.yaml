@@ -6,21 +6,21 @@ metadata:
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/stability-level: alpha
+    cnrm.cloud.google.com/stability-level: stable
     cnrm.cloud.google.com/system: true
     cnrm.cloud.google.com/tf2crd: true
-  name: computeregiondiskresourcepolicyattachments.compute.cnrm.cloud.google.com
+  name: computenetworkfirewallpolicies.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
   names:
     categories:
     - gcp
-    kind: ComputeRegionDiskResourcePolicyAttachment
-    plural: computeregiondiskresourcepolicyattachments
+    kind: ComputeNetworkFirewallPolicy
+    plural: computenetworkfirewallpolicies
     shortNames:
-    - gcpcomputeregiondiskresourcepolicyattachment
-    - gcpcomputeregiondiskresourcepolicyattachments
-    singular: computeregiondiskresourcepolicyattachment
+    - gcpcomputenetworkfirewallpolicy
+    - gcpcomputenetworkfirewallpolicies
+    singular: computenetworkfirewallpolicy
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
@@ -39,7 +39,7 @@ spec:
       jsonPath: .status.conditions[?(@.type=='Ready')].lastTransitionTime
       name: Status Age
       type: date
-    name: v1alpha1
+    name: v1beta1
     schema:
       openAPIV3Schema:
         properties:
@@ -53,32 +53,9 @@ spec:
             type: object
           spec:
             properties:
-              diskRef:
-                oneOf:
-                - not:
-                    required:
-                    - external
-                  required:
-                  - name
-                - not:
-                    anyOf:
-                    - required:
-                      - name
-                    - required:
-                      - namespace
-                  required:
-                  - external
-                properties:
-                  external:
-                    description: 'Allowed value: The `name` field of a `ComputeDisk` resource.'
-                    type: string
-                  name:
-                    description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
-                    type: string
-                  namespace:
-                    description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
-                    type: string
-                type: object
+              description:
+                description: An optional description of this resource. Provide this property when you create the resource.
+                type: string
               projectRef:
                 description: The project that this resource belongs to.
                 oneOf:
@@ -106,16 +83,11 @@ spec:
                     description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
                     type: string
                 type: object
-              region:
-                description: Immutable. A reference to the region where the disk resides.
-                type: string
               resourceID:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
             required:
-            - diskRef
             - projectRef
-            - region
             type: object
           status:
             properties:
@@ -140,9 +112,27 @@ spec:
                       type: string
                   type: object
                 type: array
+              creationTimestamp:
+                description: Creation timestamp in RFC3339 text format.
+                type: string
+              fingerprint:
+                description: Fingerprint of the resource. This field is used internally during updates of this resource.
+                type: string
+              networkFirewallPolicyId:
+                description: The unique identifier for the resource. This identifier is defined by the server.
+                type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
+              ruleTupleCount:
+                description: Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
+                type: integer
+              selfLink:
+                description: Server-defined URL for the resource.
+                type: string
+              selfLinkWithId:
+                description: Server-defined URL for this resource with the resource id.
+                type: string
             type: object
         required:
         - spec
