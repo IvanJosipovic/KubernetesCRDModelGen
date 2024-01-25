@@ -337,6 +337,15 @@ spec:
                                   fmt:
                                     description: Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.
                                     type: string
+                                  join:
+                                    description: Join defines parameters to join a slice of values to a string.
+                                    properties:
+                                      separator:
+                                        description: Separator defines the character that should separate the values from each other in the joined string.
+                                        type: string
+                                    required:
+                                    - separator
+                                    type: object
                                   regexp:
                                     description: Extract a match from the input using a regular expression.
                                     properties:
@@ -361,6 +370,7 @@ spec:
                                     - TrimPrefix
                                     - TrimSuffix
                                     - Regexp
+                                    - Join
                                     type: string
                                 type: object
                               type:
@@ -615,6 +625,15 @@ spec:
                                     fmt:
                                       description: Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.
                                       type: string
+                                    join:
+                                      description: Join defines parameters to join a slice of values to a string.
+                                      properties:
+                                        separator:
+                                          description: Separator defines the character that should separate the values from each other in the joined string.
+                                          type: string
+                                      required:
+                                      - separator
+                                      type: object
                                     regexp:
                                       description: Extract a match from the input using a regular expression.
                                       properties:
@@ -639,6 +658,7 @@ spec:
                                       - TrimPrefix
                                       - TrimSuffix
                                       - Regexp
+                                      - Join
                                       type: string
                                   type: object
                                 type:
@@ -949,6 +969,15 @@ spec:
                                     fmt:
                                       description: Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.
                                       type: string
+                                    join:
+                                      description: Join defines parameters to join a slice of values to a string.
+                                      properties:
+                                        separator:
+                                          description: Separator defines the character that should separate the values from each other in the joined string.
+                                          type: string
+                                      required:
+                                      - separator
+                                      type: object
                                     regexp:
                                       description: Extract a match from the input using a regular expression.
                                       properties:
@@ -973,6 +1002,7 @@ spec:
                                       - TrimPrefix
                                       - TrimSuffix
                                       - Regexp
+                                      - Join
                                       type: string
                                   type: object
                                 type:
@@ -1429,6 +1459,15 @@ spec:
                                   fmt:
                                     description: Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.
                                     type: string
+                                  join:
+                                    description: Join defines parameters to join a slice of values to a string.
+                                    properties:
+                                      separator:
+                                        description: Separator defines the character that should separate the values from each other in the joined string.
+                                        type: string
+                                    required:
+                                    - separator
+                                    type: object
                                   regexp:
                                     description: Extract a match from the input using a regular expression.
                                     properties:
@@ -1453,6 +1492,7 @@ spec:
                                     - TrimPrefix
                                     - TrimSuffix
                                     - Regexp
+                                    - Join
                                     type: string
                                 type: object
                               type:
@@ -1707,6 +1747,15 @@ spec:
                                     fmt:
                                       description: Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.
                                       type: string
+                                    join:
+                                      description: Join defines parameters to join a slice of values to a string.
+                                      properties:
+                                        separator:
+                                          description: Separator defines the character that should separate the values from each other in the joined string.
+                                          type: string
+                                      required:
+                                      - separator
+                                      type: object
                                     regexp:
                                       description: Extract a match from the input using a regular expression.
                                       properties:
@@ -1731,6 +1780,7 @@ spec:
                                       - TrimPrefix
                                       - TrimSuffix
                                       - Regexp
+                                      - Join
                                       type: string
                                   type: object
                                 type:
@@ -2041,6 +2091,15 @@ spec:
                                     fmt:
                                       description: Format the input using a Go format string. See https://golang.org/pkg/fmt/ for details.
                                       type: string
+                                    join:
+                                      description: Join defines parameters to join a slice of values to a string.
+                                      properties:
+                                        separator:
+                                          description: Separator defines the character that should separate the values from each other in the joined string.
+                                          type: string
+                                      required:
+                                      - separator
+                                      type: object
                                     regexp:
                                       description: Extract a match from the input using a regular expression.
                                       properties:
@@ -2065,6 +2124,7 @@ spec:
                                       - TrimPrefix
                                       - TrimSuffix
                                       - Regexp
+                                      - Join
                                       type: string
                                   type: object
                                 type:
