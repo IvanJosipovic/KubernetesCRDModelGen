@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   name: datasetaccesses.bigquery.gcp.upbound.io
 spec:
   group: bigquery.gcp.upbound.io
@@ -36,10 +36,26 @@ spec:
         description: DatasetAccess is the Schema for the DatasetAccesss API. Gives dataset access for a single entity.
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -48,7 +64,20 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: 'DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223'
+                description: >-
+                  DeletionPolicy specifies what will happen to the underlying external
+
+                  when this managed resource is deleted - either "Delete" or "Orphan" the
+
+                  external resource.
+
+                  This field is planned to be deprecated in favor of the ManagementPolicies
+
+                  field in a future release. Currently, both could be set independently and
+
+                  non-default values would be honored if the feature flag is enabled.
+
+                  See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
                 - Delete
@@ -56,11 +85,17 @@ spec:
               forProvider:
                 properties:
                   dataset:
-                    description: Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.
+                    description: >-
+                      Grants all resources of particular types in a particular dataset read access to the current dataset.
+
+                      Structure is documented below.
                     items:
                       properties:
                         dataset:
-                          description: The dataset this entry applies to Structure is documented below.
+                          description: >-
+                            The dataset this entry applies to
+
+                            Structure is documented below.
                           items:
                             properties:
                               datasetId:
@@ -77,13 +112,27 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                        description: >-
+                                          Resolution specifies whether resolution of this reference is required.
+
+                                          The default is 'Required', which means the reconcile will fail if the
+
+                                          reference cannot be resolved. 'Optional' means this reference will be
+
+                                          a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                        description: >-
+                                          Resolve specifies when this reference should be resolved. The default
+
+                                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                          the corresponding field is not present. Use 'Always' to resolve the
+
+                                          reference on every reconcile.
                                         enum:
                                         - Always
                                         - IfNotPresent
@@ -96,7 +145,10 @@ spec:
                                 description: Selector for a Dataset in bigquery to populate datasetId.
                                 properties:
                                   matchControllerRef:
-                                    description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                                    description: >-
+                                      MatchControllerRef ensures an object with the same controller reference
+
+                                      as the selecting object is selected.
                                     type: boolean
                                   matchLabels:
                                     additionalProperties:
@@ -108,13 +160,27 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                        description: >-
+                                          Resolution specifies whether resolution of this reference is required.
+
+                                          The default is 'Required', which means the reconcile will fail if the
+
+                                          reference cannot be resolved. 'Optional' means this reference will be
+
+                                          a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                        description: >-
+                                          Resolve specifies when this reference should be resolved. The default
+
+                                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                          the corresponding field is not present. Use 'Always' to resolve the
+
+                                          reference on every reconcile.
                                         enum:
                                         - Always
                                         - IfNotPresent
@@ -127,14 +193,22 @@ spec:
                             type: object
                           type: array
                         targetTypes:
-                          description: 'Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS'
+                          description: >-
+                            Which resources in the dataset this entry applies to. Currently, only views are supported,
+
+                            but additional target types may be added in the future. Possible values: VIEWS
                           items:
                             type: string
                           type: array
                       type: object
                     type: array
                   datasetId:
-                    description: A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+                    description: >-
+                      A unique ID for this dataset, without the project name. The ID
+
+                      must contain only letters (a-z, A-Z), numbers (0-9), or
+
+                      underscores (_). The maximum length is 1,024 characters.
                     type: string
                   datasetIdRef:
                     description: Reference to a Dataset in bigquery to populate datasetId.
@@ -147,13 +221,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -166,7 +254,10 @@ spec:
                     description: Selector for a Dataset in bigquery to populate datasetId.
                     properties:
                       matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
                         type: boolean
                       matchLabels:
                         additionalProperties:
@@ -178,13 +269,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -192,22 +297,53 @@ spec:
                         type: object
                     type: object
                   domain:
-                    description: A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+                    description: >-
+                      A domain to grant access to. Any users signed in with the
+
+                      domain specified will be granted the specified access
                     type: string
                   groupByEmail:
                     description: An email address of a Google Group to grant access to.
                     type: string
                   iamMember:
-                    description: "Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example: allUsers"
+                    description: >-
+                      Some other type of member that appears in the IAM Policy but isn't a user,
+
+                      group, domain, or special group. For example: allUsers
                     type: string
                   project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+                    description: >-
+                      The ID of the project in which the resource belongs.
+
+                      If it is not provided, the provider project is used.
                     type: string
                   role:
-                    description: Describes the rights granted to the user specified by the other member of the access object. Basic, predefined, and custom roles are supported. Predefined roles that have equivalent basic roles are swapped by the API to their basic counterparts, and will show a diff post-create. See official docs.
+                    description: >-
+                      Describes the rights granted to the user specified by the other
+
+                      member of the access object. Basic, predefined, and custom roles are
+
+                      supported. Predefined roles that have equivalent basic roles are
+
+                      swapped by the API to their basic counterparts, and will show a diff
+
+                      post-create. See
+
+                      official docs.
                     type: string
                   routine:
-                    description: A routine from a different dataset to grant access to. Queries executed against that routine will have read access to tables in this dataset. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation. Structure is documented below.
+                    description: >-
+                      A routine from a different dataset to grant access to. Queries
+
+                      executed against that routine will have read access to tables in
+
+                      this dataset. The role field is not required when this field is
+
+                      set. If that routine is updated by any user, access to the routine
+
+                      needs to be granted again via an update operation.
+
+                      Structure is documented below.
                     items:
                       properties:
                         datasetId:
@@ -224,13 +360,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -243,7 +393,10 @@ spec:
                           description: Selector for a Routine in bigquery to populate datasetId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -255,13 +408,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -282,13 +449,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -301,7 +482,10 @@ spec:
                           description: Selector for a Routine in bigquery to populate projectId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -313,13 +497,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -327,7 +525,12 @@ spec:
                               type: object
                           type: object
                         routineId:
-                          description: The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+                          description: >-
+                            The ID of the routine. The ID must contain only letters (a-z,
+
+                            A-Z), numbers (0-9), or underscores (_). The maximum length
+
+                            is 256 characters.
                           type: string
                         routineIdRef:
                           description: Reference to a Routine in bigquery to populate routineId.
@@ -340,13 +543,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -359,7 +576,10 @@ spec:
                           description: Selector for a Routine in bigquery to populate routineId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -371,13 +591,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -390,7 +624,10 @@ spec:
                     description: 'A special group to grant access to. Possible values include:'
                     type: string
                   userByEmail:
-                    description: 'An email address of a user to grant access to. For example: fred@example.com'
+                    description: >-
+                      An email address of a user to grant access to. For example:
+
+                      fred@example.com
                     type: string
                   userByEmailRef:
                     description: Reference to a ServiceAccount in cloudplatform to populate userByEmail.
@@ -403,13 +640,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -422,7 +673,10 @@ spec:
                     description: Selector for a ServiceAccount in cloudplatform to populate userByEmail.
                     properties:
                       matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
                         type: boolean
                       matchLabels:
                         additionalProperties:
@@ -434,13 +688,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -448,7 +716,18 @@ spec:
                         type: object
                     type: object
                   view:
-                    description: A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation. Structure is documented below.
+                    description: >-
+                      A view from a different dataset to grant access to. Queries
+
+                      executed against that view will have read access to tables in
+
+                      this dataset. The role field is not required when this field is
+
+                      set. If that view is updated by any user, access to the view
+
+                      needs to be granted again via an update operation.
+
+                      Structure is documented below.
                     items:
                       properties:
                         datasetId:
@@ -465,13 +744,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -484,7 +777,10 @@ spec:
                           description: Selector for a Dataset in bigquery to populate datasetId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -496,13 +792,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -513,7 +823,12 @@ spec:
                           description: The ID of the project containing this table.
                           type: string
                         tableId:
-                          description: The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+                          description: >-
+                            The ID of the table. The ID must contain only letters (a-z,
+
+                            A-Z), numbers (0-9), or underscores (_). The maximum length
+
+                            is 1,024 characters.
                           type: string
                         tableIdRef:
                           description: Reference to a Table in bigquery to populate tableId.
@@ -526,13 +841,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -545,7 +874,10 @@ spec:
                           description: Selector for a Table in bigquery to populate tableId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -557,13 +889,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -574,14 +920,39 @@ spec:
                     type: array
                 type: object
               initProvider:
-                description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
+                description: >-
+                  THIS IS A BETA FIELD. It will be honored
+
+                  unless the Management Policies feature flag is disabled.
+
+                  InitProvider holds the same fields as ForProvider, with the exception
+
+                  of Identifier and other resource reference fields. The fields that are
+
+                  in InitProvider are merged into ForProvider when the resource is created.
+
+                  The same fields are also added to the terraform ignore_changes hook, to
+
+                  avoid updating them after creation. This is useful for fields that are
+
+                  required on creation, but we do not desire to update them after creation,
+
+                  for example because of an external controller is managing them, like an
+
+                  autoscaler.
                 properties:
                   dataset:
-                    description: Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.
+                    description: >-
+                      Grants all resources of particular types in a particular dataset read access to the current dataset.
+
+                      Structure is documented below.
                     items:
                       properties:
                         dataset:
-                          description: The dataset this entry applies to Structure is documented below.
+                          description: >-
+                            The dataset this entry applies to
+
+                            Structure is documented below.
                           items:
                             properties:
                               datasetId:
@@ -598,13 +969,27 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                        description: >-
+                                          Resolution specifies whether resolution of this reference is required.
+
+                                          The default is 'Required', which means the reconcile will fail if the
+
+                                          reference cannot be resolved. 'Optional' means this reference will be
+
+                                          a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                        description: >-
+                                          Resolve specifies when this reference should be resolved. The default
+
+                                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                          the corresponding field is not present. Use 'Always' to resolve the
+
+                                          reference on every reconcile.
                                         enum:
                                         - Always
                                         - IfNotPresent
@@ -617,7 +1002,10 @@ spec:
                                 description: Selector for a Dataset in bigquery to populate datasetId.
                                 properties:
                                   matchControllerRef:
-                                    description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                                    description: >-
+                                      MatchControllerRef ensures an object with the same controller reference
+
+                                      as the selecting object is selected.
                                     type: boolean
                                   matchLabels:
                                     additionalProperties:
@@ -629,13 +1017,27 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                        description: >-
+                                          Resolution specifies whether resolution of this reference is required.
+
+                                          The default is 'Required', which means the reconcile will fail if the
+
+                                          reference cannot be resolved. 'Optional' means this reference will be
+
+                                          a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                        description: >-
+                                          Resolve specifies when this reference should be resolved. The default
+
+                                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                          the corresponding field is not present. Use 'Always' to resolve the
+
+                                          reference on every reconcile.
                                         enum:
                                         - Always
                                         - IfNotPresent
@@ -648,14 +1050,22 @@ spec:
                             type: object
                           type: array
                         targetTypes:
-                          description: 'Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS'
+                          description: >-
+                            Which resources in the dataset this entry applies to. Currently, only views are supported,
+
+                            but additional target types may be added in the future. Possible values: VIEWS
                           items:
                             type: string
                           type: array
                       type: object
                     type: array
                   datasetId:
-                    description: A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+                    description: >-
+                      A unique ID for this dataset, without the project name. The ID
+
+                      must contain only letters (a-z, A-Z), numbers (0-9), or
+
+                      underscores (_). The maximum length is 1,024 characters.
                     type: string
                   datasetIdRef:
                     description: Reference to a Dataset in bigquery to populate datasetId.
@@ -668,13 +1078,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -687,7 +1111,10 @@ spec:
                     description: Selector for a Dataset in bigquery to populate datasetId.
                     properties:
                       matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
                         type: boolean
                       matchLabels:
                         additionalProperties:
@@ -699,13 +1126,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -713,22 +1154,53 @@ spec:
                         type: object
                     type: object
                   domain:
-                    description: A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+                    description: >-
+                      A domain to grant access to. Any users signed in with the
+
+                      domain specified will be granted the specified access
                     type: string
                   groupByEmail:
                     description: An email address of a Google Group to grant access to.
                     type: string
                   iamMember:
-                    description: "Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example: allUsers"
+                    description: >-
+                      Some other type of member that appears in the IAM Policy but isn't a user,
+
+                      group, domain, or special group. For example: allUsers
                     type: string
                   project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+                    description: >-
+                      The ID of the project in which the resource belongs.
+
+                      If it is not provided, the provider project is used.
                     type: string
                   role:
-                    description: Describes the rights granted to the user specified by the other member of the access object. Basic, predefined, and custom roles are supported. Predefined roles that have equivalent basic roles are swapped by the API to their basic counterparts, and will show a diff post-create. See official docs.
+                    description: >-
+                      Describes the rights granted to the user specified by the other
+
+                      member of the access object. Basic, predefined, and custom roles are
+
+                      supported. Predefined roles that have equivalent basic roles are
+
+                      swapped by the API to their basic counterparts, and will show a diff
+
+                      post-create. See
+
+                      official docs.
                     type: string
                   routine:
-                    description: A routine from a different dataset to grant access to. Queries executed against that routine will have read access to tables in this dataset. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation. Structure is documented below.
+                    description: >-
+                      A routine from a different dataset to grant access to. Queries
+
+                      executed against that routine will have read access to tables in
+
+                      this dataset. The role field is not required when this field is
+
+                      set. If that routine is updated by any user, access to the routine
+
+                      needs to be granted again via an update operation.
+
+                      Structure is documented below.
                     items:
                       properties:
                         datasetId:
@@ -745,13 +1217,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -764,7 +1250,10 @@ spec:
                           description: Selector for a Routine in bigquery to populate datasetId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -776,13 +1265,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -803,13 +1306,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -822,7 +1339,10 @@ spec:
                           description: Selector for a Routine in bigquery to populate projectId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -834,13 +1354,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -848,7 +1382,12 @@ spec:
                               type: object
                           type: object
                         routineId:
-                          description: The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+                          description: >-
+                            The ID of the routine. The ID must contain only letters (a-z,
+
+                            A-Z), numbers (0-9), or underscores (_). The maximum length
+
+                            is 256 characters.
                           type: string
                         routineIdRef:
                           description: Reference to a Routine in bigquery to populate routineId.
@@ -861,13 +1400,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -880,7 +1433,10 @@ spec:
                           description: Selector for a Routine in bigquery to populate routineId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -892,13 +1448,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -911,7 +1481,10 @@ spec:
                     description: 'A special group to grant access to. Possible values include:'
                     type: string
                   userByEmail:
-                    description: 'An email address of a user to grant access to. For example: fred@example.com'
+                    description: >-
+                      An email address of a user to grant access to. For example:
+
+                      fred@example.com
                     type: string
                   userByEmailRef:
                     description: Reference to a ServiceAccount in cloudplatform to populate userByEmail.
@@ -924,13 +1497,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -943,7 +1530,10 @@ spec:
                     description: Selector for a ServiceAccount in cloudplatform to populate userByEmail.
                     properties:
                       matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
                         type: boolean
                       matchLabels:
                         additionalProperties:
@@ -955,13 +1545,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -969,7 +1573,18 @@ spec:
                         type: object
                     type: object
                   view:
-                    description: A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation. Structure is documented below.
+                    description: >-
+                      A view from a different dataset to grant access to. Queries
+
+                      executed against that view will have read access to tables in
+
+                      this dataset. The role field is not required when this field is
+
+                      set. If that view is updated by any user, access to the view
+
+                      needs to be granted again via an update operation.
+
+                      Structure is documented below.
                     items:
                       properties:
                         datasetId:
@@ -986,13 +1601,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -1005,7 +1634,10 @@ spec:
                           description: Selector for a Dataset in bigquery to populate datasetId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -1017,13 +1649,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -1034,7 +1680,12 @@ spec:
                           description: The ID of the project containing this table.
                           type: string
                         tableId:
-                          description: The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+                          description: >-
+                            The ID of the table. The ID must contain only letters (a-z,
+
+                            A-Z), numbers (0-9), or underscores (_). The maximum length
+
+                            is 1,024 characters.
                           type: string
                         tableIdRef:
                           description: Reference to a Table in bigquery to populate tableId.
@@ -1047,13 +1698,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -1066,7 +1731,10 @@ spec:
                           description: Selector for a Table in bigquery to populate tableId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -1078,13 +1746,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -1097,9 +1779,31 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: 'THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md'
+                description: >-
+                  THIS IS A BETA FIELD. It is on by default but can be opted out
+
+                  through a Crossplane feature flag.
+
+                  ManagementPolicies specify the array of actions Crossplane is allowed to
+
+                  take on the managed and external resources.
+
+                  This field is planned to replace the DeletionPolicy field in a future
+
+                  release. Currently, both could be set independently and non-default
+
+                  values would be honored if the feature flag is enabled. If both are
+
+                  custom, the DeletionPolicy field will be ignored.
+
+                  See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
+
+                  and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: A ManagementAction represents an action that the Crossplane controllers can take on an external resource.
+                  description: >-
+                    A ManagementAction represents an action that the Crossplane controllers
+
+                    can take on an external resource.
                   enum:
                   - Observe
                   - Create
@@ -1112,7 +1816,12 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+                description: >-
+                  ProviderConfigReference specifies how the provider that will be used to
+
+                  create, observe, update, and delete this managed resource should be
+
+                  configured.
                 properties:
                   name:
                     description: Name of the referenced object.
@@ -1122,13 +1831,27 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                        description: >-
+                          Resolution specifies whether resolution of this reference is required.
+
+                          The default is 'Required', which means the reconcile will fail if the
+
+                          reference cannot be resolved. 'Optional' means this reference will be
+
+                          a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                        description: >-
+                          Resolve specifies when this reference should be resolved. The default
+
+                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                          the corresponding field is not present. Use 'Always' to resolve the
+
+                          reference on every reconcile.
                         enum:
                         - Always
                         - IfNotPresent
@@ -1138,12 +1861,24 @@ spec:
                 - name
                 type: object
               publishConnectionDetailsTo:
-                description: PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+                description: >-
+                  PublishConnectionDetailsTo specifies the connection secret config which
+
+                  contains a name, metadata and a reference to secret store config to
+
+                  which any connection details for this managed resource should be written.
+
+                  Connection details frequently include the endpoint, username,
+
+                  and password required to connect to the managed resource.
                 properties:
                   configRef:
                     default:
                       name: default
-                    description: SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.
+                    description: >-
+                      SecretStoreConfigRef specifies which secret store config should be used
+
+                      for this ConnectionSecret.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -1153,13 +1888,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -1174,15 +1923,28 @@ spec:
                       annotations:
                         additionalProperties:
                           type: string
-                        description: Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.
+                        description: >-
+                          Annotations are the annotations to be added to connection secret.
+
+                          - For Kubernetes secrets, this will be used as "metadata.annotations".
+
+                          - It is up to Secret Store implementation for others store types.
                         type: object
                       labels:
                         additionalProperties:
                           type: string
-                        description: Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.
+                        description: >-
+                          Labels are the labels/tags to be added to connection secret.
+
+                          - For Kubernetes secrets, this will be used as "metadata.labels".
+
+                          - It is up to Secret Store implementation for others store types.
                         type: object
                       type:
-                        description: Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.
+                        description: >-
+                          Type is the SecretType for the connection secret.
+
+                          - Only valid for Kubernetes Secret Stores.
                         type: string
                     type: object
                   name:
@@ -1192,7 +1954,22 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.
+                description: >-
+                  WriteConnectionSecretToReference specifies the namespace and name of a
+
+                  Secret to which any connection details for this managed resource should
+
+                  be written. Connection details frequently include the endpoint, username,
+
+                  and password required to connect to the managed resource.
+
+                  This field is planned to be replaced in a future release in favor of
+
+                  PublishConnectionDetailsTo. Currently, both could be set independently
+
+                  and connection details would be published to both without affecting
+
+                  each other.
                 properties:
                   name:
                     description: Name of the secret.
@@ -1215,11 +1992,17 @@ spec:
                   apiUpdatedMember:
                     type: boolean
                   dataset:
-                    description: Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.
+                    description: >-
+                      Grants all resources of particular types in a particular dataset read access to the current dataset.
+
+                      Structure is documented below.
                     items:
                       properties:
                         dataset:
-                          description: The dataset this entry applies to Structure is documented below.
+                          description: >-
+                            The dataset this entry applies to
+
+                            Structure is documented below.
                           items:
                             properties:
                               datasetId:
@@ -1231,35 +2014,74 @@ spec:
                             type: object
                           type: array
                         targetTypes:
-                          description: 'Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS'
+                          description: >-
+                            Which resources in the dataset this entry applies to. Currently, only views are supported,
+
+                            but additional target types may be added in the future. Possible values: VIEWS
                           items:
                             type: string
                           type: array
                       type: object
                     type: array
                   datasetId:
-                    description: A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+                    description: >-
+                      A unique ID for this dataset, without the project name. The ID
+
+                      must contain only letters (a-z, A-Z), numbers (0-9), or
+
+                      underscores (_). The maximum length is 1,024 characters.
                     type: string
                   domain:
-                    description: A domain to grant access to. Any users signed in with the domain specified will be granted the specified access
+                    description: >-
+                      A domain to grant access to. Any users signed in with the
+
+                      domain specified will be granted the specified access
                     type: string
                   groupByEmail:
                     description: An email address of a Google Group to grant access to.
                     type: string
                   iamMember:
-                    description: "Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group. For example: allUsers"
+                    description: >-
+                      Some other type of member that appears in the IAM Policy but isn't a user,
+
+                      group, domain, or special group. For example: allUsers
                     type: string
                   id:
                     description: an identifier for the resource with format projects/{{project}}/datasets/{{dataset_id}}
                     type: string
                   project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+                    description: >-
+                      The ID of the project in which the resource belongs.
+
+                      If it is not provided, the provider project is used.
                     type: string
                   role:
-                    description: Describes the rights granted to the user specified by the other member of the access object. Basic, predefined, and custom roles are supported. Predefined roles that have equivalent basic roles are swapped by the API to their basic counterparts, and will show a diff post-create. See official docs.
+                    description: >-
+                      Describes the rights granted to the user specified by the other
+
+                      member of the access object. Basic, predefined, and custom roles are
+
+                      supported. Predefined roles that have equivalent basic roles are
+
+                      swapped by the API to their basic counterparts, and will show a diff
+
+                      post-create. See
+
+                      official docs.
                     type: string
                   routine:
-                    description: A routine from a different dataset to grant access to. Queries executed against that routine will have read access to tables in this dataset. The role field is not required when this field is set. If that routine is updated by any user, access to the routine needs to be granted again via an update operation. Structure is documented below.
+                    description: >-
+                      A routine from a different dataset to grant access to. Queries
+
+                      executed against that routine will have read access to tables in
+
+                      this dataset. The role field is not required when this field is
+
+                      set. If that routine is updated by any user, access to the routine
+
+                      needs to be granted again via an update operation.
+
+                      Structure is documented below.
                     items:
                       properties:
                         datasetId:
@@ -1269,7 +2091,12 @@ spec:
                           description: The ID of the project containing this table.
                           type: string
                         routineId:
-                          description: The ID of the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
+                          description: >-
+                            The ID of the routine. The ID must contain only letters (a-z,
+
+                            A-Z), numbers (0-9), or underscores (_). The maximum length
+
+                            is 256 characters.
                           type: string
                       type: object
                     type: array
@@ -1277,10 +2104,24 @@ spec:
                     description: 'A special group to grant access to. Possible values include:'
                     type: string
                   userByEmail:
-                    description: 'An email address of a user to grant access to. For example: fred@example.com'
+                    description: >-
+                      An email address of a user to grant access to. For example:
+
+                      fred@example.com
                     type: string
                   view:
-                    description: A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation. Structure is documented below.
+                    description: >-
+                      A view from a different dataset to grant access to. Queries
+
+                      executed against that view will have read access to tables in
+
+                      this dataset. The role field is not required when this field is
+
+                      set. If that view is updated by any user, access to the view
+
+                      needs to be granted again via an update operation.
+
+                      Structure is documented below.
                     items:
                       properties:
                         datasetId:
@@ -1290,7 +2131,12 @@ spec:
                           description: The ID of the project containing this table.
                           type: string
                         tableId:
-                          description: The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+                          description: >-
+                            The ID of the table. The ID must contain only letters (a-z,
+
+                            A-Z), numbers (0-9), or underscores (_). The maximum length
+
+                            is 1,024 characters.
                           type: string
                       type: object
                     type: array
@@ -1301,11 +2147,17 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: LastTransitionTime is the last time this condition transitioned from one status to another.
+                      description: >-
+                        LastTransitionTime is the last time this condition transitioned from one
+
+                        status to another.
                       format: date-time
                       type: string
                     message:
-                      description: A Message containing details about this condition's last transition from one status to another, if any.
+                      description: >-
+                        A Message containing details about this condition's last transition from
+
+                        one status to another, if any.
                       type: string
                     reason:
                       description: A Reason for this condition's last transition from one status to another.
@@ -1314,7 +2166,10 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: Type of this condition. At most one of each condition type may apply to a resource at any point in time.
+                      description: >-
+                        Type of this condition. At most one of each condition type may apply to
+
+                        a resource at any point in time.
                       type: string
                   required:
                   - lastTransitionTime
