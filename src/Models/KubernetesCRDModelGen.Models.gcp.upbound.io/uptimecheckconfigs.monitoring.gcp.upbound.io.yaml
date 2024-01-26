@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   name: uptimecheckconfigs.monitoring.gcp.upbound.io
 spec:
   group: monitoring.gcp.upbound.io
@@ -36,10 +36,26 @@ spec:
         description: UptimeCheckConfig is the Schema for the UptimeCheckConfigs API. This message configures which resources and services to monitor for availability.
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -48,7 +64,20 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: 'DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223'
+                description: >-
+                  DeletionPolicy specifies what will happen to the underlying external
+
+                  when this managed resource is deleted - either "Delete" or "Orphan" the
+
+                  external resource.
+
+                  This field is planned to be deprecated in favor of the ManagementPolicies
+
+                  field in a future release. Currently, both could be set independently and
+
+                  non-default values would be honored if the feature flag is enabled.
+
+                  See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
                 - Delete
@@ -56,21 +85,35 @@ spec:
               forProvider:
                 properties:
                   checkerType:
-                    description: 'The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS. Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.'
+                    description: >-
+                      The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS.
+
+                      Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.
                     type: string
                   contentMatchers:
-                    description: The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required. Structure is documented below.
+                    description: >-
+                      The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+
+                      Structure is documented below.
                     items:
                       properties:
                         content:
                           description: String or regex content to match (max 1024 bytes)
                           type: string
                         jsonPathMatcher:
-                          description: Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH. Structure is documented below.
+                          description: >-
+                            Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH.
+
+                            Structure is documented below.
                           items:
                             properties:
                               jsonMatcher:
-                                description: 'Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are: EXACT_MATCH, REGEX_MATCH.'
+                                description: >-
+                                  Options to perform JSONPath content matching.
+
+                                  Default value is EXACT_MATCH.
+
+                                  Possible values are: EXACT_MATCH, REGEX_MATCH.
                                 type: string
                               jsonPath:
                                 description: JSONPath within the response output pointing to the expected ContentMatcher::content to match against.
@@ -78,7 +121,12 @@ spec:
                             type: object
                           type: array
                         matcher:
-                          description: 'The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value is CONTAINS_STRING. Possible values are: CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, NOT_MATCHES_JSON_PATH.'
+                          description: >-
+                            The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+
+                            Default value is CONTAINS_STRING.
+
+                            Possible values are: CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, NOT_MATCHES_JSON_PATH.
                           type: string
                       type: object
                     type: array
@@ -86,15 +134,24 @@ spec:
                     description: A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
                     type: string
                   httpCheck:
-                    description: Contains information needed to make an HTTP or HTTPS check. Structure is documented below.
+                    description: >-
+                      Contains information needed to make an HTTP or HTTPS check.
+
+                      Structure is documented below.
                     items:
                       properties:
                         acceptedResponseStatusCodes:
-                          description: If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299. Structure is documented below.
+                          description: >-
+                            If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299.
+
+                            Structure is documented below.
                           items:
                             properties:
                               statusClass:
-                                description: 'A class of status codes to accept. Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.'
+                                description: >-
+                                  A class of status codes to accept.
+
+                                  Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.
                                 type: string
                               statusValue:
                                 description: A status code to accept.
@@ -102,11 +159,17 @@ spec:
                             type: object
                           type: array
                         authInfo:
-                          description: The authentication information. Optional when creating an HTTP check; defaults to empty. Structure is documented below.
+                          description: >-
+                            The authentication information. Optional when creating an HTTP check; defaults to empty.
+
+                            Structure is documented below.
                           items:
                             properties:
                               passwordSecretRef:
-                                description: 'The password to authenticate. Note: This property is sensitive and will not be displayed in the plan.'
+                                description: >-
+                                  The password to authenticate.
+
+                                  Note: This property is sensitive and will not be displayed in the plan.
                                 properties:
                                   key:
                                     description: The key to select.
@@ -133,7 +196,10 @@ spec:
                           description: The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
                           type: string
                         contentType:
-                          description: 'The content type to use for the check. Possible values are: TYPE_UNSPECIFIED, URL_ENCODED.'
+                          description: >-
+                            The content type to use for the check.
+
+                            Possible values are: TYPE_UNSPECIFIED, URL_ENCODED.
                           type: string
                         headers:
                           additionalProperties:
@@ -151,7 +217,12 @@ spec:
                           description: The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or 443 with SSL).
                           type: number
                         requestMethod:
-                          description: 'The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value is GET. Possible values are: METHOD_UNSPECIFIED, GET, POST.'
+                          description: >-
+                            The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+
+                            Default value is GET.
+
+                            Possible values are: METHOD_UNSPECIFIED, GET, POST.
                           type: string
                         useSsl:
                           description: If true, use HTTPS instead of HTTP to run the check.
@@ -162,7 +233,10 @@ spec:
                       type: object
                     type: array
                   monitoredResource:
-                    description: 'The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service Structure is documented below.'
+                    description: >-
+                      The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service
+
+                      Structure is documented below.
                     items:
                       properties:
                         labels:
@@ -180,10 +254,16 @@ spec:
                     description: How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
                     type: string
                   project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+                    description: >-
+                      The ID of the project in which the resource belongs.
+
+                      If it is not provided, the provider project is used.
                     type: string
                   resourceGroup:
-                    description: The group resource associated with the configuration. Structure is documented below.
+                    description: >-
+                      The group resource associated with the configuration.
+
+                      Structure is documented below.
                     items:
                       properties:
                         groupId:
@@ -200,13 +280,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -219,7 +313,10 @@ spec:
                           description: Selector for a Group in monitoring to populate groupId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -231,13 +328,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -245,7 +356,10 @@ spec:
                               type: object
                           type: object
                         resourceType:
-                          description: 'The resource type of the group members. Possible values are: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER.'
+                          description: >-
+                            The resource type of the group members.
+
+                            Possible values are: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER.
                           type: string
                       type: object
                     type: array
@@ -255,7 +369,10 @@ spec:
                       type: string
                     type: array
                   tcpCheck:
-                    description: Contains information needed to make a TCP check. Structure is documented below.
+                    description: >-
+                      Contains information needed to make a TCP check.
+
+                      Structure is documented below.
                     items:
                       properties:
                         port:
@@ -268,24 +385,57 @@ spec:
                     type: string
                 type: object
               initProvider:
-                description: THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.
+                description: >-
+                  THIS IS A BETA FIELD. It will be honored
+
+                  unless the Management Policies feature flag is disabled.
+
+                  InitProvider holds the same fields as ForProvider, with the exception
+
+                  of Identifier and other resource reference fields. The fields that are
+
+                  in InitProvider are merged into ForProvider when the resource is created.
+
+                  The same fields are also added to the terraform ignore_changes hook, to
+
+                  avoid updating them after creation. This is useful for fields that are
+
+                  required on creation, but we do not desire to update them after creation,
+
+                  for example because of an external controller is managing them, like an
+
+                  autoscaler.
                 properties:
                   checkerType:
-                    description: 'The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS. Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.'
+                    description: >-
+                      The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS.
+
+                      Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.
                     type: string
                   contentMatchers:
-                    description: The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required. Structure is documented below.
+                    description: >-
+                      The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+
+                      Structure is documented below.
                     items:
                       properties:
                         content:
                           description: String or regex content to match (max 1024 bytes)
                           type: string
                         jsonPathMatcher:
-                          description: Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH. Structure is documented below.
+                          description: >-
+                            Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH.
+
+                            Structure is documented below.
                           items:
                             properties:
                               jsonMatcher:
-                                description: 'Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are: EXACT_MATCH, REGEX_MATCH.'
+                                description: >-
+                                  Options to perform JSONPath content matching.
+
+                                  Default value is EXACT_MATCH.
+
+                                  Possible values are: EXACT_MATCH, REGEX_MATCH.
                                 type: string
                               jsonPath:
                                 description: JSONPath within the response output pointing to the expected ContentMatcher::content to match against.
@@ -293,7 +443,12 @@ spec:
                             type: object
                           type: array
                         matcher:
-                          description: 'The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value is CONTAINS_STRING. Possible values are: CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, NOT_MATCHES_JSON_PATH.'
+                          description: >-
+                            The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+
+                            Default value is CONTAINS_STRING.
+
+                            Possible values are: CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, NOT_MATCHES_JSON_PATH.
                           type: string
                       type: object
                     type: array
@@ -301,15 +456,24 @@ spec:
                     description: A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
                     type: string
                   httpCheck:
-                    description: Contains information needed to make an HTTP or HTTPS check. Structure is documented below.
+                    description: >-
+                      Contains information needed to make an HTTP or HTTPS check.
+
+                      Structure is documented below.
                     items:
                       properties:
                         acceptedResponseStatusCodes:
-                          description: If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299. Structure is documented below.
+                          description: >-
+                            If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299.
+
+                            Structure is documented below.
                           items:
                             properties:
                               statusClass:
-                                description: 'A class of status codes to accept. Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.'
+                                description: >-
+                                  A class of status codes to accept.
+
+                                  Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.
                                 type: string
                               statusValue:
                                 description: A status code to accept.
@@ -317,7 +481,10 @@ spec:
                             type: object
                           type: array
                         authInfo:
-                          description: The authentication information. Optional when creating an HTTP check; defaults to empty. Structure is documented below.
+                          description: >-
+                            The authentication information. Optional when creating an HTTP check; defaults to empty.
+
+                            Structure is documented below.
                           items:
                             properties:
                               username:
@@ -329,7 +496,10 @@ spec:
                           description: The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
                           type: string
                         contentType:
-                          description: 'The content type to use for the check. Possible values are: TYPE_UNSPECIFIED, URL_ENCODED.'
+                          description: >-
+                            The content type to use for the check.
+
+                            Possible values are: TYPE_UNSPECIFIED, URL_ENCODED.
                           type: string
                         headers:
                           additionalProperties:
@@ -347,7 +517,12 @@ spec:
                           description: The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or 443 with SSL).
                           type: number
                         requestMethod:
-                          description: 'The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value is GET. Possible values are: METHOD_UNSPECIFIED, GET, POST.'
+                          description: >-
+                            The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+
+                            Default value is GET.
+
+                            Possible values are: METHOD_UNSPECIFIED, GET, POST.
                           type: string
                         useSsl:
                           description: If true, use HTTPS instead of HTTP to run the check.
@@ -358,7 +533,10 @@ spec:
                       type: object
                     type: array
                   monitoredResource:
-                    description: 'The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service Structure is documented below.'
+                    description: >-
+                      The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service
+
+                      Structure is documented below.
                     items:
                       properties:
                         labels:
@@ -376,10 +554,16 @@ spec:
                     description: How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
                     type: string
                   project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+                    description: >-
+                      The ID of the project in which the resource belongs.
+
+                      If it is not provided, the provider project is used.
                     type: string
                   resourceGroup:
-                    description: The group resource associated with the configuration. Structure is documented below.
+                    description: >-
+                      The group resource associated with the configuration.
+
+                      Structure is documented below.
                     items:
                       properties:
                         groupId:
@@ -396,13 +580,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -415,7 +613,10 @@ spec:
                           description: Selector for a Group in monitoring to populate groupId.
                           properties:
                             matchControllerRef:
-                              description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
                               type: boolean
                             matchLabels:
                               additionalProperties:
@@ -427,13 +628,27 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
                                   enum:
                                   - Always
                                   - IfNotPresent
@@ -441,7 +656,10 @@ spec:
                               type: object
                           type: object
                         resourceType:
-                          description: 'The resource type of the group members. Possible values are: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER.'
+                          description: >-
+                            The resource type of the group members.
+
+                            Possible values are: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER.
                           type: string
                       type: object
                     type: array
@@ -451,7 +669,10 @@ spec:
                       type: string
                     type: array
                   tcpCheck:
-                    description: Contains information needed to make a TCP check. Structure is documented below.
+                    description: >-
+                      Contains information needed to make a TCP check.
+
+                      Structure is documented below.
                     items:
                       properties:
                         port:
@@ -466,9 +687,31 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: 'THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md'
+                description: >-
+                  THIS IS A BETA FIELD. It is on by default but can be opted out
+
+                  through a Crossplane feature flag.
+
+                  ManagementPolicies specify the array of actions Crossplane is allowed to
+
+                  take on the managed and external resources.
+
+                  This field is planned to replace the DeletionPolicy field in a future
+
+                  release. Currently, both could be set independently and non-default
+
+                  values would be honored if the feature flag is enabled. If both are
+
+                  custom, the DeletionPolicy field will be ignored.
+
+                  See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
+
+                  and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: A ManagementAction represents an action that the Crossplane controllers can take on an external resource.
+                  description: >-
+                    A ManagementAction represents an action that the Crossplane controllers
+
+                    can take on an external resource.
                   enum:
                   - Observe
                   - Create
@@ -481,7 +724,12 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.
+                description: >-
+                  ProviderConfigReference specifies how the provider that will be used to
+
+                  create, observe, update, and delete this managed resource should be
+
+                  configured.
                 properties:
                   name:
                     description: Name of the referenced object.
@@ -491,13 +739,27 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                        description: >-
+                          Resolution specifies whether resolution of this reference is required.
+
+                          The default is 'Required', which means the reconcile will fail if the
+
+                          reference cannot be resolved. 'Optional' means this reference will be
+
+                          a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                        description: >-
+                          Resolve specifies when this reference should be resolved. The default
+
+                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                          the corresponding field is not present. Use 'Always' to resolve the
+
+                          reference on every reconcile.
                         enum:
                         - Always
                         - IfNotPresent
@@ -507,12 +769,24 @@ spec:
                 - name
                 type: object
               publishConnectionDetailsTo:
-                description: PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.
+                description: >-
+                  PublishConnectionDetailsTo specifies the connection secret config which
+
+                  contains a name, metadata and a reference to secret store config to
+
+                  which any connection details for this managed resource should be written.
+
+                  Connection details frequently include the endpoint, username,
+
+                  and password required to connect to the managed resource.
                 properties:
                   configRef:
                     default:
                       name: default
-                    description: SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.
+                    description: >-
+                      SecretStoreConfigRef specifies which secret store config should be used
+
+                      for this ConnectionSecret.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -522,13 +796,27 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
                             enum:
                             - Always
                             - IfNotPresent
@@ -543,15 +831,28 @@ spec:
                       annotations:
                         additionalProperties:
                           type: string
-                        description: Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.
+                        description: >-
+                          Annotations are the annotations to be added to connection secret.
+
+                          - For Kubernetes secrets, this will be used as "metadata.annotations".
+
+                          - It is up to Secret Store implementation for others store types.
                         type: object
                       labels:
                         additionalProperties:
                           type: string
-                        description: Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.
+                        description: >-
+                          Labels are the labels/tags to be added to connection secret.
+
+                          - For Kubernetes secrets, this will be used as "metadata.labels".
+
+                          - It is up to Secret Store implementation for others store types.
                         type: object
                       type:
-                        description: Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.
+                        description: >-
+                          Type is the SecretType for the connection secret.
+
+                          - Only valid for Kubernetes Secret Stores.
                         type: string
                     type: object
                   name:
@@ -561,7 +862,22 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.
+                description: >-
+                  WriteConnectionSecretToReference specifies the namespace and name of a
+
+                  Secret to which any connection details for this managed resource should
+
+                  be written. Connection details frequently include the endpoint, username,
+
+                  and password required to connect to the managed resource.
+
+                  This field is planned to be replaced in a future release in favor of
+
+                  PublishConnectionDetailsTo. Currently, both could be set independently
+
+                  and connection details would be published to both without affecting
+
+                  each other.
                 properties:
                   name:
                     description: Name of the secret.
@@ -587,21 +903,35 @@ spec:
               atProvider:
                 properties:
                   checkerType:
-                    description: 'The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS. Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.'
+                    description: >-
+                      The checker type to use for the check. If the monitored resource type is servicedirectory_service, checkerType must be set to VPC_CHECKERS.
+
+                      Possible values are: STATIC_IP_CHECKERS, VPC_CHECKERS.
                     type: string
                   contentMatchers:
-                    description: The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required. Structure is documented below.
+                    description: >-
+                      The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
+
+                      Structure is documented below.
                     items:
                       properties:
                         content:
                           description: String or regex content to match (max 1024 bytes)
                           type: string
                         jsonPathMatcher:
-                          description: Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH. Structure is documented below.
+                          description: >-
+                            Information needed to perform a JSONPath content match. Used for ContentMatcherOption::MATCHES_JSON_PATH and ContentMatcherOption::NOT_MATCHES_JSON_PATH.
+
+                            Structure is documented below.
                           items:
                             properties:
                               jsonMatcher:
-                                description: 'Options to perform JSONPath content matching. Default value is EXACT_MATCH. Possible values are: EXACT_MATCH, REGEX_MATCH.'
+                                description: >-
+                                  Options to perform JSONPath content matching.
+
+                                  Default value is EXACT_MATCH.
+
+                                  Possible values are: EXACT_MATCH, REGEX_MATCH.
                                 type: string
                               jsonPath:
                                 description: JSONPath within the response output pointing to the expected ContentMatcher::content to match against.
@@ -609,7 +939,12 @@ spec:
                             type: object
                           type: array
                         matcher:
-                          description: 'The type of content matcher that will be applied to the server output, compared to the content string when the check is run. Default value is CONTAINS_STRING. Possible values are: CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, NOT_MATCHES_JSON_PATH.'
+                          description: >-
+                            The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+
+                            Default value is CONTAINS_STRING.
+
+                            Possible values are: CONTAINS_STRING, NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH, NOT_MATCHES_JSON_PATH.
                           type: string
                       type: object
                     type: array
@@ -617,15 +952,24 @@ spec:
                     description: A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
                     type: string
                   httpCheck:
-                    description: Contains information needed to make an HTTP or HTTPS check. Structure is documented below.
+                    description: >-
+                      Contains information needed to make an HTTP or HTTPS check.
+
+                      Structure is documented below.
                     items:
                       properties:
                         acceptedResponseStatusCodes:
-                          description: If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299. Structure is documented below.
+                          description: >-
+                            If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299.
+
+                            Structure is documented below.
                           items:
                             properties:
                               statusClass:
-                                description: 'A class of status codes to accept. Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.'
+                                description: >-
+                                  A class of status codes to accept.
+
+                                  Possible values are: STATUS_CLASS_1XX, STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX, STATUS_CLASS_ANY.
                                 type: string
                               statusValue:
                                 description: A status code to accept.
@@ -633,7 +977,10 @@ spec:
                             type: object
                           type: array
                         authInfo:
-                          description: The authentication information. Optional when creating an HTTP check; defaults to empty. Structure is documented below.
+                          description: >-
+                            The authentication information. Optional when creating an HTTP check; defaults to empty.
+
+                            Structure is documented below.
                           items:
                             properties:
                               username:
@@ -645,7 +992,10 @@ spec:
                           description: The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
                           type: string
                         contentType:
-                          description: 'The content type to use for the check. Possible values are: TYPE_UNSPECIFIED, URL_ENCODED.'
+                          description: >-
+                            The content type to use for the check.
+
+                            Possible values are: TYPE_UNSPECIFIED, URL_ENCODED.
                           type: string
                         headers:
                           additionalProperties:
@@ -663,7 +1013,12 @@ spec:
                           description: The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) and path to construct the full URL. Optional (defaults to 80 without SSL, or 443 with SSL).
                           type: number
                         requestMethod:
-                          description: 'The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET. Default value is GET. Possible values are: METHOD_UNSPECIFIED, GET, POST.'
+                          description: >-
+                            The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
+
+                            Default value is GET.
+
+                            Possible values are: METHOD_UNSPECIFIED, GET, POST.
                           type: string
                         useSsl:
                           description: If true, use HTTPS instead of HTTP to run the check.
@@ -677,7 +1032,10 @@ spec:
                     description: an identifier for the resource with format {{name}}
                     type: string
                   monitoredResource:
-                    description: 'The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service Structure is documented below.'
+                    description: >-
+                      The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service
+
+                      Structure is documented below.
                     items:
                       properties:
                         labels:
@@ -698,17 +1056,26 @@ spec:
                     description: How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
                     type: string
                   project:
-                    description: The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
+                    description: >-
+                      The ID of the project in which the resource belongs.
+
+                      If it is not provided, the provider project is used.
                     type: string
                   resourceGroup:
-                    description: The group resource associated with the configuration. Structure is documented below.
+                    description: >-
+                      The group resource associated with the configuration.
+
+                      Structure is documented below.
                     items:
                       properties:
                         groupId:
                           description: The group of resources being monitored. Should be the name of a group
                           type: string
                         resourceType:
-                          description: 'The resource type of the group members. Possible values are: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER.'
+                          description: >-
+                            The resource type of the group members.
+
+                            Possible values are: RESOURCE_TYPE_UNSPECIFIED, INSTANCE, AWS_ELB_LOAD_BALANCER.
                           type: string
                       type: object
                     type: array
@@ -718,7 +1085,10 @@ spec:
                       type: string
                     type: array
                   tcpCheck:
-                    description: Contains information needed to make a TCP check. Structure is documented below.
+                    description: >-
+                      Contains information needed to make a TCP check.
+
+                      Structure is documented below.
                     items:
                       properties:
                         port:
@@ -739,11 +1109,17 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: LastTransitionTime is the last time this condition transitioned from one status to another.
+                      description: >-
+                        LastTransitionTime is the last time this condition transitioned from one
+
+                        status to another.
                       format: date-time
                       type: string
                     message:
-                      description: A Message containing details about this condition's last transition from one status to another, if any.
+                      description: >-
+                        A Message containing details about this condition's last transition from
+
+                        one status to another, if any.
                       type: string
                     reason:
                       description: A Reason for this condition's last transition from one status to another.
@@ -752,7 +1128,10 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: Type of this condition. At most one of each condition type may apply to a resource at any point in time.
+                      description: >-
+                        Type of this condition. At most one of each condition type may apply to
+
+                        a resource at any point in time.
                       type: string
                   required:
                   - lastTransitionTime
