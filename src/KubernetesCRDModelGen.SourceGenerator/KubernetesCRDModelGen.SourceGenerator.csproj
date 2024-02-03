@@ -76,15 +76,15 @@
         <None Include="$(PKGSystem_ComponentModel_Annotations)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Diagnostics_DiagnosticSource)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.3.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_IdentityModel_Tokens_Jwt)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.1.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.3.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_JsonWebTokens)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.1.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.3.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_Tokens)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-        <PackageReference Include="Microsoft.IdentityModel.Logging" Version="7.1.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.Logging" Version="7.3.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_Logging)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-        <PackageReference Include="Microsoft.IdentityModel.Abstractions" Version="7.1.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.Abstractions" Version="7.3.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_Abstractions)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <PackageReference Include="System.Security.Cryptography.Cng" Version="5.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Security_Cryptography_Cng)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
