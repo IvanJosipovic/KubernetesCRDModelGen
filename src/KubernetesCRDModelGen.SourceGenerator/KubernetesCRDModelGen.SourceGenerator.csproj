@@ -88,7 +88,7 @@
         <None Include="$(PKGMicrosoft_IdentityModel_Abstractions)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <PackageReference Include="System.Security.Cryptography.Cng" Version="5.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Security_Cryptography_Cng)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-        <PackageReference Include="YamlDotNet" Version="13.7.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="YamlDotNet" Version="15.1.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGYamlDotNet)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     </ItemGroup>
 
