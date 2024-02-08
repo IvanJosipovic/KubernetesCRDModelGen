@@ -6,9 +6,9 @@ metadata:
     app: cert-manager
     app.kubernetes.io/name: cert-manager
     app.kubernetes.io/instance: release-name
-    app.kubernetes.io/version: v1.14.1
+    app.kubernetes.io/version: v1.14.2
     app.kubernetes.io/managed-by: Helm
-    helm.sh/chart: cert-manager-v1.14.1
+    helm.sh/chart: cert-manager-v1.14.2
 spec:
   group: acme.cert-manager.io
   names:
