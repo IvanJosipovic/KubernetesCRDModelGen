@@ -36,7 +36,7 @@
 
         <PackageReference Include="KubernetesClient.Classic" Version="13.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGKubernetesClient_Classic)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-        <PackageReference Include="BouncyCastle.Cryptography" Version="2.2.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="BouncyCastle.Cryptography" Version="2.3.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGBouncyCastle_Cryptography)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <PackageReference Include="Fractions" Version="7.3.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGFractions)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
