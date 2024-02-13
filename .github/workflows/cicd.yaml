@@ -44,9 +44,11 @@ jobs:
       run: dotnet test -c Release --collect:"XPlat Code Coverage"
 
     - name: Coverage
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v4
       with:
+        token: ${{ secrets.CODECOV_TOKEN }}
         file: coverage.cobertura.xml
+        fail_ci_if_error: true
 
     - name: .NET Pack
       run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1' }}
