@@ -21,7 +21,7 @@ jobs:
         with:
           global-json-file: global.json
 
-      - uses: azure/setup-helm@v3
+      - uses: azure/setup-helm@v4
         with:
           version: 'latest'
           token: ${{ secrets.GITHUB_TOKEN }}
