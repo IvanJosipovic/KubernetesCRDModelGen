@@ -1415,7 +1415,7 @@ spec:
 
                       queryable and should be preserved when modifying objects.
 
-                      More info: http://kubernetes.io/docs/user-guide/annotations
+                      More info: http:https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
                     type: object
                   labels:
                     additionalProperties:
@@ -1431,7 +1431,7 @@ spec:
 
                       crossplane.io key might be overwritten.
 
-                      More info: http://kubernetes.io/docs/user-guide/labels
+                      More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
                     type: object
                 type: object
               nodeName:
@@ -1836,7 +1836,7 @@ spec:
 
                   empty definition that uses the default runtime handler.
 
-                  More info: https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
+                  More info: https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/585-runtime-class/README.md
 
                   This is a beta feature as of Kubernetes v1.14.
                 type: string

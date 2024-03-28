@@ -466,6 +466,13 @@ spec:
                             domainAttachmentType:
                               description: 'DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: "tap". The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1'
                               type: string
+                            migration:
+                              description: 'Migration means the VM using the plugin can be safely migrated version: 1alphav1'
+                              properties:
+                                method:
+                                  description: 'Method defines a pre-defined migration methodology version: 1alphav1'
+                                  type: string
+                              type: object
                             networkAttachmentDefinition:
                               description: 'NetworkAttachmentDefinition references to a NetworkAttachmentDefinition CR object. Format: <name>, <namespace>/<name>. If namespace is not specified, VMI namespace is assumed. version: 1alphav1'
                               type: string
@@ -676,6 +683,13 @@ spec:
                         description: DisableSerialConsoleLog disables logging the auto-attached default serial console. If not set, serial console logs will be written to a file and then streamed from a container named 'guest-console-log'. The value can be individually overridden for each VM, not relevant if AutoattachSerialConsole is disabled.
                         type: object
                     type: object
+                  vmRolloutStrategy:
+                    description: VMRolloutStrategy defines how changes to a VM object propagate to its VMI
+                    enum:
+                    - Stage
+                    - LiveUpdate
+                    nullable: true
+                    type: string
                   vmStateStorageClass:
                     description: VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM. The storage class must support RWX in filesystem mode.
                     type: string
@@ -2354,6 +2368,13 @@ spec:
                             domainAttachmentType:
                               description: 'DomainAttachmentType is a standard domain network attachment method kubevirt supports. Supported values: "tap". The standard domain attachment can be used instead or in addition to the sidecarImage. version: 1alphav1'
                               type: string
+                            migration:
+                              description: 'Migration means the VM using the plugin can be safely migrated version: 1alphav1'
+                              properties:
+                                method:
+                                  description: 'Method defines a pre-defined migration methodology version: 1alphav1'
+                                  type: string
+                              type: object
                             networkAttachmentDefinition:
                               description: 'NetworkAttachmentDefinition references to a NetworkAttachmentDefinition CR object. Format: <name>, <namespace>/<name>. If namespace is not specified, VMI namespace is assumed. version: 1alphav1'
                               type: string
@@ -2564,6 +2585,13 @@ spec:
                         description: DisableSerialConsoleLog disables logging the auto-attached default serial console. If not set, serial console logs will be written to a file and then streamed from a container named 'guest-console-log'. The value can be individually overridden for each VM, not relevant if AutoattachSerialConsole is disabled.
                         type: object
                     type: object
+                  vmRolloutStrategy:
+                    description: VMRolloutStrategy defines how changes to a VM object propagate to its VMI
+                    enum:
+                    - Stage
+                    - LiveUpdate
+                    nullable: true
+                    type: string
                   vmStateStorageClass:
                     description: VMStateStorageClass is the name of the storage class to use for the PVCs created to preserve VM state, like TPM. The storage class must support RWX in filesystem mode.
                     type: string
