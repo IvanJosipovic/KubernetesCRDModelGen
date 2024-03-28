@@ -74,7 +74,7 @@ spec:
 
                   and services.
 
-                  More info: http://kubernetes.io/docs/user-guide/labels
+                  More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
                 type: object
               controllerConfigRef:
                 description: >-
