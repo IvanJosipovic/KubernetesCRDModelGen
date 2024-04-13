@@ -30,7 +30,16 @@ spec:
     name: v1
     schema:
       openAPIV3Schema:
-        description: A Composition specifies how a composite resource should be composed.
+        description: >-
+          A Composition defines a collection of managed resources or functions that
+
+          Crossplane uses to create and manage new composite resources.
+
+
+
+          Read the Crossplane documentation for
+
+          [more information about Compositions](https://docs.crossplane.io/latest/concepts/compositions).
         properties:
           apiVersion:
             description: >-
@@ -501,6 +510,8 @@ spec:
                                       `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input
 
                                       converted to JSON.
+
+                                      `ToAdler32` generate a addler32 hash based on the input string.
                                     enum:
                                     - ToUpper
                                     - ToLower
@@ -510,6 +521,7 @@ spec:
                                     - ToSha1
                                     - ToSha256
                                     - ToSha512
+                                    - ToAdler32
                                     type: string
                                   fmt:
                                     description: >-
@@ -961,6 +973,8 @@ spec:
                                         `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input
 
                                         converted to JSON.
+
+                                        `ToAdler32` generate a addler32 hash based on the input string.
                                       enum:
                                       - ToUpper
                                       - ToLower
@@ -970,6 +984,7 @@ spec:
                                       - ToSha1
                                       - ToSha256
                                       - ToSha512
+                                      - ToAdler32
                                       type: string
                                     fmt:
                                       description: >-
@@ -1521,6 +1536,8 @@ spec:
                                         `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input
 
                                         converted to JSON.
+
+                                        `ToAdler32` generate a addler32 hash based on the input string.
                                       enum:
                                       - ToUpper
                                       - ToLower
@@ -1530,6 +1547,7 @@ spec:
                                       - ToSha1
                                       - ToSha256
                                       - ToSha512
+                                      - ToAdler32
                                       type: string
                                     fmt:
                                       description: >-
@@ -1627,7 +1645,7 @@ spec:
                         description: >-
                           ReadinessCheck is used to indicate how to tell whether a resource is ready
 
-                          for consumption
+                          for consumption.
                         properties:
                           fieldPath:
                             description: FieldPath shows the path of the field whose value will be used.

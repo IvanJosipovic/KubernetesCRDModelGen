@@ -32,7 +32,16 @@ spec:
     name: v1
     schema:
       openAPIV3Schema:
-        description: Provider is the CRD type for a request to add a provider to Crossplane.
+        description: >-
+          A Provider installs an OCI compatible Crossplane package, extending
+
+          Crossplane with support for new kinds of managed resources.
+
+
+
+          Read the Crossplane documentation for
+
+          [more information about Providers](https://docs.crossplane.io/latest/concepts/providers).
         properties:
           apiVersion:
             description: >-
@@ -74,7 +83,7 @@ spec:
 
                   and services.
 
-                  More info: http://kubernetes.io/docs/user-guide/labels
+                  More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
                 type: object
               controllerConfigRef:
                 description: >-

@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.113.0
+    cnrm.cloud.google.com/version: 1.115.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -394,7 +394,10 @@ spec:
                 type: string
               resourcePolicies:
                 items:
-                  description: Resource policies applied to this disk for automatic snapshot creations.
+                  description: >-
+                    Resource policies applied to this disk for automatic snapshot creations.
+
+                    This field only applies for zonal compute disk resources.
                   oneOf:
                   - not:
                       required:

@@ -23,13 +23,21 @@ spec:
     schema:
       openAPIV3Schema:
         description: >-
-          ControllerConfig is the CRD type for a packaged controller configuration.
+          A ControllerConfig applies settings to controllers like Provider pods.
 
-          Deprecated: This API is replaced by DeploymentRuntimeConfig, and is scheduled
+          Deprecated: Use the
 
-          to be removed in a future release. See the design doc for more details:
+          [DeploymentRuntimeConfig](https://docs.crossplane.io/latest/concepts/providers#runtime-configuration)
 
-          https://github.com/crossplane/crossplane/blob/11bbe13ea3604928cc4e24e8d0d18f3f5f7e847c/design/one-pager-package-runtime-config.md
+          instead.
+
+
+
+          Read the
+
+          [Package Runtime Configuration](https://github.com/crossplane/crossplane/blob/11bbe13ea3604928cc4e24e8d0d18f3f5f7e847c/design/one-pager-package-runtime-config.md)
+
+          design document for more details.
         properties:
           apiVersion:
             description: >-
@@ -1415,7 +1423,7 @@ spec:
 
                       queryable and should be preserved when modifying objects.
 
-                      More info: http://kubernetes.io/docs/user-guide/annotations
+                      More info: http:https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
                     type: object
                   labels:
                     additionalProperties:
@@ -1431,7 +1439,7 @@ spec:
 
                       crossplane.io key might be overwritten.
 
-                      More info: http://kubernetes.io/docs/user-guide/labels
+                      More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
                     type: object
                 type: object
               nodeName:
@@ -1836,7 +1844,7 @@ spec:
 
                   empty definition that uses the default runtime handler.
 
-                  More info: https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
+                  More info: https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/585-runtime-class/README.md
 
                   This is a beta feature as of Kubernetes v1.14.
                 type: string

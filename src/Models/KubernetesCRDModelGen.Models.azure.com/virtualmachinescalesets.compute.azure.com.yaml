@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.5.0
+    app.kubernetes.io/version: v2.6.0
   name: virtualmachinescalesets.compute.azure.com
 spec:
   conversion:
@@ -345,9 +345,13 @@ spec:
                               description: 'Name: The name of the extension.'
                               type: string
                             protectedSettings:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
                               description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
+                              properties:
+                                name:
+                                  description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                  type: string
+                              required:
+                              - name
                               type: object
                             provisionAfterExtensions:
                               description: 'ProvisionAfterExtensions: Collection of extension names after which this extension needs to be provisioned.'
@@ -1402,11 +1406,6 @@ spec:
                             properties_type:
                               description: 'PropertiesType: Specifies the type of the extension; an example is "CustomScriptExtension".'
                               type: string
-                            protectedSettings:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
-                              description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
-                              type: object
                             provisionAfterExtensions:
                               description: 'ProvisionAfterExtensions: Collection of extension names after which this extension needs to be provisioned.'
                               items:
@@ -2258,8 +2257,13 @@ spec:
                             name:
                               type: string
                             protectedSettings:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
+                              description: SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.
+                              properties:
+                                name:
+                                  description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                  type: string
+                              required:
+                              - name
                               type: object
                             provisionAfterExtensions:
                               items:
@@ -3404,10 +3408,6 @@ spec:
                               type: string
                             properties_type:
                               type: string
-                            protectedSettings:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
-                              type: object
                             provisionAfterExtensions:
                               items:
                                 type: string
@@ -4428,9 +4428,13 @@ spec:
                               description: 'Name: The name of the extension.'
                               type: string
                             protectedSettings:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
                               description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
+                              properties:
+                                name:
+                                  description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                  type: string
+                              required:
+                              - name
                               type: object
                             protectedSettingsFromKeyVault:
                               description: 'ProtectedSettingsFromKeyVault: The extensions protected settings that are passed by reference, and consumed from key vault'
@@ -5756,11 +5760,6 @@ spec:
                             properties_type:
                               description: 'PropertiesType: Specifies the type of the extension; an example is "CustomScriptExtension".'
                               type: string
-                            protectedSettings:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
-                              description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
-                              type: object
                             protectedSettingsFromKeyVault:
                               description: 'ProtectedSettingsFromKeyVault: The extensions protected settings that are passed by reference, and consumed from key vault'
                               properties:
@@ -6833,8 +6832,13 @@ spec:
                             name:
                               type: string
                             protectedSettings:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
+                              description: SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.
+                              properties:
+                                name:
+                                  description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                  type: string
+                              required:
+                              - name
                               type: object
                             protectedSettingsFromKeyVault:
                               description: Storage version of v1api20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret
@@ -8246,10 +8250,6 @@ spec:
                               type: string
                             properties_type:
                               type: string
-                            protectedSettings:
-                              additionalProperties:
-                                x-kubernetes-preserve-unknown-fields: true
-                              type: object
                             protectedSettingsFromKeyVault:
                               description: Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret
                               properties:
