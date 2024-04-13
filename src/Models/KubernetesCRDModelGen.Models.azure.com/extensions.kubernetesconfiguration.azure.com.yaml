@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.5.0
+    app.kubernetes.io/version: v2.6.0
   name: extensions.kubernetesconfiguration.azure.com
 spec:
   conversion:
@@ -73,6 +73,15 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
+              configurationProtectedSettings:
+                description: 'ConfigurationProtectedSettings: Configuration settings that are sensitive, as name-value pairs for configuring this extension.'
+                properties:
+                  name:
+                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    type: string
+                required:
+                - name
+                type: object
               configurationSettings:
                 additionalProperties:
                   type: string
@@ -243,6 +252,11 @@ spec:
                   - type
                   type: object
                 type: array
+              configurationProtectedSettings:
+                additionalProperties:
+                  type: string
+                description: 'ConfigurationProtectedSettings: Configuration settings that are sensitive, as name-value pairs for configuring this extension.'
+                type: object
               configurationSettings:
                 additionalProperties:
                   type: string
@@ -491,6 +505,15 @@ spec:
               azureName:
                 description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
                 type: string
+              configurationProtectedSettings:
+                description: SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.
+                properties:
+                  name:
+                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    type: string
+                required:
+                - name
+                type: object
               configurationSettings:
                 additionalProperties:
                   type: string
@@ -664,6 +687,10 @@ spec:
                   - type
                   type: object
                 type: array
+              configurationProtectedSettings:
+                additionalProperties:
+                  type: string
+                type: object
               configurationSettings:
                 additionalProperties:
                   type: string

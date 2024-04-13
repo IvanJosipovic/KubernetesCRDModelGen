@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.13.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.5.0
+    app.kubernetes.io/version: v2.6.0
   name: virtualmachines.compute.azure.com
 spec:
   conversion:
@@ -1780,11 +1780,6 @@ spec:
                     properties_type:
                       description: 'PropertiesType: Specifies the type of the extension; an example is "CustomScriptExtension".'
                       type: string
-                    protectedSettings:
-                      additionalProperties:
-                        x-kubernetes-preserve-unknown-fields: true
-                      description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
-                      type: object
                     provisioningState:
                       description: 'ProvisioningState: The provisioning state, which only appears in the response.'
                       type: string
@@ -4000,10 +3995,6 @@ spec:
                       type: string
                     properties_type:
                       type: string
-                    protectedSettings:
-                      additionalProperties:
-                        x-kubernetes-preserve-unknown-fields: true
-                      type: object
                     provisioningState:
                       type: string
                     publisher:
@@ -6813,11 +6804,6 @@ spec:
                     properties_type:
                       description: 'PropertiesType: Specifies the type of the extension; an example is "CustomScriptExtension".'
                       type: string
-                    protectedSettings:
-                      additionalProperties:
-                        x-kubernetes-preserve-unknown-fields: true
-                      description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
-                      type: object
                     protectedSettingsFromKeyVault:
                       description: 'ProtectedSettingsFromKeyVault: The extensions protected settings that are passed by reference, and consumed from key vault'
                       properties:
@@ -9935,10 +9921,6 @@ spec:
                       type: string
                     properties_type:
                       type: string
-                    protectedSettings:
-                      additionalProperties:
-                        x-kubernetes-preserve-unknown-fields: true
-                      type: object
                     protectedSettingsFromKeyVault:
                       description: Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret
                       properties:

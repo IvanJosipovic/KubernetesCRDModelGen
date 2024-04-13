@@ -32,7 +32,16 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Function is the CRD type for a request to deploy a long-running Function.
+        description: >-
+          A Function installs an OCI compatible Crossplane package, extending
+
+          Crossplane with support for a new kind of composition function.
+
+
+
+          Read the Crossplane documentation for
+
+          [more information about Functions](https://docs.crossplane.io/latest/concepts/composition-functions).
         properties:
           apiVersion:
             description: >-
@@ -71,7 +80,7 @@ spec:
 
                   and services.
 
-                  More info: http://kubernetes.io/docs/user-guide/labels
+                  More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
                 type: object
               controllerConfigRef:
                 description: >-

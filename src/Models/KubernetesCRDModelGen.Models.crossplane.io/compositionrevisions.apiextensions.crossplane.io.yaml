@@ -34,9 +34,15 @@ spec:
     schema:
       openAPIV3Schema:
         description: >-
-          A CompositionRevision represents a revision in time of a Composition.
+          A CompositionRevision represents a revision of a Composition. Crossplane
 
-          Revisions are created by Crossplane; they should be treated as immutable.
+          creates new revisions when there are changes to the Composition.
+
+
+
+          Crossplane creates and manages CompositionRevisions. Don't directly edit
+
+          CompositionRevisions.
         properties:
           apiVersion:
             description: >-
@@ -510,6 +516,8 @@ spec:
                                       `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input
 
                                       converted to JSON.
+
+                                      `ToAdler32` generate a addler32 hash based on the input string.
                                     enum:
                                     - ToUpper
                                     - ToLower
@@ -519,6 +527,7 @@ spec:
                                     - ToSha1
                                     - ToSha256
                                     - ToSha512
+                                    - ToAdler32
                                     type: string
                                   fmt:
                                     description: >-
@@ -970,6 +979,8 @@ spec:
                                         `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input
 
                                         converted to JSON.
+
+                                        `ToAdler32` generate a addler32 hash based on the input string.
                                       enum:
                                       - ToUpper
                                       - ToLower
@@ -979,6 +990,7 @@ spec:
                                       - ToSha1
                                       - ToSha256
                                       - ToSha512
+                                      - ToAdler32
                                       type: string
                                     fmt:
                                       description: >-
@@ -1530,6 +1542,8 @@ spec:
                                         `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input
 
                                         converted to JSON.
+
+                                        `ToAdler32` generate a addler32 hash based on the input string.
                                       enum:
                                       - ToUpper
                                       - ToLower
@@ -1539,6 +1553,7 @@ spec:
                                       - ToSha1
                                       - ToSha256
                                       - ToSha512
+                                      - ToAdler32
                                       type: string
                                     fmt:
                                       description: >-
@@ -1636,7 +1651,7 @@ spec:
                         description: >-
                           ReadinessCheck is used to indicate how to tell whether a resource is ready
 
-                          for consumption
+                          for consumption.
                         properties:
                           fieldPath:
                             description: FieldPath shows the path of the field whose value will be used.
@@ -1777,9 +1792,15 @@ spec:
     schema:
       openAPIV3Schema:
         description: >-
-          A CompositionRevision represents a revision in time of a Composition.
+          A CompositionRevision represents a revision of a Composition. Crossplane
 
-          Revisions are created by Crossplane; they should be treated as immutable.
+          creates new revisions when there are changes to the Composition.
+
+
+
+          Crossplane creates and manages CompositionRevisions. Don't directly edit
+
+          CompositionRevisions.
         properties:
           apiVersion:
             description: >-
@@ -2253,6 +2274,8 @@ spec:
                                       `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input
 
                                       converted to JSON.
+
+                                      `ToAdler32` generate a addler32 hash based on the input string.
                                     enum:
                                     - ToUpper
                                     - ToLower
@@ -2262,6 +2285,7 @@ spec:
                                     - ToSha1
                                     - ToSha256
                                     - ToSha512
+                                    - ToAdler32
                                     type: string
                                   fmt:
                                     description: >-
@@ -2713,6 +2737,8 @@ spec:
                                         `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input
 
                                         converted to JSON.
+
+                                        `ToAdler32` generate a addler32 hash based on the input string.
                                       enum:
                                       - ToUpper
                                       - ToLower
@@ -2722,6 +2748,7 @@ spec:
                                       - ToSha1
                                       - ToSha256
                                       - ToSha512
+                                      - ToAdler32
                                       type: string
                                     fmt:
                                       description: >-
@@ -3273,6 +3300,8 @@ spec:
                                         `ToSha1`, `ToSha256` and `ToSha512` generate a hash value based on the input
 
                                         converted to JSON.
+
+                                        `ToAdler32` generate a addler32 hash based on the input string.
                                       enum:
                                       - ToUpper
                                       - ToLower
@@ -3282,6 +3311,7 @@ spec:
                                       - ToSha1
                                       - ToSha256
                                       - ToSha512
+                                      - ToAdler32
                                       type: string
                                     fmt:
                                       description: >-
@@ -3379,7 +3409,7 @@ spec:
                         description: >-
                           ReadinessCheck is used to indicate how to tell whether a resource is ready
 
-                          for consumption
+                          for consumption.
                         properties:
                           fieldPath:
                             description: FieldPath shows the path of the field whose value will be used.
