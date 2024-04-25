@@ -10,7 +10,7 @@
   <Choose>
     <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
         <ItemGroup>
-            <PackageReference Include="KubernetesClient.Classic" Version="13.0.1" />
+            <PackageReference Include="KubernetesClient.Classic" Version="13.0.37" />
         </ItemGroup>
     </When>
     <Otherwise>
