@@ -21,7 +21,7 @@
     <ItemGroup>
         <PackageReference Include="CsCodeGenerator" Version="2.0.0" />
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
-        <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.4.5" />
+        <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.7.2" />
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
     </ItemGroup>
