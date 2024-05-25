@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: workspaces.machinelearningservices.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20210701
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -61,10 +82,18 @@ spec:
                 description: 'AllowPublicAccessWhenBehindVnet: The flag to indicate whether to allow public access when behind VNet.'
                 type: boolean
               applicationInsightsReference:
-                description: 'ApplicationInsightsReference: ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  ApplicationInsightsReference: ARM id of the application insights associated with this workspace. This cannot be changed
+
+                  once the workspace has been created
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -78,13 +107,24 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               containerRegistryReference:
-                description: 'ContainerRegistryReference: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  ContainerRegistryReference: ARM id of the container registry associated with this workspace. This cannot be changed once
+
+                  the workspace has been created
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -165,7 +205,12 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -185,10 +230,18 @@ spec:
                 description: 'ImageBuildCompute: The compute name for image build'
                 type: string
               keyVaultReference:
-                description: 'KeyVaultReference: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  KeyVaultReference: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has
+
+                  been created
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -205,97 +258,142 @@ spec:
                 description: 'Location: Specifies the location of the resource.'
                 type: string
               operatorSpec:
-                description: 'OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not passed directly to Azure'
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
                 properties:
                   secrets:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       appInsightsInstrumentationKey:
-                        description: 'AppInsightsInstrumentationKey: indicates where the AppInsightsInstrumentationKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          AppInsightsInstrumentationKey: indicates where the AppInsightsInstrumentationKey secret should be placed. If omitted,
+
+                          the secret will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       containerRegistryPassword:
-                        description: 'ContainerRegistryPassword: indicates where the ContainerRegistryPassword secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          ContainerRegistryPassword: indicates where the ContainerRegistryPassword secret should be placed. If omitted, the secret
+
+                          will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       containerRegistryPassword2:
-                        description: 'ContainerRegistryPassword2: indicates where the ContainerRegistryPassword2 secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          ContainerRegistryPassword2: indicates where the ContainerRegistryPassword2 secret should be placed. If omitted, the
+
+                          secret will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       containerRegistryUserName:
-                        description: 'ContainerRegistryUserName: indicates where the ContainerRegistryUserName secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          ContainerRegistryUserName: indicates where the ContainerRegistryUserName secret should be placed. If omitted, the secret
+
+                          will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryNotebookAccessKey:
-                        description: 'PrimaryNotebookAccessKey: indicates where the PrimaryNotebookAccessKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          PrimaryNotebookAccessKey: indicates where the PrimaryNotebookAccessKey secret should be placed. If omitted, the secret
+
+                          will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryNotebookAccessKey:
-                        description: 'SecondaryNotebookAccessKey: indicates where the SecondaryNotebookAccessKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          SecondaryNotebookAccessKey: indicates where the SecondaryNotebookAccessKey secret should be placed. If omitted, the
+
+                          secret will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       userStorageKey:
-                        description: 'UserStorageKey: indicates where the UserStorageKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          UserStorageKey: indicates where the UserStorageKey secret should be placed. If omitted, the secret will not be retrieved
+
+                          from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -304,7 +402,12 @@ spec:
                     type: object
                 type: object
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -317,7 +420,12 @@ spec:
                 description: 'PrimaryUserAssignedIdentityReference: The user assigned identity resource id that represents the workspace identity.'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -361,7 +469,12 @@ spec:
                       description: 'PrivateLinkResourceReference: The resource id that private link links to.'
                       properties:
                         armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          description: >-
+                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
                         group:
@@ -399,10 +512,18 @@ spec:
                     type: string
                 type: object
               storageAccountReference:
-                description: 'StorageAccountReference: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  StorageAccountReference: ARM id of the storage account associated with this workspace. This cannot be changed once the
+
+                  workspace has been created
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -462,7 +583,10 @@ spec:
                 description: 'AllowPublicAccessWhenBehindVnet: The flag to indicate whether to allow public access when behind VNet.'
                 type: boolean
               applicationInsights:
-                description: 'ApplicationInsights: ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  ApplicationInsights: ARM id of the application insights associated with this workspace. This cannot be changed once the
+
+                  workspace has been created
                 type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -477,14 +601,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -500,7 +639,10 @@ spec:
                   type: object
                 type: array
               containerRegistry:
-                description: 'ContainerRegistry: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  ContainerRegistry: ARM id of the container registry associated with this workspace. This cannot be changed once the
+
+                  workspace has been created
                 type: string
               description:
                 description: 'Description: The description of this workspace.'
@@ -542,7 +684,10 @@ spec:
                 description: 'HbiWorkspace: The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service'
                 type: boolean
               id:
-                description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource ID for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               identity:
                 description: 'Identity: The identity of the resource.'
@@ -577,7 +722,10 @@ spec:
                 description: 'ImageBuildCompute: The compute name for image build'
                 type: string
               keyVault:
-                description: 'KeyVault: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  KeyVault: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been
+
+                  created
                 type: string
               location:
                 description: 'Location: Specifies the location of the resource.'
@@ -614,7 +762,10 @@ spec:
                   description: The Private Endpoint Connection resource.
                   properties:
                     id:
-                      description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                      description: >-
+                        Id: Fully qualified resource ID for the resource. Ex -
+
+                        /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                       type: string
                   type: object
                 type: array
@@ -622,7 +773,10 @@ spec:
                 description: 'PrivateLinkCount: Count of private connections in the workspace'
                 type: integer
               provisioningState:
-                description: 'ProvisioningState: The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.'
+                description: >-
+                  ProvisioningState: The current deployment state of workspace resource. The provisioningState is to indicate states for
+
+                  resource provisioning.
                 type: string
               publicNetworkAccess:
                 description: 'PublicNetworkAccess: Whether requests from Public Network are allowed.'
@@ -639,7 +793,10 @@ spec:
                     type: object
                 type: object
               serviceProvisionedResourceGroup:
-                description: 'ServiceProvisionedResourceGroup: The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace'
+                description: >-
+                  ServiceProvisionedResourceGroup: The name of the managed resource group created by workspace RP in customer subscription
+
+                  if the workspace is CMK workspace
                 type: string
               sharedPrivateLinkResources:
                 description: 'SharedPrivateLinkResources: The list of shared private link resources in this workspace.'
@@ -673,7 +830,10 @@ spec:
                     type: string
                 type: object
               storageAccount:
-                description: 'StorageAccount: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  StorageAccount: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace
+
+                  has been created
                 type: string
               storageHnsEnabled:
                 description: 'StorageHnsEnabled: If the storage associated with the workspace has hierarchical namespace(HNS) enabled.'
@@ -736,13 +896,36 @@ spec:
     name: v1api20210701storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20210701.Workspace Generator information: - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}'
+        description: >-
+          Storage version of v1api20210701.Workspace
+
+          Generator information:
+
+          - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -752,15 +935,26 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               allowPublicAccessWhenBehindVnet:
                 type: boolean
               applicationInsightsReference:
-                description: 'ApplicationInsightsReference: ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  ApplicationInsightsReference: ARM id of the application insights associated with this workspace. This cannot be changed
+
+                  once the workspace has been created
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -774,13 +968,24 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               containerRegistryReference:
-                description: 'ContainerRegistryReference: ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  ContainerRegistryReference: ARM id of the container registry associated with this workspace. This cannot be changed once
+
+                  the workspace has been created
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -803,15 +1008,24 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   identity:
-                    description: Storage version of v1api20210701.IdentityForCmk Identity that will be used to access key vault for encryption at rest
+                    description: >-
+                      Storage version of v1api20210701.IdentityForCmk
+
+                      Identity that will be used to access key vault for encryption at rest
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       userAssignedIdentity:
                         type: string
@@ -822,7 +1036,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       identityClientId:
                         type: string
@@ -839,29 +1056,46 @@ spec:
               hbiWorkspace:
                 type: boolean
               identity:
-                description: Storage version of v1api20210701.Identity Identity for the resource.
+                description: >-
+                  Storage version of v1api20210701.Identity
+
+                  Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: Storage version of v1api20210701.UserAssignedIdentityDetails Information about the user assigned identity for the resource
+                      description: >-
+                        Storage version of v1api20210701.UserAssignedIdentityDetails
+
+                        Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -880,10 +1114,18 @@ spec:
               imageBuildCompute:
                 type: string
               keyVaultReference:
-                description: 'KeyVaultReference: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  KeyVaultReference: ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has
+
+                  been created
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -899,12 +1141,18 @@ spec:
               location:
                 type: string
               operatorSpec:
-                description: Storage version of v1api20210701.WorkspaceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                description: >-
+                  Storage version of v1api20210701.WorkspaceOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   secrets:
                     description: Storage version of v1api20210701.WorkspaceOperatorSecrets
@@ -912,94 +1160,139 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       appInsightsInstrumentationKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       containerRegistryPassword:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       containerRegistryPassword2:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       containerRegistryUserName:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryNotebookAccessKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryNotebookAccessKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       userStorageKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1010,7 +1303,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -1023,7 +1321,12 @@ spec:
                 description: 'PrimaryUserAssignedIdentityReference: The user assigned identity resource id that represents the workspace identity.'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -1044,7 +1347,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   cosmosDb:
                     description: Storage version of v1api20210701.CosmosDbSettings
@@ -1052,7 +1358,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       collectionsThroughput:
                         type: integer
@@ -1065,7 +1374,10 @@ spec:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     groupId:
                       type: string
@@ -1075,7 +1387,12 @@ spec:
                       description: 'PrivateLinkResourceReference: The resource id that private link links to.'
                       properties:
                         armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          description: >-
+                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
                         group:
@@ -1095,12 +1412,18 @@ spec:
                   type: object
                 type: array
               sku:
-                description: Storage version of v1api20210701.Sku Sku of the resource
+                description: >-
+                  Storage version of v1api20210701.Sku
+
+                  Sku of the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -1108,10 +1431,18 @@ spec:
                     type: string
                 type: object
               storageAccountReference:
-                description: 'StorageAccountReference: ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created'
+                description: >-
+                  StorageAccountReference: ARM id of the storage account associated with this workspace. This cannot be changed once the
+
+                  workspace has been created
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -1125,12 +1456,18 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1api20210701.SystemData Metadata pertaining to creation and last modification of the resource.
+                description: >-
+                  Storage version of v1api20210701.SystemData
+
+                  Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
                     type: string
@@ -1153,12 +1490,18 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20210701.Workspace_STATUS An object that represents a machine learning workspace.
+            description: >-
+              Storage version of v1api20210701.Workspace_STATUS
+
+              An object that represents a machine learning workspace.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               allowPublicAccessWhenBehindVnet:
                 type: boolean
@@ -1176,14 +1519,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1210,15 +1568,24 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   identity:
-                    description: Storage version of v1api20210701.IdentityForCmk_STATUS Identity that will be used to access key vault for encryption at rest
+                    description: >-
+                      Storage version of v1api20210701.IdentityForCmk_STATUS
+
+                      Identity that will be used to access key vault for encryption at rest
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       userAssignedIdentity:
                         type: string
@@ -1229,7 +1596,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       identityClientId:
                         type: string
@@ -1248,12 +1618,18 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1api20210701.Identity_STATUS Identity for the resource.
+                description: >-
+                  Storage version of v1api20210701.Identity_STATUS
+
+                  Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
                     type: string
@@ -1263,12 +1639,18 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1api20210701.UserAssignedIdentity_STATUS User Assigned Identity
+                      description: >-
+                        Storage version of v1api20210701.UserAssignedIdentity_STATUS
+
+                        User Assigned Identity
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
                           type: string
@@ -1295,7 +1677,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   fqdn:
                     type: string
@@ -1305,7 +1690,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       errorMessage:
                         type: string
@@ -1319,12 +1707,18 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1api20210701.PrivateEndpointConnection_STATUS The Private Endpoint Connection resource.
+                  description: >-
+                    Storage version of v1api20210701.PrivateEndpointConnection_STATUS
+
+                    The Private Endpoint Connection resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
                       type: string
@@ -1342,7 +1736,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   cosmosDb:
                     description: Storage version of v1api20210701.CosmosDbSettings_STATUS
@@ -1350,7 +1747,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       collectionsThroughput:
                         type: integer
@@ -1365,7 +1765,10 @@ spec:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     groupId:
                       type: string
@@ -1380,12 +1783,18 @@ spec:
                   type: object
                 type: array
               sku:
-                description: Storage version of v1api20210701.Sku_STATUS Sku of the resource
+                description: >-
+                  Storage version of v1api20210701.Sku_STATUS
+
+                  Sku of the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -1397,12 +1806,18 @@ spec:
               storageHnsEnabled:
                 type: boolean
               systemData:
-                description: Storage version of v1api20210701.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
+                description: >-
+                  Storage version of v1api20210701.SystemData_STATUS
+
+                  Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
                     type: string

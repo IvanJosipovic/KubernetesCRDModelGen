@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: extensions.kubernetesconfiguration.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20230501
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/stable/2023-05-01/extensions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/{extensionName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/stable/2023-05-01/extensions.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/{extensionName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -71,13 +92,22 @@ spec:
                 description: 'AutoUpgradeMinorVersion: Flag to note if this extension participates in auto upgrade of minor version, or not.'
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               configurationProtectedSettings:
-                description: 'ConfigurationProtectedSettings: Configuration settings that are sensitive, as name-value pairs for configuring this extension.'
+                description: >-
+                  ConfigurationProtectedSettings: Configuration settings that are sensitive, as name-value pairs for configuring this
+
+                  extension.
                 properties:
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - name
@@ -88,7 +118,10 @@ spec:
                 description: 'ConfigurationSettings: Configuration settings, as name-value pairs for configuring this extension.'
                 type: object
               extensionType:
-                description: 'ExtensionType: Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.'
+                description: >-
+                  ExtensionType: Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types
+
+                  registered with Microsoft.KubernetesConfiguration by the Extension publisher.
                 type: string
               identity:
                 description: 'Identity: Identity of the Extension resource'
@@ -99,8 +132,40 @@ spec:
                     - SystemAssigned
                     type: string
                 type: object
+              operatorSpec:
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
+                properties:
+                  configMaps:
+                    description: 'ConfigMaps: configures where to place operator written ConfigMaps.'
+                    properties:
+                      principalId:
+                        description: 'PrincipalId: indicates where the PrincipalId config map should be placed. If omitted, no config map will be created.'
+                        properties:
+                          key:
+                            description: Key is the key in the ConfigMap being referenced
+                            type: string
+                          name:
+                            description: >-
+                              Name is the name of the Kubernetes ConfigMap being referenced.
+
+                              The ConfigMap must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                    type: object
+                type: object
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an
+
+                  extension resource, which means that any other Azure resource can be its owner.
                 properties:
                   armId:
                     description: Ownership across namespaces is not supported.
@@ -123,7 +188,10 @@ spec:
                     description: 'Name: A user defined name of the 3rd Party Artifact that is being procured.'
                     type: string
                   product:
-                    description: 'Product: The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.'
+                    description: >-
+                      Product: The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the
+
+                      artifact at the time of Data Market onboarding.
                     type: string
                   promotionCode:
                     description: 'PromotionCode: A publisher provided promotion code as provisioned in Data Market for the said product/artifact.'
@@ -140,7 +208,10 @@ spec:
                 - publisher
                 type: object
               releaseTrain:
-                description: "ReleaseTrain: ReleaseTrain this extension participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'."
+                description: >-
+                  ReleaseTrain: ReleaseTrain this extension participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if
+
+                  autoUpgradeMinorVersion is 'true'.
                 type: string
               scope:
                 description: 'Scope: Scope at which the extension is installed.'
@@ -149,19 +220,28 @@ spec:
                     description: 'Cluster: Specifies that the scope of the extension is Cluster'
                     properties:
                       releaseNamespace:
-                        description: 'ReleaseNamespace: Namespace where the extension Release must be placed, for a Cluster scoped extension.  If this namespace does not exist, it will be created'
+                        description: >-
+                          ReleaseNamespace: Namespace where the extension Release must be placed, for a Cluster scoped extension.  If this
+
+                          namespace does not exist, it will be created
                         type: string
                     type: object
                   namespace:
                     description: 'Namespace: Specifies that the scope of the extension is Namespace'
                     properties:
                       targetNamespace:
-                        description: 'TargetNamespace: Namespace where the extension will be created for an Namespace scoped extension.  If this namespace does not exist, it will be created'
+                        description: >-
+                          TargetNamespace: Namespace where the extension will be created for an Namespace scoped extension.  If this namespace
+
+                          does not exist, it will be created
                         type: string
                     type: object
                 type: object
               systemData:
-                description: 'SystemData: Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources'
+                description: >-
+                  SystemData: Top level metadata
+
+                  https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
                 properties:
                   createdAt:
                     description: 'CreatedAt: The timestamp of resource creation (UTC).'
@@ -193,7 +273,10 @@ spec:
                     type: string
                 type: object
               version:
-                description: "Version: User-specified version of the extension for this extension to 'pin'. To use 'version', autoUpgradeMinorVersion must be 'false'."
+                description: >-
+                  Version: User-specified version of the extension for this extension to 'pin'. To use 'version', autoUpgradeMinorVersion
+
+                  must be 'false'.
                 type: string
             required:
             - owner
@@ -230,14 +313,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -255,7 +353,10 @@ spec:
               configurationProtectedSettings:
                 additionalProperties:
                   type: string
-                description: 'ConfigurationProtectedSettings: Configuration settings that are sensitive, as name-value pairs for configuring this extension.'
+                description: >-
+                  ConfigurationProtectedSettings: Configuration settings that are sensitive, as name-value pairs for configuring this
+
+                  extension.
                 type: object
               configurationSettings:
                 additionalProperties:
@@ -329,10 +430,16 @@ spec:
                     type: string
                 type: object
               extensionType:
-                description: 'ExtensionType: Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.'
+                description: >-
+                  ExtensionType: Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types
+
+                  registered with Microsoft.KubernetesConfiguration by the Extension publisher.
                 type: string
               id:
-                description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource ID for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               identity:
                 description: 'Identity: Identity of the Extension resource'
@@ -363,7 +470,10 @@ spec:
                     description: 'Name: A user defined name of the 3rd Party Artifact that is being procured.'
                     type: string
                   product:
-                    description: 'Product: The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.'
+                    description: >-
+                      Product: The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the
+
+                      artifact at the time of Data Market onboarding.
                     type: string
                   promotionCode:
                     description: 'PromotionCode: A publisher provided promotion code as provisioned in Data Market for the said product/artifact.'
@@ -379,7 +489,10 @@ spec:
                 description: 'ProvisioningState: Status of installation of this extension.'
                 type: string
               releaseTrain:
-                description: "ReleaseTrain: ReleaseTrain this extension participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'."
+                description: >-
+                  ReleaseTrain: ReleaseTrain this extension participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if
+
+                  autoUpgradeMinorVersion is 'true'.
                 type: string
               scope:
                 description: 'Scope: Scope at which the extension is installed.'
@@ -388,14 +501,20 @@ spec:
                     description: 'Cluster: Specifies that the scope of the extension is Cluster'
                     properties:
                       releaseNamespace:
-                        description: 'ReleaseNamespace: Namespace where the extension Release must be placed, for a Cluster scoped extension.  If this namespace does not exist, it will be created'
+                        description: >-
+                          ReleaseNamespace: Namespace where the extension Release must be placed, for a Cluster scoped extension.  If this
+
+                          namespace does not exist, it will be created
                         type: string
                     type: object
                   namespace:
                     description: 'Namespace: Specifies that the scope of the extension is Namespace'
                     properties:
                       targetNamespace:
-                        description: 'TargetNamespace: Namespace where the extension will be created for an Namespace scoped extension.  If this namespace does not exist, it will be created'
+                        description: >-
+                          TargetNamespace: Namespace where the extension will be created for an Namespace scoped extension.  If this namespace
+
+                          does not exist, it will be created
                         type: string
                     type: object
                 type: object
@@ -422,7 +541,10 @@ spec:
                   type: object
                 type: array
               systemData:
-                description: 'SystemData: Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources'
+                description: >-
+                  SystemData: Top level metadata
+
+                  https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
                 properties:
                   createdAt:
                     description: 'CreatedAt: The timestamp of resource creation (UTC).'
@@ -447,7 +569,10 @@ spec:
                 description: 'Type: The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"'
                 type: string
               version:
-                description: "Version: User-specified version of the extension for this extension to 'pin'. To use 'version', autoUpgradeMinorVersion must be 'false'."
+                description: >-
+                  Version: User-specified version of the extension for this extension to 'pin'. To use 'version', autoUpgradeMinorVersion
+
+                  must be 'false'.
                 type: string
             type: object
         type: object
@@ -471,13 +596,36 @@ spec:
     name: v1api20230501storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20230501.Extension Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/stable/2023-05-01/extensions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/{extensionName}'
+        description: >-
+          Storage version of v1api20230501.Extension
+
+          Generator information:
+
+          - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/stable/2023-05-01/extensions.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/{extensionName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -487,7 +635,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               aksAssignedIdentity:
                 description: Storage version of v1api20230501.Extension_Properties_AksAssignedIdentity_Spec
@@ -495,7 +646,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
@@ -503,13 +657,22 @@ spec:
               autoUpgradeMinorVersion:
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               configurationProtectedSettings:
-                description: SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.
+                description: >-
+                  SecretMapReference is a reference to a Kubernetes secret in the same namespace as
+
+                  the resource it is on.
                 properties:
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - name
@@ -521,20 +684,77 @@ spec:
               extensionType:
                 type: string
               identity:
-                description: Storage version of v1api20230501.Identity Identity for the resource.
+                description: >-
+                  Storage version of v1api20230501.Identity
+
+                  Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                 type: object
+              operatorSpec:
+                description: >-
+                  Storage version of v1api20230501.ExtensionOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  configMaps:
+                    description: Storage version of v1api20230501.ExtensionOperatorConfigMaps
+                    properties:
+                      $propertyBag:
+                        additionalProperties:
+                          type: string
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
+                        type: object
+                      principalId:
+                        description: >-
+                          ConfigMapDestination describes the location to store a single configmap value
+
+                          Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.
+                        properties:
+                          key:
+                            description: Key is the key in the ConfigMap being referenced
+                            type: string
+                          name:
+                            description: >-
+                              Name is the name of the Kubernetes ConfigMap being referenced.
+
+                              The ConfigMap must be in the same namespace as the resource
+                            type: string
+                        required:
+                        - key
+                        - name
+                        type: object
+                    type: object
+                type: object
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an extension resource, which means that any other Azure resource can be its owner.'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an
+
+                  extension resource, which means that any other Azure resource can be its owner.
                 properties:
                   armId:
                     description: Ownership across namespaces is not supported.
@@ -551,12 +771,18 @@ spec:
                     type: string
                 type: object
               plan:
-                description: Storage version of v1api20230501.Plan Plan for the resource.
+                description: >-
+                  Storage version of v1api20230501.Plan
+
+                  Plan for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -572,43 +798,67 @@ spec:
               releaseTrain:
                 type: string
               scope:
-                description: Storage version of v1api20230501.Scope Scope of the extension. It can be either Cluster or Namespace; but not both.
+                description: >-
+                  Storage version of v1api20230501.Scope
+
+                  Scope of the extension. It can be either Cluster or Namespace; but not both.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   cluster:
-                    description: Storage version of v1api20230501.ScopeCluster Specifies that the scope of the extension is Cluster
+                    description: >-
+                      Storage version of v1api20230501.ScopeCluster
+
+                      Specifies that the scope of the extension is Cluster
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       releaseNamespace:
                         type: string
                     type: object
                   namespace:
-                    description: Storage version of v1api20230501.ScopeNamespace Specifies that the scope of the extension is Namespace
+                    description: >-
+                      Storage version of v1api20230501.ScopeNamespace
+
+                      Specifies that the scope of the extension is Namespace
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       targetNamespace:
                         type: string
                     type: object
                 type: object
               systemData:
-                description: Storage version of v1api20230501.SystemData Metadata pertaining to creation and last modification of the resource.
+                description: >-
+                  Storage version of v1api20230501.SystemData
+
+                  Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
                     type: string
@@ -629,12 +879,18 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20230501.Extension_STATUS The Extension object.
+            description: >-
+              Storage version of v1api20230501.Extension_STATUS
+
+              The Extension object.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               aksAssignedIdentity:
                 description: Storage version of v1api20230501.Extension_Properties_AksAssignedIdentity_STATUS
@@ -642,7 +898,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
                     type: string
@@ -665,14 +924,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -702,21 +976,33 @@ spec:
                   type: string
                 type: object
               errorInfo:
-                description: Storage version of v1api20230501.ErrorDetail_STATUS The error detail.
+                description: >-
+                  Storage version of v1api20230501.ErrorDetail_STATUS
+
+                  The error detail.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   additionalInfo:
                     items:
-                      description: Storage version of v1api20230501.ErrorAdditionalInfo_STATUS The resource management error additional info.
+                      description: >-
+                        Storage version of v1api20230501.ErrorAdditionalInfo_STATUS
+
+                        The resource management error additional info.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         info:
                           additionalProperties:
@@ -735,16 +1021,25 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         additionalInfo:
                           items:
-                            description: Storage version of v1api20230501.ErrorAdditionalInfo_STATUS The resource management error additional info.
+                            description: >-
+                              Storage version of v1api20230501.ErrorAdditionalInfo_STATUS
+
+                              The resource management error additional info.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               info:
                                 additionalProperties:
@@ -772,12 +1067,18 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1api20230501.Identity_STATUS Identity for the resource.
+                description: >-
+                  Storage version of v1api20230501.Identity_STATUS
+
+                  Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
                     type: string
@@ -793,12 +1094,18 @@ spec:
               packageUri:
                 type: string
               plan:
-                description: Storage version of v1api20230501.Plan_STATUS Plan for the resource.
+                description: >-
+                  Storage version of v1api20230501.Plan_STATUS
+
+                  Plan for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -816,31 +1123,49 @@ spec:
               releaseTrain:
                 type: string
               scope:
-                description: Storage version of v1api20230501.Scope_STATUS Scope of the extension. It can be either Cluster or Namespace; but not both.
+                description: >-
+                  Storage version of v1api20230501.Scope_STATUS
+
+                  Scope of the extension. It can be either Cluster or Namespace; but not both.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   cluster:
-                    description: Storage version of v1api20230501.ScopeCluster_STATUS Specifies that the scope of the extension is Cluster
+                    description: >-
+                      Storage version of v1api20230501.ScopeCluster_STATUS
+
+                      Specifies that the scope of the extension is Cluster
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       releaseNamespace:
                         type: string
                     type: object
                   namespace:
-                    description: Storage version of v1api20230501.ScopeNamespace_STATUS Specifies that the scope of the extension is Namespace
+                    description: >-
+                      Storage version of v1api20230501.ScopeNamespace_STATUS
+
+                      Specifies that the scope of the extension is Namespace
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       targetNamespace:
                         type: string
@@ -848,12 +1173,18 @@ spec:
                 type: object
               statuses:
                 items:
-                  description: Storage version of v1api20230501.ExtensionStatus_STATUS Status from the extension.
+                  description: >-
+                    Storage version of v1api20230501.ExtensionStatus_STATUS
+
+                    Status from the extension.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     code:
                       type: string
@@ -868,12 +1199,18 @@ spec:
                   type: object
                 type: array
               systemData:
-                description: Storage version of v1api20230501.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
+                description: >-
+                  Storage version of v1api20230501.SystemData_STATUS
+
+                  Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
                     type: string

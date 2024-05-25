@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: searchservices.search.azure.com
 spec:
   conversion:
@@ -45,26 +45,56 @@ spec:
     name: v1api20220901
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /search/resource-manager/Microsoft.Search/stable/2022-09-01/search.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /search/resource-manager/Microsoft.Search/stable/2022-09-01/search.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               authOptions:
-                description: "AuthOptions: Defines the options for how the data plane API of a search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true."
+                description: >-
+                  AuthOptions: Defines the options for how the data plane API of a search service authenticates requests. This cannot be
+
+                  set if 'disableLocalAuth' is set to true.
                 properties:
                   aadOrApiKey:
-                    description: 'AadOrApiKey: Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.'
+                    description: >-
+                      AadOrApiKey: Indicates that either the API key or an access token from Azure Active Directory can be used for
+
+                      authentication.
                     properties:
                       aadAuthFailureMode:
-                        description: 'AadAuthFailureMode: Describes what response the data plane API of a Search service would send for requests that failed authentication.'
+                        description: >-
+                          AadAuthFailureMode: Describes what response the data plane API of a Search service would send for requests that failed
+
+                          authentication.
                         enum:
                         - http401WithBearerChallenge
                         - http403
@@ -72,13 +102,22 @@ spec:
                     type: object
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               disableLocalAuth:
-                description: "DisableLocalAuth: When set to true, calls to the search service will not be permitted to utilize API keys for authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined."
+                description: >-
+                  DisableLocalAuth: When set to true, calls to the search service will not be permitted to utilize API keys for
+
+                  authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined.
                 type: boolean
               encryptionWithCmk:
-                description: 'EncryptionWithCmk: Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys within a search service.'
+                description: >-
+                  EncryptionWithCmk: Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys
+
+                  within a search service.
                 properties:
                   enforcement:
                     description: 'Enforcement: Describes how a search service should enforce having one or more non customer encrypted resources.'
@@ -89,7 +128,12 @@ spec:
                     type: string
                 type: object
               hostingMode:
-                description: "HostingMode: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'."
+                description: >-
+                  HostingMode: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions
+
+                  that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the
+
+                  standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
                 enum:
                 - default
                 - highDensity
@@ -113,43 +157,68 @@ spec:
                 description: 'NetworkRuleSet: Network specific rules that determine how the Azure Cognitive Search service may be reached.'
                 properties:
                   ipRules:
-                    description: "IpRules: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method."
+                    description: >-
+                      IpRules: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service
+
+                      endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied
+
+                      only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not
+
+                      allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
                     items:
                       description: The IP restriction rule of the Azure Cognitive Search service.
                       properties:
                         value:
-                          description: 'Value: Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24) to be allowed.'
+                          description: >-
+                            Value: Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24)
+
+                            to be allowed.
                           type: string
                       type: object
                     type: array
                 type: object
               operatorSpec:
-                description: 'OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not passed directly to Azure'
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
                 properties:
                   secrets:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       adminPrimaryKey:
-                        description: 'AdminPrimaryKey: indicates where the AdminPrimaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          AdminPrimaryKey: indicates where the AdminPrimaryKey secret should be placed. If omitted, the secret will not be
+
+                          retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       adminSecondaryKey:
-                        description: 'AdminSecondaryKey: indicates where the AdminSecondaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          AdminSecondaryKey: indicates where the AdminSecondaryKey secret should be placed. If omitted, the secret will not be
+
+                          retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -162,7 +231,10 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -171,7 +243,12 @@ spec:
                     type: object
                 type: object
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -181,26 +258,53 @@ spec:
                     type: string
                 type: object
               partitionCount:
-                description: "PartitionCount: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3."
+                description: >-
+                  PartitionCount: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values
+
+                  greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the
+
+                  allowed values are between 1 and 3.
                 maximum: 12
                 minimum: 1
                 type: integer
               publicNetworkAccess:
-                description: "PublicNetworkAccess: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method."
+                description: >-
+                  PublicNetworkAccess: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and
+
+                  templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be
+
+                  the exclusive access method.
                 enum:
                 - disabled
                 - enabled
                 type: string
               replicaCount:
-                description: 'ReplicaCount: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU.'
+                description: >-
+                  ReplicaCount: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive
+
+                  for standard SKUs or between 1 and 3 inclusive for basic SKU.
                 maximum: 12
                 minimum: 1
                 type: integer
               sku:
-                description: 'Sku: The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.'
+                description: >-
+                  Sku: The SKU of the Search Service, which determines price tier and capacity limits. This property is required when
+
+                  creating a new Search Service.
                 properties:
                   name:
-                    description: "Name: The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'"
+                    description: >-
+                      Name: The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to
+
+                      3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard,
+
+                      but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12
+
+                      replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity').
+
+                      'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per
+
+                      partition, up to 12 partitions.'
                     enum:
                     - basic
                     - free
@@ -224,13 +328,22 @@ spec:
             description: Describes an Azure Cognitive Search service and its current state.
             properties:
               authOptions:
-                description: "AuthOptions: Defines the options for how the data plane API of a search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true."
+                description: >-
+                  AuthOptions: Defines the options for how the data plane API of a search service authenticates requests. This cannot be
+
+                  set if 'disableLocalAuth' is set to true.
                 properties:
                   aadOrApiKey:
-                    description: 'AadOrApiKey: Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.'
+                    description: >-
+                      AadOrApiKey: Indicates that either the API key or an access token from Azure Active Directory can be used for
+
+                      authentication.
                     properties:
                       aadAuthFailureMode:
-                        description: 'AadAuthFailureMode: Describes what response the data plane API of a Search service would send for requests that failed authentication.'
+                        description: >-
+                          AadAuthFailureMode: Describes what response the data plane API of a Search service would send for requests that failed
+
+                          authentication.
                         type: string
                     type: object
                   apiKeyOnly:
@@ -252,14 +365,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -275,23 +403,42 @@ spec:
                   type: object
                 type: array
               disableLocalAuth:
-                description: "DisableLocalAuth: When set to true, calls to the search service will not be permitted to utilize API keys for authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined."
+                description: >-
+                  DisableLocalAuth: When set to true, calls to the search service will not be permitted to utilize API keys for
+
+                  authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined.
                 type: boolean
               encryptionWithCmk:
-                description: 'EncryptionWithCmk: Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys within a search service.'
+                description: >-
+                  EncryptionWithCmk: Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys
+
+                  within a search service.
                 properties:
                   encryptionComplianceStatus:
-                    description: "EncryptionComplianceStatus: Describes whether the search service is compliant or not with respect to having non customer encrypted resources. If a service has more than one non customer encrypted resource and 'Enforcement' is 'enabled' then the service will be marked as 'nonCompliant'."
+                    description: >-
+                      EncryptionComplianceStatus: Describes whether the search service is compliant or not with respect to having non customer
+
+                      encrypted resources. If a service has more than one non customer encrypted resource and 'Enforcement' is 'enabled' then
+
+                      the service will be marked as 'nonCompliant'.
                     type: string
                   enforcement:
                     description: 'Enforcement: Describes how a search service should enforce having one or more non customer encrypted resources.'
                     type: string
                 type: object
               hostingMode:
-                description: "HostingMode: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'."
+                description: >-
+                  HostingMode: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions
+
+                  that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the
+
+                  standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
                 type: string
               id:
-                description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource ID for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               identity:
                 description: 'Identity: The identity of the resource.'
@@ -316,18 +463,33 @@ spec:
                 description: 'NetworkRuleSet: Network specific rules that determine how the Azure Cognitive Search service may be reached.'
                 properties:
                   ipRules:
-                    description: "IpRules: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method."
+                    description: >-
+                      IpRules: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service
+
+                      endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied
+
+                      only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not
+
+                      allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
                     items:
                       description: The IP restriction rule of the Azure Cognitive Search service.
                       properties:
                         value:
-                          description: 'Value: Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24) to be allowed.'
+                          description: >-
+                            Value: Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24)
+
+                            to be allowed.
                           type: string
                       type: object
                     type: array
                 type: object
               partitionCount:
-                description: "PartitionCount: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3."
+                description: >-
+                  PartitionCount: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values
+
+                  greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the
+
+                  allowed values are between 1 and 3.
                 type: integer
               privateEndpointConnections:
                 description: 'PrivateEndpointConnections: The list of private endpoint connections to the Azure Cognitive Search service.'
@@ -335,18 +497,40 @@ spec:
                   description: Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
                   properties:
                     id:
-                      description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                      description: >-
+                        Id: Fully qualified resource ID for the resource. Ex -
+
+                        /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                       type: string
                   type: object
                 type: array
               provisioningState:
-                description: "ProvisioningState: The state of the last provisioning operation performed on the search service. Provisioning is an intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState changes to either 'succeeded' or 'failed'. Client applications can poll provisioning status (the recommended polling interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is completed. If you are using the free service, this value tends to come back as 'succeeded' directly in the call to Create search service. This is because the free service uses capacity that is already set up."
+                description: >-
+                  ProvisioningState: The state of the last provisioning operation performed on the search service. Provisioning is an
+
+                  intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState
+
+                  changes to either 'succeeded' or 'failed'. Client applications can poll provisioning status (the recommended polling
+
+                  interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is
+
+                  completed. If you are using the free service, this value tends to come back as 'succeeded' directly in the call to
+
+                  Create search service. This is because the free service uses capacity that is already set up.
                 type: string
               publicNetworkAccess:
-                description: "PublicNetworkAccess: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method."
+                description: >-
+                  PublicNetworkAccess: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and
+
+                  templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be
+
+                  the exclusive access method.
                 type: string
               replicaCount:
-                description: 'ReplicaCount: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU.'
+                description: >-
+                  ReplicaCount: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive
+
+                  for standard SKUs or between 1 and 3 inclusive for basic SKU.
                 type: integer
               sharedPrivateLinkResources:
                 description: 'SharedPrivateLinkResources: The list of shared private link resources managed by the Azure Cognitive Search service.'
@@ -354,19 +538,51 @@ spec:
                   description: Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
                   properties:
                     id:
-                      description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                      description: >-
+                        Id: Fully qualified resource ID for the resource. Ex -
+
+                        /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                       type: string
                   type: object
                 type: array
               sku:
-                description: 'Sku: The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.'
+                description: >-
+                  Sku: The SKU of the Search Service, which determines price tier and capacity limits. This property is required when
+
+                  creating a new Search Service.
                 properties:
                   name:
-                    description: "Name: The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'"
+                    description: >-
+                      Name: The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to
+
+                      3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard,
+
+                      but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12
+
+                      replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity').
+
+                      'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per
+
+                      partition, up to 12 partitions.'
                     type: string
                 type: object
               status:
-                description: "Status: The status of the search service. Possible values include: 'running': The search service is running and no provisioning operations are underway. 'provisioning': The search service is being provisioned or scaled up or down. 'deleting': The search service is being deleted. 'degraded': The search service is degraded. This can occur when the underlying search units are not healthy. The search service is most likely operational, but performance might be slow and some requests might be dropped. 'disabled': The search service is disabled. In this state, the service will reject all API requests. 'error': The search service is in an error state. If your service is in the degraded, disabled, or error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated services in these states are still chargeable based on the number of search units provisioned."
+                description: >-
+                  Status: The status of the search service. Possible values include: 'running': The search service is running and no
+
+                  provisioning operations are underway. 'provisioning': The search service is being provisioned or scaled up or down.
+
+                  'deleting': The search service is being deleted. 'degraded': The search service is degraded. This can occur when the
+
+                  underlying search units are not healthy. The search service is most likely operational, but performance might be slow
+
+                  and some requests might be dropped. 'disabled': The search service is disabled. In this state, the service will reject
+
+                  all API requests. 'error': The search service is in an error state. If your service is in the degraded, disabled, or
+
+                  error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated
+
+                  services in these states are still chargeable based on the number of search units provisioned.
                 type: string
               statusDetails:
                 description: 'StatusDetails: The details of the search service status.'
@@ -401,13 +617,36 @@ spec:
     name: v1api20220901storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20220901.SearchService Generator information: - Generated from: /search/resource-manager/Microsoft.Search/stable/2022-09-01/search.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}'
+        description: >-
+          Storage version of v1api20220901.SearchService
+
+          Generator information:
+
+          - Generated from: /search/resource-manager/Microsoft.Search/stable/2022-09-01/search.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -417,40 +656,68 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               authOptions:
-                description: Storage version of v1api20220901.DataPlaneAuthOptions Defines the options for how the data plane API of a Search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true.
+                description: >-
+                  Storage version of v1api20220901.DataPlaneAuthOptions
+
+                  Defines the options for how the data plane API of a Search service authenticates requests. This cannot be set if
+
+                  'disableLocalAuth' is set to true.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   aadOrApiKey:
-                    description: Storage version of v1api20220901.DataPlaneAadOrApiKeyAuthOption Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.
+                    description: >-
+                      Storage version of v1api20220901.DataPlaneAadOrApiKeyAuthOption
+
+                      Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       aadAuthFailureMode:
                         type: string
                     type: object
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               disableLocalAuth:
                 type: boolean
               encryptionWithCmk:
-                description: Storage version of v1api20220901.EncryptionWithCmk Describes a policy that determines how resources within the search service are to be encrypted with Customer Managed Keys.
+                description: >-
+                  Storage version of v1api20220901.EncryptionWithCmk
+
+                  Describes a policy that determines how resources within the search service are to be encrypted with Customer Managed
+
+                  Keys.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   enforcement:
                     type: string
@@ -458,12 +725,18 @@ spec:
               hostingMode:
                 type: string
               identity:
-                description: Storage version of v1api20220901.Identity Identity for the resource.
+                description: >-
+                  Storage version of v1api20220901.Identity
+
+                  Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
@@ -471,21 +744,33 @@ spec:
               location:
                 type: string
               networkRuleSet:
-                description: Storage version of v1api20220901.NetworkRuleSet Network specific rules that determine how the Azure Cognitive Search service may be reached.
+                description: >-
+                  Storage version of v1api20220901.NetworkRuleSet
+
+                  Network specific rules that determine how the Azure Cognitive Search service may be reached.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   ipRules:
                     items:
-                      description: Storage version of v1api20220901.IpRule The IP restriction rule of the Azure Cognitive Search service.
+                      description: >-
+                        Storage version of v1api20220901.IpRule
+
+                        The IP restriction rule of the Azure Cognitive Search service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         value:
                           type: string
@@ -493,12 +778,18 @@ spec:
                     type: array
                 type: object
               operatorSpec:
-                description: Storage version of v1api20220901.SearchServiceOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                description: >-
+                  Storage version of v1api20220901.SearchServiceOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   secrets:
                     description: Storage version of v1api20220901.SearchServiceOperatorSecrets
@@ -506,42 +797,63 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       adminPrimaryKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       adminSecondaryKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       queryKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -552,7 +864,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -568,12 +885,18 @@ spec:
               replicaCount:
                 type: integer
               sku:
-                description: Storage version of v1api20220901.Sku Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
+                description: >-
+                  Storage version of v1api20220901.Sku
+
+                  Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -586,28 +909,48 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20220901.SearchService_STATUS Describes an Azure Cognitive Search service and its current state.
+            description: >-
+              Storage version of v1api20220901.SearchService_STATUS
+
+              Describes an Azure Cognitive Search service and its current state.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               authOptions:
-                description: Storage version of v1api20220901.DataPlaneAuthOptions_STATUS Defines the options for how the data plane API of a Search service authenticates requests. This cannot be set if 'disableLocalAuth' is set to true.
+                description: >-
+                  Storage version of v1api20220901.DataPlaneAuthOptions_STATUS
+
+                  Defines the options for how the data plane API of a Search service authenticates requests. This cannot be set if
+
+                  'disableLocalAuth' is set to true.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   aadOrApiKey:
-                    description: Storage version of v1api20220901.DataPlaneAadOrApiKeyAuthOption_STATUS Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.
+                    description: >-
+                      Storage version of v1api20220901.DataPlaneAadOrApiKeyAuthOption_STATUS
+
+                      Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       aadAuthFailureMode:
                         type: string
@@ -629,14 +972,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -654,12 +1012,20 @@ spec:
               disableLocalAuth:
                 type: boolean
               encryptionWithCmk:
-                description: Storage version of v1api20220901.EncryptionWithCmk_STATUS Describes a policy that determines how resources within the search service are to be encrypted with Customer Managed Keys.
+                description: >-
+                  Storage version of v1api20220901.EncryptionWithCmk_STATUS
+
+                  Describes a policy that determines how resources within the search service are to be encrypted with Customer Managed
+
+                  Keys.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   encryptionComplianceStatus:
                     type: string
@@ -671,12 +1037,18 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1api20220901.Identity_STATUS Identity for the resource.
+                description: >-
+                  Storage version of v1api20220901.Identity_STATUS
+
+                  Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
                     type: string
@@ -690,21 +1062,33 @@ spec:
               name:
                 type: string
               networkRuleSet:
-                description: Storage version of v1api20220901.NetworkRuleSet_STATUS Network specific rules that determine how the Azure Cognitive Search service may be reached.
+                description: >-
+                  Storage version of v1api20220901.NetworkRuleSet_STATUS
+
+                  Network specific rules that determine how the Azure Cognitive Search service may be reached.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   ipRules:
                     items:
-                      description: Storage version of v1api20220901.IpRule_STATUS The IP restriction rule of the Azure Cognitive Search service.
+                      description: >-
+                        Storage version of v1api20220901.IpRule_STATUS
+
+                        The IP restriction rule of the Azure Cognitive Search service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         value:
                           type: string
@@ -715,12 +1099,18 @@ spec:
                 type: integer
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1api20220901.PrivateEndpointConnection_STATUS Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
+                  description: >-
+                    Storage version of v1api20220901.PrivateEndpointConnection_STATUS
+
+                    Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
                       type: string
@@ -734,24 +1124,36 @@ spec:
                 type: integer
               sharedPrivateLinkResources:
                 items:
-                  description: Storage version of v1api20220901.SharedPrivateLinkResource_STATUS Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
+                  description: >-
+                    Storage version of v1api20220901.SharedPrivateLinkResource_STATUS
+
+                    Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
                       type: string
                   type: object
                 type: array
               sku:
-                description: Storage version of v1api20220901.Sku_STATUS Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
+                description: >-
+                  Storage version of v1api20220901.Sku_STATUS
+
+                  Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string

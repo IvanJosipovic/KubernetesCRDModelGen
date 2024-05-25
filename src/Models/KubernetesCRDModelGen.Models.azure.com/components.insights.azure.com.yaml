@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: components.insights.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20200202
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2020-02-02/components_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2020-02-02/components_API.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -70,7 +91,10 @@ spec:
                 description: 'DisableLocalAuth: Disable Non-AAD based Auth.'
                 type: boolean
               Flow_Type:
-                description: "Flow_Type: Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API."
+                description: >-
+                  Flow_Type: Used by the Application Insights system to determine what kind of flow this component was created by. This is
+
+                  to be set to 'Bluefield' when creating/updating a component via the REST API.
                 enum:
                 - Bluefield
                 type: string
@@ -78,7 +102,10 @@ spec:
                 description: 'ForceCustomerStorageForProfiler: Force users to create their own storage account for profiler and debugger.'
                 type: boolean
               HockeyAppId:
-                description: 'HockeyAppId: The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.'
+                description: >-
+                  HockeyAppId: The unique application ID created when a new application is added to HockeyApp, used for communications
+
+                  with HockeyApp.
                 type: string
               ImmediatePurgeDataOn30Days:
                 description: 'ImmediatePurgeDataOn30Days: Purge data immediately after 30 days.'
@@ -91,7 +118,10 @@ spec:
                 - LogAnalytics
                 type: string
               Request_Source:
-                description: "Request_Source: Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'."
+                description: >-
+                  Request_Source: Describes what tool created this Application Insights component. Customers using this API should set
+
+                  this to the default 'rest'.
                 enum:
                 - rest
                 type: string
@@ -99,47 +129,71 @@ spec:
                 description: 'RetentionInDays: Retention period in days.'
                 type: integer
               SamplingPercentage:
-                description: 'SamplingPercentage: Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.'
+                description: >-
+                  SamplingPercentage: Percentage of the data produced by the application being monitored that is being sampled for
+
+                  Application Insights telemetry.
                 type: number
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               etag:
                 description: 'Etag: Resource etag'
                 type: string
               kind:
-                description: 'Kind: The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.'
+                description: >-
+                  Kind: The kind of application that this component refers to, used to customize UI. This value is a freeform string,
+
+                  values should typically be one of the following: web, ios, other, store, java, phone.
                 type: string
               location:
                 description: 'Location: Resource location'
                 type: string
               operatorSpec:
-                description: 'OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not passed directly to Azure'
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
                 properties:
                   configMaps:
                     description: 'ConfigMaps: configures where to place operator written ConfigMaps.'
                     properties:
                       connectionString:
-                        description: 'ConnectionString: indicates where the ConnectionString config map should be placed. If omitted, no config map will be created.'
+                        description: >-
+                          ConnectionString: indicates where the ConnectionString config map should be placed. If omitted, no config map will be
+
+                          created.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes ConfigMap being referenced.
+
+                              The ConfigMap must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       instrumentationKey:
-                        description: 'InstrumentationKey: indicates where the InstrumentationKey config map should be placed. If omitted, no config map will be created.'
+                        description: >-
+                          InstrumentationKey: indicates where the InstrumentationKey config map should be placed. If omitted, no config map will
+
+                          be created.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes ConfigMap being referenced.
+
+                              The ConfigMap must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -148,7 +202,12 @@ spec:
                     type: object
                 type: object
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -175,10 +234,18 @@ spec:
                 description: 'Tags: Resource tags'
                 type: object
               workspaceResourceReference:
-                description: 'WorkspaceResourceReference: Resource Id of the log analytics workspace which the data will be ingested to. This property is required to create an application with this API version. Applications from older versions will not have this property.'
+                description: >-
+                  WorkspaceResourceReference: Resource Id of the log analytics workspace which the data will be ingested to. This property
+
+                  is required to create an application with this API version. Applications from older versions will not have this property.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -221,13 +288,19 @@ spec:
                 description: 'DisableLocalAuth: Disable Non-AAD based Auth.'
                 type: boolean
               Flow_Type:
-                description: "Flow_Type: Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API."
+                description: >-
+                  Flow_Type: Used by the Application Insights system to determine what kind of flow this component was created by. This is
+
+                  to be set to 'Bluefield' when creating/updating a component via the REST API.
                 type: string
               ForceCustomerStorageForProfiler:
                 description: 'ForceCustomerStorageForProfiler: Force users to create their own storage account for profiler and debugger.'
                 type: boolean
               HockeyAppId:
-                description: 'HockeyAppId: The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.'
+                description: >-
+                  HockeyAppId: The unique application ID created when a new application is added to HockeyApp, used for communications
+
+                  with HockeyApp.
                 type: string
               HockeyAppToken:
                 description: 'HockeyAppToken: Token used to authenticate communications with between Application Insights and HockeyApp.'
@@ -239,7 +312,12 @@ spec:
                 description: 'IngestionMode: Indicates the flow of the ingestion.'
                 type: string
               InstrumentationKey:
-                description: 'InstrumentationKey: Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.'
+                description: >-
+                  InstrumentationKey: Application Insights Instrumentation key. A read-only value that applications can use to identify
+
+                  the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of
+
+                  each new Application Insights component.
                 type: string
               LaMigrationDate:
                 description: 'LaMigrationDate: The date which the component got migrated to LA, in ISO 8601 format.'
@@ -258,19 +336,28 @@ spec:
                   type: object
                 type: array
               Request_Source:
-                description: "Request_Source: Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'."
+                description: >-
+                  Request_Source: Describes what tool created this Application Insights component. Customers using this API should set
+
+                  this to the default 'rest'.
                 type: string
               RetentionInDays:
                 description: 'RetentionInDays: Retention period in days.'
                 type: integer
               SamplingPercentage:
-                description: 'SamplingPercentage: Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.'
+                description: >-
+                  SamplingPercentage: Percentage of the data produced by the application being monitored that is being sampled for
+
+                  Application Insights telemetry.
                 type: number
               TenantId:
                 description: 'TenantId: Azure Tenant Id.'
                 type: string
               WorkspaceResourceId:
-                description: 'WorkspaceResourceId: Resource Id of the log analytics workspace which the data will be ingested to. This property is required to create an application with this API version. Applications from older versions will not have this property.'
+                description: >-
+                  WorkspaceResourceId: Resource Id of the log analytics workspace which the data will be ingested to. This property is
+
+                  required to create an application with this API version. Applications from older versions will not have this property.
                 type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -285,14 +372,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -314,7 +416,10 @@ spec:
                 description: 'Id: Azure resource Id'
                 type: string
               kind:
-                description: 'Kind: The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.'
+                description: >-
+                  Kind: The kind of application that this component refers to, used to customize UI. This value is a freeform string,
+
+                  values should typically be one of the following: web, ios, other, store, java, phone.
                 type: string
               location:
                 description: 'Location: Resource location'
@@ -326,7 +431,12 @@ spec:
                 description: 'PropertiesName: Application name.'
                 type: string
               provisioningState:
-                description: 'ProvisioningState: Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.'
+                description: >-
+                  ProvisioningState: Current state of this component: whether or not is has been provisioned within the resource group it
+
+                  is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying,
+
+                  Canceled, and Failed.
                 type: string
               publicNetworkAccessForIngestion:
                 description: 'PublicNetworkAccessForIngestion: The network access type for accessing Application Insights ingestion.'
@@ -364,13 +474,36 @@ spec:
     name: v1api20200202storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20200202.Component Generator information: - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2020-02-02/components_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}'
+        description: >-
+          Storage version of v1api20200202.Component
+
+          Generator information:
+
+          - Generated from: /applicationinsights/resource-manager/Microsoft.Insights/stable/2020-02-02/components_API.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -380,7 +513,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               Application_Type:
                 type: string
@@ -405,7 +541,10 @@ spec:
               SamplingPercentage:
                 type: number
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               etag:
                 type: string
@@ -414,12 +553,18 @@ spec:
               location:
                 type: string
               operatorSpec:
-                description: Storage version of v1api20200202.ComponentOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                description: >-
+                  Storage version of v1api20200202.ComponentOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   configMaps:
                     description: Storage version of v1api20200202.ComponentOperatorConfigMaps
@@ -427,29 +572,44 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       connectionString:
-                        description: 'ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          ConfigMapDestination describes the location to store a single configmap value
+
+                          Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes ConfigMap being referenced.
+
+                              The ConfigMap must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       instrumentationKey:
-                        description: 'ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          ConfigMapDestination describes the location to store a single configmap value
+
+                          Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes ConfigMap being referenced.
+
+                              The ConfigMap must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -460,7 +620,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -478,10 +643,18 @@ spec:
                   type: string
                 type: object
               workspaceResourceReference:
-                description: 'WorkspaceResourceReference: Resource Id of the log analytics workspace which the data will be ingested to. This property is required to create an application with this API version. Applications from older versions will not have this property.'
+                description: >-
+                  WorkspaceResourceReference: Resource Id of the log analytics workspace which the data will be ingested to. This property
+
+                  is required to create an application with this API version. Applications from older versions will not have this property.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -503,7 +676,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               AppId:
                 type: string
@@ -537,12 +713,18 @@ spec:
                 type: string
               PrivateLinkScopedResources:
                 items:
-                  description: Storage version of v1api20200202.PrivateLinkScopedResource_STATUS The private link scope resource reference.
+                  description: >-
+                    Storage version of v1api20200202.PrivateLinkScopedResource_STATUS
+
+                    The private link scope resource reference.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     ResourceId:
                       type: string
@@ -572,14 +754,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.

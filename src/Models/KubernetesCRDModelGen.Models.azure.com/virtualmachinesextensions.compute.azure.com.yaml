@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: virtualmachinesextensions.compute.azure.com
 spec:
   conversion:
@@ -45,26 +45,58 @@ spec:
     name: v1api20201201
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2020-12-01/compute.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2020-12-01/compute.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               autoUpgradeMinorVersion:
-                description: 'AutoUpgradeMinorVersion: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.'
+                description: >-
+                  AutoUpgradeMinorVersion: Indicates whether the extension should use a newer minor version if one is available at
+
+                  deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this
+
+                  property set to true.
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               enableAutomaticUpgrade:
-                description: 'EnableAutomaticUpgrade: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.'
+                description: >-
+                  EnableAutomaticUpgrade: Indicates whether the extension should be automatically upgraded by the platform if there is a
+
+                  newer version of the extension available.
                 type: boolean
               forceUpdateTag:
                 description: 'ForceUpdateTag: How the extension handler should be forced to update even if the extension configuration has not changed.'
@@ -138,7 +170,12 @@ spec:
                 description: 'Location: Resource location'
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a compute.azure.com/VirtualMachine resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a compute.azure.com/VirtualMachine resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -148,10 +185,16 @@ spec:
                     type: string
                 type: object
               protectedSettings:
-                description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
+                description: >-
+                  ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected
+
+                  settings at all.
                 properties:
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - name
@@ -182,7 +225,12 @@ spec:
           status:
             properties:
               autoUpgradeMinorVersion:
-                description: 'AutoUpgradeMinorVersion: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.'
+                description: >-
+                  AutoUpgradeMinorVersion: Indicates whether the extension should use a newer minor version if one is available at
+
+                  deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this
+
+                  property set to true.
                 type: boolean
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -197,14 +245,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -220,7 +283,10 @@ spec:
                   type: object
                 type: array
               enableAutomaticUpgrade:
-                description: 'EnableAutomaticUpgrade: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.'
+                description: >-
+                  EnableAutomaticUpgrade: Indicates whether the extension should be automatically upgraded by the platform if there is a
+
+                  newer version of the extension available.
                 type: boolean
               forceUpdateTag:
                 description: 'ForceUpdateTag: How the extension handler should be forced to update even if the extension configuration has not changed.'
@@ -338,13 +404,36 @@ spec:
     name: v1api20201201storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20201201.VirtualMachinesExtension Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2020-12-01/compute.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}'
+        description: >-
+          Storage version of v1api20201201.VirtualMachinesExtension
+
+          Generator information:
+
+          - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2020-12-01/compute.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -354,35 +443,53 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               autoUpgradeMinorVersion:
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               enableAutomaticUpgrade:
                 type: boolean
               forceUpdateTag:
                 type: string
               instanceView:
-                description: Storage version of v1api20201201.VirtualMachineExtensionInstanceView The instance view of a virtual machine extension.
+                description: >-
+                  Storage version of v1api20201201.VirtualMachineExtensionInstanceView
+
+                  The instance view of a virtual machine extension.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
                   statuses:
                     items:
-                      description: Storage version of v1api20201201.InstanceViewStatus Instance view status.
+                      description: >-
+                        Storage version of v1api20201201.InstanceViewStatus
+
+                        Instance view status.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         code:
                           type: string
@@ -398,12 +505,18 @@ spec:
                     type: array
                   substatuses:
                     items:
-                      description: Storage version of v1api20201201.InstanceViewStatus Instance view status.
+                      description: >-
+                        Storage version of v1api20201201.InstanceViewStatus
+
+                        Instance view status.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         code:
                           type: string
@@ -427,7 +540,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a compute.azure.com/VirtualMachine resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a compute.azure.com/VirtualMachine resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -437,10 +555,16 @@ spec:
                     type: string
                 type: object
               protectedSettings:
-                description: SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.
+                description: >-
+                  SecretMapReference is a reference to a Kubernetes secret in the same namespace as
+
+                  the resource it is on.
                 properties:
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - name
@@ -468,7 +592,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               autoUpgradeMinorVersion:
                 type: boolean
@@ -484,14 +611,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -513,23 +655,35 @@ spec:
               id:
                 type: string
               instanceView:
-                description: Storage version of v1api20201201.VirtualMachineExtensionInstanceView_STATUS The instance view of a virtual machine extension.
+                description: >-
+                  Storage version of v1api20201201.VirtualMachineExtensionInstanceView_STATUS
+
+                  The instance view of a virtual machine extension.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
                   statuses:
                     items:
-                      description: Storage version of v1api20201201.InstanceViewStatus_STATUS Instance view status.
+                      description: >-
+                        Storage version of v1api20201201.InstanceViewStatus_STATUS
+
+                        Instance view status.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         code:
                           type: string
@@ -545,12 +699,18 @@ spec:
                     type: array
                   substatuses:
                     items:
-                      description: Storage version of v1api20201201.InstanceViewStatus_STATUS Instance view status.
+                      description: >-
+                        Storage version of v1api20201201.InstanceViewStatus_STATUS
+
+                        Instance view status.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         code:
                           type: string
@@ -613,26 +773,58 @@ spec:
     name: v1api20220301
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               autoUpgradeMinorVersion:
-                description: 'AutoUpgradeMinorVersion: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.'
+                description: >-
+                  AutoUpgradeMinorVersion: Indicates whether the extension should use a newer minor version if one is available at
+
+                  deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this
+
+                  property set to true.
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               enableAutomaticUpgrade:
-                description: 'EnableAutomaticUpgrade: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.'
+                description: >-
+                  EnableAutomaticUpgrade: Indicates whether the extension should be automatically upgraded by the platform if there is a
+
+                  newer version of the extension available.
                 type: boolean
               forceUpdateTag:
                 description: 'ForceUpdateTag: How the extension handler should be forced to update even if the extension configuration has not changed.'
@@ -706,7 +898,12 @@ spec:
                 description: 'Location: Resource location'
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a compute.azure.com/VirtualMachine resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a compute.azure.com/VirtualMachine resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -716,16 +913,25 @@ spec:
                     type: string
                 type: object
               protectedSettings:
-                description: 'ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.'
+                description: >-
+                  ProtectedSettings: The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected
+
+                  settings at all.
                 properties:
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - name
                 type: object
               protectedSettingsFromKeyVault:
-                description: 'ProtectedSettingsFromKeyVault: The extensions protected settings that are passed by reference, and consumed from key vault'
+                description: >-
+                  ProtectedSettingsFromKeyVault: The extensions protected settings that are passed by reference, and consumed from key
+
+                  vault
                 properties:
                   secretUrl:
                     description: 'SecretUrl: The URL referencing a secret in a Key Vault.'
@@ -737,7 +943,12 @@ spec:
                         description: 'Reference: Resource Id'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -764,7 +975,10 @@ spec:
                 description: 'Settings: Json formatted public settings for the extension.'
                 type: object
               suppressFailures:
-                description: 'SuppressFailures: Indicates whether failures stemming from the extension will be suppressed (Operational failures such as not connecting to the VM will not be suppressed regardless of this value). The default is false.'
+                description: >-
+                  SuppressFailures: Indicates whether failures stemming from the extension will be suppressed (Operational failures such
+
+                  as not connecting to the VM will not be suppressed regardless of this value). The default is false.
                 type: boolean
               tags:
                 additionalProperties:
@@ -783,7 +997,12 @@ spec:
           status:
             properties:
               autoUpgradeMinorVersion:
-                description: 'AutoUpgradeMinorVersion: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.'
+                description: >-
+                  AutoUpgradeMinorVersion: Indicates whether the extension should use a newer minor version if one is available at
+
+                  deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this
+
+                  property set to true.
                 type: boolean
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -798,14 +1017,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -821,7 +1055,10 @@ spec:
                   type: object
                 type: array
               enableAutomaticUpgrade:
-                description: 'EnableAutomaticUpgrade: Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.'
+                description: >-
+                  EnableAutomaticUpgrade: Indicates whether the extension should be automatically upgraded by the platform if there is a
+
+                  newer version of the extension available.
                 type: boolean
               forceUpdateTag:
                 description: 'ForceUpdateTag: How the extension handler should be forced to update even if the extension configuration has not changed.'
@@ -896,7 +1133,10 @@ spec:
                 description: 'PropertiesType: Specifies the type of the extension; an example is "CustomScriptExtension".'
                 type: string
               protectedSettingsFromKeyVault:
-                description: 'ProtectedSettingsFromKeyVault: The extensions protected settings that are passed by reference, and consumed from key vault'
+                description: >-
+                  ProtectedSettingsFromKeyVault: The extensions protected settings that are passed by reference, and consumed from key
+
+                  vault
                 properties:
                   secretUrl:
                     description: 'SecretUrl: The URL referencing a secret in a Key Vault.'
@@ -921,7 +1161,10 @@ spec:
                 description: 'Settings: Json formatted public settings for the extension.'
                 type: object
               suppressFailures:
-                description: 'SuppressFailures: Indicates whether failures stemming from the extension will be suppressed (Operational failures such as not connecting to the VM will not be suppressed regardless of this value). The default is false.'
+                description: >-
+                  SuppressFailures: Indicates whether failures stemming from the extension will be suppressed (Operational failures such
+
+                  as not connecting to the VM will not be suppressed regardless of this value). The default is false.
                 type: boolean
               tags:
                 additionalProperties:
@@ -956,13 +1199,36 @@ spec:
     name: v1api20220301storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20220301.VirtualMachinesExtension Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}'
+        description: >-
+          Storage version of v1api20220301.VirtualMachinesExtension
+
+          Generator information:
+
+          - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -972,35 +1238,53 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               autoUpgradeMinorVersion:
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               enableAutomaticUpgrade:
                 type: boolean
               forceUpdateTag:
                 type: string
               instanceView:
-                description: Storage version of v1api20220301.VirtualMachineExtensionInstanceView The instance view of a virtual machine extension.
+                description: >-
+                  Storage version of v1api20220301.VirtualMachineExtensionInstanceView
+
+                  The instance view of a virtual machine extension.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
                   statuses:
                     items:
-                      description: Storage version of v1api20220301.InstanceViewStatus Instance view status.
+                      description: >-
+                        Storage version of v1api20220301.InstanceViewStatus
+
+                        Instance view status.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         code:
                           type: string
@@ -1016,12 +1300,18 @@ spec:
                     type: array
                   substatuses:
                     items:
-                      description: Storage version of v1api20220301.InstanceViewStatus Instance view status.
+                      description: >-
+                        Storage version of v1api20220301.InstanceViewStatus
+
+                        Instance view status.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         code:
                           type: string
@@ -1045,7 +1335,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a compute.azure.com/VirtualMachine resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a compute.azure.com/VirtualMachine resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -1055,21 +1350,33 @@ spec:
                     type: string
                 type: object
               protectedSettings:
-                description: SecretMapReference is a reference to a Kubernetes secret in the same namespace as the resource it is on.
+                description: >-
+                  SecretMapReference is a reference to a Kubernetes secret in the same namespace as
+
+                  the resource it is on.
                 properties:
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - name
                 type: object
               protectedSettingsFromKeyVault:
-                description: Storage version of v1api20220301.KeyVaultSecretReference Describes a reference to Key Vault Secret
+                description: >-
+                  Storage version of v1api20220301.KeyVaultSecretReference
+
+                  Describes a reference to Key Vault Secret
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   secretUrl:
                     type: string
@@ -1079,13 +1386,21 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       reference:
                         description: 'Reference: Resource Id'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -1125,7 +1440,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               autoUpgradeMinorVersion:
                 type: boolean
@@ -1141,14 +1459,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1170,23 +1503,35 @@ spec:
               id:
                 type: string
               instanceView:
-                description: Storage version of v1api20220301.VirtualMachineExtensionInstanceView_STATUS The instance view of a virtual machine extension.
+                description: >-
+                  Storage version of v1api20220301.VirtualMachineExtensionInstanceView_STATUS
+
+                  The instance view of a virtual machine extension.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
                   statuses:
                     items:
-                      description: Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.
+                      description: >-
+                        Storage version of v1api20220301.InstanceViewStatus_STATUS
+
+                        Instance view status.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         code:
                           type: string
@@ -1202,12 +1547,18 @@ spec:
                     type: array
                   substatuses:
                     items:
-                      description: Storage version of v1api20220301.InstanceViewStatus_STATUS Instance view status.
+                      description: >-
+                        Storage version of v1api20220301.InstanceViewStatus_STATUS
+
+                        Instance view status.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         code:
                           type: string
@@ -1233,12 +1584,18 @@ spec:
               properties_type:
                 type: string
               protectedSettingsFromKeyVault:
-                description: Storage version of v1api20220301.KeyVaultSecretReference_STATUS Describes a reference to Key Vault Secret
+                description: >-
+                  Storage version of v1api20220301.KeyVaultSecretReference_STATUS
+
+                  Describes a reference to Key Vault Secret
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   secretUrl:
                     type: string
@@ -1248,7 +1605,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       id:
                         type: string

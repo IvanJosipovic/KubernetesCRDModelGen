@@ -97,6 +97,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: atomic
                   kind:
                     description: >-
                       kind is the serialized kind of the resource. It is normally CamelCase and singular.
@@ -126,6 +127,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: atomic
                   singular:
                     description: singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.
                     type: string
@@ -275,6 +277,7 @@ spec:
                         items:
                           type: string
                         type: array
+                        x-kubernetes-list-type: atomic
                     required:
                     - conversionReviewVersions
                     type: object
@@ -381,6 +384,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: atomic
                   kind:
                     description: >-
                       kind is the serialized kind of the resource. It is normally CamelCase and singular.
@@ -410,6 +414,7 @@ spec:
                     items:
                       type: string
                     type: array
+                    x-kubernetes-list-type: atomic
                   singular:
                     description: singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.
                     type: string
@@ -586,6 +591,15 @@ spec:
 
                         one status to another, if any.
                       type: string
+                    observedGeneration:
+                      description: >-
+                        ObservedGeneration represents the .metadata.generation that the condition was set based upon.
+
+                        For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
+                      format: int64
+                      type: integer
                     reason:
                       description: A Reason for this condition's last transition from one status to another.
                       type: string

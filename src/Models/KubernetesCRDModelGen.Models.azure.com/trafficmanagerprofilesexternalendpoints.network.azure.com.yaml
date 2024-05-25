@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: trafficmanagerprofilesexternalendpoints.network.azure.com
 spec:
   conversion:
@@ -45,26 +45,53 @@ spec:
     name: v1api20220401
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/ExternalEndpoints/{endpointName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/ExternalEndpoints/{endpointName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               alwaysServe:
-                description: 'AlwaysServe: If Always Serve is enabled, probing for endpoint health will be disabled and endpoints will be included in the traffic routing method.'
+                description: >-
+                  AlwaysServe: If Always Serve is enabled, probing for endpoint health will be disabled and endpoints will be included in
+
+                  the traffic routing method.
                 enum:
                 - Disabled
                 - Enabled
                 type: string
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               customHeaders:
                 description: 'CustomHeaders: List of custom headers.'
@@ -79,7 +106,10 @@ spec:
                   type: object
                 type: array
               endpointLocation:
-                description: "EndpointLocation: Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method."
+                description: >-
+                  EndpointLocation: Specifies the location of the external or nested endpoints when using the 'Performance' traffic
+
+                  routing method.
                 type: string
               endpointMonitorStatus:
                 description: 'EndpointMonitorStatus: The monitoring status of the endpoint.'
@@ -93,27 +123,51 @@ spec:
                 - Unmonitored
                 type: string
               endpointStatus:
-                description: 'EndpointStatus: The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.'
+                description: >-
+                  EndpointStatus: The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included
+
+                  in the traffic routing method.
                 enum:
                 - Disabled
                 - Enabled
                 type: string
               geoMapping:
-                description: "GeoMapping: The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values."
+                description: >-
+                  GeoMapping: The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method.
+
+                  Please consult Traffic Manager Geographic documentation for a full list of accepted values.
                 items:
                   type: string
                 type: array
               minChildEndpoints:
-                description: "MinChildEndpoints: The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'."
+                description: >-
+                  MinChildEndpoints: The minimum number of endpoints that must be available in the child profile in order for the parent
+
+                  profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
                 type: integer
               minChildEndpointsIPv4:
-                description: "MinChildEndpointsIPv4: The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'."
+                description: >-
+                  MinChildEndpointsIPv4: The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child
+
+                  profile in order for the parent profile to be considered available. Only applicable to endpoint of type
+
+                  'NestedEndpoints'.
                 type: integer
               minChildEndpointsIPv6:
-                description: "MinChildEndpointsIPv6: The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'."
+                description: >-
+                  MinChildEndpointsIPv6: The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child
+
+                  profile in order for the parent profile to be considered available. Only applicable to endpoint of type
+
+                  'NestedEndpoints'.
                 type: integer
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/TrafficManagerProfile resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a network.azure.com/TrafficManagerProfile resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -123,10 +177,18 @@ spec:
                     type: string
                 type: object
               priority:
-                description: "Priority: The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value."
+                description: >-
+                  Priority: The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to
+
+                  1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all
+
+                  endpoints, and no two endpoints can share the same priority value.
                 type: integer
               subnets:
-                description: "Subnets: The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints."
+                description: >-
+                  Subnets: The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet'
+
+                  traffic routing method. An empty list will match all ranges not covered by other endpoints.
                 items:
                   properties:
                     first:
@@ -141,13 +203,24 @@ spec:
                   type: object
                 type: array
               target:
-                description: 'Target: The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.'
+                description: >-
+                  Target: The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses
+
+                  to direct traffic to this endpoint.
                 type: string
               targetResourceReference:
-                description: "TargetResourceReference: The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'."
+                description: >-
+                  TargetResourceReference: The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type
+
+                  'ExternalEndpoints'.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -172,7 +245,10 @@ spec:
           status:
             properties:
               alwaysServe:
-                description: 'AlwaysServe: If Always Serve is enabled, probing for endpoint health will be disabled and endpoints will be included in the traffic routing method.'
+                description: >-
+                  AlwaysServe: If Always Serve is enabled, probing for endpoint health will be disabled and endpoints will be included in
+
+                  the traffic routing method.
                 type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -187,14 +263,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -222,39 +313,72 @@ spec:
                   type: object
                 type: array
               endpointLocation:
-                description: "EndpointLocation: Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method."
+                description: >-
+                  EndpointLocation: Specifies the location of the external or nested endpoints when using the 'Performance' traffic
+
+                  routing method.
                 type: string
               endpointMonitorStatus:
                 description: 'EndpointMonitorStatus: The monitoring status of the endpoint.'
                 type: string
               endpointStatus:
-                description: 'EndpointStatus: The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.'
+                description: >-
+                  EndpointStatus: The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included
+
+                  in the traffic routing method.
                 type: string
               geoMapping:
-                description: "GeoMapping: The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values."
+                description: >-
+                  GeoMapping: The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method.
+
+                  Please consult Traffic Manager Geographic documentation for a full list of accepted values.
                 items:
                   type: string
                 type: array
               id:
-                description: 'Id: Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource Id for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
                 type: string
               minChildEndpoints:
-                description: "MinChildEndpoints: The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'."
+                description: >-
+                  MinChildEndpoints: The minimum number of endpoints that must be available in the child profile in order for the parent
+
+                  profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
                 type: integer
               minChildEndpointsIPv4:
-                description: "MinChildEndpointsIPv4: The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'."
+                description: >-
+                  MinChildEndpointsIPv4: The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child
+
+                  profile in order for the parent profile to be considered available. Only applicable to endpoint of type
+
+                  'NestedEndpoints'.
                 type: integer
               minChildEndpointsIPv6:
-                description: "MinChildEndpointsIPv6: The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'."
+                description: >-
+                  MinChildEndpointsIPv6: The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child
+
+                  profile in order for the parent profile to be considered available. Only applicable to endpoint of type
+
+                  'NestedEndpoints'.
                 type: integer
               name:
                 description: 'Name: The name of the resource'
                 type: string
               priority:
-                description: "Priority: The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value."
+                description: >-
+                  Priority: The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to
+
+                  1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all
+
+                  endpoints, and no two endpoints can share the same priority value.
                 type: integer
               subnets:
-                description: "Subnets: The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints."
+                description: >-
+                  Subnets: The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet'
+
+                  traffic routing method. An empty list will match all ranges not covered by other endpoints.
                 items:
                   properties:
                     first:
@@ -269,7 +393,10 @@ spec:
                   type: object
                 type: array
               target:
-                description: 'Target: The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.'
+                description: >-
+                  Target: The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses
+
+                  to direct traffic to this endpoint.
                 type: string
               targetResourceId:
                 description: "TargetResourceId: The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'."
@@ -302,13 +429,36 @@ spec:
     name: v1api20220401storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20220401.TrafficManagerProfilesExternalEndpoint Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/ExternalEndpoints/{endpointName}'
+        description: >-
+          Storage version of v1api20220401.TrafficManagerProfilesExternalEndpoint
+
+          Generator information:
+
+          - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/ExternalEndpoints/{endpointName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -318,12 +468,18 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               alwaysServe:
                 type: string
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               customHeaders:
                 items:
@@ -332,7 +488,10 @@ spec:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     name:
                       type: string
@@ -359,7 +518,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a network.azure.com/TrafficManagerProfile resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a network.azure.com/TrafficManagerProfile resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -377,7 +541,10 @@ spec:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     first:
                       type: string
@@ -390,10 +557,18 @@ spec:
               target:
                 type: string
               targetResourceReference:
-                description: "TargetResourceReference: The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'."
+                description: >-
+                  TargetResourceReference: The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type
+
+                  'ExternalEndpoints'.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -419,7 +594,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               alwaysServe:
                 type: string
@@ -435,14 +613,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -464,7 +657,10 @@ spec:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     name:
                       type: string
@@ -501,7 +697,10 @@ spec:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     first:
                       type: string

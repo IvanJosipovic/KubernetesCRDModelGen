@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: batchaccounts.batch.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20210101
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -64,7 +85,12 @@ spec:
                     description: 'StorageAccountReference: The resource ID of the storage account to be used for auto-storage account.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -81,13 +107,19 @@ spec:
                 - storageAccountReference
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 maxLength: 24
                 minLength: 3
                 pattern: ^[a-z0-9]+$
                 type: string
               encryption:
-                description: 'Encryption: Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.'
+                description: >-
+                  Encryption: Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using
+
+                  a Microsoft managed key. For additional control, a customer-managed key can be used instead.
                 properties:
                   keySource:
                     description: 'KeySource: Type of the key source.'
@@ -99,7 +131,18 @@ spec:
                     description: 'KeyVaultProperties: Additional details when using Microsoft.KeyVault'
                     properties:
                       keyIdentifier:
-                        description: 'KeyIdentifier: Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met: The Batch Account has a System Assigned identity The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions The KeyVault has soft-delete and purge protection enabled'
+                        description: >-
+                          KeyIdentifier: Full path to the versioned secret. Example
+
+                          https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following
+
+                          prerequisites must be met:
+
+                          The Batch Account has a System Assigned identity
+
+                          The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
+
+                          The KeyVault has soft-delete and purge protection enabled
                         type: string
                     type: object
                 type: object
@@ -114,7 +157,12 @@ spec:
                     - UserAssigned
                     type: string
                   userAssignedIdentities:
-                    description: "UserAssignedIdentities: The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+                    description: >-
+                      UserAssignedIdentities: The list of user identities associated with the Batch account. The user identity dictionary key
+
+                      references will be ARM resource ids in the form:
+
+                      '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     items:
                       description: Information about the user assigned identity for the resource
                       properties:
@@ -122,7 +170,12 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -147,7 +200,12 @@ spec:
                     description: 'Reference: The resource ID of the Azure key vault associated with the Batch account.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -171,7 +229,12 @@ spec:
                 description: 'Location: The region in which to create the account.'
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -181,7 +244,12 @@ spec:
                     type: string
                 type: object
               poolAllocationMode:
-                description: 'PoolAllocationMode: The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.'
+                description: >-
+                  PoolAllocationMode: The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the
+
+                  mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is
+
+                  UserSubscription, clients must use Azure Active Directory. The default is BatchService.
                 enum:
                 - BatchService
                 - UserSubscription
@@ -232,14 +300,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -255,10 +338,18 @@ spec:
                   type: object
                 type: array
               dedicatedCoreQuota:
-                description: 'DedicatedCoreQuota: For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.'
+                description: >-
+                  DedicatedCoreQuota: For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription
+
+                  so this value is not returned.
                 type: integer
               dedicatedCoreQuotaPerVMFamily:
-                description: 'DedicatedCoreQuotaPerVMFamily: A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.'
+                description: >-
+                  DedicatedCoreQuotaPerVMFamily: A list of the dedicated core quota per Virtual Machine family for the Batch account. For
+
+                  accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not
+
+                  returned.
                 items:
                   description: A VM Family and its associated core quota for the Batch account.
                   properties:
@@ -271,10 +362,22 @@ spec:
                   type: object
                 type: array
               dedicatedCoreQuotaPerVMFamilyEnforced:
-                description: 'DedicatedCoreQuotaPerVMFamilyEnforced: Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.'
+                description: >-
+                  DedicatedCoreQuotaPerVMFamilyEnforced: Batch is transitioning its core quota system for dedicated cores to be enforced
+
+                  per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not
+
+                  yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the
+
+                  account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the
+
+                  dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.
                 type: boolean
               encryption:
-                description: 'Encryption: Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.'
+                description: >-
+                  Encryption: Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using
+
+                  a Microsoft managed key. For additional control, a customer-managed key can be used instead.
                 properties:
                   keySource:
                     description: 'KeySource: Type of the key source.'
@@ -283,7 +386,18 @@ spec:
                     description: 'KeyVaultProperties: Additional details when using Microsoft.KeyVault'
                     properties:
                       keyIdentifier:
-                        description: 'KeyIdentifier: Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met: The Batch Account has a System Assigned identity The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions The KeyVault has soft-delete and purge protection enabled'
+                        description: >-
+                          KeyIdentifier: Full path to the versioned secret. Example
+
+                          https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following
+
+                          prerequisites must be met:
+
+                          The Batch Account has a System Assigned identity
+
+                          The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
+
+                          The KeyVault has soft-delete and purge protection enabled
                         type: string
                     type: object
                 type: object
@@ -297,7 +411,10 @@ spec:
                     description: 'PrincipalId: The principal id of the Batch account. This property will only be provided for a system assigned identity.'
                     type: string
                   tenantId:
-                    description: 'TenantId: The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.'
+                    description: >-
+                      TenantId: The tenant id associated with the Batch account. This property will only be provided for a system assigned
+
+                      identity.
                     type: string
                   type:
                     description: 'Type: The type of identity used for the Batch account.'
@@ -312,7 +429,12 @@ spec:
                           description: 'PrincipalId: The principal id of user assigned identity.'
                           type: string
                       type: object
-                    description: "UserAssignedIdentities: The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+                    description: >-
+                      UserAssignedIdentities: The list of user identities associated with the Batch account. The user identity dictionary key
+
+                      references will be ARM resource ids in the form:
+
+                      '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     type: object
                 type: object
               keyVaultReference:
@@ -329,7 +451,10 @@ spec:
                 description: 'Location: The location of the resource.'
                 type: string
               lowPriorityCoreQuota:
-                description: 'LowPriorityCoreQuota: For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.'
+                description: >-
+                  LowPriorityCoreQuota: For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription
+
+                  so this value is not returned.
                 type: integer
               name:
                 description: 'Name: The name of the resource.'
@@ -385,13 +510,36 @@ spec:
     name: v1api20210101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20210101.BatchAccount Generator information: - Generated from: /batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}'
+        description: >-
+          Storage version of v1api20210101.BatchAccount
+
+          Generator information:
+
+          - Generated from: /batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -401,21 +549,35 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               autoStorage:
-                description: Storage version of v1api20210101.AutoStorageBaseProperties The properties related to the auto-storage account.
+                description: >-
+                  Storage version of v1api20210101.AutoStorageBaseProperties
+
+                  The properties related to the auto-storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   storageAccountReference:
                     description: 'StorageAccountReference: The resource ID of the storage account to be used for auto-storage account.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -432,54 +594,90 @@ spec:
                 - storageAccountReference
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               encryption:
-                description: Storage version of v1api20210101.EncryptionProperties Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
+                description: >-
+                  Storage version of v1api20210101.EncryptionProperties
+
+                  Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft
+
+                  managed key. For additional control, a customer-managed key can be used instead.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   keySource:
                     type: string
                   keyVaultProperties:
-                    description: Storage version of v1api20210101.KeyVaultProperties KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
+                    description: >-
+                      Storage version of v1api20210101.KeyVaultProperties
+
+                      KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       keyIdentifier:
                         type: string
                     type: object
                 type: object
               identity:
-                description: Storage version of v1api20210101.BatchAccountIdentity The identity of the Batch account, if configured. This is only used when the user specifies 'Microsoft.KeyVault' as their Batch account encryption configuration.
+                description: >-
+                  Storage version of v1api20210101.BatchAccountIdentity
+
+                  The identity of the Batch account, if configured. This is only used when the user specifies 'Microsoft.KeyVault' as
+
+                  their Batch account encryption configuration.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: Storage version of v1api20210101.UserAssignedIdentityDetails Information about the user assigned identity for the resource
+                      description: >-
+                        Storage version of v1api20210101.UserAssignedIdentityDetails
+
+                        Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -496,18 +694,29 @@ spec:
                     type: array
                 type: object
               keyVaultReference:
-                description: Storage version of v1api20210101.KeyVaultReference Identifies the Azure key vault associated with a Batch account.
+                description: >-
+                  Storage version of v1api20210101.KeyVaultReference
+
+                  Identifies the Azure key vault associated with a Batch account.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: The resource ID of the Azure key vault associated with the Batch account.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -530,7 +739,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -551,24 +765,36 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20210101.BatchAccount_STATUS Contains information about an Azure Batch account.
+            description: >-
+              Storage version of v1api20210101.BatchAccount_STATUS
+
+              Contains information about an Azure Batch account.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               accountEndpoint:
                 type: string
               activeJobAndJobScheduleQuota:
                 type: integer
               autoStorage:
-                description: Storage version of v1api20210101.AutoStorageProperties_STATUS Contains information about the auto-storage account associated with a Batch account.
+                description: >-
+                  Storage version of v1api20210101.AutoStorageProperties_STATUS
+
+                  Contains information about the auto-storage account associated with a Batch account.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   lastKeySync:
                     type: string
@@ -587,14 +813,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -613,12 +854,18 @@ spec:
                 type: integer
               dedicatedCoreQuotaPerVMFamily:
                 items:
-                  description: Storage version of v1api20210101.VirtualMachineFamilyCoreQuota_STATUS A VM Family and its associated core quota for the Batch account.
+                  description: >-
+                    Storage version of v1api20210101.VirtualMachineFamilyCoreQuota_STATUS
+
+                    A VM Family and its associated core quota for the Batch account.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     coreQuota:
                       type: integer
@@ -629,22 +876,36 @@ spec:
               dedicatedCoreQuotaPerVMFamilyEnforced:
                 type: boolean
               encryption:
-                description: Storage version of v1api20210101.EncryptionProperties_STATUS Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
+                description: >-
+                  Storage version of v1api20210101.EncryptionProperties_STATUS
+
+                  Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft
+
+                  managed key. For additional control, a customer-managed key can be used instead.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   keySource:
                     type: string
                   keyVaultProperties:
-                    description: Storage version of v1api20210101.KeyVaultProperties_STATUS KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
+                    description: >-
+                      Storage version of v1api20210101.KeyVaultProperties_STATUS
+
+                      KeyVault configuration when using an encryption KeySource of Microsoft.KeyVault.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       keyIdentifier:
                         type: string
@@ -653,12 +914,20 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1api20210101.BatchAccountIdentity_STATUS The identity of the Batch account, if configured. This is only used when the user specifies 'Microsoft.KeyVault' as their Batch account encryption configuration.
+                description: >-
+                  Storage version of v1api20210101.BatchAccountIdentity_STATUS
+
+                  The identity of the Batch account, if configured. This is only used when the user specifies 'Microsoft.KeyVault' as
+
+                  their Batch account encryption configuration.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
                     type: string
@@ -673,7 +942,10 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
                           type: string
@@ -683,12 +955,18 @@ spec:
                     type: object
                 type: object
               keyVaultReference:
-                description: Storage version of v1api20210101.KeyVaultReference_STATUS Identifies the Azure key vault associated with a Batch account.
+                description: >-
+                  Storage version of v1api20210101.KeyVaultReference_STATUS
+
+                  Identifies the Azure key vault associated with a Batch account.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
                     type: string
@@ -707,12 +985,18 @@ spec:
                 type: integer
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1api20210101.PrivateEndpointConnection_STATUS Contains information about a private link resource.
+                  description: >-
+                    Storage version of v1api20210101.PrivateEndpointConnection_STATUS
+
+                    Contains information about a private link resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
                       type: string

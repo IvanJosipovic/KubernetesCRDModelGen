@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: serverfarms.web.azure.com
 spec:
   conversion:
@@ -45,23 +45,50 @@ spec:
     name: v1api20220301
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}'
+        description: >-
+          Generator information:
+
+          - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               elasticScaleEnabled:
-                description: 'ElasticScaleEnabled: ServerFarm supports ElasticScale. Apps in this plan will scale as if the ServerFarm was ElasticPremium sku'
+                description: >-
+                  ElasticScaleEnabled: ServerFarm supports ElasticScale. Apps in this plan will scale as if the ServerFarm was
+
+                  ElasticPremium sku
                 type: boolean
               extendedLocation:
                 description: 'ExtendedLocation: Extended Location.'
@@ -80,7 +107,12 @@ spec:
                     description: 'Reference: Resource ID of the App Service Environment.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -113,7 +145,12 @@ spec:
                     description: 'Reference: Resource ID of the Kubernetes Environment.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -134,7 +171,12 @@ spec:
                 description: 'MaximumElasticWorkerCount: Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan'
                 type: integer
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -144,7 +186,10 @@ spec:
                     type: string
                 type: object
               perSiteScaling:
-                description: 'PerSiteScaling: If <code>true</code>, apps assigned to this App Service plan can be scaled independently. If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.'
+                description: >-
+                  PerSiteScaling: If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
+
+                  If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
                 type: boolean
               reserved:
                 description: 'Reserved: If Linux app service plan <code>true</code>, <code>false</code> otherwise.'
@@ -226,7 +271,10 @@ spec:
                 description: 'WorkerTierName: Target worker tier assigned to the App Service plan.'
                 type: string
               zoneRedundant:
-                description: 'ZoneRedundant: If <code>true</code>, this App Service Plan will perform availability zone balancing. If <code>false</code>, this App Service Plan will not perform availability zone balancing.'
+                description: >-
+                  ZoneRedundant: If <code>true</code>, this App Service Plan will perform availability zone balancing.
+
+                  If <code>false</code>, this App Service Plan will not perform availability zone balancing.
                 type: boolean
             required:
             - location
@@ -247,14 +295,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -270,7 +333,10 @@ spec:
                   type: object
                 type: array
               elasticScaleEnabled:
-                description: 'ElasticScaleEnabled: ServerFarm supports ElasticScale. Apps in this plan will scale as if the ServerFarm was ElasticPremium sku'
+                description: >-
+                  ElasticScaleEnabled: ServerFarm supports ElasticScale. Apps in this plan will scale as if the ServerFarm was
+
+                  ElasticPremium sku
                 type: boolean
               extendedLocation:
                 description: 'ExtendedLocation: Extended Location.'
@@ -348,7 +414,10 @@ spec:
                 description: 'NumberOfWorkers: The number of instances that are assigned to this App Service plan.'
                 type: integer
               perSiteScaling:
-                description: 'PerSiteScaling: If <code>true</code>, apps assigned to this App Service plan can be scaled independently. If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.'
+                description: >-
+                  PerSiteScaling: If <code>true</code>, apps assigned to this App Service plan can be scaled independently.
+
+                  If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
                 type: boolean
               provisioningState:
                 description: 'ProvisioningState: Provisioning state of the App Service Plan.'
@@ -445,7 +514,10 @@ spec:
                 description: 'WorkerTierName: Target worker tier assigned to the App Service plan.'
                 type: string
               zoneRedundant:
-                description: 'ZoneRedundant: If <code>true</code>, this App Service Plan will perform availability zone balancing. If <code>false</code>, this App Service Plan will not perform availability zone balancing.'
+                description: >-
+                  ZoneRedundant: If <code>true</code>, this App Service Plan will perform availability zone balancing.
+
+                  If <code>false</code>, this App Service Plan will not perform availability zone balancing.
                 type: boolean
             type: object
         type: object
@@ -469,13 +541,36 @@ spec:
     name: v1api20220301storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20220301.ServerFarm Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}'
+        description: >-
+          Storage version of v1api20220301.ServerFarm
+
+          Generator information:
+
+          - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -485,20 +580,32 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               elasticScaleEnabled:
                 type: boolean
               extendedLocation:
-                description: Storage version of v1api20220301.ExtendedLocation Extended Location.
+                description: >-
+                  Storage version of v1api20220301.ExtendedLocation
+
+                  Extended Location.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -506,18 +613,29 @@ spec:
               freeOfferExpirationTime:
                 type: string
               hostingEnvironmentProfile:
-                description: Storage version of v1api20220301.HostingEnvironmentProfile Specification for an App Service Environment to use for this resource.
+                description: >-
+                  Storage version of v1api20220301.HostingEnvironmentProfile
+
+                  Specification for an App Service Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID of the App Service Environment.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -540,18 +658,29 @@ spec:
               kind:
                 type: string
               kubeEnvironmentProfile:
-                description: Storage version of v1api20220301.KubeEnvironmentProfile Specification for a Kubernetes Environment to use for this resource.
+                description: >-
+                  Storage version of v1api20220301.KubeEnvironmentProfile
+
+                  Specification for a Kubernetes Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID of the Kubernetes Environment.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -572,7 +701,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -586,21 +720,33 @@ spec:
               reserved:
                 type: boolean
               sku:
-                description: Storage version of v1api20220301.SkuDescription Description of a SKU for a scalable resource.
+                description: >-
+                  Storage version of v1api20220301.SkuDescription
+
+                  Description of a SKU for a scalable resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   capabilities:
                     items:
-                      description: Storage version of v1api20220301.Capability Describes the capabilities/features allowed for a specific SKU.
+                      description: >-
+                        Storage version of v1api20220301.Capability
+
+                        Describes the capabilities/features allowed for a specific SKU.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
@@ -623,12 +769,18 @@ spec:
                   size:
                     type: string
                   skuCapacity:
-                    description: Storage version of v1api20220301.SkuCapacity Description of the App Service plan scale options.
+                    description: >-
+                      Storage version of v1api20220301.SkuCapacity
+
+                      Description of the App Service plan scale options.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       default:
                         type: integer
@@ -667,7 +819,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
                 items:
@@ -681,14 +836,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -706,12 +876,18 @@ spec:
               elasticScaleEnabled:
                 type: boolean
               extendedLocation:
-                description: Storage version of v1api20220301.ExtendedLocation_STATUS Extended Location.
+                description: >-
+                  Storage version of v1api20220301.ExtendedLocation_STATUS
+
+                  Extended Location.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -723,12 +899,18 @@ spec:
               geoRegion:
                 type: string
               hostingEnvironmentProfile:
-                description: Storage version of v1api20220301.HostingEnvironmentProfile_STATUS Specification for an App Service Environment to use for this resource.
+                description: >-
+                  Storage version of v1api20220301.HostingEnvironmentProfile_STATUS
+
+                  Specification for an App Service Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
                     type: string
@@ -748,12 +930,18 @@ spec:
               kind:
                 type: string
               kubeEnvironmentProfile:
-                description: Storage version of v1api20220301.KubeEnvironmentProfile_STATUS Specification for a Kubernetes Environment to use for this resource.
+                description: >-
+                  Storage version of v1api20220301.KubeEnvironmentProfile_STATUS
+
+                  Specification for a Kubernetes Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
                     type: string
@@ -783,21 +971,33 @@ spec:
               resourceGroup:
                 type: string
               sku:
-                description: Storage version of v1api20220301.SkuDescription_STATUS Description of a SKU for a scalable resource.
+                description: >-
+                  Storage version of v1api20220301.SkuDescription_STATUS
+
+                  Description of a SKU for a scalable resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   capabilities:
                     items:
-                      description: Storage version of v1api20220301.Capability_STATUS Describes the capabilities/features allowed for a specific SKU.
+                      description: >-
+                        Storage version of v1api20220301.Capability_STATUS
+
+                        Describes the capabilities/features allowed for a specific SKU.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
@@ -820,12 +1020,18 @@ spec:
                   size:
                     type: string
                   skuCapacity:
-                    description: Storage version of v1api20220301.SkuCapacity_STATUS Description of the App Service plan scale options.
+                    description: >-
+                      Storage version of v1api20220301.SkuCapacity_STATUS
+
+                      Description of the App Service plan scale options.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       default:
                         type: integer

@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: trafficmanagerprofiles.network.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20220401
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -69,16 +90,25 @@ spec:
                   type: string
                 type: array
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               dnsConfig:
                 description: 'DnsConfig: The DNS settings of the Traffic Manager profile.'
                 properties:
                   relativeName:
-                    description: 'RelativeName: The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.'
+                    description: >-
+                      RelativeName: The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain
+
+                      name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
                     type: string
                   ttl:
-                    description: 'Ttl: The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.'
+                    description: >-
+                      Ttl: The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS
+
+                      responses provided by this Traffic Manager profile.
                     type: integer
                 type: object
               location:
@@ -115,7 +145,10 @@ spec:
                       type: object
                     type: array
                   intervalInSeconds:
-                    description: 'IntervalInSeconds: The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.'
+                    description: >-
+                      IntervalInSeconds: The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager
+
+                      will check the health of each endpoint in this profile.
                     type: integer
                   path:
                     description: 'Path: The path relative to the endpoint domain name used to probe for endpoint health.'
@@ -140,14 +173,23 @@ spec:
                     - TCP
                     type: string
                   timeoutInSeconds:
-                    description: 'TimeoutInSeconds: The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.'
+                    description: >-
+                      TimeoutInSeconds: The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows
+
+                      endpoints in this profile to response to the health check.
                     type: integer
                   toleratedNumberOfFailures:
-                    description: 'ToleratedNumberOfFailures: The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.'
+                    description: >-
+                      ToleratedNumberOfFailures: The number of consecutive failed health check that Traffic Manager tolerates before declaring
+
+                      an endpoint in this profile Degraded after the next failed health check.
                     type: integer
                 type: object
               operatorSpec:
-                description: 'OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not passed directly to Azure'
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
                 properties:
                   configMaps:
                     description: 'ConfigMaps: configures where to place operator written ConfigMaps.'
@@ -159,7 +201,10 @@ spec:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes ConfigMap being referenced.
+
+                              The ConfigMap must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -168,7 +213,12 @@ spec:
                     type: object
                 type: object
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -199,7 +249,10 @@ spec:
                 - Weighted
                 type: string
               trafficViewEnrollmentStatus:
-                description: "TrafficViewEnrollmentStatus: Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile."
+                description: >-
+                  TrafficViewEnrollmentStatus: Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile.
+
+                  Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
                 enum:
                 - Disabled
                 - Enabled
@@ -231,14 +284,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -257,13 +325,22 @@ spec:
                 description: 'DnsConfig: The DNS settings of the Traffic Manager profile.'
                 properties:
                   fqdn:
-                    description: 'Fqdn: The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.'
+                    description: >-
+                      Fqdn: The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of
+
+                      the RelativeName with the DNS domain used by Azure Traffic Manager.
                     type: string
                   relativeName:
-                    description: 'RelativeName: The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.'
+                    description: >-
+                      RelativeName: The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain
+
+                      name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
                     type: string
                   ttl:
-                    description: 'Ttl: The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.'
+                    description: >-
+                      Ttl: The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS
+
+                      responses provided by this Traffic Manager profile.
                     type: integer
                 type: object
               endpoints:
@@ -272,12 +349,18 @@ spec:
                   description: Class representing a Traffic Manager endpoint.
                   properties:
                     id:
-                      description: 'Id: Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}'
+                      description: >-
+                        Id: Fully qualified resource Id for the resource. Ex -
+
+                        /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
                       type: string
                   type: object
                 type: array
               id:
-                description: 'Id: Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource Id for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
                 type: string
               location:
                 description: 'Location: The Azure Region where the resource lives'
@@ -313,7 +396,10 @@ spec:
                       type: object
                     type: array
                   intervalInSeconds:
-                    description: 'IntervalInSeconds: The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.'
+                    description: >-
+                      IntervalInSeconds: The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager
+
+                      will check the health of each endpoint in this profile.
                     type: integer
                   path:
                     description: 'Path: The path relative to the endpoint domain name used to probe for endpoint health.'
@@ -328,10 +414,16 @@ spec:
                     description: 'Protocol: The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.'
                     type: string
                   timeoutInSeconds:
-                    description: 'TimeoutInSeconds: The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.'
+                    description: >-
+                      TimeoutInSeconds: The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows
+
+                      endpoints in this profile to response to the health check.
                     type: integer
                   toleratedNumberOfFailures:
-                    description: 'ToleratedNumberOfFailures: The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.'
+                    description: >-
+                      ToleratedNumberOfFailures: The number of consecutive failed health check that Traffic Manager tolerates before declaring
+
+                      an endpoint in this profile Degraded after the next failed health check.
                     type: integer
                 type: object
               name:
@@ -349,7 +441,10 @@ spec:
                 description: 'TrafficRoutingMethod: The traffic routing method of the Traffic Manager profile.'
                 type: string
               trafficViewEnrollmentStatus:
-                description: "TrafficViewEnrollmentStatus: Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile."
+                description: >-
+                  TrafficViewEnrollmentStatus: Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile.
+
+                  Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
                 type: string
               type:
                 description: 'Type: The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.'
@@ -376,13 +471,36 @@ spec:
     name: v1api20220401storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20220401.TrafficManagerProfile Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}'
+        description: >-
+          Storage version of v1api20220401.TrafficManagerProfile
+
+          Generator information:
+
+          - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -392,22 +510,34 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               allowedEndpointRecordTypes:
                 items:
                   type: string
                 type: array
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               dnsConfig:
-                description: Storage version of v1api20220401.DnsConfig Class containing DNS settings in a Traffic Manager profile.
+                description: >-
+                  Storage version of v1api20220401.DnsConfig
+
+                  Class containing DNS settings in a Traffic Manager profile.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   relativeName:
                     type: string
@@ -419,12 +549,18 @@ spec:
               maxReturn:
                 type: integer
               monitorConfig:
-                description: Storage version of v1api20220401.MonitorConfig Class containing endpoint monitoring settings in a Traffic Manager profile.
+                description: >-
+                  Storage version of v1api20220401.MonitorConfig
+
+                  Class containing endpoint monitoring settings in a Traffic Manager profile.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   customHeaders:
                     items:
@@ -433,7 +569,10 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
@@ -448,7 +587,10 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         max:
                           type: integer
@@ -472,12 +614,18 @@ spec:
                     type: integer
                 type: object
               operatorSpec:
-                description: Storage version of v1api20220401.TrafficManagerProfileOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                description: >-
+                  Storage version of v1api20220401.TrafficManagerProfileOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   configMaps:
                     description: Storage version of v1api20220401.TrafficManagerProfileOperatorConfigMaps
@@ -485,16 +633,25 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       dnsConfigFqdn:
-                        description: 'ConfigMapDestination describes the location to store a single configmap value Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          ConfigMapDestination describes the location to store a single configmap value
+
+                          Note: This is similar to SecretDestination in secrets.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes ConfigMap being referenced. The ConfigMap must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes ConfigMap being referenced.
+
+                              The ConfigMap must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -505,7 +662,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -535,7 +697,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               allowedEndpointRecordTypes:
                 items:
@@ -553,14 +718,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -576,12 +756,18 @@ spec:
                   type: object
                 type: array
               dnsConfig:
-                description: Storage version of v1api20220401.DnsConfig_STATUS Class containing DNS settings in a Traffic Manager profile.
+                description: >-
+                  Storage version of v1api20220401.DnsConfig_STATUS
+
+                  Class containing DNS settings in a Traffic Manager profile.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   fqdn:
                     type: string
@@ -592,12 +778,18 @@ spec:
                 type: object
               endpoints:
                 items:
-                  description: Storage version of v1api20220401.Endpoint_STATUS Class representing a Traffic Manager endpoint.
+                  description: >-
+                    Storage version of v1api20220401.Endpoint_STATUS
+
+                    Class representing a Traffic Manager endpoint.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
                       type: string
@@ -610,12 +802,18 @@ spec:
               maxReturn:
                 type: integer
               monitorConfig:
-                description: Storage version of v1api20220401.MonitorConfig_STATUS Class containing endpoint monitoring settings in a Traffic Manager profile.
+                description: >-
+                  Storage version of v1api20220401.MonitorConfig_STATUS
+
+                  Class containing endpoint monitoring settings in a Traffic Manager profile.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   customHeaders:
                     items:
@@ -624,7 +822,10 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
@@ -639,7 +840,10 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         max:
                           type: integer
