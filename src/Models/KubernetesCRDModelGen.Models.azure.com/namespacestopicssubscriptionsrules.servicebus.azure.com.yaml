@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: namespacestopicssubscriptionsrules.servicebus.azure.com
 spec:
   conversion:
@@ -45,23 +45,50 @@ spec:
     name: v1api20210101preview
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Rules.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               action:
-                description: 'Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.'
+                description: >-
+                  Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a
+
+                  filter expression.
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -71,7 +98,10 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 maxLength: 50
                 minLength: 1
                 type: string
@@ -118,7 +148,12 @@ spec:
                 - SqlFilter
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a servicebus.azure.com/NamespacesTopicsSubscription resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -131,7 +166,10 @@ spec:
                 description: 'SqlFilter: Properties of sqlFilter'
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     maximum: 20
                     minimum: 20
                     type: integer
@@ -148,10 +186,16 @@ spec:
           status:
             properties:
               action:
-                description: 'Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.'
+                description: >-
+                  Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a
+
+                  filter expression.
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -173,14 +217,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -244,7 +303,10 @@ spec:
                 description: 'SqlFilter: Properties of sqlFilter'
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -300,13 +362,36 @@ spec:
     name: v1api20210101previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20210101preview.NamespacesTopicsSubscriptionsRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}'
+        description: >-
+          Storage version of v1api20210101preview.NamespacesTopicsSubscriptionsRule
+
+          Generator information:
+
+          - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2021-01-01-preview/Rules.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -316,15 +401,26 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               action:
-                description: Storage version of v1api20210101preview.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+                description: >-
+                  Storage version of v1api20210101preview.Action
+
+                  Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter
+
+                  expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -334,15 +430,24 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               correlationFilter:
-                description: Storage version of v1api20210101preview.CorrelationFilter Represents the correlation filter expression.
+                description: >-
+                  Storage version of v1api20210101preview.CorrelationFilter
+
+                  Represents the correlation filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   contentType:
                     type: string
@@ -372,7 +477,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a servicebus.azure.com/NamespacesTopicsSubscription resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -382,12 +492,18 @@ spec:
                     type: string
                 type: object
               sqlFilter:
-                description: Storage version of v1api20210101preview.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+                description: >-
+                  Storage version of v1api20210101preview.SqlFilter
+
+                  Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -405,15 +521,26 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               action:
-                description: Storage version of v1api20210101preview.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+                description: >-
+                  Storage version of v1api20210101preview.Action_STATUS
+
+                  Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter
+
+                  expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -434,14 +561,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -457,12 +599,18 @@ spec:
                   type: object
                 type: array
               correlationFilter:
-                description: Storage version of v1api20210101preview.CorrelationFilter_STATUS Represents the correlation filter expression.
+                description: >-
+                  Storage version of v1api20210101preview.CorrelationFilter_STATUS
+
+                  Represents the correlation filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   contentType:
                     type: string
@@ -494,12 +642,18 @@ spec:
               name:
                 type: string
               sqlFilter:
-                description: Storage version of v1api20210101preview.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+                description: >-
+                  Storage version of v1api20210101preview.SqlFilter_STATUS
+
+                  Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -509,12 +663,18 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1api20210101preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
+                description: >-
+                  Storage version of v1api20210101preview.SystemData_STATUS
+
+                  Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
                     type: string
@@ -553,23 +713,50 @@ spec:
     name: v1api20211101
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/Rules.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               action:
-                description: 'Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.'
+                description: >-
+                  Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a
+
+                  filter expression.
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -579,7 +766,10 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 maxLength: 50
                 minLength: 1
                 type: string
@@ -626,7 +816,12 @@ spec:
                 - SqlFilter
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a servicebus.azure.com/NamespacesTopicsSubscription resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -639,7 +834,10 @@ spec:
                 description: 'SqlFilter: Properties of sqlFilter'
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -654,10 +852,16 @@ spec:
           status:
             properties:
               action:
-                description: 'Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.'
+                description: >-
+                  Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a
+
+                  filter expression.
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -679,14 +883,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -741,7 +960,10 @@ spec:
                 description: 'FilterType: Filter type that is evaluated against a BrokeredMessage.'
                 type: string
               id:
-                description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource ID for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               location:
                 description: 'Location: The geo-location where the resource lives'
@@ -753,7 +975,10 @@ spec:
                 description: 'SqlFilter: Properties of sqlFilter'
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -809,13 +1034,36 @@ spec:
     name: v1api20211101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}'
+        description: >-
+          Storage version of v1api20211101.NamespacesTopicsSubscriptionsRule
+
+          Generator information:
+
+          - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2021-11-01/Rules.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -825,15 +1073,26 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               action:
-                description: Storage version of v1api20211101.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+                description: >-
+                  Storage version of v1api20211101.Action
+
+                  Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter
+
+                  expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -843,15 +1102,24 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               correlationFilter:
-                description: Storage version of v1api20211101.CorrelationFilter Represents the correlation filter expression.
+                description: >-
+                  Storage version of v1api20211101.CorrelationFilter
+
+                  Represents the correlation filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   contentType:
                     type: string
@@ -881,7 +1149,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a servicebus.azure.com/NamespacesTopicsSubscription resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -891,12 +1164,18 @@ spec:
                     type: string
                 type: object
               sqlFilter:
-                description: Storage version of v1api20211101.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+                description: >-
+                  Storage version of v1api20211101.SqlFilter
+
+                  Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -914,15 +1193,26 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               action:
-                description: Storage version of v1api20211101.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+                description: >-
+                  Storage version of v1api20211101.Action_STATUS
+
+                  Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter
+
+                  expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -943,14 +1233,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -966,12 +1271,18 @@ spec:
                   type: object
                 type: array
               correlationFilter:
-                description: Storage version of v1api20211101.CorrelationFilter_STATUS Represents the correlation filter expression.
+                description: >-
+                  Storage version of v1api20211101.CorrelationFilter_STATUS
+
+                  Represents the correlation filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   contentType:
                     type: string
@@ -1005,12 +1316,18 @@ spec:
               name:
                 type: string
               sqlFilter:
-                description: Storage version of v1api20211101.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+                description: >-
+                  Storage version of v1api20211101.SqlFilter_STATUS
+
+                  Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -1020,12 +1337,18 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1api20211101.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
+                description: >-
+                  Storage version of v1api20211101.SystemData_STATUS
+
+                  Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
                     type: string
@@ -1064,23 +1387,50 @@ spec:
     name: v1api20221001preview
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2022-10-01-preview/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2022-10-01-preview/Rules.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               action:
-                description: 'Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.'
+                description: >-
+                  Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a
+
+                  filter expression.
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -1090,7 +1440,10 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 maxLength: 50
                 minLength: 1
                 type: string
@@ -1137,7 +1490,12 @@ spec:
                 - SqlFilter
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a servicebus.azure.com/NamespacesTopicsSubscription resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -1150,7 +1508,10 @@ spec:
                 description: 'SqlFilter: Properties of sqlFilter'
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -1165,10 +1526,16 @@ spec:
           status:
             properties:
               action:
-                description: 'Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.'
+                description: >-
+                  Action: Represents the filter actions which are allowed for the transformation of a message that have been matched by a
+
+                  filter expression.
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -1190,14 +1557,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1252,7 +1634,10 @@ spec:
                 description: 'FilterType: Filter type that is evaluated against a BrokeredMessage.'
                 type: string
               id:
-                description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource ID for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               location:
                 description: 'Location: The geo-location where the resource lives'
@@ -1264,7 +1649,10 @@ spec:
                 description: 'SqlFilter: Properties of sqlFilter'
                 properties:
                   compatibilityLevel:
-                    description: 'CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.'
+                    description: >-
+                      CompatibilityLevel: This property is reserved for future use. An integer value showing the compatibility level,
+
+                      currently hard-coded to 20.
                     type: integer
                   requiresPreprocessing:
                     description: 'RequiresPreprocessing: Value that indicates whether the rule action requires preprocessing.'
@@ -1320,13 +1708,36 @@ spec:
     name: v1api20221001previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20221001preview.NamespacesTopicsSubscriptionsRule Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2022-10-01-preview/Rules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}'
+        description: >-
+          Storage version of v1api20221001preview.NamespacesTopicsSubscriptionsRule
+
+          Generator information:
+
+          - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/preview/2022-10-01-preview/Rules.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}/subscriptions/{subscriptionName}/rules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -1336,15 +1747,26 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               action:
-                description: Storage version of v1api20221001preview.Action Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+                description: >-
+                  Storage version of v1api20221001preview.Action
+
+                  Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter
+
+                  expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -1354,15 +1776,24 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               correlationFilter:
-                description: Storage version of v1api20221001preview.CorrelationFilter Represents the correlation filter expression.
+                description: >-
+                  Storage version of v1api20221001preview.CorrelationFilter
+
+                  Represents the correlation filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   contentType:
                     type: string
@@ -1392,7 +1823,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a servicebus.azure.com/NamespacesTopicsSubscription resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a servicebus.azure.com/NamespacesTopicsSubscription resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -1402,12 +1838,18 @@ spec:
                     type: string
                 type: object
               sqlFilter:
-                description: Storage version of v1api20221001preview.SqlFilter Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+                description: >-
+                  Storage version of v1api20221001preview.SqlFilter
+
+                  Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -1425,15 +1867,26 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               action:
-                description: Storage version of v1api20221001preview.Action_STATUS Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
+                description: >-
+                  Storage version of v1api20221001preview.Action_STATUS
+
+                  Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter
+
+                  expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -1454,14 +1907,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1477,12 +1945,18 @@ spec:
                   type: object
                 type: array
               correlationFilter:
-                description: Storage version of v1api20221001preview.CorrelationFilter_STATUS Represents the correlation filter expression.
+                description: >-
+                  Storage version of v1api20221001preview.CorrelationFilter_STATUS
+
+                  Represents the correlation filter expression.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   contentType:
                     type: string
@@ -1516,12 +1990,18 @@ spec:
               name:
                 type: string
               sqlFilter:
-                description: Storage version of v1api20221001preview.SqlFilter_STATUS Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
+                description: >-
+                  Storage version of v1api20221001preview.SqlFilter_STATUS
+
+                  Represents a filter which is a composition of an expression and an action that is executed in the pub/sub pipeline.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   compatibilityLevel:
                     type: integer
@@ -1531,12 +2011,18 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: Storage version of v1api20221001preview.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
+                description: >-
+                  Storage version of v1api20221001preview.SystemData_STATUS
+
+                  Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
                     type: string

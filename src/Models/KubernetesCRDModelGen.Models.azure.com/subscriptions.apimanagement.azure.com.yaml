@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: subscriptions.apimanagement.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20220801
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimsubscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}'
+        description: >-
+          Generator information:
+
+          - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimsubscriptions.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -61,7 +82,10 @@ spec:
                 description: 'AllowTracing: Determines whether tracing can be enabled'
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 maxLength: 256
                 pattern: ^[^*#&+:<>?]+$
                 type: string
@@ -71,32 +95,47 @@ spec:
                 minLength: 1
                 type: string
               operatorSpec:
-                description: 'OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not passed directly to Azure'
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
                 properties:
                   secrets:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       primaryKey:
-                        description: 'PrimaryKey: indicates where the PrimaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          PrimaryKey: indicates where the PrimaryKey secret should be placed. If omitted, the secret will not be retrieved from
+
+                          Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryKey:
-                        description: 'SecondaryKey: indicates where the SecondaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          SecondaryKey: indicates where the SecondaryKey secret should be placed. If omitted, the secret will not be retrieved
+
+                          from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -105,7 +144,12 @@ spec:
                     type: object
                 type: object
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a apimanagement.azure.com/Service resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -118,7 +162,12 @@ spec:
                 description: 'OwnerReference: User (user id path) for whom subscription is being created in form /users/{userId}'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -138,7 +187,10 @@ spec:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -154,14 +206,28 @@ spec:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
                 - name
                 type: object
               state:
-                description: 'State: Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.'
+                description: >-
+                  State: Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible
+
+                  states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber
+
+                  cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has
+
+                  not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, *
+
+                  cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription
+
+                  reached its expiration date and was deactivated.
                 enum:
                 - active
                 - cancelled
@@ -193,14 +259,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -216,37 +297,73 @@ spec:
                   type: object
                 type: array
               createdDate:
-                description: 'CreatedDate: Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  CreatedDate: Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified
+
+                  by the ISO 8601 standard.
                 type: string
               displayName:
                 description: 'DisplayName: The name of the subscription, or null if the subscription has no name.'
                 type: string
               endDate:
-                description: 'EndDate: Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  EndDate: Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is
+
+                  not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms
+
+                  to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               expirationDate:
-                description: 'ExpirationDate: Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  ExpirationDate: Subscription expiration date. The setting is for audit purposes only and the subscription is not
+
+                  automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the
+
+                  following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               id:
-                description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource ID for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               name:
                 description: 'Name: The name of the resource'
                 type: string
               notificationDate:
-                description: 'NotificationDate: Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  NotificationDate: Upcoming subscription expiration notification date. The date conforms to the following format:
+
+                  `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               ownerId:
-                description: 'OwnerId: The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.'
+                description: >-
+                  OwnerId: The user resource identifier of the subscription owner. The value is a valid relative URL in the format of
+
+                  /users/{userId} where {userId} is a user identifier.
                 type: string
               scope:
                 description: 'Scope: Scope like /products/{productId} or /apis or /apis/{apiId}.'
                 type: string
               startDate:
-                description: 'StartDate: Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  StartDate: Subscription activation date. The setting is for audit purposes only and the subscription is not
+
+                  automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to
+
+                  the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               state:
-                description: 'State: Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.'
+                description: >-
+                  State: Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription
+
+                  is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been
+
+                  made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been
+
+                  denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, *
+
+                  expired – the subscription reached its expiration date and was deactivated.
                 type: string
               stateComment:
                 description: "StateComment: Optional subscription comment added by an administrator when the state is changed to the 'rejected'."
@@ -276,13 +393,36 @@ spec:
     name: v1api20220801storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20220801.Subscription Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimsubscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}'
+        description: >-
+          Storage version of v1api20220801.Subscription
+
+          Generator information:
+
+          - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimsubscriptions.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -292,22 +432,34 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               allowTracing:
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               displayName:
                 type: string
               operatorSpec:
-                description: Storage version of v1api20220801.SubscriptionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                description: >-
+                  Storage version of v1api20220801.SubscriptionOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   secrets:
                     description: Storage version of v1api20220801.SubscriptionOperatorSecrets
@@ -315,29 +467,44 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       primaryKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -348,7 +515,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a apimanagement.azure.com/Service resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -361,7 +533,12 @@ spec:
                 description: 'OwnerReference: User (user id path) for whom subscription is being created in form /users/{userId}'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -375,13 +552,19 @@ spec:
                     type: string
                 type: object
               primaryKey:
-                description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                description: >-
+                  SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                  the resource it is on.
                 properties:
                   key:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -390,13 +573,19 @@ spec:
               scope:
                 type: string
               secondaryKey:
-                description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                description: >-
+                  SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                  the resource it is on.
                 properties:
                   key:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -413,7 +602,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               allowTracing:
                 type: boolean
@@ -429,14 +621,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -499,13 +706,34 @@ spec:
     name: v1api20230501preview
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/preview/2023-05-01-preview/apimsubscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}'
+        description: >-
+          Generator information:
+
+          - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/preview/2023-05-01-preview/apimsubscriptions.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -515,7 +743,10 @@ spec:
                 description: 'AllowTracing: Determines whether tracing can be enabled'
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 maxLength: 256
                 pattern: ^[^*#&+:<>?]+$
                 type: string
@@ -525,32 +756,47 @@ spec:
                 minLength: 1
                 type: string
               operatorSpec:
-                description: 'OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not passed directly to Azure'
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
                 properties:
                   secrets:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       primaryKey:
-                        description: 'PrimaryKey: indicates where the PrimaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          PrimaryKey: indicates where the PrimaryKey secret should be placed. If omitted, the secret will not be retrieved from
+
+                          Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryKey:
-                        description: 'SecondaryKey: indicates where the SecondaryKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          SecondaryKey: indicates where the SecondaryKey secret should be placed. If omitted, the secret will not be retrieved
+
+                          from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -559,7 +805,12 @@ spec:
                     type: object
                 type: object
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a apimanagement.azure.com/Service resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -572,7 +823,12 @@ spec:
                 description: 'OwnerReference: User (user id path) for whom subscription is being created in form /users/{userId}'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -592,7 +848,10 @@ spec:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -608,14 +867,28 @@ spec:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
                 - name
                 type: object
               state:
-                description: 'State: Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.'
+                description: >-
+                  State: Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible
+
+                  states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber
+
+                  cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has
+
+                  not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, *
+
+                  cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription
+
+                  reached its expiration date and was deactivated.
                 enum:
                 - active
                 - cancelled
@@ -647,14 +920,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -670,37 +958,73 @@ spec:
                   type: object
                 type: array
               createdDate:
-                description: 'CreatedDate: Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  CreatedDate: Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified
+
+                  by the ISO 8601 standard.
                 type: string
               displayName:
                 description: 'DisplayName: The name of the subscription, or null if the subscription has no name.'
                 type: string
               endDate:
-                description: 'EndDate: Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  EndDate: Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is
+
+                  not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms
+
+                  to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               expirationDate:
-                description: 'ExpirationDate: Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  ExpirationDate: Subscription expiration date. The setting is for audit purposes only and the subscription is not
+
+                  automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the
+
+                  following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               id:
-                description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource ID for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               name:
                 description: 'Name: The name of the resource'
                 type: string
               notificationDate:
-                description: 'NotificationDate: Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  NotificationDate: Upcoming subscription expiration notification date. The date conforms to the following format:
+
+                  `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               ownerId:
-                description: 'OwnerId: The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.'
+                description: >-
+                  OwnerId: The user resource identifier of the subscription owner. The value is a valid relative URL in the format of
+
+                  /users/{userId} where {userId} is a user identifier.
                 type: string
               scope:
                 description: 'Scope: Scope like /products/{productId} or /apis or /apis/{apiId}.'
                 type: string
               startDate:
-                description: 'StartDate: Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.'
+                description: >-
+                  StartDate: Subscription activation date. The setting is for audit purposes only and the subscription is not
+
+                  automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to
+
+                  the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               state:
-                description: 'State: Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.'
+                description: >-
+                  State: Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription
+
+                  is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been
+
+                  made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been
+
+                  denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, *
+
+                  expired – the subscription reached its expiration date and was deactivated.
                 type: string
               stateComment:
                 description: "StateComment: Optional subscription comment added by an administrator when the state is changed to the 'rejected'."
@@ -730,13 +1054,36 @@ spec:
     name: v1api20230501previewstorage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20230501preview.Subscription Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/preview/2023-05-01-preview/apimsubscriptions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}'
+        description: >-
+          Storage version of v1api20230501preview.Subscription
+
+          Generator information:
+
+          - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/preview/2023-05-01-preview/apimsubscriptions.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/subscriptions/{sid}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -746,22 +1093,34 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               allowTracing:
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               displayName:
                 type: string
               operatorSpec:
-                description: Storage version of v1api20230501preview.SubscriptionOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                description: >-
+                  Storage version of v1api20230501preview.SubscriptionOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   secrets:
                     description: Storage version of v1api20230501preview.SubscriptionOperatorSecrets
@@ -769,29 +1128,44 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       primaryKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -802,7 +1176,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a apimanagement.azure.com/Service resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a apimanagement.azure.com/Service resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -815,7 +1194,12 @@ spec:
                 description: 'OwnerReference: User (user id path) for whom subscription is being created in form /users/{userId}'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -829,13 +1213,19 @@ spec:
                     type: string
                 type: object
               primaryKey:
-                description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                description: >-
+                  SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                  the resource it is on.
                 properties:
                   key:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -844,13 +1234,19 @@ spec:
               scope:
                 type: string
               secondaryKey:
-                description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                description: >-
+                  SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                  the resource it is on.
                 properties:
                   key:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -867,7 +1263,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               allowTracing:
                 type: boolean
@@ -883,14 +1282,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.

@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   name: providerconfigs.helm.crossplane.io
 spec:
   group: helm.crossplane.io
@@ -31,10 +31,26 @@ spec:
         description: A ProviderConfig configures a Helm 'provider', i.e. a connection to a particular
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -42,10 +58,16 @@ spec:
             description: A ProviderConfigSpec defines the desired state of a Provider.
             properties:
               credentials:
-                description: Credentials used to connect to the Kubernetes API. Typically a kubeconfig file. Use InjectedIdentity for in-cluster config.
+                description: >-
+                  Credentials used to connect to the Kubernetes API. Typically a
+
+                  kubeconfig file. Use InjectedIdentity for in-cluster config.
                 properties:
                   env:
-                    description: Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.
+                    description: >-
+                      Env is a reference to an environment variable that contains credentials
+
+                      that must be used to connect to the provider.
                     properties:
                       name:
                         description: Name is the name of an environment variable.
@@ -54,7 +76,10 @@ spec:
                     - name
                     type: object
                   fs:
-                    description: Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.
+                    description: >-
+                      Fs is a reference to a filesystem location that contains credentials that
+
+                      must be used to connect to the provider.
                     properties:
                       path:
                         description: Path is a filesystem path.
@@ -63,7 +88,10 @@ spec:
                     - path
                     type: object
                   secretRef:
-                    description: A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.
+                    description: >-
+                      A SecretRef is a reference to a secret key that contains the credentials
+
+                      that must be used to connect to the provider.
                     properties:
                       key:
                         description: The key to select.
@@ -92,10 +120,18 @@ spec:
                 - source
                 type: object
               identity:
-                description: Identity used to authenticate to the Kubernetes API. The identity credentials can be used to supplement kubeconfig 'credentials', for example by configuring a bearer token source such as OAuth.
+                description: >-
+                  Identity used to authenticate to the Kubernetes API. The identity
+
+                  credentials can be used to supplement kubeconfig 'credentials', for
+
+                  example by configuring a bearer token source such as OAuth.
                 properties:
                   env:
-                    description: Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.
+                    description: >-
+                      Env is a reference to an environment variable that contains credentials
+
+                      that must be used to connect to the provider.
                     properties:
                       name:
                         description: Name is the name of an environment variable.
@@ -104,7 +140,10 @@ spec:
                     - name
                     type: object
                   fs:
-                    description: Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.
+                    description: >-
+                      Fs is a reference to a filesystem location that contains credentials that
+
+                      must be used to connect to the provider.
                     properties:
                       path:
                         description: Path is a filesystem path.
@@ -113,7 +152,10 @@ spec:
                     - path
                     type: object
                   secretRef:
-                    description: A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.
+                    description: >-
+                      A SecretRef is a reference to a secret key that contains the credentials
+
+                      that must be used to connect to the provider.
                     properties:
                       key:
                         description: The key to select.
@@ -159,12 +201,27 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: LastTransitionTime is the last time this condition transitioned from one status to another.
+                      description: >-
+                        LastTransitionTime is the last time this condition transitioned from one
+
+                        status to another.
                       format: date-time
                       type: string
                     message:
-                      description: A Message containing details about this condition's last transition from one status to another, if any.
+                      description: >-
+                        A Message containing details about this condition's last transition from
+
+                        one status to another, if any.
                       type: string
+                    observedGeneration:
+                      description: >-
+                        ObservedGeneration represents the .metadata.generation that the condition was set based upon.
+
+                        For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
+                      format: int64
+                      type: integer
                     reason:
                       description: A Reason for this condition's last transition from one status to another.
                       type: string
@@ -172,7 +229,10 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: Type of this condition. At most one of each condition type may apply to a resource at any point in time.
+                      description: >-
+                        Type of this condition. At most one of each condition type may apply to
+
+                        a resource at any point in time.
                       type: string
                   required:
                   - lastTransitionTime
@@ -210,10 +270,26 @@ spec:
         description: A ProviderConfig configures a Helm 'provider', i.e. a connection to a particular
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -221,10 +297,16 @@ spec:
             description: A ProviderConfigSpec defines the desired state of a Provider.
             properties:
               credentials:
-                description: Credentials used to connect to the Kubernetes API. Typically a kubeconfig file. Use InjectedIdentity for in-cluster config.
+                description: >-
+                  Credentials used to connect to the Kubernetes API. Typically a
+
+                  kubeconfig file. Use InjectedIdentity for in-cluster config.
                 properties:
                   env:
-                    description: Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.
+                    description: >-
+                      Env is a reference to an environment variable that contains credentials
+
+                      that must be used to connect to the provider.
                     properties:
                       name:
                         description: Name is the name of an environment variable.
@@ -233,7 +315,10 @@ spec:
                     - name
                     type: object
                   fs:
-                    description: Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.
+                    description: >-
+                      Fs is a reference to a filesystem location that contains credentials that
+
+                      must be used to connect to the provider.
                     properties:
                       path:
                         description: Path is a filesystem path.
@@ -242,7 +327,10 @@ spec:
                     - path
                     type: object
                   secretRef:
-                    description: A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.
+                    description: >-
+                      A SecretRef is a reference to a secret key that contains the credentials
+
+                      that must be used to connect to the provider.
                     properties:
                       key:
                         description: The key to select.
@@ -271,10 +359,18 @@ spec:
                 - source
                 type: object
               identity:
-                description: Identity used to authenticate to the Kubernetes API. The identity credentials can be used to supplement kubeconfig 'credentials', for example by configuring a bearer token source such as OAuth.
+                description: >-
+                  Identity used to authenticate to the Kubernetes API. The identity
+
+                  credentials can be used to supplement kubeconfig 'credentials', for
+
+                  example by configuring a bearer token source such as OAuth.
                 properties:
                   env:
-                    description: Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.
+                    description: >-
+                      Env is a reference to an environment variable that contains credentials
+
+                      that must be used to connect to the provider.
                     properties:
                       name:
                         description: Name is the name of an environment variable.
@@ -283,7 +379,10 @@ spec:
                     - name
                     type: object
                   fs:
-                    description: Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.
+                    description: >-
+                      Fs is a reference to a filesystem location that contains credentials that
+
+                      must be used to connect to the provider.
                     properties:
                       path:
                         description: Path is a filesystem path.
@@ -292,7 +391,10 @@ spec:
                     - path
                     type: object
                   secretRef:
-                    description: A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.
+                    description: >-
+                      A SecretRef is a reference to a secret key that contains the credentials
+
+                      that must be used to connect to the provider.
                     properties:
                       key:
                         description: The key to select.
@@ -339,12 +441,27 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: LastTransitionTime is the last time this condition transitioned from one status to another.
+                      description: >-
+                        LastTransitionTime is the last time this condition transitioned from one
+
+                        status to another.
                       format: date-time
                       type: string
                     message:
-                      description: A Message containing details about this condition's last transition from one status to another, if any.
+                      description: >-
+                        A Message containing details about this condition's last transition from
+
+                        one status to another, if any.
                       type: string
+                    observedGeneration:
+                      description: >-
+                        ObservedGeneration represents the .metadata.generation that the condition was set based upon.
+
+                        For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
+                      format: int64
+                      type: integer
                     reason:
                       description: A Reason for this condition's last transition from one status to another.
                       type: string
@@ -352,7 +469,10 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: Type of this condition. At most one of each condition type may apply to a resource at any point in time.
+                      description: >-
+                        Type of this condition. At most one of each condition type may apply to
+
+                        a resource at any point in time.
                       type: string
                   required:
                   - lastTransitionTime

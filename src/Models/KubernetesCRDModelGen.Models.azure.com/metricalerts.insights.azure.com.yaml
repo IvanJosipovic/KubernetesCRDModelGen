@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: metricalerts.insights.azure.com
 spec:
   conversion:
@@ -45,20 +45,44 @@ spec:
     name: v1api20180301
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2018-03-01/metricAlert_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2018-03-01/metricAlert_API.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               actions:
-                description: 'Actions: the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.'
+                description: >-
+                  Actions: the array of actions that are performed when the alert rule becomes active, and when an alert condition is
+
+                  resolved.
                 items:
                   description: An alert action.
                   properties:
@@ -68,7 +92,10 @@ spec:
                     webHookProperties:
                       additionalProperties:
                         type: string
-                      description: 'WebHookProperties: This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.'
+                      description: >-
+                        WebHookProperties: This field allows specifying custom properties, which would be appended to the alert payload sent as
+
+                        input to the webhook.
                       type: object
                   type: object
                 type: array
@@ -76,7 +103,10 @@ spec:
                 description: 'AutoMitigate: the flag that indicates whether the alert should be auto resolved or not. The default is true.'
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               criteria:
                 description: 'Criteria: defines the specific alert criteria information.'
@@ -100,7 +130,10 @@ spec:
                                     x-kubernetes-preserve-unknown-fields: true
                                   type: object
                                 alertSensitivity:
-                                  description: 'AlertSensitivity: The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.'
+                                  description: >-
+                                    AlertSensitivity: The extent of deviation required to trigger an alert. This will affect how tight the threshold is to
+
+                                    the metric series pattern.
                                   enum:
                                   - High
                                   - Low
@@ -134,20 +167,32 @@ spec:
                                     type: object
                                   type: array
                                 failingPeriods:
-                                  description: 'FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an alert.'
+                                  description: >-
+                                    FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an
+
+                                    alert.
                                   properties:
                                     minFailingPeriodsToAlert:
-                                      description: 'MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.'
+                                      description: >-
+                                        MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to
+
+                                        numberOfEvaluationPeriods.
                                       type: number
                                     numberOfEvaluationPeriods:
-                                      description: 'NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.'
+                                      description: >-
+                                        NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the
+
+                                        aggregation granularity (windowSize) and the selected number of aggregated points.
                                       type: number
                                   required:
                                   - minFailingPeriodsToAlert
                                   - numberOfEvaluationPeriods
                                   type: object
                                 ignoreDataBefore:
-                                  description: 'IgnoreDataBefore: Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)'
+                                  description: >-
+                                    IgnoreDataBefore: Use this option to set the date from which to start learning the metric historical data and calculate
+
+                                    the dynamic thresholds (in ISO8601 format)
                                   type: string
                                 metricName:
                                   description: 'MetricName: Name of the metric.'
@@ -166,7 +211,10 @@ spec:
                                   - LessThan
                                   type: string
                                 skipMetricValidation:
-                                  description: "SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped."
+                                  description: >-
+                                    SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric
+
+                                    validation to be skipped.
                                   type: boolean
                                 timeAggregation:
                                   description: 'TimeAggregation: the criteria time aggregation types.'
@@ -239,7 +287,10 @@ spec:
                                   - LessThanOrEqual
                                   type: string
                                 skipMetricValidation:
-                                  description: "SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped."
+                                  description: >-
+                                    SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric
+
+                                    validation to be skipped.
                                   type: boolean
                                 threshold:
                                   description: 'Threshold: the criteria threshold value that activates the alert.'
@@ -332,7 +383,10 @@ spec:
                               - LessThanOrEqual
                               type: string
                             skipMetricValidation:
-                              description: "SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped."
+                              description: >-
+                                SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric
+
+                                validation to be skipped.
                               type: boolean
                             threshold:
                               description: 'Threshold: the criteria threshold value that activates the alert.'
@@ -374,7 +428,12 @@ spec:
                         description: 'ComponentReference: The Application Insights resource Id.'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -418,7 +477,12 @@ spec:
                 description: 'Location: Resource location'
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -433,7 +497,12 @@ spec:
                   description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
-                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                      description: >-
+                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                       type: string
                     group:
@@ -456,13 +525,22 @@ spec:
                 description: 'Tags: Resource tags'
                 type: object
               targetResourceRegion:
-                description: 'TargetResourceRegion: the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.'
+                description: >-
+                  TargetResourceRegion: the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope
+
+                  contains a subscription, resource group, or more than one resource.
                 type: string
               targetResourceType:
-                description: 'TargetResourceType: the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.'
+                description: >-
+                  TargetResourceType: the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the
+
+                  scope contains a subscription, resource group, or more than one resource.
                 type: string
               windowSize:
-                description: 'WindowSize: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.'
+                description: >-
+                  WindowSize: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the
+
+                  threshold.
                 type: string
             required:
             - criteria
@@ -477,7 +555,10 @@ spec:
           status:
             properties:
               actions:
-                description: 'Actions: the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.'
+                description: >-
+                  Actions: the array of actions that are performed when the alert rule becomes active, and when an alert condition is
+
+                  resolved.
                 items:
                   description: An alert action.
                   properties:
@@ -487,7 +568,10 @@ spec:
                     webHookProperties:
                       additionalProperties:
                         type: string
-                      description: 'WebHookProperties: This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.'
+                      description: >-
+                        WebHookProperties: This field allows specifying custom properties, which would be appended to the alert payload sent as
+
+                        input to the webhook.
                       type: object
                   type: object
                 type: array
@@ -507,14 +591,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -551,7 +650,10 @@ spec:
                                     x-kubernetes-preserve-unknown-fields: true
                                   type: object
                                 alertSensitivity:
-                                  description: 'AlertSensitivity: The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.'
+                                  description: >-
+                                    AlertSensitivity: The extent of deviation required to trigger an alert. This will affect how tight the threshold is to
+
+                                    the metric series pattern.
                                   type: string
                                 criterionType:
                                   description: 'CriterionType: Specifies the type of threshold criteria'
@@ -575,17 +677,29 @@ spec:
                                     type: object
                                   type: array
                                 failingPeriods:
-                                  description: 'FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an alert.'
+                                  description: >-
+                                    FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an
+
+                                    alert.
                                   properties:
                                     minFailingPeriodsToAlert:
-                                      description: 'MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.'
+                                      description: >-
+                                        MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to
+
+                                        numberOfEvaluationPeriods.
                                       type: number
                                     numberOfEvaluationPeriods:
-                                      description: 'NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.'
+                                      description: >-
+                                        NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the
+
+                                        aggregation granularity (windowSize) and the selected number of aggregated points.
                                       type: number
                                   type: object
                                 ignoreDataBefore:
-                                  description: 'IgnoreDataBefore: Use this option to set the date from which to start learning the metric historical data and calculate the dynamic thresholds (in ISO8601 format)'
+                                  description: >-
+                                    IgnoreDataBefore: Use this option to set the date from which to start learning the metric historical data and calculate
+
+                                    the dynamic thresholds (in ISO8601 format)
                                   type: string
                                 metricName:
                                   description: 'MetricName: Name of the metric.'
@@ -600,7 +714,10 @@ spec:
                                   description: 'Operator: The operator used to compare the metric value against the threshold.'
                                   type: string
                                 skipMetricValidation:
-                                  description: "SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped."
+                                  description: >-
+                                    SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric
+
+                                    validation to be skipped.
                                   type: boolean
                                 timeAggregation:
                                   description: 'TimeAggregation: the criteria time aggregation types.'
@@ -647,7 +764,10 @@ spec:
                                   description: 'Operator: the criteria operator.'
                                   type: string
                                 skipMetricValidation:
-                                  description: "SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped."
+                                  description: >-
+                                    SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric
+
+                                    validation to be skipped.
                                   type: boolean
                                 threshold:
                                   description: 'Threshold: the criteria threshold value that activates the alert.'
@@ -711,7 +831,10 @@ spec:
                               description: 'Operator: the criteria operator.'
                               type: string
                             skipMetricValidation:
-                              description: "SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric validation to be skipped."
+                              description: >-
+                                SkipMetricValidation: Allows creating an alert rule on a custom metric that isn't yet emitted, by causing the metric
+
+                                validation to be skipped.
                               type: boolean
                             threshold:
                               description: 'Threshold: the criteria threshold value that activates the alert.'
@@ -784,16 +907,25 @@ spec:
                 description: 'Tags: Resource tags'
                 type: object
               targetResourceRegion:
-                description: 'TargetResourceRegion: the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.'
+                description: >-
+                  TargetResourceRegion: the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope
+
+                  contains a subscription, resource group, or more than one resource.
                 type: string
               targetResourceType:
-                description: 'TargetResourceType: the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.'
+                description: >-
+                  TargetResourceType: the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the
+
+                  scope contains a subscription, resource group, or more than one resource.
                 type: string
               type:
                 description: 'Type: Azure resource type'
                 type: string
               windowSize:
-                description: 'WindowSize: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.'
+                description: >-
+                  WindowSize: the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the
+
+                  threshold.
                 type: string
             type: object
         type: object
@@ -817,13 +949,36 @@ spec:
     name: v1api20180301storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20180301.MetricAlert Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2018-03-01/metricAlert_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}'
+        description: >-
+          Storage version of v1api20180301.MetricAlert
+
+          Generator information:
+
+          - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2018-03-01/metricAlert_API.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/metricAlerts/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -833,16 +988,25 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
                 items:
-                  description: Storage version of v1api20180301.MetricAlertAction An alert action.
+                  description: >-
+                    Storage version of v1api20180301.MetricAlertAction
+
+                    An alert action.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     actionGroupId:
                       type: string
@@ -855,7 +1019,10 @@ spec:
               autoMitigate:
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               criteria:
                 description: Storage version of v1api20180301.MetricAlertCriteria
@@ -863,7 +1030,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   microsoftAzureMonitorMultipleResourceMultipleMetricCriteria:
                     description: Storage version of v1api20180301.MetricAlertMultipleResourceMultipleMetricCriteria
@@ -871,7 +1041,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       additionalProperties:
                         additionalProperties:
@@ -884,7 +1057,10 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             dynamicThresholdCriterion:
                               description: Storage version of v1api20180301.DynamicMetricCriteria
@@ -892,7 +1068,10 @@ spec:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 additionalProperties:
                                   additionalProperties:
@@ -904,12 +1083,18 @@ spec:
                                   type: string
                                 dimensions:
                                   items:
-                                    description: Storage version of v1api20180301.MetricDimension Specifies a metric dimension.
+                                    description: >-
+                                      Storage version of v1api20180301.MetricDimension
+
+                                      Specifies a metric dimension.
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
                                           type: string
-                                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                        description: >-
+                                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                          resources, allowing for full fidelity round trip conversions
                                         type: object
                                       name:
                                         type: string
@@ -922,12 +1107,18 @@ spec:
                                     type: object
                                   type: array
                                 failingPeriods:
-                                  description: Storage version of v1api20180301.DynamicThresholdFailingPeriods The minimum number of violations required within the selected lookback time window required to raise an alert.
+                                  description: >-
+                                    Storage version of v1api20180301.DynamicThresholdFailingPeriods
+
+                                    The minimum number of violations required within the selected lookback time window required to raise an alert.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      description: >-
+                                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                        resources, allowing for full fidelity round trip conversions
                                       type: object
                                     minFailingPeriodsToAlert:
                                       type: number
@@ -955,7 +1146,10 @@ spec:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 additionalProperties:
                                   additionalProperties:
@@ -965,12 +1159,18 @@ spec:
                                   type: string
                                 dimensions:
                                   items:
-                                    description: Storage version of v1api20180301.MetricDimension Specifies a metric dimension.
+                                    description: >-
+                                      Storage version of v1api20180301.MetricDimension
+
+                                      Specifies a metric dimension.
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
                                           type: string
-                                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                        description: >-
+                                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                          resources, allowing for full fidelity round trip conversions
                                         type: object
                                       name:
                                         type: string
@@ -1008,7 +1208,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       additionalProperties:
                         additionalProperties:
@@ -1021,7 +1224,10 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             additionalProperties:
                               additionalProperties:
@@ -1031,12 +1237,18 @@ spec:
                               type: string
                             dimensions:
                               items:
-                                description: Storage version of v1api20180301.MetricDimension Specifies a metric dimension.
+                                description: >-
+                                  Storage version of v1api20180301.MetricDimension
+
+                                  Specifies a metric dimension.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                    description: >-
+                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                      resources, allowing for full fidelity round trip conversions
                                     type: object
                                   name:
                                     type: string
@@ -1073,7 +1285,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       additionalProperties:
                         additionalProperties:
@@ -1083,7 +1298,12 @@ spec:
                         description: 'ComponentReference: The Application Insights resource Id.'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -1117,7 +1337,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -1131,7 +1356,12 @@ spec:
                   description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
-                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                      description: >-
+                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                       type: string
                     group:
@@ -1166,16 +1396,25 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
                 items:
-                  description: Storage version of v1api20180301.MetricAlertAction_STATUS An alert action.
+                  description: >-
+                    Storage version of v1api20180301.MetricAlertAction_STATUS
+
+                    An alert action.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     actionGroupId:
                       type: string
@@ -1199,14 +1438,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1227,7 +1481,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   microsoftAzureMonitorMultipleResourceMultipleMetricCriteria:
                     description: Storage version of v1api20180301.MetricAlertMultipleResourceMultipleMetricCriteria_STATUS
@@ -1235,7 +1492,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       additionalProperties:
                         additionalProperties:
@@ -1248,7 +1508,10 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             dynamicThresholdCriterion:
                               description: Storage version of v1api20180301.DynamicMetricCriteria_STATUS
@@ -1256,7 +1519,10 @@ spec:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 additionalProperties:
                                   additionalProperties:
@@ -1268,12 +1534,18 @@ spec:
                                   type: string
                                 dimensions:
                                   items:
-                                    description: Storage version of v1api20180301.MetricDimension_STATUS Specifies a metric dimension.
+                                    description: >-
+                                      Storage version of v1api20180301.MetricDimension_STATUS
+
+                                      Specifies a metric dimension.
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
                                           type: string
-                                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                        description: >-
+                                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                          resources, allowing for full fidelity round trip conversions
                                         type: object
                                       name:
                                         type: string
@@ -1286,12 +1558,18 @@ spec:
                                     type: object
                                   type: array
                                 failingPeriods:
-                                  description: Storage version of v1api20180301.DynamicThresholdFailingPeriods_STATUS The minimum number of violations required within the selected lookback time window required to raise an alert.
+                                  description: >-
+                                    Storage version of v1api20180301.DynamicThresholdFailingPeriods_STATUS
+
+                                    The minimum number of violations required within the selected lookback time window required to raise an alert.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      description: >-
+                                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                        resources, allowing for full fidelity round trip conversions
                                       type: object
                                     minFailingPeriodsToAlert:
                                       type: number
@@ -1319,7 +1597,10 @@ spec:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 additionalProperties:
                                   additionalProperties:
@@ -1329,12 +1610,18 @@ spec:
                                   type: string
                                 dimensions:
                                   items:
-                                    description: Storage version of v1api20180301.MetricDimension_STATUS Specifies a metric dimension.
+                                    description: >-
+                                      Storage version of v1api20180301.MetricDimension_STATUS
+
+                                      Specifies a metric dimension.
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
                                           type: string
-                                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                        description: >-
+                                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                          resources, allowing for full fidelity round trip conversions
                                         type: object
                                       name:
                                         type: string
@@ -1372,7 +1659,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       additionalProperties:
                         additionalProperties:
@@ -1385,7 +1675,10 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             additionalProperties:
                               additionalProperties:
@@ -1395,12 +1688,18 @@ spec:
                               type: string
                             dimensions:
                               items:
-                                description: Storage version of v1api20180301.MetricDimension_STATUS Specifies a metric dimension.
+                                description: >-
+                                  Storage version of v1api20180301.MetricDimension_STATUS
+
+                                  Specifies a metric dimension.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                    description: >-
+                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                      resources, allowing for full fidelity round trip conversions
                                     type: object
                                   name:
                                     type: string
@@ -1437,7 +1736,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       additionalProperties:
                         additionalProperties:

@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: snapshots.compute.azure.com
 spec:
   conversion:
@@ -45,20 +45,44 @@ spec:
     name: v1api20200930
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2020-09-30/disk.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2020-09-30/disk.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               creationData:
                 description: 'CreationData: Disk source information. CreationData information cannot be changed after the disk has been created.'
@@ -75,16 +99,27 @@ spec:
                     - Upload
                     type: string
                   galleryImageReference:
-                    description: 'GalleryImageReference: Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.'
+                    description: >-
+                      GalleryImageReference: Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of
+
+                      the shared galley image version from which to create a disk.
                     properties:
                       lun:
-                        description: "Lun: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null."
+                        description: >-
+                          Lun: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the
+
+                          image to use. For OS disks, this field is null.
                         type: integer
                       reference:
                         description: 'Reference: A relative uri containing either a Platform Image Repository or user image reference.'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -104,13 +139,21 @@ spec:
                     description: 'ImageReference: Disk source information.'
                     properties:
                       lun:
-                        description: "Lun: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null."
+                        description: >-
+                          Lun: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the
+
+                          image to use. For OS disks, this field is null.
                         type: integer
                       reference:
                         description: 'Reference: A relative uri containing either a Platform Image Repository or user image reference.'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -133,7 +176,12 @@ spec:
                     description: 'SourceResourceReference: If createOption is Copy, this is the ARM id of the source snapshot or disk.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -150,10 +198,18 @@ spec:
                     description: 'SourceUri: If createOption is Import, this is the URI of a blob to be imported into a managed disk.'
                     type: string
                   storageAccountId:
-                    description: 'StorageAccountId: Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.'
+                    description: >-
+                      StorageAccountId: Required if createOption is Import. The Azure Resource Manager identifier of the storage account
+
+                      containing the blob to import as a disk.
                     type: string
                   uploadSizeBytes:
-                    description: 'UploadSizeBytes: If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).'
+                    description: >-
+                      UploadSizeBytes: If createOption is Upload, this is the size of the contents of the upload including the VHD footer.
+
+                      This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512
+
+                      bytes for the VHD footer).
                     type: integer
                 required:
                 - createOption
@@ -162,7 +218,12 @@ spec:
                 description: 'DiskAccessReference: ARM id of the DiskAccess resource for using private endpoints on disks.'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -176,7 +237,12 @@ spec:
                     type: string
                 type: object
               diskSizeGB:
-                description: "DiskSizeGB: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size."
+                description: >-
+                  DiskSizeGB: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to
+
+                  create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only
+
+                  allowed if the disk is not attached to a running VM, and can only increase the disk's size.
                 type: integer
               diskState:
                 description: 'DiskState: The state of the snapshot.'
@@ -195,7 +261,12 @@ spec:
                     description: 'DiskEncryptionSetReference: ResourceId of the disk encryption set to use for enabling encryption at rest.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -217,10 +288,18 @@ spec:
                     type: string
                 type: object
               encryptionSettingsCollection:
-                description: 'EncryptionSettingsCollection: Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.'
+                description: >-
+                  EncryptionSettingsCollection: Encryption settings collection used be Azure Disk Encryption, can contain multiple
+
+                  encryption settings per disk or snapshot.
                 properties:
                   enabled:
-                    description: 'Enabled: Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.'
+                    description: >-
+                      Enabled: Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set
+
+                      this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is
+
+                      null in the request object, the existing settings remain unchanged.
                     type: boolean
                   encryptionSettings:
                     description: 'EncryptionSettings: A collection of encryption settings, one for each disk volume.'
@@ -240,7 +319,12 @@ spec:
                                   description: 'Reference: Resource Id'
                                   properties:
                                     armId:
-                                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                      description: >-
+                                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                       type: string
                                     group:
@@ -259,7 +343,10 @@ spec:
                           - sourceVault
                           type: object
                         keyEncryptionKey:
-                          description: 'KeyEncryptionKey: Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.'
+                          description: >-
+                            KeyEncryptionKey: Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when
+
+                            provided is used to unwrap the disk encryption key.
                           properties:
                             keyUrl:
                               description: 'KeyUrl: Url pointing to a key or secret in KeyVault'
@@ -271,7 +358,12 @@ spec:
                                   description: 'Reference: Resource Id'
                                   properties:
                                     armId:
-                                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                      description: >-
+                                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                       type: string
                                     group:
@@ -292,7 +384,10 @@ spec:
                       type: object
                     type: array
                   encryptionSettingsVersion:
-                    description: "EncryptionSettingsVersion: Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption."
+                    description: >-
+                      EncryptionSettingsVersion: Describes what type of encryption is used for the disks. Once this field is set, it cannot be
+
+                      overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.
                     type: string
                 required:
                 - enabled
@@ -316,7 +411,10 @@ spec:
                 - V2
                 type: string
               incremental:
-                description: 'Incremental: Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.'
+                description: >-
+                  Incremental: Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full
+
+                  snapshots and can be diffed.
                 type: boolean
               location:
                 description: 'Location: Resource location'
@@ -335,7 +433,12 @@ spec:
                 - Windows
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -351,7 +454,10 @@ spec:
                     description: 'Name: The plan ID.'
                     type: string
                   product:
-                    description: 'Product: Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.'
+                    description: >-
+                      Product: Specifies the product of the image from the marketplace. This is the same value as Offer under the
+
+                      imageReference element.
                     type: string
                   promotionCode:
                     description: 'PromotionCode: The Offer Promotion Code.'
@@ -365,7 +471,10 @@ spec:
                 - publisher
                 type: object
               sku:
-                description: 'Sku: The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental  snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot'
+                description: >-
+                  Sku: The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for
+
+                  incremental  snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
                 properties:
                   name:
                     description: 'Name: The sku name.'
@@ -401,14 +510,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -430,13 +554,19 @@ spec:
                     description: "CreateOption: This enumerates the possible sources of a disk's creation."
                     type: string
                   galleryImageReference:
-                    description: 'GalleryImageReference: Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.'
+                    description: >-
+                      GalleryImageReference: Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of
+
+                      the shared galley image version from which to create a disk.
                     properties:
                       id:
                         description: 'Id: A relative uri containing either a Platform Image Repository or user image reference.'
                         type: string
                       lun:
-                        description: "Lun: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null."
+                        description: >-
+                          Lun: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the
+
+                          image to use. For OS disks, this field is null.
                         type: integer
                     type: object
                   imageReference:
@@ -446,7 +576,10 @@ spec:
                         description: 'Id: A relative uri containing either a Platform Image Repository or user image reference.'
                         type: string
                       lun:
-                        description: "Lun: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null."
+                        description: >-
+                          Lun: If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the
+
+                          image to use. For OS disks, this field is null.
                         type: integer
                     type: object
                   logicalSectorSize:
@@ -462,10 +595,18 @@ spec:
                     description: 'SourceUri: If createOption is Import, this is the URI of a blob to be imported into a managed disk.'
                     type: string
                   storageAccountId:
-                    description: 'StorageAccountId: Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.'
+                    description: >-
+                      StorageAccountId: Required if createOption is Import. The Azure Resource Manager identifier of the storage account
+
+                      containing the blob to import as a disk.
                     type: string
                   uploadSizeBytes:
-                    description: 'UploadSizeBytes: If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).'
+                    description: >-
+                      UploadSizeBytes: If createOption is Upload, this is the size of the contents of the upload including the VHD footer.
+
+                      This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512
+
+                      bytes for the VHD footer).
                     type: integer
                 type: object
               diskAccessId:
@@ -475,7 +616,12 @@ spec:
                 description: 'DiskSizeBytes: The size of the disk in bytes. This field is read only.'
                 type: integer
               diskSizeGB:
-                description: "DiskSizeGB: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size."
+                description: >-
+                  DiskSizeGB: If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to
+
+                  create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only
+
+                  allowed if the disk is not attached to a running VM, and can only increase the disk's size.
                 type: integer
               diskState:
                 description: 'DiskState: The state of the snapshot.'
@@ -491,10 +637,18 @@ spec:
                     type: string
                 type: object
               encryptionSettingsCollection:
-                description: 'EncryptionSettingsCollection: Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.'
+                description: >-
+                  EncryptionSettingsCollection: Encryption settings collection used be Azure Disk Encryption, can contain multiple
+
+                  encryption settings per disk or snapshot.
                 properties:
                   enabled:
-                    description: 'Enabled: Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.'
+                    description: >-
+                      Enabled: Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set
+
+                      this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is
+
+                      null in the request object, the existing settings remain unchanged.
                     type: boolean
                   encryptionSettings:
                     description: 'EncryptionSettings: A collection of encryption settings, one for each disk volume.'
@@ -516,7 +670,10 @@ spec:
                               type: object
                           type: object
                         keyEncryptionKey:
-                          description: 'KeyEncryptionKey: Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.'
+                          description: >-
+                            KeyEncryptionKey: Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when
+
+                            provided is used to unwrap the disk encryption key.
                           properties:
                             keyUrl:
                               description: 'KeyUrl: Url pointing to a key or secret in KeyVault'
@@ -532,7 +689,10 @@ spec:
                       type: object
                     type: array
                   encryptionSettingsVersion:
-                    description: "EncryptionSettingsVersion: Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption."
+                    description: >-
+                      EncryptionSettingsVersion: Describes what type of encryption is used for the disks. Once this field is set, it cannot be
+
+                      overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.
                     type: string
                 type: object
               extendedLocation:
@@ -552,7 +712,10 @@ spec:
                 description: 'Id: Resource Id'
                 type: string
               incremental:
-                description: 'Incremental: Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.'
+                description: >-
+                  Incremental: Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full
+
+                  snapshots and can be diffed.
                 type: boolean
               location:
                 description: 'Location: Resource location'
@@ -579,7 +742,10 @@ spec:
                     description: 'Name: The plan ID.'
                     type: string
                   product:
-                    description: 'Product: Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.'
+                    description: >-
+                      Product: Specifies the product of the image from the marketplace. This is the same value as Offer under the
+
+                      imageReference element.
                     type: string
                   promotionCode:
                     description: 'PromotionCode: The Offer Promotion Code.'
@@ -589,7 +755,10 @@ spec:
                     type: string
                 type: object
               sku:
-                description: 'Sku: The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental  snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot'
+                description: >-
+                  Sku: The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for
+
+                  incremental  snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
                 properties:
                   name:
                     description: 'Name: The sku name.'
@@ -634,13 +803,36 @@ spec:
     name: v1api20200930storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20200930.Snapshot Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2020-09-30/disk.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}'
+        description: >-
+          Storage version of v1api20200930.Snapshot
+
+          Generator information:
+
+          - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2020-09-30/disk.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -650,28 +842,46 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               creationData:
-                description: Storage version of v1api20200930.CreationData Data used when creating a disk.
+                description: >-
+                  Storage version of v1api20200930.CreationData
+
+                  Data used when creating a disk.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createOption:
                     type: string
                   galleryImageReference:
-                    description: Storage version of v1api20200930.ImageDiskReference The source image used for creating the disk.
+                    description: >-
+                      Storage version of v1api20200930.ImageDiskReference
+
+                      The source image used for creating the disk.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       lun:
                         type: integer
@@ -679,7 +889,12 @@ spec:
                         description: 'Reference: A relative uri containing either a Platform Image Repository or user image reference.'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -696,12 +911,18 @@ spec:
                     - reference
                     type: object
                   imageReference:
-                    description: Storage version of v1api20200930.ImageDiskReference The source image used for creating the disk.
+                    description: >-
+                      Storage version of v1api20200930.ImageDiskReference
+
+                      The source image used for creating the disk.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       lun:
                         type: integer
@@ -709,7 +930,12 @@ spec:
                         description: 'Reference: A relative uri containing either a Platform Image Repository or user image reference.'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -731,7 +957,12 @@ spec:
                     description: 'SourceResourceReference: If createOption is Copy, this is the ARM id of the source snapshot or disk.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -755,7 +986,12 @@ spec:
                 description: 'DiskAccessReference: ARM id of the DiskAccess resource for using private endpoints on disks.'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -773,18 +1009,29 @@ spec:
               diskState:
                 type: string
               encryption:
-                description: Storage version of v1api20200930.Encryption Encryption at rest settings for disk or snapshot
+                description: >-
+                  Storage version of v1api20200930.Encryption
+
+                  Encryption at rest settings for disk or snapshot
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   diskEncryptionSetReference:
                     description: 'DiskEncryptionSetReference: ResourceId of the disk encryption set to use for enabling encryption at rest.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -801,47 +1048,78 @@ spec:
                     type: string
                 type: object
               encryptionSettingsCollection:
-                description: Storage version of v1api20200930.EncryptionSettingsCollection Encryption settings for disk or snapshot
+                description: >-
+                  Storage version of v1api20200930.EncryptionSettingsCollection
+
+                  Encryption settings for disk or snapshot
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   enabled:
                     type: boolean
                   encryptionSettings:
                     items:
-                      description: Storage version of v1api20200930.EncryptionSettingsElement Encryption settings for one disk volume.
+                      description: >-
+                        Storage version of v1api20200930.EncryptionSettingsElement
+
+                        Encryption settings for one disk volume.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         diskEncryptionKey:
-                          description: Storage version of v1api20200930.KeyVaultAndSecretReference Key Vault Secret Url and vault id of the encryption key
+                          description: >-
+                            Storage version of v1api20200930.KeyVaultAndSecretReference
+
+                            Key Vault Secret Url and vault id of the encryption key
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             secretUrl:
                               type: string
                             sourceVault:
-                              description: Storage version of v1api20200930.SourceVault The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+                              description: >-
+                                Storage version of v1api20200930.SourceVault
+
+                                The vault id is an Azure Resource Manager Resource id in the form
+
+                                /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 reference:
                                   description: 'Reference: Resource Id'
                                   properties:
                                     armId:
-                                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                      description: >-
+                                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                       type: string
                                     group:
@@ -857,28 +1135,47 @@ spec:
                               type: object
                           type: object
                         keyEncryptionKey:
-                          description: Storage version of v1api20200930.KeyVaultAndKeyReference Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
+                          description: >-
+                            Storage version of v1api20200930.KeyVaultAndKeyReference
+
+                            Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             keyUrl:
                               type: string
                             sourceVault:
-                              description: Storage version of v1api20200930.SourceVault The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+                              description: >-
+                                Storage version of v1api20200930.SourceVault
+
+                                The vault id is an Azure Resource Manager Resource id in the form
+
+                                /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 reference:
                                   description: 'Reference: Resource Id'
                                   properties:
                                     armId:
-                                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                      description: >-
+                                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                       type: string
                                     group:
@@ -899,12 +1196,18 @@ spec:
                     type: string
                 type: object
               extendedLocation:
-                description: Storage version of v1api20200930.ExtendedLocation The complex type of the extended location.
+                description: >-
+                  Storage version of v1api20200930.ExtendedLocation
+
+                  The complex type of the extended location.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -924,7 +1227,12 @@ spec:
               osType:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -934,12 +1242,18 @@ spec:
                     type: string
                 type: object
               purchasePlan:
-                description: Storage version of v1api20200930.PurchasePlan Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
+                description: >-
+                  Storage version of v1api20200930.PurchasePlan
+
+                  Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -951,12 +1265,20 @@ spec:
                     type: string
                 type: object
               sku:
-                description: Storage version of v1api20200930.SnapshotSku The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
+                description: >-
+                  Storage version of v1api20200930.SnapshotSku
+
+                  The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental
+
+                  snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -969,12 +1291,18 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20200930.Snapshot_STATUS Snapshot resource.
+            description: >-
+              Storage version of v1api20200930.Snapshot_STATUS
+
+              Snapshot resource.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
                 items:
@@ -988,14 +1316,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1011,22 +1354,34 @@ spec:
                   type: object
                 type: array
               creationData:
-                description: Storage version of v1api20200930.CreationData_STATUS Data used when creating a disk.
+                description: >-
+                  Storage version of v1api20200930.CreationData_STATUS
+
+                  Data used when creating a disk.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createOption:
                     type: string
                   galleryImageReference:
-                    description: Storage version of v1api20200930.ImageDiskReference_STATUS The source image used for creating the disk.
+                    description: >-
+                      Storage version of v1api20200930.ImageDiskReference_STATUS
+
+                      The source image used for creating the disk.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       id:
                         type: string
@@ -1034,12 +1389,18 @@ spec:
                         type: integer
                     type: object
                   imageReference:
-                    description: Storage version of v1api20200930.ImageDiskReference_STATUS The source image used for creating the disk.
+                    description: >-
+                      Storage version of v1api20200930.ImageDiskReference_STATUS
+
+                      The source image used for creating the disk.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       id:
                         type: string
@@ -1068,12 +1429,18 @@ spec:
               diskState:
                 type: string
               encryption:
-                description: Storage version of v1api20200930.Encryption_STATUS Encryption at rest settings for disk or snapshot
+                description: >-
+                  Storage version of v1api20200930.Encryption_STATUS
+
+                  Encryption at rest settings for disk or snapshot
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   diskEncryptionSetId:
                     type: string
@@ -1081,63 +1448,103 @@ spec:
                     type: string
                 type: object
               encryptionSettingsCollection:
-                description: Storage version of v1api20200930.EncryptionSettingsCollection_STATUS Encryption settings for disk or snapshot
+                description: >-
+                  Storage version of v1api20200930.EncryptionSettingsCollection_STATUS
+
+                  Encryption settings for disk or snapshot
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   enabled:
                     type: boolean
                   encryptionSettings:
                     items:
-                      description: Storage version of v1api20200930.EncryptionSettingsElement_STATUS Encryption settings for one disk volume.
+                      description: >-
+                        Storage version of v1api20200930.EncryptionSettingsElement_STATUS
+
+                        Encryption settings for one disk volume.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         diskEncryptionKey:
-                          description: Storage version of v1api20200930.KeyVaultAndSecretReference_STATUS Key Vault Secret Url and vault id of the encryption key
+                          description: >-
+                            Storage version of v1api20200930.KeyVaultAndSecretReference_STATUS
+
+                            Key Vault Secret Url and vault id of the encryption key
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             secretUrl:
                               type: string
                             sourceVault:
-                              description: Storage version of v1api20200930.SourceVault_STATUS The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+                              description: >-
+                                Storage version of v1api20200930.SourceVault_STATUS
+
+                                The vault id is an Azure Resource Manager Resource id in the form
+
+                                /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 id:
                                   type: string
                               type: object
                           type: object
                         keyEncryptionKey:
-                          description: Storage version of v1api20200930.KeyVaultAndKeyReference_STATUS Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
+                          description: >-
+                            Storage version of v1api20200930.KeyVaultAndKeyReference_STATUS
+
+                            Key Vault Key Url and vault id of KeK, KeK is optional and when provided is used to unwrap the encryptionKey
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             keyUrl:
                               type: string
                             sourceVault:
-                              description: Storage version of v1api20200930.SourceVault_STATUS The vault id is an Azure Resource Manager Resource id in the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
+                              description: >-
+                                Storage version of v1api20200930.SourceVault_STATUS
+
+                                The vault id is an Azure Resource Manager Resource id in the form
+
+                                /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 id:
                                   type: string
@@ -1149,12 +1556,18 @@ spec:
                     type: string
                 type: object
               extendedLocation:
-                description: Storage version of v1api20200930.ExtendedLocation_STATUS The complex type of the extended location.
+                description: >-
+                  Storage version of v1api20200930.ExtendedLocation_STATUS
+
+                  The complex type of the extended location.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -1180,12 +1593,18 @@ spec:
               provisioningState:
                 type: string
               purchasePlan:
-                description: Storage version of v1api20200930.PurchasePlan_STATUS Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
+                description: >-
+                  Storage version of v1api20200930.PurchasePlan_STATUS
+
+                  Used for establishing the purchase context of any 3rd Party artifact through MarketPlace.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -1197,12 +1616,20 @@ spec:
                     type: string
                 type: object
               sku:
-                description: Storage version of v1api20200930.SnapshotSku_STATUS The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
+                description: >-
+                  Storage version of v1api20200930.SnapshotSku_STATUS
+
+                  The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental
+
+                  snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string

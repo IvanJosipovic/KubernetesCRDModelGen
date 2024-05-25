@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: virtualnetworkgateways.network.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20201101
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetworkGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetworkGateway.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -61,7 +82,10 @@ spec:
                 description: 'ActiveActive: ActiveActive flag.'
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               bgpSettings:
                 description: "BgpSettings: Virtual network gateway's BGP speaker settings."
@@ -93,7 +117,10 @@ spec:
                     type: integer
                 type: object
               customRoutes:
-                description: 'CustomRoutes: The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.'
+                description: >-
+                  CustomRoutes: The reference to the address space resource which represents the custom routes address space specified by
+
+                  the customer for virtual network gateway and VpnClient.
                 properties:
                   addressPrefixes:
                     description: 'AddressPrefixes: A list of address blocks reserved for this virtual network in CIDR notation.'
@@ -126,13 +153,21 @@ spec:
                 - type
                 type: object
               gatewayDefaultSite:
-                description: 'GatewayDefaultSite: The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.'
+                description: >-
+                  GatewayDefaultSite: The reference to the LocalNetworkGateway resource which represents local network site having default
+
+                  routes. Assign Null value in case of removing existing default site setting.
                 properties:
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -174,7 +209,12 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -195,7 +235,12 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -215,7 +260,12 @@ spec:
                 description: 'Location: Resource location.'
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -225,7 +275,10 @@ spec:
                     type: string
                 type: object
               sku:
-                description: 'Sku: The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.'
+                description: >-
+                  Sku: The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network
+
+                  gateway.
                 properties:
                   name:
                     description: 'Name: Gateway SKU name.'
@@ -276,10 +329,18 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               vNetExtendedLocationResourceReference:
-                description: 'VNetExtendedLocationResourceReference: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.'
+                description: >-
+                  VNetExtendedLocationResourceReference: Customer vnet resource id. VirtualNetworkGateway of type local gateway is
+
+                  associated with the customer vnet.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -293,16 +354,28 @@ spec:
                     type: string
                 type: object
               vpnClientConfiguration:
-                description: 'VpnClientConfiguration: The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.'
+                description: >-
+                  VpnClientConfiguration: The reference to the VpnClientConfiguration resource which represents the P2S VpnClient
+
+                  configurations.
                 properties:
                   aadAudience:
-                    description: 'AadAudience: The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.'
+                    description: >-
+                      AadAudience: The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD
+
+                      authentication.
                     type: string
                   aadIssuer:
-                    description: 'AadIssuer: The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.'
+                    description: >-
+                      AadIssuer: The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD
+
+                      authentication.
                     type: string
                   aadTenant:
-                    description: 'AadTenant: The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.'
+                    description: >-
+                      AadTenant: The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD
+
+                      authentication.
                     type: string
                   radiusServerAddress:
                     description: 'RadiusServerAddress: The radius server address property of the VirtualNetworkGateway resource for vpn client connection.'
@@ -421,10 +494,16 @@ spec:
                           - PFSMM
                           type: string
                         saDataSizeKilobytes:
-                          description: 'SaDataSizeKilobytes: The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.'
+                          description: >-
+                            SaDataSizeKilobytes: The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site
+
+                            to site VPN tunnel.
                           type: integer
                         saLifeTimeSeconds:
-                          description: 'SaLifeTimeSeconds: The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.'
+                          description: >-
+                            SaLifeTimeSeconds: The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site
+
+                            to site VPN tunnel.
                           type: integer
                       required:
                       - dhGroup
@@ -549,14 +628,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -572,7 +666,10 @@ spec:
                   type: object
                 type: array
               customRoutes:
-                description: 'CustomRoutes: The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.'
+                description: >-
+                  CustomRoutes: The reference to the address space resource which represents the custom routes address space specified by
+
+                  the customer for virtual network gateway and VpnClient.
                 properties:
                   addressPrefixes:
                     description: 'AddressPrefixes: A list of address blocks reserved for this virtual network in CIDR notation.'
@@ -603,7 +700,10 @@ spec:
                     type: string
                 type: object
               gatewayDefaultSite:
-                description: 'GatewayDefaultSite: The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.'
+                description: >-
+                  GatewayDefaultSite: The reference to the LocalNetworkGateway resource which represents local network site having default
+
+                  routes. Assign Null value in case of removing existing default site setting.
                 properties:
                   id:
                     description: 'Id: Resource ID.'
@@ -670,7 +770,10 @@ spec:
                 description: 'ResourceGuid: The resource GUID property of the virtual network gateway resource.'
                 type: string
               sku:
-                description: 'Sku: The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.'
+                description: >-
+                  Sku: The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network
+
+                  gateway.
                 properties:
                   capacity:
                     description: 'Capacity: The capacity.'
@@ -691,19 +794,34 @@ spec:
                 description: 'Type: Resource type.'
                 type: string
               vNetExtendedLocationResourceId:
-                description: 'VNetExtendedLocationResourceId: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.'
+                description: >-
+                  VNetExtendedLocationResourceId: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated
+
+                  with the customer vnet.
                 type: string
               vpnClientConfiguration:
-                description: 'VpnClientConfiguration: The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.'
+                description: >-
+                  VpnClientConfiguration: The reference to the VpnClientConfiguration resource which represents the P2S VpnClient
+
+                  configurations.
                 properties:
                   aadAudience:
-                    description: 'AadAudience: The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.'
+                    description: >-
+                      AadAudience: The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD
+
+                      authentication.
                     type: string
                   aadIssuer:
-                    description: 'AadIssuer: The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.'
+                    description: >-
+                      AadIssuer: The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD
+
+                      authentication.
                     type: string
                   aadTenant:
-                    description: 'AadTenant: The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.'
+                    description: >-
+                      AadTenant: The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD
+
+                      authentication.
                     type: string
                   radiusServerAddress:
                     description: 'RadiusServerAddress: The radius server address property of the VirtualNetworkGateway resource for vpn client connection.'
@@ -765,10 +883,16 @@ spec:
                           description: 'PfsGroup: The Pfs Group used in IKE Phase 2 for new child SA.'
                           type: string
                         saDataSizeKilobytes:
-                          description: 'SaDataSizeKilobytes: The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.'
+                          description: >-
+                            SaDataSizeKilobytes: The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site
+
+                            to site VPN tunnel.
                           type: integer
                         saLifeTimeSeconds:
-                          description: 'SaLifeTimeSeconds: The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.'
+                          description: >-
+                            SaLifeTimeSeconds: The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site
+
+                            to site VPN tunnel.
                           type: integer
                       type: object
                     type: array
@@ -850,13 +974,36 @@ spec:
     name: v1api20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20201101.VirtualNetworkGateway Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetworkGateway.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}'
+        description: >-
+          Storage version of v1api20201101.VirtualNetworkGateway
+
+          Generator information:
+
+          - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetworkGateway.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworkGateways/{virtualNetworkGatewayName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -866,20 +1013,32 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               activeActive:
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               bgpSettings:
-                description: Storage version of v1api20201101.BgpSettings BGP settings details.
+                description: >-
+                  Storage version of v1api20201101.BgpSettings
+
+                  BGP settings details.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   asn:
                     format: int32
@@ -888,12 +1047,18 @@ spec:
                     type: string
                   bgpPeeringAddresses:
                     items:
-                      description: Storage version of v1api20201101.IPConfigurationBgpPeeringAddress Properties of IPConfigurationBgpPeeringAddress.
+                      description: >-
+                        Storage version of v1api20201101.IPConfigurationBgpPeeringAddress
+
+                        Properties of IPConfigurationBgpPeeringAddress.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         customBgpIpAddresses:
                           items:
@@ -907,12 +1072,18 @@ spec:
                     type: integer
                 type: object
               customRoutes:
-                description: Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+                description: >-
+                  Storage version of v1api20201101.AddressSpace
+
+                  AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
                     items:
@@ -926,12 +1097,18 @@ spec:
               enablePrivateIpAddress:
                 type: boolean
               extendedLocation:
-                description: Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.
+                description: >-
+                  Storage version of v1api20201101.ExtendedLocation
+
+                  ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -939,18 +1116,29 @@ spec:
                     type: string
                 type: object
               gatewayDefaultSite:
-                description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                description: >-
+                  Storage version of v1api20201101.SubResource
+
+                  Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -968,30 +1156,47 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1api20201101.VirtualNetworkGatewayIPConfiguration IP configuration for virtual network gateway.
+                  description: >-
+                    Storage version of v1api20201101.VirtualNetworkGatewayIPConfiguration
+
+                    IP configuration for virtual network gateway.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     name:
                       type: string
                     privateIPAllocationMethod:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1006,18 +1211,29 @@ spec:
                           type: object
                       type: object
                     subnet:
-                      description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1038,7 +1254,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -1048,12 +1269,18 @@ spec:
                     type: string
                 type: object
               sku:
-                description: Storage version of v1api20201101.VirtualNetworkGatewaySku VirtualNetworkGatewaySku details.
+                description: >-
+                  Storage version of v1api20201101.VirtualNetworkGatewaySku
+
+                  VirtualNetworkGatewaySku details.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -1065,10 +1292,18 @@ spec:
                   type: string
                 type: object
               vNetExtendedLocationResourceReference:
-                description: 'VNetExtendedLocationResourceReference: Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.'
+                description: >-
+                  VNetExtendedLocationResourceReference: Customer vnet resource id. VirtualNetworkGateway of type local gateway is
+
+                  associated with the customer vnet.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -1082,12 +1317,18 @@ spec:
                     type: string
                 type: object
               vpnClientConfiguration:
-                description: Storage version of v1api20201101.VpnClientConfiguration VpnClientConfiguration for P2S client.
+                description: >-
+                  Storage version of v1api20201101.VpnClientConfiguration
+
+                  VpnClientConfiguration for P2S client.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   aadAudience:
                     type: string
@@ -1101,12 +1342,18 @@ spec:
                     type: string
                   radiusServers:
                     items:
-                      description: Storage version of v1api20201101.RadiusServer Radius Server Settings.
+                      description: >-
+                        Storage version of v1api20201101.RadiusServer
+
+                        Radius Server Settings.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         radiusServerAddress:
                           type: string
@@ -1121,12 +1368,18 @@ spec:
                       type: string
                     type: array
                   vpnClientAddressPool:
-                    description: Storage version of v1api20201101.AddressSpace AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+                    description: >-
+                      Storage version of v1api20201101.AddressSpace
+
+                      AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       addressPrefixes:
                         items:
@@ -1135,12 +1388,18 @@ spec:
                     type: object
                   vpnClientIpsecPolicies:
                     items:
-                      description: Storage version of v1api20201101.IpsecPolicy An IPSec Policy configuration for a virtual network gateway connection.
+                      description: >-
+                        Storage version of v1api20201101.IpsecPolicy
+
+                        An IPSec Policy configuration for a virtual network gateway connection.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         dhGroup:
                           type: string
@@ -1166,12 +1425,18 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Storage version of v1api20201101.VpnClientRevokedCertificate VPN client revoked certificate of virtual network gateway.
+                      description: >-
+                        Storage version of v1api20201101.VpnClientRevokedCertificate
+
+                        VPN client revoked certificate of virtual network gateway.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
@@ -1181,12 +1446,18 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Storage version of v1api20201101.VpnClientRootCertificate VPN client root certificate of virtual network gateway.
+                      description: >-
+                        Storage version of v1api20201101.VpnClientRootCertificate
+
+                        VPN client root certificate of virtual network gateway.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
@@ -1203,22 +1474,34 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20201101.VirtualNetworkGateway_STATUS A common class for general resource information.
+            description: >-
+              Storage version of v1api20201101.VirtualNetworkGateway_STATUS
+
+              A common class for general resource information.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               activeActive:
                 type: boolean
               bgpSettings:
-                description: Storage version of v1api20201101.BgpSettings_STATUS BGP settings details.
+                description: >-
+                  Storage version of v1api20201101.BgpSettings_STATUS
+
+                  BGP settings details.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   asn:
                     format: int32
@@ -1227,12 +1510,18 @@ spec:
                     type: string
                   bgpPeeringAddresses:
                     items:
-                      description: Storage version of v1api20201101.IPConfigurationBgpPeeringAddress_STATUS Properties of IPConfigurationBgpPeeringAddress.
+                      description: >-
+                        Storage version of v1api20201101.IPConfigurationBgpPeeringAddress_STATUS
+
+                        Properties of IPConfigurationBgpPeeringAddress.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         customBgpIpAddresses:
                           items:
@@ -1265,14 +1554,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1288,12 +1592,18 @@ spec:
                   type: object
                 type: array
               customRoutes:
-                description: Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+                description: >-
+                  Storage version of v1api20201101.AddressSpace_STATUS
+
+                  AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
                     items:
@@ -1309,12 +1619,18 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.
+                description: >-
+                  Storage version of v1api20201101.ExtendedLocation_STATUS
+
+                  ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -1322,12 +1638,18 @@ spec:
                     type: string
                 type: object
               gatewayDefaultSite:
-                description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                description: >-
+                  Storage version of v1api20201101.SubResource_STATUS
+
+                  Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
                     type: string
@@ -1340,12 +1662,18 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: Storage version of v1api20201101.VirtualNetworkGatewayIPConfiguration_STATUS IP configuration for virtual network gateway.
+                  description: >-
+                    Storage version of v1api20201101.VirtualNetworkGatewayIPConfiguration_STATUS
+
+                    IP configuration for virtual network gateway.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     etag:
                       type: string
@@ -1360,23 +1688,35 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
                       type: object
                     subnet:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
@@ -1392,12 +1732,18 @@ spec:
               resourceGuid:
                 type: string
               sku:
-                description: Storage version of v1api20201101.VirtualNetworkGatewaySku_STATUS VirtualNetworkGatewaySku details.
+                description: >-
+                  Storage version of v1api20201101.VirtualNetworkGatewaySku_STATUS
+
+                  VirtualNetworkGatewaySku details.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
                     type: integer
@@ -1415,12 +1761,18 @@ spec:
               vNetExtendedLocationResourceId:
                 type: string
               vpnClientConfiguration:
-                description: Storage version of v1api20201101.VpnClientConfiguration_STATUS VpnClientConfiguration for P2S client.
+                description: >-
+                  Storage version of v1api20201101.VpnClientConfiguration_STATUS
+
+                  VpnClientConfiguration for P2S client.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   aadAudience:
                     type: string
@@ -1434,12 +1786,18 @@ spec:
                     type: string
                   radiusServers:
                     items:
-                      description: Storage version of v1api20201101.RadiusServer_STATUS Radius Server Settings.
+                      description: >-
+                        Storage version of v1api20201101.RadiusServer_STATUS
+
+                        Radius Server Settings.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         radiusServerAddress:
                           type: string
@@ -1454,12 +1812,18 @@ spec:
                       type: string
                     type: array
                   vpnClientAddressPool:
-                    description: Storage version of v1api20201101.AddressSpace_STATUS AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
+                    description: >-
+                      Storage version of v1api20201101.AddressSpace_STATUS
+
+                      AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       addressPrefixes:
                         items:
@@ -1468,12 +1832,18 @@ spec:
                     type: object
                   vpnClientIpsecPolicies:
                     items:
-                      description: Storage version of v1api20201101.IpsecPolicy_STATUS An IPSec Policy configuration for a virtual network gateway connection.
+                      description: >-
+                        Storage version of v1api20201101.IpsecPolicy_STATUS
+
+                        An IPSec Policy configuration for a virtual network gateway connection.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         dhGroup:
                           type: string
@@ -1499,12 +1869,18 @@ spec:
                     type: array
                   vpnClientRevokedCertificates:
                     items:
-                      description: Storage version of v1api20201101.VpnClientRevokedCertificate_STATUS VPN client revoked certificate of virtual network gateway.
+                      description: >-
+                        Storage version of v1api20201101.VpnClientRevokedCertificate_STATUS
+
+                        VPN client revoked certificate of virtual network gateway.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         etag:
                           type: string
@@ -1520,12 +1896,18 @@ spec:
                     type: array
                   vpnClientRootCertificates:
                     items:
-                      description: Storage version of v1api20201101.VpnClientRootCertificate_STATUS VPN client root certificate of virtual network gateway.
+                      description: >-
+                        Storage version of v1api20201101.VpnClientRootCertificate_STATUS
+
+                        VPN client root certificate of virtual network gateway.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         etag:
                           type: string

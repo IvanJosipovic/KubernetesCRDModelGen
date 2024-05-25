@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: serversauditingsettings.sql.azure.com
 spec:
   conversion:
@@ -45,28 +45,200 @@ spec:
     name: v1api20211101
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/BlobAuditing.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/auditingSettings/default'
+        description: >-
+          Generator information:
+
+          - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/BlobAuditing.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/auditingSettings/default
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               auditActionsAndGroups:
-                description: 'AuditActionsAndGroups: Specifies the Actions-Groups and Actions to audit. The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins: BATCH_COMPLETED_GROUP, SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP. This above combination is also the set that is configured by default when enabling auditing from the Azure portal. The supported action groups to audit are (note: choose only specific groups that cover your auditing needs. Using unnecessary groups could lead to very large quantities of audit records): APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP DBCC_GROUP DATABASE_OWNERSHIP_CHANGE_GROUP DATABASE_CHANGE_GROUP LEDGER_OPERATION_GROUP These are groups that cover all sql statements and stored procedures executed against the database, and should not be used in combination with other groups as this will result in duplicate audit logs. For more information, see [Database-Level Audit Action Groups](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups). For Database auditing policy, specific Actions can also be specified (note that Actions cannot be specified for Server auditing policy). The supported actions to audit are: SELECT UPDATE INSERT DELETE EXECUTE RECEIVE REFERENCES The general form for defining an action to be audited is: {action} ON {object} BY {principal} Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively. For example: SELECT on dbo.myTable by public SELECT on DATABASE::myDatabase by public SELECT on SCHEMA::mySchema by public For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)'
+                description: >-
+                  AuditActionsAndGroups: Specifies the Actions-Groups and Actions to audit.
+
+                  The recommended set of action groups to use is the following combination - this will audit all the queries and stored
+
+                  procedures executed against the database, as well as successful and failed logins:
+
+                  BATCH_COMPLETED_GROUP,
+
+                  SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP,
+
+                  FAILED_DATABASE_AUTHENTICATION_GROUP.
+
+                  This above combination is also the set that is configured by default when enabling auditing from the Azure portal.
+
+                  The supported action groups to audit are (note: choose only specific groups that cover your auditing needs. Using
+
+                  unnecessary groups could lead to very large quantities of audit records):
+
+                  APPLICATION_ROLE_CHANGE_PASSWORD_GROUP
+
+                  BACKUP_RESTORE_GROUP
+
+                  DATABASE_LOGOUT_GROUP
+
+                  DATABASE_OBJECT_CHANGE_GROUP
+
+                  DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP
+
+                  DATABASE_OBJECT_PERMISSION_CHANGE_GROUP
+
+                  DATABASE_OPERATION_GROUP
+
+                  DATABASE_PERMISSION_CHANGE_GROUP
+
+                  DATABASE_PRINCIPAL_CHANGE_GROUP
+
+                  DATABASE_PRINCIPAL_IMPERSONATION_GROUP
+
+                  DATABASE_ROLE_MEMBER_CHANGE_GROUP
+
+                  FAILED_DATABASE_AUTHENTICATION_GROUP
+
+                  SCHEMA_OBJECT_ACCESS_GROUP
+
+                  SCHEMA_OBJECT_CHANGE_GROUP
+
+                  SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP
+
+                  SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP
+
+                  SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP
+
+                  USER_CHANGE_PASSWORD_GROUP
+
+                  BATCH_STARTED_GROUP
+
+                  BATCH_COMPLETED_GROUP
+
+                  DBCC_GROUP
+
+                  DATABASE_OWNERSHIP_CHANGE_GROUP
+
+                  DATABASE_CHANGE_GROUP
+
+                  LEDGER_OPERATION_GROUP
+
+                  These are groups that cover all sql statements and stored procedures executed against the database, and should not be
+
+                  used in combination with other groups as this will result in duplicate audit logs.
+
+                  For more information, see [Database-Level Audit Action
+
+                  Groups](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups).
+
+                  For Database auditing policy, specific Actions can also be specified (note that Actions cannot be specified for Server
+
+                  auditing policy). The supported actions to audit are:
+
+                  SELECT
+
+                  UPDATE
+
+                  INSERT
+
+                  DELETE
+
+                  EXECUTE
+
+                  RECEIVE
+
+                  REFERENCES
+
+                  The general form for defining an action to be audited is:
+
+                  {action} ON {object} BY {principal}
+
+                  Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire
+
+                  database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.
+
+                  For example:
+
+                  SELECT on dbo.myTable by public
+
+                  SELECT on DATABASE::myDatabase by public
+
+                  SELECT on SCHEMA::mySchema by public
+
+                  For more information, see [Database-Level Audit
+
+                  Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
                 items:
                   type: string
                 type: array
               isAzureMonitorTargetEnabled:
-                description: "IsAzureMonitorTargetEnabled: Specifies whether audit events are sent to Azure Monitor. In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true. When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created. Note that for server level audit you should use the 'master' database as {databaseName}. Diagnostic Settings URI format: PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207) or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)"
+                description: >-
+                  IsAzureMonitorTargetEnabled: Specifies whether audit events are sent to Azure Monitor.
+
+                  In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
+
+                  When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on
+
+                  the database should be also created.
+
+                  Note that for server level audit you should use the 'master' database as {databaseName}.
+
+                  Diagnostic Settings URI format:
+
+                  PUT
+
+                  https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+                  For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
+
+                  or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
                 type: boolean
               isDevopsAuditEnabled:
-                description: "IsDevopsAuditEnabled: Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor. In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and 'IsDevopsAuditEnabled' as true When using REST API to configure auditing, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on the master database should also be created. Diagnostic Settings URI format: PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/master/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207) or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)"
+                description: >-
+                  IsDevopsAuditEnabled: Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure
+
+                  Monitor.
+
+                  In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and
+
+                  'IsDevopsAuditEnabled' as true
+
+                  When using REST API to configure auditing, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on
+
+                  the master database should also be created.
+
+                  Diagnostic Settings URI format:
+
+                  PUT
+
+                  https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/master/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+                  For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
+
+                  or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
                 type: boolean
               isManagedIdentityInUse:
                 description: 'IsManagedIdentityInUse: Specifies whether Managed Identity is used to access blob storage'
@@ -75,7 +247,12 @@ spec:
                 description: "IsStorageSecondaryKeyInUse: Specifies whether storageAccountAccessKey value is the storage's secondary key."
                 type: boolean
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a sql.azure.com/Server resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -85,25 +262,53 @@ spec:
                     type: string
                 type: object
               queueDelayMs:
-                description: 'QueueDelayMs: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed. The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.'
+                description: >-
+                  QueueDelayMs: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be
+
+                  processed.
+
+                  The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
                 type: integer
               retentionDays:
                 description: 'RetentionDays: Specifies the number of days to keep in the audit logs in the storage account.'
                 type: integer
               state:
-                description: 'State: Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.'
+                description: >-
+                  State: Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are
+
+                  required.
                 enum:
                 - Disabled
                 - Enabled
                 type: string
               storageAccountAccessKey:
-                description: "StorageAccountAccessKey: Specifies the identifier key of the auditing storage account. If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server system-assigned managed identity to access the storage. Prerequisites for using managed identity authentication: 1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD). 2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the server identity. For more information, see [Auditing to storage using Managed Identity authentication](https://go.microsoft.com/fwlink/?linkid=2114355)"
+                description: >-
+                  StorageAccountAccessKey: Specifies the identifier key of the auditing storage account.
+
+                  If state is Enabled and storageEndpoint is specified, not specifying the storageAccountAccessKey will use SQL server
+
+                  system-assigned managed identity to access the storage.
+
+                  Prerequisites for using managed identity authentication:
+
+                  1. Assign SQL Server a system-assigned managed identity in Azure Active Directory (AAD).
+
+                  2. Grant SQL Server identity access to the storage account by adding 'Storage Blob Data Contributor' RBAC role to the
+
+                  server identity.
+
+                  For more information, see [Auditing to storage using Managed Identity
+
+                  authentication](https://go.microsoft.com/fwlink/?linkid=2114355)
                 properties:
                   key:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -114,7 +319,10 @@ spec:
                 pattern: ^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$
                 type: string
               storageEndpoint:
-                description: 'StorageEndpoint: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.'
+                description: >-
+                  StorageEndpoint: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is
+
+                  Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
                 type: string
             required:
             - owner
@@ -123,7 +331,118 @@ spec:
           status:
             properties:
               auditActionsAndGroups:
-                description: 'AuditActionsAndGroups: Specifies the Actions-Groups and Actions to audit. The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins: BATCH_COMPLETED_GROUP, SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP. This above combination is also the set that is configured by default when enabling auditing from the Azure portal. The supported action groups to audit are (note: choose only specific groups that cover your auditing needs. Using unnecessary groups could lead to very large quantities of audit records): APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP DBCC_GROUP DATABASE_OWNERSHIP_CHANGE_GROUP DATABASE_CHANGE_GROUP LEDGER_OPERATION_GROUP These are groups that cover all sql statements and stored procedures executed against the database, and should not be used in combination with other groups as this will result in duplicate audit logs. For more information, see [Database-Level Audit Action Groups](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups). For Database auditing policy, specific Actions can also be specified (note that Actions cannot be specified for Server auditing policy). The supported actions to audit are: SELECT UPDATE INSERT DELETE EXECUTE RECEIVE REFERENCES The general form for defining an action to be audited is: {action} ON {object} BY {principal} Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively. For example: SELECT on dbo.myTable by public SELECT on DATABASE::myDatabase by public SELECT on SCHEMA::mySchema by public For more information, see [Database-Level Audit Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)'
+                description: >-
+                  AuditActionsAndGroups: Specifies the Actions-Groups and Actions to audit.
+
+                  The recommended set of action groups to use is the following combination - this will audit all the queries and stored
+
+                  procedures executed against the database, as well as successful and failed logins:
+
+                  BATCH_COMPLETED_GROUP,
+
+                  SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP,
+
+                  FAILED_DATABASE_AUTHENTICATION_GROUP.
+
+                  This above combination is also the set that is configured by default when enabling auditing from the Azure portal.
+
+                  The supported action groups to audit are (note: choose only specific groups that cover your auditing needs. Using
+
+                  unnecessary groups could lead to very large quantities of audit records):
+
+                  APPLICATION_ROLE_CHANGE_PASSWORD_GROUP
+
+                  BACKUP_RESTORE_GROUP
+
+                  DATABASE_LOGOUT_GROUP
+
+                  DATABASE_OBJECT_CHANGE_GROUP
+
+                  DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP
+
+                  DATABASE_OBJECT_PERMISSION_CHANGE_GROUP
+
+                  DATABASE_OPERATION_GROUP
+
+                  DATABASE_PERMISSION_CHANGE_GROUP
+
+                  DATABASE_PRINCIPAL_CHANGE_GROUP
+
+                  DATABASE_PRINCIPAL_IMPERSONATION_GROUP
+
+                  DATABASE_ROLE_MEMBER_CHANGE_GROUP
+
+                  FAILED_DATABASE_AUTHENTICATION_GROUP
+
+                  SCHEMA_OBJECT_ACCESS_GROUP
+
+                  SCHEMA_OBJECT_CHANGE_GROUP
+
+                  SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP
+
+                  SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP
+
+                  SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP
+
+                  USER_CHANGE_PASSWORD_GROUP
+
+                  BATCH_STARTED_GROUP
+
+                  BATCH_COMPLETED_GROUP
+
+                  DBCC_GROUP
+
+                  DATABASE_OWNERSHIP_CHANGE_GROUP
+
+                  DATABASE_CHANGE_GROUP
+
+                  LEDGER_OPERATION_GROUP
+
+                  These are groups that cover all sql statements and stored procedures executed against the database, and should not be
+
+                  used in combination with other groups as this will result in duplicate audit logs.
+
+                  For more information, see [Database-Level Audit Action
+
+                  Groups](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups).
+
+                  For Database auditing policy, specific Actions can also be specified (note that Actions cannot be specified for Server
+
+                  auditing policy). The supported actions to audit are:
+
+                  SELECT
+
+                  UPDATE
+
+                  INSERT
+
+                  DELETE
+
+                  EXECUTE
+
+                  RECEIVE
+
+                  REFERENCES
+
+                  The general form for defining an action to be audited is:
+
+                  {action} ON {object} BY {principal}
+
+                  Note that <object> in the above format can refer to an object like a table, view, or stored procedure, or an entire
+
+                  database or schema. For the latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are used, respectively.
+
+                  For example:
+
+                  SELECT on dbo.myTable by public
+
+                  SELECT on DATABASE::myDatabase by public
+
+                  SELECT on SCHEMA::mySchema by public
+
+                  For more information, see [Database-Level Audit
+
+                  Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
                 items:
                   type: string
                 type: array
@@ -140,14 +459,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -166,10 +500,50 @@ spec:
                 description: 'Id: Resource ID.'
                 type: string
               isAzureMonitorTargetEnabled:
-                description: "IsAzureMonitorTargetEnabled: Specifies whether audit events are sent to Azure Monitor. In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true. When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on the database should be also created. Note that for server level audit you should use the 'master' database as {databaseName}. Diagnostic Settings URI format: PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207) or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)"
+                description: >-
+                  IsAzureMonitorTargetEnabled: Specifies whether audit events are sent to Azure Monitor.
+
+                  In order to send the events to Azure Monitor, specify 'State' as 'Enabled' and 'IsAzureMonitorTargetEnabled' as true.
+
+                  When using REST API to configure auditing, Diagnostic Settings with 'SQLSecurityAuditEvents' diagnostic logs category on
+
+                  the database should be also created.
+
+                  Note that for server level audit you should use the 'master' database as {databaseName}.
+
+                  Diagnostic Settings URI format:
+
+                  PUT
+
+                  https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+                  For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
+
+                  or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
                 type: boolean
               isDevopsAuditEnabled:
-                description: "IsDevopsAuditEnabled: Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure Monitor. In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and 'IsDevopsAuditEnabled' as true When using REST API to configure auditing, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on the master database should also be created. Diagnostic Settings URI format: PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/master/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207) or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)"
+                description: >-
+                  IsDevopsAuditEnabled: Specifies the state of devops audit. If state is Enabled, devops logs will be sent to Azure
+
+                  Monitor.
+
+                  In order to send the events to Azure Monitor, specify 'State' as 'Enabled', 'IsAzureMonitorTargetEnabled' as true and
+
+                  'IsDevopsAuditEnabled' as true
+
+                  When using REST API to configure auditing, Diagnostic Settings with 'DevOpsOperationsAudit' diagnostic logs category on
+
+                  the master database should also be created.
+
+                  Diagnostic Settings URI format:
+
+                  PUT
+
+                  https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/master/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+                  For more information, see [Diagnostic Settings REST API](https://go.microsoft.com/fwlink/?linkid=2033207)
+
+                  or [Diagnostic Settings PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
                 type: boolean
               isManagedIdentityInUse:
                 description: 'IsManagedIdentityInUse: Specifies whether Managed Identity is used to access blob storage'
@@ -181,19 +555,30 @@ spec:
                 description: 'Name: Resource name.'
                 type: string
               queueDelayMs:
-                description: 'QueueDelayMs: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be processed. The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.'
+                description: >-
+                  QueueDelayMs: Specifies the amount of time in milliseconds that can elapse before audit actions are forced to be
+
+                  processed.
+
+                  The default minimum value is 1000 (1 second). The maximum is 2,147,483,647.
                 type: integer
               retentionDays:
                 description: 'RetentionDays: Specifies the number of days to keep in the audit logs in the storage account.'
                 type: integer
               state:
-                description: 'State: Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.'
+                description: >-
+                  State: Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are
+
+                  required.
                 type: string
               storageAccountSubscriptionId:
                 description: 'StorageAccountSubscriptionId: Specifies the blob storage subscription Id.'
                 type: string
               storageEndpoint:
-                description: 'StorageEndpoint: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.'
+                description: >-
+                  StorageEndpoint: Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). If state is
+
+                  Enabled, storageEndpoint or isAzureMonitorTargetEnabled is required.
                 type: string
               type:
                 description: 'Type: Resource type.'
@@ -220,13 +605,36 @@ spec:
     name: v1api20211101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20211101.ServersAuditingSetting Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/BlobAuditing.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/auditingSettings/default'
+        description: >-
+          Storage version of v1api20211101.ServersAuditingSetting
+
+          Generator information:
+
+          - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/BlobAuditing.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/auditingSettings/default
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -236,7 +644,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               auditActionsAndGroups:
                 items:
@@ -253,7 +664,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a sql.azure.com/Server resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -269,13 +685,19 @@ spec:
               state:
                 type: string
               storageAccountAccessKey:
-                description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                description: >-
+                  SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                  the resource it is on.
                 properties:
                   key:
                     description: Key is the key in the Kubernetes secret being referenced
                     type: string
                   name:
-                    description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                    description: >-
+                      Name is the name of the Kubernetes secret being referenced.
+
+                      The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - key
@@ -294,7 +716,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               auditActionsAndGroups:
                 items:
@@ -312,14 +737,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.

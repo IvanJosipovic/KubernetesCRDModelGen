@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: containergroups.containerinstance.azure.com
 spec:
   conversion:
@@ -45,20 +45,44 @@ spec:
     name: v1api20211001
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /containerinstance/resource-manager/Microsoft.ContainerInstance/stable/2021-10-01/containerInstance.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerInstance/containerGroups/{containerGroupName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /containerinstance/resource-manager/Microsoft.ContainerInstance/stable/2021-10-01/containerInstance.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerInstance/containerGroups/{containerGroupName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               containers:
                 description: 'Containers: The containers within the container group.'
@@ -85,7 +109,10 @@ spec:
                                 description: Key is the key in the Kubernetes secret being referenced
                                 type: string
                               name:
-                                description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                description: >-
+                                  Name is the name of the Kubernetes secret being referenced.
+
+                                  The secret must be in the same namespace as the resource
                                 type: string
                             required:
                             - key
@@ -355,7 +382,10 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -365,7 +395,12 @@ spec:
                         description: 'WorkspaceResourceReference: The workspace resource id for log analytics'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -421,7 +456,12 @@ spec:
                 description: 'Identity: The identity of the container group, if configured.'
                 properties:
                   type:
-                    description: "Type: The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group."
+                    description: >-
+                      Type: The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an
+
+                      implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the
+
+                      container group.
                     enum:
                     - None
                     - SystemAssigned
@@ -437,7 +477,12 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -471,7 +516,10 @@ spec:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                          description: >-
+                            Name is the name of the Kubernetes secret being referenced.
+
+                            The secret must be in the same namespace as the resource
                           type: string
                       required:
                       - key
@@ -512,7 +560,10 @@ spec:
                                 description: Key is the key in the Kubernetes secret being referenced
                                 type: string
                               name:
-                                description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                description: >-
+                                  Name is the name of the Kubernetes secret being referenced.
+
+                                  The secret must be in the same namespace as the resource
                                 type: string
                             required:
                             - key
@@ -558,7 +609,20 @@ spec:
                 description: 'IpAddress: The IP address type of the container group.'
                 properties:
                   autoGeneratedDomainNameLabelScope:
-                    description: "AutoGeneratedDomainNameLabelScope: The value representing the security enum. The 'Unsecure' value is the default value if not selected and means the object's domain name label is not secured against subdomain takeover. The 'TenantReuse' value is the default value if selected and means the object's domain name label can be reused within the same tenant. The 'SubscriptionReuse' value means the object's domain name label can be reused within the same subscription. The 'ResourceGroupReuse' value means the object's domain name label can be reused within the same resource group. The 'NoReuse' value means the object's domain name label cannot be reused within the same resource group, subscription, or tenant."
+                    description: >-
+                      AutoGeneratedDomainNameLabelScope: The value representing the security enum. The 'Unsecure' value is the default value
+
+                      if not selected and means the object's domain name label is not secured against subdomain takeover. The 'TenantReuse'
+
+                      value is the default value if selected and means the object's domain name label can be reused within the same tenant.
+
+                      The 'SubscriptionReuse' value means the object's domain name label can be reused within the same subscription. The
+
+                      'ResourceGroupReuse' value means the object's domain name label can be reused within the same resource group. The
+
+                      'NoReuse' value means the object's domain name label cannot be reused within the same resource group, subscription, or
+
+                      tenant.
                     enum:
                     - Noreuse
                     - ResourceGroupReuse
@@ -610,7 +674,12 @@ spec:
                 - Windows
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -620,7 +689,14 @@ spec:
                     type: string
                 type: object
               restartPolicy:
-                description: 'RestartPolicy: Restart policy for all containers within the container group. - `Always` Always restart - `OnFailure` Restart on failure - `Never` Never restart'
+                description: >-
+                  RestartPolicy: Restart policy for all containers within the container group.
+
+                  - `Always` Always restart
+
+                  - `OnFailure` Restart on failure
+
+                  - `Never` Never restart
                 enum:
                 - Always
                 - Never
@@ -644,7 +720,12 @@ spec:
                       description: 'Reference: Resource ID of virtual network and subnet.'
                       properties:
                         armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          description: >-
+                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
                         group:
@@ -699,7 +780,12 @@ spec:
                       description: 'GitRepo: The git repo volume.'
                       properties:
                         directory:
-                          description: "Directory: Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name."
+                          description: >-
+                            Directory: Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be
+
+                            the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the
+
+                            given name.
                           type: string
                         repository:
                           description: 'Repository: Repository URL'
@@ -748,14 +834,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1106,17 +1207,33 @@ spec:
                 description: 'Identity: The identity of the container group, if configured.'
                 properties:
                   principalId:
-                    description: 'PrincipalId: The principal id of the container group identity. This property will only be provided for a system assigned identity.'
+                    description: >-
+                      PrincipalId: The principal id of the container group identity. This property will only be provided for a system assigned
+
+                      identity.
                     type: string
                   tenantId:
-                    description: 'TenantId: The tenant id associated with the container group. This property will only be provided for a system assigned identity.'
+                    description: >-
+                      TenantId: The tenant id associated with the container group. This property will only be provided for a system assigned
+
+                      identity.
                     type: string
                   type:
-                    description: "Type: The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group."
+                    description: >-
+                      Type: The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an
+
+                      implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the
+
+                      container group.
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: "The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+                      description: >-
+                        The list of user identities associated with the container group. The user identity dictionary key references will be ARM
+
+                        resource ids in the form:
+
+                        '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                       properties:
                         clientId:
                           description: 'ClientId: The client id of user assigned identity.'
@@ -1300,7 +1417,20 @@ spec:
                 description: 'IpAddress: The IP address type of the container group.'
                 properties:
                   autoGeneratedDomainNameLabelScope:
-                    description: "AutoGeneratedDomainNameLabelScope: The value representing the security enum. The 'Unsecure' value is the default value if not selected and means the object's domain name label is not secured against subdomain takeover. The 'TenantReuse' value is the default value if selected and means the object's domain name label can be reused within the same tenant. The 'SubscriptionReuse' value means the object's domain name label can be reused within the same subscription. The 'ResourceGroupReuse' value means the object's domain name label can be reused within the same resource group. The 'NoReuse' value means the object's domain name label cannot be reused within the same resource group, subscription, or tenant."
+                    description: >-
+                      AutoGeneratedDomainNameLabelScope: The value representing the security enum. The 'Unsecure' value is the default value
+
+                      if not selected and means the object's domain name label is not secured against subdomain takeover. The 'TenantReuse'
+
+                      value is the default value if selected and means the object's domain name label can be reused within the same tenant.
+
+                      The 'SubscriptionReuse' value means the object's domain name label can be reused within the same subscription. The
+
+                      'ResourceGroupReuse' value means the object's domain name label can be reused within the same resource group. The
+
+                      'NoReuse' value means the object's domain name label cannot be reused within the same resource group, subscription, or
+
+                      tenant.
                     type: string
                   dnsNameLabel:
                     description: 'DnsNameLabel: The Dns name label for the IP.'
@@ -1341,7 +1471,14 @@ spec:
                 description: 'ProvisioningState: The provisioning state of the container group. This only appears in the response.'
                 type: string
               restartPolicy:
-                description: 'RestartPolicy: Restart policy for all containers within the container group. - `Always` Always restart - `OnFailure` Restart on failure - `Never` Never restart'
+                description: >-
+                  RestartPolicy: Restart policy for all containers within the container group.
+
+                  - `Always` Always restart
+
+                  - `OnFailure` Restart on failure
+
+                  - `Never` Never restart
                 type: string
               sku:
                 description: 'Sku: The SKU for a container group.'
@@ -1397,7 +1534,12 @@ spec:
                       description: 'GitRepo: The git repo volume.'
                       properties:
                         directory:
-                          description: "Directory: Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name."
+                          description: >-
+                            Directory: Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be
+
+                            the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the
+
+                            given name.
                           type: string
                         repository:
                           description: 'Repository: Repository URL'
@@ -1443,13 +1585,36 @@ spec:
     name: v1api20211001storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20211001.ContainerGroup Generator information: - Generated from: /containerinstance/resource-manager/Microsoft.ContainerInstance/stable/2021-10-01/containerInstance.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerInstance/containerGroups/{containerGroupName}'
+        description: >-
+          Storage version of v1api20211001.ContainerGroup
+
+          Generator information:
+
+          - Generated from: /containerinstance/resource-manager/Microsoft.ContainerInstance/stable/2021-10-01/containerInstance.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerInstance/containerGroups/{containerGroupName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -1459,19 +1624,31 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               containers:
                 items:
-                  description: Storage version of v1api20211001.Container A container instance.
+                  description: >-
+                    Storage version of v1api20211001.Container
+
+                    A container instance.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     command:
                       items:
@@ -1479,23 +1656,35 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1api20211001.EnvironmentVariable The environment variable to set within the container instance.
+                        description: >-
+                          Storage version of v1api20211001.EnvironmentVariable
+
+                          The environment variable to set within the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           name:
                             type: string
                           secureValue:
-                            description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                            description: >-
+                              SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                              the resource it is on.
                             properties:
                               key:
                                 description: Key is the key in the Kubernetes secret being referenced
                                 type: string
                               name:
-                                description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                description: >-
+                                  Name is the name of the Kubernetes secret being referenced.
+
+                                  The secret must be in the same namespace as the resource
                                 type: string
                             required:
                             - key
@@ -1508,20 +1697,32 @@ spec:
                     image:
                       type: string
                     livenessProbe:
-                      description: Storage version of v1api20211001.ContainerProbe The container probe, for liveness or readiness
+                      description: >-
+                        Storage version of v1api20211001.ContainerProbe
+
+                        The container probe, for liveness or readiness
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: Storage version of v1api20211001.ContainerExec The container execution command, for liveness or readiness probe
+                          description: >-
+                            Storage version of v1api20211001.ContainerExec
+
+                            The container execution command, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             command:
                               items:
@@ -1531,21 +1732,33 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: Storage version of v1api20211001.ContainerHttpGet The container Http Get settings, for liveness or readiness probe
+                          description: >-
+                            Storage version of v1api20211001.ContainerHttpGet
+
+                            The container Http Get settings, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             httpHeaders:
                               items:
-                                description: Storage version of v1api20211001.HttpHeader The HTTP header.
+                                description: >-
+                                  Storage version of v1api20211001.HttpHeader
+
+                                  The HTTP header.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                    description: >-
+                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                      resources, allowing for full fidelity round trip conversions
                                     type: object
                                   name:
                                     type: string
@@ -1573,12 +1786,18 @@ spec:
                       type: string
                     ports:
                       items:
-                        description: Storage version of v1api20211001.ContainerPort The port exposed on the container instance.
+                        description: >-
+                          Storage version of v1api20211001.ContainerPort
+
+                          The port exposed on the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           port:
                             type: integer
@@ -1587,20 +1806,32 @@ spec:
                         type: object
                       type: array
                     readinessProbe:
-                      description: Storage version of v1api20211001.ContainerProbe The container probe, for liveness or readiness
+                      description: >-
+                        Storage version of v1api20211001.ContainerProbe
+
+                        The container probe, for liveness or readiness
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: Storage version of v1api20211001.ContainerExec The container execution command, for liveness or readiness probe
+                          description: >-
+                            Storage version of v1api20211001.ContainerExec
+
+                            The container execution command, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             command:
                               items:
@@ -1610,21 +1841,33 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: Storage version of v1api20211001.ContainerHttpGet The container Http Get settings, for liveness or readiness probe
+                          description: >-
+                            Storage version of v1api20211001.ContainerHttpGet
+
+                            The container Http Get settings, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             httpHeaders:
                               items:
-                                description: Storage version of v1api20211001.HttpHeader The HTTP header.
+                                description: >-
+                                  Storage version of v1api20211001.HttpHeader
+
+                                  The HTTP header.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                    description: >-
+                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                      resources, allowing for full fidelity round trip conversions
                                     type: object
                                   name:
                                     type: string
@@ -1649,30 +1892,48 @@ spec:
                           type: integer
                       type: object
                     resources:
-                      description: Storage version of v1api20211001.ResourceRequirements The resource requirements.
+                      description: >-
+                        Storage version of v1api20211001.ResourceRequirements
+
+                        The resource requirements.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         limits:
-                          description: Storage version of v1api20211001.ResourceLimits The resource limits.
+                          description: >-
+                            Storage version of v1api20211001.ResourceLimits
+
+                            The resource limits.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             cpu:
                               type: number
                             gpu:
-                              description: Storage version of v1api20211001.GpuResource The GPU resource.
+                              description: >-
+                                Storage version of v1api20211001.GpuResource
+
+                                The GPU resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -1683,22 +1944,34 @@ spec:
                               type: number
                           type: object
                         requests:
-                          description: Storage version of v1api20211001.ResourceRequests The resource requests.
+                          description: >-
+                            Storage version of v1api20211001.ResourceRequests
+
+                            The resource requests.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             cpu:
                               type: number
                             gpu:
-                              description: Storage version of v1api20211001.GpuResource The GPU resource.
+                              description: >-
+                                Storage version of v1api20211001.GpuResource
+
+                                The GPU resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -1711,12 +1984,18 @@ spec:
                       type: object
                     volumeMounts:
                       items:
-                        description: Storage version of v1api20211001.VolumeMount The properties of the volume mount.
+                        description: >-
+                          Storage version of v1api20211001.VolumeMount
+
+                          The properties of the volume mount.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           mountPath:
                             type: string
@@ -1729,20 +2008,32 @@ spec:
                   type: object
                 type: array
               diagnostics:
-                description: Storage version of v1api20211001.ContainerGroupDiagnostics Container group diagnostic information.
+                description: >-
+                  Storage version of v1api20211001.ContainerGroupDiagnostics
+
+                  Container group diagnostic information.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   logAnalytics:
-                    description: Storage version of v1api20211001.LogAnalytics Container group log analytics information.
+                    description: >-
+                      Storage version of v1api20211001.LogAnalytics
+
+                      Container group log analytics information.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       logType:
                         type: string
@@ -1753,13 +2044,19 @@ spec:
                       workspaceId:
                         type: string
                       workspaceKey:
-                        description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                        description: >-
+                          SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                          the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1769,7 +2066,12 @@ spec:
                         description: 'WorkspaceResourceReference: The workspace resource id for log analytics'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -1785,12 +2087,18 @@ spec:
                     type: object
                 type: object
               dnsConfig:
-                description: Storage version of v1api20211001.DnsConfiguration DNS configuration for the container group.
+                description: >-
+                  Storage version of v1api20211001.DnsConfiguration
+
+                  DNS configuration for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   nameServers:
                     items:
@@ -1802,12 +2110,18 @@ spec:
                     type: string
                 type: object
               encryptionProperties:
-                description: Storage version of v1api20211001.EncryptionProperties The container group encryption properties.
+                description: >-
+                  Storage version of v1api20211001.EncryptionProperties
+
+                  The container group encryption properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   keyName:
                     type: string
@@ -1817,29 +2131,46 @@ spec:
                     type: string
                 type: object
               identity:
-                description: Storage version of v1api20211001.ContainerGroupIdentity Identity for the container group.
+                description: >-
+                  Storage version of v1api20211001.ContainerGroupIdentity
+
+                  Identity for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: Storage version of v1api20211001.UserAssignedIdentityDetails Information about the user assigned identity for the resource
+                      description: >-
+                        Storage version of v1api20211001.UserAssignedIdentityDetails
+
+                        Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1857,25 +2188,37 @@ spec:
                 type: object
               imageRegistryCredentials:
                 items:
-                  description: Storage version of v1api20211001.ImageRegistryCredential Image registry credential.
+                  description: >-
+                    Storage version of v1api20211001.ImageRegistryCredential
+
+                    Image registry credential.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     identity:
                       type: string
                     identityUrl:
                       type: string
                     password:
-                      description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                      description: >-
+                        SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                        the resource it is on.
                       properties:
                         key:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                          description: >-
+                            Name is the name of the Kubernetes secret being referenced.
+
+                            The secret must be in the same namespace as the resource
                           type: string
                       required:
                       - key
@@ -1889,12 +2232,18 @@ spec:
                 type: array
               initContainers:
                 items:
-                  description: Storage version of v1api20211001.InitContainerDefinition The init container definition.
+                  description: >-
+                    Storage version of v1api20211001.InitContainerDefinition
+
+                    The init container definition.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     command:
                       items:
@@ -1902,23 +2251,35 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1api20211001.EnvironmentVariable The environment variable to set within the container instance.
+                        description: >-
+                          Storage version of v1api20211001.EnvironmentVariable
+
+                          The environment variable to set within the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           name:
                             type: string
                           secureValue:
-                            description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                            description: >-
+                              SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                              the resource it is on.
                             properties:
                               key:
                                 description: Key is the key in the Kubernetes secret being referenced
                                 type: string
                               name:
-                                description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                                description: >-
+                                  Name is the name of the Kubernetes secret being referenced.
+
+                                  The secret must be in the same namespace as the resource
                                 type: string
                             required:
                             - key
@@ -1934,12 +2295,18 @@ spec:
                       type: string
                     volumeMounts:
                       items:
-                        description: Storage version of v1api20211001.VolumeMount The properties of the volume mount.
+                        description: >-
+                          Storage version of v1api20211001.VolumeMount
+
+                          The properties of the volume mount.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           mountPath:
                             type: string
@@ -1952,12 +2319,18 @@ spec:
                   type: object
                 type: array
               ipAddress:
-                description: Storage version of v1api20211001.IpAddress IP address for the container group.
+                description: >-
+                  Storage version of v1api20211001.IpAddress
+
+                  IP address for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   autoGeneratedDomainNameLabelScope:
                     type: string
@@ -1967,12 +2340,18 @@ spec:
                     type: string
                   ports:
                     items:
-                      description: Storage version of v1api20211001.Port The port exposed on the container group.
+                      description: >-
+                        Storage version of v1api20211001.Port
+
+                        The port exposed on the container group.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         port:
                           type: integer
@@ -1990,7 +2369,12 @@ spec:
               osType:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -2005,12 +2389,18 @@ spec:
                 type: string
               subnetIds:
                 items:
-                  description: Storage version of v1api20211001.ContainerGroupSubnetId Container group subnet information.
+                  description: >-
+                    Storage version of v1api20211001.ContainerGroupSubnetId
+
+                    Container group subnet information.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     name:
                       type: string
@@ -2018,7 +2408,12 @@ spec:
                       description: 'Reference: Resource ID of virtual network and subnet.'
                       properties:
                         armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          description: >-
+                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
                         group:
@@ -2041,20 +2436,32 @@ spec:
                 type: object
               volumes:
                 items:
-                  description: Storage version of v1api20211001.Volume The properties of the volume.
+                  description: >-
+                    Storage version of v1api20211001.Volume
+
+                    The properties of the volume.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     azureFile:
-                      description: Storage version of v1api20211001.AzureFileVolume The properties of the Azure File volume. Azure File shares are mounted as volumes.
+                      description: >-
+                        Storage version of v1api20211001.AzureFileVolume
+
+                        The properties of the Azure File volume. Azure File shares are mounted as volumes.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         readOnly:
                           type: boolean
@@ -2070,12 +2477,18 @@ spec:
                         x-kubernetes-preserve-unknown-fields: true
                       type: object
                     gitRepo:
-                      description: Storage version of v1api20211001.GitRepoVolume Represents a volume that is populated with the contents of a git repository
+                      description: >-
+                        Storage version of v1api20211001.GitRepoVolume
+
+                        Represents a volume that is populated with the contents of a git repository
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         directory:
                           type: string
@@ -2100,12 +2513,18 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20211001.ContainerGroup_STATUS A container group.
+            description: >-
+              Storage version of v1api20211001.ContainerGroup_STATUS
+
+              A container group.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
                 items:
@@ -2119,14 +2538,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -2143,12 +2577,18 @@ spec:
                 type: array
               containers:
                 items:
-                  description: Storage version of v1api20211001.Container_STATUS A container instance.
+                  description: >-
+                    Storage version of v1api20211001.Container_STATUS
+
+                    A container instance.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     command:
                       items:
@@ -2156,12 +2596,18 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1api20211001.EnvironmentVariable_STATUS The environment variable to set within the container instance.
+                        description: >-
+                          Storage version of v1api20211001.EnvironmentVariable_STATUS
+
+                          The environment variable to set within the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           name:
                             type: string
@@ -2177,15 +2623,24 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         currentState:
-                          description: Storage version of v1api20211001.ContainerState_STATUS The container instance state.
+                          description: >-
+                            Storage version of v1api20211001.ContainerState_STATUS
+
+                            The container instance state.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             detailStatus:
                               type: string
@@ -2200,12 +2655,18 @@ spec:
                           type: object
                         events:
                           items:
-                            description: Storage version of v1api20211001.Event_STATUS A container group or container instance event.
+                            description: >-
+                              Storage version of v1api20211001.Event_STATUS
+
+                              A container group or container instance event.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               count:
                                 type: integer
@@ -2222,12 +2683,18 @@ spec:
                             type: object
                           type: array
                         previousState:
-                          description: Storage version of v1api20211001.ContainerState_STATUS The container instance state.
+                          description: >-
+                            Storage version of v1api20211001.ContainerState_STATUS
+
+                            The container instance state.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             detailStatus:
                               type: string
@@ -2244,20 +2711,32 @@ spec:
                           type: integer
                       type: object
                     livenessProbe:
-                      description: Storage version of v1api20211001.ContainerProbe_STATUS The container probe, for liveness or readiness
+                      description: >-
+                        Storage version of v1api20211001.ContainerProbe_STATUS
+
+                        The container probe, for liveness or readiness
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: Storage version of v1api20211001.ContainerExec_STATUS The container execution command, for liveness or readiness probe
+                          description: >-
+                            Storage version of v1api20211001.ContainerExec_STATUS
+
+                            The container execution command, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             command:
                               items:
@@ -2267,21 +2746,33 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: Storage version of v1api20211001.ContainerHttpGet_STATUS The container Http Get settings, for liveness or readiness probe
+                          description: >-
+                            Storage version of v1api20211001.ContainerHttpGet_STATUS
+
+                            The container Http Get settings, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             httpHeaders:
                               items:
-                                description: Storage version of v1api20211001.HttpHeader_STATUS The HTTP header.
+                                description: >-
+                                  Storage version of v1api20211001.HttpHeader_STATUS
+
+                                  The HTTP header.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                    description: >-
+                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                      resources, allowing for full fidelity round trip conversions
                                     type: object
                                   name:
                                     type: string
@@ -2309,12 +2800,18 @@ spec:
                       type: string
                     ports:
                       items:
-                        description: Storage version of v1api20211001.ContainerPort_STATUS The port exposed on the container instance.
+                        description: >-
+                          Storage version of v1api20211001.ContainerPort_STATUS
+
+                          The port exposed on the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           port:
                             type: integer
@@ -2323,20 +2820,32 @@ spec:
                         type: object
                       type: array
                     readinessProbe:
-                      description: Storage version of v1api20211001.ContainerProbe_STATUS The container probe, for liveness or readiness
+                      description: >-
+                        Storage version of v1api20211001.ContainerProbe_STATUS
+
+                        The container probe, for liveness or readiness
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         exec:
-                          description: Storage version of v1api20211001.ContainerExec_STATUS The container execution command, for liveness or readiness probe
+                          description: >-
+                            Storage version of v1api20211001.ContainerExec_STATUS
+
+                            The container execution command, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             command:
                               items:
@@ -2346,21 +2855,33 @@ spec:
                         failureThreshold:
                           type: integer
                         httpGet:
-                          description: Storage version of v1api20211001.ContainerHttpGet_STATUS The container Http Get settings, for liveness or readiness probe
+                          description: >-
+                            Storage version of v1api20211001.ContainerHttpGet_STATUS
+
+                            The container Http Get settings, for liveness or readiness probe
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             httpHeaders:
                               items:
-                                description: Storage version of v1api20211001.HttpHeader_STATUS The HTTP header.
+                                description: >-
+                                  Storage version of v1api20211001.HttpHeader_STATUS
+
+                                  The HTTP header.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                    description: >-
+                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                      resources, allowing for full fidelity round trip conversions
                                     type: object
                                   name:
                                     type: string
@@ -2385,30 +2906,48 @@ spec:
                           type: integer
                       type: object
                     resources:
-                      description: Storage version of v1api20211001.ResourceRequirements_STATUS The resource requirements.
+                      description: >-
+                        Storage version of v1api20211001.ResourceRequirements_STATUS
+
+                        The resource requirements.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         limits:
-                          description: Storage version of v1api20211001.ResourceLimits_STATUS The resource limits.
+                          description: >-
+                            Storage version of v1api20211001.ResourceLimits_STATUS
+
+                            The resource limits.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             cpu:
                               type: number
                             gpu:
-                              description: Storage version of v1api20211001.GpuResource_STATUS The GPU resource.
+                              description: >-
+                                Storage version of v1api20211001.GpuResource_STATUS
+
+                                The GPU resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -2419,22 +2958,34 @@ spec:
                               type: number
                           type: object
                         requests:
-                          description: Storage version of v1api20211001.ResourceRequests_STATUS The resource requests.
+                          description: >-
+                            Storage version of v1api20211001.ResourceRequests_STATUS
+
+                            The resource requests.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             cpu:
                               type: number
                             gpu:
-                              description: Storage version of v1api20211001.GpuResource_STATUS The GPU resource.
+                              description: >-
+                                Storage version of v1api20211001.GpuResource_STATUS
+
+                                The GPU resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -2447,12 +2998,18 @@ spec:
                       type: object
                     volumeMounts:
                       items:
-                        description: Storage version of v1api20211001.VolumeMount_STATUS The properties of the volume mount.
+                        description: >-
+                          Storage version of v1api20211001.VolumeMount_STATUS
+
+                          The properties of the volume mount.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           mountPath:
                             type: string
@@ -2465,20 +3022,32 @@ spec:
                   type: object
                 type: array
               diagnostics:
-                description: Storage version of v1api20211001.ContainerGroupDiagnostics_STATUS Container group diagnostic information.
+                description: >-
+                  Storage version of v1api20211001.ContainerGroupDiagnostics_STATUS
+
+                  Container group diagnostic information.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   logAnalytics:
-                    description: Storage version of v1api20211001.LogAnalytics_STATUS Container group log analytics information.
+                    description: >-
+                      Storage version of v1api20211001.LogAnalytics_STATUS
+
+                      Container group log analytics information.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       logType:
                         type: string
@@ -2491,12 +3060,18 @@ spec:
                     type: object
                 type: object
               dnsConfig:
-                description: Storage version of v1api20211001.DnsConfiguration_STATUS DNS configuration for the container group.
+                description: >-
+                  Storage version of v1api20211001.DnsConfiguration_STATUS
+
+                  DNS configuration for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   nameServers:
                     items:
@@ -2508,12 +3083,18 @@ spec:
                     type: string
                 type: object
               encryptionProperties:
-                description: Storage version of v1api20211001.EncryptionProperties_STATUS The container group encryption properties.
+                description: >-
+                  Storage version of v1api20211001.EncryptionProperties_STATUS
+
+                  The container group encryption properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   keyName:
                     type: string
@@ -2525,12 +3106,18 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1api20211001.ContainerGroupIdentity_STATUS Identity for the container group.
+                description: >-
+                  Storage version of v1api20211001.ContainerGroupIdentity_STATUS
+
+                  Identity for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
                     type: string
@@ -2540,12 +3127,22 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: "Storage version of v1api20211001.UserAssignedIdentities_STATUS The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+                      description: >-
+                        Storage version of v1api20211001.UserAssignedIdentities_STATUS
+
+                        The list of user identities associated with the container group. The user identity dictionary key references will be ARM
+
+                        resource ids in the form:
+
+                        '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
                           type: string
@@ -2556,12 +3153,18 @@ spec:
                 type: object
               imageRegistryCredentials:
                 items:
-                  description: Storage version of v1api20211001.ImageRegistryCredential_STATUS Image registry credential.
+                  description: >-
+                    Storage version of v1api20211001.ImageRegistryCredential_STATUS
+
+                    Image registry credential.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     identity:
                       type: string
@@ -2575,12 +3178,18 @@ spec:
                 type: array
               initContainers:
                 items:
-                  description: Storage version of v1api20211001.InitContainerDefinition_STATUS The init container definition.
+                  description: >-
+                    Storage version of v1api20211001.InitContainerDefinition_STATUS
+
+                    The init container definition.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     command:
                       items:
@@ -2588,12 +3197,18 @@ spec:
                       type: array
                     environmentVariables:
                       items:
-                        description: Storage version of v1api20211001.EnvironmentVariable_STATUS The environment variable to set within the container instance.
+                        description: >-
+                          Storage version of v1api20211001.EnvironmentVariable_STATUS
+
+                          The environment variable to set within the container instance.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           name:
                             type: string
@@ -2609,15 +3224,24 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         currentState:
-                          description: Storage version of v1api20211001.ContainerState_STATUS The container instance state.
+                          description: >-
+                            Storage version of v1api20211001.ContainerState_STATUS
+
+                            The container instance state.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             detailStatus:
                               type: string
@@ -2632,12 +3256,18 @@ spec:
                           type: object
                         events:
                           items:
-                            description: Storage version of v1api20211001.Event_STATUS A container group or container instance event.
+                            description: >-
+                              Storage version of v1api20211001.Event_STATUS
+
+                              A container group or container instance event.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               count:
                                 type: integer
@@ -2654,12 +3284,18 @@ spec:
                             type: object
                           type: array
                         previousState:
-                          description: Storage version of v1api20211001.ContainerState_STATUS The container instance state.
+                          description: >-
+                            Storage version of v1api20211001.ContainerState_STATUS
+
+                            The container instance state.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             detailStatus:
                               type: string
@@ -2679,12 +3315,18 @@ spec:
                       type: string
                     volumeMounts:
                       items:
-                        description: Storage version of v1api20211001.VolumeMount_STATUS The properties of the volume mount.
+                        description: >-
+                          Storage version of v1api20211001.VolumeMount_STATUS
+
+                          The properties of the volume mount.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           mountPath:
                             type: string
@@ -2702,16 +3344,25 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   events:
                     items:
-                      description: Storage version of v1api20211001.Event_STATUS A container group or container instance event.
+                      description: >-
+                        Storage version of v1api20211001.Event_STATUS
+
+                        A container group or container instance event.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         count:
                           type: integer
@@ -2731,12 +3382,18 @@ spec:
                     type: string
                 type: object
               ipAddress:
-                description: Storage version of v1api20211001.IpAddress_STATUS IP address for the container group.
+                description: >-
+                  Storage version of v1api20211001.IpAddress_STATUS
+
+                  IP address for the container group.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   autoGeneratedDomainNameLabelScope:
                     type: string
@@ -2748,12 +3405,18 @@ spec:
                     type: string
                   ports:
                     items:
-                      description: Storage version of v1api20211001.Port_STATUS The port exposed on the container group.
+                      description: >-
+                        Storage version of v1api20211001.Port_STATUS
+
+                        The port exposed on the container group.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         port:
                           type: integer
@@ -2778,12 +3441,18 @@ spec:
                 type: string
               subnetIds:
                 items:
-                  description: Storage version of v1api20211001.ContainerGroupSubnetId_STATUS Container group subnet information.
+                  description: >-
+                    Storage version of v1api20211001.ContainerGroupSubnetId_STATUS
+
+                    Container group subnet information.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
                       type: string
@@ -2799,20 +3468,32 @@ spec:
                 type: string
               volumes:
                 items:
-                  description: Storage version of v1api20211001.Volume_STATUS The properties of the volume.
+                  description: >-
+                    Storage version of v1api20211001.Volume_STATUS
+
+                    The properties of the volume.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     azureFile:
-                      description: Storage version of v1api20211001.AzureFileVolume_STATUS The properties of the Azure File volume. Azure File shares are mounted as volumes.
+                      description: >-
+                        Storage version of v1api20211001.AzureFileVolume_STATUS
+
+                        The properties of the Azure File volume. Azure File shares are mounted as volumes.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         readOnly:
                           type: boolean
@@ -2828,12 +3509,18 @@ spec:
                         x-kubernetes-preserve-unknown-fields: true
                       type: object
                     gitRepo:
-                      description: Storage version of v1api20211001.GitRepoVolume_STATUS Represents a volume that is populated with the contents of a git repository
+                      description: >-
+                        Storage version of v1api20211001.GitRepoVolume_STATUS
+
+                        Represents a volume that is populated with the contents of a git repository
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         directory:
                           type: string

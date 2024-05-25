@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: databaseaccounts.documentdb.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20210515
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -79,7 +100,10 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 maxLength: 50
                 minLength: 3
                 pattern: ^[a-z0-9]+(-[a-z0-9]+)*
@@ -126,7 +150,10 @@ spec:
                   description: Cosmos DB capability object
                   properties:
                     name:
-                      description: 'Name: Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".'
+                      description: >-
+                        Name: Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include
+
+                        "EnableTable" and "EnableGremlin".
                       type: string
                   type: object
                 type: array
@@ -148,12 +175,22 @@ spec:
                     - Strong
                     type: string
                   maxIntervalInSeconds:
-                    description: "MaxIntervalInSeconds: When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'."
+                    description: >-
+                      MaxIntervalInSeconds: When used with the Bounded Staleness consistency level, this value represents the time amount of
+
+                      staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is
+
+                      set to 'BoundedStaleness'.
                     maximum: 86400
                     minimum: 5
                     type: integer
                   maxStalenessPrefix:
-                    description: "MaxStalenessPrefix: When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'."
+                    description: >-
+                      MaxStalenessPrefix: When used with the Bounded Staleness consistency level, this value represents the number of stale
+
+                      requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set
+
+                      to 'BoundedStaleness'.
                     maximum: 2147483647
                     minimum: 1
                     type: integer
@@ -175,7 +212,10 @@ spec:
                       description: 'AllowedOrigins: The origin domains that are permitted to make a request against the service via CORS.'
                       type: string
                     exposedHeaders:
-                      description: 'ExposedHeaders: The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.'
+                      description: >-
+                        ExposedHeaders: The response headers that may be sent in the response to the CORS request and exposed by the browser to
+
+                        the request issuer.
                       type: string
                     maxAgeInSeconds:
                       description: 'MaxAgeInSeconds: The maximum amount time that a browser should cache the preflight OPTIONS request.'
@@ -192,16 +232,27 @@ spec:
                 - Standard
                 type: string
               defaultIdentity:
-                description: 'DefaultIdentity: The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.'
+                description: >-
+                  DefaultIdentity: The default identity for accessing key vault used in features like customer managed keys. The default
+
+                  identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.
                 type: string
               disableKeyBasedMetadataWriteAccess:
-                description: 'DisableKeyBasedMetadataWriteAccess: Disable write operations on metadata resources (databases, containers, throughput) via account keys'
+                description: >-
+                  DisableKeyBasedMetadataWriteAccess: Disable write operations on metadata resources (databases, containers, throughput)
+
+                  via account keys
                 type: boolean
               enableAnalyticalStorage:
                 description: 'EnableAnalyticalStorage: Flag to indicate whether to enable storage analytics.'
                 type: boolean
               enableAutomaticFailover:
-                description: 'EnableAutomaticFailover: Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.'
+                description: >-
+                  EnableAutomaticFailover: Enables automatic failover of the write region in the rare event that the region is unavailable
+
+                  due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the
+
+                  failover priorities configured for the account.
                 type: boolean
               enableCassandraConnector:
                 description: 'EnableCassandraConnector: Enables the cassandra connector on the Cosmos DB C* account'
@@ -216,7 +267,10 @@ spec:
                 description: 'Identity: Identity for the resource.'
                 properties:
                   type:
-                    description: "Type: The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service."
+                    description: >-
+                      Type: The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly
+
+                      created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
                     enum:
                     - None
                     - SystemAssigned
@@ -224,7 +278,12 @@ spec:
                     - UserAssigned
                     type: string
                   userAssignedIdentities:
-                    description: "UserAssignedIdentities: The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+                    description: >-
+                      UserAssignedIdentities: The list of user identities associated with resource. The user identity dictionary key
+
+                      references will be ARM resource ids in the form:
+
+                      '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     items:
                       description: Information about the user assigned identity for the resource
                       properties:
@@ -232,7 +291,12 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -254,7 +318,14 @@ spec:
                   description: IpAddressOrRange object
                   properties:
                     ipAddressOrRange:
-                      description: 'IpAddressOrRange: A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.'
+                      description: >-
+                        IpAddressOrRange: A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be
+
+                        well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12,
+
+                        192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245”
+
+                        or “23.40.210.0/8”.
                       type: string
                   type: object
                 type: array
@@ -280,7 +351,12 @@ spec:
                   description: A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     failoverPriority:
-                      description: 'FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
+                      description: >-
+                        FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum
+
+                        value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the
+
+                        regions in which the database account exists.
                       minimum: 0
                       type: integer
                     isZoneRedundant:
@@ -303,71 +379,104 @@ spec:
                   type: string
                 type: array
               operatorSpec:
-                description: 'OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not passed directly to Azure'
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
                 properties:
                   secrets:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       documentEndpoint:
-                        description: 'DocumentEndpoint: indicates where the DocumentEndpoint secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          DocumentEndpoint: indicates where the DocumentEndpoint secret should be placed. If omitted, the secret will not be
+
+                          retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryMasterKey:
-                        description: 'PrimaryMasterKey: indicates where the PrimaryMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          PrimaryMasterKey: indicates where the PrimaryMasterKey secret should be placed. If omitted, the secret will not be
+
+                          retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryReadonlyMasterKey:
-                        description: 'PrimaryReadonlyMasterKey: indicates where the PrimaryReadonlyMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          PrimaryReadonlyMasterKey: indicates where the PrimaryReadonlyMasterKey secret should be placed. If omitted, the secret
+
+                          will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryMasterKey:
-                        description: 'SecondaryMasterKey: indicates where the SecondaryMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          SecondaryMasterKey: indicates where the SecondaryMasterKey secret should be placed. If omitted, the secret will not be
+
+                          retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryReadonlyMasterKey:
-                        description: 'SecondaryReadonlyMasterKey: indicates where the SecondaryReadonlyMasterKey secret should be placed. If omitted, the secret will not be retrieved from Azure.'
+                        description: >-
+                          SecondaryReadonlyMasterKey: indicates where the SecondaryReadonlyMasterKey secret should be placed. If omitted, the
+
+                          secret will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -376,7 +485,12 @@ spec:
                     type: object
                 type: object
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -404,10 +518,18 @@ spec:
                       description: 'IgnoreMissingVNetServiceEndpoint: Create firewall rule before the virtual network has vnet service endpoint enabled.'
                       type: boolean
                     reference:
-                      description: 'Reference: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.'
+                      description: >-
+                        Reference: Resource ID of a subnet, for example:
+
+                        /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
                       properties:
                         armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          description: >-
+                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
                         group:
@@ -475,7 +597,10 @@ spec:
                   description: Cosmos DB capability object
                   properties:
                     name:
-                      description: 'Name: Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".'
+                      description: >-
+                        Name: Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include
+
+                        "EnableTable" and "EnableGremlin".
                       type: string
                   type: object
                 type: array
@@ -492,14 +617,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -524,10 +664,20 @@ spec:
                     description: 'DefaultConsistencyLevel: The default consistency level and configuration settings of the Cosmos DB account.'
                     type: string
                   maxIntervalInSeconds:
-                    description: "MaxIntervalInSeconds: When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'."
+                    description: >-
+                      MaxIntervalInSeconds: When used with the Bounded Staleness consistency level, this value represents the time amount of
+
+                      staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is
+
+                      set to 'BoundedStaleness'.
                     type: integer
                   maxStalenessPrefix:
-                    description: "MaxStalenessPrefix: When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'."
+                    description: >-
+                      MaxStalenessPrefix: When used with the Bounded Staleness consistency level, this value represents the number of stale
+
+                      requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set
+
+                      to 'BoundedStaleness'.
                     type: integer
                 type: object
               cors:
@@ -545,7 +695,10 @@ spec:
                       description: 'AllowedOrigins: The origin domains that are permitted to make a request against the service via CORS.'
                       type: string
                     exposedHeaders:
-                      description: 'ExposedHeaders: The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.'
+                      description: >-
+                        ExposedHeaders: The response headers that may be sent in the response to the CORS request and exposed by the browser to
+
+                        the request issuer.
                       type: string
                     maxAgeInSeconds:
                       description: 'MaxAgeInSeconds: The maximum amount time that a browser should cache the preflight OPTIONS request.'
@@ -556,10 +709,16 @@ spec:
                 description: 'DatabaseAccountOfferType: The offer type for the Cosmos DB database account. Default value: Standard.'
                 type: string
               defaultIdentity:
-                description: 'DefaultIdentity: The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.'
+                description: >-
+                  DefaultIdentity: The default identity for accessing key vault used in features like customer managed keys. The default
+
+                  identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.
                 type: string
               disableKeyBasedMetadataWriteAccess:
-                description: 'DisableKeyBasedMetadataWriteAccess: Disable write operations on metadata resources (databases, containers, throughput) via account keys'
+                description: >-
+                  DisableKeyBasedMetadataWriteAccess: Disable write operations on metadata resources (databases, containers, throughput)
+
+                  via account keys
                 type: boolean
               documentEndpoint:
                 description: 'DocumentEndpoint: The connection endpoint for the Cosmos DB database account.'
@@ -568,7 +727,12 @@ spec:
                 description: 'EnableAnalyticalStorage: Flag to indicate whether to enable storage analytics.'
                 type: boolean
               enableAutomaticFailover:
-                description: 'EnableAutomaticFailover: Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.'
+                description: >-
+                  EnableAutomaticFailover: Enables automatic failover of the write region in the rare event that the region is unavailable
+
+                  due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the
+
+                  failover priorities configured for the account.
                 type: boolean
               enableCassandraConnector:
                 description: 'EnableCassandraConnector: Enables the cassandra connector on the Cosmos DB C* account'
@@ -585,10 +749,18 @@ spec:
                   description: The failover policy for a given region of a database account.
                   properties:
                     failoverPriority:
-                      description: 'FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
+                      description: >-
+                        FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum
+
+                        value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the
+
+                        regions in which the database account exists.
                       type: integer
                     id:
-                      description: 'Id: The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.'
+                      description: >-
+                        Id: The unique identifier of the region in which the database account replicates to. Example:
+
+                        &lt;accountName&gt;-&lt;locationName&gt;.
                       type: string
                     locationName:
                       description: 'LocationName: The name of the region in which the database account exists.'
@@ -602,13 +774,22 @@ spec:
                 description: 'Identity: Identity for the resource.'
                 properties:
                   principalId:
-                    description: 'PrincipalId: The principal id of the system assigned identity. This property will only be provided for a system assigned identity.'
+                    description: >-
+                      PrincipalId: The principal id of the system assigned identity. This property will only be provided for a system assigned
+
+                      identity.
                     type: string
                   tenantId:
-                    description: 'TenantId: The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.'
+                    description: >-
+                      TenantId: The tenant id of the system assigned identity. This property will only be provided for a system assigned
+
+                      identity.
                     type: string
                   type:
-                    description: "Type: The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service."
+                    description: >-
+                      Type: The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly
+
+                      created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
@@ -620,7 +801,12 @@ spec:
                           description: 'PrincipalId: The principal id of user assigned identity.'
                           type: string
                       type: object
-                    description: "UserAssignedIdentities: The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+                    description: >-
+                      UserAssignedIdentities: The list of user identities associated with resource. The user identity dictionary key
+
+                      references will be ARM resource ids in the form:
+
+                      '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     type: object
                 type: object
               ipRules:
@@ -629,7 +815,14 @@ spec:
                   description: IpAddressOrRange object
                   properties:
                     ipAddressOrRange:
-                      description: 'IpAddressOrRange: A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.'
+                      description: >-
+                        IpAddressOrRange: A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be
+
+                        well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12,
+
+                        192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245”
+
+                        or “23.40.210.0/8”.
                       type: string
                   type: object
                 type: array
@@ -651,10 +844,18 @@ spec:
                   description: A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     documentEndpoint:
-                      description: 'DocumentEndpoint: The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/'
+                      description: >-
+                        DocumentEndpoint: The connection endpoint for the specific region. Example:
+
+                        https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
                       type: string
                     failoverPriority:
-                      description: 'FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
+                      description: >-
+                        FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum
+
+                        value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the
+
+                        regions in which the database account exists.
                       type: integer
                     id:
                       description: 'Id: The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.'
@@ -686,7 +887,10 @@ spec:
                   description: A private endpoint connection
                   properties:
                     id:
-                      description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                      description: >-
+                        Id: Fully qualified resource ID for the resource. Ex -
+
+                        /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                       type: string
                   type: object
                 type: array
@@ -701,10 +905,18 @@ spec:
                   description: A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     documentEndpoint:
-                      description: 'DocumentEndpoint: The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/'
+                      description: >-
+                        DocumentEndpoint: The connection endpoint for the specific region. Example:
+
+                        https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
                       type: string
                     failoverPriority:
-                      description: 'FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
+                      description: >-
+                        FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum
+
+                        value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the
+
+                        regions in which the database account exists.
                       type: integer
                     id:
                       description: 'Id: The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.'
@@ -732,7 +944,10 @@ spec:
                   description: Virtual Network ACL Rule object
                   properties:
                     id:
-                      description: 'Id: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.'
+                      description: >-
+                        Id: Resource ID of a subnet, for example:
+
+                        /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
                       type: string
                     ignoreMissingVNetServiceEndpoint:
                       description: 'IgnoreMissingVNetServiceEndpoint: Create firewall rule before the virtual network has vnet service endpoint enabled.'
@@ -745,10 +960,18 @@ spec:
                   description: A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     documentEndpoint:
-                      description: 'DocumentEndpoint: The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/'
+                      description: >-
+                        DocumentEndpoint: The connection endpoint for the specific region. Example:
+
+                        https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
                       type: string
                     failoverPriority:
-                      description: 'FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.'
+                      description: >-
+                        FailoverPriority: The failover priority of the region. A failover priority of 0 indicates a write region. The maximum
+
+                        value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the
+
+                        regions in which the database account exists.
                       type: integer
                     id:
                       description: 'Id: The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.'
@@ -785,13 +1008,36 @@ spec:
     name: v1api20210515storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20210515.DatabaseAccount Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}'
+        description: >-
+          Storage version of v1api20210515.DatabaseAccount
+
+          Generator information:
+
+          - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -801,15 +1047,24 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               analyticalStorageConfiguration:
-                description: Storage version of v1api20210515.AnalyticalStorageConfiguration Analytical storage specific properties.
+                description: >-
+                  Storage version of v1api20210515.AnalyticalStorageConfiguration
+
+                  Analytical storage specific properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   schemaType:
                     type: string
@@ -820,13 +1075,19 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   serverVersion:
                     type: string
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               backupPolicy:
                 description: Storage version of v1api20210515.BackupPolicy
@@ -834,7 +1095,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   continuous:
                     description: Storage version of v1api20210515.ContinuousModeBackupPolicy
@@ -842,7 +1106,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       type:
                         type: string
@@ -853,15 +1120,24 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       periodicModeProperties:
-                        description: Storage version of v1api20210515.PeriodicModeProperties Configuration values for periodic mode backup
+                        description: >-
+                          Storage version of v1api20210515.PeriodicModeProperties
+
+                          Configuration values for periodic mode backup
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           backupIntervalInMinutes:
                             type: integer
@@ -874,12 +1150,18 @@ spec:
                 type: object
               capabilities:
                 items:
-                  description: Storage version of v1api20210515.Capability Cosmos DB capability object
+                  description: >-
+                    Storage version of v1api20210515.Capability
+
+                    Cosmos DB capability object
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     name:
                       type: string
@@ -888,12 +1170,18 @@ spec:
               connectorOffer:
                 type: string
               consistencyPolicy:
-                description: Storage version of v1api20210515.ConsistencyPolicy The consistency policy for the Cosmos DB database account.
+                description: >-
+                  Storage version of v1api20210515.ConsistencyPolicy
+
+                  The consistency policy for the Cosmos DB database account.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   defaultConsistencyLevel:
                     type: string
@@ -904,12 +1192,18 @@ spec:
                 type: object
               cors:
                 items:
-                  description: Storage version of v1api20210515.CorsPolicy The CORS policy for the Cosmos DB database account.
+                  description: >-
+                    Storage version of v1api20210515.CorsPolicy
+
+                    The CORS policy for the Cosmos DB database account.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     allowedHeaders:
                       type: string
@@ -940,29 +1234,46 @@ spec:
               enableMultipleWriteLocations:
                 type: boolean
               identity:
-                description: Storage version of v1api20210515.ManagedServiceIdentity Identity for the resource.
+                description: >-
+                  Storage version of v1api20210515.ManagedServiceIdentity
+
+                  Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: Storage version of v1api20210515.UserAssignedIdentityDetails Information about the user assigned identity for the resource
+                      description: >-
+                        Storage version of v1api20210515.UserAssignedIdentityDetails
+
+                        Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -980,12 +1291,18 @@ spec:
                 type: object
               ipRules:
                 items:
-                  description: Storage version of v1api20210515.IpAddressOrRange IpAddressOrRange object
+                  description: >-
+                    Storage version of v1api20210515.IpAddressOrRange
+
+                    IpAddressOrRange object
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     ipAddressOrRange:
                       type: string
@@ -1001,12 +1318,18 @@ spec:
                 type: string
               locations:
                 items:
-                  description: Storage version of v1api20210515.Location A region in which the Azure Cosmos DB database account is deployed.
+                  description: >-
+                    Storage version of v1api20210515.Location
+
+                    A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     failoverPriority:
                       type: integer
@@ -1023,12 +1346,18 @@ spec:
                   type: string
                 type: array
               operatorSpec:
-                description: Storage version of v1api20210515.DatabaseAccountOperatorSpec Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                description: >-
+                  Storage version of v1api20210515.DatabaseAccountOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   secrets:
                     description: Storage version of v1api20210515.DatabaseAccountOperatorSecrets
@@ -1036,68 +1365,101 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       documentEndpoint:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryMasterKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       primaryReadonlyMasterKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryMasterKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
                         - name
                         type: object
                       secondaryReadonlyMasterKey:
-                        description: 'SecretDestination describes the location to store a single secret value. Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.'
+                        description: >-
+                          SecretDestination describes the location to store a single secret value.
+
+                          Note: This is similar to ConfigMapDestination in configmaps.go. Changes to one should likely also be made to the other.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                            description: >-
+                              Name is the name of the Kubernetes secret being referenced.
+
+                              The secret must be in the same namespace as the resource
                             type: string
                         required:
                         - key
@@ -1108,7 +1470,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -1125,20 +1492,34 @@ spec:
                 type: object
               virtualNetworkRules:
                 items:
-                  description: Storage version of v1api20210515.VirtualNetworkRule Virtual Network ACL Rule object
+                  description: >-
+                    Storage version of v1api20210515.VirtualNetworkRule
+
+                    Virtual Network ACL Rule object
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     ignoreMissingVNetServiceEndpoint:
                       type: boolean
                     reference:
-                      description: 'Reference: Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.'
+                      description: >-
+                        Reference: Resource ID of a subnet, for example:
+
+                        /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
                       properties:
                         armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          description: >-
+                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
                         group:
@@ -1162,15 +1543,24 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               analyticalStorageConfiguration:
-                description: Storage version of v1api20210515.AnalyticalStorageConfiguration_STATUS Analytical storage specific properties.
+                description: >-
+                  Storage version of v1api20210515.AnalyticalStorageConfiguration_STATUS
+
+                  Analytical storage specific properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   schemaType:
                     type: string
@@ -1181,7 +1571,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   serverVersion:
                     type: string
@@ -1192,7 +1585,10 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   continuous:
                     description: Storage version of v1api20210515.ContinuousModeBackupPolicy_STATUS
@@ -1200,7 +1596,10 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       type:
                         type: string
@@ -1211,15 +1610,24 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       periodicModeProperties:
-                        description: Storage version of v1api20210515.PeriodicModeProperties_STATUS Configuration values for periodic mode backup
+                        description: >-
+                          Storage version of v1api20210515.PeriodicModeProperties_STATUS
+
+                          Configuration values for periodic mode backup
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           backupIntervalInMinutes:
                             type: integer
@@ -1232,12 +1640,18 @@ spec:
                 type: object
               capabilities:
                 items:
-                  description: Storage version of v1api20210515.Capability_STATUS Cosmos DB capability object
+                  description: >-
+                    Storage version of v1api20210515.Capability_STATUS
+
+                    Cosmos DB capability object
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     name:
                       type: string
@@ -1255,14 +1669,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1280,12 +1709,18 @@ spec:
               connectorOffer:
                 type: string
               consistencyPolicy:
-                description: Storage version of v1api20210515.ConsistencyPolicy_STATUS The consistency policy for the Cosmos DB database account.
+                description: >-
+                  Storage version of v1api20210515.ConsistencyPolicy_STATUS
+
+                  The consistency policy for the Cosmos DB database account.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   defaultConsistencyLevel:
                     type: string
@@ -1296,12 +1731,18 @@ spec:
                 type: object
               cors:
                 items:
-                  description: Storage version of v1api20210515.CorsPolicy_STATUS The CORS policy for the Cosmos DB database account.
+                  description: >-
+                    Storage version of v1api20210515.CorsPolicy_STATUS
+
+                    The CORS policy for the Cosmos DB database account.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     allowedHeaders:
                       type: string
@@ -1335,12 +1776,18 @@ spec:
                 type: boolean
               failoverPolicies:
                 items:
-                  description: Storage version of v1api20210515.FailoverPolicy_STATUS The failover policy for a given region of a database account.
+                  description: >-
+                    Storage version of v1api20210515.FailoverPolicy_STATUS
+
+                    The failover policy for a given region of a database account.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     failoverPriority:
                       type: integer
@@ -1353,12 +1800,18 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1api20210515.ManagedServiceIdentity_STATUS Identity for the resource.
+                description: >-
+                  Storage version of v1api20210515.ManagedServiceIdentity_STATUS
+
+                  Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
                     type: string
@@ -1373,7 +1826,10 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
                           type: string
@@ -1384,12 +1840,18 @@ spec:
                 type: object
               ipRules:
                 items:
-                  description: Storage version of v1api20210515.IpAddressOrRange_STATUS IpAddressOrRange object
+                  description: >-
+                    Storage version of v1api20210515.IpAddressOrRange_STATUS
+
+                    IpAddressOrRange object
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     ipAddressOrRange:
                       type: string
@@ -1405,12 +1867,18 @@ spec:
                 type: string
               locations:
                 items:
-                  description: Storage version of v1api20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
+                  description: >-
+                    Storage version of v1api20210515.Location_STATUS
+
+                    A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     documentEndpoint:
                       type: string
@@ -1436,12 +1904,18 @@ spec:
                 type: array
               privateEndpointConnections:
                 items:
-                  description: Storage version of v1api20210515.PrivateEndpointConnection_STATUS A private endpoint connection
+                  description: >-
+                    Storage version of v1api20210515.PrivateEndpointConnection_STATUS
+
+                    A private endpoint connection
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
                       type: string
@@ -1453,12 +1927,18 @@ spec:
                 type: string
               readLocations:
                 items:
-                  description: Storage version of v1api20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
+                  description: >-
+                    Storage version of v1api20210515.Location_STATUS
+
+                    A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     documentEndpoint:
                       type: string
@@ -1482,12 +1962,18 @@ spec:
                 type: string
               virtualNetworkRules:
                 items:
-                  description: Storage version of v1api20210515.VirtualNetworkRule_STATUS Virtual Network ACL Rule object
+                  description: >-
+                    Storage version of v1api20210515.VirtualNetworkRule_STATUS
+
+                    Virtual Network ACL Rule object
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
                       type: string
@@ -1497,12 +1983,18 @@ spec:
                 type: array
               writeLocations:
                 items:
-                  description: Storage version of v1api20210515.Location_STATUS A region in which the Azure Cosmos DB database account is deployed.
+                  description: >-
+                    Storage version of v1api20210515.Location_STATUS
+
+                    A region in which the Azure Cosmos DB database account is deployed.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     documentEndpoint:
                       type: string

@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: serverselasticpools.sql.azure.com
 spec:
   conversion:
@@ -45,23 +45,50 @@ spec:
     name: v1api20211101
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/ElasticPools.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/ElasticPools.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               highAvailabilityReplicaCount:
-                description: 'HighAvailabilityReplicaCount: The number of secondary replicas associated with the elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools.'
+                description: >-
+                  HighAvailabilityReplicaCount: The number of secondary replicas associated with the elastic pool that are used to provide
+
+                  high availability. Applicable only to Hyperscale elastic pools.
                 type: integer
               licenseType:
                 description: 'LicenseType: The license type to apply for this elastic pool.'
@@ -73,7 +100,10 @@ spec:
                 description: 'Location: Resource location.'
                 type: string
               maintenanceConfigurationId:
-                description: 'MaintenanceConfigurationId: Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.'
+                description: >-
+                  MaintenanceConfigurationId: Maintenance configuration id assigned to the elastic pool. This configuration defines the
+
+                  period when the maintenance updates will will occur.
                 type: string
               maxSizeBytes:
                 description: 'MaxSizeBytes: The storage limit for the database elastic pool in bytes.'
@@ -82,7 +112,12 @@ spec:
                 description: 'MinCapacity: Minimal capacity that serverless pool will not shrink below, if not paused'
                 type: number
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a sql.azure.com/Server resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -102,7 +137,20 @@ spec:
                     type: number
                 type: object
               sku:
-                description: 'Sku: The elastic pool SKU. The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command: ```azurecli az sql elastic-pool list-editions -l <location> -o table ````'
+                description: >-
+                  Sku: The elastic pool SKU.
+
+                  The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition,
+
+                  family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation`
+
+                  REST API or the following command:
+
+                  ```azurecli
+
+                  az sql elastic-pool list-editions -l <location> -o table
+
+                  ````
                 properties:
                   capacity:
                     description: 'Capacity: Capacity of the particular SKU.'
@@ -128,7 +176,10 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               zoneRedundant:
-                description: 'ZoneRedundant: Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.'
+                description: >-
+                  ZoneRedundant: Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be
+
+                  spread across multiple availability zones.
                 type: boolean
             required:
             - location
@@ -149,14 +200,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -175,7 +241,10 @@ spec:
                 description: 'CreationDate: The creation date of the elastic pool (ISO8601 format).'
                 type: string
               highAvailabilityReplicaCount:
-                description: 'HighAvailabilityReplicaCount: The number of secondary replicas associated with the elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools.'
+                description: >-
+                  HighAvailabilityReplicaCount: The number of secondary replicas associated with the elastic pool that are used to provide
+
+                  high availability. Applicable only to Hyperscale elastic pools.
                 type: integer
               id:
                 description: 'Id: Resource ID.'
@@ -190,7 +259,10 @@ spec:
                 description: 'Location: Resource location.'
                 type: string
               maintenanceConfigurationId:
-                description: 'MaintenanceConfigurationId: Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.'
+                description: >-
+                  MaintenanceConfigurationId: Maintenance configuration id assigned to the elastic pool. This configuration defines the
+
+                  period when the maintenance updates will will occur.
                 type: string
               maxSizeBytes:
                 description: 'MaxSizeBytes: The storage limit for the database elastic pool in bytes.'
@@ -212,7 +284,20 @@ spec:
                     type: number
                 type: object
               sku:
-                description: 'Sku: The elastic pool SKU. The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command: ```azurecli az sql elastic-pool list-editions -l <location> -o table ````'
+                description: >-
+                  Sku: The elastic pool SKU.
+
+                  The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition,
+
+                  family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation`
+
+                  REST API or the following command:
+
+                  ```azurecli
+
+                  az sql elastic-pool list-editions -l <location> -o table
+
+                  ````
                 properties:
                   capacity:
                     description: 'Capacity: Capacity of the particular SKU.'
@@ -242,7 +327,10 @@ spec:
                 description: 'Type: Resource type.'
                 type: string
               zoneRedundant:
-                description: 'ZoneRedundant: Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.'
+                description: >-
+                  ZoneRedundant: Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be
+
+                  spread across multiple availability zones.
                 type: boolean
             type: object
         type: object
@@ -266,13 +354,36 @@ spec:
     name: v1api20211101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20211101.ServersElasticPool Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/ElasticPools.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}'
+        description: >-
+          Storage version of v1api20211101.ServersElasticPool
+
+          Generator information:
+
+          - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/ElasticPools.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/elasticPools/{elasticPoolName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -282,10 +393,16 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               highAvailabilityReplicaCount:
                 type: integer
@@ -302,7 +419,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a sql.azure.com/Server resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -312,12 +434,18 @@ spec:
                     type: string
                 type: object
               perDatabaseSettings:
-                description: Storage version of v1api20211101.ElasticPoolPerDatabaseSettings Per database settings of an elastic pool.
+                description: >-
+                  Storage version of v1api20211101.ElasticPoolPerDatabaseSettings
+
+                  Per database settings of an elastic pool.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   maxCapacity:
                     type: number
@@ -325,12 +453,18 @@ spec:
                     type: number
                 type: object
               sku:
-                description: Storage version of v1api20211101.Sku An ARM Resource SKU.
+                description: >-
+                  Storage version of v1api20211101.Sku
+
+                  An ARM Resource SKU.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
                     type: integer
@@ -358,7 +492,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
                 items:
@@ -372,14 +509,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -415,12 +567,18 @@ spec:
               name:
                 type: string
               perDatabaseSettings:
-                description: Storage version of v1api20211101.ElasticPoolPerDatabaseSettings_STATUS Per database settings of an elastic pool.
+                description: >-
+                  Storage version of v1api20211101.ElasticPoolPerDatabaseSettings_STATUS
+
+                  Per database settings of an elastic pool.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   maxCapacity:
                     type: number
@@ -428,12 +586,18 @@ spec:
                     type: number
                 type: object
               sku:
-                description: Storage version of v1api20211101.Sku_STATUS An ARM Resource SKU.
+                description: >-
+                  Storage version of v1api20211101.Sku_STATUS
+
+                  An ARM Resource SKU.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
                     type: integer

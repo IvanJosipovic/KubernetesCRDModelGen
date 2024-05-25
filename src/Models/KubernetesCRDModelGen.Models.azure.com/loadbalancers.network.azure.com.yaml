@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: loadbalancers.network.azure.com
 spec:
   conversion:
@@ -45,20 +45,44 @@ spec:
     name: v1api20201101
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               backendAddressPools:
                 description: 'BackendAddressPools: Collection of backend address pools used by a load balancer.'
@@ -80,7 +104,12 @@ spec:
                                 description: 'Reference: Resource ID.'
                                 properties:
                                   armId:
-                                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                     type: string
                                   group:
@@ -104,7 +133,12 @@ spec:
                                 description: 'Reference: Resource ID.'
                                 properties:
                                   armId:
-                                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                     type: string
                                   group:
@@ -125,7 +159,12 @@ spec:
                                 description: 'Reference: Resource ID.'
                                 properties:
                                   armId:
-                                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                     type: string
                                   group:
@@ -142,7 +181,10 @@ spec:
                         type: object
                       type: array
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of backend address pools used by the load balancer. This
+
+                        name can be used to access the resource.
                       type: string
                   type: object
                 type: array
@@ -167,7 +209,10 @@ spec:
                   description: Frontend IP address of the load balancer.
                   properties:
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of frontend IP configurations used by the load balancer.
+
+                        This name can be used to access the resource.
                       type: string
                     privateIPAddress:
                       description: 'PrivateIPAddress: The private IP address of the IP configuration.'
@@ -191,7 +236,12 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -212,7 +262,12 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -233,7 +288,12 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -255,7 +315,16 @@ spec:
                   type: object
                 type: array
               inboundNatPools:
-                description: 'InboundNatPools: Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.'
+                description: >-
+                  InboundNatPools: Defines an external port range for inbound NAT to a single backend port on NICs associated with a load
+
+                  balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external
+
+                  port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat
+
+                  rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual
+
+                  virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
                 items:
                   description: Inbound NAT pool of the load balancer.
                   properties:
@@ -263,10 +332,18 @@ spec:
                       description: 'BackendPort: The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.'
                       type: integer
                     enableFloatingIP:
-                      description: "EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
+                      description: >-
+                        EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL
+
+                        AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.
+
+                        This setting can't be changed after you create the endpoint.
                       type: boolean
                     enableTcpReset:
-                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This
+
+                        element is only used when the protocol is set to TCP.
                       type: boolean
                     frontendIPConfiguration:
                       description: 'FrontendIPConfiguration: A reference to frontend IP addresses.'
@@ -275,7 +352,12 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -290,16 +372,28 @@ spec:
                           type: object
                       type: object
                     frontendPortRangeEnd:
-                      description: 'FrontendPortRangeEnd: The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.'
+                      description: >-
+                        FrontendPortRangeEnd: The last port number in the range of external ports that will be used to provide Inbound Nat to
+
+                        NICs associated with a load balancer. Acceptable values range between 1 and 65535.
                       type: integer
                     frontendPortRangeStart:
-                      description: 'FrontendPortRangeStart: The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.'
+                      description: >-
+                        FrontendPortRangeStart: The first port number in the range of external ports that will be used to provide Inbound Nat to
+
+                        NICs associated with a load balancer. Acceptable values range between 1 and 65534.
                       type: integer
                     idleTimeoutInMinutes:
-                      description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The
+
+                        default value is 4 minutes. This element is only used when the protocol is set to TCP.
                       type: integer
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of inbound NAT pools used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of inbound NAT pools used by the load balancer. This name
+
+                        can be used to access the resource.
                       type: string
                     protocol:
                       description: 'Protocol: The reference to the transport protocol used by the inbound NAT pool.'
@@ -316,7 +410,14 @@ spec:
                   type: object
                 type: array
               inboundNatRules:
-                description: 'InboundNatRules: Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.'
+                description: >-
+                  InboundNatRules: Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load
+
+                  balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine
+
+                  scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to
+
+                  reference individual inbound NAT rules.
                 items:
                   description: Inbound NAT rule of the load balancer.
                   properties:
@@ -324,10 +425,18 @@ spec:
                       description: 'BackendPort: The port used for the internal endpoint. Acceptable values range from 1 to 65535.'
                       type: integer
                     enableFloatingIP:
-                      description: "EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
+                      description: >-
+                        EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL
+
+                        AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.
+
+                        This setting can't be changed after you create the endpoint.
                       type: boolean
                     enableTcpReset:
-                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This
+
+                        element is only used when the protocol is set to TCP.
                       type: boolean
                     frontendIPConfiguration:
                       description: 'FrontendIPConfiguration: A reference to frontend IP addresses.'
@@ -336,7 +445,12 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -351,13 +465,22 @@ spec:
                           type: object
                       type: object
                     frontendPort:
-                      description: 'FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.'
+                      description: >-
+                        FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer.
+
+                        Acceptable values range from 1 to 65534.
                       type: integer
                     idleTimeoutInMinutes:
-                      description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The
+
+                        default value is 4 minutes. This element is only used when the protocol is set to TCP.
                       type: integer
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name
+
+                        can be used to access the resource.
                       type: string
                     protocol:
                       description: 'Protocol: The reference to the transport protocol used by the load balancing rule.'
@@ -374,13 +497,21 @@ spec:
                   description: A load balancing rule for a load balancer.
                   properties:
                     backendAddressPool:
-                      description: 'BackendAddressPool: A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.'
+                      description: >-
+                        BackendAddressPool: A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend
+
+                        IPs.
                       properties:
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -395,16 +526,30 @@ spec:
                           type: object
                       type: object
                     backendPort:
-                      description: 'BackendPort: The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port".'
+                      description: >-
+                        BackendPort: The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note
+
+                        that value 0 enables "Any Port".
                       type: integer
                     disableOutboundSnat:
-                      description: 'DisableOutboundSnat: Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.'
+                      description: >-
+                        DisableOutboundSnat: Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the
+
+                        frontend of the load balancing rule.
                       type: boolean
                     enableFloatingIP:
-                      description: "EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
+                      description: >-
+                        EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL
+
+                        AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.
+
+                        This setting can't be changed after you create the endpoint.
                       type: boolean
                     enableTcpReset:
-                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This
+
+                        element is only used when the protocol is set to TCP.
                       type: boolean
                     frontendIPConfiguration:
                       description: 'FrontendIPConfiguration: A reference to frontend IP addresses.'
@@ -413,7 +558,12 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -428,10 +578,16 @@ spec:
                           type: object
                       type: object
                     frontendPort:
-                      description: 'FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".'
+                      description: >-
+                        FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer.
+
+                        Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".
                       type: integer
                     idleTimeoutInMinutes:
-                      description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The
+
+                        default value is 4 minutes. This element is only used when the protocol is set to TCP.
                       type: integer
                     loadDistribution:
                       description: 'LoadDistribution: The load distribution policy for this rule.'
@@ -441,7 +597,10 @@ spec:
                       - SourceIPProtocol
                       type: string
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of load balancing rules used by the load balancer. This
+
+                        name can be used to access the resource.
                       type: string
                     probe:
                       description: 'Probe: The reference to the load balancer probe used by the load balancing rule.'
@@ -450,7 +609,12 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -488,13 +652,21 @@ spec:
                       description: 'AllocatedOutboundPorts: The number of outbound ports to be used for NAT.'
                       type: integer
                     backendAddressPool:
-                      description: 'BackendAddressPool: A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.'
+                      description: >-
+                        BackendAddressPool: A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend
+
+                        IPs.
                       properties:
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -509,7 +681,10 @@ spec:
                           type: object
                       type: object
                     enableTcpReset:
-                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This
+
+                        element is only used when the protocol is set to TCP.
                       type: boolean
                     frontendIPConfigurations:
                       description: 'FrontendIPConfigurations: The Frontend IP addresses of the load balancer.'
@@ -520,7 +695,12 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                description: >-
+                                  ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                  The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                  ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
                               group:
@@ -539,7 +719,10 @@ spec:
                       description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection.'
                       type: integer
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can
+
+                        be used to access the resource.
                       type: string
                     protocol:
                       description: 'Protocol: The protocol for the outbound rule in load balancer.'
@@ -555,7 +738,12 @@ spec:
                   type: object
                 type: array
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -570,26 +758,47 @@ spec:
                   description: A load balancer probe.
                   properties:
                     intervalInSeconds:
-                      description: 'IntervalInSeconds: The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.'
+                      description: >-
+                        IntervalInSeconds: The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the
+
+                        interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking
+
+                        the instance out of rotation. The default value is 15, the minimum value is 5.
                       type: integer
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of probes used by the load balancer. This name can be used
+
+                        to access the resource.
                       type: string
                     numberOfProbes:
-                      description: 'NumberOfProbes: The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.'
+                      description: >-
+                        NumberOfProbes: The number of probes where if no response, will result in stopping further traffic from being delivered
+
+                        to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used
+
+                        in Azure.
                       type: integer
                     port:
                       description: 'Port: The port for communicating the probe. Possible values range from 1 to 65535, inclusive.'
                       type: integer
                     protocol:
-                      description: "Protocol: The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful."
+                      description: >-
+                        Protocol: The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be
+
+                        successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be
+
+                        successful.
                       enum:
                       - Http
                       - Https
                       - Tcp
                       type: string
                     requestPath:
-                      description: 'RequestPath: The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.'
+                      description: >-
+                        RequestPath: The URI used for requesting health status from the VM. Path is required if a protocol is set to http.
+
+                        Otherwise, it is not allowed. There is no default value.
                       type: string
                   required:
                   - port
@@ -696,7 +905,10 @@ spec:
                         type: object
                       type: array
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of backend address pools used by the load balancer. This
+
+                        name can be used to access the resource.
                       type: string
                     outboundRule:
                       description: 'OutboundRule: A reference to an outbound rule that uses this backend address pool.'
@@ -736,14 +948,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -813,7 +1040,10 @@ spec:
                         type: object
                       type: array
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of frontend IP configurations used by the load balancer.
+
+                        This name can be used to access the resource.
                       type: string
                     outboundRules:
                       description: 'OutboundRules: An array of references to outbound rules that use this frontend IP.'
@@ -872,7 +1102,16 @@ spec:
                 description: 'Id: Resource ID.'
                 type: string
               inboundNatPools:
-                description: 'InboundNatPools: Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.'
+                description: >-
+                  InboundNatPools: Defines an external port range for inbound NAT to a single backend port on NICs associated with a load
+
+                  balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external
+
+                  port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat
+
+                  rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual
+
+                  virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
                 items:
                   description: Inbound NAT pool of the load balancer.
                   properties:
@@ -880,10 +1119,18 @@ spec:
                       description: 'BackendPort: The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.'
                       type: integer
                     enableFloatingIP:
-                      description: "EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
+                      description: >-
+                        EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL
+
+                        AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.
+
+                        This setting can't be changed after you create the endpoint.
                       type: boolean
                     enableTcpReset:
-                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This
+
+                        element is only used when the protocol is set to TCP.
                       type: boolean
                     etag:
                       description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
@@ -896,19 +1143,31 @@ spec:
                           type: string
                       type: object
                     frontendPortRangeEnd:
-                      description: 'FrontendPortRangeEnd: The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.'
+                      description: >-
+                        FrontendPortRangeEnd: The last port number in the range of external ports that will be used to provide Inbound Nat to
+
+                        NICs associated with a load balancer. Acceptable values range between 1 and 65535.
                       type: integer
                     frontendPortRangeStart:
-                      description: 'FrontendPortRangeStart: The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.'
+                      description: >-
+                        FrontendPortRangeStart: The first port number in the range of external ports that will be used to provide Inbound Nat to
+
+                        NICs associated with a load balancer. Acceptable values range between 1 and 65534.
                       type: integer
                     id:
                       description: 'Id: Resource ID.'
                       type: string
                     idleTimeoutInMinutes:
-                      description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The
+
+                        default value is 4 minutes. This element is only used when the protocol is set to TCP.
                       type: integer
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of inbound NAT pools used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of inbound NAT pools used by the load balancer. This name
+
+                        can be used to access the resource.
                       type: string
                     protocol:
                       description: 'Protocol: The reference to the transport protocol used by the inbound NAT pool.'
@@ -922,12 +1181,22 @@ spec:
                   type: object
                 type: array
               inboundNatRules:
-                description: 'InboundNatRules: Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.'
+                description: >-
+                  InboundNatRules: Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load
+
+                  balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine
+
+                  scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to
+
+                  reference individual inbound NAT rules.
                 items:
                   description: Inbound NAT rule of the load balancer.
                   properties:
                     backendIPConfiguration:
-                      description: 'BackendIPConfiguration: A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.'
+                      description: >-
+                        BackendIPConfiguration: A reference to a private IP address defined on a network interface of a VM. Traffic sent to the
+
+                        frontend port of each of the frontend IP configurations is forwarded to the backend IP.
                       properties:
                         id:
                           description: 'Id: Resource ID.'
@@ -937,10 +1206,18 @@ spec:
                       description: 'BackendPort: The port used for the internal endpoint. Acceptable values range from 1 to 65535.'
                       type: integer
                     enableFloatingIP:
-                      description: "EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
+                      description: >-
+                        EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL
+
+                        AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.
+
+                        This setting can't be changed after you create the endpoint.
                       type: boolean
                     enableTcpReset:
-                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This
+
+                        element is only used when the protocol is set to TCP.
                       type: boolean
                     etag:
                       description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
@@ -953,16 +1230,25 @@ spec:
                           type: string
                       type: object
                     frontendPort:
-                      description: 'FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.'
+                      description: >-
+                        FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer.
+
+                        Acceptable values range from 1 to 65534.
                       type: integer
                     id:
                       description: 'Id: Resource ID.'
                       type: string
                     idleTimeoutInMinutes:
-                      description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The
+
+                        default value is 4 minutes. This element is only used when the protocol is set to TCP.
                       type: integer
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name
+
+                        can be used to access the resource.
                       type: string
                     protocol:
                       description: 'Protocol: The reference to the transport protocol used by the load balancing rule.'
@@ -981,23 +1267,40 @@ spec:
                   description: A load balancing rule for a load balancer.
                   properties:
                     backendAddressPool:
-                      description: 'BackendAddressPool: A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.'
+                      description: >-
+                        BackendAddressPool: A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend
+
+                        IPs.
                       properties:
                         id:
                           description: 'Id: Resource ID.'
                           type: string
                       type: object
                     backendPort:
-                      description: 'BackendPort: The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port".'
+                      description: >-
+                        BackendPort: The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note
+
+                        that value 0 enables "Any Port".
                       type: integer
                     disableOutboundSnat:
-                      description: 'DisableOutboundSnat: Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.'
+                      description: >-
+                        DisableOutboundSnat: Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the
+
+                        frontend of the load balancing rule.
                       type: boolean
                     enableFloatingIP:
-                      description: "EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
+                      description: >-
+                        EnableFloatingIP: Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL
+
+                        AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.
+
+                        This setting can't be changed after you create the endpoint.
                       type: boolean
                     enableTcpReset:
-                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This
+
+                        element is only used when the protocol is set to TCP.
                       type: boolean
                     etag:
                       description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
@@ -1010,19 +1313,28 @@ spec:
                           type: string
                       type: object
                     frontendPort:
-                      description: 'FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".'
+                      description: >-
+                        FrontendPort: The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer.
+
+                        Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".
                       type: integer
                     id:
                       description: 'Id: Resource ID.'
                       type: string
                     idleTimeoutInMinutes:
-                      description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        IdleTimeoutInMinutes: The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The
+
+                        default value is 4 minutes. This element is only used when the protocol is set to TCP.
                       type: integer
                     loadDistribution:
                       description: 'LoadDistribution: The load distribution policy for this rule.'
                       type: string
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of load balancing rules used by the load balancer. This
+
+                        name can be used to access the resource.
                       type: string
                     probe:
                       description: 'Probe: The reference to the load balancer probe used by the load balancing rule.'
@@ -1057,14 +1369,20 @@ spec:
                       description: 'AllocatedOutboundPorts: The number of outbound ports to be used for NAT.'
                       type: integer
                     backendAddressPool:
-                      description: 'BackendAddressPool: A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.'
+                      description: >-
+                        BackendAddressPool: A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend
+
+                        IPs.
                       properties:
                         id:
                           description: 'Id: Resource ID.'
                           type: string
                       type: object
                     enableTcpReset:
-                      description: 'EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.'
+                      description: >-
+                        EnableTcpReset: Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This
+
+                        element is only used when the protocol is set to TCP.
                       type: boolean
                     etag:
                       description: 'Etag: A unique read-only string that changes whenever the resource is updated.'
@@ -1086,7 +1404,10 @@ spec:
                       description: 'IdleTimeoutInMinutes: The timeout for the TCP idle connection.'
                       type: integer
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can
+
+                        be used to access the resource.
                       type: string
                     protocol:
                       description: 'Protocol: The protocol for the outbound rule in load balancer.'
@@ -1111,7 +1432,12 @@ spec:
                       description: 'Id: Resource ID.'
                       type: string
                     intervalInSeconds:
-                      description: 'IntervalInSeconds: The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.'
+                      description: >-
+                        IntervalInSeconds: The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the
+
+                        interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking
+
+                        the instance out of rotation. The default value is 15, the minimum value is 5.
                       type: integer
                     loadBalancingRules:
                       description: 'LoadBalancingRules: The load balancer rules that use this probe.'
@@ -1124,22 +1450,38 @@ spec:
                         type: object
                       type: array
                     name:
-                      description: 'Name: The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.'
+                      description: >-
+                        Name: The name of the resource that is unique within the set of probes used by the load balancer. This name can be used
+
+                        to access the resource.
                       type: string
                     numberOfProbes:
-                      description: 'NumberOfProbes: The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.'
+                      description: >-
+                        NumberOfProbes: The number of probes where if no response, will result in stopping further traffic from being delivered
+
+                        to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used
+
+                        in Azure.
                       type: integer
                     port:
                       description: 'Port: The port for communicating the probe. Possible values range from 1 to 65535, inclusive.'
                       type: integer
                     protocol:
-                      description: "Protocol: The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful."
+                      description: >-
+                        Protocol: The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be
+
+                        successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be
+
+                        successful.
                       type: string
                     provisioningState:
                       description: 'ProvisioningState: The provisioning state of the probe resource.'
                       type: string
                     requestPath:
-                      description: 'RequestPath: The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.'
+                      description: >-
+                        RequestPath: The URI used for requesting health status from the VM. Path is required if a protocol is set to http.
+
+                        Otherwise, it is not allowed. There is no default value.
                       type: string
                     type:
                       description: 'Type: Type of the resource.'
@@ -1192,13 +1534,36 @@ spec:
     name: v1api20201101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20201101.LoadBalancer Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}'
+        description: >-
+          Storage version of v1api20201101.LoadBalancer
+
+          Generator information:
+
+          - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/loadBalancer.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -1208,44 +1573,73 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               backendAddressPools:
                 items:
-                  description: Storage version of v1api20201101.BackendAddressPool_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.
+                  description: >-
+                    Storage version of v1api20201101.BackendAddressPool_LoadBalancer_SubResourceEmbedded
+
+                    Pool of backend IP addresses.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     loadBalancerBackendAddresses:
                       items:
-                        description: Storage version of v1api20201101.LoadBalancerBackendAddress Load balancer backend addresses.
+                        description: >-
+                          Storage version of v1api20201101.LoadBalancerBackendAddress
+
+                          Load balancer backend addresses.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           ipAddress:
                             type: string
                           loadBalancerFrontendIPConfiguration:
-                            description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                            description: >-
+                              Storage version of v1api20201101.SubResource
+
+                              Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               reference:
                                 description: 'Reference: Resource ID.'
                                 properties:
                                   armId:
-                                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                     type: string
                                   group:
@@ -1262,18 +1656,29 @@ spec:
                           name:
                             type: string
                           subnet:
-                            description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                            description: >-
+                              Storage version of v1api20201101.SubResource
+
+                              Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               reference:
                                 description: 'Reference: Resource ID.'
                                 properties:
                                   armId:
-                                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                     type: string
                                   group:
@@ -1288,18 +1693,29 @@ spec:
                                 type: object
                             type: object
                           virtualNetwork:
-                            description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                            description: >-
+                              Storage version of v1api20201101.SubResource
+
+                              Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               reference:
                                 description: 'Reference: Resource ID.'
                                 properties:
                                   armId:
-                                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                     type: string
                                   group:
@@ -1320,12 +1736,18 @@ spec:
                   type: object
                 type: array
               extendedLocation:
-                description: Storage version of v1api20201101.ExtendedLocation ExtendedLocation complex type.
+                description: >-
+                  Storage version of v1api20201101.ExtendedLocation
+
+                  ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -1334,12 +1756,18 @@ spec:
                 type: object
               frontendIPConfigurations:
                 items:
-                  description: Storage version of v1api20201101.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.
+                  description: >-
+                    Storage version of v1api20201101.FrontendIPConfiguration_LoadBalancer_SubResourceEmbedded
+
+                    Frontend IP address of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     name:
                       type: string
@@ -1350,18 +1778,29 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1api20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded Public IP address resource.
+                      description: >-
+                        Storage version of v1api20201101.PublicIPAddressSpec_LoadBalancer_SubResourceEmbedded
+
+                        Public IP address resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1376,18 +1815,29 @@ spec:
                           type: object
                       type: object
                     publicIPPrefix:
-                      description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1402,18 +1852,29 @@ spec:
                           type: object
                       type: object
                     subnet:
-                      description: Storage version of v1api20201101.Subnet_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.
+                      description: >-
+                        Storage version of v1api20201101.Subnet_LoadBalancer_SubResourceEmbedded
+
+                        Subnet in a virtual network resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1435,12 +1896,18 @@ spec:
                 type: array
               inboundNatPools:
                 items:
-                  description: Storage version of v1api20201101.InboundNatPool Inbound NAT pool of the load balancer.
+                  description: >-
+                    Storage version of v1api20201101.InboundNatPool
+
+                    Inbound NAT pool of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     backendPort:
                       type: integer
@@ -1449,18 +1916,29 @@ spec:
                     enableTcpReset:
                       type: boolean
                     frontendIPConfiguration:
-                      description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1488,12 +1966,18 @@ spec:
                 type: array
               inboundNatRules:
                 items:
-                  description: Storage version of v1api20201101.InboundNatRule_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.
+                  description: >-
+                    Storage version of v1api20201101.InboundNatRule_LoadBalancer_SubResourceEmbedded
+
+                    Inbound NAT rule of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     backendPort:
                       type: integer
@@ -1502,18 +1986,29 @@ spec:
                     enableTcpReset:
                       type: boolean
                     frontendIPConfiguration:
-                      description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1539,26 +2034,43 @@ spec:
                 type: array
               loadBalancingRules:
                 items:
-                  description: Storage version of v1api20201101.LoadBalancingRule A load balancing rule for a load balancer.
+                  description: >-
+                    Storage version of v1api20201101.LoadBalancingRule
+
+                    A load balancing rule for a load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     backendAddressPool:
-                      description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1581,18 +2093,29 @@ spec:
                     enableTcpReset:
                       type: boolean
                     frontendIPConfiguration:
-                      description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1615,18 +2138,29 @@ spec:
                     name:
                       type: string
                     probe:
-                      description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1650,28 +2184,45 @@ spec:
                 type: string
               outboundRules:
                 items:
-                  description: Storage version of v1api20201101.OutboundRule Outbound rule of the load balancer.
+                  description: >-
+                    Storage version of v1api20201101.OutboundRule
+
+                    Outbound rule of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     allocatedOutboundPorts:
                       type: integer
                     backendAddressPool:
-                      description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -1689,18 +2240,29 @@ spec:
                       type: boolean
                     frontendIPConfigurations:
                       items:
-                        description: Storage version of v1api20201101.SubResource Reference to another subresource.
+                        description: >-
+                          Storage version of v1api20201101.SubResource
+
+                          Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                description: >-
+                                  ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                  The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                  ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
                               group:
@@ -1724,7 +2286,12 @@ spec:
                   type: object
                 type: array
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -1735,12 +2302,18 @@ spec:
                 type: object
               probes:
                 items:
-                  description: Storage version of v1api20201101.Probe A load balancer probe.
+                  description: >-
+                    Storage version of v1api20201101.Probe
+
+                    A load balancer probe.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     intervalInSeconds:
                       type: integer
@@ -1757,12 +2330,18 @@ spec:
                   type: object
                 type: array
               sku:
-                description: Storage version of v1api20201101.LoadBalancerSku SKU of a load balancer.
+                description: >-
+                  Storage version of v1api20201101.LoadBalancerSku
+
+                  SKU of a load balancer.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -1777,30 +2356,48 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20201101.LoadBalancer_STATUS LoadBalancer resource.
+            description: >-
+              Storage version of v1api20201101.LoadBalancer_STATUS
+
+              LoadBalancer resource.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               backendAddressPools:
                 items:
-                  description: Storage version of v1api20201101.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded Pool of backend IP addresses.
+                  description: >-
+                    Storage version of v1api20201101.BackendAddressPool_STATUS_LoadBalancer_SubResourceEmbedded
+
+                    Pool of backend IP addresses.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     backendIPConfigurations:
                       items:
-                        description: Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.
+                        description: >-
+                          Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded
+
+                          IPConfiguration in a network interface.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
                             type: string
@@ -1812,22 +2409,34 @@ spec:
                       type: string
                     loadBalancerBackendAddresses:
                       items:
-                        description: Storage version of v1api20201101.LoadBalancerBackendAddress_STATUS Load balancer backend addresses.
+                        description: >-
+                          Storage version of v1api20201101.LoadBalancerBackendAddress_STATUS
+
+                          Load balancer backend addresses.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           ipAddress:
                             type: string
                           loadBalancerFrontendIPConfiguration:
-                            description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                            description: >-
+                              Storage version of v1api20201101.SubResource_STATUS
+
+                              Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               id:
                                 type: string
@@ -1835,34 +2444,52 @@ spec:
                           name:
                             type: string
                           networkInterfaceIPConfiguration:
-                            description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                            description: >-
+                              Storage version of v1api20201101.SubResource_STATUS
+
+                              Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               id:
                                 type: string
                             type: object
                           subnet:
-                            description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                            description: >-
+                              Storage version of v1api20201101.SubResource_STATUS
+
+                              Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               id:
                                 type: string
                             type: object
                           virtualNetwork:
-                            description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                            description: >-
+                              Storage version of v1api20201101.SubResource_STATUS
+
+                              Reference to another subresource.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               id:
                                 type: string
@@ -1871,12 +2498,18 @@ spec:
                       type: array
                     loadBalancingRules:
                       items:
-                        description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                        description: >-
+                          Storage version of v1api20201101.SubResource_STATUS
+
+                          Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
                             type: string
@@ -1885,24 +2518,36 @@ spec:
                     name:
                       type: string
                     outboundRule:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
                       type: object
                     outboundRules:
                       items:
-                        description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                        description: >-
+                          Storage version of v1api20201101.SubResource_STATUS
+
+                          Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
                             type: string
@@ -1926,14 +2571,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1951,12 +2611,18 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: Storage version of v1api20201101.ExtendedLocation_STATUS ExtendedLocation complex type.
+                description: >-
+                  Storage version of v1api20201101.ExtendedLocation_STATUS
+
+                  ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -1965,12 +2631,18 @@ spec:
                 type: object
               frontendIPConfigurations:
                 items:
-                  description: Storage version of v1api20201101.FrontendIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded Frontend IP address of the load balancer.
+                  description: >-
+                    Storage version of v1api20201101.FrontendIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded
+
+                    Frontend IP address of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     etag:
                       type: string
@@ -1978,12 +2650,18 @@ spec:
                       type: string
                     inboundNatPools:
                       items:
-                        description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                        description: >-
+                          Storage version of v1api20201101.SubResource_STATUS
+
+                          Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
                             type: string
@@ -1991,12 +2669,18 @@ spec:
                       type: array
                     inboundNatRules:
                       items:
-                        description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                        description: >-
+                          Storage version of v1api20201101.SubResource_STATUS
+
+                          Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
                             type: string
@@ -2004,12 +2688,18 @@ spec:
                       type: array
                     loadBalancingRules:
                       items:
-                        description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                        description: >-
+                          Storage version of v1api20201101.SubResource_STATUS
+
+                          Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
                             type: string
@@ -2019,12 +2709,18 @@ spec:
                       type: string
                     outboundRules:
                       items:
-                        description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                        description: >-
+                          Storage version of v1api20201101.SubResource_STATUS
+
+                          Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
                             type: string
@@ -2039,34 +2735,52 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: Storage version of v1api20201101.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded Public IP address resource.
+                      description: >-
+                        Storage version of v1api20201101.PublicIPAddress_STATUS_LoadBalancer_SubResourceEmbedded
+
+                        Public IP address resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
                       type: object
                     publicIPPrefix:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
                       type: object
                     subnet:
-                      description: Storage version of v1api20201101.Subnet_STATUS_LoadBalancer_SubResourceEmbedded Subnet in a virtual network resource.
+                      description: >-
+                        Storage version of v1api20201101.Subnet_STATUS_LoadBalancer_SubResourceEmbedded
+
+                        Subnet in a virtual network resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
@@ -2083,12 +2797,18 @@ spec:
                 type: string
               inboundNatPools:
                 items:
-                  description: Storage version of v1api20201101.InboundNatPool_STATUS Inbound NAT pool of the load balancer.
+                  description: >-
+                    Storage version of v1api20201101.InboundNatPool_STATUS
+
+                    Inbound NAT pool of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     backendPort:
                       type: integer
@@ -2099,12 +2819,18 @@ spec:
                     etag:
                       type: string
                     frontendIPConfiguration:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
@@ -2129,20 +2855,32 @@ spec:
                 type: array
               inboundNatRules:
                 items:
-                  description: Storage version of v1api20201101.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded Inbound NAT rule of the load balancer.
+                  description: >-
+                    Storage version of v1api20201101.InboundNatRule_STATUS_LoadBalancer_SubResourceEmbedded
+
+                    Inbound NAT rule of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     backendIPConfiguration:
-                      description: Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded IPConfiguration in a network interface.
+                      description: >-
+                        Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_LoadBalancer_SubResourceEmbedded
+
+                        IPConfiguration in a network interface.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
@@ -2156,12 +2894,18 @@ spec:
                     etag:
                       type: string
                     frontendIPConfiguration:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
@@ -2184,20 +2928,32 @@ spec:
                 type: array
               loadBalancingRules:
                 items:
-                  description: Storage version of v1api20201101.LoadBalancingRule_STATUS A load balancing rule for a load balancer.
+                  description: >-
+                    Storage version of v1api20201101.LoadBalancingRule_STATUS
+
+                    A load balancing rule for a load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     backendAddressPool:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
@@ -2213,12 +2969,18 @@ spec:
                     etag:
                       type: string
                     frontendIPConfiguration:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
@@ -2234,12 +2996,18 @@ spec:
                     name:
                       type: string
                     probe:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
@@ -2258,22 +3026,34 @@ spec:
                 type: string
               outboundRules:
                 items:
-                  description: Storage version of v1api20201101.OutboundRule_STATUS Outbound rule of the load balancer.
+                  description: >-
+                    Storage version of v1api20201101.OutboundRule_STATUS
+
+                    Outbound rule of the load balancer.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     allocatedOutboundPorts:
                       type: integer
                     backendAddressPool:
-                      description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                      description: >-
+                        Storage version of v1api20201101.SubResource_STATUS
+
+                        Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
@@ -2284,12 +3064,18 @@ spec:
                       type: string
                     frontendIPConfigurations:
                       items:
-                        description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                        description: >-
+                          Storage version of v1api20201101.SubResource_STATUS
+
+                          Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
                             type: string
@@ -2311,12 +3097,18 @@ spec:
                 type: array
               probes:
                 items:
-                  description: Storage version of v1api20201101.Probe_STATUS A load balancer probe.
+                  description: >-
+                    Storage version of v1api20201101.Probe_STATUS
+
+                    A load balancer probe.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     etag:
                       type: string
@@ -2326,12 +3118,18 @@ spec:
                       type: integer
                     loadBalancingRules:
                       items:
-                        description: Storage version of v1api20201101.SubResource_STATUS Reference to another subresource.
+                        description: >-
+                          Storage version of v1api20201101.SubResource_STATUS
+
+                          Reference to another subresource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
                             type: string
@@ -2358,12 +3156,18 @@ spec:
               resourceGuid:
                 type: string
               sku:
-                description: Storage version of v1api20201101.LoadBalancerSku_STATUS SKU of a load balancer.
+                description: >-
+                  Storage version of v1api20201101.LoadBalancerSku_STATUS
+
+                  SKU of a load balancer.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string

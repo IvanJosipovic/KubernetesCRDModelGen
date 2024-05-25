@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: scheduledqueryrules.insights.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20220615
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-06-15/scheduledQueryRule_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-06-15/scheduledQueryRule_API.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -66,7 +87,12 @@ spec:
                       description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                       properties:
                         armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          description: >-
+                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
                         group:
@@ -87,13 +113,22 @@ spec:
                     type: object
                 type: object
               autoMitigate:
-                description: 'AutoMitigate: The flag that indicates whether the alert should be automatically resolved or not. The default is true. Relevant only for rules of the kind LogAlert.'
+                description: >-
+                  AutoMitigate: The flag that indicates whether the alert should be automatically resolved or not. The default is true.
+
+                  Relevant only for rules of the kind LogAlert.
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               checkWorkspaceAlertsStorageConfigured:
-                description: "CheckWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule should be stored in the customer's storage. The default is false. Relevant only for rules of the kind LogAlert."
+                description: >-
+                  CheckWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule should be stored in
+
+                  the customer's storage. The default is false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               criteria:
                 description: 'Criteria: The rule criteria that defines the conditions of the scheduled query rule.'
@@ -129,13 +164,22 @@ spec:
                             type: object
                           type: array
                         failingPeriods:
-                          description: 'FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an alert. Relevant only for rules of the kind LogAlert.'
+                          description: >-
+                            FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an
+
+                            alert. Relevant only for rules of the kind LogAlert.
                           properties:
                             minFailingPeriodsToAlert:
-                              description: 'MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods. Default value is 1'
+                              description: >-
+                                MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to
+
+                                numberOfEvaluationPeriods. Default value is 1
                               type: integer
                             numberOfEvaluationPeriods:
-                              description: 'NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1'
+                              description: >-
+                                NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the
+
+                                aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1
                               type: integer
                           type: object
                         metricMeasureColumn:
@@ -157,10 +201,18 @@ spec:
                           description: 'Query: Log query alert'
                           type: string
                         resourceIdColumnReference:
-                          description: 'ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as resource id. Relevant only for rules of the kind LogAlert.'
+                          description: >-
+                            ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as
+
+                            resource id. Relevant only for rules of the kind LogAlert.
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -174,7 +226,10 @@ spec:
                               type: string
                           type: object
                         threshold:
-                          description: 'Threshold: the criteria threshold value that activates the alert. Relevant and required only for rules of the kind LogAlert.'
+                          description: >-
+                            Threshold: the criteria threshold value that activates the alert. Relevant and required only for rules of the kind
+
+                            LogAlert.
                           type: number
                         timeAggregation:
                           description: 'TimeAggregation: Aggregation type. Relevant and required only for rules of the kind LogAlert.'
@@ -198,7 +253,10 @@ spec:
                 description: 'Enabled: The flag which indicates whether this scheduled query rule is enabled. Value should be true or false'
                 type: boolean
               evaluationFrequency:
-                description: 'EvaluationFrequency: How often the scheduled query rule is evaluated represented in ISO 8601 duration format. Relevant and required only for rules of the kind LogAlert.'
+                description: >-
+                  EvaluationFrequency: How often the scheduled query rule is evaluated represented in ISO 8601 duration format. Relevant
+
+                  and required only for rules of the kind LogAlert.
                 type: string
               kind:
                 description: 'Kind: Indicates the type of scheduled query rule. The default is LogAlert.'
@@ -210,13 +268,24 @@ spec:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               muteActionsDuration:
-                description: 'MuteActionsDuration: Mute actions for the chosen period of time (in ISO 8601 duration format) after the alert is fired. Relevant only for rules of the kind LogAlert.'
+                description: >-
+                  MuteActionsDuration: Mute actions for the chosen period of time (in ISO 8601 duration format) after the alert is fired.
+
+                  Relevant only for rules of the kind LogAlert.
                 type: string
               overrideQueryTimeRange:
-                description: 'OverrideQueryTimeRange: If specified then overrides the query time range (default is WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert.'
+                description: >-
+                  OverrideQueryTimeRange: If specified then overrides the query time range (default is
+
+                  WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert.
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -231,7 +300,12 @@ spec:
                   description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
-                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                      description: >-
+                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                       type: string
                     group:
@@ -246,7 +320,10 @@ spec:
                   type: object
                 type: array
               severity:
-                description: 'Severity: Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only for rules of the kind LogAlert.'
+                description: >-
+                  Severity: Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only
+
+                  for rules of the kind LogAlert.
                 enum:
                 - 0
                 - 1
@@ -255,7 +332,10 @@ spec:
                 - 4
                 type: integer
               skipQueryValidation:
-                description: 'SkipQueryValidation: The flag which indicates whether the provided query should be validated or not. The default is false. Relevant only for rules of the kind LogAlert.'
+                description: >-
+                  SkipQueryValidation: The flag which indicates whether the provided query should be validated or not. The default is
+
+                  false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               tags:
                 additionalProperties:
@@ -263,12 +343,22 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               targetResourceTypes:
-                description: 'TargetResourceTypes: List of resource type of the target resource(s) on which the alert is created/updated. For example if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of the kind LogAlert'
+                description: >-
+                  TargetResourceTypes: List of resource type of the target resource(s) on which the alert is created/updated. For example
+
+                  if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert
+
+                  will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of
+
+                  the kind LogAlert
                 items:
                   type: string
                 type: array
               windowSize:
-                description: 'WindowSize: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size). Relevant and required only for rules of the kind LogAlert.'
+                description: >-
+                  WindowSize: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size).
+
+                  Relevant and required only for rules of the kind LogAlert.
                 type: string
             required:
             - location
@@ -291,10 +381,16 @@ spec:
                     type: object
                 type: object
               autoMitigate:
-                description: 'AutoMitigate: The flag that indicates whether the alert should be automatically resolved or not. The default is true. Relevant only for rules of the kind LogAlert.'
+                description: >-
+                  AutoMitigate: The flag that indicates whether the alert should be automatically resolved or not. The default is true.
+
+                  Relevant only for rules of the kind LogAlert.
                 type: boolean
               checkWorkspaceAlertsStorageConfigured:
-                description: "CheckWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule should be stored in the customer's storage. The default is false. Relevant only for rules of the kind LogAlert."
+                description: >-
+                  CheckWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule should be stored in
+
+                  the customer's storage. The default is false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -309,14 +405,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -361,13 +472,22 @@ spec:
                             type: object
                           type: array
                         failingPeriods:
-                          description: 'FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an alert. Relevant only for rules of the kind LogAlert.'
+                          description: >-
+                            FailingPeriods: The minimum number of violations required within the selected lookback time window required to raise an
+
+                            alert. Relevant only for rules of the kind LogAlert.
                           properties:
                             minFailingPeriodsToAlert:
-                              description: 'MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods. Default value is 1'
+                              description: >-
+                                MinFailingPeriodsToAlert: The number of violations to trigger an alert. Should be smaller or equal to
+
+                                numberOfEvaluationPeriods. Default value is 1
                               type: integer
                             numberOfEvaluationPeriods:
-                              description: 'NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1'
+                              description: >-
+                                NumberOfEvaluationPeriods: The number of aggregated lookback points. The lookback time window is calculated based on the
+
+                                aggregation granularity (windowSize) and the selected number of aggregated points. Default value is 1
                               type: integer
                           type: object
                         metricMeasureColumn:
@@ -383,10 +503,16 @@ spec:
                           description: 'Query: Log query alert'
                           type: string
                         resourceIdColumn:
-                          description: 'ResourceIdColumn: The column containing the resource id. The content of the column must be a uri formatted as resource id. Relevant only for rules of the kind LogAlert.'
+                          description: >-
+                            ResourceIdColumn: The column containing the resource id. The content of the column must be a uri formatted as resource
+
+                            id. Relevant only for rules of the kind LogAlert.
                           type: string
                         threshold:
-                          description: 'Threshold: the criteria threshold value that activates the alert. Relevant and required only for rules of the kind LogAlert.'
+                          description: >-
+                            Threshold: the criteria threshold value that activates the alert. Relevant and required only for rules of the kind
+
+                            LogAlert.
                           type: number
                         timeAggregation:
                           description: 'TimeAggregation: Aggregation type. Relevant and required only for rules of the kind LogAlert.'
@@ -404,19 +530,35 @@ spec:
                 description: 'Enabled: The flag which indicates whether this scheduled query rule is enabled. Value should be true or false'
                 type: boolean
               etag:
-                description: 'Etag: The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.'
+                description: >-
+                  Etag: The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per
+
+                  the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource.
+
+                  HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and
+
+                  If-Range (section 14.27) header fields.
                 type: string
               evaluationFrequency:
-                description: 'EvaluationFrequency: How often the scheduled query rule is evaluated represented in ISO 8601 duration format. Relevant and required only for rules of the kind LogAlert.'
+                description: >-
+                  EvaluationFrequency: How often the scheduled query rule is evaluated represented in ISO 8601 duration format. Relevant
+
+                  and required only for rules of the kind LogAlert.
                 type: string
               id:
-                description: 'Id: Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}'
+                description: >-
+                  Id: Fully qualified resource ID for the resource. Ex -
+
+                  /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               isLegacyLogAnalyticsRule:
                 description: 'IsLegacyLogAnalyticsRule: True if alert rule is legacy Log Analytic rule'
                 type: boolean
               isWorkspaceAlertsStorageConfigured:
-                description: "IsWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule has been configured to be stored in the customer's storage. The default is false."
+                description: >-
+                  IsWorkspaceAlertsStorageConfigured: The flag which indicates whether this scheduled query rule has been configured to be
+
+                  stored in the customer's storage. The default is false.
                 type: boolean
               kind:
                 description: 'Kind: Indicates the type of scheduled query rule. The default is LogAlert.'
@@ -425,13 +567,19 @@ spec:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               muteActionsDuration:
-                description: 'MuteActionsDuration: Mute actions for the chosen period of time (in ISO 8601 duration format) after the alert is fired. Relevant only for rules of the kind LogAlert.'
+                description: >-
+                  MuteActionsDuration: Mute actions for the chosen period of time (in ISO 8601 duration format) after the alert is fired.
+
+                  Relevant only for rules of the kind LogAlert.
                 type: string
               name:
                 description: 'Name: The name of the resource'
                 type: string
               overrideQueryTimeRange:
-                description: 'OverrideQueryTimeRange: If specified then overrides the query time range (default is WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert.'
+                description: >-
+                  OverrideQueryTimeRange: If specified then overrides the query time range (default is
+
+                  WindowSize*NumberOfEvaluationPeriods). Relevant only for rules of the kind LogAlert.
                 type: string
               scopes:
                 description: "Scopes: The list of resource id's that this scheduled query rule is scoped to."
@@ -439,10 +587,16 @@ spec:
                   type: string
                 type: array
               severity:
-                description: 'Severity: Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only for rules of the kind LogAlert.'
+                description: >-
+                  Severity: Severity of the alert. Should be an integer between [0-4]. Value of 0 is severest. Relevant and required only
+
+                  for rules of the kind LogAlert.
                 type: integer
               skipQueryValidation:
-                description: 'SkipQueryValidation: The flag which indicates whether the provided query should be validated or not. The default is false. Relevant only for rules of the kind LogAlert.'
+                description: >-
+                  SkipQueryValidation: The flag which indicates whether the provided query should be validated or not. The default is
+
+                  false. Relevant only for rules of the kind LogAlert.
                 type: boolean
               systemData:
                 description: 'SystemData: SystemData of ScheduledQueryRule.'
@@ -472,7 +626,14 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               targetResourceTypes:
-                description: 'TargetResourceTypes: List of resource type of the target resource(s) on which the alert is created/updated. For example if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of the kind LogAlert'
+                description: >-
+                  TargetResourceTypes: List of resource type of the target resource(s) on which the alert is created/updated. For example
+
+                  if the scope is a resource group and targetResourceTypes is Microsoft.Compute/virtualMachines, then a different alert
+
+                  will be fired for each virtual machine in the resource group which meet the alert criteria. Relevant only for rules of
+
+                  the kind LogAlert
                 items:
                   type: string
                 type: array
@@ -480,7 +641,10 @@ spec:
                 description: 'Type: The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"'
                 type: string
               windowSize:
-                description: 'WindowSize: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size). Relevant and required only for rules of the kind LogAlert.'
+                description: >-
+                  WindowSize: The period of time (in ISO 8601 duration format) on which the Alert query will be executed (bin size).
+
+                  Relevant and required only for rules of the kind LogAlert.
                 type: string
             type: object
         type: object
@@ -504,13 +668,36 @@ spec:
     name: v1api20220615storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20220615.ScheduledQueryRule Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-06-15/scheduledQueryRule_API.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}'
+        description: >-
+          Storage version of v1api20220615.ScheduledQueryRule
+
+          Generator information:
+
+          - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-06-15/scheduledQueryRule_API.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/scheduledQueryRules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -520,22 +707,36 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
-                description: Storage version of v1api20220615.Actions Actions to invoke when the alert fires.
+                description: >-
+                  Storage version of v1api20220615.Actions
+
+                  Actions to invoke when the alert fires.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   actionGroupsReferences:
                     items:
                       description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                       properties:
                         armId:
-                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                          description: >-
+                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
                         group:
@@ -557,35 +758,56 @@ spec:
               autoMitigate:
                 type: boolean
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               checkWorkspaceAlertsStorageConfigured:
                 type: boolean
               criteria:
-                description: Storage version of v1api20220615.ScheduledQueryRuleCriteria The rule criteria that defines the conditions of the scheduled query rule.
+                description: >-
+                  Storage version of v1api20220615.ScheduledQueryRuleCriteria
+
+                  The rule criteria that defines the conditions of the scheduled query rule.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   allOf:
                     items:
-                      description: Storage version of v1api20220615.Condition A condition of the scheduled query rule.
+                      description: >-
+                        Storage version of v1api20220615.Condition
+
+                        A condition of the scheduled query rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         dimensions:
                           items:
-                            description: Storage version of v1api20220615.Dimension Dimension splitting and filtering definition
+                            description: >-
+                              Storage version of v1api20220615.Dimension
+
+                              Dimension splitting and filtering definition
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               name:
                                 type: string
@@ -603,7 +825,10 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             minFailingPeriodsToAlert:
                               type: integer
@@ -619,10 +844,18 @@ spec:
                         query:
                           type: string
                         resourceIdColumnReference:
-                          description: 'ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as resource id. Relevant only for rules of the kind LogAlert.'
+                          description: >-
+                            ResourceIdColumnReference: The column containing the resource id. The content of the column must be a uri formatted as
+
+                            resource id. Relevant only for rules of the kind LogAlert.
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -661,7 +894,12 @@ spec:
               overrideQueryTimeRange:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -675,7 +913,12 @@ spec:
                   description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                   properties:
                     armId:
-                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                      description: >-
+                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                       type: string
                     group:
@@ -712,15 +955,24 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
-                description: Storage version of v1api20220615.Actions_STATUS Actions to invoke when the alert fires.
+                description: >-
+                  Storage version of v1api20220615.Actions_STATUS
+
+                  Actions to invoke when the alert fires.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   actionGroups:
                     items:
@@ -747,14 +999,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -772,30 +1039,48 @@ spec:
               createdWithApiVersion:
                 type: string
               criteria:
-                description: Storage version of v1api20220615.ScheduledQueryRuleCriteria_STATUS The rule criteria that defines the conditions of the scheduled query rule.
+                description: >-
+                  Storage version of v1api20220615.ScheduledQueryRuleCriteria_STATUS
+
+                  The rule criteria that defines the conditions of the scheduled query rule.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   allOf:
                     items:
-                      description: Storage version of v1api20220615.Condition_STATUS A condition of the scheduled query rule.
+                      description: >-
+                        Storage version of v1api20220615.Condition_STATUS
+
+                        A condition of the scheduled query rule.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         dimensions:
                           items:
-                            description: Storage version of v1api20220615.Dimension_STATUS Dimension splitting and filtering definition
+                            description: >-
+                              Storage version of v1api20220615.Dimension_STATUS
+
+                              Dimension splitting and filtering definition
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               name:
                                 type: string
@@ -813,7 +1098,10 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             minFailingPeriodsToAlert:
                               type: integer
@@ -872,12 +1160,18 @@ spec:
               skipQueryValidation:
                 type: boolean
               systemData:
-                description: Storage version of v1api20220615.SystemData_STATUS Metadata pertaining to creation and last modification of the resource.
+                description: >-
+                  Storage version of v1api20220615.SystemData_STATUS
+
+                  Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
                     type: string

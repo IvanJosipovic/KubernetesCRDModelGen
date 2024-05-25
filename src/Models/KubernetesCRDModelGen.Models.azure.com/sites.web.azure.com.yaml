@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: sites.web.azure.com
 spec:
   conversion:
@@ -45,32 +45,69 @@ spec:
     name: v1api20220301
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}'
+        description: >-
+          Generator information:
+
+          - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               clientAffinityEnabled:
-                description: 'ClientAffinityEnabled: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.'
+                description: >-
+                  ClientAffinityEnabled: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity
+
+                  cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
                 type: boolean
               clientCertEnabled:
-                description: 'ClientCertEnabled: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.'
+                description: >-
+                  ClientCertEnabled: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise,
+
+                  <code>false</code>. Default is <code>false</code>.
                 type: boolean
               clientCertExclusionPaths:
                 description: 'ClientCertExclusionPaths: client certificate authentication comma-separated exclusion paths'
                 type: string
               clientCertMode:
-                description: 'ClientCertMode: This composes with ClientCertEnabled setting. - ClientCertEnabled: false means ClientCert is ignored. - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required. - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.'
+                description: >-
+                  ClientCertMode: This composes with ClientCertEnabled setting.
+
+                  - ClientCertEnabled: false means ClientCert is ignored.
+
+                  - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
+
+                  - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
                 enum:
                 - Optional
                 - OptionalInteractiveUser
@@ -82,7 +119,12 @@ spec:
                   appSettingsOverrides:
                     additionalProperties:
                       type: string
-                    description: 'AppSettingsOverrides: Application setting overrides for cloned app. If specified, these settings override the settings cloned from source app. Otherwise, application settings from source app are retained.'
+                    description: >-
+                      AppSettingsOverrides: Application setting overrides for cloned app. If specified, these settings override the settings
+
+                      cloned
+
+                      from source app. Otherwise, application settings from source app are retained.
                     type: object
                   cloneCustomHostNames:
                     description: 'CloneCustomHostNames: <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.'
@@ -94,7 +136,10 @@ spec:
                     description: 'ConfigureLoadBalancing: <code>true</code> to configure load balancing for source and destination app.'
                     type: boolean
                   correlationId:
-                    description: 'CorrelationId: Correlation ID of cloning operation. This ID ties multiple cloning operations together to use the same snapshot.'
+                    description: >-
+                      CorrelationId: Correlation ID of cloning operation. This ID ties multiple cloning operations
+
+                      together to use the same snapshot.
                     pattern: ^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$
                     type: string
                   hostingEnvironment:
@@ -107,10 +152,24 @@ spec:
                     description: 'SourceWebAppLocation: Location of source app ex: West US or North Europe'
                     type: string
                   sourceWebAppReference:
-                    description: 'SourceWebAppReference: ARM resource ID of the source app. App resource ID is of the form /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.'
+                    description: >-
+                      SourceWebAppReference: ARM resource ID of the source app. App resource ID is of the form
+
+                      /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots
+
+                      and
+
+                      /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for
+
+                      other slots.
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -124,13 +183,26 @@ spec:
                         type: string
                     type: object
                   trafficManagerProfileName:
-                    description: 'TrafficManagerProfileName: Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.'
+                    description: >-
+                      TrafficManagerProfileName: Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile
+
+                      does not already exist.
                     type: string
                   trafficManagerProfileReference:
-                    description: 'TrafficManagerProfileReference: ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.'
+                    description: >-
+                      TrafficManagerProfileReference: ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager
+
+                      resource ID is of the form
+
+                      /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -150,13 +222,19 @@ spec:
                 description: 'ContainerSize: Size of the function container.'
                 type: integer
               customDomainVerificationId:
-                description: 'CustomDomainVerificationId: Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.'
+                description: >-
+                  CustomDomainVerificationId: Unique identifier that verifies the custom domains assigned to the app. Customer will add
+
+                  this id to a txt record for verification.
                 type: string
               dailyMemoryTimeQuota:
                 description: 'DailyMemoryTimeQuota: Maximum allowed daily memory-time quota (applicable on dynamic apps only).'
                 type: integer
               enabled:
-                description: 'Enabled: <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).'
+                description: >-
+                  Enabled: <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables
+
+                  the app (takes the app offline).
                 type: boolean
               extendedLocation:
                 description: 'ExtendedLocation: Extended Location.'
@@ -198,7 +276,10 @@ spec:
                   type: object
                 type: array
               hostNamesDisabled:
-                description: 'HostNamesDisabled: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>. If <code>true</code>, the app is only accessible via API management process.'
+                description: >-
+                  HostNamesDisabled: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
+
+                  If <code>true</code>, the app is only accessible via API management process.
                 type: boolean
               hostingEnvironmentProfile:
                 description: 'HostingEnvironmentProfile: App Service Environment to use for the app.'
@@ -207,7 +288,12 @@ spec:
                     description: 'Reference: Resource ID of the App Service Environment.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -222,7 +308,10 @@ spec:
                     type: object
                 type: object
               httpsOnly:
-                description: 'HttpsOnly: HttpsOnly: configures a web site to accept only https requests. Issues redirect for http requests'
+                description: >-
+                  HttpsOnly: HttpsOnly: configures a web site to accept only https requests. Issues redirect for
+
+                  http requests
                 type: boolean
               hyperV:
                 description: 'HyperV: Hyper-V sandbox.'
@@ -239,7 +328,12 @@ spec:
                     - UserAssigned
                     type: string
                   userAssignedIdentities:
-                    description: "UserAssignedIdentities: The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}"
+                    description: >-
+                      UserAssignedIdentities: The list of user assigned identities associated with the resource. The user identity dictionary
+
+                      key references will be ARM resource ids in the form:
+
+                      '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
                     items:
                       description: Information about the user assigned identity for the resource
                       properties:
@@ -247,7 +341,12 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -276,7 +375,12 @@ spec:
                 description: 'Location: Resource Location.'
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -286,7 +390,10 @@ spec:
                     type: string
                 type: object
               publicNetworkAccess:
-                description: "PublicNetworkAccess: Property to allow or block all public traffic. Allowed Values: 'Enabled', 'Disabled' or an empty string."
+                description: >-
+                  PublicNetworkAccess: Property to allow or block all public traffic. Allowed Values: 'Enabled', 'Disabled' or an empty
+
+                  string.
                 type: string
               redundancyMode:
                 description: 'RedundancyMode: Site redundancy mode'
@@ -301,13 +408,24 @@ spec:
                 description: 'Reserved: <code>true</code> if reserved; otherwise, <code>false</code>.'
                 type: boolean
               scmSiteAlsoStopped:
-                description: 'ScmSiteAlsoStopped: <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.'
+                description: >-
+                  ScmSiteAlsoStopped: <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>.
+
+                  The default is <code>false</code>.
                 type: boolean
               serverFarmReference:
-                description: 'ServerFarmReference: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".'
+                description: >-
+                  ServerFarmReference: Resource ID of the associated App Service plan, formatted as:
+
+                  "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -346,7 +464,12 @@ spec:
                         description: 'Reference: APIM-Api Identifier.'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -403,7 +526,10 @@ spec:
                                 type: string
                             type: object
                           minProcessExecutionTime:
-                            description: 'MinProcessExecutionTime: Minimum time the process must execute before taking the action'
+                            description: >-
+                              MinProcessExecutionTime: Minimum time the process must execute
+
+                              before taking the action
                             type: string
                         type: object
                       triggers:
@@ -516,7 +642,10 @@ spec:
                               description: Key is the key in the Kubernetes secret being referenced
                               type: string
                             name:
-                              description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                              description: >-
+                                Name is the name of the Kubernetes secret being referenced.
+
+                                The secret must be in the same namespace as the resource
                               type: string
                           required:
                           - key
@@ -572,12 +701,20 @@ spec:
                     description: 'Cors: Cross-Origin Resource Sharing (CORS) settings.'
                     properties:
                       allowedOrigins:
-                        description: 'AllowedOrigins: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all.'
+                        description: >-
+                          AllowedOrigins: Gets or sets the list of origins that should be allowed to make cross-origin
+
+                          calls (for example: http://example.com:12345). Use "*" to allow all.
                         items:
                           type: string
                         type: array
                       supportCredentials:
-                        description: 'SupportCredentials: Gets or sets whether CORS requests with credentials are allowed. See https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials for more details.'
+                        description: >-
+                          SupportCredentials: Gets or sets whether CORS requests with credentials are allowed. See
+
+                          https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
+
+                          for more details.
                         type: boolean
                     type: object
                   defaultDocuments:
@@ -597,19 +734,39 @@ spec:
                       rampUpRules:
                         description: 'RampUpRules: List of ramp-up rules.'
                         items:
-                          description: Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
+                          description: >-
+                            Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change
+
+                            routing % based on performance.
                           properties:
                             actionHostName:
-                              description: 'ActionHostName: Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.'
+                              description: >-
+                                ActionHostName: Hostname of a slot to which the traffic will be redirected if decided to. E.g.
+
+                                myapp-stage.azurewebsites.net.
                               type: string
                             changeDecisionCallbackUrl:
-                              description: 'ChangeDecisionCallbackUrl: Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts. https://www.siteextensions.net/packages/TiPCallback/'
+                              description: >-
+                                ChangeDecisionCallbackUrl: Custom decision algorithm can be provided in TiPCallback site extension which URL can be
+
+                                specified. See TiPCallback site extension for the scaffold and contracts.
+
+                                https://www.siteextensions.net/packages/TiPCallback/
                               type: string
                             changeIntervalInMinutes:
                               description: 'ChangeIntervalInMinutes: Specifies interval in minutes to reevaluate ReroutePercentage.'
                               type: integer
                             changeStep:
-                              description: 'ChangeStep: In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.'
+                              description: >-
+                                ChangeStep: In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches
+
+                                \n<code>MinReroutePercentage</code> or
+
+                                <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in
+
+                                <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm
+
+                                can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.
                               type: number
                             maxReroutePercentage:
                               description: 'MaxReroutePercentage: Specifies upper boundary below which ReroutePercentage will stay.'
@@ -618,7 +775,10 @@ spec:
                               description: 'MinReroutePercentage: Specifies lower boundary above which ReroutePercentage will stay.'
                               type: number
                             name:
-                              description: 'Name: Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.'
+                              description: >-
+                                Name: Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the
+
+                                experiment.
                               type: string
                             reroutePercentage:
                               description: 'ReroutePercentage: Percentage of the traffic which will be redirected to <code>ActionHostName</code>.'
@@ -634,16 +794,31 @@ spec:
                     - FtpsOnly
                     type: string
                   functionAppScaleLimit:
-                    description: 'FunctionAppScaleLimit: Maximum number of workers that a site can scale out to. This setting only applies to the Consumption and Elastic Premium Plans'
+                    description: >-
+                      FunctionAppScaleLimit: Maximum number of workers that a site can scale out to.
+
+                      This setting only applies to the Consumption and Elastic Premium Plans
                     minimum: 0
                     type: integer
                   functionsRuntimeScaleMonitoringEnabled:
-                    description: 'FunctionsRuntimeScaleMonitoringEnabled: Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled, the ScaleController will not monitor event sources directly, but will instead call to the runtime to get scale status.'
+                    description: >-
+                      FunctionsRuntimeScaleMonitoringEnabled: Gets or sets a value indicating whether functions runtime scale monitoring is
+
+                      enabled. When enabled,
+
+                      the ScaleController will not monitor event sources directly, but will instead call to the
+
+                      runtime to get scale status.
                     type: boolean
                   handlerMappings:
                     description: 'HandlerMappings: Handler mappings.'
                     items:
-                      description: The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
+                      description: >-
+                        The IIS handler mappings used to define which handler processes HTTP requests with certain extension.
+
+                        For example, it
+
+                        is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
                       properties:
                         arguments:
                           description: 'Arguments: Command-line arguments to be passed to the script processor.'
@@ -681,10 +856,46 @@ spec:
                             items:
                               type: string
                             type: array
-                          description: "Headers: IP restriction rule headers. X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). The matching logic is .. - If the property is null or empty (default), all hosts(or lack of) are allowed. - A value is compared using ordinal-ignore-case (excluding port number). - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com but not the root domain contoso.com or multi-level foo.bar.contoso.com - Unicode host names are allowed but are converted to Punycode for matching. X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples). The matching logic is .. - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed. - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property. X-Azure-FDID and X-FD-HealthProbe. The matching logic is exact match."
+                          description: >-
+                            Headers: IP restriction rule headers.
+
+                            X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+
+                            The matching logic is ..
+
+                            - If the property is null or empty (default), all hosts(or lack of) are allowed.
+
+                            - A value is compared using ordinal-ignore-case (excluding port number).
+
+                            - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain
+
+                            foo.contoso.com
+
+                            but not the root domain contoso.com or multi-level foo.bar.contoso.com
+
+                            - Unicode host names are allowed but are converted to Punycode for matching.
+
+                            X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
+
+                            The matching logic is ..
+
+                            - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed.
+
+                            - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property.
+
+                            X-Azure-FDID and X-FD-HealthProbe.
+
+                            The matching logic is exact match.
                           type: object
                         ipAddress:
-                          description: 'IpAddress: IP address the security restriction is valid for. It can be in form of pure ipv4 address (required SubnetMask property) or CIDR notation such as ipv4/mask (leading bit match). For CIDR, SubnetMask property must not be specified.'
+                          description: >-
+                            IpAddress: IP address the security restriction is valid for.
+
+                            It can be in form of pure ipv4 address (required SubnetMask property) or
+
+                            CIDR notation such as ipv4/mask (leading bit match). For CIDR,
+
+                            SubnetMask property must not be specified.
                           type: string
                         name:
                           description: 'Name: IP restriction rule name.'
@@ -709,7 +920,12 @@ spec:
                           description: 'VnetSubnetResourceReference: Virtual network resource id'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -788,7 +1004,10 @@ spec:
                     - 1.2
                     type: string
                   minimumElasticInstanceCount:
-                    description: 'MinimumElasticInstanceCount: Number of minimum instance count for a site This setting only applies to the Elastic Plans'
+                    description: >-
+                      MinimumElasticInstanceCount: Number of minimum instance count for a site
+
+                      This setting only applies to the Elastic Plans
                     maximum: 20
                     minimum: 0
                     type: integer
@@ -808,7 +1027,10 @@ spec:
                     description: 'PowerShellVersion: Version of PowerShell.'
                     type: string
                   preWarmedInstanceCount:
-                    description: 'PreWarmedInstanceCount: Number of preWarmed instances. This setting only applies to the Consumption and Elastic Plans'
+                    description: >-
+                      PreWarmedInstanceCount: Number of preWarmed instances.
+
+                      This setting only applies to the Consumption and Elastic Plans
                     maximum: 10
                     minimum: 0
                     type: integer
@@ -822,7 +1044,10 @@ spec:
                     description: 'Push: Push endpoint settings.'
                     properties:
                       dynamicTagsJson:
-                        description: 'DynamicTagsJson: Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.'
+                        description: >-
+                          DynamicTagsJson: Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in
+
+                          the push registration endpoint.
                         type: string
                       isPushEnabled:
                         description: 'IsPushEnabled: Gets or sets a flag indicating whether the Push endpoint is enabled.'
@@ -831,10 +1056,22 @@ spec:
                         description: 'Kind: Kind of resource.'
                         type: string
                       tagWhitelistJson:
-                        description: 'TagWhitelistJson: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push registration endpoint.'
+                        description: >-
+                          TagWhitelistJson: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push
+
+                          registration endpoint.
                         type: string
                       tagsRequiringAuth:
-                        description: "TagsRequiringAuth: Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint. Tags can consist of alphanumeric characters and the following: '_', '@', '#', '.', ':', '-'. Validation should be performed at the PushRequestHandler."
+                        description: >-
+                          TagsRequiringAuth: Gets or sets a JSON string containing a list of tags that require user authentication to be used in
+
+                          the push registration endpoint.
+
+                          Tags can consist of alphanumeric characters and the following:
+
+                          '_', '@', '#', '.', ':', '-'.
+
+                          Validation should be performed at the PushRequestHandler.
                         type: string
                     required:
                     - isPushEnabled
@@ -870,10 +1107,46 @@ spec:
                             items:
                               type: string
                             type: array
-                          description: "Headers: IP restriction rule headers. X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). The matching logic is .. - If the property is null or empty (default), all hosts(or lack of) are allowed. - A value is compared using ordinal-ignore-case (excluding port number). - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com but not the root domain contoso.com or multi-level foo.bar.contoso.com - Unicode host names are allowed but are converted to Punycode for matching. X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples). The matching logic is .. - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed. - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property. X-Azure-FDID and X-FD-HealthProbe. The matching logic is exact match."
+                          description: >-
+                            Headers: IP restriction rule headers.
+
+                            X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+
+                            The matching logic is ..
+
+                            - If the property is null or empty (default), all hosts(or lack of) are allowed.
+
+                            - A value is compared using ordinal-ignore-case (excluding port number).
+
+                            - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain
+
+                            foo.contoso.com
+
+                            but not the root domain contoso.com or multi-level foo.bar.contoso.com
+
+                            - Unicode host names are allowed but are converted to Punycode for matching.
+
+                            X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
+
+                            The matching logic is ..
+
+                            - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed.
+
+                            - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property.
+
+                            X-Azure-FDID and X-FD-HealthProbe.
+
+                            The matching logic is exact match.
                           type: object
                         ipAddress:
-                          description: 'IpAddress: IP address the security restriction is valid for. It can be in form of pure ipv4 address (required SubnetMask property) or CIDR notation such as ipv4/mask (leading bit match). For CIDR, SubnetMask property must not be specified.'
+                          description: >-
+                            IpAddress: IP address the security restriction is valid for.
+
+                            It can be in form of pure ipv4 address (required SubnetMask property) or
+
+                            CIDR notation such as ipv4/mask (leading bit match). For CIDR,
+
+                            SubnetMask property must not be specified.
                           type: string
                         name:
                           description: 'Name: IP restriction rule name.'
@@ -898,7 +1171,12 @@ spec:
                           description: 'VnetSubnetResourceReference: Virtual network resource id'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -986,13 +1264,25 @@ spec:
                     description: 'VnetPrivatePortsCount: The number of private ports assigned to this app. These will be assigned dynamically on runtime.'
                     type: integer
                   vnetRouteAllEnabled:
-                    description: 'VnetRouteAllEnabled: Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.'
+                    description: >-
+                      VnetRouteAllEnabled: Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network
+
+                      Security Groups and User Defined Routes applied.
                     type: boolean
                   webSocketsEnabled:
                     description: 'WebSocketsEnabled: <code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.'
                     type: boolean
                   websiteTimeZone:
-                    description: 'WebsiteTimeZone: Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones'
+                    description: >-
+                      WebsiteTimeZone: Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App
+
+                      Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database
+
+                      values https://www.iana.org/time-zones (for a quick reference see
+
+                      https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under
+
+                      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
                     type: string
                   windowsFxVersion:
                     description: 'WindowsFxVersion: Xenon App Framework and version'
@@ -1010,10 +1300,22 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               virtualNetworkSubnetReference:
-                description: 'VirtualNetworkSubnetReference: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration. This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}'
+                description: >-
+                  VirtualNetworkSubnetReference: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET
+
+                  Integration.
+
+                  This must be of the form
+
+                  /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -1033,7 +1335,10 @@ spec:
                 description: 'VnetImagePullEnabled: To enable pulling image over Virtual Network'
                 type: boolean
               vnetRouteAllEnabled:
-                description: 'VnetRouteAllEnabled: Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.'
+                description: >-
+                  VnetRouteAllEnabled: Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network
+
+                  Security Groups and User Defined Routes applied.
                 type: boolean
             required:
             - location
@@ -1046,16 +1351,29 @@ spec:
                 description: 'AvailabilityState: Management information availability state for the app.'
                 type: string
               clientAffinityEnabled:
-                description: 'ClientAffinityEnabled: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.'
+                description: >-
+                  ClientAffinityEnabled: <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity
+
+                  cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
                 type: boolean
               clientCertEnabled:
-                description: 'ClientCertEnabled: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.'
+                description: >-
+                  ClientCertEnabled: <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise,
+
+                  <code>false</code>. Default is <code>false</code>.
                 type: boolean
               clientCertExclusionPaths:
                 description: 'ClientCertExclusionPaths: client certificate authentication comma-separated exclusion paths'
                 type: string
               clientCertMode:
-                description: 'ClientCertMode: This composes with ClientCertEnabled setting. - ClientCertEnabled: false means ClientCert is ignored. - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required. - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.'
+                description: >-
+                  ClientCertMode: This composes with ClientCertEnabled setting.
+
+                  - ClientCertEnabled: false means ClientCert is ignored.
+
+                  - ClientCertEnabled: true and ClientCertMode: Required means ClientCert is required.
+
+                  - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
                 type: string
               cloningInfo:
                 description: 'CloningInfo: If specified during app creation, the app is cloned from a source app.'
@@ -1063,7 +1381,12 @@ spec:
                   appSettingsOverrides:
                     additionalProperties:
                       type: string
-                    description: 'AppSettingsOverrides: Application setting overrides for cloned app. If specified, these settings override the settings cloned from source app. Otherwise, application settings from source app are retained.'
+                    description: >-
+                      AppSettingsOverrides: Application setting overrides for cloned app. If specified, these settings override the settings
+
+                      cloned
+
+                      from source app. Otherwise, application settings from source app are retained.
                     type: object
                   cloneCustomHostNames:
                     description: 'CloneCustomHostNames: <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.'
@@ -1075,7 +1398,10 @@ spec:
                     description: 'ConfigureLoadBalancing: <code>true</code> to configure load balancing for source and destination app.'
                     type: boolean
                   correlationId:
-                    description: 'CorrelationId: Correlation ID of cloning operation. This ID ties multiple cloning operations together to use the same snapshot.'
+                    description: >-
+                      CorrelationId: Correlation ID of cloning operation. This ID ties multiple cloning operations
+
+                      together to use the same snapshot.
                     type: string
                   hostingEnvironment:
                     description: 'HostingEnvironment: App Service Environment.'
@@ -1084,16 +1410,33 @@ spec:
                     description: 'Overwrite: <code>true</code> to overwrite destination app; otherwise, <code>false</code>.'
                     type: boolean
                   sourceWebAppId:
-                    description: 'SourceWebAppId: ARM resource ID of the source app. App resource ID is of the form /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.'
+                    description: >-
+                      SourceWebAppId: ARM resource ID of the source app. App resource ID is of the form
+
+                      /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots
+
+                      and
+
+                      /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for
+
+                      other slots.
                     type: string
                   sourceWebAppLocation:
                     description: 'SourceWebAppLocation: Location of source app ex: West US or North Europe'
                     type: string
                   trafficManagerProfileId:
-                    description: 'TrafficManagerProfileId: ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.'
+                    description: >-
+                      TrafficManagerProfileId: ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource
+
+                      ID is of the form
+
+                      /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.
                     type: string
                   trafficManagerProfileName:
-                    description: 'TrafficManagerProfileName: Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.'
+                    description: >-
+                      TrafficManagerProfileName: Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile
+
+                      does not already exist.
                     type: string
                 type: object
               conditions:
@@ -1109,14 +1452,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1135,7 +1493,10 @@ spec:
                 description: 'ContainerSize: Size of the function container.'
                 type: integer
               customDomainVerificationId:
-                description: 'CustomDomainVerificationId: Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.'
+                description: >-
+                  CustomDomainVerificationId: Unique identifier that verifies the custom domains assigned to the app. Customer will add
+
+                  this id to a txt record for verification.
                 type: string
               dailyMemoryTimeQuota:
                 description: 'DailyMemoryTimeQuota: Maximum allowed daily memory-time quota (applicable on dynamic apps only).'
@@ -1144,10 +1505,16 @@ spec:
                 description: 'DefaultHostName: Default hostname of the app. Read-only.'
                 type: string
               enabled:
-                description: 'Enabled: <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).'
+                description: >-
+                  Enabled: <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables
+
+                  the app (takes the app offline).
                 type: boolean
               enabledHostNames:
-                description: 'EnabledHostNames: Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise, the app is not served on those hostnames.'
+                description: >-
+                  EnabledHostNames: Enabled hostnames for the app.Hostnames need to be assigned (see HostNames) AND enabled. Otherwise,
+
+                  the app is not served on those hostnames.
                 items:
                   type: string
                 type: array
@@ -1192,7 +1559,10 @@ spec:
                   type: string
                 type: array
               hostNamesDisabled:
-                description: 'HostNamesDisabled: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>. If <code>true</code>, the app is only accessible via API management process.'
+                description: >-
+                  HostNamesDisabled: <code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
+
+                  If <code>true</code>, the app is only accessible via API management process.
                 type: boolean
               hostingEnvironmentProfile:
                 description: 'HostingEnvironmentProfile: App Service Environment to use for the app.'
@@ -1208,7 +1578,10 @@ spec:
                     type: string
                 type: object
               httpsOnly:
-                description: 'HttpsOnly: HttpsOnly: configures a web site to accept only https requests. Issues redirect for http requests'
+                description: >-
+                  HttpsOnly: HttpsOnly: configures a web site to accept only https requests. Issues redirect for
+
+                  http requests
                 type: boolean
               hyperV:
                 description: 'HyperV: Hyper-V sandbox.'
@@ -1239,7 +1612,12 @@ spec:
                           description: 'PrincipalId: Principal Id of user assigned identity'
                           type: string
                       type: object
-                    description: "UserAssignedIdentities: The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}"
+                    description: >-
+                      UserAssignedIdentities: The list of user assigned identities associated with the resource. The user identity dictionary
+
+                      key references will be ARM resource ids in the form:
+
+                      '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
                     type: object
                 type: object
               inProgressOperationId:
@@ -1264,19 +1642,31 @@ spec:
                 description: 'Location: Resource Location.'
                 type: string
               maxNumberOfWorkers:
-                description: 'MaxNumberOfWorkers: Maximum number of workers. This only applies to Functions container.'
+                description: >-
+                  MaxNumberOfWorkers: Maximum number of workers.
+
+                  This only applies to Functions container.
                 type: integer
               name:
                 description: 'Name: Resource Name.'
                 type: string
               outboundIpAddresses:
-                description: 'OutboundIpAddresses: List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.'
+                description: >-
+                  OutboundIpAddresses: List of IP addresses that the app uses for outbound connections (e.g. database access). Includes
+
+                  VIPs from tenants that site can be hosted with current settings. Read-only.
                 type: string
               possibleOutboundIpAddresses:
-                description: 'PossibleOutboundIpAddresses: List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.'
+                description: >-
+                  PossibleOutboundIpAddresses: List of IP addresses that the app uses for outbound connections (e.g. database access).
+
+                  Includes VIPs from all tenants except dataComponent. Read-only.
                 type: string
               publicNetworkAccess:
-                description: "PublicNetworkAccess: Property to allow or block all public traffic. Allowed Values: 'Enabled', 'Disabled' or an empty string."
+                description: >-
+                  PublicNetworkAccess: Property to allow or block all public traffic. Allowed Values: 'Enabled', 'Disabled' or an empty
+
+                  string.
                 type: string
               redundancyMode:
                 description: 'RedundancyMode: Site redundancy mode'
@@ -1291,10 +1681,16 @@ spec:
                 description: 'ResourceGroup: Name of the resource group the app belongs to. Read-only.'
                 type: string
               scmSiteAlsoStopped:
-                description: 'ScmSiteAlsoStopped: <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.'
+                description: >-
+                  ScmSiteAlsoStopped: <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>.
+
+                  The default is <code>false</code>.
                 type: boolean
               serverFarmId:
-                description: 'ServerFarmId: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".'
+                description: >-
+                  ServerFarmId: Resource ID of the associated App Service plan, formatted as:
+
+                  "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
                 type: string
               siteConfig:
                 description: 'SiteConfig: Configuration of the app.'
@@ -1361,7 +1757,10 @@ spec:
                                 type: string
                             type: object
                           minProcessExecutionTime:
-                            description: 'MinProcessExecutionTime: Minimum time the process must execute before taking the action'
+                            description: >-
+                              MinProcessExecutionTime: Minimum time the process must execute
+
+                              before taking the action
                             type: string
                         type: object
                       triggers:
@@ -1505,12 +1904,20 @@ spec:
                     description: 'Cors: Cross-Origin Resource Sharing (CORS) settings.'
                     properties:
                       allowedOrigins:
-                        description: 'AllowedOrigins: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all.'
+                        description: >-
+                          AllowedOrigins: Gets or sets the list of origins that should be allowed to make cross-origin
+
+                          calls (for example: http://example.com:12345). Use "*" to allow all.
                         items:
                           type: string
                         type: array
                       supportCredentials:
-                        description: 'SupportCredentials: Gets or sets whether CORS requests with credentials are allowed. See https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials for more details.'
+                        description: >-
+                          SupportCredentials: Gets or sets whether CORS requests with credentials are allowed. See
+
+                          https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
+
+                          for more details.
                         type: boolean
                     type: object
                   defaultDocuments:
@@ -1530,19 +1937,39 @@ spec:
                       rampUpRules:
                         description: 'RampUpRules: List of ramp-up rules.'
                         items:
-                          description: Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
+                          description: >-
+                            Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change
+
+                            routing % based on performance.
                           properties:
                             actionHostName:
-                              description: 'ActionHostName: Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.'
+                              description: >-
+                                ActionHostName: Hostname of a slot to which the traffic will be redirected if decided to. E.g.
+
+                                myapp-stage.azurewebsites.net.
                               type: string
                             changeDecisionCallbackUrl:
-                              description: 'ChangeDecisionCallbackUrl: Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts. https://www.siteextensions.net/packages/TiPCallback/'
+                              description: >-
+                                ChangeDecisionCallbackUrl: Custom decision algorithm can be provided in TiPCallback site extension which URL can be
+
+                                specified. See TiPCallback site extension for the scaffold and contracts.
+
+                                https://www.siteextensions.net/packages/TiPCallback/
                               type: string
                             changeIntervalInMinutes:
                               description: 'ChangeIntervalInMinutes: Specifies interval in minutes to reevaluate ReroutePercentage.'
                               type: integer
                             changeStep:
-                              description: 'ChangeStep: In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.'
+                              description: >-
+                                ChangeStep: In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches
+
+                                \n<code>MinReroutePercentage</code> or
+
+                                <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in
+
+                                <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm
+
+                                can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.
                               type: number
                             maxReroutePercentage:
                               description: 'MaxReroutePercentage: Specifies upper boundary below which ReroutePercentage will stay.'
@@ -1551,7 +1978,10 @@ spec:
                               description: 'MinReroutePercentage: Specifies lower boundary above which ReroutePercentage will stay.'
                               type: number
                             name:
-                              description: 'Name: Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.'
+                              description: >-
+                                Name: Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the
+
+                                experiment.
                               type: string
                             reroutePercentage:
                               description: 'ReroutePercentage: Percentage of the traffic which will be redirected to <code>ActionHostName</code>.'
@@ -1563,15 +1993,30 @@ spec:
                     description: 'FtpsState: State of FTP / FTPS service'
                     type: string
                   functionAppScaleLimit:
-                    description: 'FunctionAppScaleLimit: Maximum number of workers that a site can scale out to. This setting only applies to the Consumption and Elastic Premium Plans'
+                    description: >-
+                      FunctionAppScaleLimit: Maximum number of workers that a site can scale out to.
+
+                      This setting only applies to the Consumption and Elastic Premium Plans
                     type: integer
                   functionsRuntimeScaleMonitoringEnabled:
-                    description: 'FunctionsRuntimeScaleMonitoringEnabled: Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled, the ScaleController will not monitor event sources directly, but will instead call to the runtime to get scale status.'
+                    description: >-
+                      FunctionsRuntimeScaleMonitoringEnabled: Gets or sets a value indicating whether functions runtime scale monitoring is
+
+                      enabled. When enabled,
+
+                      the ScaleController will not monitor event sources directly, but will instead call to the
+
+                      runtime to get scale status.
                     type: boolean
                   handlerMappings:
                     description: 'HandlerMappings: Handler mappings.'
                     items:
-                      description: The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
+                      description: >-
+                        The IIS handler mappings used to define which handler processes HTTP requests with certain extension.
+
+                        For example, it
+
+                        is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
                       properties:
                         arguments:
                           description: 'Arguments: Command-line arguments to be passed to the script processor.'
@@ -1609,10 +2054,46 @@ spec:
                             items:
                               type: string
                             type: array
-                          description: "Headers: IP restriction rule headers. X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). The matching logic is .. - If the property is null or empty (default), all hosts(or lack of) are allowed. - A value is compared using ordinal-ignore-case (excluding port number). - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com but not the root domain contoso.com or multi-level foo.bar.contoso.com - Unicode host names are allowed but are converted to Punycode for matching. X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples). The matching logic is .. - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed. - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property. X-Azure-FDID and X-FD-HealthProbe. The matching logic is exact match."
+                          description: >-
+                            Headers: IP restriction rule headers.
+
+                            X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+
+                            The matching logic is ..
+
+                            - If the property is null or empty (default), all hosts(or lack of) are allowed.
+
+                            - A value is compared using ordinal-ignore-case (excluding port number).
+
+                            - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain
+
+                            foo.contoso.com
+
+                            but not the root domain contoso.com or multi-level foo.bar.contoso.com
+
+                            - Unicode host names are allowed but are converted to Punycode for matching.
+
+                            X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
+
+                            The matching logic is ..
+
+                            - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed.
+
+                            - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property.
+
+                            X-Azure-FDID and X-FD-HealthProbe.
+
+                            The matching logic is exact match.
                           type: object
                         ipAddress:
-                          description: 'IpAddress: IP address the security restriction is valid for. It can be in form of pure ipv4 address (required SubnetMask property) or CIDR notation such as ipv4/mask (leading bit match). For CIDR, SubnetMask property must not be specified.'
+                          description: >-
+                            IpAddress: IP address the security restriction is valid for.
+
+                            It can be in form of pure ipv4 address (required SubnetMask property) or
+
+                            CIDR notation such as ipv4/mask (leading bit match). For CIDR,
+
+                            SubnetMask property must not be specified.
                           type: string
                         name:
                           description: 'Name: IP restriction rule name.'
@@ -1700,7 +2181,10 @@ spec:
                     description: 'MinTlsVersion: MinTlsVersion: configures the minimum version of TLS required for SSL requests'
                     type: string
                   minimumElasticInstanceCount:
-                    description: 'MinimumElasticInstanceCount: Number of minimum instance count for a site This setting only applies to the Elastic Plans'
+                    description: >-
+                      MinimumElasticInstanceCount: Number of minimum instance count for a site
+
+                      This setting only applies to the Elastic Plans
                     type: integer
                   netFrameworkVersion:
                     description: 'NetFrameworkVersion: .NET Framework version.'
@@ -1718,7 +2202,10 @@ spec:
                     description: 'PowerShellVersion: Version of PowerShell.'
                     type: string
                   preWarmedInstanceCount:
-                    description: 'PreWarmedInstanceCount: Number of preWarmed instances. This setting only applies to the Consumption and Elastic Plans'
+                    description: >-
+                      PreWarmedInstanceCount: Number of preWarmed instances.
+
+                      This setting only applies to the Consumption and Elastic Plans
                     type: integer
                   publicNetworkAccess:
                     description: 'PublicNetworkAccess: Property to allow or block all public traffic.'
@@ -1730,7 +2217,10 @@ spec:
                     description: 'Push: Push endpoint settings.'
                     properties:
                       dynamicTagsJson:
-                        description: 'DynamicTagsJson: Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.'
+                        description: >-
+                          DynamicTagsJson: Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in
+
+                          the push registration endpoint.
                         type: string
                       id:
                         description: 'Id: Resource Id.'
@@ -1745,10 +2235,22 @@ spec:
                         description: 'Name: Resource Name.'
                         type: string
                       tagWhitelistJson:
-                        description: 'TagWhitelistJson: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push registration endpoint.'
+                        description: >-
+                          TagWhitelistJson: Gets or sets a JSON string containing a list of tags that are in the allowed list for use by the push
+
+                          registration endpoint.
                         type: string
                       tagsRequiringAuth:
-                        description: "TagsRequiringAuth: Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint. Tags can consist of alphanumeric characters and the following: '_', '@', '#', '.', ':', '-'. Validation should be performed at the PushRequestHandler."
+                        description: >-
+                          TagsRequiringAuth: Gets or sets a JSON string containing a list of tags that require user authentication to be used in
+
+                          the push registration endpoint.
+
+                          Tags can consist of alphanumeric characters and the following:
+
+                          '_', '@', '#', '.', ':', '-'.
+
+                          Validation should be performed at the PushRequestHandler.
                         type: string
                       type:
                         description: 'Type: Resource type.'
@@ -1785,10 +2287,46 @@ spec:
                             items:
                               type: string
                             type: array
-                          description: "Headers: IP restriction rule headers. X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). The matching logic is .. - If the property is null or empty (default), all hosts(or lack of) are allowed. - A value is compared using ordinal-ignore-case (excluding port number). - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com but not the root domain contoso.com or multi-level foo.bar.contoso.com - Unicode host names are allowed but are converted to Punycode for matching. X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples). The matching logic is .. - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed. - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property. X-Azure-FDID and X-FD-HealthProbe. The matching logic is exact match."
+                          description: >-
+                            Headers: IP restriction rule headers.
+
+                            X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+
+                            The matching logic is ..
+
+                            - If the property is null or empty (default), all hosts(or lack of) are allowed.
+
+                            - A value is compared using ordinal-ignore-case (excluding port number).
+
+                            - Subdomain wildcards are permitted but don't match the root domain. For example, *.contoso.com matches the subdomain
+
+                            foo.contoso.com
+
+                            but not the root domain contoso.com or multi-level foo.bar.contoso.com
+
+                            - Unicode host names are allowed but are converted to Punycode for matching.
+
+                            X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
+
+                            The matching logic is ..
+
+                            - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed.
+
+                            - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property.
+
+                            X-Azure-FDID and X-FD-HealthProbe.
+
+                            The matching logic is exact match.
                           type: object
                         ipAddress:
-                          description: 'IpAddress: IP address the security restriction is valid for. It can be in form of pure ipv4 address (required SubnetMask property) or CIDR notation such as ipv4/mask (leading bit match). For CIDR, SubnetMask property must not be specified.'
+                          description: >-
+                            IpAddress: IP address the security restriction is valid for.
+
+                            It can be in form of pure ipv4 address (required SubnetMask property) or
+
+                            CIDR notation such as ipv4/mask (leading bit match). For CIDR,
+
+                            SubnetMask property must not be specified.
                           type: string
                         name:
                           description: 'Name: IP restriction rule name.'
@@ -1864,13 +2402,25 @@ spec:
                     description: 'VnetPrivatePortsCount: The number of private ports assigned to this app. These will be assigned dynamically on runtime.'
                     type: integer
                   vnetRouteAllEnabled:
-                    description: 'VnetRouteAllEnabled: Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.'
+                    description: >-
+                      VnetRouteAllEnabled: Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network
+
+                      Security Groups and User Defined Routes applied.
                     type: boolean
                   webSocketsEnabled:
                     description: 'WebSocketsEnabled: <code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.'
                     type: boolean
                   websiteTimeZone:
-                    description: 'WebsiteTimeZone: Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones'
+                    description: >-
+                      WebsiteTimeZone: Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App
+
+                      Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database
+
+                      values https://www.iana.org/time-zones (for a quick reference see
+
+                      https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under
+
+                      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
                     type: string
                   windowsFxVersion:
                     description: 'WindowsFxVersion: Xenon App Framework and version'
@@ -1921,7 +2471,14 @@ spec:
                 description: 'UsageState: State indicating whether the app has exceeded its quota usage. Read-only.'
                 type: string
               virtualNetworkSubnetId:
-                description: 'VirtualNetworkSubnetId: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration. This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}'
+                description: >-
+                  VirtualNetworkSubnetId: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET
+
+                  Integration.
+
+                  This must be of the form
+
+                  /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
                 type: string
               vnetContentShareEnabled:
                 description: 'VnetContentShareEnabled: To enable accessing content over virtual network'
@@ -1930,7 +2487,10 @@ spec:
                 description: 'VnetImagePullEnabled: To enable pulling image over Virtual Network'
                 type: boolean
               vnetRouteAllEnabled:
-                description: 'VnetRouteAllEnabled: Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.'
+                description: >-
+                  VnetRouteAllEnabled: Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network
+
+                  Security Groups and User Defined Routes applied.
                 type: boolean
             type: object
         type: object
@@ -1954,13 +2514,36 @@ spec:
     name: v1api20220301storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20220301.Site Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}'
+        description: >-
+          Storage version of v1api20220301.Site
+
+          Generator information:
+
+          - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -1970,10 +2553,16 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               clientAffinityEnabled:
                 type: boolean
@@ -1984,12 +2573,18 @@ spec:
               clientCertMode:
                 type: string
               cloningInfo:
-                description: Storage version of v1api20220301.CloningInfo Information needed for cloning operation.
+                description: >-
+                  Storage version of v1api20220301.CloningInfo
+
+                  Information needed for cloning operation.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   appSettingsOverrides:
                     additionalProperties:
@@ -2010,10 +2605,24 @@ spec:
                   sourceWebAppLocation:
                     type: string
                   sourceWebAppReference:
-                    description: 'SourceWebAppReference: ARM resource ID of the source app. App resource ID is of the form /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.'
+                    description: >-
+                      SourceWebAppReference: ARM resource ID of the source app. App resource ID is of the form
+
+                      /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots
+
+                      and
+
+                      /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for
+
+                      other slots.
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -2029,10 +2638,20 @@ spec:
                   trafficManagerProfileName:
                     type: string
                   trafficManagerProfileReference:
-                    description: 'TrafficManagerProfileReference: ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.'
+                    description: >-
+                      TrafficManagerProfileReference: ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager
+
+                      resource ID is of the form
+
+                      /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -2057,24 +2676,36 @@ spec:
               enabled:
                 type: boolean
               extendedLocation:
-                description: Storage version of v1api20220301.ExtendedLocation Extended Location.
+                description: >-
+                  Storage version of v1api20220301.ExtendedLocation
+
+                  Extended Location.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
                 type: object
               hostNameSslStates:
                 items:
-                  description: Storage version of v1api20220301.HostNameSslState SSL-enabled hostname.
+                  description: >-
+                    Storage version of v1api20220301.HostNameSslState
+
+                    SSL-enabled hostname.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     hostType:
                       type: string
@@ -2093,18 +2724,29 @@ spec:
               hostNamesDisabled:
                 type: boolean
               hostingEnvironmentProfile:
-                description: Storage version of v1api20220301.HostingEnvironmentProfile Specification for an App Service Environment to use for this resource.
+                description: >-
+                  Storage version of v1api20220301.HostingEnvironmentProfile
+
+                  Specification for an App Service Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID of the App Service Environment.'
                     properties:
                       armId:
-                        description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                        description: >-
+                          ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                          The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                          ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
                       group:
@@ -2123,29 +2765,46 @@ spec:
               hyperV:
                 type: boolean
               identity:
-                description: Storage version of v1api20220301.ManagedServiceIdentity Managed service identity.
+                description: >-
+                  Storage version of v1api20220301.ManagedServiceIdentity
+
+                  Managed service identity.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: Storage version of v1api20220301.UserAssignedIdentityDetails Information about the user assigned identity for the resource
+                      description: >-
+                        Storage version of v1api20220301.UserAssignedIdentityDetails
+
+                        Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -2172,7 +2831,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a resources.azure.com/ResourceGroup resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -2190,10 +2854,18 @@ spec:
               scmSiteAlsoStopped:
                 type: boolean
               serverFarmReference:
-                description: 'ServerFarmReference: Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".'
+                description: >-
+                  ServerFarmReference: Resource ID of the associated App Service plan, formatted as:
+
+                  "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -2207,12 +2879,18 @@ spec:
                     type: string
                 type: object
               siteConfig:
-                description: Storage version of v1api20220301.SiteConfig Configuration of an App Service app.
+                description: >-
+                  Storage version of v1api20220301.SiteConfig
+
+                  Configuration of an App Service app.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   acrUseManagedIdentityCreds:
                     type: boolean
@@ -2221,29 +2899,46 @@ spec:
                   alwaysOn:
                     type: boolean
                   apiDefinition:
-                    description: Storage version of v1api20220301.ApiDefinitionInfo Information about the formal API definition for the app.
+                    description: >-
+                      Storage version of v1api20220301.ApiDefinitionInfo
+
+                      Information about the formal API definition for the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       url:
                         type: string
                     type: object
                   apiManagementConfig:
-                    description: Storage version of v1api20220301.ApiManagementConfig Azure API management (APIM) configuration linked to the app.
+                    description: >-
+                      Storage version of v1api20220301.ApiManagementConfig
+
+                      Azure API management (APIM) configuration linked to the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       reference:
                         description: 'Reference: APIM-Api Identifier.'
                         properties:
                           armId:
-                            description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                            description: >-
+                              ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                              The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                              ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
                           group:
@@ -2261,12 +2956,18 @@ spec:
                     type: string
                   appSettings:
                     items:
-                      description: Storage version of v1api20220301.NameValuePair Name value pair.
+                      description: >-
+                        Storage version of v1api20220301.NameValuePair
+
+                        Name value pair.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
@@ -2277,30 +2978,50 @@ spec:
                   autoHealEnabled:
                     type: boolean
                   autoHealRules:
-                    description: Storage version of v1api20220301.AutoHealRules Rules that can be defined for auto-heal.
+                    description: >-
+                      Storage version of v1api20220301.AutoHealRules
+
+                      Rules that can be defined for auto-heal.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       actions:
-                        description: Storage version of v1api20220301.AutoHealActions Actions which to take by the auto-heal module when a rule is triggered.
+                        description: >-
+                          Storage version of v1api20220301.AutoHealActions
+
+                          Actions which to take by the auto-heal module when a rule is triggered.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           actionType:
                             type: string
                           customAction:
-                            description: Storage version of v1api20220301.AutoHealCustomAction Custom action to be executed when an auto heal rule is triggered.
+                            description: >-
+                              Storage version of v1api20220301.AutoHealCustomAction
+
+                              Custom action to be executed
+
+                              when an auto heal rule is triggered.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               exe:
                                 type: string
@@ -2311,22 +3032,34 @@ spec:
                             type: string
                         type: object
                       triggers:
-                        description: Storage version of v1api20220301.AutoHealTriggers Triggers for auto-heal.
+                        description: >-
+                          Storage version of v1api20220301.AutoHealTriggers
+
+                          Triggers for auto-heal.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           privateBytesInKB:
                             type: integer
                           requests:
-                            description: Storage version of v1api20220301.RequestsBasedTrigger Trigger based on total requests.
+                            description: >-
+                              Storage version of v1api20220301.RequestsBasedTrigger
+
+                              Trigger based on total requests.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               count:
                                 type: integer
@@ -2334,12 +3067,18 @@ spec:
                                 type: string
                             type: object
                           slowRequests:
-                            description: Storage version of v1api20220301.SlowRequestsBasedTrigger Trigger based on request execution time.
+                            description: >-
+                              Storage version of v1api20220301.SlowRequestsBasedTrigger
+
+                              Trigger based on request execution time.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               count:
                                 type: integer
@@ -2352,12 +3091,18 @@ spec:
                             type: object
                           slowRequestsWithPath:
                             items:
-                              description: Storage version of v1api20220301.SlowRequestsBasedTrigger Trigger based on request execution time.
+                              description: >-
+                                Storage version of v1api20220301.SlowRequestsBasedTrigger
+
+                                Trigger based on request execution time.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -2371,12 +3116,18 @@ spec:
                             type: array
                           statusCodes:
                             items:
-                              description: Storage version of v1api20220301.StatusCodesBasedTrigger Trigger based on status code.
+                              description: >-
+                                Storage version of v1api20220301.StatusCodesBasedTrigger
+
+                                Trigger based on status code.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -2394,12 +3145,18 @@ spec:
                             type: array
                           statusCodesRange:
                             items:
-                              description: Storage version of v1api20220301.StatusCodesRangeBasedTrigger Trigger based on range of status codes.
+                              description: >-
+                                Storage version of v1api20220301.StatusCodesRangeBasedTrigger
+
+                                Trigger based on range of status codes.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -2417,21 +3174,33 @@ spec:
                     type: string
                   azureStorageAccounts:
                     additionalProperties:
-                      description: Storage version of v1api20220301.AzureStorageInfoValue Azure Files or Blob Storage access information value for dictionary storage.
+                      description: >-
+                        Storage version of v1api20220301.AzureStorageInfoValue
+
+                        Azure Files or Blob Storage access information value for dictionary storage.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         accessKey:
-                          description: SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.
+                          description: >-
+                            SecretReference is a reference to a Kubernetes secret and key in the same namespace as
+
+                            the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes secret being referenced
                               type: string
                             name:
-                              description: Name is the name of the Kubernetes secret being referenced. The secret must be in the same namespace as the resource
+                              description: >-
+                                Name is the name of the Kubernetes secret being referenced.
+
+                                The secret must be in the same namespace as the resource
                               type: string
                           required:
                           - key
@@ -2449,12 +3218,18 @@ spec:
                     type: object
                   connectionStrings:
                     items:
-                      description: Storage version of v1api20220301.ConnStringInfo Database connection string information.
+                      description: >-
+                        Storage version of v1api20220301.ConnStringInfo
+
+                        Database connection string information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         connectionString:
                           type: string
@@ -2465,12 +3240,18 @@ spec:
                       type: object
                     type: array
                   cors:
-                    description: Storage version of v1api20220301.CorsSettings Cross-Origin Resource Sharing (CORS) settings for the app.
+                    description: >-
+                      Storage version of v1api20220301.CorsSettings
+
+                      Cross-Origin Resource Sharing (CORS) settings for the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       allowedOrigins:
                         items:
@@ -2488,21 +3269,35 @@ spec:
                   documentRoot:
                     type: string
                   experiments:
-                    description: Storage version of v1api20220301.Experiments Routing rules in production experiments.
+                    description: >-
+                      Storage version of v1api20220301.Experiments
+
+                      Routing rules in production experiments.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       rampUpRules:
                         items:
-                          description: Storage version of v1api20220301.RampUpRule Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
+                          description: >-
+                            Storage version of v1api20220301.RampUpRule
+
+                            Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change
+
+                            routing % based on performance.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             actionHostName:
                               type: string
@@ -2531,12 +3326,22 @@ spec:
                     type: boolean
                   handlerMappings:
                     items:
-                      description: Storage version of v1api20220301.HandlerMapping The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
+                      description: >-
+                        Storage version of v1api20220301.HandlerMapping
+
+                        The IIS handler mappings used to define which handler processes HTTP requests with certain extension.
+
+                        For example, it
+
+                        is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         arguments:
                           type: string
@@ -2554,12 +3359,18 @@ spec:
                     type: boolean
                   ipSecurityRestrictions:
                     items:
-                      description: Storage version of v1api20220301.IpSecurityRestriction IP security restriction on an app.
+                      description: >-
+                        Storage version of v1api20220301.IpSecurityRestriction
+
+                        IP security restriction on an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         action:
                           type: string
@@ -2587,7 +3398,12 @@ spec:
                           description: 'VnetSubnetResourceReference: Virtual network resource id'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -2613,12 +3429,18 @@ spec:
                   keyVaultReferenceIdentity:
                     type: string
                   limits:
-                    description: Storage version of v1api20220301.SiteLimits Metric limits set on an app.
+                    description: >-
+                      Storage version of v1api20220301.SiteLimits
+
+                      Metric limits set on an app.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       maxDiskSizeInMb:
                         type: integer
@@ -2660,12 +3482,18 @@ spec:
                   publishingUsername:
                     type: string
                   push:
-                    description: Storage version of v1api20220301.PushSettings Push settings for the App.
+                    description: >-
+                      Storage version of v1api20220301.PushSettings
+
+                      Push settings for the App.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       dynamicTagsJson:
                         type: string
@@ -2690,12 +3518,18 @@ spec:
                     type: string
                   scmIpSecurityRestrictions:
                     items:
-                      description: Storage version of v1api20220301.IpSecurityRestriction IP security restriction on an app.
+                      description: >-
+                        Storage version of v1api20220301.IpSecurityRestriction
+
+                        IP security restriction on an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         action:
                           type: string
@@ -2723,7 +3557,12 @@ spec:
                           description: 'VnetSubnetResourceReference: Virtual network resource id'
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -2752,12 +3591,18 @@ spec:
                     type: boolean
                   virtualApplications:
                     items:
-                      description: Storage version of v1api20220301.VirtualApplication Virtual application in an app.
+                      description: >-
+                        Storage version of v1api20220301.VirtualApplication
+
+                        Virtual application in an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         physicalPath:
                           type: string
@@ -2765,12 +3610,18 @@ spec:
                           type: boolean
                         virtualDirectories:
                           items:
-                            description: Storage version of v1api20220301.VirtualDirectory Directory for virtual application.
+                            description: >-
+                              Storage version of v1api20220301.VirtualDirectory
+
+                              Directory for virtual application.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               physicalPath:
                                 type: string
@@ -2804,10 +3655,22 @@ spec:
                   type: string
                 type: object
               virtualNetworkSubnetReference:
-                description: 'VirtualNetworkSubnetReference: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET Integration. This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}'
+                description: >-
+                  VirtualNetworkSubnetReference: Azure Resource Manager ID of the Virtual network and subnet to be joined by Regional VNET
+
+                  Integration.
+
+                  This must be of the form
+
+                  /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -2830,12 +3693,18 @@ spec:
             - owner
             type: object
           status:
-            description: Storage version of v1api20220301.Site_STATUS A web app, a mobile app backend, or an API app.
+            description: >-
+              Storage version of v1api20220301.Site_STATUS
+
+              A web app, a mobile app backend, or an API app.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               availabilityState:
                 type: string
@@ -2848,12 +3717,18 @@ spec:
               clientCertMode:
                 type: string
               cloningInfo:
-                description: Storage version of v1api20220301.CloningInfo_STATUS Information needed for cloning operation.
+                description: >-
+                  Storage version of v1api20220301.CloningInfo_STATUS
+
+                  Information needed for cloning operation.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   appSettingsOverrides:
                     additionalProperties:
@@ -2892,14 +3767,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -2929,12 +3819,18 @@ spec:
                   type: string
                 type: array
               extendedLocation:
-                description: Storage version of v1api20220301.ExtendedLocation_STATUS Extended Location.
+                description: >-
+                  Storage version of v1api20220301.ExtendedLocation_STATUS
+
+                  Extended Location.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
                     type: string
@@ -2943,12 +3839,18 @@ spec:
                 type: object
               hostNameSslStates:
                 items:
-                  description: Storage version of v1api20220301.HostNameSslState_STATUS SSL-enabled hostname.
+                  description: >-
+                    Storage version of v1api20220301.HostNameSslState_STATUS
+
+                    SSL-enabled hostname.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     hostType:
                       type: string
@@ -2971,12 +3873,18 @@ spec:
               hostNamesDisabled:
                 type: boolean
               hostingEnvironmentProfile:
-                description: Storage version of v1api20220301.HostingEnvironmentProfile_STATUS Specification for an App Service Environment to use for this resource.
+                description: >-
+                  Storage version of v1api20220301.HostingEnvironmentProfile_STATUS
+
+                  Specification for an App Service Environment to use for this resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
                     type: string
@@ -2992,12 +3900,18 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1api20220301.ManagedServiceIdentity_STATUS Managed service identity.
+                description: >-
+                  Storage version of v1api20220301.ManagedServiceIdentity_STATUS
+
+                  Managed service identity.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
                     type: string
@@ -3007,12 +3921,18 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1api20220301.UserAssignedIdentity_STATUS User Assigned identity.
+                      description: >-
+                        Storage version of v1api20220301.UserAssignedIdentity_STATUS
+
+                        User Assigned identity.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
                           type: string
@@ -3058,12 +3978,18 @@ spec:
               serverFarmId:
                 type: string
               siteConfig:
-                description: Storage version of v1api20220301.SiteConfig_STATUS Configuration of an App Service app.
+                description: >-
+                  Storage version of v1api20220301.SiteConfig_STATUS
+
+                  Configuration of an App Service app.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   acrUseManagedIdentityCreds:
                     type: boolean
@@ -3072,23 +3998,35 @@ spec:
                   alwaysOn:
                     type: boolean
                   apiDefinition:
-                    description: Storage version of v1api20220301.ApiDefinitionInfo_STATUS Information about the formal API definition for the app.
+                    description: >-
+                      Storage version of v1api20220301.ApiDefinitionInfo_STATUS
+
+                      Information about the formal API definition for the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       url:
                         type: string
                     type: object
                   apiManagementConfig:
-                    description: Storage version of v1api20220301.ApiManagementConfig_STATUS Azure API management (APIM) configuration linked to the app.
+                    description: >-
+                      Storage version of v1api20220301.ApiManagementConfig_STATUS
+
+                      Azure API management (APIM) configuration linked to the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       id:
                         type: string
@@ -3097,12 +4035,18 @@ spec:
                     type: string
                   appSettings:
                     items:
-                      description: Storage version of v1api20220301.NameValuePair_STATUS Name value pair.
+                      description: >-
+                        Storage version of v1api20220301.NameValuePair_STATUS
+
+                        Name value pair.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
@@ -3113,30 +4057,50 @@ spec:
                   autoHealEnabled:
                     type: boolean
                   autoHealRules:
-                    description: Storage version of v1api20220301.AutoHealRules_STATUS Rules that can be defined for auto-heal.
+                    description: >-
+                      Storage version of v1api20220301.AutoHealRules_STATUS
+
+                      Rules that can be defined for auto-heal.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       actions:
-                        description: Storage version of v1api20220301.AutoHealActions_STATUS Actions which to take by the auto-heal module when a rule is triggered.
+                        description: >-
+                          Storage version of v1api20220301.AutoHealActions_STATUS
+
+                          Actions which to take by the auto-heal module when a rule is triggered.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           actionType:
                             type: string
                           customAction:
-                            description: Storage version of v1api20220301.AutoHealCustomAction_STATUS Custom action to be executed when an auto heal rule is triggered.
+                            description: >-
+                              Storage version of v1api20220301.AutoHealCustomAction_STATUS
+
+                              Custom action to be executed
+
+                              when an auto heal rule is triggered.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               exe:
                                 type: string
@@ -3147,22 +4111,34 @@ spec:
                             type: string
                         type: object
                       triggers:
-                        description: Storage version of v1api20220301.AutoHealTriggers_STATUS Triggers for auto-heal.
+                        description: >-
+                          Storage version of v1api20220301.AutoHealTriggers_STATUS
+
+                          Triggers for auto-heal.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                            description: >-
+                              PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                              resources, allowing for full fidelity round trip conversions
                             type: object
                           privateBytesInKB:
                             type: integer
                           requests:
-                            description: Storage version of v1api20220301.RequestsBasedTrigger_STATUS Trigger based on total requests.
+                            description: >-
+                              Storage version of v1api20220301.RequestsBasedTrigger_STATUS
+
+                              Trigger based on total requests.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               count:
                                 type: integer
@@ -3170,12 +4146,18 @@ spec:
                                 type: string
                             type: object
                           slowRequests:
-                            description: Storage version of v1api20220301.SlowRequestsBasedTrigger_STATUS Trigger based on request execution time.
+                            description: >-
+                              Storage version of v1api20220301.SlowRequestsBasedTrigger_STATUS
+
+                              Trigger based on request execution time.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               count:
                                 type: integer
@@ -3188,12 +4170,18 @@ spec:
                             type: object
                           slowRequestsWithPath:
                             items:
-                              description: Storage version of v1api20220301.SlowRequestsBasedTrigger_STATUS Trigger based on request execution time.
+                              description: >-
+                                Storage version of v1api20220301.SlowRequestsBasedTrigger_STATUS
+
+                                Trigger based on request execution time.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -3207,12 +4195,18 @@ spec:
                             type: array
                           statusCodes:
                             items:
-                              description: Storage version of v1api20220301.StatusCodesBasedTrigger_STATUS Trigger based on status code.
+                              description: >-
+                                Storage version of v1api20220301.StatusCodesBasedTrigger_STATUS
+
+                                Trigger based on status code.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -3230,12 +4224,18 @@ spec:
                             type: array
                           statusCodesRange:
                             items:
-                              description: Storage version of v1api20220301.StatusCodesRangeBasedTrigger_STATUS Trigger based on range of status codes.
+                              description: >-
+                                Storage version of v1api20220301.StatusCodesRangeBasedTrigger_STATUS
+
+                                Trigger based on range of status codes.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 count:
                                   type: integer
@@ -3253,12 +4253,18 @@ spec:
                     type: string
                   azureStorageAccounts:
                     additionalProperties:
-                      description: Storage version of v1api20220301.AzureStorageInfoValue_STATUS Azure Files or Blob Storage access information value for dictionary storage.
+                      description: >-
+                        Storage version of v1api20220301.AzureStorageInfoValue_STATUS
+
+                        Azure Files or Blob Storage access information value for dictionary storage.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         accountName:
                           type: string
@@ -3274,12 +4280,18 @@ spec:
                     type: object
                   connectionStrings:
                     items:
-                      description: Storage version of v1api20220301.ConnStringInfo_STATUS Database connection string information.
+                      description: >-
+                        Storage version of v1api20220301.ConnStringInfo_STATUS
+
+                        Database connection string information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         connectionString:
                           type: string
@@ -3290,12 +4302,18 @@ spec:
                       type: object
                     type: array
                   cors:
-                    description: Storage version of v1api20220301.CorsSettings_STATUS Cross-Origin Resource Sharing (CORS) settings for the app.
+                    description: >-
+                      Storage version of v1api20220301.CorsSettings_STATUS
+
+                      Cross-Origin Resource Sharing (CORS) settings for the app.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       allowedOrigins:
                         items:
@@ -3313,21 +4331,35 @@ spec:
                   documentRoot:
                     type: string
                   experiments:
-                    description: Storage version of v1api20220301.Experiments_STATUS Routing rules in production experiments.
+                    description: >-
+                      Storage version of v1api20220301.Experiments_STATUS
+
+                      Routing rules in production experiments.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       rampUpRules:
                         items:
-                          description: Storage version of v1api20220301.RampUpRule_STATUS Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
+                          description: >-
+                            Storage version of v1api20220301.RampUpRule_STATUS
+
+                            Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change
+
+                            routing % based on performance.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             actionHostName:
                               type: string
@@ -3356,12 +4388,22 @@ spec:
                     type: boolean
                   handlerMappings:
                     items:
-                      description: Storage version of v1api20220301.HandlerMapping_STATUS The IIS handler mappings used to define which handler processes HTTP requests with certain extension. For example, it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
+                      description: >-
+                        Storage version of v1api20220301.HandlerMapping_STATUS
+
+                        The IIS handler mappings used to define which handler processes HTTP requests with certain extension.
+
+                        For example, it
+
+                        is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         arguments:
                           type: string
@@ -3379,12 +4421,18 @@ spec:
                     type: boolean
                   ipSecurityRestrictions:
                     items:
-                      description: Storage version of v1api20220301.IpSecurityRestriction_STATUS IP security restriction on an app.
+                      description: >-
+                        Storage version of v1api20220301.IpSecurityRestriction_STATUS
+
+                        IP security restriction on an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         action:
                           type: string
@@ -3423,12 +4471,18 @@ spec:
                   keyVaultReferenceIdentity:
                     type: string
                   limits:
-                    description: Storage version of v1api20220301.SiteLimits_STATUS Metric limits set on an app.
+                    description: >-
+                      Storage version of v1api20220301.SiteLimits_STATUS
+
+                      Metric limits set on an app.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       maxDiskSizeInMb:
                         type: integer
@@ -3446,12 +4500,18 @@ spec:
                   logsDirectorySizeLimit:
                     type: integer
                   machineKey:
-                    description: Storage version of v1api20220301.SiteMachineKey_STATUS MachineKey of an app.
+                    description: >-
+                      Storage version of v1api20220301.SiteMachineKey_STATUS
+
+                      MachineKey of an app.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       decryption:
                         type: string
@@ -3487,12 +4547,18 @@ spec:
                   publishingUsername:
                     type: string
                   push:
-                    description: Storage version of v1api20220301.PushSettings_STATUS Push settings for the App.
+                    description: >-
+                      Storage version of v1api20220301.PushSettings_STATUS
+
+                      Push settings for the App.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                        description: >-
+                          PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                          resources, allowing for full fidelity round trip conversions
                         type: object
                       dynamicTagsJson:
                         type: string
@@ -3523,12 +4589,18 @@ spec:
                     type: string
                   scmIpSecurityRestrictions:
                     items:
-                      description: Storage version of v1api20220301.IpSecurityRestriction_STATUS IP security restriction on an app.
+                      description: >-
+                        Storage version of v1api20220301.IpSecurityRestriction_STATUS
+
+                        IP security restriction on an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         action:
                           type: string
@@ -3570,12 +4642,18 @@ spec:
                     type: boolean
                   virtualApplications:
                     items:
-                      description: Storage version of v1api20220301.VirtualApplication_STATUS Virtual application in an app.
+                      description: >-
+                        Storage version of v1api20220301.VirtualApplication_STATUS
+
+                        Virtual application in an app.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         physicalPath:
                           type: string
@@ -3583,12 +4661,18 @@ spec:
                           type: boolean
                         virtualDirectories:
                           items:
-                            description: Storage version of v1api20220301.VirtualDirectory_STATUS Directory for virtual application.
+                            description: >-
+                              Storage version of v1api20220301.VirtualDirectory_STATUS
+
+                              Directory for virtual application.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
                                 type: object
                               physicalPath:
                                 type: string
@@ -3616,12 +4700,18 @@ spec:
                     type: integer
                 type: object
               slotSwapStatus:
-                description: Storage version of v1api20220301.SlotSwapStatus_STATUS The status of the last successful slot swap operation.
+                description: >-
+                  Storage version of v1api20220301.SlotSwapStatus_STATUS
+
+                  The status of the last successful slot swap operation.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   destinationSlotName:
                     type: string

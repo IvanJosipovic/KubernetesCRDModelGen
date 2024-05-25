@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: rules.cdn.azure.com
 spec:
   conversion:
@@ -45,13 +45,34 @@ spec:
     name: v1api20230501
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}/rules/{ruleName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}/rules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -227,7 +248,12 @@ spec:
                                   description: 'Reference: Resource ID.'
                                   properties:
                                     armId:
-                                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                      description: >-
+                                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                       type: string
                                     group:
@@ -265,7 +291,10 @@ spec:
                           description: 'Parameters: Defines the parameters for the action.'
                           properties:
                             cacheConfiguration:
-                              description: 'CacheConfiguration: The caching configuration associated with this rule. To disable caching, do not provide a cacheConfiguration object.'
+                              description: >-
+                                CacheConfiguration: The caching configuration associated with this rule. To disable caching, do not provide a
+
+                                cacheConfiguration object.
                               properties:
                                 cacheBehavior:
                                   description: 'CacheBehavior: Caching behavior for the requests'
@@ -278,7 +307,12 @@ spec:
                                   description: 'CacheDuration: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss'
                                   type: string
                                 isCompressionEnabled:
-                                  description: "IsCompressionEnabled: Indicates whether content compression is enabled. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB."
+                                  description: >-
+                                    IsCompressionEnabled: Indicates whether content compression is enabled. If compression is enabled, content will be
+
+                                    served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when
+
+                                    requested content is smaller than 1 byte or larger than 1 MB.
                                   enum:
                                   - Disabled
                                   - Enabled
@@ -287,7 +321,12 @@ spec:
                                   description: 'QueryParameters: query parameters to include or exclude (comma separated).'
                                   type: string
                                 queryStringCachingBehavior:
-                                  description: 'QueryStringCachingBehavior: Defines how Frontdoor caches requests that include query strings. You can ignore any query strings when caching, ignore specific query strings, cache every request with a unique URL, or cache specific query strings.'
+                                  description: >-
+                                    QueryStringCachingBehavior: Defines how Frontdoor caches requests that include query strings. You can ignore any query
+
+                                    strings when caching, ignore specific query strings, cache every request with a unique URL, or cache specific query
+
+                                    strings.
                                   enum:
                                   - IgnoreQueryString
                                   - IgnoreSpecifiedQueryStrings
@@ -296,7 +335,10 @@ spec:
                                   type: string
                               type: object
                             originGroupOverride:
-                              description: 'OriginGroupOverride: A reference to the origin group override configuration. Leave empty to use the default origin group on route.'
+                              description: >-
+                                OriginGroupOverride: A reference to the origin group override configuration. Leave empty to use the default origin group
+
+                                on route.
                               properties:
                                 forwardingProtocol:
                                   description: 'ForwardingProtocol: Protocol this rule will use when forwarding traffic to backends.'
@@ -312,7 +354,12 @@ spec:
                                       description: 'Reference: Resource ID.'
                                       properties:
                                         armId:
-                                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                          description: >-
+                                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                           type: string
                                         group:
@@ -350,16 +397,27 @@ spec:
                           description: 'Parameters: Defines the parameters for the action.'
                           properties:
                             customFragment:
-                              description: 'CustomFragment: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.'
+                              description: >-
+                                CustomFragment: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include
+
+                                the #.
                               type: string
                             customHostname:
                               description: 'CustomHostname: Host to redirect. Leave empty to use the incoming host as the destination host.'
                               type: string
                             customPath:
-                              description: 'CustomPath: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.'
+                              description: >-
+                                CustomPath: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path
+
+                                as destination path.
                               type: string
                             customQueryString:
-                              description: 'CustomQueryString: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.'
+                              description: >-
+                                CustomQueryString: The set of query strings to be placed in the redirect URL. Setting this value would replace any
+
+                                existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format.
+
+                                ? and & will be added automatically so do not include them.
                               type: string
                             destinationProtocol:
                               description: 'DestinationProtocol: Protocol to use for the redirect. The default value is MatchRequest'
@@ -406,7 +464,10 @@ spec:
                               description: 'PreserveUnmatchedPath: Whether to preserve unmatched path. Default value is true.'
                               type: boolean
                             sourcePattern:
-                              description: 'SourcePattern: define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.'
+                              description: >-
+                                SourcePattern: define a request URI pattern that identifies the type of requests that may be rewritten. If value is
+
+                                blank, all strings are matched.
                               type: string
                             typeName:
                               enum:
@@ -471,19 +532,35 @@ spec:
                   type: object
                 type: array
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               matchProcessingBehavior:
-                description: 'MatchProcessingBehavior: If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.'
+                description: >-
+                  MatchProcessingBehavior: If this rule is a match should the rules engine continue running the remaining rules or stop.
+
+                  If not present, defaults to Continue.
                 enum:
                 - Continue
                 - Stop
                 type: string
               order:
-                description: 'Order: The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.'
+                description: >-
+                  Order: The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a
+
+                  lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not
+
+                  require any condition and actions listed in it will always be applied.
                 type: integer
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cdn.azure.com/RuleSet resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a cdn.azure.com/RuleSet resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -906,7 +983,10 @@ spec:
                           description: 'Parameters: Defines the parameters for the condition.'
                           properties:
                             matchValues:
-                              description: 'MatchValues: Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.'
+                              description: >-
+                                MatchValues: Match values to match against. The operator will apply to each value in here with OR semantics. If any of
+
+                                them match the variable with the given operator this match condition is considered a match.
                               items:
                                 type: string
                               type: array
@@ -1695,7 +1775,10 @@ spec:
                           description: 'Parameters: Defines the parameters for the action.'
                           properties:
                             cacheConfiguration:
-                              description: 'CacheConfiguration: The caching configuration associated with this rule. To disable caching, do not provide a cacheConfiguration object.'
+                              description: >-
+                                CacheConfiguration: The caching configuration associated with this rule. To disable caching, do not provide a
+
+                                cacheConfiguration object.
                               properties:
                                 cacheBehavior:
                                   description: 'CacheBehavior: Caching behavior for the requests'
@@ -1704,17 +1787,30 @@ spec:
                                   description: 'CacheDuration: The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss'
                                   type: string
                                 isCompressionEnabled:
-                                  description: "IsCompressionEnabled: Indicates whether content compression is enabled. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB."
+                                  description: >-
+                                    IsCompressionEnabled: Indicates whether content compression is enabled. If compression is enabled, content will be
+
+                                    served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when
+
+                                    requested content is smaller than 1 byte or larger than 1 MB.
                                   type: string
                                 queryParameters:
                                   description: 'QueryParameters: query parameters to include or exclude (comma separated).'
                                   type: string
                                 queryStringCachingBehavior:
-                                  description: 'QueryStringCachingBehavior: Defines how Frontdoor caches requests that include query strings. You can ignore any query strings when caching, ignore specific query strings, cache every request with a unique URL, or cache specific query strings.'
+                                  description: >-
+                                    QueryStringCachingBehavior: Defines how Frontdoor caches requests that include query strings. You can ignore any query
+
+                                    strings when caching, ignore specific query strings, cache every request with a unique URL, or cache specific query
+
+                                    strings.
                                   type: string
                               type: object
                             originGroupOverride:
-                              description: 'OriginGroupOverride: A reference to the origin group override configuration. Leave empty to use the default origin group on route.'
+                              description: >-
+                                OriginGroupOverride: A reference to the origin group override configuration. Leave empty to use the default origin group
+
+                                on route.
                               properties:
                                 forwardingProtocol:
                                   description: 'ForwardingProtocol: Protocol this rule will use when forwarding traffic to backends.'
@@ -1741,16 +1837,27 @@ spec:
                           description: 'Parameters: Defines the parameters for the action.'
                           properties:
                             customFragment:
-                              description: 'CustomFragment: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.'
+                              description: >-
+                                CustomFragment: Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include
+
+                                the #.
                               type: string
                             customHostname:
                               description: 'CustomHostname: Host to redirect. Leave empty to use the incoming host as the destination host.'
                               type: string
                             customPath:
-                              description: 'CustomPath: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.'
+                              description: >-
+                                CustomPath: The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path
+
+                                as destination path.
                               type: string
                             customQueryString:
-                              description: 'CustomQueryString: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.'
+                              description: >-
+                                CustomQueryString: The set of query strings to be placed in the redirect URL. Setting this value would replace any
+
+                                existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format.
+
+                                ? and & will be added automatically so do not include them.
                               type: string
                             destinationProtocol:
                               description: 'DestinationProtocol: Protocol to use for the redirect. The default value is MatchRequest'
@@ -1778,7 +1885,10 @@ spec:
                               description: 'PreserveUnmatchedPath: Whether to preserve unmatched path. Default value is true.'
                               type: boolean
                             sourcePattern:
-                              description: 'SourcePattern: define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.'
+                              description: >-
+                                SourcePattern: define a request URI pattern that identifies the type of requests that may be rewritten. If value is
+
+                                blank, all strings are matched.
                               type: string
                             typeName:
                               type: string
@@ -1828,14 +1938,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -1856,13 +1981,21 @@ spec:
                 description: 'Id: Resource ID.'
                 type: string
               matchProcessingBehavior:
-                description: 'MatchProcessingBehavior: If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.'
+                description: >-
+                  MatchProcessingBehavior: If this rule is a match should the rules engine continue running the remaining rules or stop.
+
+                  If not present, defaults to Continue.
                 type: string
               name:
                 description: 'Name: Resource name.'
                 type: string
               order:
-                description: 'Order: The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.'
+                description: >-
+                  Order: The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a
+
+                  lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not
+
+                  require any condition and actions listed in it will always be applied.
                 type: integer
               provisioningState:
                 description: 'ProvisioningState: Provisioning status'
@@ -2101,7 +2234,10 @@ spec:
                           description: 'Parameters: Defines the parameters for the condition.'
                           properties:
                             matchValues:
-                              description: 'MatchValues: Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.'
+                              description: >-
+                                MatchValues: Match values to match against. The operator will apply to each value in here with OR semantics. If any of
+
+                                them match the variable with the given operator this match condition is considered a match.
                               items:
                                 type: string
                               type: array
@@ -2504,13 +2640,36 @@ spec:
     name: v1api20230501storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20230501.Rule Generator information: - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}/rules/{ruleName}'
+        description: >-
+          Storage version of v1api20230501.Rule
+
+          Generator information:
+
+          - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/ruleSets/{ruleSetName}/rules/{ruleName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -2520,16 +2679,25 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
                 items:
-                  description: Storage version of v1api20230501.DeliveryRuleAction An action for the delivery rule.
+                  description: >-
+                    Storage version of v1api20230501.DeliveryRuleAction
+
+                    An action for the delivery rule.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     cacheExpiration:
                       description: Storage version of v1api20230501.DeliveryRuleCacheExpirationAction
@@ -2537,17 +2705,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.CacheExpirationActionParameters Defines the parameters for the cache expiration action.
+                          description: >-
+                            Storage version of v1api20230501.CacheExpirationActionParameters
+
+                            Defines the parameters for the cache expiration action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             cacheBehavior:
                               type: string
@@ -2565,17 +2742,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.CacheKeyQueryStringActionParameters Defines the parameters for the cache-key query string action.
+                          description: >-
+                            Storage version of v1api20230501.CacheKeyQueryStringActionParameters
+
+                            Defines the parameters for the cache-key query string action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             queryParameters:
                               type: string
@@ -2591,17 +2777,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.HeaderActionParameters Defines the parameters for the request header action.
+                          description: >-
+                            Storage version of v1api20230501.HeaderActionParameters
+
+                            Defines the parameters for the request header action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             headerAction:
                               type: string
@@ -2619,17 +2814,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.HeaderActionParameters Defines the parameters for the request header action.
+                          description: >-
+                            Storage version of v1api20230501.HeaderActionParameters
+
+                            Defines the parameters for the request header action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             headerAction:
                               type: string
@@ -2647,31 +2851,51 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.OriginGroupOverrideActionParameters Defines the parameters for the origin group override action.
+                          description: >-
+                            Storage version of v1api20230501.OriginGroupOverrideActionParameters
+
+                            Defines the parameters for the origin group override action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             originGroup:
-                              description: Storage version of v1api20230501.ResourceReference Reference to another resource.
+                              description: >-
+                                Storage version of v1api20230501.ResourceReference
+
+                                Reference to another resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 reference:
                                   description: 'Reference: Resource ID.'
                                   properties:
                                     armId:
-                                      description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                      description: >-
+                                        ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                        The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                        ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                       pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                       type: string
                                     group:
@@ -2695,25 +2919,40 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RouteConfigurationOverrideActionParameters Defines the parameters for the route configuration override action.
+                          description: >-
+                            Storage version of v1api20230501.RouteConfigurationOverrideActionParameters
+
+                            Defines the parameters for the route configuration override action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             cacheConfiguration:
-                              description: Storage version of v1api20230501.CacheConfiguration Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
+                              description: >-
+                                Storage version of v1api20230501.CacheConfiguration
+
+                                Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 cacheBehavior:
                                   type: string
@@ -2727,28 +2966,45 @@ spec:
                                   type: string
                               type: object
                             originGroupOverride:
-                              description: Storage version of v1api20230501.OriginGroupOverride Defines the parameters for the origin group override configuration.
+                              description: >-
+                                Storage version of v1api20230501.OriginGroupOverride
+
+                                Defines the parameters for the origin group override configuration.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 forwardingProtocol:
                                   type: string
                                 originGroup:
-                                  description: Storage version of v1api20230501.ResourceReference Reference to another resource.
+                                  description: >-
+                                    Storage version of v1api20230501.ResourceReference
+
+                                    Reference to another resource.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      description: >-
+                                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                        resources, allowing for full fidelity round trip conversions
                                       type: object
                                     reference:
                                       description: 'Reference: Resource ID.'
                                       properties:
                                         armId:
-                                          description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                          description: >-
+                                            ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                            The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                            ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                           type: string
                                         group:
@@ -2773,17 +3029,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlRedirectActionParameters Defines the parameters for the url redirect action.
+                          description: >-
+                            Storage version of v1api20230501.UrlRedirectActionParameters
+
+                            Defines the parameters for the url redirect action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             customFragment:
                               type: string
@@ -2807,17 +3072,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlRewriteActionParameters Defines the parameters for the url rewrite action.
+                          description: >-
+                            Storage version of v1api20230501.UrlRewriteActionParameters
+
+                            Defines the parameters for the url rewrite action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             destination:
                               type: string
@@ -2835,28 +3109,43 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlSigningActionParameters Defines the parameters for the Url Signing action.
+                          description: >-
+                            Storage version of v1api20230501.UrlSigningActionParameters
+
+                            Defines the parameters for the Url Signing action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             algorithm:
                               type: string
                             parameterNameOverride:
                               items:
-                                description: Storage version of v1api20230501.UrlSigningParamIdentifier Defines how to identify a parameter for a specific purpose e.g. expires
+                                description: >-
+                                  Storage version of v1api20230501.UrlSigningParamIdentifier
+
+                                  Defines how to identify a parameter for a specific purpose e.g. expires
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                    description: >-
+                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                      resources, allowing for full fidelity round trip conversions
                                     type: object
                                   paramIndicator:
                                     type: string
@@ -2871,7 +3160,10 @@ spec:
                   type: object
                 type: array
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               matchProcessingBehavior:
                 type: string
@@ -2880,7 +3172,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a cdn.azure.com/RuleSet resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a cdn.azure.com/RuleSet resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -2891,12 +3188,18 @@ spec:
                 type: object
               ruleconditions:
                 items:
-                  description: Storage version of v1api20230501.DeliveryRuleCondition A condition for the delivery rule.
+                  description: >-
+                    Storage version of v1api20230501.DeliveryRuleCondition
+
+                    A condition for the delivery rule.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     clientPort:
                       description: Storage version of v1api20230501.DeliveryRuleClientPortCondition
@@ -2904,17 +3207,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.ClientPortMatchConditionParameters Defines the parameters for ClientPort match conditions
+                          description: >-
+                            Storage version of v1api20230501.ClientPortMatchConditionParameters
+
+                            Defines the parameters for ClientPort match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -2938,17 +3250,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.CookiesMatchConditionParameters Defines the parameters for Cookies match conditions
+                          description: >-
+                            Storage version of v1api20230501.CookiesMatchConditionParameters
+
+                            Defines the parameters for Cookies match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -2974,17 +3295,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.HostNameMatchConditionParameters Defines the parameters for HostName match conditions
+                          description: >-
+                            Storage version of v1api20230501.HostNameMatchConditionParameters
+
+                            Defines the parameters for HostName match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3008,17 +3338,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.HttpVersionMatchConditionParameters Defines the parameters for HttpVersion match conditions
+                          description: >-
+                            Storage version of v1api20230501.HttpVersionMatchConditionParameters
+
+                            Defines the parameters for HttpVersion match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3042,17 +3381,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.IsDeviceMatchConditionParameters Defines the parameters for IsDevice match conditions
+                          description: >-
+                            Storage version of v1api20230501.IsDeviceMatchConditionParameters
+
+                            Defines the parameters for IsDevice match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3076,17 +3424,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.PostArgsMatchConditionParameters Defines the parameters for PostArgs match conditions
+                          description: >-
+                            Storage version of v1api20230501.PostArgsMatchConditionParameters
+
+                            Defines the parameters for PostArgs match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3112,17 +3469,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.QueryStringMatchConditionParameters Defines the parameters for QueryString match conditions
+                          description: >-
+                            Storage version of v1api20230501.QueryStringMatchConditionParameters
+
+                            Defines the parameters for QueryString match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3146,17 +3512,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RemoteAddressMatchConditionParameters Defines the parameters for RemoteAddress match conditions
+                          description: >-
+                            Storage version of v1api20230501.RemoteAddressMatchConditionParameters
+
+                            Defines the parameters for RemoteAddress match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3180,17 +3555,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestBodyMatchConditionParameters Defines the parameters for RequestBody match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestBodyMatchConditionParameters
+
+                            Defines the parameters for RequestBody match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3214,17 +3598,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestHeaderMatchConditionParameters Defines the parameters for RequestHeader match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestHeaderMatchConditionParameters
+
+                            Defines the parameters for RequestHeader match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3250,17 +3643,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestMethodMatchConditionParameters Defines the parameters for RequestMethod match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestMethodMatchConditionParameters
+
+                            Defines the parameters for RequestMethod match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3284,17 +3686,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestSchemeMatchConditionParameters Defines the parameters for RequestScheme match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestSchemeMatchConditionParameters
+
+                            Defines the parameters for RequestScheme match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3318,17 +3729,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestUriMatchConditionParameters Defines the parameters for RequestUri match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestUriMatchConditionParameters
+
+                            Defines the parameters for RequestUri match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3352,17 +3772,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.ServerPortMatchConditionParameters Defines the parameters for ServerPort match conditions
+                          description: >-
+                            Storage version of v1api20230501.ServerPortMatchConditionParameters
+
+                            Defines the parameters for ServerPort match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3386,17 +3815,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.SocketAddrMatchConditionParameters Defines the parameters for SocketAddress match conditions
+                          description: >-
+                            Storage version of v1api20230501.SocketAddrMatchConditionParameters
+
+                            Defines the parameters for SocketAddress match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3420,17 +3858,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.SslProtocolMatchConditionParameters Defines the parameters for SslProtocol match conditions
+                          description: >-
+                            Storage version of v1api20230501.SslProtocolMatchConditionParameters
+
+                            Defines the parameters for SslProtocol match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3454,17 +3901,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlFileExtensionMatchConditionParameters Defines the parameters for UrlFileExtension match conditions
+                          description: >-
+                            Storage version of v1api20230501.UrlFileExtensionMatchConditionParameters
+
+                            Defines the parameters for UrlFileExtension match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3488,17 +3944,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlFileNameMatchConditionParameters Defines the parameters for UrlFilename match conditions
+                          description: >-
+                            Storage version of v1api20230501.UrlFileNameMatchConditionParameters
+
+                            Defines the parameters for UrlFilename match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3522,17 +3987,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlPathMatchConditionParameters Defines the parameters for UrlPath match conditions
+                          description: >-
+                            Storage version of v1api20230501.UrlPathMatchConditionParameters
+
+                            Defines the parameters for UrlPath match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3561,16 +4035,25 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               actions:
                 items:
-                  description: Storage version of v1api20230501.DeliveryRuleAction_STATUS An action for the delivery rule.
+                  description: >-
+                    Storage version of v1api20230501.DeliveryRuleAction_STATUS
+
+                    An action for the delivery rule.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     cacheExpiration:
                       description: Storage version of v1api20230501.DeliveryRuleCacheExpirationAction_STATUS
@@ -3578,17 +4061,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.CacheExpirationActionParameters_STATUS Defines the parameters for the cache expiration action.
+                          description: >-
+                            Storage version of v1api20230501.CacheExpirationActionParameters_STATUS
+
+                            Defines the parameters for the cache expiration action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             cacheBehavior:
                               type: string
@@ -3606,17 +4098,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.CacheKeyQueryStringActionParameters_STATUS Defines the parameters for the cache-key query string action.
+                          description: >-
+                            Storage version of v1api20230501.CacheKeyQueryStringActionParameters_STATUS
+
+                            Defines the parameters for the cache-key query string action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             queryParameters:
                               type: string
@@ -3632,17 +4133,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.HeaderActionParameters_STATUS Defines the parameters for the request header action.
+                          description: >-
+                            Storage version of v1api20230501.HeaderActionParameters_STATUS
+
+                            Defines the parameters for the request header action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             headerAction:
                               type: string
@@ -3660,17 +4170,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.HeaderActionParameters_STATUS Defines the parameters for the request header action.
+                          description: >-
+                            Storage version of v1api20230501.HeaderActionParameters_STATUS
+
+                            Defines the parameters for the request header action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             headerAction:
                               type: string
@@ -3688,25 +4207,40 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.OriginGroupOverrideActionParameters_STATUS Defines the parameters for the origin group override action.
+                          description: >-
+                            Storage version of v1api20230501.OriginGroupOverrideActionParameters_STATUS
+
+                            Defines the parameters for the origin group override action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             originGroup:
-                              description: Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.
+                              description: >-
+                                Storage version of v1api20230501.ResourceReference_STATUS
+
+                                Reference to another resource.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 id:
                                   type: string
@@ -3721,25 +4255,40 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RouteConfigurationOverrideActionParameters_STATUS Defines the parameters for the route configuration override action.
+                          description: >-
+                            Storage version of v1api20230501.RouteConfigurationOverrideActionParameters_STATUS
+
+                            Defines the parameters for the route configuration override action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             cacheConfiguration:
-                              description: Storage version of v1api20230501.CacheConfiguration_STATUS Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
+                              description: >-
+                                Storage version of v1api20230501.CacheConfiguration_STATUS
+
+                                Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 cacheBehavior:
                                   type: string
@@ -3753,22 +4302,34 @@ spec:
                                   type: string
                               type: object
                             originGroupOverride:
-                              description: Storage version of v1api20230501.OriginGroupOverride_STATUS Defines the parameters for the origin group override configuration.
+                              description: >-
+                                Storage version of v1api20230501.OriginGroupOverride_STATUS
+
+                                Defines the parameters for the origin group override configuration.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                  description: >-
+                                    PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                    resources, allowing for full fidelity round trip conversions
                                   type: object
                                 forwardingProtocol:
                                   type: string
                                 originGroup:
-                                  description: Storage version of v1api20230501.ResourceReference_STATUS Reference to another resource.
+                                  description: >-
+                                    Storage version of v1api20230501.ResourceReference_STATUS
+
+                                    Reference to another resource.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                      description: >-
+                                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                        resources, allowing for full fidelity round trip conversions
                                       type: object
                                     id:
                                       type: string
@@ -3784,17 +4345,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlRedirectActionParameters_STATUS Defines the parameters for the url redirect action.
+                          description: >-
+                            Storage version of v1api20230501.UrlRedirectActionParameters_STATUS
+
+                            Defines the parameters for the url redirect action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             customFragment:
                               type: string
@@ -3818,17 +4388,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlRewriteActionParameters_STATUS Defines the parameters for the url rewrite action.
+                          description: >-
+                            Storage version of v1api20230501.UrlRewriteActionParameters_STATUS
+
+                            Defines the parameters for the url rewrite action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             destination:
                               type: string
@@ -3846,28 +4425,43 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlSigningActionParameters_STATUS Defines the parameters for the Url Signing action.
+                          description: >-
+                            Storage version of v1api20230501.UrlSigningActionParameters_STATUS
+
+                            Defines the parameters for the Url Signing action.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             algorithm:
                               type: string
                             parameterNameOverride:
                               items:
-                                description: Storage version of v1api20230501.UrlSigningParamIdentifier_STATUS Defines how to identify a parameter for a specific purpose e.g. expires
+                                description: >-
+                                  Storage version of v1api20230501.UrlSigningParamIdentifier_STATUS
+
+                                  Defines how to identify a parameter for a specific purpose e.g. expires
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                                    description: >-
+                                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                      resources, allowing for full fidelity round trip conversions
                                     type: object
                                   paramIndicator:
                                     type: string
@@ -3893,14 +4487,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -3931,12 +4540,18 @@ spec:
                 type: string
               ruleconditions:
                 items:
-                  description: Storage version of v1api20230501.DeliveryRuleCondition_STATUS A condition for the delivery rule.
+                  description: >-
+                    Storage version of v1api20230501.DeliveryRuleCondition_STATUS
+
+                    A condition for the delivery rule.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
                       type: object
                     clientPort:
                       description: Storage version of v1api20230501.DeliveryRuleClientPortCondition_STATUS
@@ -3944,17 +4559,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.ClientPortMatchConditionParameters_STATUS Defines the parameters for ClientPort match conditions
+                          description: >-
+                            Storage version of v1api20230501.ClientPortMatchConditionParameters_STATUS
+
+                            Defines the parameters for ClientPort match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -3978,17 +4602,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.CookiesMatchConditionParameters_STATUS Defines the parameters for Cookies match conditions
+                          description: >-
+                            Storage version of v1api20230501.CookiesMatchConditionParameters_STATUS
+
+                            Defines the parameters for Cookies match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4014,17 +4647,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.HostNameMatchConditionParameters_STATUS Defines the parameters for HostName match conditions
+                          description: >-
+                            Storage version of v1api20230501.HostNameMatchConditionParameters_STATUS
+
+                            Defines the parameters for HostName match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4048,17 +4690,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.HttpVersionMatchConditionParameters_STATUS Defines the parameters for HttpVersion match conditions
+                          description: >-
+                            Storage version of v1api20230501.HttpVersionMatchConditionParameters_STATUS
+
+                            Defines the parameters for HttpVersion match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4082,17 +4733,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.IsDeviceMatchConditionParameters_STATUS Defines the parameters for IsDevice match conditions
+                          description: >-
+                            Storage version of v1api20230501.IsDeviceMatchConditionParameters_STATUS
+
+                            Defines the parameters for IsDevice match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4116,17 +4776,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.PostArgsMatchConditionParameters_STATUS Defines the parameters for PostArgs match conditions
+                          description: >-
+                            Storage version of v1api20230501.PostArgsMatchConditionParameters_STATUS
+
+                            Defines the parameters for PostArgs match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4152,17 +4821,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.QueryStringMatchConditionParameters_STATUS Defines the parameters for QueryString match conditions
+                          description: >-
+                            Storage version of v1api20230501.QueryStringMatchConditionParameters_STATUS
+
+                            Defines the parameters for QueryString match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4186,17 +4864,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RemoteAddressMatchConditionParameters_STATUS Defines the parameters for RemoteAddress match conditions
+                          description: >-
+                            Storage version of v1api20230501.RemoteAddressMatchConditionParameters_STATUS
+
+                            Defines the parameters for RemoteAddress match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4220,17 +4907,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestBodyMatchConditionParameters_STATUS Defines the parameters for RequestBody match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestBodyMatchConditionParameters_STATUS
+
+                            Defines the parameters for RequestBody match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4254,17 +4950,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestHeaderMatchConditionParameters_STATUS Defines the parameters for RequestHeader match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestHeaderMatchConditionParameters_STATUS
+
+                            Defines the parameters for RequestHeader match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4290,17 +4995,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestMethodMatchConditionParameters_STATUS Defines the parameters for RequestMethod match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestMethodMatchConditionParameters_STATUS
+
+                            Defines the parameters for RequestMethod match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4324,17 +5038,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestSchemeMatchConditionParameters_STATUS Defines the parameters for RequestScheme match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestSchemeMatchConditionParameters_STATUS
+
+                            Defines the parameters for RequestScheme match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4358,17 +5081,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.RequestUriMatchConditionParameters_STATUS Defines the parameters for RequestUri match conditions
+                          description: >-
+                            Storage version of v1api20230501.RequestUriMatchConditionParameters_STATUS
+
+                            Defines the parameters for RequestUri match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4392,17 +5124,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.ServerPortMatchConditionParameters_STATUS Defines the parameters for ServerPort match conditions
+                          description: >-
+                            Storage version of v1api20230501.ServerPortMatchConditionParameters_STATUS
+
+                            Defines the parameters for ServerPort match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4426,17 +5167,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.SocketAddrMatchConditionParameters_STATUS Defines the parameters for SocketAddress match conditions
+                          description: >-
+                            Storage version of v1api20230501.SocketAddrMatchConditionParameters_STATUS
+
+                            Defines the parameters for SocketAddress match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4460,17 +5210,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.SslProtocolMatchConditionParameters_STATUS Defines the parameters for SslProtocol match conditions
+                          description: >-
+                            Storage version of v1api20230501.SslProtocolMatchConditionParameters_STATUS
+
+                            Defines the parameters for SslProtocol match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4494,17 +5253,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlFileExtensionMatchConditionParameters_STATUS Defines the parameters for UrlFileExtension match conditions
+                          description: >-
+                            Storage version of v1api20230501.UrlFileExtensionMatchConditionParameters_STATUS
+
+                            Defines the parameters for UrlFileExtension match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4528,17 +5296,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlFileNameMatchConditionParameters_STATUS Defines the parameters for UrlFilename match conditions
+                          description: >-
+                            Storage version of v1api20230501.UrlFileNameMatchConditionParameters_STATUS
+
+                            Defines the parameters for UrlFilename match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4562,17 +5339,26 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
                           type: string
                         parameters:
-                          description: Storage version of v1api20230501.UrlPathMatchConditionParameters_STATUS Defines the parameters for UrlPath match conditions
+                          description: >-
+                            Storage version of v1api20230501.UrlPathMatchConditionParameters_STATUS
+
+                            Defines the parameters for UrlPath match conditions
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                              description: >-
+                                PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                resources, allowing for full fidelity round trip conversions
                               type: object
                             matchValues:
                               items:
@@ -4593,12 +5379,18 @@ spec:
                   type: object
                 type: array
               systemData:
-                description: Storage version of v1api20230501.SystemData_STATUS Read only system data
+                description: >-
+                  Storage version of v1api20230501.SystemData_STATUS
+
+                  Read only system data
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
                     type: string

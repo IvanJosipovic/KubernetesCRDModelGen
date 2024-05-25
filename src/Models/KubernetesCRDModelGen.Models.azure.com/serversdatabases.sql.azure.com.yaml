@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.13.0
+    controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.6.0
+    app.kubernetes.io/version: v2.7.0
   name: serversdatabases.sql.azure.com
 spec:
   conversion:
@@ -45,23 +45,50 @@ spec:
     name: v1api20211101
     schema:
       openAPIV3Schema:
-        description: 'Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Databases.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}'
+        description: >-
+          Generator information:
+
+          - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Databases.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
             properties:
               autoPauseDelay:
-                description: 'AutoPauseDelay: Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled'
+                description: >-
+                  AutoPauseDelay: Time in minutes after which database is automatically paused. A value of -1 means that automatic pause
+
+                  is disabled
                 type: integer
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               catalogCollation:
                 description: 'CatalogCollation: Collation of the metadata catalog.'
@@ -73,7 +100,40 @@ spec:
                 description: 'Collation: The collation of the database.'
                 type: string
               createMode:
-                description: "CreateMode: Specifies the mode of database creation. Default: regular database creation. Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database. Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database. PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified. Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore. Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time. RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID. Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition."
+                description: >-
+                  CreateMode: Specifies the mode of database creation.
+
+                  Default: regular database creation.
+
+                  Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the
+
+                  source database.
+
+                  Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the
+
+                  resource ID of the existing primary database.
+
+                  PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId
+
+                  must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
+
+                  Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable
+
+                  database resource ID to restore.
+
+                  Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If
+
+                  sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise
+
+                  sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored.
+
+                  restorePointInTime may also be specified to restore from an earlier point in time.
+
+                  RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault.
+
+                  recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
+
+                  Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
                 enum:
                 - Copy
                 - Default
@@ -90,7 +150,12 @@ spec:
                 description: 'ElasticPoolReference: The resource identifier of the elastic pool containing this database.'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -108,7 +173,10 @@ spec:
                 pattern: ^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$
                 type: string
               highAvailabilityReplicaCount:
-                description: 'HighAvailabilityReplicaCount: The number of secondary replicas associated with the database that are used to provide high availability. Not applicable to a Hyperscale database within an elastic pool.'
+                description: >-
+                  HighAvailabilityReplicaCount: The number of secondary replicas associated with the database that are used to provide
+
+                  high availability. Not applicable to a Hyperscale database within an elastic pool.
                 type: integer
               identity:
                 description: 'Identity: The Azure Active Directory identity of the database.'
@@ -128,7 +196,12 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -145,10 +218,16 @@ spec:
                     type: array
                 type: object
               isLedgerOn:
-                description: 'IsLedgerOn: Whether or not this database is a ledger database, which means all tables in the database are ledger tables. Note: the value of this property cannot be changed after the database has been created.'
+                description: >-
+                  IsLedgerOn: Whether or not this database is a ledger database, which means all tables in the database are ledger tables.
+
+                  Note: the value of this property cannot be changed after the database has been created.
                 type: boolean
               licenseType:
-                description: 'LicenseType: The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.'
+                description: >-
+                  LicenseType: The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you
+
+                  have a license and are eligible for the Azure Hybrid Benefit.
                 enum:
                 - BasePrice
                 - LicenseIncluded
@@ -157,10 +236,18 @@ spec:
                 description: 'Location: Resource location.'
                 type: string
               longTermRetentionBackupResourceReference:
-                description: 'LongTermRetentionBackupResourceReference: The resource identifier of the long term retention backup associated with create operation of this database.'
+                description: >-
+                  LongTermRetentionBackupResourceReference: The resource identifier of the long term retention backup associated with
+
+                  create operation of this database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -174,7 +261,10 @@ spec:
                     type: string
                 type: object
               maintenanceConfigurationId:
-                description: 'MaintenanceConfigurationId: Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.'
+                description: >-
+                  MaintenanceConfigurationId: Maintenance configuration id assigned to the database. This configuration defines the period
+
+                  when the maintenance updates will occur.
                 type: string
               maxSizeBytes:
                 description: 'MaxSizeBytes: The max size of the database expressed in bytes.'
@@ -183,7 +273,12 @@ spec:
                 description: 'MinCapacity: Minimal capacity that database will always have allocated, if not paused'
                 type: number
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a sql.azure.com/Server resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -193,16 +288,29 @@ spec:
                     type: string
                 type: object
               readScale:
-                description: 'ReadScale: The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region. Not applicable to a Hyperscale database within an elastic pool.'
+                description: >-
+                  ReadScale: The state of read-only routing. If enabled, connections that have application intent set to readonly in their
+
+                  connection string may be routed to a readonly secondary replica in the same region. Not applicable to a Hyperscale
+
+                  database within an elastic pool.
                 enum:
                 - Disabled
                 - Enabled
                 type: string
               recoverableDatabaseReference:
-                description: 'RecoverableDatabaseReference: The resource identifier of the recoverable database associated with create operation of this database.'
+                description: >-
+                  RecoverableDatabaseReference: The resource identifier of the recoverable database associated with create operation of
+
+                  this database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -216,10 +324,18 @@ spec:
                     type: string
                 type: object
               recoveryServicesRecoveryPointReference:
-                description: 'RecoveryServicesRecoveryPointReference: The resource identifier of the recovery point associated with create operation of this database.'
+                description: >-
+                  RecoveryServicesRecoveryPointReference: The resource identifier of the recovery point associated with create operation
+
+                  of this database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -241,10 +357,18 @@ spec:
                 - Zone
                 type: string
               restorableDroppedDatabaseReference:
-                description: 'RestorableDroppedDatabaseReference: The resource identifier of the restorable dropped database associated with create operation of this database.'
+                description: >-
+                  RestorableDroppedDatabaseReference: The resource identifier of the restorable dropped database associated with create
+
+                  operation of this database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -258,7 +382,10 @@ spec:
                     type: string
                 type: object
               restorePointInTime:
-                description: 'RestorePointInTime: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.'
+                description: >-
+                  RestorePointInTime: Specifies the point in time (ISO8601 format) of the source database that will be restored to create
+
+                  the new database.
                 type: string
               sampleName:
                 description: 'SampleName: The name of the sample schema to apply when creating this database.'
@@ -274,7 +401,26 @@ spec:
                 - Named
                 type: string
               sku:
-                description: 'Sku: The database SKU. The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands: ```azurecli az sql db list-editions -l <location> -o table ```` ```powershell Get-AzSqlServerServiceObjective -Location <location> ````'
+                description: >-
+                  Sku: The database SKU.
+
+                  The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition,
+
+                  family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation`
+
+                  REST API or one of the following commands:
+
+                  ```azurecli
+
+                  az sql db list-editions -l <location> -o table
+
+                  ````
+
+                  ```powershell
+
+                  Get-AzSqlServerServiceObjective -Location <location>
+
+                  ````
                 properties:
                   capacity:
                     description: 'Capacity: Capacity of the particular SKU.'
@@ -298,10 +444,18 @@ spec:
                 description: 'SourceDatabaseDeletionDate: Specifies the time that the database was deleted.'
                 type: string
               sourceDatabaseReference:
-                description: 'SourceDatabaseReference: The resource identifier of the source database associated with create operation of this database.'
+                description: >-
+                  SourceDatabaseReference: The resource identifier of the source database associated with create operation of this
+
+                  database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -315,10 +469,40 @@ spec:
                     type: string
                 type: object
               sourceResourceReference:
-                description: 'SourceResourceReference: The resource identifier of the source associated with the create operation of this database. This property is only supported for DataWarehouse edition and allows to restore across subscriptions. When sourceResourceId is specified, sourceDatabaseId, recoverableDatabaseId, restorableDroppedDatabaseId and sourceDatabaseDeletionDate must not be specified and CreateMode must be PointInTimeRestore, Restore or Recover. When createMode is PointInTimeRestore, sourceResourceId must be the resource ID of the existing database or existing sql pool, and restorePointInTime must be specified. When createMode is Restore, sourceResourceId must be the resource ID of restorable dropped database or restorable dropped sql pool. When createMode is Recover, sourceResourceId must be the resource ID of recoverable database or recoverable sql pool. When source subscription belongs to a different tenant than target subscription, “x-ms-authorization-auxiliary” header must contain authentication token for the source tenant. For more details about “x-ms-authorization-auxiliary” header see https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/authenticate-multi-tenant'
+                description: >-
+                  SourceResourceReference: The resource identifier of the source associated with the create operation of this database.
+
+                  This property is only supported for DataWarehouse edition and allows to restore across subscriptions.
+
+                  When sourceResourceId is specified, sourceDatabaseId, recoverableDatabaseId, restorableDroppedDatabaseId and
+
+                  sourceDatabaseDeletionDate must not be specified and CreateMode must be PointInTimeRestore, Restore or Recover.
+
+                  When createMode is PointInTimeRestore, sourceResourceId must be the resource ID of the existing database or existing sql
+
+                  pool, and restorePointInTime must be specified.
+
+                  When createMode is Restore, sourceResourceId must be the resource ID of restorable dropped database or restorable
+
+                  dropped sql pool.
+
+                  When createMode is Recover, sourceResourceId must be the resource ID of recoverable database or recoverable sql pool.
+
+                  When source subscription belongs to a different tenant than target subscription, “x-ms-authorization-auxiliary”
+
+                  header must contain authentication token for the source tenant. For more details about
+
+                  “x-ms-authorization-auxiliary” header see
+
+                  https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/authenticate-multi-tenant
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -337,7 +521,10 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               zoneRedundant:
-                description: 'ZoneRedundant: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.'
+                description: >-
+                  ZoneRedundant: Whether or not this database is zone redundant, which means the replicas of this database will be spread
+
+                  across multiple availability zones.
                 type: boolean
             required:
             - location
@@ -346,7 +533,10 @@ spec:
           status:
             properties:
               autoPauseDelay:
-                description: 'AutoPauseDelay: Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled'
+                description: >-
+                  AutoPauseDelay: Time in minutes after which database is automatically paused. A value of -1 means that automatic pause
+
+                  is disabled
                 type: integer
               catalogCollation:
                 description: 'CatalogCollation: Collation of the metadata catalog.'
@@ -367,14 +557,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -390,7 +595,40 @@ spec:
                   type: object
                 type: array
               createMode:
-                description: "CreateMode: Specifies the mode of database creation. Default: regular database creation. Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the source database. Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the resource ID of the existing primary database. PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified. Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable database resource ID to restore. Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored. restorePointInTime may also be specified to restore from an earlier point in time. RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault. recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID. Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition."
+                description: >-
+                  CreateMode: Specifies the mode of database creation.
+
+                  Default: regular database creation.
+
+                  Copy: creates a database as a copy of an existing database. sourceDatabaseId must be specified as the resource ID of the
+
+                  source database.
+
+                  Secondary: creates a database as a secondary replica of an existing database. sourceDatabaseId must be specified as the
+
+                  resource ID of the existing primary database.
+
+                  PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database. sourceDatabaseId
+
+                  must be specified as the resource ID of the existing database, and restorePointInTime must be specified.
+
+                  Recovery: Creates a database by restoring a geo-replicated backup. sourceDatabaseId must be specified as the recoverable
+
+                  database resource ID to restore.
+
+                  Restore: Creates a database by restoring a backup of a deleted database. sourceDatabaseId must be specified. If
+
+                  sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified. Otherwise
+
+                  sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored.
+
+                  restorePointInTime may also be specified to restore from an earlier point in time.
+
+                  RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault.
+
+                  recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.
+
+                  Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
                 type: string
               creationDate:
                 description: 'CreationDate: The creation date of the database (ISO8601 format).'
@@ -427,7 +665,10 @@ spec:
                 description: 'DefaultSecondaryLocation: The default secondary region for this database.'
                 type: string
               earliestRestoreDate:
-                description: 'EarliestRestoreDate: This records the earliest start date and time that restore is available for this database (ISO8601 format).'
+                description: >-
+                  EarliestRestoreDate: This records the earliest start date and time that restore is available for this database (ISO8601
+
+                  format).
                 type: string
               elasticPoolId:
                 description: 'ElasticPoolId: The resource identifier of the elastic pool containing this database.'
@@ -439,7 +680,10 @@ spec:
                 description: 'FederatedClientId: The Client id used for cross tenant per database CMK scenario'
                 type: string
               highAvailabilityReplicaCount:
-                description: 'HighAvailabilityReplicaCount: The number of secondary replicas associated with the database that are used to provide high availability. Not applicable to a Hyperscale database within an elastic pool.'
+                description: >-
+                  HighAvailabilityReplicaCount: The number of secondary replicas associated with the database that are used to provide
+
+                  high availability. Not applicable to a Hyperscale database within an elastic pool.
                 type: integer
               id:
                 description: 'Id: Resource ID.'
@@ -471,22 +715,34 @@ spec:
                 description: 'IsInfraEncryptionEnabled: Infra encryption is enabled for this database.'
                 type: boolean
               isLedgerOn:
-                description: 'IsLedgerOn: Whether or not this database is a ledger database, which means all tables in the database are ledger tables. Note: the value of this property cannot be changed after the database has been created.'
+                description: >-
+                  IsLedgerOn: Whether or not this database is a ledger database, which means all tables in the database are ledger tables.
+
+                  Note: the value of this property cannot be changed after the database has been created.
                 type: boolean
               kind:
                 description: 'Kind: Kind of database. This is metadata used for the Azure portal experience.'
                 type: string
               licenseType:
-                description: 'LicenseType: The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.'
+                description: >-
+                  LicenseType: The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you
+
+                  have a license and are eligible for the Azure Hybrid Benefit.
                 type: string
               location:
                 description: 'Location: Resource location.'
                 type: string
               longTermRetentionBackupResourceId:
-                description: 'LongTermRetentionBackupResourceId: The resource identifier of the long term retention backup associated with create operation of this database.'
+                description: >-
+                  LongTermRetentionBackupResourceId: The resource identifier of the long term retention backup associated with create
+
+                  operation of this database.
                 type: string
               maintenanceConfigurationId:
-                description: 'MaintenanceConfigurationId: Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.'
+                description: >-
+                  MaintenanceConfigurationId: Maintenance configuration id assigned to the database. This configuration defines the period
+
+                  when the maintenance updates will occur.
                 type: string
               managedBy:
                 description: 'ManagedBy: Resource that manages the database.'
@@ -504,16 +760,30 @@ spec:
                 description: 'Name: Resource name.'
                 type: string
               pausedDate:
-                description: 'PausedDate: The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.'
+                description: >-
+                  PausedDate: The date when database was paused by user configuration or action(ISO8601 format). Null if the database is
+
+                  ready.
                 type: string
               readScale:
-                description: 'ReadScale: The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region. Not applicable to a Hyperscale database within an elastic pool.'
+                description: >-
+                  ReadScale: The state of read-only routing. If enabled, connections that have application intent set to readonly in their
+
+                  connection string may be routed to a readonly secondary replica in the same region. Not applicable to a Hyperscale
+
+                  database within an elastic pool.
                 type: string
               recoverableDatabaseId:
-                description: 'RecoverableDatabaseId: The resource identifier of the recoverable database associated with create operation of this database.'
+                description: >-
+                  RecoverableDatabaseId: The resource identifier of the recoverable database associated with create operation of this
+
+                  database.
                 type: string
               recoveryServicesRecoveryPointId:
-                description: 'RecoveryServicesRecoveryPointId: The resource identifier of the recovery point associated with create operation of this database.'
+                description: >-
+                  RecoveryServicesRecoveryPointId: The resource identifier of the recovery point associated with create operation of this
+
+                  database.
                 type: string
               requestedBackupStorageRedundancy:
                 description: 'RequestedBackupStorageRedundancy: The storage account type to be used to store backups for this database.'
@@ -522,13 +792,22 @@ spec:
                 description: 'RequestedServiceObjectiveName: The requested service level objective name of the database.'
                 type: string
               restorableDroppedDatabaseId:
-                description: 'RestorableDroppedDatabaseId: The resource identifier of the restorable dropped database associated with create operation of this database.'
+                description: >-
+                  RestorableDroppedDatabaseId: The resource identifier of the restorable dropped database associated with create operation
+
+                  of this database.
                 type: string
               restorePointInTime:
-                description: 'RestorePointInTime: Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.'
+                description: >-
+                  RestorePointInTime: Specifies the point in time (ISO8601 format) of the source database that will be restored to create
+
+                  the new database.
                 type: string
               resumedDate:
-                description: 'ResumedDate: The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.'
+                description: >-
+                  ResumedDate: The date when database was resumed by user action or database login (ISO8601 format). Null if the database
+
+                  is paused.
                 type: string
               sampleName:
                 description: 'SampleName: The name of the sample schema to apply when creating this database.'
@@ -537,7 +816,26 @@ spec:
                 description: 'SecondaryType: The secondary type of the database if it is a secondary.  Valid values are Geo and Named.'
                 type: string
               sku:
-                description: 'Sku: The database SKU. The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands: ```azurecli az sql db list-editions -l <location> -o table ```` ```powershell Get-AzSqlServerServiceObjective -Location <location> ````'
+                description: >-
+                  Sku: The database SKU.
+
+                  The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition,
+
+                  family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation`
+
+                  REST API or one of the following commands:
+
+                  ```azurecli
+
+                  az sql db list-editions -l <location> -o table
+
+                  ````
+
+                  ```powershell
+
+                  Get-AzSqlServerServiceObjective -Location <location>
+
+                  ````
                 properties:
                   capacity:
                     description: 'Capacity: Capacity of the particular SKU.'
@@ -562,7 +860,32 @@ spec:
                 description: 'SourceDatabaseId: The resource identifier of the source database associated with create operation of this database.'
                 type: string
               sourceResourceId:
-                description: 'SourceResourceId: The resource identifier of the source associated with the create operation of this database. This property is only supported for DataWarehouse edition and allows to restore across subscriptions. When sourceResourceId is specified, sourceDatabaseId, recoverableDatabaseId, restorableDroppedDatabaseId and sourceDatabaseDeletionDate must not be specified and CreateMode must be PointInTimeRestore, Restore or Recover. When createMode is PointInTimeRestore, sourceResourceId must be the resource ID of the existing database or existing sql pool, and restorePointInTime must be specified. When createMode is Restore, sourceResourceId must be the resource ID of restorable dropped database or restorable dropped sql pool. When createMode is Recover, sourceResourceId must be the resource ID of recoverable database or recoverable sql pool. When source subscription belongs to a different tenant than target subscription, “x-ms-authorization-auxiliary” header must contain authentication token for the source tenant. For more details about “x-ms-authorization-auxiliary” header see https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/authenticate-multi-tenant'
+                description: >-
+                  SourceResourceId: The resource identifier of the source associated with the create operation of this database.
+
+                  This property is only supported for DataWarehouse edition and allows to restore across subscriptions.
+
+                  When sourceResourceId is specified, sourceDatabaseId, recoverableDatabaseId, restorableDroppedDatabaseId and
+
+                  sourceDatabaseDeletionDate must not be specified and CreateMode must be PointInTimeRestore, Restore or Recover.
+
+                  When createMode is PointInTimeRestore, sourceResourceId must be the resource ID of the existing database or existing sql
+
+                  pool, and restorePointInTime must be specified.
+
+                  When createMode is Restore, sourceResourceId must be the resource ID of restorable dropped database or restorable
+
+                  dropped sql pool.
+
+                  When createMode is Recover, sourceResourceId must be the resource ID of recoverable database or recoverable sql pool.
+
+                  When source subscription belongs to a different tenant than target subscription, “x-ms-authorization-auxiliary”
+
+                  header must contain authentication token for the source tenant. For more details about
+
+                  “x-ms-authorization-auxiliary” header see
+
+                  https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/authenticate-multi-tenant
                 type: string
               status:
                 description: 'Status: The status of the database.'
@@ -576,7 +899,10 @@ spec:
                 description: 'Type: Resource type.'
                 type: string
               zoneRedundant:
-                description: 'ZoneRedundant: Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.'
+                description: >-
+                  ZoneRedundant: Whether or not this database is zone redundant, which means the replicas of this database will be spread
+
+                  across multiple availability zones.
                 type: boolean
             type: object
         type: object
@@ -600,13 +926,36 @@ spec:
     name: v1api20211101storage
     schema:
       openAPIV3Schema:
-        description: 'Storage version of v1api20211101.ServersDatabase Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Databases.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}'
+        description: >-
+          Storage version of v1api20211101.ServersDatabase
+
+          Generator information:
+
+          - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Databases.json
+
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}
         properties:
           apiVersion:
-            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            description: >-
+              APIVersion defines the versioned schema of this representation of an object.
+
+              Servers should convert recognized schemas to the latest internal value, and
+
+              may reject unrecognized values.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            description: >-
+              Kind is a string value representing the REST resource this object represents.
+
+              Servers may infer this from the endpoint the client submits requests to.
+
+              Cannot be updated.
+
+              In CamelCase.
+
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
@@ -616,12 +965,18 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               autoPauseDelay:
                 type: integer
               azureName:
-                description: "AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it doesn't have to be."
+                description: >-
+                  AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
+
+                  doesn't have to be.
                 type: string
               catalogCollation:
                 type: string
@@ -633,7 +988,12 @@ spec:
                 description: 'ElasticPoolReference: The resource identifier of the elastic pool containing this database.'
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -651,29 +1011,46 @@ spec:
               highAvailabilityReplicaCount:
                 type: integer
               identity:
-                description: Storage version of v1api20211101.DatabaseIdentity Azure Active Directory identity configuration for a resource.
+                description: >-
+                  Storage version of v1api20211101.DatabaseIdentity
+
+                  Azure Active Directory identity configuration for a resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: Storage version of v1api20211101.UserAssignedIdentityDetails Information about the user assigned identity for the resource
+                      description: >-
+                        Storage version of v1api20211101.UserAssignedIdentityDetails
+
+                        Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                              description: >-
+                                ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
                             group:
@@ -696,10 +1073,18 @@ spec:
               location:
                 type: string
               longTermRetentionBackupResourceReference:
-                description: 'LongTermRetentionBackupResourceReference: The resource identifier of the long term retention backup associated with create operation of this database.'
+                description: >-
+                  LongTermRetentionBackupResourceReference: The resource identifier of the long term retention backup associated with
+
+                  create operation of this database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -721,7 +1106,12 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: 'Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a reference to a sql.azure.com/Server resource'
+                description: >-
+                  Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
+
+                  controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
+
+                  reference to a sql.azure.com/Server resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -733,10 +1123,18 @@ spec:
               readScale:
                 type: string
               recoverableDatabaseReference:
-                description: 'RecoverableDatabaseReference: The resource identifier of the recoverable database associated with create operation of this database.'
+                description: >-
+                  RecoverableDatabaseReference: The resource identifier of the recoverable database associated with create operation of
+
+                  this database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -750,10 +1148,18 @@ spec:
                     type: string
                 type: object
               recoveryServicesRecoveryPointReference:
-                description: 'RecoveryServicesRecoveryPointReference: The resource identifier of the recovery point associated with create operation of this database.'
+                description: >-
+                  RecoveryServicesRecoveryPointReference: The resource identifier of the recovery point associated with create operation
+
+                  of this database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -769,10 +1175,18 @@ spec:
               requestedBackupStorageRedundancy:
                 type: string
               restorableDroppedDatabaseReference:
-                description: 'RestorableDroppedDatabaseReference: The resource identifier of the restorable dropped database associated with create operation of this database.'
+                description: >-
+                  RestorableDroppedDatabaseReference: The resource identifier of the restorable dropped database associated with create
+
+                  operation of this database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -792,12 +1206,18 @@ spec:
               secondaryType:
                 type: string
               sku:
-                description: Storage version of v1api20211101.Sku An ARM Resource SKU.
+                description: >-
+                  Storage version of v1api20211101.Sku
+
+                  An ARM Resource SKU.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
                     type: integer
@@ -813,10 +1233,18 @@ spec:
               sourceDatabaseDeletionDate:
                 type: string
               sourceDatabaseReference:
-                description: 'SourceDatabaseReference: The resource identifier of the source database associated with create operation of this database.'
+                description: >-
+                  SourceDatabaseReference: The resource identifier of the source database associated with create operation of this
+
+                  database.
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -830,10 +1258,40 @@ spec:
                     type: string
                 type: object
               sourceResourceReference:
-                description: 'SourceResourceReference: The resource identifier of the source associated with the create operation of this database. This property is only supported for DataWarehouse edition and allows to restore across subscriptions. When sourceResourceId is specified, sourceDatabaseId, recoverableDatabaseId, restorableDroppedDatabaseId and sourceDatabaseDeletionDate must not be specified and CreateMode must be PointInTimeRestore, Restore or Recover. When createMode is PointInTimeRestore, sourceResourceId must be the resource ID of the existing database or existing sql pool, and restorePointInTime must be specified. When createMode is Restore, sourceResourceId must be the resource ID of restorable dropped database or restorable dropped sql pool. When createMode is Recover, sourceResourceId must be the resource ID of recoverable database or recoverable sql pool. When source subscription belongs to a different tenant than target subscription, “x-ms-authorization-auxiliary” header must contain authentication token for the source tenant. For more details about “x-ms-authorization-auxiliary” header see https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/authenticate-multi-tenant'
+                description: >-
+                  SourceResourceReference: The resource identifier of the source associated with the create operation of this database.
+
+                  This property is only supported for DataWarehouse edition and allows to restore across subscriptions.
+
+                  When sourceResourceId is specified, sourceDatabaseId, recoverableDatabaseId, restorableDroppedDatabaseId and
+
+                  sourceDatabaseDeletionDate must not be specified and CreateMode must be PointInTimeRestore, Restore or Recover.
+
+                  When createMode is PointInTimeRestore, sourceResourceId must be the resource ID of the existing database or existing sql
+
+                  pool, and restorePointInTime must be specified.
+
+                  When createMode is Restore, sourceResourceId must be the resource ID of restorable dropped database or restorable
+
+                  dropped sql pool.
+
+                  When createMode is Recover, sourceResourceId must be the resource ID of recoverable database or recoverable sql pool.
+
+                  When source subscription belongs to a different tenant than target subscription, “x-ms-authorization-auxiliary”
+
+                  header must contain authentication token for the source tenant. For more details about
+
+                  “x-ms-authorization-auxiliary” header see
+
+                  https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/authenticate-multi-tenant
                 properties:
                   armId:
-                    description: ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
                   group:
@@ -861,7 +1319,10 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                description: >-
+                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                  resources, allowing for full fidelity round trip conversions
                 type: object
               autoPauseDelay:
                 type: integer
@@ -881,14 +1342,29 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+                      description: >-
+                        ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
+
+                        .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
+
+                        with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: Reason for the condition's last transition. Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
+                      description: >-
+                        Reason for the condition's last transition.
+
+                        Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: Severity with which to treat failures of this type of condition. For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False. This is omitted in all cases when Status == Unknown
+                      description: >-
+                        Severity with which to treat failures of this type of condition.
+
+                        For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
+
+                        For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
+
+                        This is omitted in all cases when Status == Unknown
                       type: string
                     status:
                       description: Status of the condition, one of True, False, or Unknown.
@@ -912,12 +1388,18 @@ spec:
               currentServiceObjectiveName:
                 type: string
               currentSku:
-                description: Storage version of v1api20211101.Sku_STATUS An ARM Resource SKU.
+                description: >-
+                  Storage version of v1api20211101.Sku_STATUS
+
+                  An ARM Resource SKU.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
                     type: integer
@@ -947,12 +1429,18 @@ spec:
               id:
                 type: string
               identity:
-                description: Storage version of v1api20211101.DatabaseIdentity_STATUS Azure Active Directory identity configuration for a resource.
+                description: >-
+                  Storage version of v1api20211101.DatabaseIdentity_STATUS
+
+                  Azure Active Directory identity configuration for a resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   tenantId:
                     type: string
@@ -960,12 +1448,18 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Storage version of v1api20211101.DatabaseUserIdentity_STATUS Azure Active Directory identity configuration for a resource.
+                      description: >-
+                        Storage version of v1api20211101.DatabaseUserIdentity_STATUS
+
+                        Azure Active Directory identity configuration for a resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                          description: >-
+                            PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                            resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
                           type: string
@@ -1021,12 +1515,18 @@ spec:
               secondaryType:
                 type: string
               sku:
-                description: Storage version of v1api20211101.Sku_STATUS An ARM Resource SKU.
+                description: >-
+                  Storage version of v1api20211101.Sku_STATUS
+
+                  An ARM Resource SKU.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
                     type: integer
