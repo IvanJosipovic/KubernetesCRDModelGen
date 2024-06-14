@@ -4,7 +4,7 @@ metadata:
   name: revisions.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.14.0
+    app.kubernetes.io/version: 1.14.1
     knative.dev/crd-install: true
 spec:
   group: serving.knative.dev
@@ -29,9 +29,6 @@ spec:
     - name: Config Name
       type: string
       jsonPath: .metadata.labels['serving\.knative\.dev/configuration']
-    - name: K8s Service Name
-      type: string
-      jsonPath: .status.serviceName
     - name: Generation
       type: string
       jsonPath: .metadata.labels['serving\.knative\.dev/configurationGeneration']
