@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.118.2
+    cnrm.cloud.google.com/version: 1.120.1
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -77,7 +77,7 @@ spec:
                     - external
                   properties:
                     external:
-                      description: 'Allowed value: string of the format `projects/{{project}}/locations/{{location}}/certificates/{{value}}`, where {{value}} is the `name` field of a `CertificateManagerCertificate` resource.'
+                      description: 'Allowed value: string of the format `projects/{{project}}/locations/global/certificates/{{value}}`, where {{value}} is the `name` field of a `CertificateManagerCertificate` resource.'
                       type: string
                     name:
                       description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
@@ -93,7 +93,13 @@ spec:
 
                   certificate map associated with the given target proxy. This field
 
-                  can only be set for global target proxies.
+                  can only be set for global target proxies. This field is only supported
+
+                  for EXTERNAL and EXTERNAL_MANAGED load balancing schemes.
+
+                  For INTERNAL_MANAGED, use certificateManagerCertificates instead.
+
+                  sslCertificates and certificateMap fields can not be defined together.
                 oneOf:
                 - not:
                     required:
@@ -110,7 +116,7 @@ spec:
                   - external
                 properties:
                   external:
-                    description: 'Allowed value: string of the format `//certificatemanager.googleapis.com/projects/{{project}}/locations/{{location}}/certificateMaps/{{value}}`, where {{value}} is the `name` field of a `CertificateManagerCertificateMap` resource.'
+                    description: 'Allowed value: string of the format `//certificatemanager.googleapis.com/projects/{{project}}/locations/global/certificateMaps/{{value}}`, where {{value}} is the `name` field of a `CertificateManagerCertificateMap` resource.'
                     type: string
                   name:
                     description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'

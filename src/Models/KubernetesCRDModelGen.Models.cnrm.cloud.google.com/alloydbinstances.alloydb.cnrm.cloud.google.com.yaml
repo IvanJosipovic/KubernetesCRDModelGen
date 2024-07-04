@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.118.2
+    cnrm.cloud.google.com/version: 1.120.1
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -177,6 +177,22 @@ spec:
                     description: The number of CPU's in the VM instance.
                     type: integer
                 type: object
+              networkConfig:
+                description: Instance level network configuration.
+                properties:
+                  authorizedExternalNetworks:
+                    description: A list of external networks authorized to access this instance. This field is only allowed to be set when 'enable_public_ip' is set to true.
+                    items:
+                      properties:
+                        cidrRange:
+                          description: CIDR range for one authorized network of the instance.
+                          type: string
+                      type: object
+                    type: array
+                  enablePublicIp:
+                    description: Enabling public ip for the instance. If a user wishes to disable this, please also clear the list of the authorized external networks set on the same instance.
+                    type: boolean
+                type: object
               readPoolConfig:
                 description: Read pool specific config. If the instance type is READ_POOL, this configuration must be provided.
                 properties:
@@ -225,6 +241,9 @@ spec:
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
+              publicIpAddress:
+                description: The public IP addresses for the Instance. This is available ONLY when networkConfig.enablePublicIp is set to true. This is the connection endpoint for an end-user application.
+                type: string
               reconciling:
                 description: Set to true if the current state of Instance does not match the user's intended state, and the service is actively updating the resource to reconcile them. This can happen due to user-triggered updates or system actions like failover or maintenance.
                 type: boolean
@@ -399,6 +418,22 @@ spec:
                     description: The number of CPU's in the VM instance.
                     type: integer
                 type: object
+              networkConfig:
+                description: Instance level network configuration.
+                properties:
+                  authorizedExternalNetworks:
+                    description: A list of external networks authorized to access this instance. This field is only allowed to be set when 'enable_public_ip' is set to true.
+                    items:
+                      properties:
+                        cidrRange:
+                          description: CIDR range for one authorized network of the instance.
+                          type: string
+                      type: object
+                    type: array
+                  enablePublicIp:
+                    description: Enabling public ip for the instance. If a user wishes to disable this, please also clear the list of the authorized external networks set on the same instance.
+                    type: boolean
+                type: object
               readPoolConfig:
                 description: Read pool specific config. If the instance type is READ_POOL, this configuration must be provided.
                 properties:
@@ -447,6 +482,9 @@ spec:
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
+              publicIpAddress:
+                description: The public IP addresses for the Instance. This is available ONLY when networkConfig.enablePublicIp is set to true. This is the connection endpoint for an end-user application.
+                type: string
               reconciling:
                 description: Set to true if the current state of Instance does not match the user's intended state, and the service is actively updating the resource to reconcile them. This can happen due to user-triggered updates or system actions like failover or maintenance.
                 type: boolean
