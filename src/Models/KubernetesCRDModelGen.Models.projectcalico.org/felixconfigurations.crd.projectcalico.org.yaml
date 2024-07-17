@@ -271,6 +271,12 @@ spec:
                    This setting is overridden by the GOGC environment variable. 
                    [Default: 40]
                 type: integer
+              goMaxProcs:
+                description: >-
+                  GoMaxProcs sets the maximum number of CPUs that the Go runtime will use concurrently.  A value of -1 means "use the system default"; typically the number of real CPUs on the system. 
+                   this setting is overridden by the GOMAXPROCS environment variable. 
+                   [Default: -1]
+                type: integer
               goMemoryLimitMB:
                 description: >-
                   GoMemoryLimitMB sets a (soft) memory limit for the Go runtime in MB.  The Go runtime will try to keep its memory usage under the limit by triggering GC as needed.  To avoid thrashing, it will exceed the limit if GC starts to take more than 50% of the process's CPU time.  A value of -1 disables the memory limit. 
@@ -412,6 +418,9 @@ spec:
                 x-kubernetes-int-or-string: true
               netlinkTimeout:
                 pattern: ^([0-9]+(\\.[0-9]+)?(ms|s|m|h))*$
+                type: string
+              nftablesMode:
+                description: 'NFTablesMode configures nftables support in Felix. [Default: Disabled]'
                 type: string
               openstackRegion:
                 description: 'OpenstackRegion is the name of the region that a particular Felix belongs to. In a multi-region Calico/OpenStack deployment, this must be configured somehow for each Felix (here in the datamodel, or in felix.cfg or the environment on each compute node), and must match the [calico] openstack_region value configured in neutron.conf on each node. [Default: Empty]'
