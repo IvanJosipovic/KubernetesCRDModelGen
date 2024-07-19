@@ -11,7 +11,7 @@ using YamlDotNet.Serialization;
 namespace KubernetesCRDModelGen.SourceGenerator
 {
     [Generator]
-    public class Generator : ISourceGenerator
+    public class SourceGenerator : ISourceGenerator
     {
         public void Execute(GeneratorExecutionContext context)
         {
@@ -28,7 +28,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
             var deserializer = new DeserializerBuilder().Build();
 
-            var crdGen = new CRDGenerator();
+            var crdGen = new Generator();
 
             foreach (var file in context.AdditionalFiles)
             {
@@ -57,6 +57,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
                                 var crd = KubernetesYaml.Deserialize<V1CustomResourceDefinition>(yaml);
                                 var code = crdGen.GenerateCode(crd, "KubernetesCRDModelGen.Models");
 
+
                                 context.AddSource($"{crd.Metadata.Name.Replace(".", "-")}.g.cs", code);
                             }
                             catch (Exception e)
@@ -82,7 +83,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
                         "{0}\n{1}",
                         "KubernetesCRDModelGen",
                         DiagnosticSeverity.Error,
-                        true), Location.None, e.Message, e.StackTrace));
+                        true), Location.None, e, e.StackTrace));
                 }
             }
         }

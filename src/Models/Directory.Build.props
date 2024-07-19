@@ -1,7 +1,6 @@
 <Project>
     <PropertyGroup>
-        <!--<TargetFramework>netstandard2.0</TargetFramework>-->
-        <TargetFrameworks>netstandard2.0;net6.0;net7.0;net8.0</TargetFrameworks>
+        <TargetFramework>net8.0</TargetFramework>
         <Authors>Ivan Josipovic</Authors>
         <Description>Kubernetes Custom Resource Definition Models</Description>
         <PackageTags>Kubernetes Custom Resource Definition Models</PackageTags>

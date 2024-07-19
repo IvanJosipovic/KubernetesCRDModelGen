@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;net6.0;net7.0;net8.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
         <Authors>Ivan Josipovic</Authors>
         <Description>Converts Custom Resource Definition Yaml files to Models</Description>
         <PackageTags>Kubernetes Yaml CRD Converts Custom Resource Model</PackageTags>
@@ -19,11 +19,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="CsCodeGenerator" Version="2.0.0" />
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
-        <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.4.5" />
-        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.10.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+        <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.15" />
     </ItemGroup>
 
     <ItemGroup>
@@ -33,12 +31,14 @@
   <Choose>
     <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
         <ItemGroup>
-            <PackageReference Include="KubernetesClient.Classic" Version="13.0.1" />
+            <PackageReference Include="KubernetesClient.Classic" Version="14.0.2" />
+            <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.7.2" />
         </ItemGroup>
     </When>
     <Otherwise>
         <ItemGroup>
-            <PackageReference Include="KubernetesClient" Version="13.0.11" />
+            <PackageReference Include="KubernetesClient" Version="14.0.2" />
+            <PackageReference Include="Basic.Reference.Assemblies.Net80" Version="1.7.2" />
         </ItemGroup>
     </Otherwise>
   </Choose>

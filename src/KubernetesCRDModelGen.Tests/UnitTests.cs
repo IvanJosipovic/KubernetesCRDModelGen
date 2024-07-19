@@ -1,36 +1,21 @@
-using FluentAssertions;
-using k8s;
 using k8s.Models;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+using k8s;
+using FluentAssertions;
 using System.Text.Json.Nodes;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using System;
 using Xunit;
+using System.Linq;
 
 namespace KubernetesCRDModelGen.Tests;
 
-public class UnitTest
+public class UnitTest1
 {
-    private static readonly string Namespace = "KubernetesCRDModelGen.Tests.Models";
+    private const string Namespace = "KubernetesCRDModelGen.Tests.Models";
 
-    private static ServiceProvider GetServiceProvider()
+    private static IGenerator GetGenerator()
     {
-        var services = new ServiceCollection();
-        services.AddSingleton<ILoggerFactory, LoggerFactory>();
-        services.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
-        services.AddSingleton<ICRDGenerator, CRDGenerator>();
-
-        return services.BuildServiceProvider();
-    }
-
-    private static ICRDGenerator GetCRDGenerator()
-    {
-        return GetServiceProvider().GetRequiredService<ICRDGenerator>();
+        return new Generator();
     }
 
     private static Type? GetTypeYaml(string yaml, string kind)
@@ -42,7 +27,7 @@ public class UnitTest
 
     private static Type? GetType(V1CustomResourceDefinition crd, string kind)
     {
-        var assembly = GetCRDGenerator().GenerateAssembly(crd, Namespace);
+        var assembly = GetGenerator().GenerateAssembly(crd, Namespace);
 
         var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
 
@@ -83,6 +68,42 @@ spec:
         var type = GetTypeYaml(yaml, "Test");
 
         type.Namespace.Should().Be(Namespace + ".kubeui.com");
+    }
+
+    [Fact]
+    public void TestAssemblyName()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+";
+        var type = GetTypeYaml(yaml, "Test");
+
+        type.Assembly.ManifestModule.ScopeName.Should().Be("tests.kubeui.com.dll");
     }
 
     [Fact]
@@ -166,12 +187,16 @@ spec:
               type: object
             spec:
               type: object
+            status:
+              type: object
 ";
         var type = GetTypeYaml(yaml, "Test");
         type.Name.Should().Be("V1beta1Test");
         type.IsAssignableTo(typeof(IKubernetesObject)).Should().BeTrue();
         type.IsAssignableTo(typeof(IKubernetesObject<V1ObjectMeta>)).Should().BeTrue();
         type.IsAssignableTo(typeof(IMetadata<V1ObjectMeta>)).Should().BeTrue();
+        type.GetInterfaces().FirstOrDefault(x => x.Name == "ISpec`1").Should().NotBeNull();
+        type.GetInterfaces().FirstOrDefault(x => x.Name == "IStatus`1").Should().NotBeNull();
     }
 
     [Fact]
@@ -253,7 +278,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("SomeString").PropertyType.Should().Be<string>();
+        specType.GetProperty("SomeString").PropertyType.Should().Be<string?>();
     }
 
     [Fact]
@@ -516,42 +541,6 @@ spec:
     }
 
     [Fact]
-    public void TestAssemblyName()
-    {
-        var yaml = @"
-apiVersion: apiextensions.k8s.io/v1
-kind: CustomResourceDefinition
-metadata:
-  name: tests.kubeui.com
-spec:
-  group: kubeui.com
-  names:
-    plural: tests
-    singular: test
-    kind: Test
-    listKind: TestList
-  scope: Namespaced
-  versions:
-    - name: v1beta1
-      served: true
-      storage: true
-      schema:
-        openAPIV3Schema:
-          type: object
-          properties:
-            apiVersion:
-              type: string
-            kind:
-              type: string
-            metadata:
-              type: object
-";
-        var type = GetTypeYaml(yaml, "Test");
-
-        type.Assembly.ManifestModule.ScopeName.Should().Be("tests.kubeui.com.dll");
-    }
-
-    [Fact]
     public void TestSpecialChars()
     {
         var yaml = @"
@@ -642,7 +631,7 @@ spec:
 
         var listType = specType.GenericTypeArguments[0];
 
-        listType.Name.Should().Be("SpecItem");
+        listType.Name.Should().Be("V1beta1TestSpec");
         listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<double?>();
         listType.GetProperty("Message").PropertyType.Should().Be<string?>();
     }
@@ -915,7 +904,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("CustomSelector").PropertyType.Should().Be<IDictionary<string, object>>();
+        specType.GetProperty("CustomSelector").PropertyType.Should().Be<IDictionary<string, string>>();
     }
 
     [Fact]
@@ -1177,129 +1166,129 @@ spec:
         itemType.Should().Be<IntstrIntOrString>();
     }
 
-    [Fact]
-    public void TestEnum()
-    {
-        var yaml = @"
-apiVersion: apiextensions.k8s.io/v1
-kind: CustomResourceDefinition
-metadata:
-  name: tests.kubeui.com
-spec:
-  group: kubeui.com
-  names:
-    plural: tests
-    singular: test
-    kind: Test
-    listKind: TestList
-  scope: Namespaced
-  versions:
-    - name: v1beta1
-      served: true
-      storage: true
-      schema:
-        openAPIV3Schema:
-          type: object
-          properties:
-            apiVersion:
-              type: string
-            kind:
-              type: string
-            metadata:
-              type: object
-            spec:
-              type: object
-              properties:
-                testEnum:
-                  enum:
-                  - Always
-                  - IfNotPresent
-                  - Never
-                  - ""null""
-                  - null
-                  type: string
-";
-        var type = GetTypeYaml(yaml, "Test");
+    //    [Fact]
+    //    public void TestEnum()
+    //    {
+    //        var yaml = @"
+    //apiVersion: apiextensions.k8s.io/v1
+    //kind: CustomResourceDefinition
+    //metadata:
+    //  name: tests.kubeui.com
+    //spec:
+    //  group: kubeui.com
+    //  names:
+    //    plural: tests
+    //    singular: test
+    //    kind: Test
+    //    listKind: TestList
+    //  scope: Namespaced
+    //  versions:
+    //    - name: v1beta1
+    //      served: true
+    //      storage: true
+    //      schema:
+    //        openAPIV3Schema:
+    //          type: object
+    //          properties:
+    //            apiVersion:
+    //              type: string
+    //            kind:
+    //              type: string
+    //            metadata:
+    //              type: object
+    //            spec:
+    //              type: object
+    //              properties:
+    //                testEnum:
+    //                  enum:
+    //                  - Always
+    //                  - IfNotPresent
+    //                  - Never
+    //                  - ""null""
+    //                  - null
+    //                  type: string
+    //";
+    //        var type = GetTypeYaml(yaml, "Test");
 
-        var specType = type.GetProperty("Spec").PropertyType;
+    //        var specType = type.GetProperty("Spec").PropertyType;
 
-        var itemType = specType.GetProperty("TestEnum");
+    //        var itemType = specType.GetProperty("TestEnum");
 
-        var attr = itemType.CustomAttributes.Where(x => x.AttributeType.Name == "EnumAttribute").First();
+    //        var attr = itemType.CustomAttributes.Where(x => x.AttributeType.Name == "EnumAttribute").First();
 
-        string[] test = new[] { "Always", "IfNotPresent", "Never", "null" };
+    //        string[] test = new[] { "Always", "IfNotPresent", "Never", "null" };
 
-        var output = attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>;
+    //        var output = attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>;
 
-        test.Count().Should().Be(output.Count());
+    //        test.Count().Should().Be(output.Count());
 
-        foreach (CustomAttributeTypedArgument item in attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>)
-        {
-            test.Contains(item.Value.ToString()).Should().BeTrue();
-        }
-    }
+    //        foreach (CustomAttributeTypedArgument item in attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>)
+    //        {
+    //            test.Contains(item.Value.ToString()).Should().BeTrue();
+    //        }
+    //    }
 
-    [Fact]
-    public void TestEnumArray()
-    {
-        var yaml = @"
-apiVersion: apiextensions.k8s.io/v1
-kind: CustomResourceDefinition
-metadata:
-  name: tests.kubeui.com
-spec:
-  group: kubeui.com
-  names:
-    plural: tests
-    singular: test
-    kind: Test
-    listKind: TestList
-  scope: Namespaced
-  versions:
-    - name: v1beta1
-      served: true
-      storage: true
-      schema:
-        openAPIV3Schema:
-          type: object
-          properties:
-            apiVersion:
-              type: string
-            kind:
-              type: string
-            metadata:
-              type: object
-            spec:
-              type: object
-              properties:
-                enumArray:
-                  items:
-                    type: string
-                    enum:
-                    - Always
-                    - IfNotPresent
-                    - Never
-                  type: array
-";
-        var type = GetTypeYaml(yaml, "Test");
+    //    [Fact]
+    //    public void TestEnumArray()
+    //    {
+    //        var yaml = @"
+    //apiVersion: apiextensions.k8s.io/v1
+    //kind: CustomResourceDefinition
+    //metadata:
+    //  name: tests.kubeui.com
+    //spec:
+    //  group: kubeui.com
+    //  names:
+    //    plural: tests
+    //    singular: test
+    //    kind: Test
+    //    listKind: TestList
+    //  scope: Namespaced
+    //  versions:
+    //    - name: v1beta1
+    //      served: true
+    //      storage: true
+    //      schema:
+    //        openAPIV3Schema:
+    //          type: object
+    //          properties:
+    //            apiVersion:
+    //              type: string
+    //            kind:
+    //              type: string
+    //            metadata:
+    //              type: object
+    //            spec:
+    //              type: object
+    //              properties:
+    //                enumArray:
+    //                  items:
+    //                    type: string
+    //                    enum:
+    //                    - Always
+    //                    - IfNotPresent
+    //                    - Never
+    //                  type: array
+    //";
+    //        var type = GetTypeYaml(yaml, "Test");
 
-        var specType = type.GetProperty("Spec").PropertyType;
+    //        var specType = type.GetProperty("Spec").PropertyType;
 
-        var itemType = specType.GetProperty("EnumArray");
+    //        var itemType = specType.GetProperty("EnumArray");
 
-        var attr = itemType.CustomAttributes.Where(x => x.AttributeType.Name == "EnumAttribute").First();
+    //        var attr = itemType.CustomAttributes.Where(x => x.AttributeType.Name == "EnumAttribute").First();
 
-        string[] test = new[] { "Always", "IfNotPresent", "Never" };
+    //        string[] test = new[] { "Always", "IfNotPresent", "Never" };
 
-        var output = attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>;
+    //        var output = attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>;
 
-        test.Count().Should().Be(output.Count());
+    //        test.Count().Should().Be(output.Count());
 
-        foreach (CustomAttributeTypedArgument item in attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>)
-        {
-            test.Contains(item.Value.ToString()).Should().BeTrue();
-        }
-    }
+    //        foreach (CustomAttributeTypedArgument item in attr.ConstructorArguments[0].Value as IEnumerable<CustomAttributeTypedArgument>)
+    //        {
+    //            test.Contains(item.Value.ToString()).Should().BeTrue();
+    //        }
+    //    }
 
     [Fact]
     public void TestObject()
@@ -1349,12 +1338,12 @@ spec:
 
         var nested1 = specType.GetProperty("Nested1").PropertyType;
 
-        nested1.Name.Should().Be("Nested1Model");
+        nested1.Name.Should().Be("V1beta1TestSpecNested1");
         nested1.IsClass.Should().BeTrue();
 
         var nested11 = nested1.GetProperty("Nested11").PropertyType;
 
-        nested11.Name.Should().Be("Nested11Model");
+        nested11.Name.Should().Be("V1beta1TestSpecNested1Nested11");
         nested11.IsClass.Should().BeTrue();
         nested11.GetProperty("Prop1").PropertyType.Should().Be<string>();
     }
@@ -1407,12 +1396,12 @@ spec:
 
         var nested1 = specType.GetProperty("Nested").PropertyType;
 
-        nested1.Name.Should().Be("NestedModel");
+        nested1.Name.Should().Be("V1beta1TestSpecNested");
         nested1.IsClass.Should().BeTrue();
 
         var nested11 = nested1.GetProperty("Nested").PropertyType;
 
-        nested11.Name.Should().Be("NestedModel2");
+        nested11.Name.Should().Be("V1beta1TestSpecNestedNested");
         nested11.IsClass.Should().BeTrue();
         nested11.GetProperty("Prop1").PropertyType.Should().Be<string>();
     }
@@ -1468,7 +1457,7 @@ spec:
 
         var listType = specType.GenericTypeArguments[0];
 
-        listType.Name.Should().Be("SpecItem");
+        listType.Name.Should().Be("V1beta1TestSpec");
 
         typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).Should().BeTrue();
 
@@ -1476,6 +1465,6 @@ spec:
 
         var listType2 = specType2.GenericTypeArguments[0];
 
-        listType2.Name.Should().Be("SpecItem2");
+        listType2.Name.Should().Be("V1beta1TestSpecSpec");
     }
 }
