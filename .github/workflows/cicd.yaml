@@ -57,6 +57,16 @@ jobs:
     - name: .NET Pack
       run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1' }}
 
+
+    - name: Perform a Pester test from the Tests.ps1 file
+      shell: pwsh
+      run: |
+        $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
+
+        f
+
+
+
     - name: Semantic Release
       if: steps.semantic.outputs.new_release_published == 'true'
       uses: cycjimmy/semantic-release-action@v4

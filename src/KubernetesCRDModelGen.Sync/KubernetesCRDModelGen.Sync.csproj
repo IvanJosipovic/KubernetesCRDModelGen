@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <InvariantGlobalization>true</InvariantGlobalization>
     <UserSecretsId>dotnet-KubernetesCRDModelGen.Sync-9c67cb4e-ce62-4808-ae34-39928f9e90d0</UserSecretsId>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
