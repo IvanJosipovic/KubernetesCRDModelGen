@@ -60,6 +60,7 @@ jobs:
     - name: Build Model packages
       shell: pwsh
       run: |
+        (Get-Content src\Models\Directory.Build.props).Replace('{{Version}}', '${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1' }}') | Set-Content src\Models\Directory.Build.props
         $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
         foreach($project in $projects){
           dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1' }} $($project.FullName)

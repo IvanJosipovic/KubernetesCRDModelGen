@@ -27,8 +27,8 @@
         </RestoreAdditionalProjectSources>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-0" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
-        <PackageReference Include="KubernetesCRDModelGen.Models" Version="1.0.0-0"/>
+        <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="{{Version}}" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+        <PackageReference Include="KubernetesCRDModelGen.Models" Version="{{Version}}"/>
         <AdditionalFiles Include="*.yaml" />
     </ItemGroup>
 </Project>
