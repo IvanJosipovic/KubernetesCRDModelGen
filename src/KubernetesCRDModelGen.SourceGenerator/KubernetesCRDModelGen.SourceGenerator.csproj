@@ -115,7 +115,7 @@
         <PackageReference Include="System.Security.Cryptography.Cng" Version="5.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Security_Cryptography_Cng)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="YamlDotNet" Version="15.3.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="YamlDotNet" Version="16.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGYamlDotNet)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.7.2" GeneratePathProperty="true" PrivateAssets="all" />
