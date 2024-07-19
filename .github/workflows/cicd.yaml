@@ -55,7 +55,7 @@ jobs:
       run: dotnet run -c Release
 
     - name: .NET Pack
-      run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1' }}
+      run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }}
 
     - name: Build Model packages
       shell: pwsh
