@@ -14,4 +14,9 @@
         <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="9.9.9" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
         <AdditionalFiles Include="*.yaml" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\KubernetesCRDModelGen.Models\KubernetesCRDModelGen.Models.csproj" />
+      <ProjectReference Include="..\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj" />
+      <ProjectReference Include="..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" />
+    </ItemGroup>
 </Project>
