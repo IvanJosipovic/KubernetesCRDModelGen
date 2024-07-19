@@ -456,7 +456,7 @@ public class Generator : IGenerator
                                                 SyntaxFactory.Literal(propertyName)))))))))
                 .WithLeadingTrivia(
                     SyntaxFactory.TriviaList(
-                        SyntaxFactory.Comment($"/// <summary>{comment}</summary>"),
+                        SyntaxFactory.Comment($"/// <summary>{comment?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
                         SyntaxFactory.CarriageReturnLineFeed));
     }
 
