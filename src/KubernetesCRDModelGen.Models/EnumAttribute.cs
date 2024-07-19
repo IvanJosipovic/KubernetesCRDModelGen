@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace KubernetesCRDModelGen.Models;
+﻿namespace KubernetesCRDModelGen.Models;
 
 [AttributeUsage(AttributeTargets.Property)]
 public class EnumAttribute : Attribute

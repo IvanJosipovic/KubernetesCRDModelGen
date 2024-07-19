@@ -19,7 +19,7 @@ namespace Worker
 
             var crd = objects.First() as V1CustomResourceDefinition;
 
-            var gen = new CRDGenerator();
+            var gen = new Generator() as IGenerator;
 
             var code = gen.GenerateCode(crd);
 

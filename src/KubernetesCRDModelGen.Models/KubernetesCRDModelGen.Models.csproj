@@ -1,21 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net6.0;net7.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <Choose>
     <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
         <ItemGroup>
-            <PackageReference Include="KubernetesClient.Classic" Version="13.0.1" />
+            <PackageReference Include="KubernetesClient.Classic" Version="14.0.2" />
         </ItemGroup>
     </When>
     <Otherwise>
         <ItemGroup>
-            <PackageReference Include="KubernetesClient" Version="13.0.11" />
+            <PackageReference Include="KubernetesClient" Version="14.0.2" />
         </ItemGroup>
     </Otherwise>
   </Choose>

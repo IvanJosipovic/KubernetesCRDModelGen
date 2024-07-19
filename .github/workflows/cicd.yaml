@@ -50,8 +50,20 @@ jobs:
         file: coverage.cobertura.xml
         fail_ci_if_error: true
 
+    - name: Benchmarks
+      working-directory: benchmarks/KubernetesCRDModelGen.Benchmarks
+      run: dotnet run -c Release
+
     - name: .NET Pack
       run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1' }}
+
+    - name: Build Model packages
+      shell: pwsh
+      run: |
+        $projects = Get-ChildItem -Path $PWD\src\Models -Recurse -Filter *.csproj
+        foreach($project in $projects){
+          dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1' }} $($project.FullName)
+        }
 
     - name: Semantic Release
       if: steps.semantic.outputs.new_release_published == 'true'

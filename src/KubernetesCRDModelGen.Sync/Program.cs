@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Http.Resilience;
 using Microsoft.Extensions.Options;
 
 namespace KubernetesCRDModelGen.Sync;
