@@ -398,7 +398,13 @@ public class Generator : IGenerator
                     {
                         var nestedClasses = GenerateClass(schema, parentClassName + GetCleanClassName(propertyName));
 
-                        classes.AddRange(nestedClasses);
+                        foreach (var newClass in nestedClasses)
+                        {
+                            if (!classes.Any(x => x.Identifier.Text == newClass.Identifier.Text))
+                            {
+                                classes.AddRange(nestedClasses);
+                            }
+                        }
 
                         type = nestedClasses[nestedClasses.Length - 1].Identifier.Text;
                     }
