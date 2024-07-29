@@ -113,6 +113,9 @@ spec:
                   backupRetentionPeriod:
                     description: Days to retain backups for. Default 1
                     type: number
+                  caCertificateIdentifier:
+                    description: The CA certificate identifier to use for the DB cluster's server certificate.
+                    type: string
                   clusterMembers:
                     description: – List of RDS Instances that are a part of this cluster
                     items:
@@ -1090,6 +1093,9 @@ spec:
                   backupRetentionPeriod:
                     description: Days to retain backups for. Default 1
                     type: number
+                  caCertificateIdentifier:
+                    description: The CA certificate identifier to use for the DB cluster's server certificate.
+                    type: string
                   clusterMembers:
                     description: – List of RDS Instances that are a part of this cluster
                     items:
@@ -2259,6 +2265,12 @@ spec:
                   backupRetentionPeriod:
                     description: Days to retain backups for. Default 1
                     type: number
+                  caCertificateIdentifier:
+                    description: The CA certificate identifier to use for the DB cluster's server certificate.
+                    type: string
+                  caCertificateValidTill:
+                    description: Expiration date of the DB instance’s server certificate
+                    type: string
                   clusterMembers:
                     description: – List of RDS Instances that are a part of this cluster
                     items:
@@ -2682,6 +2694,9 @@ spec:
                   backupRetentionPeriod:
                     description: Days to retain backups for. Default 1
                     type: number
+                  caCertificateIdentifier:
+                    description: The CA certificate identifier to use for the DB cluster's server certificate.
+                    type: string
                   clusterMembers:
                     description: – List of RDS Instances that are a part of this cluster
                     items:
@@ -3651,6 +3666,9 @@ spec:
                   backupRetentionPeriod:
                     description: Days to retain backups for. Default 1
                     type: number
+                  caCertificateIdentifier:
+                    description: The CA certificate identifier to use for the DB cluster's server certificate.
+                    type: string
                   clusterMembers:
                     description: – List of RDS Instances that are a part of this cluster
                     items:
@@ -4812,6 +4830,12 @@ spec:
                   backupRetentionPeriod:
                     description: Days to retain backups for. Default 1
                     type: number
+                  caCertificateIdentifier:
+                    description: The CA certificate identifier to use for the DB cluster's server certificate.
+                    type: string
+                  caCertificateValidTill:
+                    description: Expiration date of the DB instance’s server certificate
+                    type: string
                   clusterMembers:
                     description: – List of RDS Instances that are a part of this cluster
                     items:

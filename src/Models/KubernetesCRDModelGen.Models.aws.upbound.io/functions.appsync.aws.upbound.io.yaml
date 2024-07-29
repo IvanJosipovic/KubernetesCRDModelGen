@@ -1199,17 +1199,17 @@ spec:
                     description: Function response mapping template.
                     type: string
                   runtime:
-                    description: Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See Runtime.
+                    description: Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See runtime Block for details.
                     properties:
                       name:
-                        description: Function name. The function name does not have to be unique.
+                        description: The name of the runtime to use. Currently, the only allowed value is APPSYNC_JS.
                         type: string
                       runtimeVersion:
                         description: The version of the runtime to use. Currently, the only allowed version is 1.0.0.
                         type: string
                     type: object
                   syncConfig:
-                    description: Describes a Sync configuration for a resolver. See Sync Config.
+                    description: Describes a Sync configuration for a resolver. See sync_config Block for details.
                     properties:
                       conflictDetection:
                         description: Conflict Detection strategy to use. Valid values are NONE and VERSION.
@@ -1218,7 +1218,7 @@ spec:
                         description: Conflict Resolution strategy to perform in the event of a conflict. Valid values are NONE, OPTIMISTIC_CONCURRENCY, AUTOMERGE, and LAMBDA.
                         type: string
                       lambdaConflictHandlerConfig:
-                        description: Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See Lambda Conflict Handler Config.
+                        description: Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See lambda_conflict_handler_config Block for details.
                         properties:
                           lambdaConflictHandlerArn:
                             description: ARN for the Lambda function to use as the Conflict Handler.
@@ -1450,17 +1450,17 @@ spec:
                     description: Function response mapping template.
                     type: string
                   runtime:
-                    description: Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See Runtime.
+                    description: Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See runtime Block for details.
                     properties:
                       name:
-                        description: Function name. The function name does not have to be unique.
+                        description: The name of the runtime to use. Currently, the only allowed value is APPSYNC_JS.
                         type: string
                       runtimeVersion:
                         description: The version of the runtime to use. Currently, the only allowed version is 1.0.0.
                         type: string
                     type: object
                   syncConfig:
-                    description: Describes a Sync configuration for a resolver. See Sync Config.
+                    description: Describes a Sync configuration for a resolver. See sync_config Block for details.
                     properties:
                       conflictDetection:
                         description: Conflict Detection strategy to use. Valid values are NONE and VERSION.
@@ -1469,7 +1469,7 @@ spec:
                         description: Conflict Resolution strategy to perform in the event of a conflict. Valid values are NONE, OPTIMISTIC_CONCURRENCY, AUTOMERGE, and LAMBDA.
                         type: string
                       lambdaConflictHandlerConfig:
-                        description: Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See Lambda Conflict Handler Config.
+                        description: Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See lambda_conflict_handler_config Block for details.
                         properties:
                           lambdaConflictHandlerArn:
                             description: ARN for the Lambda function to use as the Conflict Handler.
@@ -1730,17 +1730,17 @@ spec:
                     description: Function response mapping template.
                     type: string
                   runtime:
-                    description: Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See Runtime.
+                    description: Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See runtime Block for details.
                     properties:
                       name:
-                        description: Function name. The function name does not have to be unique.
+                        description: The name of the runtime to use. Currently, the only allowed value is APPSYNC_JS.
                         type: string
                       runtimeVersion:
                         description: The version of the runtime to use. Currently, the only allowed version is 1.0.0.
                         type: string
                     type: object
                   syncConfig:
-                    description: Describes a Sync configuration for a resolver. See Sync Config.
+                    description: Describes a Sync configuration for a resolver. See sync_config Block for details.
                     properties:
                       conflictDetection:
                         description: Conflict Detection strategy to use. Valid values are NONE and VERSION.
@@ -1749,7 +1749,7 @@ spec:
                         description: Conflict Resolution strategy to perform in the event of a conflict. Valid values are NONE, OPTIMISTIC_CONCURRENCY, AUTOMERGE, and LAMBDA.
                         type: string
                       lambdaConflictHandlerConfig:
-                        description: Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See Lambda Conflict Handler Config.
+                        description: Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See lambda_conflict_handler_config Block for details.
                         properties:
                           lambdaConflictHandlerArn:
                             description: ARN for the Lambda function to use as the Conflict Handler.

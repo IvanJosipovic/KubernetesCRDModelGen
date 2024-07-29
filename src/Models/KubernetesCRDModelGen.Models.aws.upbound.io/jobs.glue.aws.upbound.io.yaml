@@ -131,6 +131,9 @@ spec:
                   glueVersion:
                     description: The version of glue to use, for example "1.0". Ray jobs should set this to 4.0 or greater. For information about available versions, see the AWS Glue Release Notes.
                     type: string
+                  maintenanceWindow:
+                    description: –  Specifies the day of the week and hour for the maintenance window for streaming jobs.
+                    type: string
                   maxCapacity:
                     description: –  The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.
                     type: number
@@ -333,6 +336,9 @@ spec:
                     type: array
                   glueVersion:
                     description: The version of glue to use, for example "1.0". Ray jobs should set this to 4.0 or greater. For information about available versions, see the AWS Glue Release Notes.
+                    type: string
+                  maintenanceWindow:
+                    description: –  Specifies the day of the week and hour for the maintenance window for streaming jobs.
                     type: string
                   maxCapacity:
                     description: –  The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.
@@ -731,6 +737,9 @@ spec:
                     type: string
                   id:
                     description: Job name
+                    type: string
+                  maintenanceWindow:
+                    description: –  Specifies the day of the week and hour for the maintenance window for streaming jobs.
                     type: string
                   maxCapacity:
                     description: –  The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.
@@ -957,6 +966,9 @@ spec:
                   glueVersion:
                     description: The version of glue to use, for example "1.0". Ray jobs should set this to 4.0 or greater. For information about available versions, see the AWS Glue Release Notes.
                     type: string
+                  maintenanceWindow:
+                    description: –  Specifies the day of the week and hour for the maintenance window for streaming jobs.
+                    type: string
                   maxCapacity:
                     description: –  The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.
                     type: number
@@ -1153,6 +1165,9 @@ spec:
                     type: object
                   glueVersion:
                     description: The version of glue to use, for example "1.0". Ray jobs should set this to 4.0 or greater. For information about available versions, see the AWS Glue Release Notes.
+                    type: string
+                  maintenanceWindow:
+                    description: –  Specifies the day of the week and hour for the maintenance window for streaming jobs.
                     type: string
                   maxCapacity:
                     description: –  The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.
@@ -1545,6 +1560,9 @@ spec:
                     type: string
                   id:
                     description: Job name
+                    type: string
+                  maintenanceWindow:
+                    description: –  Specifies the day of the week and hour for the maintenance window for streaming jobs.
                     type: string
                   maxCapacity:
                     description: –  The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.
