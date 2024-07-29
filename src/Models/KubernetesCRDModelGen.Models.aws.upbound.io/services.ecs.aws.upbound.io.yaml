@@ -904,6 +904,44 @@ spec:
                     description: Map of arbitrary keys and values that, when changed, will trigger an in-place update (redeployment). Useful with plantimestamp(). See example above.
                     type: object
                     x-kubernetes-map-type: granular
+                  volumeConfiguration:
+                    description: Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.
+                    properties:
+                      managedEbsVolume:
+                        description: Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.
+                        properties:
+                          encrypted:
+                            description: Whether the volume should be encrypted. Default value is true.
+                            type: boolean
+                          fileSystemType:
+                            description: Linux filesystem type for the volume. For volumes created from a snapshot, same filesystem type must be specified that the volume was using when the snapshot was created. Valid values are ext3, ext4, xfs. Default value is xfs.
+                            type: string
+                          iops:
+                            description: Number of I/O operations per second (IOPS).
+                            type: number
+                          kmsKeyId:
+                            description: Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption.
+                            type: string
+                          roleArn:
+                            description: Amazon ECS infrastructure IAM role that is used to manage your Amazon Web Services infrastructure. Recommended using the Amazon ECS-managed AmazonECSInfrastructureRolePolicyForVolumes IAM policy with this role.
+                            type: string
+                          sizeInGb:
+                            description: Size of the volume in GiB. You must specify either a size_in_gb or a snapshot_id. You can optionally specify a volume size greater than or equal to the snapshot size.
+                            type: number
+                          snapshotId:
+                            description: Snapshot that Amazon ECS uses to create the volume. You must specify either a size_in_gb or a snapshot_id.
+                            type: string
+                          throughput:
+                            description: Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.
+                            type: string
+                          volumeType:
+                            description: Volume type.
+                            type: string
+                        type: object
+                      name:
+                        description: Name of the volume.
+                        type: string
+                    type: object
                   waitForSteadyState:
                     description: Default false.
                     type: boolean
@@ -1749,6 +1787,44 @@ spec:
                     description: Map of arbitrary keys and values that, when changed, will trigger an in-place update (redeployment). Useful with plantimestamp(). See example above.
                     type: object
                     x-kubernetes-map-type: granular
+                  volumeConfiguration:
+                    description: Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.
+                    properties:
+                      managedEbsVolume:
+                        description: Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.
+                        properties:
+                          encrypted:
+                            description: Whether the volume should be encrypted. Default value is true.
+                            type: boolean
+                          fileSystemType:
+                            description: Linux filesystem type for the volume. For volumes created from a snapshot, same filesystem type must be specified that the volume was using when the snapshot was created. Valid values are ext3, ext4, xfs. Default value is xfs.
+                            type: string
+                          iops:
+                            description: Number of I/O operations per second (IOPS).
+                            type: number
+                          kmsKeyId:
+                            description: Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption.
+                            type: string
+                          roleArn:
+                            description: Amazon ECS infrastructure IAM role that is used to manage your Amazon Web Services infrastructure. Recommended using the Amazon ECS-managed AmazonECSInfrastructureRolePolicyForVolumes IAM policy with this role.
+                            type: string
+                          sizeInGb:
+                            description: Size of the volume in GiB. You must specify either a size_in_gb or a snapshot_id. You can optionally specify a volume size greater than or equal to the snapshot size.
+                            type: number
+                          snapshotId:
+                            description: Snapshot that Amazon ECS uses to create the volume. You must specify either a size_in_gb or a snapshot_id.
+                            type: string
+                          throughput:
+                            description: Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.
+                            type: string
+                          volumeType:
+                            description: Volume type.
+                            type: string
+                        type: object
+                      name:
+                        description: Name of the volume.
+                        type: string
+                    type: object
                   waitForSteadyState:
                     description: Default false.
                     type: boolean
@@ -2270,6 +2346,44 @@ spec:
                     description: Map of arbitrary keys and values that, when changed, will trigger an in-place update (redeployment). Useful with plantimestamp(). See example above.
                     type: object
                     x-kubernetes-map-type: granular
+                  volumeConfiguration:
+                    description: Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.
+                    properties:
+                      managedEbsVolume:
+                        description: Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.
+                        properties:
+                          encrypted:
+                            description: Whether the volume should be encrypted. Default value is true.
+                            type: boolean
+                          fileSystemType:
+                            description: Linux filesystem type for the volume. For volumes created from a snapshot, same filesystem type must be specified that the volume was using when the snapshot was created. Valid values are ext3, ext4, xfs. Default value is xfs.
+                            type: string
+                          iops:
+                            description: Number of I/O operations per second (IOPS).
+                            type: number
+                          kmsKeyId:
+                            description: Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption.
+                            type: string
+                          roleArn:
+                            description: Amazon ECS infrastructure IAM role that is used to manage your Amazon Web Services infrastructure. Recommended using the Amazon ECS-managed AmazonECSInfrastructureRolePolicyForVolumes IAM policy with this role.
+                            type: string
+                          sizeInGb:
+                            description: Size of the volume in GiB. You must specify either a size_in_gb or a snapshot_id. You can optionally specify a volume size greater than or equal to the snapshot size.
+                            type: number
+                          snapshotId:
+                            description: Snapshot that Amazon ECS uses to create the volume. You must specify either a size_in_gb or a snapshot_id.
+                            type: string
+                          throughput:
+                            description: Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.
+                            type: string
+                          volumeType:
+                            description: Volume type.
+                            type: string
+                        type: object
+                      name:
+                        description: Name of the volume.
+                        type: string
+                    type: object
                   waitForSteadyState:
                     description: Default false.
                     type: boolean
@@ -2417,10 +2531,10 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       enable:
-                        description: Determines whether to use the CloudWatch alarm option in the service deployment process.
+                        description: Whether to use the CloudWatch alarm option in the service deployment process.
                         type: boolean
                       rollback:
-                        description: Determines whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
+                        description: Whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
                         type: boolean
                     type: object
                   capacityProviderStrategy:
@@ -2554,10 +2668,10 @@ spec:
                     description: Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the DAEMON scheduling strategy.
                     type: number
                   enableEcsManagedTags:
-                    description: Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+                    description: Whether to enable Amazon ECS managed tags for the tasks within the service.
                     type: boolean
                   enableExecuteCommand:
-                    description: Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+                    description: Whether to enable Amazon ECS Exec for the tasks within the service.
                     type: boolean
                   forceNewDeployment:
                     description: Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g., myimage:latest), roll Fargate tasks onto a newer platform version, or immediately deploy ordered_placement_strategy and placement_constraints updates.
@@ -2993,7 +3107,7 @@ spec:
                     description: Platform version on which to run your service. Only applicable for launch_type set to FARGATE. Defaults to LATEST. More information about Fargate platform versions can be found in the AWS ECS User Guide.
                     type: string
                   propagateTags:
-                    description: Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.
+                    description: Whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.
                     type: string
                   region:
                     description: Region is the region you'd like your resource to be created in.
@@ -3002,87 +3116,87 @@ spec:
                     description: Scheduling strategy to use for the service. The valid values are REPLICA and DAEMON. Defaults to REPLICA. Note that Tasks using the Fargate launch type or the .
                     type: string
                   serviceConnectConfiguration:
-                    description: The ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.
+                    description: ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.
                     properties:
                       enabled:
-                        description: Specifies whether to use Service Connect with this service.
+                        description: Whether to use Service Connect with this service.
                         type: boolean
                       logConfiguration:
-                        description: The log configuration for the container. See below.
+                        description: Log configuration for the container. See below.
                         properties:
                           logDriver:
-                            description: The log driver to use for the container.
+                            description: Log driver to use for the container.
                             type: string
                           options:
                             additionalProperties:
                               type: string
-                            description: The configuration options to send to the log driver.
+                            description: Configuration options to send to the log driver.
                             type: object
                             x-kubernetes-map-type: granular
                           secretOption:
-                            description: The secrets to pass to the log configuration. See below.
+                            description: Secrets to pass to the log configuration. See below.
                             items:
                               properties:
                                 name:
-                                  description: The name of the secret.
+                                  description: Name of the secret.
                                   type: string
                                 valueFrom:
-                                  description: The secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.
+                                  description: Secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.
                                   type: string
                               type: object
                             type: array
                         type: object
                       namespace:
-                        description: The namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.
+                        description: Namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.
                         type: string
                       service:
-                        description: The list of Service Connect service objects. See below.
+                        description: List of Service Connect service objects. See below.
                         items:
                           properties:
                             clientAlias:
-                              description: The list of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.
+                              description: List of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.
                               properties:
                                 dnsName:
-                                  description: The name that you use in the applications of client tasks to connect to this service.
+                                  description: Name that you use in the applications of client tasks to connect to this service.
                                   type: string
                                 port:
-                                  description: The listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.
+                                  description: Listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.
                                   type: number
                               type: object
                             discoveryName:
-                              description: The name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.
+                              description: Name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.
                               type: string
                             ingressPortOverride:
-                              description: The port number for the Service Connect proxy to listen on.
+                              description: Port number for the Service Connect proxy to listen on.
                               type: number
                             portName:
-                              description: The name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.
+                              description: Name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.
                               type: string
                             timeout:
                               description: Configuration timeouts for Service Connect
                               properties:
                                 idleTimeoutSeconds:
-                                  description: The amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.
+                                  description: Amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.
                                   type: number
                                 perRequestTimeoutSeconds:
-                                  description: The amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.
+                                  description: Amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.
                                   type: number
                               type: object
                             tls:
-                              description: The configuration for enabling Transport Layer Security (TLS)
+                              description: Configuration for enabling Transport Layer Security (TLS)
                               properties:
                                 issuerCertAuthority:
-                                  description: The details of the certificate authority which will issue the certificate.
+                                  description: Details of the certificate authority which will issue the certificate.
                                   properties:
                                     awsPcaAuthorityArn:
-                                      description: The ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.
+                                      description: ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.
                                       type: string
                                   type: object
                                 kmsKey:
-                                  description: The KMS key used to encrypt the private key in Secrets Manager.
+                                  description: KMS key used to encrypt the private key in Secrets Manager.
                                   type: string
                                 roleArn:
-                                  description: The ARN of the IAM Role that's associated with the Service Connect TLS.
+                                  description: ARN of the IAM Role that's associated with the Service Connect TLS.
                                   type: string
                               type: object
                           type: object
@@ -3205,6 +3319,44 @@ spec:
                     description: Map of arbitrary keys and values that, when changed, will trigger an in-place update (redeployment). Useful with plantimestamp(). See example above.
                     type: object
                     x-kubernetes-map-type: granular
+                  volumeConfiguration:
+                    description: Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.
+                    properties:
+                      managedEbsVolume:
+                        description: Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.
+                        properties:
+                          encrypted:
+                            description: Whether the volume should be encrypted. Default value is true.
+                            type: boolean
+                          fileSystemType:
+                            description: Linux filesystem type for the volume. For volumes created from a snapshot, same filesystem type must be specified that the volume was using when the snapshot was created. Valid values are ext3, ext4, xfs. Default value is xfs.
+                            type: string
+                          iops:
+                            description: Number of I/O operations per second (IOPS).
+                            type: number
+                          kmsKeyId:
+                            description: Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption.
+                            type: string
+                          roleArn:
+                            description: Amazon ECS infrastructure IAM role that is used to manage your Amazon Web Services infrastructure. Recommended using the Amazon ECS-managed AmazonECSInfrastructureRolePolicyForVolumes IAM policy with this role.
+                            type: string
+                          sizeInGb:
+                            description: Size of the volume in GiB. You must specify either a size_in_gb or a snapshot_id. You can optionally specify a volume size greater than or equal to the snapshot size.
+                            type: number
+                          snapshotId:
+                            description: Snapshot that Amazon ECS uses to create the volume. You must specify either a size_in_gb or a snapshot_id.
+                            type: string
+                          throughput:
+                            description: Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.
+                            type: string
+                          volumeType:
+                            description: Volume type.
+                            type: string
+                        type: object
+                      name:
+                        description: Name of the volume.
+                        type: string
+                    type: object
                   waitForSteadyState:
                     description: Default false.
                     type: boolean
@@ -3243,10 +3395,10 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       enable:
-                        description: Determines whether to use the CloudWatch alarm option in the service deployment process.
+                        description: Whether to use the CloudWatch alarm option in the service deployment process.
                         type: boolean
                       rollback:
-                        description: Determines whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
+                        description: Whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
                         type: boolean
                     type: object
                   capacityProviderStrategy:
@@ -3380,10 +3532,10 @@ spec:
                     description: Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the DAEMON scheduling strategy.
                     type: number
                   enableEcsManagedTags:
-                    description: Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+                    description: Whether to enable Amazon ECS managed tags for the tasks within the service.
                     type: boolean
                   enableExecuteCommand:
-                    description: Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+                    description: Whether to enable Amazon ECS Exec for the tasks within the service.
                     type: boolean
                   forceNewDeployment:
                     description: Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g., myimage:latest), roll Fargate tasks onto a newer platform version, or immediately deploy ordered_placement_strategy and placement_constraints updates.
@@ -3819,93 +3971,93 @@ spec:
                     description: Platform version on which to run your service. Only applicable for launch_type set to FARGATE. Defaults to LATEST. More information about Fargate platform versions can be found in the AWS ECS User Guide.
                     type: string
                   propagateTags:
-                    description: Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.
+                    description: Whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.
                     type: string
                   schedulingStrategy:
                     description: Scheduling strategy to use for the service. The valid values are REPLICA and DAEMON. Defaults to REPLICA. Note that Tasks using the Fargate launch type or the .
                     type: string
                   serviceConnectConfiguration:
-                    description: The ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.
+                    description: ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.
                     properties:
                       enabled:
-                        description: Specifies whether to use Service Connect with this service.
+                        description: Whether to use Service Connect with this service.
                         type: boolean
                       logConfiguration:
-                        description: The log configuration for the container. See below.
+                        description: Log configuration for the container. See below.
                         properties:
                           logDriver:
-                            description: The log driver to use for the container.
+                            description: Log driver to use for the container.
                             type: string
                           options:
                             additionalProperties:
                               type: string
-                            description: The configuration options to send to the log driver.
+                            description: Configuration options to send to the log driver.
                             type: object
                             x-kubernetes-map-type: granular
                           secretOption:
-                            description: The secrets to pass to the log configuration. See below.
+                            description: Secrets to pass to the log configuration. See below.
                             items:
                               properties:
                                 name:
-                                  description: The name of the secret.
+                                  description: Name of the secret.
                                   type: string
                                 valueFrom:
-                                  description: The secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.
+                                  description: Secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.
                                   type: string
                               type: object
                             type: array
                         type: object
                       namespace:
-                        description: The namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.
+                        description: Namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.
                         type: string
                       service:
-                        description: The list of Service Connect service objects. See below.
+                        description: List of Service Connect service objects. See below.
                         items:
                           properties:
                             clientAlias:
-                              description: The list of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.
+                              description: List of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.
                               properties:
                                 dnsName:
-                                  description: The name that you use in the applications of client tasks to connect to this service.
+                                  description: Name that you use in the applications of client tasks to connect to this service.
                                   type: string
                                 port:
-                                  description: The listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.
+                                  description: Listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.
                                   type: number
                               type: object
                             discoveryName:
-                              description: The name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.
+                              description: Name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.
                               type: string
                             ingressPortOverride:
-                              description: The port number for the Service Connect proxy to listen on.
+                              description: Port number for the Service Connect proxy to listen on.
                               type: number
                             portName:
-                              description: The name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.
+                              description: Name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.
                               type: string
                             timeout:
                               description: Configuration timeouts for Service Connect
                               properties:
                                 idleTimeoutSeconds:
-                                  description: The amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.
+                                  description: Amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.
                                   type: number
                                 perRequestTimeoutSeconds:
-                                  description: The amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.
+                                  description: Amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.
                                   type: number
                               type: object
                             tls:
-                              description: The configuration for enabling Transport Layer Security (TLS)
+                              description: Configuration for enabling Transport Layer Security (TLS)
                               properties:
                                 issuerCertAuthority:
-                                  description: The details of the certificate authority which will issue the certificate.
+                                  description: Details of the certificate authority which will issue the certificate.
                                   properties:
                                     awsPcaAuthorityArn:
-                                      description: The ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.
+                                      description: ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.
                                       type: string
                                   type: object
                                 kmsKey:
-                                  description: The KMS key used to encrypt the private key in Secrets Manager.
+                                  description: KMS key used to encrypt the private key in Secrets Manager.
                                   type: string
                                 roleArn:
-                                  description: The ARN of the IAM Role that's associated with the Service Connect TLS.
+                                  description: ARN of the IAM Role that's associated with the Service Connect TLS.
                                   type: string
                               type: object
                           type: object
@@ -4028,6 +4180,44 @@ spec:
                     description: Map of arbitrary keys and values that, when changed, will trigger an in-place update (redeployment). Useful with plantimestamp(). See example above.
                     type: object
                     x-kubernetes-map-type: granular
+                  volumeConfiguration:
+                    description: Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.
+                    properties:
+                      managedEbsVolume:
+                        description: Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.
+                        properties:
+                          encrypted:
+                            description: Whether the volume should be encrypted. Default value is true.
+                            type: boolean
+                          fileSystemType:
+                            description: Linux filesystem type for the volume. For volumes created from a snapshot, same filesystem type must be specified that the volume was using when the snapshot was created. Valid values are ext3, ext4, xfs. Default value is xfs.
+                            type: string
+                          iops:
+                            description: Number of I/O operations per second (IOPS).
+                            type: number
+                          kmsKeyId:
+                            description: Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption.
+                            type: string
+                          roleArn:
+                            description: Amazon ECS infrastructure IAM role that is used to manage your Amazon Web Services infrastructure. Recommended using the Amazon ECS-managed AmazonECSInfrastructureRolePolicyForVolumes IAM policy with this role.
+                            type: string
+                          sizeInGb:
+                            description: Size of the volume in GiB. You must specify either a size_in_gb or a snapshot_id. You can optionally specify a volume size greater than or equal to the snapshot size.
+                            type: number
+                          snapshotId:
+                            description: Snapshot that Amazon ECS uses to create the volume. You must specify either a size_in_gb or a snapshot_id.
+                            type: string
+                          throughput:
+                            description: Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.
+                            type: string
+                          volumeType:
+                            description: Volume type.
+                            type: string
+                        type: object
+                      name:
+                        description: Name of the volume.
+                        type: string
+                    type: object
                   waitForSteadyState:
                     description: Default false.
                     type: boolean
@@ -4255,10 +4445,10 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       enable:
-                        description: Determines whether to use the CloudWatch alarm option in the service deployment process.
+                        description: Whether to use the CloudWatch alarm option in the service deployment process.
                         type: boolean
                       rollback:
-                        description: Determines whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
+                        description: Whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
                         type: boolean
                     type: object
                   capacityProviderStrategy:
@@ -4306,10 +4496,10 @@ spec:
                     description: Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the DAEMON scheduling strategy.
                     type: number
                   enableEcsManagedTags:
-                    description: Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
+                    description: Whether to enable Amazon ECS managed tags for the tasks within the service.
                     type: boolean
                   enableExecuteCommand:
-                    description: Specifies whether to enable Amazon ECS Exec for the tasks within the service.
+                    description: Whether to enable Amazon ECS Exec for the tasks within the service.
                     type: boolean
                   forceNewDeployment:
                     description: Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g., myimage:latest), roll Fargate tasks onto a newer platform version, or immediately deploy ordered_placement_strategy and placement_constraints updates.
@@ -4398,93 +4588,93 @@ spec:
                     description: Platform version on which to run your service. Only applicable for launch_type set to FARGATE. Defaults to LATEST. More information about Fargate platform versions can be found in the AWS ECS User Guide.
                     type: string
                   propagateTags:
-                    description: Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.
+                    description: Whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.
                     type: string
                   schedulingStrategy:
                     description: Scheduling strategy to use for the service. The valid values are REPLICA and DAEMON. Defaults to REPLICA. Note that Tasks using the Fargate launch type or the .
                     type: string
                   serviceConnectConfiguration:
-                    description: The ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.
+                    description: ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.
                     properties:
                       enabled:
-                        description: Specifies whether to use Service Connect with this service.
+                        description: Whether to use Service Connect with this service.
                         type: boolean
                       logConfiguration:
-                        description: The log configuration for the container. See below.
+                        description: Log configuration for the container. See below.
                         properties:
                           logDriver:
-                            description: The log driver to use for the container.
+                            description: Log driver to use for the container.
                             type: string
                           options:
                             additionalProperties:
                               type: string
-                            description: The configuration options to send to the log driver.
+                            description: Configuration options to send to the log driver.
                             type: object
                             x-kubernetes-map-type: granular
                           secretOption:
-                            description: The secrets to pass to the log configuration. See below.
+                            description: Secrets to pass to the log configuration. See below.
                             items:
                               properties:
                                 name:
-                                  description: The name of the secret.
+                                  description: Name of the secret.
                                   type: string
                                 valueFrom:
-                                  description: The secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.
+                                  description: Secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.
                                   type: string
                               type: object
                             type: array
                         type: object
                       namespace:
-                        description: The namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.
+                        description: Namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.
                         type: string
                       service:
-                        description: The list of Service Connect service objects. See below.
+                        description: List of Service Connect service objects. See below.
                         items:
                           properties:
                             clientAlias:
-                              description: The list of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.
+                              description: List of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.
                               properties:
                                 dnsName:
-                                  description: The name that you use in the applications of client tasks to connect to this service.
+                                  description: Name that you use in the applications of client tasks to connect to this service.
                                   type: string
                                 port:
-                                  description: The listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.
+                                  description: Listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.
                                   type: number
                               type: object
                             discoveryName:
-                              description: The name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.
+                              description: Name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.
                               type: string
                             ingressPortOverride:
-                              description: The port number for the Service Connect proxy to listen on.
+                              description: Port number for the Service Connect proxy to listen on.
                               type: number
                             portName:
-                              description: The name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.
+                              description: Name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.
                               type: string
                             timeout:
                               description: Configuration timeouts for Service Connect
                               properties:
                                 idleTimeoutSeconds:
-                                  description: The amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.
+                                  description: Amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.
                                   type: number
                                 perRequestTimeoutSeconds:
-                                  description: The amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.
+                                  description: Amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.
                                   type: number
                               type: object
                             tls:
-                              description: The configuration for enabling Transport Layer Security (TLS)
+                              description: Configuration for enabling Transport Layer Security (TLS)
                               properties:
                                 issuerCertAuthority:
-                                  description: The details of the certificate authority which will issue the certificate.
+                                  description: Details of the certificate authority which will issue the certificate.
                                   properties:
                                     awsPcaAuthorityArn:
-                                      description: The ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.
+                                      description: ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.
                                       type: string
                                   type: object
                                 kmsKey:
-                                  description: The KMS key used to encrypt the private key in Secrets Manager.
+                                  description: KMS key used to encrypt the private key in Secrets Manager.
                                   type: string
                                 roleArn:
-                                  description: The ARN of the IAM Role that's associated with the Service Connect TLS.
+                                  description: ARN of the IAM Role that's associated with the Service Connect TLS.
                                   type: string
                               type: object
                           type: object
@@ -4527,6 +4717,44 @@ spec:
                     description: Map of arbitrary keys and values that, when changed, will trigger an in-place update (redeployment). Useful with plantimestamp(). See example above.
                     type: object
                     x-kubernetes-map-type: granular
+                  volumeConfiguration:
+                    description: Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.
+                    properties:
+                      managedEbsVolume:
+                        description: Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.
+                        properties:
+                          encrypted:
+                            description: Whether the volume should be encrypted. Default value is true.
+                            type: boolean
+                          fileSystemType:
+                            description: Linux filesystem type for the volume. For volumes created from a snapshot, same filesystem type must be specified that the volume was using when the snapshot was created. Valid values are ext3, ext4, xfs. Default value is xfs.
+                            type: string
+                          iops:
+                            description: Number of I/O operations per second (IOPS).
+                            type: number
+                          kmsKeyId:
+                            description: Amazon Resource Name (ARN) identifier of the Amazon Web Services Key Management Service key to use for Amazon EBS encryption.
+                            type: string
+                          roleArn:
+                            description: Amazon ECS infrastructure IAM role that is used to manage your Amazon Web Services infrastructure. Recommended using the Amazon ECS-managed AmazonECSInfrastructureRolePolicyForVolumes IAM policy with this role.
+                            type: string
+                          sizeInGb:
+                            description: Size of the volume in GiB. You must specify either a size_in_gb or a snapshot_id. You can optionally specify a volume size greater than or equal to the snapshot size.
+                            type: number
+                          snapshotId:
+                            description: Snapshot that Amazon ECS uses to create the volume. You must specify either a size_in_gb or a snapshot_id.
+                            type: string
+                          throughput:
+                            description: Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.
+                            type: string
+                          volumeType:
+                            description: Volume type.
+                            type: string
+                        type: object
+                      name:
+                        description: Name of the volume.
+                        type: string
+                    type: object
                   waitForSteadyState:
                     description: Default false.
                     type: boolean

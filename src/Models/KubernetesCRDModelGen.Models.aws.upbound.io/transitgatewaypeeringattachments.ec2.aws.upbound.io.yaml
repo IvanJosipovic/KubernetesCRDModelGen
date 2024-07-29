@@ -84,6 +84,13 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  options:
+                    description: Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!
+                    properties:
+                      dynamicRouting:
+                        description: Indicates whether dynamic routing is enabled or disabled.. Supports enable and disable.
+                        type: string
+                    type: object
                   peerAccountId:
                     description: Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the AWS provider is currently connected to.
                     type: string
@@ -302,6 +309,13 @@ spec:
 
                   autoscaler.
                 properties:
+                  options:
+                    description: Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!
+                    properties:
+                      dynamicRouting:
+                        description: Indicates whether dynamic routing is enabled or disabled.. Supports enable and disable.
+                        type: string
+                    type: object
                   peerAccountId:
                     description: Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the AWS provider is currently connected to.
                     type: string
@@ -712,6 +726,13 @@ spec:
                   id:
                     description: EC2 Transit Gateway Attachment identifier
                     type: string
+                  options:
+                    description: Describes whether dynamic routing is enabled or disabled for the transit gateway peering request. See options below for more details!
+                    properties:
+                      dynamicRouting:
+                        description: Indicates whether dynamic routing is enabled or disabled.. Supports enable and disable.
+                        type: string
+                    type: object
                   peerAccountId:
                     description: Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the AWS provider is currently connected to.
                     type: string
