@@ -16,7 +16,7 @@ namespace KubernetesCRDModelGen;
 
 public class Generator : IGenerator
 {
-    public const string ModelNamespace = "KubeUI.Models";
+    public const string ModelNamespace = "KubernetesCRDModelGen.Models";
 
     private readonly MetadataReference[] _metadataReferences;
 
