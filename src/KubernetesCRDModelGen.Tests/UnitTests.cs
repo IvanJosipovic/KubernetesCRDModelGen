@@ -1310,7 +1310,7 @@ spec:
     }
 
     [Fact]
-    public void TestEnumSerializeJson()
+    public void TestEnumDeSerializeJson()
     {
         var yaml = @"
     apiVersion: apiextensions.k8s.io/v1
@@ -1356,7 +1356,7 @@ spec:
 
         var enumType = Nullable.GetUnderlyingType(specType.GetProperty("TestEnum").PropertyType);
 
-        var json = """
+        var objJson = """
 {
   "apiVersion": "v1beta1",
   "kind": "Test",
@@ -1368,7 +1368,7 @@ spec:
 """;
 
         var deserializeMethod = typeof(KubernetesJson).GetMethod("Deserialize", [typeof(string), typeof(JsonSerializerOptions)]).MakeGenericMethod(type);
-        var obj = deserializeMethod.Invoke(null, [json, null]);
+        var obj = deserializeMethod.Invoke(null, [objJson, null]);
 
         obj.Should().NotBeNull();
         var spec = type.GetProperty("Spec")!.GetValue(obj);
@@ -1377,7 +1377,7 @@ spec:
     }
 
     [Fact]
-    public void TestEnumDeSerializeJson()
+    public void TestEnumSerializeJson()
     {
         var yaml = @"
     apiVersion: apiextensions.k8s.io/v1
@@ -1437,6 +1437,138 @@ spec:
         var objJson = KubernetesJson.Serialize(obj);
 
         objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":"ifNotPresent"}}""");
+    }
+
+    [Fact]
+    public void TestEnumDeSerializeYaml()
+    {
+        var yaml = @"
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: tests.kubeui.com
+    spec:
+      group: kubeui.com
+      names:
+        plural: tests
+        singular: test
+        kind: Test
+        listKind: TestList
+      scope: Namespaced
+      versions:
+        - name: v1beta1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              properties:
+                apiVersion:
+                  type: string
+                kind:
+                  type: string
+                metadata:
+                  type: object
+                spec:
+                  type: object
+                  properties:
+                    testEnum:
+                      enum:
+                      - always
+                      - ifNotPresent
+                      - never
+                      type: string
+    ";
+        var code = GetCode(yaml);
+        var type = GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var enumType = Nullable.GetUnderlyingType(specType.GetProperty("TestEnum").PropertyType);
+
+        var objYaml = """
+apiVersion: "v1beta1"
+kind: "Test"
+metadata:
+spec:
+  testEnum: "ifNotPresent"
+""";
+
+        var deserializeMethod = typeof(KubernetesYaml).GetMethod("Deserialize", [typeof(string), typeof(bool)]).MakeGenericMethod(type);
+        var obj = deserializeMethod.Invoke(null, [objYaml, false]);
+
+        obj.Should().NotBeNull();
+        var spec = type.GetProperty("Spec")!.GetValue(obj);
+
+        spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.Should().Be(Enum.Parse(enumType, "IfNotPresent"));
+    }
+
+    [Fact]
+    public void TestEnumSerializeYaml()
+    {
+        var yaml = @"
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: tests.kubeui.com
+    spec:
+      group: kubeui.com
+      names:
+        plural: tests
+        singular: test
+        kind: Test
+        listKind: TestList
+      scope: Namespaced
+      versions:
+        - name: v1beta1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              properties:
+                apiVersion:
+                  type: string
+                kind:
+                  type: string
+                metadata:
+                  type: object
+                spec:
+                  type: object
+                  properties:
+                    testEnum:
+                      enum:
+                      - always
+                      - ifNotPresent
+                      - never
+                      type: string
+    ";
+        var code = GetCode(yaml);
+        var type = GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var enumType = Nullable.GetUnderlyingType(specType.GetProperty("TestEnum").PropertyType);
+
+        var obj = Activator.CreateInstance(type);
+
+        type.GetProperty("ApiVersion").SetValue(obj, "v1beta1");
+        type.GetProperty("Kind").SetValue(obj, "Test");
+
+        type.GetProperty("Spec")!.SetValue(obj, Activator.CreateInstance(type.GetProperty("Spec").PropertyType));
+
+        var spec = type.GetProperty("Spec").GetValue(obj);
+
+        spec.GetType().GetProperty("TestEnum")!.SetValue(spec, Enum.Parse(enumType, "IfNotPresent"));
+
+        var objYaml = KubernetesYaml.Serialize(obj);
+
+        objYaml.Should().Be("""
+apiVersion: v1beta1
+kind: Test
+spec:
+  testEnum: ifNotPresent
+""");
     }
 
     [Fact]
