@@ -141,6 +141,9 @@
 
         <PackageReference Include="SharpYaml" Version="2.1.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSharpYaml)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+        <PackageReference Include="Humanizer.Core" Version="2.14.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGHumanizer_Core)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     </ItemGroup>
 
     <PropertyGroup>
@@ -186,6 +189,7 @@
             <TargetPathWithTargetPlatformMoniker Include="$(PKGMicrosoft_OpenApi_Readers)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
             <TargetPathWithTargetPlatformMoniker Include="$(PKGMicrosoft_OpenApi)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
             <TargetPathWithTargetPlatformMoniker Include="$(PKGSharpYaml)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGHumanizer_Core)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
         </ItemGroup>
     </Target>
 
