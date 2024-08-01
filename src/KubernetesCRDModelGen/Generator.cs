@@ -333,27 +333,6 @@ public class Generator : IGenerator
     private static string GenerateEnum(IList<IOpenApiAny> options, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
     {
         var enumDeclaration = SyntaxFactory.EnumDeclaration(CleanIdentifier(parentClassName + " " + propertyName) + "Enum")
-            .AddAttributeLists(
-                SyntaxFactory.AttributeList(
-                    SyntaxFactory.SingletonSeparatedList(
-                        SyntaxFactory.Attribute(
-                            SyntaxFactory.ParseName("JsonConverter"),
-                            SyntaxFactory.AttributeArgumentList(
-                                SyntaxFactory.SingletonSeparatedList(
-                                    SyntaxFactory.AttributeArgument(
-                                        SyntaxFactory.TypeOfExpression(
-                                            SyntaxFactory.ParseTypeName("JsonStringEnumMemberConverter")
-
-                                        // Uncomment when STJ 9.0 is released
-                                        //SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{CleanIdentifier(parentClassName + " " + propertyName) + "Enum"}>")
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    )
-                )
-            )
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
 
         for (var i = 0; i < options.Count; i++)
@@ -406,32 +385,60 @@ public class Generator : IGenerator
 
     private static PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool required = true)
     {
-        return SyntaxFactory.PropertyDeclaration(required ? SyntaxFactory.ParseTypeName(typeName) : SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
-            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
-            .WithAccessorList(
-                SyntaxFactory.AccessorList(
-                    SyntaxFactory.List(
-                        new AccessorDeclarationSyntax[]{
+        var propDecleration = SyntaxFactory.PropertyDeclaration(required ? SyntaxFactory.ParseTypeName(typeName) : SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
+            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+
+        propDecleration = propDecleration.WithAccessorList(
+            SyntaxFactory.AccessorList(
+                SyntaxFactory.List(
+                    new AccessorDeclarationSyntax[]{
                                 SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
                                     .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
                                 SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
                                     .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
-                        })))
-            .AddAttributeLists(
+                    })));
+
+        propDecleration = propDecleration.AddAttributeLists(
+            SyntaxFactory.AttributeList(
+                SyntaxFactory.SingletonSeparatedList(
+                    SyntaxFactory.Attribute(SyntaxFactory.IdentifierName("JsonPropertyName"))
+                        .WithArgumentList(
+                            SyntaxFactory.AttributeArgumentList(
+                                SyntaxFactory.SingletonSeparatedList(
+                                    SyntaxFactory.AttributeArgument(
+                                        SyntaxFactory.LiteralExpression(
+                                            SyntaxKind.StringLiteralExpression,
+                                            SyntaxFactory.Literal(propertyName)))))))));
+
+        if (typeName.EndsWith("Enum"))
+        {
+            propDecleration = propDecleration.AddAttributeLists(
                 SyntaxFactory.AttributeList(
                     SyntaxFactory.SingletonSeparatedList(
-                        SyntaxFactory.Attribute(SyntaxFactory.IdentifierName("JsonPropertyName"))
-                            .WithArgumentList(
-                                SyntaxFactory.AttributeArgumentList(
-                                    SyntaxFactory.SingletonSeparatedList(
-                                        SyntaxFactory.AttributeArgument(
-                                            SyntaxFactory.LiteralExpression(
-                                                SyntaxKind.StringLiteralExpression,
-                                                SyntaxFactory.Literal(propertyName)))))))))
-                .WithLeadingTrivia(
-                    SyntaxFactory.TriviaList(
-                        SyntaxFactory.Comment($"/// <summary>{comment?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
-                        SyntaxFactory.CarriageReturnLineFeed));
+                        SyntaxFactory.Attribute(
+                            SyntaxFactory.ParseName("JsonConverter"),
+                            SyntaxFactory.AttributeArgumentList(
+                                SyntaxFactory.SingletonSeparatedList(
+                                    SyntaxFactory.AttributeArgument(
+                                        SyntaxFactory.TypeOfExpression(
+                                            SyntaxFactory.ParseTypeName("JsonStringEnumMemberConverter")
+
+                                        // Uncomment when STJ 9.0 is released
+                                        //SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{CleanIdentifier(parentClassName + " " + propertyName) + "Enum"}>")
+                                        )
+                                    )
+                                )
+                            )
+                        ))));
+        }
+
+        propDecleration = propDecleration.WithLeadingTrivia(
+            SyntaxFactory.TriviaList(
+                SyntaxFactory.Comment($"/// <summary>{comment?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
+                SyntaxFactory.CarriageReturnLineFeed));
+
+
+        return propDecleration;
     }
 
     private static string? CleanIdentifier(string name, bool @namespace = false)

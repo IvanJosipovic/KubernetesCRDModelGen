@@ -1379,11 +1379,6 @@ spec:
     [Fact]
     public void TestEnumDeSerializeJson()
     {
-        KubernetesJson.AddJsonOptions(x =>
-        {
-            x.Converters.Insert(0, new JsonStringEnumMemberConverter());
-        });
-
         var yaml = @"
     apiVersion: apiextensions.k8s.io/v1
     kind: CustomResourceDefinition
@@ -1437,11 +1432,11 @@ spec:
 
         var spec = type.GetProperty("Spec").GetValue(obj);
 
-        spec.GetType().GetProperty("TestEnum")!.SetValue(spec, Enum.Parse(enumType, "Always"));
+        spec.GetType().GetProperty("TestEnum")!.SetValue(spec, Enum.Parse(enumType, "IfNotPresent"));
 
         var objJson = KubernetesJson.Serialize(obj);
 
-        objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":"always"}}""");
+        objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":"ifNotPresent"}}""");
     }
 
     [Fact]
