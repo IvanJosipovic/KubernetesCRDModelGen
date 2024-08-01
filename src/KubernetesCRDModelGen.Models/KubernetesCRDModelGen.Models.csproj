@@ -21,4 +21,10 @@
     </Otherwise>
   </Choose>
 
+  <ItemGroup>
+    <!--Remove when STJ 9.0 is released-->
+    <PackageReference Include="Humanizer" Version="2.14.1" />
+    <PackageReference Include="Macross.Json.Extensions" Version="3.0.0" />
+  </ItemGroup>
+
 </Project>
