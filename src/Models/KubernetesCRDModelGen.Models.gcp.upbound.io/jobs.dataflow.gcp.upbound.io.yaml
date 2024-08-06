@@ -141,7 +141,7 @@ spec:
                     description: The region in which the created job should run.
                     type: string
                   serviceAccountEmail:
-                    description: The Service Account email used to create the job.
+                    description: 'The Service Account email used to create the job. This should be just an email e.g. myserviceaccount@myproject.iam.gserviceaccount.com. Do not include any serviceAccount: or other prefix.'
                     type: string
                   skipWaitOnJobTermination:
                     description: See above note.
@@ -243,7 +243,7 @@ spec:
                     description: The region in which the created job should run.
                     type: string
                   serviceAccountEmail:
-                    description: The Service Account email used to create the job.
+                    description: 'The Service Account email used to create the job. This should be just an email e.g. myserviceaccount@myproject.iam.gserviceaccount.com. Do not include any serviceAccount: or other prefix.'
                     type: string
                   skipWaitOnJobTermination:
                     description: See above note.
@@ -553,7 +553,7 @@ spec:
                     description: The region in which the created job should run.
                     type: string
                   serviceAccountEmail:
-                    description: The Service Account email used to create the job.
+                    description: 'The Service Account email used to create the job. This should be just an email e.g. myserviceaccount@myproject.iam.gserviceaccount.com. Do not include any serviceAccount: or other prefix.'
                     type: string
                   skipWaitOnJobTermination:
                     description: See above note.
