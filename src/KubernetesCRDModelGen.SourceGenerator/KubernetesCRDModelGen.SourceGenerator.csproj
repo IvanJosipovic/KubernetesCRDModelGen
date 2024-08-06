@@ -136,7 +136,7 @@
         <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.16" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_OpenApi_Readers)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.OpenApi" Version="1.6.16" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.OpenApi" Version="1.6.17" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_OpenApi)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="SharpYaml" Version="2.1.1" GeneratePathProperty="true" PrivateAssets="all" />
