@@ -448,6 +448,9 @@ spec:
                         edition:
                           description: The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.
                           type: string
+                        enableGoogleMlIntegration:
+                          description: Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.
+                          type: boolean
                         insightsConfig:
                           items:
                             properties:
@@ -889,6 +892,23 @@ spec:
 
                             heartbeats.
                           type: number
+                        passwordSecretRef:
+                          description: Password for the replication connection.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         sslCipher:
                           description: Permissible ciphers for use in SSL encryption.
                           type: string
@@ -924,6 +944,23 @@ spec:
                           type: string
                       type: object
                     type: array
+                  rootPasswordSecretRef:
+                    description: Initial root password. Can be updated. Required for MS SQL Server.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   settings:
                     description: >-
                       The settings to use for the database. The
@@ -1076,6 +1113,9 @@ spec:
                         edition:
                           description: The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.
                           type: string
+                        enableGoogleMlIntegration:
+                          description: Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.
+                          type: boolean
                         insightsConfig:
                           items:
                             properties:
@@ -1959,6 +1999,9 @@ spec:
                         edition:
                           description: The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS.
                           type: string
+                        enableGoogleMlIntegration:
+                          description: Enables Cloud SQL instances to connect to Vertex AI and pass requests for real-time predictions and insights. Defaults to false.
+                          type: boolean
                         insightsConfig:
                           items:
                             properties:
@@ -2333,7 +2376,7 @@ spec:
                       includes an up-to-date reference of supported versions.
                     type: string
                   deletionProtection:
-                    description: Defaults to true.
+                    description: When the field is set to false, deleting the instance is allowed.
                     type: boolean
                   encryptionKeyName:
                     description: >-
@@ -2805,7 +2848,7 @@ spec:
                               type: object
                             type: array
                           requireSsl:
-                            description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode.
+                            description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode. It will be fully deprecated in a future major release. For now, please use ssl_mode with a compatible require_ssl value instead.
                             type: boolean
                           sslMode:
                             description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
@@ -2838,10 +2881,7 @@ spec:
                             description: Hour of day (0-23), ignored if day not set
                             type: number
                           updateTrack:
-                            description: >-
-                              Receive updates earlier (canary) or later
-
-                              (stable)
+                            description: Receive updates after one week (canary) or after two weeks (stable) or after five weeks (week5) of notification.
                             type: string
                         type: object
                       passwordValidationPolicy:
@@ -2966,7 +3006,7 @@ spec:
                       includes an up-to-date reference of supported versions.
                     type: string
                   deletionProtection:
-                    description: Defaults to true.
+                    description: When the field is set to false, deleting the instance is allowed.
                     type: boolean
                   encryptionKeyName:
                     description: >-
@@ -3438,7 +3478,7 @@ spec:
                               type: object
                             type: array
                           requireSsl:
-                            description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode.
+                            description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode. It will be fully deprecated in a future major release. For now, please use ssl_mode with a compatible require_ssl value instead.
                             type: boolean
                           sslMode:
                             description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
@@ -3471,10 +3511,7 @@ spec:
                             description: Hour of day (0-23), ignored if day not set
                             type: number
                           updateTrack:
-                            description: >-
-                              Receive updates earlier (canary) or later
-
-                              (stable)
+                            description: Receive updates after one week (canary) or after two weeks (stable) or after five weeks (week5) of notification.
                             type: string
                         type: object
                       passwordValidationPolicy:
@@ -3804,7 +3841,7 @@ spec:
                       includes an up-to-date reference of supported versions.
                     type: string
                   deletionProtection:
-                    description: Defaults to true.
+                    description: When the field is set to false, deleting the instance is allowed.
                     type: boolean
                   dnsName:
                     description: >-
@@ -4206,7 +4243,7 @@ spec:
                               type: object
                             type: array
                           requireSsl:
-                            description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode.
+                            description: Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode. It will be fully deprecated in a future major release. For now, please use ssl_mode with a compatible require_ssl value instead.
                             type: boolean
                           sslMode:
                             description: Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.
@@ -4239,10 +4276,7 @@ spec:
                             description: Hour of day (0-23), ignored if day not set
                             type: number
                           updateTrack:
-                            description: >-
-                              Receive updates earlier (canary) or later
-
-                              (stable)
+                            description: Receive updates after one week (canary) or after two weeks (stable) or after five weeks (week5) of notification.
                             type: string
                         type: object
                       passwordValidationPolicy:

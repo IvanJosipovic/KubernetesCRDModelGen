@@ -799,6 +799,24 @@ spec:
                   description:
                     description: A user-friendly description of the dataset
                     type: string
+                  externalDatasetReference:
+                    description: >-
+                      Information about the external metadata storage where the dataset is defined.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        connection:
+                          description: >-
+                            The connection id that is used to access the externalSource.
+
+                            Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}
+                          type: string
+                        externalSource:
+                          description: External source that backs this dataset.
+                          type: string
+                      type: object
+                    type: array
                   friendlyName:
                     description: A descriptive name for the dataset
                     type: string
@@ -834,6 +852,21 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  resourceTags:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      The tags attached to this table. Tag keys are globally unique. Tag key is expected to be
+
+                      in the namespaced format, for example "123456789012/environment" where 123456789012 is the
+
+                      ID of the parent organization or project resource for this tag key. Tag value is expected
+
+                      to be the short name, for example "Production". See Tag definitions
+
+                      for more details.
+                    type: object
+                    x-kubernetes-map-type: granular
                   storageBillingModel:
                     description: >-
                       Specifies the storage billing model for the dataset.
@@ -1582,6 +1615,24 @@ spec:
                   description:
                     description: A user-friendly description of the dataset
                     type: string
+                  externalDatasetReference:
+                    description: >-
+                      Information about the external metadata storage where the dataset is defined.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        connection:
+                          description: >-
+                            The connection id that is used to access the externalSource.
+
+                            Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}
+                          type: string
+                        externalSource:
+                          description: External source that backs this dataset.
+                          type: string
+                      type: object
+                    type: array
                   friendlyName:
                     description: A descriptive name for the dataset
                     type: string
@@ -1611,6 +1662,21 @@ spec:
                   maxTimeTravelHours:
                     description: Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days).
                     type: string
+                  resourceTags:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      The tags attached to this table. Tag keys are globally unique. Tag key is expected to be
+
+                      in the namespaced format, for example "123456789012/environment" where 123456789012 is the
+
+                      ID of the parent organization or project resource for this tag key. Tag value is expected
+
+                      to be the short name, for example "Production". See Tag definitions
+
+                      for more details.
+                    type: object
+                    x-kubernetes-map-type: granular
                   storageBillingModel:
                     description: >-
                       Specifies the storage billing model for the dataset.
@@ -2049,6 +2115,24 @@ spec:
                   etag:
                     description: A hash of the resource.
                     type: string
+                  externalDatasetReference:
+                    description: >-
+                      Information about the external metadata storage where the dataset is defined.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        connection:
+                          description: >-
+                            The connection id that is used to access the externalSource.
+
+                            Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}
+                          type: string
+                        externalSource:
+                          description: External source that backs this dataset.
+                          type: string
+                      type: object
+                    type: array
                   friendlyName:
                     description: A descriptive name for the dataset
                     type: string
@@ -2093,6 +2177,21 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  resourceTags:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      The tags attached to this table. Tag keys are globally unique. Tag key is expected to be
+
+                      in the namespaced format, for example "123456789012/environment" where 123456789012 is the
+
+                      ID of the parent organization or project resource for this tag key. Tag value is expected
+
+                      to be the short name, for example "Production". See Tag definitions
+
+                      for more details.
+                    type: object
+                    x-kubernetes-map-type: granular
                   selfLink:
                     description: The URI of the created resource.
                     type: string
@@ -2936,12 +3035,52 @@ spec:
                       The default partition expiration for all partitioned tables in
 
                       the dataset, in milliseconds.
+
+                      Once this property is set, all newly-created partitioned tables in
+
+                      the dataset will have an expirationMs property in the timePartitioning
+
+                      settings set to this value, and changing the value will only
+
+                      affect new tables, not existing ones. The storage in a partition will
+
+                      have an expiration time of its partition time plus this value.
+
+                      Setting this property overrides the use of defaultTableExpirationMs
+
+                      for partitioned tables: only one of defaultTableExpirationMs and
+
+                      defaultPartitionExpirationMs will be used for any new partitioned
+
+                      table. If you provide an explicit timePartitioning.expirationMs when
+
+                      creating or updating a partitioned table, that value takes precedence
+
+                      over the default partition expiration time indicated by this property.
                     type: number
                   defaultTableExpirationMs:
                     description: >-
                       The default lifetime of all tables in the dataset, in milliseconds.
 
                       The minimum value is 3600000 milliseconds (one hour).
+
+                      Once this property is set, all newly-created tables in the dataset
+
+                      will have an expirationTime property set to the creation time plus
+
+                      the value in this property, and changing the value will only affect
+
+                      new tables, not existing ones. When the expirationTime for a given
+
+                      table is reached, that table will be deleted automatically.
+
+                      If a table's expirationTime is modified or removed before the
+
+                      table expires, or if you provide an explicit expirationTime when
+
+                      creating a table, that value takes precedence over the default
+
+                      expiration time indicated by this property.
                     type: number
                   deleteContentsOnDestroy:
                     description: >-
@@ -2995,6 +3134,18 @@ spec:
                       The geographic location where the dataset should reside.
 
                       See official docs.
+
+                      There are two types of locations, regional or multi-regional. A regional
+
+                      location is a specific geographic place, such as Tokyo, and a multi-regional
+
+                      location is a large geographic area, such as the United States, that
+
+                      contains at least two geographic places.
+
+                      The default value is multi-regional location US.
+
+                      Changing this forces a new resource to be created.
                     type: string
                   maxTimeTravelHours:
                     description: Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days).
@@ -3005,6 +3156,21 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  resourceTags:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      The tags attached to this table. Tag keys are globally unique. Tag key is expected to be
+
+                      in the namespaced format, for example "123456789012/environment" where 123456789012 is the
+
+                      ID of the parent organization or project resource for this tag key. Tag value is expected
+
+                      to be the short name, for example "Production". See Tag definitions
+
+                      for more details.
+                    type: object
+                    x-kubernetes-map-type: granular
                   storageBillingModel:
                     description: >-
                       Specifies the storage billing model for the dataset.
@@ -3725,12 +3891,52 @@ spec:
                       The default partition expiration for all partitioned tables in
 
                       the dataset, in milliseconds.
+
+                      Once this property is set, all newly-created partitioned tables in
+
+                      the dataset will have an expirationMs property in the timePartitioning
+
+                      settings set to this value, and changing the value will only
+
+                      affect new tables, not existing ones. The storage in a partition will
+
+                      have an expiration time of its partition time plus this value.
+
+                      Setting this property overrides the use of defaultTableExpirationMs
+
+                      for partitioned tables: only one of defaultTableExpirationMs and
+
+                      defaultPartitionExpirationMs will be used for any new partitioned
+
+                      table. If you provide an explicit timePartitioning.expirationMs when
+
+                      creating or updating a partitioned table, that value takes precedence
+
+                      over the default partition expiration time indicated by this property.
                     type: number
                   defaultTableExpirationMs:
                     description: >-
                       The default lifetime of all tables in the dataset, in milliseconds.
 
                       The minimum value is 3600000 milliseconds (one hour).
+
+                      Once this property is set, all newly-created tables in the dataset
+
+                      will have an expirationTime property set to the creation time plus
+
+                      the value in this property, and changing the value will only affect
+
+                      new tables, not existing ones. When the expirationTime for a given
+
+                      table is reached, that table will be deleted automatically.
+
+                      If a table's expirationTime is modified or removed before the
+
+                      table expires, or if you provide an explicit expirationTime when
+
+                      creating a table, that value takes precedence over the default
+
+                      expiration time indicated by this property.
                     type: number
                   deleteContentsOnDestroy:
                     description: >-
@@ -3784,10 +3990,37 @@ spec:
                       The geographic location where the dataset should reside.
 
                       See official docs.
+
+                      There are two types of locations, regional or multi-regional. A regional
+
+                      location is a specific geographic place, such as Tokyo, and a multi-regional
+
+                      location is a large geographic area, such as the United States, that
+
+                      contains at least two geographic places.
+
+                      The default value is multi-regional location US.
+
+                      Changing this forces a new resource to be created.
                     type: string
                   maxTimeTravelHours:
                     description: Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days).
                     type: string
+                  resourceTags:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      The tags attached to this table. Tag keys are globally unique. Tag key is expected to be
+
+                      in the namespaced format, for example "123456789012/environment" where 123456789012 is the
+
+                      ID of the parent organization or project resource for this tag key. Tag value is expected
+
+                      to be the short name, for example "Production". See Tag definitions
+
+                      for more details.
+                    type: object
+                    x-kubernetes-map-type: granular
                   storageBillingModel:
                     description: >-
                       Specifies the storage billing model for the dataset.
@@ -4189,12 +4422,52 @@ spec:
                       The default partition expiration for all partitioned tables in
 
                       the dataset, in milliseconds.
+
+                      Once this property is set, all newly-created partitioned tables in
+
+                      the dataset will have an expirationMs property in the timePartitioning
+
+                      settings set to this value, and changing the value will only
+
+                      affect new tables, not existing ones. The storage in a partition will
+
+                      have an expiration time of its partition time plus this value.
+
+                      Setting this property overrides the use of defaultTableExpirationMs
+
+                      for partitioned tables: only one of defaultTableExpirationMs and
+
+                      defaultPartitionExpirationMs will be used for any new partitioned
+
+                      table. If you provide an explicit timePartitioning.expirationMs when
+
+                      creating or updating a partitioned table, that value takes precedence
+
+                      over the default partition expiration time indicated by this property.
                     type: number
                   defaultTableExpirationMs:
                     description: >-
                       The default lifetime of all tables in the dataset, in milliseconds.
 
                       The minimum value is 3600000 milliseconds (one hour).
+
+                      Once this property is set, all newly-created tables in the dataset
+
+                      will have an expirationTime property set to the creation time plus
+
+                      the value in this property, and changing the value will only affect
+
+                      new tables, not existing ones. When the expirationTime for a given
+
+                      table is reached, that table will be deleted automatically.
+
+                      If a table's expirationTime is modified or removed before the
+
+                      table expires, or if you provide an explicit expirationTime when
+
+                      creating a table, that value takes precedence over the default
+
+                      expiration time indicated by this property.
                     type: number
                   deleteContentsOnDestroy:
                     description: >-
@@ -4266,6 +4539,18 @@ spec:
                       The geographic location where the dataset should reside.
 
                       See official docs.
+
+                      There are two types of locations, regional or multi-regional. A regional
+
+                      location is a specific geographic place, such as Tokyo, and a multi-regional
+
+                      location is a large geographic area, such as the United States, that
+
+                      contains at least two geographic places.
+
+                      The default value is multi-regional location US.
+
+                      Changing this forces a new resource to be created.
                     type: string
                   maxTimeTravelHours:
                     description: Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days).
@@ -4276,6 +4561,21 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  resourceTags:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      The tags attached to this table. Tag keys are globally unique. Tag key is expected to be
+
+                      in the namespaced format, for example "123456789012/environment" where 123456789012 is the
+
+                      ID of the parent organization or project resource for this tag key. Tag value is expected
+
+                      to be the short name, for example "Production". See Tag definitions
+
+                      for more details.
+                    type: object
+                    x-kubernetes-map-type: granular
                   selfLink:
                     description: The URI of the created resource.
                     type: string

@@ -3865,13 +3865,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -4024,13 +4022,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -4351,13 +4347,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -4510,13 +4504,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -5025,13 +5017,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -5184,13 +5174,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -5511,13 +5499,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -5670,13 +5656,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -6300,13 +6284,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -6459,13 +6441,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -6697,13 +6677,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array
@@ -6856,13 +6834,11 @@ spec:
                               properties:
                                 identities:
                                   description: >-
-                                    'A list of identities that are allowed access through this IngressPolicy.
+                                    A list of identities that are allowed access through this ingress policy.
 
-                                    To specify an identity or identity group, use the IAM v1
+                                    Should be in the format of email address. The email address should represent
 
-                                    format specified here.
-
-                                    The following prefixes are supprted: user, group, serviceAccount, principal, and principalSet.'
+                                    individual user or service account only.
                                   items:
                                     type: string
                                   type: array

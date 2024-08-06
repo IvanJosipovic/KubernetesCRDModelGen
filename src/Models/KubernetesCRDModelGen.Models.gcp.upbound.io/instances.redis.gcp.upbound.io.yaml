@@ -382,6 +382,9 @@ spec:
                           type: array
                       type: object
                     type: array
+                  maintenanceVersion:
+                    description: The self service update maintenance version.
+                    type: string
                   memorySizeGb:
                     description: Redis memory size in GiB.
                     type: number
@@ -809,6 +812,9 @@ spec:
                           type: array
                       type: object
                     type: array
+                  maintenanceVersion:
+                    description: The self service update maintenance version.
+                    type: string
                   memorySizeGb:
                     description: Redis memory size in GiB.
                     type: number
@@ -1358,6 +1364,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  maintenanceVersion:
+                    description: The self service update maintenance version.
+                    type: string
                   memorySizeGb:
                     description: Redis memory size in GiB.
                     type: number
@@ -1998,6 +2007,9 @@ spec:
                           type: object
                         type: array
                     type: object
+                  maintenanceVersion:
+                    description: The self service update maintenance version.
+                    type: string
                   memorySizeGb:
                     description: Redis memory size in GiB.
                     type: number
@@ -2419,6 +2431,9 @@ spec:
                           type: object
                         type: array
                     type: object
+                  maintenanceVersion:
+                    description: The self service update maintenance version.
+                    type: string
                   memorySizeGb:
                     description: Redis memory size in GiB.
                     type: number
@@ -2962,6 +2977,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  maintenanceVersion:
+                    description: The self service update maintenance version.
+                    type: string
                   memorySizeGb:
                     description: Redis memory size in GiB.
                     type: number

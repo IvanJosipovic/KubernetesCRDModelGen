@@ -772,7 +772,10 @@ spec:
                       type: string
                     type: array
                   deletionProtection:
-                    description: Defaults to true.
+                    description: >-
+                      Defaults to true.
+
+                      When the field is set to false, deleting the database is allowed.
                     type: boolean
                   enableDropProtection:
                     description: >-
@@ -948,7 +951,10 @@ spec:
                       type: string
                     type: array
                   deletionProtection:
-                    description: Defaults to true.
+                    description: >-
+                      Defaults to true.
+
+                      When the field is set to false, deleting the database is allowed.
                     type: boolean
                   enableDropProtection:
                     description: >-
@@ -1226,7 +1232,10 @@ spec:
                       type: string
                     type: array
                   deletionProtection:
-                    description: Defaults to true.
+                    description: >-
+                      Defaults to true.
+
+                      When the field is set to false, deleting the database is allowed.
                     type: boolean
                   enableDropProtection:
                     description: >-
