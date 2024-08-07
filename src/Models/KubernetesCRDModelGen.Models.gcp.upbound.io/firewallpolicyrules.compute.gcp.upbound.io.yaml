@@ -261,6 +261,9 @@ spec:
                   priority:
                     description: An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
                     type: number
+                  securityProfileGroup:
+                    description: "A fully-qualified URL of a SecurityProfileGroup resource. Example: https://networksecurity.googleapis.com/v1/organizations/{organizationId}/locations/global/securityProfileGroups/my-security-profile-group. It must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions."
+                    type: string
                   targetResources:
                     description: A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
                     items:
@@ -271,6 +274,9 @@ spec:
                     items:
                       type: string
                     type: array
+                  tlsInspect:
+                    description: Boolean flag indicating if the traffic should be TLS decrypted. It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.
+                    type: boolean
                 type: object
               initProvider:
                 description: >-
@@ -471,6 +477,9 @@ spec:
                   priority:
                     description: An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
                     type: number
+                  securityProfileGroup:
+                    description: "A fully-qualified URL of a SecurityProfileGroup resource. Example: https://networksecurity.googleapis.com/v1/organizations/{organizationId}/locations/global/securityProfileGroups/my-security-profile-group. It must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions."
+                    type: string
                   targetResources:
                     description: A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
                     items:
@@ -481,6 +490,9 @@ spec:
                     items:
                       type: string
                     type: array
+                  tlsInspect:
+                    description: Boolean flag indicating if the traffic should be TLS decrypted. It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.
+                    type: boolean
                 type: object
               managementPolicies:
                 default:
@@ -804,6 +816,9 @@ spec:
                   ruleTupleCount:
                     description: Calculation of the complexity of a single firewall policy rule.
                     type: number
+                  securityProfileGroup:
+                    description: "A fully-qualified URL of a SecurityProfileGroup resource. Example: https://networksecurity.googleapis.com/v1/organizations/{organizationId}/locations/global/securityProfileGroups/my-security-profile-group. It must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions."
+                    type: string
                   targetResources:
                     description: A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
                     items:
@@ -814,6 +829,9 @@ spec:
                     items:
                       type: string
                     type: array
+                  tlsInspect:
+                    description: Boolean flag indicating if the traffic should be TLS decrypted. It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.
+                    type: boolean
                 type: object
               conditions:
                 description: Conditions of the resource.
@@ -949,7 +967,7 @@ spec:
               forProvider:
                 properties:
                   action:
-                    description: The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny" and "goto_next".
+                    description: The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny", "goto_next" and "apply_security_profile_group".
                     type: string
                   description:
                     description: An optional description for this resource.
@@ -1123,6 +1141,9 @@ spec:
                   priority:
                     description: An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
                     type: number
+                  securityProfileGroup:
+                    description: "A fully-qualified URL of a SecurityProfileGroup resource. Example: https://networksecurity.googleapis.com/v1/organizations/{organizationId}/locations/global/securityProfileGroups/my-security-profile-group. It must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions."
+                    type: string
                   targetResources:
                     description: A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
                     items:
@@ -1133,6 +1154,9 @@ spec:
                     items:
                       type: string
                     type: array
+                  tlsInspect:
+                    description: Boolean flag indicating if the traffic should be TLS decrypted. It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.
+                    type: boolean
                 type: object
               initProvider:
                 description: >-
@@ -1157,7 +1181,7 @@ spec:
                   autoscaler.
                 properties:
                   action:
-                    description: The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny" and "goto_next".
+                    description: The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny", "goto_next" and "apply_security_profile_group".
                     type: string
                   description:
                     description: An optional description for this resource.
@@ -1331,6 +1355,9 @@ spec:
                   priority:
                     description: An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
                     type: number
+                  securityProfileGroup:
+                    description: "A fully-qualified URL of a SecurityProfileGroup resource. Example: https://networksecurity.googleapis.com/v1/organizations/{organizationId}/locations/global/securityProfileGroups/my-security-profile-group. It must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions."
+                    type: string
                   targetResources:
                     description: A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
                     items:
@@ -1341,6 +1368,9 @@ spec:
                     items:
                       type: string
                     type: array
+                  tlsInspect:
+                    description: Boolean flag indicating if the traffic should be TLS decrypted. It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.
+                    type: boolean
                 type: object
               managementPolicies:
                 default:
@@ -1565,7 +1595,7 @@ spec:
               atProvider:
                 properties:
                   action:
-                    description: The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny" and "goto_next".
+                    description: The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny", "goto_next" and "apply_security_profile_group".
                     type: string
                   description:
                     description: An optional description for this resource.
@@ -1662,6 +1692,9 @@ spec:
                   ruleTupleCount:
                     description: Calculation of the complexity of a single firewall policy rule.
                     type: number
+                  securityProfileGroup:
+                    description: "A fully-qualified URL of a SecurityProfileGroup resource. Example: https://networksecurity.googleapis.com/v1/organizations/{organizationId}/locations/global/securityProfileGroups/my-security-profile-group. It must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions."
+                    type: string
                   targetResources:
                     description: A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
                     items:
@@ -1672,6 +1705,9 @@ spec:
                     items:
                       type: string
                     type: array
+                  tlsInspect:
+                    description: Boolean flag indicating if the traffic should be TLS decrypted. It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.
+                    type: boolean
                 type: object
               conditions:
                 description: Conditions of the resource.

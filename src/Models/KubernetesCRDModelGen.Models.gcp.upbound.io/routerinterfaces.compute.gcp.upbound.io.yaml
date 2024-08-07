@@ -98,6 +98,9 @@ spec:
 
                       in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
                     type: string
+                  ipVersion:
+                    description: IP version of this interface. Can be either IPV4 or IPV6.
+                    type: string
                   name:
                     description: >-
                       A unique name for the interface, required by GCE. Changing
@@ -356,6 +359,9 @@ spec:
                       IP address and range of the interface. The IP range must be
 
                       in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
+                    type: string
+                  ipVersion:
+                    description: IP version of this interface. Can be either IPV4 or IPV6.
                     type: string
                   name:
                     description: >-
@@ -812,6 +818,9 @@ spec:
                       IP address and range of the interface. The IP range must be
 
                       in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
+                    type: string
+                  ipVersion:
+                    description: IP version of this interface. Can be either IPV4 or IPV6.
                     type: string
                   name:
                     description: >-

@@ -126,6 +126,9 @@ spec:
                   location:
                     description: The location for the resource
                     type: string
+                  maximumLifetime:
+                    description: Optional. The maximum lifetime allowed for all issued certificates that use this template. If the issuing CaPool's IssuancePolicy specifies a maximum lifetime the minimum of the two durations will be the maximum lifetime for issued. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+                    type: string
                   passthroughExtensions:
                     description: Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
                     items:
@@ -343,6 +346,9 @@ spec:
                     description: Optional. Labels with user-defined metadata.
                     type: object
                     x-kubernetes-map-type: granular
+                  maximumLifetime:
+                    description: Optional. The maximum lifetime allowed for all issued certificates that use this template. If the issuing CaPool's IssuancePolicy specifies a maximum lifetime the minimum of the two durations will be the maximum lifetime for issued. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+                    type: string
                   passthroughExtensions:
                     description: Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
                     items:
@@ -766,6 +772,9 @@ spec:
                   location:
                     description: The location for the resource
                     type: string
+                  maximumLifetime:
+                    description: Optional. The maximum lifetime allowed for all issued certificates that use this template. If the issuing CaPool's IssuancePolicy specifies a maximum lifetime the minimum of the two durations will be the maximum lifetime for issued. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+                    type: string
                   passthroughExtensions:
                     description: Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
                     items:
@@ -1014,7 +1023,7 @@ spec:
     name: v1beta2
     schema:
       openAPIV3Schema:
-        description: CertificateTemplate is the Schema for the CertificateTemplates API. Certificate Authority Service provides reusable and parameterized templates that you can use for common certificate issuance scenarios. A certificate template represents a relatively static and well-defined certificate issuance schema within an organization.  A certificate template can essentially become a full-fledged vertical certificate issuance framework.
+        description: CertificateTemplate is the Schema for the CertificateTemplates API. Certificate Authority Service provides reusable and parameterized templates that you can use for common certificate issuance scenarios.
         properties:
           apiVersion:
             description: >-
@@ -1069,7 +1078,10 @@ spec:
                     description: Optional. A human-readable description of scenarios this template is intended for.
                     type: string
                   identityConstraints:
-                    description: Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
+                    description: >-
+                      Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
+
+                      Structure is documented below.
                     properties:
                       allowSubjectAltNamesPassthrough:
                         description: Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
@@ -1078,7 +1090,10 @@ spec:
                         description: Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
                         type: boolean
                       celExpression:
-                        description: Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+                        description: >-
+                          Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+
+                          Structure is documented below.
                         properties:
                           description:
                             description: Optional. A human-readable description of scenarios this template is intended for.
@@ -1097,17 +1112,31 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: Optional. Labels with user-defined metadata.
+                    description: >-
+                      Optional. Labels with user-defined metadata.
+
+                      Note: This field is non-authoritative, and will only manage the labels present in your configuration.
+
+                      Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   location:
                     description: The location for the resource
                     type: string
+                  maximumLifetime:
+                    description: Optional. The maximum lifetime allowed for all issued certificates that use this template. If the issuing CaPool's IssuancePolicy specifies a maximum lifetime the minimum of the two durations will be the maximum lifetime for issued. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+                    type: string
                   passthroughExtensions:
-                    description: Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
+                    description: >-
+                      Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
+
+                      Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+                        description: >-
+                          Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+
+                          Structure is documented below.
                         items:
                           properties:
                             objectIdPath:
@@ -1124,17 +1153,26 @@ spec:
                         type: array
                     type: object
                   predefinedValues:
-                    description: Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+                    description: >-
+                      Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+
+                      Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: Optional. Describes custom X.509 extensions.
+                        description: >-
+                          Optional. Describes custom X.509 extensions.
+
+                          Structure is documented below.
                         items:
                           properties:
                             critical:
                               description: Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
                               type: boolean
                             objectId:
-                              description: Required. The OID for this X.509 extension.
+                              description: >-
+                                Required. The OID for this X.509 extension.
+
+                                Structure is documented below.
                               properties:
                                 objectIdPath:
                                   description: Required. The parts of an OID path. The most significant parts of the path come first.
@@ -1153,7 +1191,10 @@ spec:
                           type: string
                         type: array
                       caOptions:
-                        description: Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+                        description: >-
+                          Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+
+                          Structure is documented below.
                         properties:
                           isCa:
                             description: Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
@@ -1163,10 +1204,16 @@ spec:
                             type: number
                         type: object
                       keyUsage:
-                        description: Optional. Indicates the intended use for keys that correspond to a certificate.
+                        description: >-
+                          Optional. Indicates the intended use for keys that correspond to a certificate.
+
+                          Structure is documented below.
                         properties:
                           baseKeyUsage:
-                            description: Describes high-level ways in which a key may be used.
+                            description: >-
+                              Describes high-level ways in which a key may be used.
+
+                              Structure is documented below.
                             properties:
                               certSign:
                                 description: The key may be used to sign certificates.
@@ -1197,7 +1244,10 @@ spec:
                                 type: boolean
                             type: object
                           extendedKeyUsage:
-                            description: Detailed scenarios in which a key may be used.
+                            description: >-
+                              Detailed scenarios in which a key may be used.
+
+                              Structure is documented below.
                             properties:
                               clientAuth:
                                 description: Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
@@ -1219,7 +1269,10 @@ spec:
                                 type: boolean
                             type: object
                           unknownExtendedKeyUsages:
-                            description: Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+                            description: >-
+                              Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+
+                              Structure is documented below.
                             items:
                               properties:
                                 objectIdPath:
@@ -1231,7 +1284,10 @@ spec:
                             type: array
                         type: object
                       policyIds:
-                        description: Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+                        description: >-
+                          Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+
+                          Structure is documented below.
                         items:
                           properties:
                             objectIdPath:
@@ -1243,7 +1299,10 @@ spec:
                         type: array
                     type: object
                   project:
-                    description: The project for the resource
+                    description: >-
+                      The ID of the project in which the resource belongs.
+
+                      If it is not provided, the provider project is used.
                     type: string
                 required:
                 - location
@@ -1274,7 +1333,10 @@ spec:
                     description: Optional. A human-readable description of scenarios this template is intended for.
                     type: string
                   identityConstraints:
-                    description: Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
+                    description: >-
+                      Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
+
+                      Structure is documented below.
                     properties:
                       allowSubjectAltNamesPassthrough:
                         description: Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
@@ -1283,7 +1345,10 @@ spec:
                         description: Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
                         type: boolean
                       celExpression:
-                        description: Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+                        description: >-
+                          Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+
+                          Structure is documented below.
                         properties:
                           description:
                             description: Optional. A human-readable description of scenarios this template is intended for.
@@ -1299,14 +1364,28 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: Optional. Labels with user-defined metadata.
+                    description: >-
+                      Optional. Labels with user-defined metadata.
+
+                      Note: This field is non-authoritative, and will only manage the labels present in your configuration.
+
+                      Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
+                  maximumLifetime:
+                    description: Optional. The maximum lifetime allowed for all issued certificates that use this template. If the issuing CaPool's IssuancePolicy specifies a maximum lifetime the minimum of the two durations will be the maximum lifetime for issued. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+                    type: string
                   passthroughExtensions:
-                    description: Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
+                    description: >-
+                      Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
+
+                      Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+                        description: >-
+                          Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+
+                          Structure is documented below.
                         items:
                           properties:
                             objectIdPath:
@@ -1323,17 +1402,26 @@ spec:
                         type: array
                     type: object
                   predefinedValues:
-                    description: Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+                    description: >-
+                      Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+
+                      Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: Optional. Describes custom X.509 extensions.
+                        description: >-
+                          Optional. Describes custom X.509 extensions.
+
+                          Structure is documented below.
                         items:
                           properties:
                             critical:
                               description: Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
                               type: boolean
                             objectId:
-                              description: Required. The OID for this X.509 extension.
+                              description: >-
+                                Required. The OID for this X.509 extension.
+
+                                Structure is documented below.
                               properties:
                                 objectIdPath:
                                   description: Required. The parts of an OID path. The most significant parts of the path come first.
@@ -1352,7 +1440,10 @@ spec:
                           type: string
                         type: array
                       caOptions:
-                        description: Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+                        description: >-
+                          Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+
+                          Structure is documented below.
                         properties:
                           isCa:
                             description: Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
@@ -1362,10 +1453,16 @@ spec:
                             type: number
                         type: object
                       keyUsage:
-                        description: Optional. Indicates the intended use for keys that correspond to a certificate.
+                        description: >-
+                          Optional. Indicates the intended use for keys that correspond to a certificate.
+
+                          Structure is documented below.
                         properties:
                           baseKeyUsage:
-                            description: Describes high-level ways in which a key may be used.
+                            description: >-
+                              Describes high-level ways in which a key may be used.
+
+                              Structure is documented below.
                             properties:
                               certSign:
                                 description: The key may be used to sign certificates.
@@ -1396,7 +1493,10 @@ spec:
                                 type: boolean
                             type: object
                           extendedKeyUsage:
-                            description: Detailed scenarios in which a key may be used.
+                            description: >-
+                              Detailed scenarios in which a key may be used.
+
+                              Structure is documented below.
                             properties:
                               clientAuth:
                                 description: Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
@@ -1418,7 +1518,10 @@ spec:
                                 type: boolean
                             type: object
                           unknownExtendedKeyUsages:
-                            description: Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+                            description: >-
+                              Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+
+                              Structure is documented below.
                             items:
                               properties:
                                 objectIdPath:
@@ -1430,7 +1533,10 @@ spec:
                             type: array
                         type: object
                       policyIds:
-                        description: Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+                        description: >-
+                          Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+
+                          Structure is documented below.
                         items:
                           properties:
                             objectIdPath:
@@ -1442,7 +1548,10 @@ spec:
                         type: array
                     type: object
                   project:
-                    description: The project for the resource
+                    description: >-
+                      The ID of the project in which the resource belongs.
+
+                      If it is not provided, the provider project is used.
                     type: string
                 type: object
               managementPolicies:
@@ -1673,7 +1782,10 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/certificateTemplates/{{name}}
                     type: string
                   identityConstraints:
-                    description: Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
+                    description: >-
+                      Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
+
+                      Structure is documented below.
                     properties:
                       allowSubjectAltNamesPassthrough:
                         description: Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
@@ -1682,7 +1794,10 @@ spec:
                         description: Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
                         type: boolean
                       celExpression:
-                        description: Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+                        description: >-
+                          Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
+
+                          Structure is documented below.
                         properties:
                           description:
                             description: Optional. A human-readable description of scenarios this template is intended for.
@@ -1701,17 +1816,31 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: Optional. Labels with user-defined metadata.
+                    description: >-
+                      Optional. Labels with user-defined metadata.
+
+                      Note: This field is non-authoritative, and will only manage the labels present in your configuration.
+
+                      Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   location:
                     description: The location for the resource
                     type: string
+                  maximumLifetime:
+                    description: Optional. The maximum lifetime allowed for all issued certificates that use this template. If the issuing CaPool's IssuancePolicy specifies a maximum lifetime the minimum of the two durations will be the maximum lifetime for issued. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
+                    type: string
                   passthroughExtensions:
-                    description: Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
+                    description: >-
+                      Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
+
+                      Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+                        description: >-
+                          Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
+
+                          Structure is documented below.
                         items:
                           properties:
                             objectIdPath:
@@ -1728,17 +1857,26 @@ spec:
                         type: array
                     type: object
                   predefinedValues:
-                    description: Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+                    description: >-
+                      Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+
+                      Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: Optional. Describes custom X.509 extensions.
+                        description: >-
+                          Optional. Describes custom X.509 extensions.
+
+                          Structure is documented below.
                         items:
                           properties:
                             critical:
                               description: Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
                               type: boolean
                             objectId:
-                              description: Required. The OID for this X.509 extension.
+                              description: >-
+                                Required. The OID for this X.509 extension.
+
+                                Structure is documented below.
                               properties:
                                 objectIdPath:
                                   description: Required. The parts of an OID path. The most significant parts of the path come first.
@@ -1757,7 +1895,10 @@ spec:
                           type: string
                         type: array
                       caOptions:
-                        description: Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+                        description: >-
+                          Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+
+                          Structure is documented below.
                         properties:
                           isCa:
                             description: Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
@@ -1767,10 +1908,16 @@ spec:
                             type: number
                         type: object
                       keyUsage:
-                        description: Optional. Indicates the intended use for keys that correspond to a certificate.
+                        description: >-
+                          Optional. Indicates the intended use for keys that correspond to a certificate.
+
+                          Structure is documented below.
                         properties:
                           baseKeyUsage:
-                            description: Describes high-level ways in which a key may be used.
+                            description: >-
+                              Describes high-level ways in which a key may be used.
+
+                              Structure is documented below.
                             properties:
                               certSign:
                                 description: The key may be used to sign certificates.
@@ -1801,7 +1948,10 @@ spec:
                                 type: boolean
                             type: object
                           extendedKeyUsage:
-                            description: Detailed scenarios in which a key may be used.
+                            description: >-
+                              Detailed scenarios in which a key may be used.
+
+                              Structure is documented below.
                             properties:
                               clientAuth:
                                 description: Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
@@ -1823,7 +1973,10 @@ spec:
                                 type: boolean
                             type: object
                           unknownExtendedKeyUsages:
-                            description: Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+                            description: >-
+                              Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
+
+                              Structure is documented below.
                             items:
                               properties:
                                 objectIdPath:
@@ -1835,7 +1988,10 @@ spec:
                             type: array
                         type: object
                       policyIds:
-                        description: Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+                        description: >-
+                          Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+
+                          Structure is documented below.
                         items:
                           properties:
                             objectIdPath:
@@ -1847,12 +2003,18 @@ spec:
                         type: array
                     type: object
                   project:
-                    description: The project for the resource
+                    description: >-
+                      The ID of the project in which the resource belongs.
+
+                      If it is not provided, the provider project is used.
                     type: string
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: The combination of labels configured directly on the resource and default labels configured on the provider.
+                    description: >-
+                      The combination of labels configured directly on the resource
+
+                      and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
                   updateTime:

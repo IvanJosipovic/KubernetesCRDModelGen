@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  createWithoutValidation:
+                    description: If set to true, will skip validations.
+                    type: boolean
                   displayName:
                     description: Display name.
                     type: string
@@ -238,6 +241,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  createWithoutValidation:
+                    description: If set to true, will skip validations.
+                    type: boolean
                   displayName:
                     description: Display name.
                     type: string
@@ -583,6 +589,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  createWithoutValidation:
+                    description: If set to true, will skip validations.
+                    type: boolean
                   displayName:
                     description: Display name.
                     type: string
@@ -801,6 +810,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  createWithoutValidation:
+                    description: If set to true, will skip validations.
+                    type: boolean
                   displayName:
                     description: Display name.
                     type: string
@@ -953,6 +965,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  createWithoutValidation:
+                    description: If set to true, will skip validations.
+                    type: boolean
                   displayName:
                     description: Display name.
                     type: string
@@ -1296,6 +1311,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  createWithoutValidation:
+                    description: If set to true, will skip validations.
+                    type: boolean
                   displayName:
                     description: Display name.
                     type: string

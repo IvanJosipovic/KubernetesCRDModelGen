@@ -1767,7 +1767,7 @@ spec:
     name: v1beta2
     schema:
       openAPIV3Schema:
-        description: RegionNetworkEndpointGroup is the Schema for the RegionNetworkEndpointGroups API. A regional NEG that can support Serverless Products and proxying traffic to external backends.
+        description: RegionNetworkEndpointGroup is the Schema for the RegionNetworkEndpointGroups API. A regional NEG that can support Serverless Products, proxying traffic to external backends and providing traffic to the PSC port mapping endpoints.
         properties:
           apiVersion:
             description: >-
@@ -2125,7 +2125,7 @@ spec:
 
                       Default value is SERVERLESS.
 
-                      Possible values are: SERVERLESS, PRIVATE_SERVICE_CONNECT, INTERNET_IP_PORT, INTERNET_FQDN_PORT.
+                      Possible values are: SERVERLESS, PRIVATE_SERVICE_CONNECT, INTERNET_IP_PORT, INTERNET_FQDN_PORT, GCE_VM_IP_PORTMAP.
                     type: string
                   networkRef:
                     description: Reference to a Network in compute to populate network.
@@ -2740,7 +2740,7 @@ spec:
 
                       Default value is SERVERLESS.
 
-                      Possible values are: SERVERLESS, PRIVATE_SERVICE_CONNECT, INTERNET_IP_PORT, INTERNET_FQDN_PORT.
+                      Possible values are: SERVERLESS, PRIVATE_SERVICE_CONNECT, INTERNET_IP_PORT, INTERNET_FQDN_PORT, GCE_VM_IP_PORTMAP.
                     type: string
                   networkRef:
                     description: Reference to a Network in compute to populate network.
@@ -3372,7 +3372,7 @@ spec:
 
                       Default value is SERVERLESS.
 
-                      Possible values are: SERVERLESS, PRIVATE_SERVICE_CONNECT, INTERNET_IP_PORT, INTERNET_FQDN_PORT.
+                      Possible values are: SERVERLESS, PRIVATE_SERVICE_CONNECT, INTERNET_IP_PORT, INTERNET_FQDN_PORT, GCE_VM_IP_PORTMAP.
                     type: string
                   project:
                     description: >-
