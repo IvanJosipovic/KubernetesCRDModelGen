@@ -37,7 +37,7 @@
     </When>
     <Otherwise>
         <ItemGroup>
-            <PackageReference Include="KubernetesClient" Version="14.0.2" />
+            <PackageReference Include="KubernetesClient" Version="14.0.9" />
             <PackageReference Include="Basic.Reference.Assemblies.Net80" Version="1.7.2" />
         </ItemGroup>
     </Otherwise>
