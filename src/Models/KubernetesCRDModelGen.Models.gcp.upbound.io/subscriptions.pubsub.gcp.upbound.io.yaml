@@ -189,6 +189,9 @@ spec:
                         bucket:
                           description: User-provided name for the Cloud Storage bucket. The bucket must be created by the user. The bucket name must be without any prefix like "gs://".
                           type: string
+                        filenameDatetimeFormat:
+                          description: User-provided format string specifying how to represent datetimes in Cloud Storage filenames.
+                          type: string
                         filenamePrefix:
                           description: User-provided prefix for Cloud Storage filename.
                           type: string
@@ -811,6 +814,9 @@ spec:
                           type: array
                         bucket:
                           description: User-provided name for the Cloud Storage bucket. The bucket must be created by the user. The bucket name must be without any prefix like "gs://".
+                          type: string
+                        filenameDatetimeFormat:
+                          description: User-provided format string specifying how to represent datetimes in Cloud Storage filenames.
                           type: string
                         filenamePrefix:
                           description: User-provided prefix for Cloud Storage filename.
@@ -1625,6 +1631,9 @@ spec:
                           type: array
                         bucket:
                           description: User-provided name for the Cloud Storage bucket. The bucket must be created by the user. The bucket name must be without any prefix like "gs://".
+                          type: string
+                        filenameDatetimeFormat:
+                          description: User-provided format string specifying how to represent datetimes in Cloud Storage filenames.
                           type: string
                         filenamePrefix:
                           description: User-provided prefix for Cloud Storage filename.
@@ -2157,8 +2166,102 @@ spec:
 
                           and any messages with extra fields are not written and remain in the subscription's backlog.
                         type: boolean
+                      serviceAccountEmail:
+                        description: >-
+                          The service account to use to write to BigQuery. If not specified, the Pub/Sub
+
+                          service agent,
+
+                          service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
+                        type: string
+                      serviceAccountEmailRef:
+                        description: Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      serviceAccountEmailSelector:
+                        description: Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                       table:
-                        description: The name of the table to which to write data, of the form {projectId}:{datasetId}.{tableId}
+                        description: The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
                         type: string
                       useTableSchema:
                         description: >-
@@ -2207,6 +2310,9 @@ spec:
                       bucket:
                         description: User-provided name for the Cloud Storage bucket. The bucket must be created by the user. The bucket name must be without any prefix like "gs://".
                         type: string
+                      filenameDatetimeFormat:
+                        description: User-provided format string specifying how to represent datetimes in Cloud Storage filenames.
+                        type: string
                       filenamePrefix:
                         description: User-provided prefix for Cloud Storage filename.
                         type: string
@@ -2227,6 +2333,100 @@ spec:
 
                           A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
                         type: string
+                      serviceAccountEmail:
+                        description: >-
+                          The service account to use to write to Cloud Storage. If not specified, the Pub/Sub
+
+                          service agent,
+
+                          service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
+                        type: string
+                      serviceAccountEmailRef:
+                        description: Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      serviceAccountEmailSelector:
+                        description: Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                     type: object
                   deadLetterPolicy:
                     description: >-
@@ -2762,8 +2962,102 @@ spec:
 
                           and any messages with extra fields are not written and remain in the subscription's backlog.
                         type: boolean
+                      serviceAccountEmail:
+                        description: >-
+                          The service account to use to write to BigQuery. If not specified, the Pub/Sub
+
+                          service agent,
+
+                          service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
+                        type: string
+                      serviceAccountEmailRef:
+                        description: Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      serviceAccountEmailSelector:
+                        description: Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                       table:
-                        description: The name of the table to which to write data, of the form {projectId}:{datasetId}.{tableId}
+                        description: The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
                         type: string
                       useTableSchema:
                         description: >-
@@ -2812,6 +3106,9 @@ spec:
                       bucket:
                         description: User-provided name for the Cloud Storage bucket. The bucket must be created by the user. The bucket name must be without any prefix like "gs://".
                         type: string
+                      filenameDatetimeFormat:
+                        description: User-provided format string specifying how to represent datetimes in Cloud Storage filenames.
+                        type: string
                       filenamePrefix:
                         description: User-provided prefix for Cloud Storage filename.
                         type: string
@@ -2832,6 +3129,100 @@ spec:
 
                           A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
                         type: string
+                      serviceAccountEmail:
+                        description: >-
+                          The service account to use to write to Cloud Storage. If not specified, the Pub/Sub
+
+                          service agent,
+
+                          service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
+                        type: string
+                      serviceAccountEmailRef:
+                        description: Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      serviceAccountEmailSelector:
+                        description: Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                     type: object
                   deadLetterPolicy:
                     description: >-
@@ -3558,8 +3949,16 @@ spec:
 
                           and any messages with extra fields are not written and remain in the subscription's backlog.
                         type: boolean
+                      serviceAccountEmail:
+                        description: >-
+                          The service account to use to write to BigQuery. If not specified, the Pub/Sub
+
+                          service agent,
+
+                          service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
+                        type: string
                       table:
-                        description: The name of the table to which to write data, of the form {projectId}:{datasetId}.{tableId}
+                        description: The name of the table to which to write data, of the form {projectId}.{datasetId}.{tableId}
                         type: string
                       useTableSchema:
                         description: >-
@@ -3608,6 +4007,9 @@ spec:
                       bucket:
                         description: User-provided name for the Cloud Storage bucket. The bucket must be created by the user. The bucket name must be without any prefix like "gs://".
                         type: string
+                      filenameDatetimeFormat:
+                        description: User-provided format string specifying how to represent datetimes in Cloud Storage filenames.
+                        type: string
                       filenamePrefix:
                         description: User-provided prefix for Cloud Storage filename.
                         type: string
@@ -3627,6 +4029,14 @@ spec:
                           May not exceed the subscription's acknowledgement deadline.
 
                           A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
+                        type: string
+                      serviceAccountEmail:
+                        description: >-
+                          The service account to use to write to Cloud Storage. If not specified, the Pub/Sub
+
+                          service agent,
+
+                          service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.
                         type: string
                       state:
                         description: >-

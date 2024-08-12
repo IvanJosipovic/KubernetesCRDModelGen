@@ -2833,6 +2833,9 @@ spec:
 
                       object. This field is used in optimistic locking.
                     type: string
+                  generatedId:
+                    description: The unique identifier for the resource. This identifier is defined by the server.
+                    type: number
                   healthChecks:
                     description: >-
                       The set of URLs to HealthCheck resources for health checking
@@ -3262,6 +3265,8 @@ spec:
 
                             for an explanation of load balancing modes.
 
+                            From version 6.0.0 default value will be UTILIZATION to match default GCP value.
+
                             Default value is CONNECTION.
 
                             Possible values are: UTILIZATION, RATE, CONNECTION.
@@ -3692,6 +3697,8 @@ spec:
                       Time for which instance will be drained (not accept new
 
                       connections, but still work to finish started).
+
+                      From version 6.0.0 ConnectionDrainingTimeoutSec default value will be 300 to match default GCP value.
                     type: number
                   consistentHash:
                     description: >-
@@ -4023,6 +4030,10 @@ spec:
 
                       to INTERNAL_MANAGED and the protocol is set to HTTP, HTTPS, or HTTP2.
 
+                      From version 6.0.
+
+                      Default values are enforce by GCP without providing them.
+
                       Structure is documented below.
                     properties:
                       baseEjectionTime:
@@ -4201,9 +4212,13 @@ spec:
                     type: string
                   timeoutSec:
                     description: >-
-                      How many seconds to wait for the backend before considering it a
+                      The backend service timeout has a different meaning depending on the type of load balancer.
 
-                      failed request. Default is 30 seconds. Valid range is [1, 86400].
+                      For more information see, Backend service settings.
+
+                      The default is 30 seconds.
+
+                      The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds.
                     type: number
                 required:
                 - region
@@ -4256,6 +4271,8 @@ spec:
                             See the Backend Services Overview
 
                             for an explanation of load balancing modes.
+
+                            From version 6.0.0 default value will be UTILIZATION to match default GCP value.
 
                             Default value is CONNECTION.
 
@@ -4687,6 +4704,8 @@ spec:
                       Time for which instance will be drained (not accept new
 
                       connections, but still work to finish started).
+
+                      From version 6.0.0 ConnectionDrainingTimeoutSec default value will be 300 to match default GCP value.
                     type: number
                   consistentHash:
                     description: >-
@@ -5020,6 +5039,10 @@ spec:
 
                       to INTERNAL_MANAGED and the protocol is set to HTTP, HTTPS, or HTTP2.
 
+                      From version 6.0.
+
+                      Default values are enforce by GCP without providing them.
+
                       Structure is documented below.
                     properties:
                       baseEjectionTime:
@@ -5192,9 +5215,13 @@ spec:
                     type: string
                   timeoutSec:
                     description: >-
-                      How many seconds to wait for the backend before considering it a
+                      The backend service timeout has a different meaning depending on the type of load balancer.
 
-                      failed request. Default is 30 seconds. Valid range is [1, 86400].
+                      For more information see, Backend service settings.
+
+                      The default is 30 seconds.
+
+                      The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds.
                     type: number
                 type: object
               managementPolicies:
@@ -5436,6 +5463,8 @@ spec:
                             See the Backend Services Overview
 
                             for an explanation of load balancing modes.
+
+                            From version 6.0.0 default value will be UTILIZATION to match default GCP value.
 
                             Default value is CONNECTION.
 
@@ -5781,6 +5810,8 @@ spec:
                       Time for which instance will be drained (not accept new
 
                       connections, but still work to finish started).
+
+                      From version 6.0.0 ConnectionDrainingTimeoutSec default value will be 300 to match default GCP value.
                     type: number
                   consistentHash:
                     description: >-
@@ -6018,6 +6049,10 @@ spec:
 
                       to INTERNAL_MANAGED and the protocol is set to HTTP, HTTPS, or HTTP2.
 
+                      From version 6.0.
+
+                      Default values are enforce by GCP without providing them.
+
                       Structure is documented below.
                     properties:
                       baseEjectionTime:
@@ -6199,9 +6234,13 @@ spec:
                     type: string
                   timeoutSec:
                     description: >-
-                      How many seconds to wait for the backend before considering it a
+                      The backend service timeout has a different meaning depending on the type of load balancer.
 
-                      failed request. Default is 30 seconds. Valid range is [1, 86400].
+                      For more information see, Backend service settings.
+
+                      The default is 30 seconds.
+
+                      The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds.
                     type: number
                 type: object
               conditions:

@@ -104,6 +104,12 @@ spec:
 
                       Possible values are: IPV4, IPV6.
                     type: string
+                  labels:
+                    additionalProperties:
+                      type: string
+                    description: Labels to apply to this address.  A list of key->value pairs.
+                    type: object
+                    x-kubernetes-map-type: granular
                   network:
                     description: >-
                       The URL of the network in which to reserve the IP range. The IP range
@@ -262,6 +268,12 @@ spec:
 
                       Possible values are: IPV4, IPV6.
                     type: string
+                  labels:
+                    additionalProperties:
+                      type: string
+                    description: Labels to apply to this address.  A list of key->value pairs.
+                    type: object
+                    x-kubernetes-map-type: granular
                   network:
                     description: >-
                       The URL of the network in which to reserve the IP range. The IP range
@@ -608,6 +620,12 @@ spec:
                   description:
                     description: An optional description of this resource.
                     type: string
+                  effectiveLabels:
+                    additionalProperties:
+                      type: string
+                    description: for all of the labels present on the resource.
+                    type: object
+                    x-kubernetes-map-type: granular
                   id:
                     description: an identifier for the resource with format projects/{{project}}/global/addresses/{{name}}
                     type: string
@@ -617,6 +635,12 @@ spec:
 
                       Possible values are: IPV4, IPV6.
                     type: string
+                  labels:
+                    additionalProperties:
+                      type: string
+                    description: Labels to apply to this address.  A list of key->value pairs.
+                    type: object
+                    x-kubernetes-map-type: granular
                   network:
                     description: >-
                       The URL of the network in which to reserve the IP range. The IP range
@@ -649,6 +673,15 @@ spec:
                   selfLink:
                     description: The URI of the created resource.
                     type: string
+                  terraformLabels:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      The combination of labels configured directly on the resource
+
+                      and default labels configured on the provider.
+                    type: object
+                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

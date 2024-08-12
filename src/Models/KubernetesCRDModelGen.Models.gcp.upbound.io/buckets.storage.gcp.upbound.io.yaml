@@ -223,6 +223,15 @@ spec:
                               numNewerVersions:
                                 description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
                                 type: number
+                              sendDaysSinceCustomTimeIfZero:
+                                description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
+                                type: boolean
+                              sendDaysSinceNoncurrentTimeIfZero:
+                                description: While set true, days_since_noncurrent_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_noncurrent_time field. It can be used alone or together with days_since_noncurrent_time.
+                                type: boolean
+                              sendNumNewerVersionsIfZero:
+                                description: While set true, num_newer_versions value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the num_newer_versions field. It can be used alone or together with num_newer_versions.
+                                type: boolean
                               withState:
                                 description: 'Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".'
                                 type: string
@@ -275,6 +284,15 @@ spec:
                   rpo:
                     description: The recovery point objective for cross-region replication of the bucket. Applicable only for dual and multi-region buckets. "DEFAULT" sets default replication. "ASYNC_TURBO" value enables turbo replication, valid for dual-region buckets only. See Turbo Replication for more information. If rpo is not specified at bucket creation, it defaults to "DEFAULT" for dual and multi-region buckets. NOTE If used with single-region bucket, It will throw an error.
                     type: string
+                  softDeletePolicy:
+                    description: The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. Structure is documented below.
+                    items:
+                      properties:
+                        retentionDurationSeconds:
+                          description: 'The duration in seconds that soft-deleted objects in the bucket will be retained and cannot be permanently deleted. Default value is 604800. The value must be in between 604800(7 days) and 7776000(90 days). Note: To disable the soft delete policy on a bucket, This field must be set to 0.'
+                          type: number
+                      type: object
+                    type: array
                   storageClass:
                     description: 'The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.'
                     type: string
@@ -470,6 +488,15 @@ spec:
                               numNewerVersions:
                                 description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
                                 type: number
+                              sendDaysSinceCustomTimeIfZero:
+                                description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
+                                type: boolean
+                              sendDaysSinceNoncurrentTimeIfZero:
+                                description: While set true, days_since_noncurrent_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_noncurrent_time field. It can be used alone or together with days_since_noncurrent_time.
+                                type: boolean
+                              sendNumNewerVersionsIfZero:
+                                description: While set true, num_newer_versions value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the num_newer_versions field. It can be used alone or together with num_newer_versions.
+                                type: boolean
                               withState:
                                 description: 'Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".'
                                 type: string
@@ -522,6 +549,15 @@ spec:
                   rpo:
                     description: The recovery point objective for cross-region replication of the bucket. Applicable only for dual and multi-region buckets. "DEFAULT" sets default replication. "ASYNC_TURBO" value enables turbo replication, valid for dual-region buckets only. See Turbo Replication for more information. If rpo is not specified at bucket creation, it defaults to "DEFAULT" for dual and multi-region buckets. NOTE If used with single-region bucket, It will throw an error.
                     type: string
+                  softDeletePolicy:
+                    description: The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. Structure is documented below.
+                    items:
+                      properties:
+                        retentionDurationSeconds:
+                          description: 'The duration in seconds that soft-deleted objects in the bucket will be retained and cannot be permanently deleted. Default value is 604800. The value must be in between 604800(7 days) and 7776000(90 days). Note: To disable the soft delete policy on a bucket, This field must be set to 0.'
+                          type: number
+                      type: object
+                    type: array
                   storageClass:
                     description: 'The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.'
                     type: string
@@ -919,6 +955,15 @@ spec:
                               numNewerVersions:
                                 description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
                                 type: number
+                              sendDaysSinceCustomTimeIfZero:
+                                description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
+                                type: boolean
+                              sendDaysSinceNoncurrentTimeIfZero:
+                                description: While set true, days_since_noncurrent_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_noncurrent_time field. It can be used alone or together with days_since_noncurrent_time.
+                                type: boolean
+                              sendNumNewerVersionsIfZero:
+                                description: While set true, num_newer_versions value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the num_newer_versions field. It can be used alone or together with num_newer_versions.
+                                type: boolean
                               withState:
                                 description: 'Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".'
                                 type: string
@@ -950,6 +995,8 @@ spec:
 
                       is not provided, the provider project is used.
                     type: string
+                  projectNumber:
+                    type: number
                   publicAccessPrevention:
                     description: Prevents public access to a bucket. Acceptable values are "inherited" or "enforced". If "inherited", the bucket uses public access prevention. only if the bucket is subject to the public access prevention organization policy constraint. Defaults to "inherited".
                     type: string
@@ -974,6 +1021,18 @@ spec:
                   selfLink:
                     description: The URI of the created resource.
                     type: string
+                  softDeletePolicy:
+                    description: The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. Structure is documented below.
+                    items:
+                      properties:
+                        effectiveTime:
+                          description: (Computed) Server-determined value that indicates the time from which the policy, or one with a greater retention, was effective. This value is in RFC 3339 format.
+                          type: string
+                        retentionDurationSeconds:
+                          description: 'The duration in seconds that soft-deleted objects in the bucket will be retained and cannot be permanently deleted. Default value is 604800. The value must be in between 604800(7 days) and 7776000(90 days). Note: To disable the soft delete policy on a bucket, This field must be set to 0.'
+                          type: number
+                      type: object
+                    type: array
                   storageClass:
                     description: 'The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.'
                     type: string
@@ -1242,7 +1301,7 @@ spec:
                           description: The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
                           properties:
                             age:
-                              description: Minimum age of an object in days to satisfy this condition.
+                              description: Minimum age of an object in days to satisfy this condition. If not supplied alongside another condition and without setting no_age to true, a default age of 0 will be set.
                               type: number
                             createdBefore:
                               description: A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
@@ -1251,10 +1310,10 @@ spec:
                               description: A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
                               type: string
                             daysSinceCustomTime:
-                              description: Days since the date set in the customTime metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the customTime.
+                              description: Days since the date set in the customTime metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the customTime. When set to 0 it will be ignored, and your state will treat it as though you supplied no days_since_custom_time condition.
                               type: number
                             daysSinceNoncurrentTime:
-                              description: Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
+                              description: Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object. When set to 0 it will be ignored, and your state will treat it as though you supplied no days_since_noncurrent_time condition.
                               type: number
                             matchesPrefix:
                               description: One or more matching name prefixes to satisfy this condition.
@@ -1272,14 +1331,23 @@ spec:
                                 type: string
                               type: array
                             noAge:
-                              description: While set true, age value will be omitted. Note Required to set true when age is unset in the config file.
+                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket.
                               type: boolean
                             noncurrentTimeBefore:
-                              description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent.
+                              description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent. When set to 0 it will be ignored, and your state will treat it as though you supplied no noncurrent_time_before condition.
                               type: string
                             numNewerVersions:
-                              description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
+                              description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. When set to 0 it will be ignored and your state will treat it as though you supplied no num_newer_versions condition.
                               type: number
+                            sendDaysSinceCustomTimeIfZero:
+                              description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
+                              type: boolean
+                            sendDaysSinceNoncurrentTimeIfZero:
+                              description: While set true, days_since_noncurrent_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_noncurrent_time field. It can be used alone or together with days_since_noncurrent_time.
+                              type: boolean
+                            sendNumNewerVersionsIfZero:
+                              description: While set true, num_newer_versions value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the num_newer_versions field. It can be used alone or together with num_newer_versions.
+                              type: boolean
                             withState:
                               description: 'Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".'
                               type: string
@@ -1478,7 +1546,7 @@ spec:
                           description: The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
                           properties:
                             age:
-                              description: Minimum age of an object in days to satisfy this condition.
+                              description: Minimum age of an object in days to satisfy this condition. If not supplied alongside another condition and without setting no_age to true, a default age of 0 will be set.
                               type: number
                             createdBefore:
                               description: A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
@@ -1487,10 +1555,10 @@ spec:
                               description: A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
                               type: string
                             daysSinceCustomTime:
-                              description: Days since the date set in the customTime metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the customTime.
+                              description: Days since the date set in the customTime metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the customTime. When set to 0 it will be ignored, and your state will treat it as though you supplied no days_since_custom_time condition.
                               type: number
                             daysSinceNoncurrentTime:
-                              description: Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
+                              description: Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object. When set to 0 it will be ignored, and your state will treat it as though you supplied no days_since_noncurrent_time condition.
                               type: number
                             matchesPrefix:
                               description: One or more matching name prefixes to satisfy this condition.
@@ -1508,14 +1576,23 @@ spec:
                                 type: string
                               type: array
                             noAge:
-                              description: While set true, age value will be omitted. Note Required to set true when age is unset in the config file.
+                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket.
                               type: boolean
                             noncurrentTimeBefore:
-                              description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent.
+                              description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent. When set to 0 it will be ignored, and your state will treat it as though you supplied no noncurrent_time_before condition.
                               type: string
                             numNewerVersions:
-                              description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
+                              description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. When set to 0 it will be ignored and your state will treat it as though you supplied no num_newer_versions condition.
                               type: number
+                            sendDaysSinceCustomTimeIfZero:
+                              description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
+                              type: boolean
+                            sendDaysSinceNoncurrentTimeIfZero:
+                              description: While set true, days_since_noncurrent_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_noncurrent_time field. It can be used alone or together with days_since_noncurrent_time.
+                              type: boolean
+                            sendNumNewerVersionsIfZero:
+                              description: While set true, num_newer_versions value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the num_newer_versions field. It can be used alone or together with num_newer_versions.
+                              type: boolean
                             withState:
                               description: 'Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".'
                               type: string
@@ -1916,7 +1993,7 @@ spec:
                           description: The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
                           properties:
                             age:
-                              description: Minimum age of an object in days to satisfy this condition.
+                              description: Minimum age of an object in days to satisfy this condition. If not supplied alongside another condition and without setting no_age to true, a default age of 0 will be set.
                               type: number
                             createdBefore:
                               description: A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
@@ -1925,10 +2002,10 @@ spec:
                               description: A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
                               type: string
                             daysSinceCustomTime:
-                              description: Days since the date set in the customTime metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the customTime.
+                              description: Days since the date set in the customTime metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the customTime. When set to 0 it will be ignored, and your state will treat it as though you supplied no days_since_custom_time condition.
                               type: number
                             daysSinceNoncurrentTime:
-                              description: Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
+                              description: Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object. When set to 0 it will be ignored, and your state will treat it as though you supplied no days_since_noncurrent_time condition.
                               type: number
                             matchesPrefix:
                               description: One or more matching name prefixes to satisfy this condition.
@@ -1946,14 +2023,23 @@ spec:
                                 type: string
                               type: array
                             noAge:
-                              description: While set true, age value will be omitted. Note Required to set true when age is unset in the config file.
+                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket.
                               type: boolean
                             noncurrentTimeBefore:
-                              description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent.
+                              description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent. When set to 0 it will be ignored, and your state will treat it as though you supplied no noncurrent_time_before condition.
                               type: string
                             numNewerVersions:
-                              description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
+                              description: Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. When set to 0 it will be ignored and your state will treat it as though you supplied no num_newer_versions condition.
                               type: number
+                            sendDaysSinceCustomTimeIfZero:
+                              description: While set true, days_since_custom_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_custom_time field. It can be used alone or together with days_since_custom_time.
+                              type: boolean
+                            sendDaysSinceNoncurrentTimeIfZero:
+                              description: While set true, days_since_noncurrent_time value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the days_since_noncurrent_time field. It can be used alone or together with days_since_noncurrent_time.
+                              type: boolean
+                            sendNumNewerVersionsIfZero:
+                              description: While set true, num_newer_versions value will be sent in the request even for zero value of the field. This field is only useful for setting 0 value to the num_newer_versions field. It can be used alone or together with num_newer_versions.
+                              type: boolean
                             withState:
                               description: 'Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: "LIVE", "ARCHIVED", "ANY".'
                               type: string
