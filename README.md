@@ -79,9 +79,11 @@ Update the .csproj with the following settings. The Models will be generated in 
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-*" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-0" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+    <PackageReference Include="KubernetesCRDModelGen.Models" Version="1.0.0-0"/>
     <AdditionalFiles Include="*.yaml" />
   </ItemGroup>
 
 </Project>
 ```
+ 

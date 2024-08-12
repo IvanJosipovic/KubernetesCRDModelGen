@@ -31,13 +31,13 @@
         <None Include="$(OutputPath)\KubernetesCRDModelGen.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <None Include="$(OutputPath)\KubernetesCRDModelGen.Models.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="KubernetesClient.Classic" Version="14.0.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="KubernetesClient.Classic" Version="14.0.9" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGKubernetesClient_Classic)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="BouncyCastle.Cryptography" Version="2.4.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGBouncyCastle_Cryptography)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Fractions" Version="8.0.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Fractions" Version="8.0.3" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGFractions)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="IdentityModel.OidcClient" Version="6.0.0" GeneratePathProperty="true" PrivateAssets="all" />
@@ -94,19 +94,19 @@
         <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Diagnostics_DiagnosticSource)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_IdentityModel_Tokens_Jwt)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_JsonWebTokens)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_Tokens)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.IdentityModel.Logging" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.Logging" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_Logging)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.IdentityModel.Abstractions" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.Abstractions" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_Abstractions)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="Microsoft.CSharp" Version="4.7.0" GeneratePathProperty="true" PrivateAssets="all" />
@@ -133,10 +133,10 @@
         <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Text_Encoding_CodePages)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.15" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.17" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_OpenApi_Readers)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.OpenApi" Version="1.6.15" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.OpenApi" Version="1.6.17" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_OpenApi)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="SharpYaml" Version="2.1.1" GeneratePathProperty="true" PrivateAssets="all" />

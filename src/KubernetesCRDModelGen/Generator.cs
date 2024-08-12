@@ -16,7 +16,7 @@ namespace KubernetesCRDModelGen;
 
 public class Generator : IGenerator
 {
-    public const string ModelNamespace = "KubeUI.Models";
+    public const string ModelNamespace = "KubernetesCRDModelGen.Models";
 
     private readonly MetadataReference[] _metadataReferences;
 
@@ -172,7 +172,7 @@ public class Generator : IGenerator
 
         var schema = version.Schema.OpenAPIV3Schema;
 
-        var doc = new OpenApiStringReader().ReadFragment<OpenApiSchema>(KubernetesYaml.Serialize(version.Schema.OpenAPIV3Schema), OpenApiSpecVersion.OpenApi3_0, out var diag);
+        var doc = new OpenApiStringReader().ReadFragment<OpenApiSchema>(KubernetesJson.Serialize(version.Schema.OpenAPIV3Schema), OpenApiSpecVersion.OpenApi3_0, out var diag);
 
         if (diag?.Errors.Count > 0)
         {

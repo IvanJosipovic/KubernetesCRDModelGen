@@ -170,6 +170,8 @@ spec:
                                 x-kubernetes-map-type: granular
                               size:
                                 type: number
+                              storagePool:
+                                type: string
                               type:
                                 type: string
                             type: object
@@ -187,6 +189,8 @@ spec:
                   confidentialInstanceConfig:
                     items:
                       properties:
+                        confidentialInstanceType:
+                          type: string
                         enableConfidentialCompute:
                           type: boolean
                       type: object
@@ -538,6 +542,15 @@ spec:
                                 type: number
                             type: object
                           type: array
+                        maxRunDuration:
+                          items:
+                            properties:
+                              nanos:
+                                type: number
+                              seconds:
+                                type: number
+                            type: object
+                          type: array
                         minNodeCpus:
                           type: number
                         nodeAffinities:
@@ -556,6 +569,13 @@ spec:
                           type: array
                         onHostMaintenance:
                           type: string
+                        onInstanceStopAction:
+                          items:
+                            properties:
+                              discardLocalSsd:
+                                type: boolean
+                            type: object
+                          type: array
                         preemptible:
                           type: boolean
                         provisioningModel:
@@ -775,6 +795,23 @@ spec:
 
                             Changing this forces a new resource to be created.
                           type: string
+                        diskEncryptionKeyRawSecretRef:
+                          description: A SecretKeySelector is a reference to a secret key in an arbitrary namespace.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         initializeParams:
                           items:
                             properties:
@@ -797,6 +834,8 @@ spec:
                                 x-kubernetes-map-type: granular
                               size:
                                 type: number
+                              storagePool:
+                                type: string
                               type:
                                 type: string
                             type: object
@@ -814,6 +853,8 @@ spec:
                   confidentialInstanceConfig:
                     items:
                       properties:
+                        confidentialInstanceType:
+                          type: string
                         enableConfidentialCompute:
                           type: boolean
                       type: object
@@ -1165,6 +1206,15 @@ spec:
                                 type: number
                             type: object
                           type: array
+                        maxRunDuration:
+                          items:
+                            properties:
+                              nanos:
+                                type: number
+                              seconds:
+                                type: number
+                            type: object
+                          type: array
                         minNodeCpus:
                           type: number
                         nodeAffinities:
@@ -1183,6 +1233,13 @@ spec:
                           type: array
                         onHostMaintenance:
                           type: string
+                        onInstanceStopAction:
+                          items:
+                            properties:
+                              discardLocalSsd:
+                                type: boolean
+                            type: object
+                          type: array
                         preemptible:
                           type: boolean
                         provisioningModel:
@@ -1620,6 +1677,8 @@ spec:
                                 x-kubernetes-map-type: granular
                               size:
                                 type: number
+                              storagePool:
+                                type: string
                               type:
                                 type: string
                             type: object
@@ -1637,6 +1696,8 @@ spec:
                   confidentialInstanceConfig:
                     items:
                       properties:
+                        confidentialInstanceType:
+                          type: string
                         enableConfidentialCompute:
                           type: boolean
                       type: object
@@ -1841,6 +1902,15 @@ spec:
                                 type: number
                             type: object
                           type: array
+                        maxRunDuration:
+                          items:
+                            properties:
+                              nanos:
+                                type: number
+                              seconds:
+                                type: number
+                            type: object
+                          type: array
                         minNodeCpus:
                           type: number
                         nodeAffinities:
@@ -1859,6 +1929,13 @@ spec:
                           type: array
                         onHostMaintenance:
                           type: string
+                        onInstanceStopAction:
+                          items:
+                            properties:
+                              discardLocalSsd:
+                                type: boolean
+                            type: object
+                          type: array
                         preemptible:
                           type: boolean
                         provisioningModel:
@@ -2147,6 +2224,8 @@ spec:
                             x-kubernetes-map-type: granular
                           size:
                             type: number
+                          storagePool:
+                            type: string
                           type:
                             type: string
                         type: object
@@ -2161,6 +2240,8 @@ spec:
                     type: boolean
                   confidentialInstanceConfig:
                     properties:
+                      confidentialInstanceType:
+                        type: string
                       enableConfidentialCompute:
                         type: boolean
                     type: object
@@ -2500,6 +2581,13 @@ spec:
                           seconds:
                             type: number
                         type: object
+                      maxRunDuration:
+                        properties:
+                          nanos:
+                            type: number
+                          seconds:
+                            type: number
+                        type: object
                       minNodeCpus:
                         type: number
                       nodeAffinities:
@@ -2518,6 +2606,11 @@ spec:
                         type: array
                       onHostMaintenance:
                         type: string
+                      onInstanceStopAction:
+                        properties:
+                          discardLocalSsd:
+                            type: boolean
+                        type: object
                       preemptible:
                         type: boolean
                       provisioningModel:
@@ -2767,6 +2860,8 @@ spec:
                             x-kubernetes-map-type: granular
                           size:
                             type: number
+                          storagePool:
+                            type: string
                           type:
                             type: string
                         type: object
@@ -2781,6 +2876,8 @@ spec:
                     type: boolean
                   confidentialInstanceConfig:
                     properties:
+                      confidentialInstanceType:
+                        type: string
                       enableConfidentialCompute:
                         type: boolean
                     type: object
@@ -3120,6 +3217,13 @@ spec:
                           seconds:
                             type: number
                         type: object
+                      maxRunDuration:
+                        properties:
+                          nanos:
+                            type: number
+                          seconds:
+                            type: number
+                        type: object
                       minNodeCpus:
                         type: number
                       nodeAffinities:
@@ -3138,6 +3242,11 @@ spec:
                         type: array
                       onHostMaintenance:
                         type: string
+                      onInstanceStopAction:
+                        properties:
+                          discardLocalSsd:
+                            type: boolean
+                        type: object
                       preemptible:
                         type: boolean
                       provisioningModel:
@@ -3566,6 +3675,8 @@ spec:
                             x-kubernetes-map-type: granular
                           size:
                             type: number
+                          storagePool:
+                            type: string
                           type:
                             type: string
                         type: object
@@ -3580,6 +3691,8 @@ spec:
                     type: boolean
                   confidentialInstanceConfig:
                     properties:
+                      confidentialInstanceType:
+                        type: string
                       enableConfidentialCompute:
                         type: boolean
                     type: object
@@ -3772,6 +3885,13 @@ spec:
                           seconds:
                             type: number
                         type: object
+                      maxRunDuration:
+                        properties:
+                          nanos:
+                            type: number
+                          seconds:
+                            type: number
+                        type: object
                       minNodeCpus:
                         type: number
                       nodeAffinities:
@@ -3790,6 +3910,11 @@ spec:
                         type: array
                       onHostMaintenance:
                         type: string
+                      onInstanceStopAction:
+                        properties:
+                          discardLocalSsd:
+                            type: boolean
+                        type: object
                       preemptible:
                         type: boolean
                       provisioningModel:

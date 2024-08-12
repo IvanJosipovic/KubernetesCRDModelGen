@@ -348,10 +348,7 @@ spec:
                     description: URL of the region where the resource resides.
                     type: string
                   targetService:
-                    description: >-
-                      The URL of a forwarding rule that represents the service identified by
-
-                      this service attachment.
+                    description: The URL of a service serving the endpoint identified by this service attachment.
                     type: string
                   targetServiceRef:
                     description: Reference to a ForwardingRule in compute to populate targetService.
@@ -725,10 +722,7 @@ spec:
                       If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list.
                     type: boolean
                   targetService:
-                    description: >-
-                      The URL of a forwarding rule that represents the service identified by
-
-                      this service attachment.
+                    description: The URL of a service serving the endpoint identified by this service attachment.
                     type: string
                   targetServiceRef:
                     description: Reference to a ForwardingRule in compute to populate targetService.
@@ -1161,10 +1155,7 @@ spec:
                     description: The URI of the created resource.
                     type: string
                   targetService:
-                    description: >-
-                      The URL of a forwarding rule that represents the service identified by
-
-                      this service attachment.
+                    description: The URL of a service serving the endpoint identified by this service attachment.
                     type: string
                 type: object
               conditions:

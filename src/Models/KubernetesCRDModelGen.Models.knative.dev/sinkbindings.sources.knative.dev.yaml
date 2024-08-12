@@ -6,7 +6,7 @@ metadata:
     duck.knative.dev/source: true
     duck.knative.dev/binding: true
     knative.dev/crd-install: true
-    app.kubernetes.io/version: 1.14.5
+    app.kubernetes.io/version: 1.15.0
     app.kubernetes.io/name: knative-eventing
   name: sinkbindings.sources.knative.dev
 spec:
@@ -117,6 +117,11 @@ spec:
                   serviceAccountName:
                     description: ServiceAccountName is the name of the generated service account used for this components OIDC authentication.
                     type: string
+                  serviceAccountNames:
+                    description: ServiceAccountNames is the list of names of the generated service accounts used for this components OIDC authentication.
+                    type: array
+                    items:
+                      type: string
               ceAttributes:
                 description: CloudEventAttributes are the specific attributes that the Source uses as part of its CloudEvents.
                 type: array

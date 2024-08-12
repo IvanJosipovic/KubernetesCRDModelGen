@@ -4,7 +4,7 @@ metadata:
   name: domainmappings.serving.knative.dev
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.14.1
+    app.kubernetes.io/version: 1.15.2
     knative.dev/crd-install: true
 spec:
   group: serving.knative.dev

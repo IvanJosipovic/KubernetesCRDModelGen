@@ -1879,7 +1879,7 @@ spec:
                                 type: object
                               type: array
                             sourceActionName:
-                              description: The name of the pipeline source action where the trigger configuration.
+                              description: The name of the pipeline source action where the trigger configuration, such as Git tags, is specified. The trigger configuration will start the pipeline upon the specified change only.
                               type: string
                           type: object
                         providerType:
@@ -2286,7 +2286,7 @@ spec:
                                 type: object
                               type: array
                             sourceActionName:
-                              description: The name of the pipeline source action where the trigger configuration.
+                              description: The name of the pipeline source action where the trigger configuration, such as Git tags, is specified. The trigger configuration will start the pipeline upon the specified change only.
                               type: string
                           type: object
                         providerType:
@@ -2733,7 +2733,7 @@ spec:
                                 type: object
                               type: array
                             sourceActionName:
-                              description: The name of the pipeline source action where the trigger configuration.
+                              description: The name of the pipeline source action where the trigger configuration, such as Git tags, is specified. The trigger configuration will start the pipeline upon the specified change only.
                               type: string
                           type: object
                         providerType:

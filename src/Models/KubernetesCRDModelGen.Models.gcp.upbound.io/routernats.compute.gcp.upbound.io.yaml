@@ -84,6 +84,16 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  autoNetworkTier:
+                    description: >-
+                      The network tier to use when automatically reserving NAT IP addresses.
+
+                      Must be one of: PREMIUM, STANDARD. If not specified, then the current
+
+                      project-level default tier is used.
+
+                      Possible values are: PREMIUM, STANDARD.
+                    type: string
                   drainNatIps:
                     description: >-
                       A list of URLs of the IP resources to be drained. These IPs must be
@@ -113,6 +123,18 @@ spec:
 
                       For more information see the official documentation.
                     type: boolean
+                  endpointTypes:
+                    description: >-
+                      Specifies the endpoint Types supported by the NAT Gateway.
+
+                      Supported values include:
+
+                      ENDPOINT_TYPE_VM, ENDPOINT_TYPE_SWG,
+
+                      ENDPOINT_TYPE_MANAGED_PROXY_LB.
+                    items:
+                      type: string
+                    type: array
                   icmpIdleTimeoutSec:
                     description: Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
                     type: number
@@ -523,6 +545,16 @@ spec:
 
                   autoscaler.
                 properties:
+                  autoNetworkTier:
+                    description: >-
+                      The network tier to use when automatically reserving NAT IP addresses.
+
+                      Must be one of: PREMIUM, STANDARD. If not specified, then the current
+
+                      project-level default tier is used.
+
+                      Possible values are: PREMIUM, STANDARD.
+                    type: string
                   drainNatIps:
                     description: >-
                       A list of URLs of the IP resources to be drained. These IPs must be
@@ -552,6 +584,18 @@ spec:
 
                       For more information see the official documentation.
                     type: boolean
+                  endpointTypes:
+                    description: >-
+                      Specifies the endpoint Types supported by the NAT Gateway.
+
+                      Supported values include:
+
+                      ENDPOINT_TYPE_VM, ENDPOINT_TYPE_SWG,
+
+                      ENDPOINT_TYPE_MANAGED_PROXY_LB.
+                    items:
+                      type: string
+                    type: array
                   icmpIdleTimeoutSec:
                     description: Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
                     type: number
@@ -1062,6 +1106,16 @@ spec:
             properties:
               atProvider:
                 properties:
+                  autoNetworkTier:
+                    description: >-
+                      The network tier to use when automatically reserving NAT IP addresses.
+
+                      Must be one of: PREMIUM, STANDARD. If not specified, then the current
+
+                      project-level default tier is used.
+
+                      Possible values are: PREMIUM, STANDARD.
+                    type: string
                   drainNatIps:
                     description: >-
                       A list of URLs of the IP resources to be drained. These IPs must be
@@ -1091,6 +1145,18 @@ spec:
 
                       For more information see the official documentation.
                     type: boolean
+                  endpointTypes:
+                    description: >-
+                      Specifies the endpoint Types supported by the NAT Gateway.
+
+                      Supported values include:
+
+                      ENDPOINT_TYPE_VM, ENDPOINT_TYPE_SWG,
+
+                      ENDPOINT_TYPE_MANAGED_PROXY_LB.
+                    items:
+                      type: string
+                    type: array
                   icmpIdleTimeoutSec:
                     description: Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
                     type: number
@@ -1441,6 +1507,16 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  autoNetworkTier:
+                    description: >-
+                      The network tier to use when automatically reserving NAT IP addresses.
+
+                      Must be one of: PREMIUM, STANDARD. If not specified, then the current
+
+                      project-level default tier is used.
+
+                      Possible values are: PREMIUM, STANDARD.
+                    type: string
                   drainNatIps:
                     description: >-
                       A list of URLs of the IP resources to be drained. These IPs must be
@@ -1888,6 +1964,16 @@ spec:
 
                   autoscaler.
                 properties:
+                  autoNetworkTier:
+                    description: >-
+                      The network tier to use when automatically reserving NAT IP addresses.
+
+                      Must be one of: PREMIUM, STANDARD. If not specified, then the current
+
+                      project-level default tier is used.
+
+                      Possible values are: PREMIUM, STANDARD.
+                    type: string
                   drainNatIps:
                     description: >-
                       A list of URLs of the IP resources to be drained. These IPs must be
@@ -2435,6 +2521,16 @@ spec:
             properties:
               atProvider:
                 properties:
+                  autoNetworkTier:
+                    description: >-
+                      The network tier to use when automatically reserving NAT IP addresses.
+
+                      Must be one of: PREMIUM, STANDARD. If not specified, then the current
+
+                      project-level default tier is used.
+
+                      Possible values are: PREMIUM, STANDARD.
+                    type: string
                   drainNatIps:
                     description: >-
                       A list of URLs of the IP resources to be drained. These IPs must be

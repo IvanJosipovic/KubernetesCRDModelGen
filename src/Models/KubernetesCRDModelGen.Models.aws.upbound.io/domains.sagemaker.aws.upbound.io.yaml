@@ -215,6 +215,12 @@ spec:
                                       type: string
                                   type: object
                                 type: array
+                              generativeAiSettings:
+                                properties:
+                                  amazonBedrockRoleArn:
+                                    description: The Amazon Resource Name (ARN) assigned by AWS to this Domain.
+                                    type: string
+                                type: object
                               identityProviderOauthSettings:
                                 description: The settings for connecting to an external data source with OAuth. See identity_provider_oauth_settings Block below.
                                 items:
@@ -281,6 +287,21 @@ spec:
                           description: The Code Editor application settings. See code_editor_app_settings Block below.
                           items:
                             properties:
+                              customImage:
+                                description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
+                                items:
+                                  properties:
+                                    appImageConfigName:
+                                      description: The name of the App Image Config.
+                                      type: string
+                                    imageName:
+                                      description: The name of the Custom Image.
+                                      type: string
+                                    imageVersionNumber:
+                                      description: The version number of the Custom Image.
+                                      type: number
+                                  type: object
+                                type: array
                               defaultResourceSpec:
                                 description: The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.
                                 items:
@@ -1377,6 +1398,12 @@ spec:
                                       type: string
                                   type: object
                                 type: array
+                              generativeAiSettings:
+                                properties:
+                                  amazonBedrockRoleArn:
+                                    description: The Amazon Resource Name (ARN) assigned by AWS to this Domain.
+                                    type: string
+                                type: object
                               identityProviderOauthSettings:
                                 description: The settings for connecting to an external data source with OAuth. See identity_provider_oauth_settings Block below.
                                 items:
@@ -1443,6 +1470,21 @@ spec:
                           description: The Code Editor application settings. See code_editor_app_settings Block below.
                           items:
                             properties:
+                              customImage:
+                                description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
+                                items:
+                                  properties:
+                                    appImageConfigName:
+                                      description: The name of the App Image Config.
+                                      type: string
+                                    imageName:
+                                      description: The name of the Custom Image.
+                                      type: string
+                                    imageVersionNumber:
+                                      description: The version number of the Custom Image.
+                                      type: number
+                                  type: object
+                                type: array
                               defaultResourceSpec:
                                 description: The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.
                                 items:
@@ -2735,6 +2777,12 @@ spec:
                                       type: string
                                   type: object
                                 type: array
+                              generativeAiSettings:
+                                properties:
+                                  amazonBedrockRoleArn:
+                                    description: The Amazon Resource Name (ARN) assigned by AWS to this Domain.
+                                    type: string
+                                type: object
                               identityProviderOauthSettings:
                                 description: The settings for connecting to an external data source with OAuth. See identity_provider_oauth_settings Block below.
                                 items:
@@ -2801,6 +2849,21 @@ spec:
                           description: The Code Editor application settings. See code_editor_app_settings Block below.
                           items:
                             properties:
+                              customImage:
+                                description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
+                                items:
+                                  properties:
+                                    appImageConfigName:
+                                      description: The name of the App Image Config.
+                                      type: string
+                                    imageName:
+                                      description: The name of the Custom Image.
+                                      type: string
+                                    imageVersionNumber:
+                                      description: The version number of the Custom Image.
+                                      type: number
+                                  type: object
+                                type: array
                               defaultResourceSpec:
                                 description: The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.
                                 items:
@@ -3494,6 +3557,12 @@ spec:
                                 description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
                                 type: string
                             type: object
+                          generativeAiSettings:
+                            properties:
+                              amazonBedrockRoleArn:
+                                description: The Amazon Resource Name (ARN) assigned by AWS to this Domain.
+                                type: string
+                            type: object
                           identityProviderOauthSettings:
                             description: The settings for connecting to an external data source with OAuth. See identity_provider_oauth_settings Block below.
                             items:
@@ -3550,6 +3619,21 @@ spec:
                       codeEditorAppSettings:
                         description: The Code Editor application settings. See code_editor_app_settings Block below.
                         properties:
+                          customImage:
+                            description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
+                            items:
+                              properties:
+                                appImageConfigName:
+                                  description: The name of the App Image Config.
+                                  type: string
+                                imageName:
+                                  description: The name of the Custom Image.
+                                  type: string
+                                imageVersionNumber:
+                                  description: The version number of the Custom Image.
+                                  type: number
+                              type: object
+                            type: array
                           defaultResourceSpec:
                             description: The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.
                             properties:
@@ -4588,6 +4672,12 @@ spec:
                                 description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
                                 type: string
                             type: object
+                          generativeAiSettings:
+                            properties:
+                              amazonBedrockRoleArn:
+                                description: The Amazon Resource Name (ARN) assigned by AWS to this Domain.
+                                type: string
+                            type: object
                           identityProviderOauthSettings:
                             description: The settings for connecting to an external data source with OAuth. See identity_provider_oauth_settings Block below.
                             items:
@@ -4644,6 +4734,21 @@ spec:
                       codeEditorAppSettings:
                         description: The Code Editor application settings. See code_editor_app_settings Block below.
                         properties:
+                          customImage:
+                            description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
+                            items:
+                              properties:
+                                appImageConfigName:
+                                  description: The name of the App Image Config.
+                                  type: string
+                                imageName:
+                                  description: The name of the Custom Image.
+                                  type: string
+                                imageVersionNumber:
+                                  description: The version number of the Custom Image.
+                                  type: number
+                              type: object
+                            type: array
                           defaultResourceSpec:
                             description: The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.
                             properties:
@@ -5878,6 +5983,12 @@ spec:
                                 description: Describes whether time series forecasting is enabled or disabled in the Canvas app. Valid values are ENABLED and DISABLED.
                                 type: string
                             type: object
+                          generativeAiSettings:
+                            properties:
+                              amazonBedrockRoleArn:
+                                description: The Amazon Resource Name (ARN) assigned by AWS to this Domain.
+                                type: string
+                            type: object
                           identityProviderOauthSettings:
                             description: The settings for connecting to an external data source with OAuth. See identity_provider_oauth_settings Block below.
                             items:
@@ -5934,6 +6045,21 @@ spec:
                       codeEditorAppSettings:
                         description: The Code Editor application settings. See code_editor_app_settings Block below.
                         properties:
+                          customImage:
+                            description: A list of custom SageMaker images that are configured to run as a KernelGateway app. see custom_image Block below.
+                            items:
+                              properties:
+                                appImageConfigName:
+                                  description: The name of the App Image Config.
+                                  type: string
+                                imageName:
+                                  description: The name of the Custom Image.
+                                  type: string
+                                imageVersionNumber:
+                                  description: The version number of the Custom Image.
+                                  type: number
+                              type: object
+                            type: array
                           defaultResourceSpec:
                             description: The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see default_resource_spec Block below.
                             properties:

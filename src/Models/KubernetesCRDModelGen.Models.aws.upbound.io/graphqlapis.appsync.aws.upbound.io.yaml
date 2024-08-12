@@ -1287,14 +1287,14 @@ spec:
               forProvider:
                 properties:
                   additionalAuthenticationProvider:
-                    description: One or more additional authentication providers for the GraphqlApi. Defined below.
+                    description: One or more additional authentication providers for the GraphSQL API. See additional_authentication_provider Block for details.
                     items:
                       properties:
                         authenticationType:
                           description: 'Authentication type. Valid values: API_KEY, AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT, AWS_LAMBDA'
                           type: string
                         lambdaAuthorizerConfig:
-                          description: Nested argument containing Lambda authorizer configuration. Defined below.
+                          description: Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.
                           properties:
                             authorizerResultTtlInSeconds:
                               description: Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
@@ -1307,7 +1307,7 @@ spec:
                               type: string
                           type: object
                         openidConnectConfig:
-                          description: Nested argument containing OpenID Connect configuration. Defined below.
+                          description: Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.
                           properties:
                             authTtl:
                               description: Number of milliseconds a token is valid after being authenticated.
@@ -1323,7 +1323,7 @@ spec:
                               type: string
                           type: object
                         userPoolConfig:
-                          description: Amazon Cognito User Pool configuration. Defined below.
+                          description: Amazon Cognito User Pool configuration. See user_pool_config Block for details.
                           properties:
                             appIdClientRegex:
                               description: Regular expression for validating the incoming Amazon Cognito User Pool app client ID.
@@ -1344,7 +1344,7 @@ spec:
                     description: Sets the value of the GraphQL API to enable (ENABLED) or disable (DISABLED) introspection. If no value is provided, the introspection configuration will be set to ENABLED by default. This field will produce an error if the operation attempts to use the introspection feature while this field is disabled. For more information about introspection, see GraphQL introspection.
                     type: string
                   lambdaAuthorizerConfig:
-                    description: Nested argument containing Lambda authorizer configuration. Defined below.
+                    description: Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.
                     properties:
                       authorizerResultTtlInSeconds:
                         description: Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
@@ -1357,7 +1357,7 @@ spec:
                         type: string
                     type: object
                   logConfig:
-                    description: Nested argument containing logging configuration. Defined below.
+                    description: Nested argument containing logging configuration. See log_config Block for details.
                     properties:
                       cloudwatchLogsRoleArn:
                         description: Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
@@ -1456,10 +1456,10 @@ spec:
                         type: string
                     type: object
                   name:
-                    description: User-supplied name for the GraphqlApi.
+                    description: User-supplied name for the GraphSQL API.
                     type: string
                   openidConnectConfig:
-                    description: Nested argument containing OpenID Connect configuration. Defined below.
+                    description: Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.
                     properties:
                       authTtl:
                         description: Number of milliseconds a token is valid after being authenticated.
@@ -1493,7 +1493,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   userPoolConfig:
-                    description: Amazon Cognito User Pool configuration. Defined below.
+                    description: Amazon Cognito User Pool configuration. See user_pool_config Block for details.
                     properties:
                       appIdClientRegex:
                         description: Regular expression for validating the incoming Amazon Cognito User Pool app client ID.
@@ -1626,14 +1626,14 @@ spec:
                   autoscaler.
                 properties:
                   additionalAuthenticationProvider:
-                    description: One or more additional authentication providers for the GraphqlApi. Defined below.
+                    description: One or more additional authentication providers for the GraphSQL API. See additional_authentication_provider Block for details.
                     items:
                       properties:
                         authenticationType:
                           description: 'Authentication type. Valid values: API_KEY, AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT, AWS_LAMBDA'
                           type: string
                         lambdaAuthorizerConfig:
-                          description: Nested argument containing Lambda authorizer configuration. Defined below.
+                          description: Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.
                           properties:
                             authorizerResultTtlInSeconds:
                               description: Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
@@ -1646,7 +1646,7 @@ spec:
                               type: string
                           type: object
                         openidConnectConfig:
-                          description: Nested argument containing OpenID Connect configuration. Defined below.
+                          description: Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.
                           properties:
                             authTtl:
                               description: Number of milliseconds a token is valid after being authenticated.
@@ -1662,7 +1662,7 @@ spec:
                               type: string
                           type: object
                         userPoolConfig:
-                          description: Amazon Cognito User Pool configuration. Defined below.
+                          description: Amazon Cognito User Pool configuration. See user_pool_config Block for details.
                           properties:
                             appIdClientRegex:
                               description: Regular expression for validating the incoming Amazon Cognito User Pool app client ID.
@@ -1683,7 +1683,7 @@ spec:
                     description: Sets the value of the GraphQL API to enable (ENABLED) or disable (DISABLED) introspection. If no value is provided, the introspection configuration will be set to ENABLED by default. This field will produce an error if the operation attempts to use the introspection feature while this field is disabled. For more information about introspection, see GraphQL introspection.
                     type: string
                   lambdaAuthorizerConfig:
-                    description: Nested argument containing Lambda authorizer configuration. Defined below.
+                    description: Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.
                     properties:
                       authorizerResultTtlInSeconds:
                         description: Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
@@ -1696,7 +1696,7 @@ spec:
                         type: string
                     type: object
                   logConfig:
-                    description: Nested argument containing logging configuration. Defined below.
+                    description: Nested argument containing logging configuration. See log_config Block for details.
                     properties:
                       cloudwatchLogsRoleArn:
                         description: Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
@@ -1795,10 +1795,10 @@ spec:
                         type: string
                     type: object
                   name:
-                    description: User-supplied name for the GraphqlApi.
+                    description: User-supplied name for the GraphSQL API.
                     type: string
                   openidConnectConfig:
-                    description: Nested argument containing OpenID Connect configuration. Defined below.
+                    description: Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.
                     properties:
                       authTtl:
                         description: Number of milliseconds a token is valid after being authenticated.
@@ -1829,7 +1829,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   userPoolConfig:
-                    description: Amazon Cognito User Pool configuration. Defined below.
+                    description: Amazon Cognito User Pool configuration. See user_pool_config Block for details.
                     properties:
                       appIdClientRegex:
                         description: Regular expression for validating the incoming Amazon Cognito User Pool app client ID.
@@ -2156,14 +2156,14 @@ spec:
               atProvider:
                 properties:
                   additionalAuthenticationProvider:
-                    description: One or more additional authentication providers for the GraphqlApi. Defined below.
+                    description: One or more additional authentication providers for the GraphSQL API. See additional_authentication_provider Block for details.
                     items:
                       properties:
                         authenticationType:
                           description: 'Authentication type. Valid values: API_KEY, AWS_IAM, AMAZON_COGNITO_USER_POOLS, OPENID_CONNECT, AWS_LAMBDA'
                           type: string
                         lambdaAuthorizerConfig:
-                          description: Nested argument containing Lambda authorizer configuration. Defined below.
+                          description: Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.
                           properties:
                             authorizerResultTtlInSeconds:
                               description: Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
@@ -2176,7 +2176,7 @@ spec:
                               type: string
                           type: object
                         openidConnectConfig:
-                          description: Nested argument containing OpenID Connect configuration. Defined below.
+                          description: Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.
                           properties:
                             authTtl:
                               description: Number of milliseconds a token is valid after being authenticated.
@@ -2192,7 +2192,7 @@ spec:
                               type: string
                           type: object
                         userPoolConfig:
-                          description: Amazon Cognito User Pool configuration. Defined below.
+                          description: Amazon Cognito User Pool configuration. See user_pool_config Block for details.
                           properties:
                             appIdClientRegex:
                               description: Regular expression for validating the incoming Amazon Cognito User Pool app client ID.
@@ -2219,7 +2219,7 @@ spec:
                     description: Sets the value of the GraphQL API to enable (ENABLED) or disable (DISABLED) introspection. If no value is provided, the introspection configuration will be set to ENABLED by default. This field will produce an error if the operation attempts to use the introspection feature while this field is disabled. For more information about introspection, see GraphQL introspection.
                     type: string
                   lambdaAuthorizerConfig:
-                    description: Nested argument containing Lambda authorizer configuration. Defined below.
+                    description: Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.
                     properties:
                       authorizerResultTtlInSeconds:
                         description: Number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a ttlOverride key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
@@ -2232,7 +2232,7 @@ spec:
                         type: string
                     type: object
                   logConfig:
-                    description: Nested argument containing logging configuration. Defined below.
+                    description: Nested argument containing logging configuration. See log_config Block for details.
                     properties:
                       cloudwatchLogsRoleArn:
                         description: Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
@@ -2245,10 +2245,10 @@ spec:
                         type: string
                     type: object
                   name:
-                    description: User-supplied name for the GraphqlApi.
+                    description: User-supplied name for the GraphSQL API.
                     type: string
                   openidConnectConfig:
-                    description: Nested argument containing OpenID Connect configuration. Defined below.
+                    description: Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.
                     properties:
                       authTtl:
                         description: Number of milliseconds a token is valid after being authenticated.
@@ -2291,7 +2291,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   userPoolConfig:
-                    description: Amazon Cognito User Pool configuration. Defined below.
+                    description: Amazon Cognito User Pool configuration. See user_pool_config Block for details.
                     properties:
                       appIdClientRegex:
                         description: Regular expression for validating the incoming Amazon Cognito User Pool app client ID.
