@@ -1,7 +1,9 @@
-﻿using System.Globalization;
-using System.Reflection;
+﻿using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text;
 using System.Text.Json.Nodes;
 using System.Xml;
+using Humanizer;
 using k8s;
 using k8s.Models;
 using Microsoft.CodeAnalysis;
@@ -20,129 +22,6 @@ public class Generator : IGenerator
 
     private readonly MetadataReference[] _metadataReferences;
 
-    private static readonly List<string> s_keywords =
-    [
-        "abstract",
-        "as",
-        "base",
-        "bool",
-        "break",
-        "byte",
-        "case",
-        "catch",
-        "char",
-        "checked",
-        "class",
-        "const",
-        "continue",
-        "decimal",
-        "default",
-        "delegate",
-        "do",
-        "double",
-        "else",
-        "enum",
-        "event",
-        "explicit",
-        "extern",
-        "false",
-        "finally",
-        "fixed",
-        "float",
-        "for",
-        "foreach",
-        "goto",
-        "if",
-        "implicit",
-        "in",
-        "int",
-        "interface",
-        "internal",
-        "is",
-        "lock",
-        "long",
-        "namespace",
-        "new",
-        "null",
-        "object",
-        "operator",
-        "out",
-        "override",
-        "params",
-        "private",
-        "protected",
-        "public",
-        "readonly",
-        "ref",
-        "return",
-        "sbyte",
-        "sealed",
-        "short",
-        "sizeof",
-        "stackalloc",
-        "static",
-        "string",
-        "struct",
-        "switch",
-        "this",
-        "throw",
-        "true",
-        "try",
-        "typeof",
-        "uint",
-        "ulong",
-        "unchecked",
-        "unsafe",
-        "ushort",
-        "using",
-        "virtual",
-        "void",
-        "volatile",
-        "while"
-    ];
-
-    private static readonly List<char> s_propertyNameBadChars = [
-        '-',
-        '$',
-        '`',
-        '!',
-        '@',
-        '#',
-        '%',
-        '^',
-        '&',
-        '*',
-        '(',
-        ')',
-        '-',
-        '+',
-        '~',
-        '_',
-        '=',
-        '.'
-    ];
-
-    private static readonly List<char> s_namespaceBadChars =
-    [
-        '-',
-        '$',
-        '`',
-        '!',
-        '@',
-        '#',
-        '%',
-        '^',
-        '&',
-        '*',
-        '(',
-        ')',
-        '-',
-        '+',
-        '~',
-        '_',
-        '='
-    ];
-
     private const string KubePreserveUnkownFields = "x-kubernetes-preserve-unknown-fields";
 
     private const string KubeIntOrString = "x-kubernetes-int-or-string";
@@ -154,12 +33,12 @@ public class Generator : IGenerator
         .WithOptimizationLevel(OptimizationLevel.Release)
         .WithOverflowChecks(false)
         .WithPlatform(Platform.AnyCpu)
-        .WithSpecificDiagnosticOptions(new KeyValuePair<string, ReportDiagnostic>[]
-        {
+        .WithSpecificDiagnosticOptions(
+        [
             // Don't warn for binding redirects
             new("CS1701", ReportDiagnostic.Suppress),
             new("CS1702", ReportDiagnostic.Suppress)
-        });
+        ]);
 
     public Generator()
     {
@@ -179,7 +58,7 @@ public class Generator : IGenerator
             Console.WriteLine("Error: " + diag.Errors.Select(x => x.Message));
         }
 
-        var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(SyntaxFactory.ParseName(GetCleanNamespace(@namespace + "." + crd.Spec.Group))).NormalizeWhitespace();
+        var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(SyntaxFactory.ParseName(CleanIdentifier(@namespace + "." + crd.Spec.Group, true))).NormalizeWhitespace();
 
         namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural));
 
@@ -190,24 +69,25 @@ public class Generator : IGenerator
 
     private static SyntaxList<UsingDirectiveSyntax> GenerateUsings()
     {
-        var using1 = SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s"));
-        var using2 = SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s.Models"));
-        var using3 = SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json"));
-        var using4 = SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Nodes"));
-        var using5 = SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Serialization"));
-        var using6 = SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System"));
-        var using7 = SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Collections.Generic"));
-
-        return SyntaxFactory.List([using1, using2, using3, using4, using5, using6, using7]);
+        return SyntaxFactory.List([
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s.Models")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Collections.Generic")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Runtime.Serialization")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Nodes")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Serialization")),
+        ]);
     }
 
-    private ClassDeclarationSyntax[] GenerateClass(OpenApiSchema schema, string name, string? version = null, string? kind = null, string? group = null, string? plural = null)
+    private BaseTypeDeclarationSyntax[] GenerateClass(OpenApiSchema schema, string name, string? version = null, string? kind = null, string? group = null, string? plural = null)
     {
         bool isRoot = version != null && kind != null && group != null && plural != null;
 
-        var classes = new List<ClassDeclarationSyntax>();
+        var types = new List<BaseTypeDeclarationSyntax>();
 
-        var @class = SyntaxFactory.ClassDeclaration(GetCleanClassName((isRoot ? version : string.Empty) + name))
+        var @class = SyntaxFactory.ClassDeclaration(CleanIdentifier((isRoot ? version : string.Empty) + " " + name))
                         .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword));
 
         if (isRoot)
@@ -350,7 +230,7 @@ public class Generator : IGenerator
                 }
             }
 
-            var type = GetOrGenerateType(property.Value, classes, @class.Identifier.Text, property.Key);
+            var type = GetOrGenerateType(property.Value, types, @class.Identifier.Text, property.Key);
 
             // Add ISpec base class
             if (isRoot && property.Key == "spec")
@@ -367,12 +247,12 @@ public class Generator : IGenerator
             @class = @class.AddMembers(CreateProperty(type, property.Key, property.Value.Description, schema.Required.Contains(property.Key)));
         }
 
-        classes.Add(@class);
+        types.Add(@class);
 
-        return [.. classes];
+        return [.. types];
     }
 
-    private string GetOrGenerateType(OpenApiSchema schema, List<ClassDeclarationSyntax> classes, string parentClassName, string propertyName)
+    private string GetOrGenerateType(OpenApiSchema schema, List<BaseTypeDeclarationSyntax> classes, string parentClassName, string propertyName)
     {
         string type = string.Empty;
 
@@ -396,7 +276,7 @@ public class Generator : IGenerator
                     }
                     else
                     {
-                        var nestedClasses = GenerateClass(schema, parentClassName + GetCleanClassName(propertyName));
+                        var nestedClasses = GenerateClass(schema, CleanIdentifier(parentClassName + " " + propertyName));
 
                         foreach (var newClass in nestedClasses)
                         {
@@ -412,6 +292,13 @@ public class Generator : IGenerator
 
                 break;
             case "string":
+
+                if (schema.Enum.Any())
+                {
+                    type = GenerateEnum(schema.Enum, classes, parentClassName, propertyName);
+                    break;
+                }
+
                 type = "string";
                 break;
             case "number":
@@ -424,6 +311,13 @@ public class Generator : IGenerator
                 if (schema.Format == "int64") type = "long"; else type = "int";
                 break;
             case "array":
+
+                if (schema.Enum.Any())
+                {
+                    type = $"IList<{GenerateEnum(schema.Enum, classes, parentClassName, propertyName)}>";
+                    break;
+                }
+
                 type = $"IList<{GetOrGenerateType(schema.Items, classes, parentClassName, propertyName)}>";
                 break;
         }
@@ -436,89 +330,156 @@ public class Generator : IGenerator
         return type;
     }
 
+    private static string GenerateEnum(IList<IOpenApiAny> options, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
+    {
+        var enumDeclaration = SyntaxFactory.EnumDeclaration(CleanIdentifier(parentClassName + " " + propertyName) + "Enum")
+            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+
+        for (var i = 0; i < options.Count; i++)
+        {
+            var option = options[i];
+
+            if (option is OpenApiString openApiString)
+            {
+                var identifier = CleanIdentifier(openApiString.Value);
+
+                if (string.IsNullOrEmpty(identifier))
+                {
+                    identifier = "Option" + i;
+                }
+
+                enumDeclaration = enumDeclaration.AddMembers(
+                    SyntaxFactory.EnumMemberDeclaration(SyntaxFactory.Identifier(identifier))
+                        .WithLeadingTrivia(
+                            SyntaxFactory.TriviaList(
+                                SyntaxFactory.Comment($"/// <summary>{openApiString.Value?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
+                                SyntaxFactory.CarriageReturnLineFeed))
+                        .WithAttributeLists(
+                            SyntaxFactory.SingletonList(
+                                SyntaxFactory.AttributeList(
+                                    SyntaxFactory.SingletonSeparatedList(
+                                        SyntaxFactory.Attribute(SyntaxFactory.ParseName("EnumMember"))
+                                            .WithArgumentList(
+                                                SyntaxFactory.AttributeArgumentList(
+                                                    SyntaxFactory.SingletonSeparatedList(
+                                                        SyntaxFactory.AttributeArgument(
+                                                            SyntaxFactory.NameEquals("Value"),
+                                                            null,
+                                                            SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(openApiString.Value))
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                    )
+                                )
+                            )
+                        )
+                );
+            }
+        }
+
+        types.Add(enumDeclaration);
+
+        return enumDeclaration.Identifier.Text;
+    }
+
     private static PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool required = true)
     {
-        return SyntaxFactory.PropertyDeclaration(required ? SyntaxFactory.ParseTypeName(typeName) : SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), GetCleanPropertyName(propertyName))
-            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
-            .WithAccessorList(
-                SyntaxFactory.AccessorList(
-                    SyntaxFactory.List(
-                        new AccessorDeclarationSyntax[]{
+        var propDecleration = SyntaxFactory.PropertyDeclaration(required ? SyntaxFactory.ParseTypeName(typeName) : SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
+            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+
+        propDecleration = propDecleration.WithAccessorList(
+            SyntaxFactory.AccessorList(
+                SyntaxFactory.List(
+                    new AccessorDeclarationSyntax[]{
                                 SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
                                     .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
                                 SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
                                     .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
-                        })))
-            .AddAttributeLists(
+                    })));
+
+        propDecleration = propDecleration.AddAttributeLists(
+            SyntaxFactory.AttributeList(
+                SyntaxFactory.SingletonSeparatedList(
+                    SyntaxFactory.Attribute(SyntaxFactory.IdentifierName("JsonPropertyName"))
+                        .WithArgumentList(
+                            SyntaxFactory.AttributeArgumentList(
+                                SyntaxFactory.SingletonSeparatedList(
+                                    SyntaxFactory.AttributeArgument(
+                                        SyntaxFactory.LiteralExpression(
+                                            SyntaxKind.StringLiteralExpression,
+                                            SyntaxFactory.Literal(propertyName)))))))));
+
+        if (typeName.EndsWith("Enum"))
+        {
+            propDecleration = propDecleration.AddAttributeLists(
                 SyntaxFactory.AttributeList(
                     SyntaxFactory.SingletonSeparatedList(
-                        SyntaxFactory.Attribute(SyntaxFactory.IdentifierName("JsonPropertyName"))
-                            .WithArgumentList(
-                                SyntaxFactory.AttributeArgumentList(
-                                    SyntaxFactory.SingletonSeparatedList(
-                                        SyntaxFactory.AttributeArgument(
-                                            SyntaxFactory.LiteralExpression(
-                                                SyntaxKind.StringLiteralExpression,
-                                                SyntaxFactory.Literal(propertyName)))))))))
-                .WithLeadingTrivia(
-                    SyntaxFactory.TriviaList(
-                        SyntaxFactory.Comment($"/// <summary>{comment?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
-                        SyntaxFactory.CarriageReturnLineFeed));
+                        SyntaxFactory.Attribute(
+                            SyntaxFactory.ParseName("JsonConverter"),
+                            SyntaxFactory.AttributeArgumentList(
+                                SyntaxFactory.SingletonSeparatedList(
+                                    SyntaxFactory.AttributeArgument(
+                                        SyntaxFactory.TypeOfExpression(
+                                            SyntaxFactory.ParseTypeName("JsonStringEnumMemberConverter")
+
+                                        // Uncomment when STJ 9.0 is released
+                                        //SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{CleanIdentifier(parentClassName + " " + propertyName) + "Enum"}>")
+                                        )
+                                    )
+                                )
+                            )
+                        ))));
+        }
+
+        propDecleration = propDecleration.WithLeadingTrivia(
+            SyntaxFactory.TriviaList(
+                SyntaxFactory.Comment($"/// <summary>{comment?.Replace("\n", " ").Replace("\r", " ")}</summary>"),
+                SyntaxFactory.CarriageReturnLineFeed));
+
+
+        return propDecleration;
     }
 
-    private static string GetCleanNamespace(string name)
+    private static string? CleanIdentifier(string name, bool @namespace = false)
     {
-        foreach (var badChar in s_namespaceBadChars)
+        // trim off leading and trailing whitespace
+        name = name.Trim();
+
+        // should deal with spaces => camel casing;
+        if (@namespace == false)
         {
-            if (name.Contains(badChar))
+            name = name.Dehumanize();
+        }
+
+        if (string.IsNullOrEmpty(name))
+        {
+            return null;
+        }
+
+        var sb = new StringBuilder();
+        if (!SyntaxFacts.IsIdentifierStartCharacter(name[0]))
+        {
+            // the first characters
+            sb.Append('_');
+        }
+
+        foreach (var ch in name)
+        {
+            if (SyntaxFacts.IsIdentifierPartCharacter(ch) || (@namespace && ch == '.'))
             {
-                name = name.Replace(badChar.ToString(), string.Empty);
+                sb.Append(ch);
             }
         }
 
-        foreach (var keyword in s_keywords)
+        var result = sb.ToString();
+
+        if (SyntaxFacts.GetKeywordKind(result) != SyntaxKind.None)
         {
-            if (name.Contains('.' + keyword + '.') || name.StartsWith(keyword + '.') || name.EndsWith('.' + keyword))
-            {
-                name = name.Replace(keyword, "@" + keyword);
-            }
+            result = '@' + result;
         }
 
-        return name;
-    }
-
-    private static string GetCleanClassName(string name)
-    {
-        return CapitalizeFirstLetter(name);
-    }
-
-    private static string GetCleanPropertyName(string name)
-    {
-        foreach (var badChar in s_propertyNameBadChars)
-        {
-            if (name.Contains(badChar))
-            {
-                name = name.Replace(badChar.ToString(), string.Empty);
-            }
-        }
-
-        return CapitalizeFirstLetter(name);
-    }
-
-    private static string CapitalizeFirstLetter(string str)
-    {
-        if (str.Length == 0)
-        {
-            return string.Empty;
-        }
-        else if (str.Length == 1)
-        {
-            return char.ToUpper(str[0], CultureInfo.InvariantCulture).ToString();
-        }
-        else
-        {
-            return char.ToUpper(str[0], CultureInfo.InvariantCulture) + str.Substring(1);
-        }
+        return result;
     }
 
     public (Assembly?, XmlDocument?) GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
@@ -596,4 +557,10 @@ public class Generator : IGenerator
 
         return code.NormalizeWhitespace().ToString();
     }
+}
+
+public enum Test
+{
+    [EnumMember(Value = "test")]
+    Test2
 }
