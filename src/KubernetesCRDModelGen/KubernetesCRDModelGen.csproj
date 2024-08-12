@@ -31,7 +31,7 @@
   <Choose>
     <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
         <ItemGroup>
-            <PackageReference Include="KubernetesClient.Classic" Version="14.0.2" />
+            <PackageReference Include="KubernetesClient.Classic" Version="14.0.9" />
             <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.7.2" />
         </ItemGroup>
     </When>
