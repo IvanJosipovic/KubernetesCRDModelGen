@@ -1811,7 +1811,7 @@ spec:
                     type: string
                 mirrorPercent:
                     type: string
-                _mirrorPercent:
+                mirror__Percent:
                     type: string
 ";
         var code = GetCode(yaml);
