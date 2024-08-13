@@ -45,7 +45,7 @@
 
     <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
         <ItemGroup>
-            <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient'  Or '%(ReferencePath.Filename)' == 'KubernetesClient.Classic' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'KubernetesCRDModelGen.Models' Or '%(ReferencePath.Filename)' ==  'Macross.Json.Extensions')" />
+            <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient'  Or '%(ReferencePath.Filename)' == 'KubernetesClient.Classic' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'KubernetesCRDModelGen.Models' Or '%(ReferencePath.Filename)' ==  'Macross.Json.Extensions' Or '%(ReferencePath.Filename)' ==  'Humanizer')" />
 
             <XmlFilesToEmbed Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).xml'-&gt; Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient' Or '%(FilesToEmbed.Filename)' == 'KubernetesClient.Classic')" />
 
