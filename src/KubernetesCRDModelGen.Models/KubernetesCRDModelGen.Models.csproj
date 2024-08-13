@@ -11,14 +11,19 @@
   <Choose>
     <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
         <ItemGroup>
-            <PackageReference Include="KubernetesClient.Classic" Version="14.0.2" />
+            <PackageReference Include="KubernetesClient.Classic" Version="14.0.9" />
         </ItemGroup>
     </When>
     <Otherwise>
         <ItemGroup>
-            <PackageReference Include="KubernetesClient" Version="14.0.2" />
+            <PackageReference Include="KubernetesClient" Version="14.0.9" />
         </ItemGroup>
     </Otherwise>
   </Choose>
+
+  <ItemGroup>
+    <!--Remove when STJ 9.0 is released-->
+    <PackageReference Include="Macross.Json.Extensions" Version="3.0.0" />
+  </ItemGroup>
 
 </Project>
