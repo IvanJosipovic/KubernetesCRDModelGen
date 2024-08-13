@@ -441,7 +441,7 @@ public class Generator : IGenerator
         return propDecleration;
     }
 
-    private static string? CleanIdentifier(string name, bool @namespace = false)
+    public static string? CleanIdentifier(string name, bool @namespace = false)
     {
         // trim off leading and trailing whitespace
         name = name.Trim();
@@ -477,6 +477,29 @@ public class Generator : IGenerator
         if (SyntaxFacts.GetKeywordKind(result) != SyntaxKind.None)
         {
             result = '@' + result;
+        }
+
+        if (@namespace)
+        {
+            var newResult = string.Empty;
+            foreach (var chunk in result.Split('.'))
+            {
+                if (!string.IsNullOrEmpty(newResult))
+                {
+                    newResult += '.';
+                }
+
+                if (SyntaxFacts.GetKeywordKind(chunk) != SyntaxKind.None)
+                {
+                    newResult += '@' + chunk;
+                }
+                else
+                {
+                    newResult += chunk;
+                }
+            }
+
+            return newResult;
         }
 
         return result;

@@ -1758,4 +1758,19 @@ spec:
 
         return type.GetMembers(BindingFlags.Public | BindingFlags.Static);
     }
+
+    [Theory]
+    //Namespace
+    [InlineData("test", "test", true)]
+    [InlineData("test.test", "test.test", true)]
+    [InlineData("KubernetesCRDModelGen.Tests.Models.networking.internal.knative.dev", "KubernetesCRDModelGen.Tests.Models.networking.@internal.knative.dev", true)]
+
+    //Type or Property Name
+    [InlineData("test", "Test")]
+    [InlineData("test test", "TestTest")]
+
+    public void TestCleanIdentifier(string input, string expected, bool @namespace = false)
+    {
+        Generator.CleanIdentifier(input, @namespace).Should().Be(expected);
+    }
 }
