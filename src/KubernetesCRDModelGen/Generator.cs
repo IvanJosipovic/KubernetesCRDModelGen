@@ -244,7 +244,16 @@ public class Generator : IGenerator
                 @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IStatus<{type}>")));
             }
 
-            @class = @class.AddMembers(CreateProperty(type, property.Key, property.Value.Description, schema.Required.Contains(property.Key)));
+            var newProperty = CreateProperty(type, property.Key, property.Value.Description, schema.Required.Contains(property.Key));
+
+            //Check if class already contains a property with the same name
+            var count = 0;
+            while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
+            {
+                newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, schema.Required.Contains(property.Key));
+            }
+
+            @class = @class.AddMembers(newProperty);
         }
 
         types.Add(@class);
@@ -441,7 +450,7 @@ public class Generator : IGenerator
         return propDecleration;
     }
 
-    private static string? CleanIdentifier(string name, bool @namespace = false)
+    public static string? CleanIdentifier(string name, bool @namespace = false)
     {
         // trim off leading and trailing whitespace
         name = name.Trim();
@@ -477,6 +486,29 @@ public class Generator : IGenerator
         if (SyntaxFacts.GetKeywordKind(result) != SyntaxKind.None)
         {
             result = '@' + result;
+        }
+
+        if (@namespace)
+        {
+            var newResult = string.Empty;
+            foreach (var chunk in result.Split('.'))
+            {
+                if (!string.IsNullOrEmpty(newResult))
+                {
+                    newResult += '.';
+                }
+
+                if (SyntaxFacts.GetKeywordKind(chunk) != SyntaxKind.None)
+                {
+                    newResult += '@' + chunk;
+                }
+                else
+                {
+                    newResult += chunk;
+                }
+            }
+
+            return newResult;
         }
 
         return result;
@@ -557,10 +589,4 @@ public class Generator : IGenerator
 
         return code.NormalizeWhitespace().ToString();
     }
-}
-
-public enum Test
-{
-    [EnumMember(Value = "test")]
-    Test2
 }
