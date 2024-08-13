@@ -244,7 +244,16 @@ public class Generator : IGenerator
                 @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IStatus<{type}>")));
             }
 
-            @class = @class.AddMembers(CreateProperty(type, property.Key, property.Value.Description, schema.Required.Contains(property.Key)));
+            var newProperty = CreateProperty(type, property.Key, property.Value.Description, !property.Value.Extensions.ContainsKey("x-kubernetes-embdedded-resource"));
+
+            //Check if class already contains a property with the same name
+            var count = 0;
+            while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
+            {
+                newProperty = CreateProperty(type, property.Key + count, property.Value.Description, !property.Value.Extensions.ContainsKey("x-kubernetes-embdedded-resource"));
+            }
+
+            @class = @class.AddMembers(newProperty);
         }
 
         types.Add(@class);

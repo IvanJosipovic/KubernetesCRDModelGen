@@ -1773,4 +1773,54 @@ spec:
     {
         Generator.CleanIdentifier(input, @namespace).Should().Be(expected);
     }
+
+    [Fact]
+    public void TestDuplicatePropertyName()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                mirror_percent:
+                    type: string
+                mirrorPercent:
+                    type: string
+                _mirrorPercent:
+                    type: string
+";
+        var code = GetCode(yaml);
+        var type = GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("MirrorPercent").PropertyType.Should().Be<string?>();
+        specType.GetProperty("MirrorPercent0").PropertyType.Should().Be<string?>();
+        specType.GetProperty("MirrorPercent1").PropertyType.Should().Be<string?>();
+    }
 }
