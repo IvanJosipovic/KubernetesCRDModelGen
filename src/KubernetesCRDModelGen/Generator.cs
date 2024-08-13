@@ -244,8 +244,6 @@ public class Generator : IGenerator
                 @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IStatus<{type}>")));
             }
 
-            @class = @class.AddMembers();
-
             var newProperty = CreateProperty(type, property.Key, property.Value.Description, schema.Required.Contains(property.Key));
 
             //Check if class already contains a property with the same name
