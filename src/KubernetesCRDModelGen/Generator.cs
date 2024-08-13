@@ -558,9 +558,3 @@ public class Generator : IGenerator
         return code.NormalizeWhitespace().ToString();
     }
 }
-
-public enum Test
-{
-    [EnumMember(Value = "test")]
-    Test2
-}
