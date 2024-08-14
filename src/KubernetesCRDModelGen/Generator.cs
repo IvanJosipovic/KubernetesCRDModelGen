@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
-using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Xml;
 using Humanizer;
@@ -230,7 +230,7 @@ public class Generator : IGenerator
                 }
             }
 
-            var type = GetOrGenerateType(property.Value, types, @class.Identifier.Text, property.Key);
+            var type = GetOrGenerateType(schema, property.Value, types, @class.Identifier.Text, property.Key);
 
             // Add ISpec base class
             if (isRoot && property.Key == "spec")
@@ -261,82 +261,60 @@ public class Generator : IGenerator
         return [.. types];
     }
 
-    private string GetOrGenerateType(OpenApiSchema schema, List<BaseTypeDeclarationSyntax> classes, string parentClassName, string propertyName)
+    private string GetOrGenerateType(OpenApiSchema parentSchema, OpenApiSchema schema, List<BaseTypeDeclarationSyntax> classes, string parentClassName, string propertyName)
     {
-        string type = string.Empty;
-
         if (schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var value2) && value2 is OpenApiBoolean boolean2 && boolean2.Value)
         {
-            type = nameof(JsonNode);
+            return nameof(JsonNode);
         }
         else if (schema.Extensions.TryGetValue(KubeIntOrString, out var value) && value is OpenApiBoolean boolean && boolean.Value)
         {
-            type = nameof(IntstrIntOrString);
+            return nameof(IntstrIntOrString);
         }
 
         switch (schema.Type)
         {
             case "object":
-                if (string.IsNullOrEmpty(type))
+                if (schema.AdditionalProperties != null)
                 {
-                    if (schema.AdditionalProperties != null)
-                    {
-                        type = $"IDictionary<string, {GetOrGenerateType(schema.AdditionalProperties, classes, parentClassName, propertyName)}>";
-                    }
-                    else
-                    {
-                        var nestedClasses = GenerateClass(schema, CleanIdentifier(parentClassName + " " + propertyName));
-
-                        foreach (var newClass in nestedClasses)
-                        {
-                            if (!classes.Any(x => x.Identifier.Text == newClass.Identifier.Text))
-                            {
-                                classes.AddRange(nestedClasses);
-                            }
-                        }
-
-                        type = nestedClasses[nestedClasses.Length - 1].Identifier.Text;
-                    }
+                    return $"IDictionary<string, {GetOrGenerateType(schema, schema.AdditionalProperties, classes, parentClassName, propertyName)}>";
                 }
+                else
+                {
+                    var nestedClasses = GenerateClass(schema, CleanIdentifier(parentClassName + " " + propertyName));
 
-                break;
+                    foreach (var newClass in nestedClasses)
+                    {
+                        if (!classes.Any(x => x.Identifier.Text == newClass.Identifier.Text))
+                        {
+                            classes.AddRange(nestedClasses);
+                        }
+                    }
+
+                    return nestedClasses[nestedClasses.Length - 1].Identifier.Text;
+                }
             case "string":
 
-                if (schema.Enum.Any())
+                if (parentSchema.Type != "array" && schema.Enum.Any())
                 {
-                    type = GenerateEnum(schema.Enum, classes, parentClassName, propertyName);
-                    break;
+                    return GenerateEnum(schema.Enum, classes, parentClassName, propertyName);
                 }
 
-                type = "string";
-                break;
+                return "string";
             case "number":
-                type = "double";
-                break;
+                return "double";
             case "boolean":
-                type = "bool";
-                break;
+                return "bool";
             case "integer":
-                if (schema.Format == "int64") type = "long"; else type = "int";
-                break;
+                if (schema.Format == "int64")
+                    return "long";
+                else
+                    return "int";
             case "array":
-
-                if (schema.Enum.Any())
-                {
-                    type = $"IList<{GenerateEnum(schema.Enum, classes, parentClassName, propertyName)}>";
-                    break;
-                }
-
-                type = $"IList<{GetOrGenerateType(schema.Items, classes, parentClassName, propertyName)}>";
-                break;
+               return $"IList<{GetOrGenerateType(schema, schema.Items, classes, parentClassName, propertyName)}>";
         }
 
-        if (string.IsNullOrEmpty(type))
-        {
-            throw new Exception("Unsupported Type: " + type);
-        }
-
-        return type;
+        throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema));
     }
 
     private static string GenerateEnum(IList<IOpenApiAny> options, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
@@ -433,7 +411,7 @@ public class Generator : IGenerator
                                             SyntaxFactory.ParseTypeName("JsonStringEnumMemberConverter")
 
                                         // Uncomment when STJ 9.0 is released
-                                        //SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{CleanIdentifier(parentClassName + " " + propertyName) + "Enum"}>")
+                                        //SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{CleanIdentifier(typeName + " " + propertyName) + "Enum"}>")
                                         )
                                     )
                                 )
