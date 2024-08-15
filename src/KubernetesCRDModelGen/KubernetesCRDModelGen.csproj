@@ -37,7 +37,7 @@
     </When>
     <Otherwise>
         <ItemGroup>
-            <PackageReference Include="Basic.Reference.Assemblies.Net80" Version="1.7.2" />
+            <PackageReference Include="Basic.Reference.Assemblies.Net80" Version="1.7.3" />
         </ItemGroup>
     </Otherwise>
   </Choose>
