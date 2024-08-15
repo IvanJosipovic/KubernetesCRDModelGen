@@ -89,6 +89,9 @@ spec:
                                 idleTimeout:
                                   description: The idle timeout for upstream connection pool connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConcurrentStreams:
                                   description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                                   format: int32
@@ -111,12 +114,21 @@ spec:
                                 connectTimeout:
                                   description: TCP connection timeout.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 idleTimeout:
                                   description: The idle timeout for TCP connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnectionDuration:
                                   description: The maximum duration of a connection.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnections:
                                   description: Maximum number of HTTP1 /TCP connections to a destination host.
                                   format: int32
@@ -127,6 +139,9 @@ spec:
                                     interval:
                                       description: The time duration between keep-alive probes.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                     probes:
                                       description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                       maximum: 4294967295
@@ -135,6 +150,9 @@ spec:
                                     time:
                                       description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                   type: object
                               type: object
                           type: object
@@ -286,12 +304,18 @@ spec:
                             warmupDurationSecs:
                               description: Represents the warmup duration of Service.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                           type: object
                         outlierDetection:
                           properties:
                             baseEjectionTime:
                               description: Minimum ejection duration.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             consecutive5xxErrors:
                               description: Number of 5xx errors before a host is ejected from the connection pool.
                               maximum: 4294967295
@@ -316,6 +340,9 @@ spec:
                             interval:
                               description: Time interval between ejection sweep analysis.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             maxEjectionPercent:
                               description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                               format: int32
@@ -359,6 +386,9 @@ spec:
                                       idleTimeout:
                                         description: The idle timeout for upstream connection pool connections.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       maxConcurrentStreams:
                                         description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                                         format: int32
@@ -381,12 +411,21 @@ spec:
                                       connectTimeout:
                                         description: TCP connection timeout.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       idleTimeout:
                                         description: The idle timeout for TCP connections.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       maxConnectionDuration:
                                         description: The maximum duration of a connection.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       maxConnections:
                                         description: Maximum number of HTTP1 /TCP connections to a destination host.
                                         format: int32
@@ -397,6 +436,9 @@ spec:
                                           interval:
                                             description: The time duration between keep-alive probes.
                                             type: string
+                                            x-kubernetes-validations:
+                                            - message: must be a valid duration greater than 1ms
+                                              rule: duration(self) >= duration('1ms')
                                           probes:
                                             description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                             maximum: 4294967295
@@ -405,6 +447,9 @@ spec:
                                           time:
                                             description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                             type: string
+                                            x-kubernetes-validations:
+                                            - message: must be a valid duration greater than 1ms
+                                              rule: duration(self) >= duration('1ms')
                                         type: object
                                     type: object
                                 type: object
@@ -556,12 +601,18 @@ spec:
                                   warmupDurationSecs:
                                     description: Represents the warmup duration of Service.
                                     type: string
+                                    x-kubernetes-validations:
+                                    - message: must be a valid duration greater than 1ms
+                                      rule: duration(self) >= duration('1ms')
                                 type: object
                               outlierDetection:
                                 properties:
                                   baseEjectionTime:
                                     description: Minimum ejection duration.
                                     type: string
+                                    x-kubernetes-validations:
+                                    - message: must be a valid duration greater than 1ms
+                                      rule: duration(self) >= duration('1ms')
                                   consecutive5xxErrors:
                                     description: Number of 5xx errors before a host is ejected from the connection pool.
                                     maximum: 4294967295
@@ -586,6 +637,9 @@ spec:
                                   interval:
                                     description: Time interval between ejection sweep analysis.
                                     type: string
+                                    x-kubernetes-validations:
+                                    - message: must be a valid duration greater than 1ms
+                                      rule: duration(self) >= duration('1ms')
                                   maxEjectionPercent:
                                     description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                                     format: int32
@@ -650,6 +704,7 @@ spec:
                                     type: array
                                 type: object
                             type: object
+                          maxItems: 4096
                           type: array
                         proxyProtocol:
                           description: The upstream PROXY protocol settings.
@@ -761,6 +816,9 @@ spec:
                           idleTimeout:
                             description: The idle timeout for upstream connection pool connections.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           maxConcurrentStreams:
                             description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                             format: int32
@@ -783,12 +841,21 @@ spec:
                           connectTimeout:
                             description: TCP connection timeout.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           idleTimeout:
                             description: The idle timeout for TCP connections.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           maxConnectionDuration:
                             description: The maximum duration of a connection.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           maxConnections:
                             description: Maximum number of HTTP1 /TCP connections to a destination host.
                             format: int32
@@ -799,6 +866,9 @@ spec:
                               interval:
                                 description: The time duration between keep-alive probes.
                                 type: string
+                                x-kubernetes-validations:
+                                - message: must be a valid duration greater than 1ms
+                                  rule: duration(self) >= duration('1ms')
                               probes:
                                 description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                 maximum: 4294967295
@@ -807,6 +877,9 @@ spec:
                               time:
                                 description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                 type: string
+                                x-kubernetes-validations:
+                                - message: must be a valid duration greater than 1ms
+                                  rule: duration(self) >= duration('1ms')
                             type: object
                         type: object
                     type: object
@@ -958,12 +1031,18 @@ spec:
                       warmupDurationSecs:
                         description: Represents the warmup duration of Service.
                         type: string
+                        x-kubernetes-validations:
+                        - message: must be a valid duration greater than 1ms
+                          rule: duration(self) >= duration('1ms')
                     type: object
                   outlierDetection:
                     properties:
                       baseEjectionTime:
                         description: Minimum ejection duration.
                         type: string
+                        x-kubernetes-validations:
+                        - message: must be a valid duration greater than 1ms
+                          rule: duration(self) >= duration('1ms')
                       consecutive5xxErrors:
                         description: Number of 5xx errors before a host is ejected from the connection pool.
                         maximum: 4294967295
@@ -988,6 +1067,9 @@ spec:
                       interval:
                         description: Time interval between ejection sweep analysis.
                         type: string
+                        x-kubernetes-validations:
+                        - message: must be a valid duration greater than 1ms
+                          rule: duration(self) >= duration('1ms')
                       maxEjectionPercent:
                         description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                         format: int32
@@ -1031,6 +1113,9 @@ spec:
                                 idleTimeout:
                                   description: The idle timeout for upstream connection pool connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConcurrentStreams:
                                   description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                                   format: int32
@@ -1053,12 +1138,21 @@ spec:
                                 connectTimeout:
                                   description: TCP connection timeout.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 idleTimeout:
                                   description: The idle timeout for TCP connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnectionDuration:
                                   description: The maximum duration of a connection.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnections:
                                   description: Maximum number of HTTP1 /TCP connections to a destination host.
                                   format: int32
@@ -1069,6 +1163,9 @@ spec:
                                     interval:
                                       description: The time duration between keep-alive probes.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                     probes:
                                       description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                       maximum: 4294967295
@@ -1077,6 +1174,9 @@ spec:
                                     time:
                                       description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                   type: object
                               type: object
                           type: object
@@ -1228,12 +1328,18 @@ spec:
                             warmupDurationSecs:
                               description: Represents the warmup duration of Service.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                           type: object
                         outlierDetection:
                           properties:
                             baseEjectionTime:
                               description: Minimum ejection duration.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             consecutive5xxErrors:
                               description: Number of 5xx errors before a host is ejected from the connection pool.
                               maximum: 4294967295
@@ -1258,6 +1364,9 @@ spec:
                             interval:
                               description: Time interval between ejection sweep analysis.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             maxEjectionPercent:
                               description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                               format: int32
@@ -1322,6 +1431,7 @@ spec:
                               type: array
                           type: object
                       type: object
+                    maxItems: 4096
                     type: array
                   proxyProtocol:
                     description: The upstream PROXY protocol settings.
@@ -1404,9 +1514,19 @@ spec:
                 properties:
                   matchLabels:
                     additionalProperties:
+                      maxLength: 63
                       type: string
+                      x-kubernetes-validations:
+                      - message: wildcard not allowed in label value match
+                        rule: "!self.contains('*')"
                     description: One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.
+                    maxProperties: 4096
                     type: object
+                    x-kubernetes-validations:
+                    - message: wildcard not allowed in label key match
+                      rule: self.all(key, !key.contains('*'))
+                    - message: key must not be empty
+                      rule: self.all(key, key.size() != 0)
                 type: object
             required:
             - host
@@ -1485,6 +1605,9 @@ spec:
                                 idleTimeout:
                                   description: The idle timeout for upstream connection pool connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConcurrentStreams:
                                   description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                                   format: int32
@@ -1507,12 +1630,21 @@ spec:
                                 connectTimeout:
                                   description: TCP connection timeout.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 idleTimeout:
                                   description: The idle timeout for TCP connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnectionDuration:
                                   description: The maximum duration of a connection.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnections:
                                   description: Maximum number of HTTP1 /TCP connections to a destination host.
                                   format: int32
@@ -1523,6 +1655,9 @@ spec:
                                     interval:
                                       description: The time duration between keep-alive probes.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                     probes:
                                       description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                       maximum: 4294967295
@@ -1531,6 +1666,9 @@ spec:
                                     time:
                                       description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                   type: object
                               type: object
                           type: object
@@ -1682,12 +1820,18 @@ spec:
                             warmupDurationSecs:
                               description: Represents the warmup duration of Service.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                           type: object
                         outlierDetection:
                           properties:
                             baseEjectionTime:
                               description: Minimum ejection duration.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             consecutive5xxErrors:
                               description: Number of 5xx errors before a host is ejected from the connection pool.
                               maximum: 4294967295
@@ -1712,6 +1856,9 @@ spec:
                             interval:
                               description: Time interval between ejection sweep analysis.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             maxEjectionPercent:
                               description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                               format: int32
@@ -1755,6 +1902,9 @@ spec:
                                       idleTimeout:
                                         description: The idle timeout for upstream connection pool connections.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       maxConcurrentStreams:
                                         description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                                         format: int32
@@ -1777,12 +1927,21 @@ spec:
                                       connectTimeout:
                                         description: TCP connection timeout.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       idleTimeout:
                                         description: The idle timeout for TCP connections.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       maxConnectionDuration:
                                         description: The maximum duration of a connection.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       maxConnections:
                                         description: Maximum number of HTTP1 /TCP connections to a destination host.
                                         format: int32
@@ -1793,6 +1952,9 @@ spec:
                                           interval:
                                             description: The time duration between keep-alive probes.
                                             type: string
+                                            x-kubernetes-validations:
+                                            - message: must be a valid duration greater than 1ms
+                                              rule: duration(self) >= duration('1ms')
                                           probes:
                                             description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                             maximum: 4294967295
@@ -1801,6 +1963,9 @@ spec:
                                           time:
                                             description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                             type: string
+                                            x-kubernetes-validations:
+                                            - message: must be a valid duration greater than 1ms
+                                              rule: duration(self) >= duration('1ms')
                                         type: object
                                     type: object
                                 type: object
@@ -1952,12 +2117,18 @@ spec:
                                   warmupDurationSecs:
                                     description: Represents the warmup duration of Service.
                                     type: string
+                                    x-kubernetes-validations:
+                                    - message: must be a valid duration greater than 1ms
+                                      rule: duration(self) >= duration('1ms')
                                 type: object
                               outlierDetection:
                                 properties:
                                   baseEjectionTime:
                                     description: Minimum ejection duration.
                                     type: string
+                                    x-kubernetes-validations:
+                                    - message: must be a valid duration greater than 1ms
+                                      rule: duration(self) >= duration('1ms')
                                   consecutive5xxErrors:
                                     description: Number of 5xx errors before a host is ejected from the connection pool.
                                     maximum: 4294967295
@@ -1982,6 +2153,9 @@ spec:
                                   interval:
                                     description: Time interval between ejection sweep analysis.
                                     type: string
+                                    x-kubernetes-validations:
+                                    - message: must be a valid duration greater than 1ms
+                                      rule: duration(self) >= duration('1ms')
                                   maxEjectionPercent:
                                     description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                                     format: int32
@@ -2046,6 +2220,7 @@ spec:
                                     type: array
                                 type: object
                             type: object
+                          maxItems: 4096
                           type: array
                         proxyProtocol:
                           description: The upstream PROXY protocol settings.
@@ -2157,6 +2332,9 @@ spec:
                           idleTimeout:
                             description: The idle timeout for upstream connection pool connections.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           maxConcurrentStreams:
                             description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                             format: int32
@@ -2179,12 +2357,21 @@ spec:
                           connectTimeout:
                             description: TCP connection timeout.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           idleTimeout:
                             description: The idle timeout for TCP connections.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           maxConnectionDuration:
                             description: The maximum duration of a connection.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           maxConnections:
                             description: Maximum number of HTTP1 /TCP connections to a destination host.
                             format: int32
@@ -2195,6 +2382,9 @@ spec:
                               interval:
                                 description: The time duration between keep-alive probes.
                                 type: string
+                                x-kubernetes-validations:
+                                - message: must be a valid duration greater than 1ms
+                                  rule: duration(self) >= duration('1ms')
                               probes:
                                 description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                 maximum: 4294967295
@@ -2203,6 +2393,9 @@ spec:
                               time:
                                 description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                 type: string
+                                x-kubernetes-validations:
+                                - message: must be a valid duration greater than 1ms
+                                  rule: duration(self) >= duration('1ms')
                             type: object
                         type: object
                     type: object
@@ -2354,12 +2547,18 @@ spec:
                       warmupDurationSecs:
                         description: Represents the warmup duration of Service.
                         type: string
+                        x-kubernetes-validations:
+                        - message: must be a valid duration greater than 1ms
+                          rule: duration(self) >= duration('1ms')
                     type: object
                   outlierDetection:
                     properties:
                       baseEjectionTime:
                         description: Minimum ejection duration.
                         type: string
+                        x-kubernetes-validations:
+                        - message: must be a valid duration greater than 1ms
+                          rule: duration(self) >= duration('1ms')
                       consecutive5xxErrors:
                         description: Number of 5xx errors before a host is ejected from the connection pool.
                         maximum: 4294967295
@@ -2384,6 +2583,9 @@ spec:
                       interval:
                         description: Time interval between ejection sweep analysis.
                         type: string
+                        x-kubernetes-validations:
+                        - message: must be a valid duration greater than 1ms
+                          rule: duration(self) >= duration('1ms')
                       maxEjectionPercent:
                         description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                         format: int32
@@ -2427,6 +2629,9 @@ spec:
                                 idleTimeout:
                                   description: The idle timeout for upstream connection pool connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConcurrentStreams:
                                   description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                                   format: int32
@@ -2449,12 +2654,21 @@ spec:
                                 connectTimeout:
                                   description: TCP connection timeout.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 idleTimeout:
                                   description: The idle timeout for TCP connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnectionDuration:
                                   description: The maximum duration of a connection.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnections:
                                   description: Maximum number of HTTP1 /TCP connections to a destination host.
                                   format: int32
@@ -2465,6 +2679,9 @@ spec:
                                     interval:
                                       description: The time duration between keep-alive probes.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                     probes:
                                       description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                       maximum: 4294967295
@@ -2473,6 +2690,9 @@ spec:
                                     time:
                                       description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                   type: object
                               type: object
                           type: object
@@ -2624,12 +2844,18 @@ spec:
                             warmupDurationSecs:
                               description: Represents the warmup duration of Service.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                           type: object
                         outlierDetection:
                           properties:
                             baseEjectionTime:
                               description: Minimum ejection duration.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             consecutive5xxErrors:
                               description: Number of 5xx errors before a host is ejected from the connection pool.
                               maximum: 4294967295
@@ -2654,6 +2880,9 @@ spec:
                             interval:
                               description: Time interval between ejection sweep analysis.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             maxEjectionPercent:
                               description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                               format: int32
@@ -2718,6 +2947,7 @@ spec:
                               type: array
                           type: object
                       type: object
+                    maxItems: 4096
                     type: array
                   proxyProtocol:
                     description: The upstream PROXY protocol settings.
@@ -2800,9 +3030,19 @@ spec:
                 properties:
                   matchLabels:
                     additionalProperties:
+                      maxLength: 63
                       type: string
+                      x-kubernetes-validations:
+                      - message: wildcard not allowed in label value match
+                        rule: "!self.contains('*')"
                     description: One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.
+                    maxProperties: 4096
                     type: object
+                    x-kubernetes-validations:
+                    - message: wildcard not allowed in label key match
+                      rule: self.all(key, !key.contains('*'))
+                    - message: key must not be empty
+                      rule: self.all(key, key.size() != 0)
                 type: object
             required:
             - host
@@ -2881,6 +3121,9 @@ spec:
                                 idleTimeout:
                                   description: The idle timeout for upstream connection pool connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConcurrentStreams:
                                   description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                                   format: int32
@@ -2903,12 +3146,21 @@ spec:
                                 connectTimeout:
                                   description: TCP connection timeout.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 idleTimeout:
                                   description: The idle timeout for TCP connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnectionDuration:
                                   description: The maximum duration of a connection.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnections:
                                   description: Maximum number of HTTP1 /TCP connections to a destination host.
                                   format: int32
@@ -2919,6 +3171,9 @@ spec:
                                     interval:
                                       description: The time duration between keep-alive probes.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                     probes:
                                       description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                       maximum: 4294967295
@@ -2927,6 +3182,9 @@ spec:
                                     time:
                                       description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                   type: object
                               type: object
                           type: object
@@ -3078,12 +3336,18 @@ spec:
                             warmupDurationSecs:
                               description: Represents the warmup duration of Service.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                           type: object
                         outlierDetection:
                           properties:
                             baseEjectionTime:
                               description: Minimum ejection duration.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             consecutive5xxErrors:
                               description: Number of 5xx errors before a host is ejected from the connection pool.
                               maximum: 4294967295
@@ -3108,6 +3372,9 @@ spec:
                             interval:
                               description: Time interval between ejection sweep analysis.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             maxEjectionPercent:
                               description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                               format: int32
@@ -3151,6 +3418,9 @@ spec:
                                       idleTimeout:
                                         description: The idle timeout for upstream connection pool connections.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       maxConcurrentStreams:
                                         description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                                         format: int32
@@ -3173,12 +3443,21 @@ spec:
                                       connectTimeout:
                                         description: TCP connection timeout.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       idleTimeout:
                                         description: The idle timeout for TCP connections.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       maxConnectionDuration:
                                         description: The maximum duration of a connection.
                                         type: string
+                                        x-kubernetes-validations:
+                                        - message: must be a valid duration greater than 1ms
+                                          rule: duration(self) >= duration('1ms')
                                       maxConnections:
                                         description: Maximum number of HTTP1 /TCP connections to a destination host.
                                         format: int32
@@ -3189,6 +3468,9 @@ spec:
                                           interval:
                                             description: The time duration between keep-alive probes.
                                             type: string
+                                            x-kubernetes-validations:
+                                            - message: must be a valid duration greater than 1ms
+                                              rule: duration(self) >= duration('1ms')
                                           probes:
                                             description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                             maximum: 4294967295
@@ -3197,6 +3479,9 @@ spec:
                                           time:
                                             description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                             type: string
+                                            x-kubernetes-validations:
+                                            - message: must be a valid duration greater than 1ms
+                                              rule: duration(self) >= duration('1ms')
                                         type: object
                                     type: object
                                 type: object
@@ -3348,12 +3633,18 @@ spec:
                                   warmupDurationSecs:
                                     description: Represents the warmup duration of Service.
                                     type: string
+                                    x-kubernetes-validations:
+                                    - message: must be a valid duration greater than 1ms
+                                      rule: duration(self) >= duration('1ms')
                                 type: object
                               outlierDetection:
                                 properties:
                                   baseEjectionTime:
                                     description: Minimum ejection duration.
                                     type: string
+                                    x-kubernetes-validations:
+                                    - message: must be a valid duration greater than 1ms
+                                      rule: duration(self) >= duration('1ms')
                                   consecutive5xxErrors:
                                     description: Number of 5xx errors before a host is ejected from the connection pool.
                                     maximum: 4294967295
@@ -3378,6 +3669,9 @@ spec:
                                   interval:
                                     description: Time interval between ejection sweep analysis.
                                     type: string
+                                    x-kubernetes-validations:
+                                    - message: must be a valid duration greater than 1ms
+                                      rule: duration(self) >= duration('1ms')
                                   maxEjectionPercent:
                                     description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                                     format: int32
@@ -3442,6 +3736,7 @@ spec:
                                     type: array
                                 type: object
                             type: object
+                          maxItems: 4096
                           type: array
                         proxyProtocol:
                           description: The upstream PROXY protocol settings.
@@ -3553,6 +3848,9 @@ spec:
                           idleTimeout:
                             description: The idle timeout for upstream connection pool connections.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           maxConcurrentStreams:
                             description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                             format: int32
@@ -3575,12 +3873,21 @@ spec:
                           connectTimeout:
                             description: TCP connection timeout.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           idleTimeout:
                             description: The idle timeout for TCP connections.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           maxConnectionDuration:
                             description: The maximum duration of a connection.
                             type: string
+                            x-kubernetes-validations:
+                            - message: must be a valid duration greater than 1ms
+                              rule: duration(self) >= duration('1ms')
                           maxConnections:
                             description: Maximum number of HTTP1 /TCP connections to a destination host.
                             format: int32
@@ -3591,6 +3898,9 @@ spec:
                               interval:
                                 description: The time duration between keep-alive probes.
                                 type: string
+                                x-kubernetes-validations:
+                                - message: must be a valid duration greater than 1ms
+                                  rule: duration(self) >= duration('1ms')
                               probes:
                                 description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                 maximum: 4294967295
@@ -3599,6 +3909,9 @@ spec:
                               time:
                                 description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                 type: string
+                                x-kubernetes-validations:
+                                - message: must be a valid duration greater than 1ms
+                                  rule: duration(self) >= duration('1ms')
                             type: object
                         type: object
                     type: object
@@ -3750,12 +4063,18 @@ spec:
                       warmupDurationSecs:
                         description: Represents the warmup duration of Service.
                         type: string
+                        x-kubernetes-validations:
+                        - message: must be a valid duration greater than 1ms
+                          rule: duration(self) >= duration('1ms')
                     type: object
                   outlierDetection:
                     properties:
                       baseEjectionTime:
                         description: Minimum ejection duration.
                         type: string
+                        x-kubernetes-validations:
+                        - message: must be a valid duration greater than 1ms
+                          rule: duration(self) >= duration('1ms')
                       consecutive5xxErrors:
                         description: Number of 5xx errors before a host is ejected from the connection pool.
                         maximum: 4294967295
@@ -3780,6 +4099,9 @@ spec:
                       interval:
                         description: Time interval between ejection sweep analysis.
                         type: string
+                        x-kubernetes-validations:
+                        - message: must be a valid duration greater than 1ms
+                          rule: duration(self) >= duration('1ms')
                       maxEjectionPercent:
                         description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                         format: int32
@@ -3823,6 +4145,9 @@ spec:
                                 idleTimeout:
                                   description: The idle timeout for upstream connection pool connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConcurrentStreams:
                                   description: The maximum number of concurrent streams allowed for a peer on one HTTP/2 connection.
                                   format: int32
@@ -3845,12 +4170,21 @@ spec:
                                 connectTimeout:
                                   description: TCP connection timeout.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 idleTimeout:
                                   description: The idle timeout for TCP connections.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnectionDuration:
                                   description: The maximum duration of a connection.
                                   type: string
+                                  x-kubernetes-validations:
+                                  - message: must be a valid duration greater than 1ms
+                                    rule: duration(self) >= duration('1ms')
                                 maxConnections:
                                   description: Maximum number of HTTP1 /TCP connections to a destination host.
                                   format: int32
@@ -3861,6 +4195,9 @@ spec:
                                     interval:
                                       description: The time duration between keep-alive probes.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                     probes:
                                       description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
                                       maximum: 4294967295
@@ -3869,6 +4206,9 @@ spec:
                                     time:
                                       description: The time duration a connection needs to be idle before keep-alive probes start being sent.
                                       type: string
+                                      x-kubernetes-validations:
+                                      - message: must be a valid duration greater than 1ms
+                                        rule: duration(self) >= duration('1ms')
                                   type: object
                               type: object
                           type: object
@@ -4020,12 +4360,18 @@ spec:
                             warmupDurationSecs:
                               description: Represents the warmup duration of Service.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                           type: object
                         outlierDetection:
                           properties:
                             baseEjectionTime:
                               description: Minimum ejection duration.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             consecutive5xxErrors:
                               description: Number of 5xx errors before a host is ejected from the connection pool.
                               maximum: 4294967295
@@ -4050,6 +4396,9 @@ spec:
                             interval:
                               description: Time interval between ejection sweep analysis.
                               type: string
+                              x-kubernetes-validations:
+                              - message: must be a valid duration greater than 1ms
+                                rule: duration(self) >= duration('1ms')
                             maxEjectionPercent:
                               description: Maximum % of hosts in the load balancing pool for the upstream service that can be ejected.
                               format: int32
@@ -4114,6 +4463,7 @@ spec:
                               type: array
                           type: object
                       type: object
+                    maxItems: 4096
                     type: array
                   proxyProtocol:
                     description: The upstream PROXY protocol settings.
@@ -4196,9 +4546,19 @@ spec:
                 properties:
                   matchLabels:
                     additionalProperties:
+                      maxLength: 63
                       type: string
+                      x-kubernetes-validations:
+                      - message: wildcard not allowed in label value match
+                        rule: "!self.contains('*')"
                     description: One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.
+                    maxProperties: 4096
                     type: object
+                    x-kubernetes-validations:
+                    - message: wildcard not allowed in label key match
+                      rule: self.all(key, !key.contains('*'))
+                    - message: key must not be empty
+                      rule: self.all(key, key.size() != 0)
                 type: object
             required:
             - host

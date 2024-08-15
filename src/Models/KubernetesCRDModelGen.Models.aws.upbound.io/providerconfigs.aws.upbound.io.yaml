@@ -168,6 +168,7 @@ spec:
                     - Secret
                     - IRSA
                     - WebIdentity
+                    - PodIdentity
                     - Upbound
                     type: string
                   upbound:
