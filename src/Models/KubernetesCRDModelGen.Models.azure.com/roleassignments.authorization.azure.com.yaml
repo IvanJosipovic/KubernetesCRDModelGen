@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.14.0
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.8.0
+    app.kubernetes.io/version: v2.9.0
   name: roleassignments.authorization.azure.com
 spec:
   conversion:
@@ -95,12 +95,47 @@ spec:
               conditionVersion:
                 description: "ConditionVersion: Version of the condition. Currently accepted value is '2.0'"
                 type: string
-              delegatedManagedIdentityResourceId:
-                description: 'DelegatedManagedIdentityResourceId: Id of the delegated managed identity resource'
-                type: string
+              delegatedManagedIdentityResourceReference:
+                description: 'DelegatedManagedIdentityResourceReference: Id of the delegated managed identity resource'
+                properties:
+                  armId:
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
+                  group:
+                    description: Group is the Kubernetes group of the resource.
+                    type: string
+                  kind:
+                    description: Kind is the Kubernetes kind of the resource.
+                    type: string
+                  name:
+                    description: Name is the Kubernetes name of the resource.
+                    type: string
+                type: object
               description:
                 description: 'Description: Description of role assignment'
                 type: string
+              operatorSpec:
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
+                properties:
+                  namingConvention:
+                    description: >-
+                      NamingConvention: The uuid generation technique to use for any role without an explicit AzureName. One of 'stable' or
+
+                      'random'.
+                    enum:
+                    - random
+                    - stable
+                    type: string
+                type: object
               owner:
                 description: >-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
@@ -355,10 +390,47 @@ spec:
                 type: string
               conditionVersion:
                 type: string
-              delegatedManagedIdentityResourceId:
-                type: string
+              delegatedManagedIdentityResourceReference:
+                description: 'DelegatedManagedIdentityResourceReference: Id of the delegated managed identity resource'
+                properties:
+                  armId:
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
+                  group:
+                    description: Group is the Kubernetes group of the resource.
+                    type: string
+                  kind:
+                    description: Kind is the Kubernetes kind of the resource.
+                    type: string
+                  name:
+                    description: Name is the Kubernetes name of the resource.
+                    type: string
+                type: object
               description:
                 type: string
+              operatorSpec:
+                description: >-
+                  Storage version of v1api20200801preview.RoleAssignmentOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  namingConvention:
+                    type: string
+                type: object
               originalVersion:
                 type: string
               owner:
@@ -597,12 +669,47 @@ spec:
               conditionVersion:
                 description: "ConditionVersion: Version of the condition. Currently the only accepted value is '2.0'"
                 type: string
-              delegatedManagedIdentityResourceId:
-                description: 'DelegatedManagedIdentityResourceId: Id of the delegated managed identity resource'
-                type: string
+              delegatedManagedIdentityResourceReference:
+                description: 'DelegatedManagedIdentityResourceReference: Id of the delegated managed identity resource'
+                properties:
+                  armId:
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
+                  group:
+                    description: Group is the Kubernetes group of the resource.
+                    type: string
+                  kind:
+                    description: Kind is the Kubernetes kind of the resource.
+                    type: string
+                  name:
+                    description: Name is the Kubernetes name of the resource.
+                    type: string
+                type: object
               description:
                 description: 'Description: Description of role assignment'
                 type: string
+              operatorSpec:
+                description: >-
+                  OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
+
+                  passed directly to Azure
+                properties:
+                  namingConvention:
+                    description: >-
+                      NamingConvention: The uuid generation technique to use for any role without an explicit AzureName. One of 'stable' or
+
+                      'random'.
+                    enum:
+                    - random
+                    - stable
+                    type: string
+                type: object
               owner:
                 description: >-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
@@ -858,10 +965,47 @@ spec:
                 type: string
               conditionVersion:
                 type: string
-              delegatedManagedIdentityResourceId:
-                type: string
+              delegatedManagedIdentityResourceReference:
+                description: 'DelegatedManagedIdentityResourceReference: Id of the delegated managed identity resource'
+                properties:
+                  armId:
+                    description: >-
+                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                    type: string
+                  group:
+                    description: Group is the Kubernetes group of the resource.
+                    type: string
+                  kind:
+                    description: Kind is the Kubernetes kind of the resource.
+                    type: string
+                  name:
+                    description: Name is the Kubernetes name of the resource.
+                    type: string
+                type: object
               description:
                 type: string
+              operatorSpec:
+                description: >-
+                  Storage version of v1api20220401.RoleAssignmentOperatorSpec
+
+                  Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  namingConvention:
+                    type: string
+                type: object
               originalVersion:
                 type: string
               owner:
