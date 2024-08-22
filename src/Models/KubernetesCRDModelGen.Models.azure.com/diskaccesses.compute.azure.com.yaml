@@ -7,7 +7,7 @@ metadata:
   labels:
     app.kubernetes.io/name: azure-service-operator
     app.kubernetes.io/version: v2.9.0
-  name: workspacesconnections.machinelearningservices.azure.com
+  name: diskaccesses.compute.azure.com
 spec:
   conversion:
     strategy: Webhook
@@ -20,12 +20,12 @@ spec:
           port: 443
       conversionReviewVersions:
       - v1
-  group: machinelearningservices.azure.com
+  group: compute.azure.com
   names:
-    kind: WorkspacesConnection
-    listKind: WorkspacesConnectionList
-    plural: workspacesconnections
-    singular: workspacesconnection
+    kind: DiskAccess
+    listKind: DiskAccessList
+    plural: diskaccesses
+    singular: diskaccess
   preserveUnknownFields: false
   scope: Namespaced
   versions:
@@ -42,15 +42,15 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1api20210701
+    name: v1api20240302
     schema:
       openAPIV3Schema:
         description: >-
           Generator information:
 
-          - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json
+          - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2024-03-02/diskAccess.json
 
-          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections/{connectionName}
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}
         properties:
           apiVersion:
             description: >-
@@ -78,17 +78,26 @@ spec:
             type: object
           spec:
             properties:
-              authType:
-                description: 'AuthType: Authorization type of the workspace connection.'
-                type: string
               azureName:
                 description: >-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
 
                   doesn't have to be.
                 type: string
-              category:
-                description: 'Category: Category of the workspace connection.'
+              extendedLocation:
+                description: 'ExtendedLocation: The extended location where the disk access will be created. Extended location cannot be changed.'
+                properties:
+                  name:
+                    description: 'Name: The name of the extended location.'
+                    type: string
+                  type:
+                    description: 'Type: The type of the extended location.'
+                    enum:
+                    - EdgeZone
+                    type: string
+                type: object
+              location:
+                description: 'Location: Resource location'
                 type: string
               owner:
                 description: >-
@@ -96,7 +105,7 @@ spec:
 
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
 
-                  reference to a machinelearningservices.azure.com/Workspace resource
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -105,28 +114,18 @@ spec:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
                 type: object
-              target:
-                description: 'Target: Target of the workspace connection.'
-                type: string
-              value:
-                description: 'Value: Value details of the workspace connection.'
-                type: string
-              valueFormat:
-                description: 'ValueFormat: format for the workspace connection value'
-                enum:
-                - JSON
-                type: string
+              tags:
+                additionalProperties:
+                  type: string
+                description: 'Tags: Resource tags'
+                type: object
             required:
+            - location
             - owner
             type: object
           status:
+            description: disk access resource.
             properties:
-              authType:
-                description: 'AuthType: Authorization type of the workspace connection.'
-                type: string
-              category:
-                description: 'Category: Category of the workspace connection.'
-                type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
                 items:
@@ -177,23 +176,51 @@ spec:
                   - type
                   type: object
                 type: array
+              extendedLocation:
+                description: 'ExtendedLocation: The extended location where the disk access will be created. Extended location cannot be changed.'
+                properties:
+                  name:
+                    description: 'Name: The name of the extended location.'
+                    type: string
+                  type:
+                    description: 'Type: The type of the extended location.'
+                    type: string
+                type: object
               id:
-                description: 'Id: ResourceId of the workspace connection.'
+                description: 'Id: Resource Id'
+                type: string
+              location:
+                description: 'Location: Resource location'
                 type: string
               name:
-                description: 'Name: Friendly name of the workspace connection.'
+                description: 'Name: Resource name'
                 type: string
-              target:
-                description: 'Target: Target of the workspace connection.'
+              privateEndpointConnections:
+                description: >-
+                  PrivateEndpointConnections: A readonly collection of private endpoint connections created on the disk. Currently only
+
+                  one endpoint connection is supported.
+                items:
+                  description: The Private Endpoint Connection resource.
+                  properties:
+                    id:
+                      description: 'Id: private endpoint connection Id'
+                      type: string
+                  type: object
+                type: array
+              provisioningState:
+                description: 'ProvisioningState: The disk access resource provisioning state.'
+                type: string
+              tags:
+                additionalProperties:
+                  type: string
+                description: 'Tags: Resource tags'
+                type: object
+              timeCreated:
+                description: 'TimeCreated: The time when the disk access was created.'
                 type: string
               type:
-                description: 'Type: Resource type of workspace connection.'
-                type: string
-              value:
-                description: 'Value: Value details of the workspace connection.'
-                type: string
-              valueFormat:
-                description: 'ValueFormat: format for the workspace connection value'
+                description: 'Type: Resource type'
                 type: string
             type: object
         type: object
@@ -214,17 +241,17 @@ spec:
     - jsonPath: .status.conditions[?(@.type=='Ready')].message
       name: Message
       type: string
-    name: v1api20210701storage
+    name: v1api20240302storage
     schema:
       openAPIV3Schema:
         description: >-
-          Storage version of v1api20210701.WorkspacesConnection
+          Storage version of v1api20240302.DiskAccess
 
           Generator information:
 
-          - Generated from: /machinelearningservices/resource-manager/Microsoft.MachineLearningServices/stable/2021-07-01/machineLearningServices.json
+          - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2024-03-02/diskAccess.json
 
-          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/connections/{connectionName}
+          - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskAccesses/{diskAccessName}
         properties:
           apiVersion:
             description: >-
@@ -251,7 +278,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: Storage version of v1api20210701.Workspaces_Connection_Spec
+            description: Storage version of v1api20240302.DiskAccess_Spec
             properties:
               $propertyBag:
                 additionalProperties:
@@ -261,15 +288,32 @@ spec:
 
                   resources, allowing for full fidelity round trip conversions
                 type: object
-              authType:
-                type: string
               azureName:
                 description: >-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
 
                   doesn't have to be.
                 type: string
-              category:
+              extendedLocation:
+                description: >-
+                  Storage version of v1api20240302.ExtendedLocation
+
+                  The complex type of the extended location.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  name:
+                    type: string
+                  type:
+                    type: string
+                type: object
+              location:
                 type: string
               originalVersion:
                 type: string
@@ -279,7 +323,7 @@ spec:
 
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
 
-                  reference to a machinelearningservices.azure.com/Workspace resource
+                  reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
@@ -288,17 +332,18 @@ spec:
                     description: This is the name of the Kubernetes resource to reference.
                     type: string
                 type: object
-              target:
-                type: string
-              value:
-                type: string
-              valueFormat:
-                type: string
+              tags:
+                additionalProperties:
+                  type: string
+                type: object
             required:
             - owner
             type: object
           status:
-            description: Storage version of v1api20210701.Workspaces_Connection_STATUS
+            description: >-
+              Storage version of v1api20240302.DiskAccess_STATUS
+
+              disk access resource.
             properties:
               $propertyBag:
                 additionalProperties:
@@ -308,10 +353,6 @@ spec:
 
                   resources, allowing for full fidelity round trip conversions
                 type: object
-              authType:
-                type: string
-              category:
-                type: string
               conditions:
                 items:
                   description: Condition defines an extension to status (an observation) of a resource
@@ -361,17 +402,59 @@ spec:
                   - type
                   type: object
                 type: array
+              extendedLocation:
+                description: >-
+                  Storage version of v1api20240302.ExtendedLocation_STATUS
+
+                  The complex type of the extended location.
+                properties:
+                  $propertyBag:
+                    additionalProperties:
+                      type: string
+                    description: >-
+                      PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                      resources, allowing for full fidelity round trip conversions
+                    type: object
+                  name:
+                    type: string
+                  type:
+                    type: string
+                type: object
               id:
+                type: string
+              location:
                 type: string
               name:
                 type: string
-              target:
+              privateEndpointConnections:
+                items:
+                  description: >-
+                    Storage version of v1api20240302.PrivateEndpointConnection_STATUS
+
+                    The Private Endpoint Connection resource.
+                  properties:
+                    $propertyBag:
+                      additionalProperties:
+                        type: string
+                      description: >-
+                        PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                        resources, allowing for full fidelity round trip conversions
+                      type: object
+                    id:
+                      type: string
+                  type: object
+                type: array
+              provisioningState:
+                type: string
+              tags:
+                additionalProperties:
+                  type: string
+                type: object
+              timeCreated:
                 type: string
               type:
-                type: string
-              value:
-                type: string
-              valueFormat:
                 type: string
             type: object
         type: object
