@@ -230,7 +230,7 @@ public class Generator : IGenerator
                 }
             }
 
-            var type = GetOrGenerateType(schema, property.Value, types, @class.Identifier.Text, property.Key);
+            var type = GetOrGenerateType(property.Value, types, @class.Identifier.Text, property.Key);
 
             // Add ISpec base class
             if (isRoot && property.Key == "spec")
@@ -247,7 +247,7 @@ public class Generator : IGenerator
             var newProperty = CreateProperty(type, property.Key, property.Value.Description, schema.Required.Contains(property.Key));
 
             //Check if class already contains a property with the same name
-            var count = 0;
+            var count = 1;
             while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
             {
                 newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, schema.Required.Contains(property.Key));
@@ -261,7 +261,7 @@ public class Generator : IGenerator
         return [.. types];
     }
 
-    private string GetOrGenerateType(OpenApiSchema parentSchema, OpenApiSchema schema, List<BaseTypeDeclarationSyntax> classes, string parentClassName, string propertyName)
+    private string GetOrGenerateType(OpenApiSchema schema, List<BaseTypeDeclarationSyntax> classes, string parentClassName, string propertyName)
     {
         if (schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var value2) && value2 is OpenApiBoolean boolean2 && boolean2.Value)
         {
@@ -277,7 +277,7 @@ public class Generator : IGenerator
             case "object":
                 if (schema.AdditionalProperties != null)
                 {
-                    return $"IDictionary<string, {GetOrGenerateType(schema, schema.AdditionalProperties, classes, parentClassName, propertyName)}>";
+                    return $"IDictionary<string, {GetOrGenerateType(schema.AdditionalProperties, classes, parentClassName, propertyName)}>";
                 }
                 else
                 {
@@ -295,7 +295,7 @@ public class Generator : IGenerator
                 }
             case "string":
 
-                if (parentSchema.Type != "array" && schema.Enum.Any())
+                if (schema.Enum.Any())
                 {
                     return GenerateEnum(schema.Enum, classes, parentClassName, propertyName);
                 }
@@ -311,7 +311,7 @@ public class Generator : IGenerator
                 else
                     return "int";
             case "array":
-               return $"IList<{GetOrGenerateType(schema, schema.Items, classes, parentClassName, propertyName)}>";
+                return $"IList<{GetOrGenerateType(schema.Items, classes, parentClassName, propertyName)}>";
         }
 
         throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema));
@@ -333,6 +333,13 @@ public class Generator : IGenerator
                 if (string.IsNullOrEmpty(identifier))
                 {
                     identifier = "Option" + i;
+                }
+
+                // Check if identifier already exists
+                var c = 1;
+                while (enumDeclaration.Members.Any(x => x.Identifier.Text == identifier))
+                {
+                    identifier = CleanIdentifier(openApiString.Value) + c++;
                 }
 
                 enumDeclaration = enumDeclaration.AddMembers(
