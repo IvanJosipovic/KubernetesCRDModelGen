@@ -16,7 +16,7 @@
     </When>
     <Otherwise>
         <ItemGroup>
-            <PackageReference Include="KubernetesClient" Version="14.0.9" />
+            <PackageReference Include="KubernetesClient" Version="14.0.12" />
         </ItemGroup>
     </Otherwise>
   </Choose>
