@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.121.0
+    cnrm.cloud.google.com/version: 1.122.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -42,7 +42,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: SecureSourceManagerInstance is the Schema for the monitoring API
+        description: SecureSourceManagerInstance is the Schema for the SecureSourceManagerInstance API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -53,15 +53,11 @@ spec:
           metadata:
             type: object
           spec:
+            description: SecureSourceManagerInstanceSpec defines the desired state of SecureSourceManagerInstance
             properties:
               kmsKey:
                 description: Optional. Immutable. Customer-managed encryption key name, in the format projects/*/locations/*/keyRings/*/cryptoKeys/*.
                 type: string
-              labels:
-                additionalProperties:
-                  type: string
-                description: Optional. Labels as key value pairs.
-                type: object
               location:
                 description: Immutable. Location of the instance.
                 type: string
@@ -103,9 +99,10 @@ spec:
             - projectRef
             type: object
           status:
+            description: SecureSourceManagerInstanceStatus defines the config connector machine state of SecureSourceManagerInstance
             properties:
               conditions:
-                description: Conditions represent the latest available observations of the SecureSourceManagerInstance's current state.
+                description: Conditions represent the latest available observations of the object's current state.
                 items:
                   properties:
                     lastTransitionTime:
@@ -125,12 +122,15 @@ spec:
                       type: string
                   type: object
                 type: array
+              externalRef:
+                description: A unique specifier for the SecureSourceManagerInstance resource in GCP.
+                type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 format: int64
                 type: integer
               observedState:
-                description: ObservedState is the latest GCP state.
+                description: ObservedState is the state of the resource as most recently observed in GCP.
                 properties:
                   hostConfig:
                     description: Output only. A list of hostnames for this instance.
@@ -138,10 +138,10 @@ spec:
                       api:
                         description: 'Output only. API hostname. This is the hostname to use for **Host: Data Plane** endpoints.'
                         type: string
-                      gitHttp:
+                      gitHTTP:
                         description: Output only. Git HTTP hostname.
                         type: string
-                      gitSsh:
+                      gitSSH:
                         description: Output only. Git SSH hostname.
                         type: string
                       html:
@@ -156,8 +156,6 @@ spec:
                     type: string
                 type: object
             type: object
-        required:
-        - spec
         type: object
     served: true
     storage: true
