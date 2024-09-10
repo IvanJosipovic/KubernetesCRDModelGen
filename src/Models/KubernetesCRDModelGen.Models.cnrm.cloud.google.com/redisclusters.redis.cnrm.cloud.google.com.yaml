@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.121.0
+    cnrm.cloud.google.com/version: 1.122.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -57,6 +57,9 @@ spec:
               deletionProtectionEnabled:
                 description: Optional. The delete operation will fail when the value is set to true.
                 type: boolean
+              location:
+                description: Immutable. Location of the resource.
+                type: string
               nodeType:
                 description: Optional. The type of a redis node in the cluster. NodeType determines the underlying machine-type of a redis node.
                 type: string
@@ -84,6 +87,36 @@ spec:
                         type: string
                     type: object
                 type: object
+              projectRef:
+                description: Immutable. The Project that this resource belongs to.
+                oneOf:
+                - not:
+                    required:
+                    - external
+                  required:
+                  - name
+                - not:
+                    anyOf:
+                    - required:
+                      - name
+                    - required:
+                      - namespace
+                  required:
+                  - external
+                properties:
+                  external:
+                    description: The `projectID` field of a project, when not managed by KCC.
+                    type: string
+                  kind:
+                    description: The kind of the Project resource; optional but must be `Project` if provided.
+                    type: string
+                  name:
+                    description: The `name` field of a `Project` resource.
+                    type: string
+                  namespace:
+                    description: The `namespace` field of a `Project` resource.
+                    type: string
+                type: object
               pscConfigs:
                 description: Required. Each PscConfig configures the consumer network where IPs will be designated to the cluster for client access through Private Service Connect Automation. Currently, only one PscConfig is supported.
                 items:
@@ -106,7 +139,7 @@ spec:
                         - external
                       properties:
                         external:
-                          description: The compute network selflink of form "projects/<project>/global/networks/<network>", when not managed by KCC.
+                          description: The compute network selflink of form "projects/<project>/global/networks/<network>", when not managed by Config Connector.
                           type: string
                         name:
                           description: The `name` field of a `ComputeNetwork` resource.
@@ -115,6 +148,8 @@ spec:
                           description: The `namespace` field of a `ComputeNetwork` resource.
                           type: string
                       type: object
+                  required:
+                  - networkRef
                   type: object
                 type: array
               redisConfigs:
@@ -146,6 +181,9 @@ spec:
                     description: Optional. When SINGLE ZONE distribution is selected, zone field would be used to allocate all resources in that zone. This is not applicable to MULTI_ZONE, and would be ignored for MULTI_ZONE clusters.
                     type: string
                 type: object
+            required:
+            - location
+            - projectRef
             type: object
           status:
             description: RedisClusterStatus defines the config connector machine state of RedisCluster
@@ -198,33 +236,9 @@ spec:
                         pscConfig:
                           description: Output only. Customer configuration for where the endpoint is created and accessed from.
                           properties:
-                            networkRef:
+                            network:
                               description: Required. The network where the IP address of the discovery endpoint will be reserved, in the form of projects/{network_project}/global/networks/{network_id}.
-                              oneOf:
-                              - not:
-                                  required:
-                                  - external
-                                required:
-                                - name
-                              - not:
-                                  anyOf:
-                                  - required:
-                                    - name
-                                  - required:
-                                    - namespace
-                                required:
-                                - external
-                              properties:
-                                external:
-                                  description: The compute network selflink of form "projects/<project>/global/networks/<network>", when not managed by KCC.
-                                  type: string
-                                name:
-                                  description: The `name` field of a `ComputeNetwork` resource.
-                                  type: string
-                                namespace:
-                                  description: The `namespace` field of a `ComputeNetwork` resource.
-                                  type: string
-                              type: object
+                              type: string
                           type: object
                       type: object
                     type: array
