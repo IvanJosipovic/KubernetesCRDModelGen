@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.122.0
+    cnrm.cloud.google.com/version: 1.123.0
   creationTimestamp: 
   labels:
     cnrm.cloud.google.com/managed-by-kcc: true
@@ -90,7 +90,7 @@ spec:
                                       - external
                                     properties:
                                       external:
-                                        description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by KCC.
+                                        description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.
                                         type: string
                                       name:
                                         description: The `name` field of a `MonitoringAlertPolicy` resource.
@@ -138,7 +138,7 @@ spec:
                                         - external
                                       properties:
                                         external:
-                                          description: The `projectID` field of a project, when not managed by KCC.
+                                          description: The `projectID` field of a project, when not managed by Config Connector.
                                           type: string
                                         kind:
                                           description: The kind of the Project resource; optional but must be `Project` if provided.
@@ -201,7 +201,7 @@ spec:
                                         - external
                                       properties:
                                         external:
-                                          description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by KCC.
+                                          description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.
                                           type: string
                                         name:
                                           description: The `name` field of a `MonitoringAlertPolicy` resource.
@@ -1240,7 +1240,7 @@ spec:
                                 - external
                               properties:
                                 external:
-                                  description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by KCC.
+                                  description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.
                                   type: string
                                 name:
                                   description: The `name` field of a `MonitoringAlertPolicy` resource.
@@ -1288,7 +1288,7 @@ spec:
                                   - external
                                 properties:
                                   external:
-                                    description: The `projectID` field of a project, when not managed by KCC.
+                                    description: The `projectID` field of a project, when not managed by Config Connector.
                                     type: string
                                   kind:
                                     description: The kind of the Project resource; optional but must be `Project` if provided.
@@ -1351,7 +1351,7 @@ spec:
                                   - external
                                 properties:
                                   external:
-                                    description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by KCC.
+                                    description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.
                                     type: string
                                   name:
                                     description: The `name` field of a `MonitoringAlertPolicy` resource.
@@ -2372,7 +2372,7 @@ spec:
                                     - external
                                   properties:
                                     external:
-                                      description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by KCC.
+                                      description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.
                                       type: string
                                     name:
                                       description: The `name` field of a `MonitoringAlertPolicy` resource.
@@ -2420,7 +2420,7 @@ spec:
                                       - external
                                     properties:
                                       external:
-                                        description: The `projectID` field of a project, when not managed by KCC.
+                                        description: The `projectID` field of a project, when not managed by Config Connector.
                                         type: string
                                       kind:
                                         description: The kind of the Project resource; optional but must be `Project` if provided.
@@ -2483,7 +2483,7 @@ spec:
                                       - external
                                     properties:
                                       external:
-                                        description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by KCC.
+                                        description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.
                                         type: string
                                       name:
                                         description: The `name` field of a `MonitoringAlertPolicy` resource.
@@ -3496,7 +3496,7 @@ spec:
                   - external
                 properties:
                   external:
-                    description: The `projectID` field of a project, when not managed by KCC.
+                    description: The `projectID` field of a project, when not managed by Config Connector.
                     type: string
                   kind:
                     description: The kind of the Project resource; optional but must be `Project` if provided.
@@ -3547,7 +3547,7 @@ spec:
                                       - external
                                     properties:
                                       external:
-                                        description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by KCC.
+                                        description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.
                                         type: string
                                       name:
                                         description: The `name` field of a `MonitoringAlertPolicy` resource.
@@ -3595,7 +3595,7 @@ spec:
                                         - external
                                       properties:
                                         external:
-                                          description: The `projectID` field of a project, when not managed by KCC.
+                                          description: The `projectID` field of a project, when not managed by Config Connector.
                                           type: string
                                         kind:
                                           description: The kind of the Project resource; optional but must be `Project` if provided.
@@ -3658,7 +3658,7 @@ spec:
                                         - external
                                       properties:
                                         external:
-                                          description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by KCC.
+                                          description: The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.
                                           type: string
                                         name:
                                           description: The `name` field of a `MonitoringAlertPolicy` resource.
