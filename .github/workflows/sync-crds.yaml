@@ -32,6 +32,29 @@ jobs:
       - name: Sync CRDs
         run: dotnet run --project ./src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj --ModelDir ../Models
 
+      - name: Validate Yamls
+        working-directory: src/Models
+        shell: pwsh
+        run: |
+          $SubDirs = Get-ChildItem -Directory -Path $(Get-Location)
+          $AllDirsHaveYaml = $true
+
+          foreach ($Dir in $SubDirs) {
+            $YamlFiles = Get-ChildItem -Path $Dir.FullName -Filter *.yaml -File -ErrorAction SilentlyContinue
+
+            if ($YamlFiles.Count -eq 0) {
+              Write-Error "No .yaml file found in directory: $($Dir.FullName)"
+              $AllDirsHaveYaml = $false
+            }
+          }
+
+          if (-not $AllDirsHaveYaml) {
+            throw "Some subdirectories do not contain a .yaml file."
+          }
+          else {
+            Write-Host "All subdirectories contain a .yaml file."
+          }
+
       - name: Check Files Changed
         id: checkfiles
         shell: pwsh
