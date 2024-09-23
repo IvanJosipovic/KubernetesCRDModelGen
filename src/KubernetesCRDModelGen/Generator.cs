@@ -311,7 +311,15 @@ public class Generator : IGenerator
                 else
                     return "int";
             case "array":
+
+                if (schema.Enum.Any())
+                {
+                    return $"IList<{GenerateEnum(schema.Enum, classes, parentClassName, propertyName)}>";
+                    break;
+                }
+
                 return $"IList<{GetOrGenerateType(schema.Items, classes, parentClassName, propertyName)}>";
+                break;
         }
 
         throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema));
@@ -351,19 +359,31 @@ public class Generator : IGenerator
                         .WithAttributeLists(
                             SyntaxFactory.SingletonList(
                                 SyntaxFactory.AttributeList(
-                                    SyntaxFactory.SingletonSeparatedList(
-                                        SyntaxFactory.Attribute(SyntaxFactory.ParseName("EnumMember"))
-                                            .WithArgumentList(
-                                                SyntaxFactory.AttributeArgumentList(
-                                                    SyntaxFactory.SingletonSeparatedList(
-                                                        SyntaxFactory.AttributeArgument(
-                                                            SyntaxFactory.NameEquals("Value"),
-                                                            null,
-                                                            SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(openApiString.Value))
+                                    SyntaxFactory.SeparatedList(
+                                        [
+                                            SyntaxFactory.Attribute(SyntaxFactory.ParseName("EnumMember"))
+                                                .WithArgumentList(
+                                                    SyntaxFactory.AttributeArgumentList(
+                                                        SyntaxFactory.SingletonSeparatedList(
+                                                            SyntaxFactory.AttributeArgument(
+                                                                SyntaxFactory.NameEquals("Value"),
+                                                                null,
+                                                                SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(openApiString.Value))
+                                                            )
+                                                        )
+                                                    )
+                                                ),
+                                            SyntaxFactory.Attribute(SyntaxFactory.ParseName("JsonStringEnumMemberName"))
+                                                .WithArgumentList(
+                                                    SyntaxFactory.AttributeArgumentList(
+                                                        SyntaxFactory.SingletonSeparatedList(
+                                                            SyntaxFactory.AttributeArgument(
+                                                                SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(openApiString.Value))
+                                                            )
                                                         )
                                                     )
                                                 )
-                                            )
+                                        ]
                                     )
                                 )
                             )
@@ -415,10 +435,7 @@ public class Generator : IGenerator
                                 SyntaxFactory.SingletonSeparatedList(
                                     SyntaxFactory.AttributeArgument(
                                         SyntaxFactory.TypeOfExpression(
-                                            SyntaxFactory.ParseTypeName("JsonStringEnumMemberConverter")
-
-                                        // Uncomment when STJ 9.0 is released
-                                        //SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{CleanIdentifier(typeName + " " + propertyName) + "Enum"}>")
+                                            SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{CleanIdentifier(typeName)}>")
                                         )
                                     )
                                 )
@@ -565,6 +582,14 @@ public class Generator : IGenerator
 #else
         references.AddRange(Basic.Reference.Assemblies.Net80.References.All);
 #endif
+
+        var dupe = references.Where(x => x.Display == "System.Text.Json (net80)").First();
+
+        if (dupe != null)
+        {
+            references.Remove(dupe);
+        }
+
         return [.. references];
     }
 
