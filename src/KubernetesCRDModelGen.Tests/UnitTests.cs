@@ -1304,7 +1304,7 @@ spec:
         members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("never");
     }
 
-    [Fact(Skip = "Disabled for now")]
+    [Fact]
     public void TestEnumArray()
     {
         var yaml = @"
@@ -1436,7 +1436,7 @@ spec:
         spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact(Skip = "Disabled for now")]
+    [Fact]
     public void TestEnumArrayDeSerializeJson()
     {
         var yaml = @"
@@ -1470,10 +1470,12 @@ spec:
                   type: object
                   properties:
                     testEnum:
-                      enum:
-                      - always
-                      - ifNotPresent
-                      - 'test_test'
+                      items:
+                        enum:
+                        - always
+                        - ifNotPresent
+                        - 'test_test'
+                        type: string
                       type: array
     ";
         var code = GetCode(yaml);
@@ -1487,12 +1489,11 @@ spec:
 {
   "apiVersion": "v1beta1",
   "kind": "Test",
-  "metadata": {},
   "spec": {
-    "testEnum":
-    - "test_test"
-
-  }
+        "testEnum": [
+            "test_test"
+        ]
+    }
 }
 """;
 
@@ -1572,7 +1573,7 @@ spec:
         objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":"test_test"}}""");
     }
 
-    [Fact(Skip = "Disabled for now")]
+    [Fact]
     public void TestEnumArraySerializeJson()
     {
         var yaml = @"
@@ -1606,12 +1607,13 @@ spec:
                   type: object
                   properties:
                     testEnum:
-                      enum:
-                      - always
-                      - ifNotPresent
-                      - 'test_test'
-                      type: string
-                    type: array
+                      items:
+                        enum:
+                        - always
+                        - ifNotPresent
+                        - 'test_test'
+                        type: string
+                      type: array
     ";
         var code = GetCode(yaml);
         var type = GetTypeYaml(yaml, "Test");
@@ -1637,7 +1639,7 @@ spec:
 
         var objJson = KubernetesJson.Serialize(obj);
 
-        objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum": ["test_test"] }}""");
+        objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":["test_test"]}}""");
     }
 
     [Fact]
@@ -1704,7 +1706,7 @@ spec:
         spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.Should().Be(Enum.Parse(enumType, "TestTest"));
     }
 
-    [Fact(Skip = "Disabled for now")]
+    [Fact]
     public void TestEnumArrayDeSerializeYaml()
     {
         var yaml = @"
@@ -1738,10 +1740,12 @@ spec:
                   type: object
                   properties:
                     testEnum:
-                      enum:
-                      - always
-                      - ifNotPresent
-                      - 'test_test'
+                      items:
+                        enum:
+                        - always
+                        - ifNotPresent
+                        - 'test_test'
+                        type: string
                       type: array
     ";
         var code = GetCode(yaml);
@@ -1839,7 +1843,7 @@ spec:
 """);
     }
 
-    [Fact(Skip = "Disabled for now")]
+    [Fact]
     public void TestEnumArraySerializeYaml()
     {
         var yaml = @"
@@ -1873,10 +1877,12 @@ spec:
                   type: object
                   properties:
                     testEnum:
-                      enum:
-                      - always
-                      - ifNotPresent
-                      - 'test_test'
+                      items:
+                        enum:
+                        - always
+                        - ifNotPresent
+                        - 'test_test'
+                        type: string
                       type: array
     ";
         var code = GetCode(yaml);
