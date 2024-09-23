@@ -118,7 +118,7 @@
         <PackageReference Include="YamlDotNet" Version="16.0.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGYamlDotNet)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.7.4" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Basic.Reference.Assemblies.NetStandard20" Version="1.7.9" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGBasic_Reference_Assemblies_NetStandard20)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.11.0" GeneratePathProperty="true" PrivateAssets="all" />
