@@ -94,19 +94,19 @@
         <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Diagnostics_DiagnosticSource)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.2" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_IdentityModel_Tokens_Jwt)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.0.2" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_JsonWebTokens)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.2" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_Tokens)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.IdentityModel.Logging" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.Logging" Version="8.0.2" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_Logging)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.IdentityModel.Abstractions" Version="8.0.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.IdentityModel.Abstractions" Version="8.0.2" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_IdentityModel_Abstractions)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="Microsoft.CSharp" Version="4.7.0" GeneratePathProperty="true" PrivateAssets="all" />
