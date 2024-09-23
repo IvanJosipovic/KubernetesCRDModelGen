@@ -49,7 +49,7 @@
         <PackageReference Include="System.Text.Json" Version="9.0.0-rc.1.24431.7" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Text_Json)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.0-rc.1.24431.7" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" GeneratePathProperty="true" PrivateAssets="all" />
@@ -67,7 +67,7 @@
         <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Numerics_Vectors)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="System.Text.Encodings.Web" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="System.Text.Encodings.Web" Version="9.0.0-rc.1.24431.7" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Text_Encodings_Web)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" GeneratePathProperty="true" PrivateAssets="all" />
